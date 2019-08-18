@@ -52,6 +52,11 @@ msnbc.com,nbcnews.com,today.com##+js(abort-on-property-read.js, stop)
 @@||videolab.io^$generichide
 vizer.tv##.open.adsByVizer.vizerNewBox
 math.semestr.ru##+js(setInterval-defuser.js, IsAdBlock, 1000)
+@@||mobilinks.info^$generichide
+mobilinks.info##ins.adsbygoogle
+mobilinks.info##+js(nano-setInterval-booster.js)
+mobilinks.info###custom_html-2:has-text(ADs)
+mobilinks.info##div > span:has-text(AdBlock)
 @@||blockersurvive.com^$generichide
 blockersurvive.com,blockergame.com##.ads > .ads-body > .ads-content > div
 blockersurvive.com,blockergame.com##.ads > .ads-body:style(background: initial !important;)
@@ -233,6 +238,7 @@ readcomiconline.to##+js(set-constant.js, alb, false)
 babel.com##[id^=adReplacement]
 babel.com##.infopub
 @@||airbnbhell.com^$generichide
+bitblokes.de##+js(acis, document.getElementsByTagName, null)
 altadefinizione.*##.sm_header.sm_nomobile:has(:scope > a[href*="/HD/play"])
 @@||rapidvideo.com/js/jquery.min.js$script,1p
 @@||hackintoshzone.com^$generichide
