@@ -195,7 +195,7 @@ spanishdict.com##.ad-wrapper
 ! https://forums.lanik.us/viewtopic.php?f=62&t=43097
 ! https://github.com/NanoMeow/QuickReports/issues/1382
 ! https://github.com/NanoMeow/QuickReports/issues/1528
-al.com,allkpop.com,calendarpedia.co.uk,ccn.com,comicsands.com,duffelblog.com,gamepur.com,mandatory.com,mlive.com,newatlas.com,pgatour.com,readlightnovel.org,secondnexus.com,sevenforums.com,sport24.co.za,theodysseyonline.com,westernjournal.com##+js(abort-on-property-read.js, __cmpGdprAppliesGlobally)
+al.com,allkpop.com,calendarpedia.co.uk,ccn.com,cleveland.com,comicsands.com,duffelblog.com,gamepur.com,gamerevolution.com,mandatory.com,mlive.com,musicfeeds.com.au,newatlas.com,pgatour.com,readlightnovel.org,secondnexus.com,sevenforums.com,sport24.co.za,superherohype.com,thefashionspot.com,theodysseyonline.com,totalbeauty.com,westernjournal.com##+js(abort-on-property-read.js, __cmpGdprAppliesGlobally)
 
 ! https://github.com/gorhill/uBlock/issues/3532
 ! https://github.com/NanoAdblocker/NanoFilters/issues/94
@@ -628,6 +628,7 @@ voirfilms.ws##+js(abort-on-property-read.js, document.onselectstart)
 ! https://github.com/uBlockOrigin/uAssets/issues/3278#issuecomment-421038747
 @@||nyt.com/ads/google/adsbygoogle.js$script,domain=nytimes.com
 ! https://github.com/uBlockOrigin/uAssets/issues/5677
+nytimes.com##+js(set-constant.js, navigator.storage.estimate, undefined)
 nytimes.com##+js(set-constant.js, webkitRequestFileSystem, noopFunc)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2682#issuecomment-421085748
@@ -2034,6 +2035,7 @@ postandcourier.com##.tp-backdrop, .tp-modal
 tomshw.it##+js(setTimeout-defuser.js, bioEp.showPopup)
 ###bio_ep
 ###bio_ep_bg
+kei.pl##body:style(overflow: auto !important;)
 
 ! https://github.com/NanoMeow/QuickReports/issues/852
 yoututosjeff.es##^script:has-text(oncontextmenu)
@@ -2047,7 +2049,7 @@ animeligeroenmega.com##+js(abort-on-property-read.js, document.oncontextmenu)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/5317
 autoblog.com##.modal, .modal-backdrop
-autoblog.com##body:style(overflow-x: hidden !important; overflow-y: scroll !important;)
+autoblog.com##body:style(overflow-x: hidden !important; overflow-y: scroll !important; padding-right: 0 !important;)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/5312
 ||emeraldchat.com/user_is_temp
@@ -2235,7 +2237,6 @@ tunovelaligera.com##+js(abort-on-property-read.js, contentprotector)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/5489#issuecomment-489892660
 auepaisagismo.com,auepaisajismo.com##body:style(overflow: auto !important;)
-auepaisagismo.com,auepaisajismo.com###bio_ep_bg
 
 ! https://github.com/uBlockOrigin/uAssets/issues/5489#issuecomment-490331076
 austcham-china.com##+js(abort-current-inline-script.js, jQuery, oncontextmenu)
@@ -2514,3 +2515,25 @@ yeane.org##body:style(-webkit-touch-callout: default !important; -webkit-user-se
 ! https://github.com/ryanbr/fanboy-adblock/issues/1127
 blueorangebank.com###GDPR-modal, .modal-backdrop
 blueorangebank.com##body:style(overflow: auto !important; padding: 0 !important;)
+
+! https://github.com/NanoMeow/QuickReports/issues/1651
+linuxandubuntu.com##+js(aopr.js, anOptions)
+
+! https://github.com/uBlockOrigin/uAssets/issues/6070
+bosch-easycontrol.com###cookielaw, .modal-backdrop
+bosch-easycontrol.com##.modal-open:style(overflow: auto !important; padding-right: 0 !important;)
+
+! https://github.com/NanoMeow/QuickReports/issues/1655
+bitblokes.de##+js(acis, document.getElementsByTagName, null)
+bitblokes.de##[href^="https://airvpn.org/"]
+
+! https://github.com/uBlockOrigin/uAssets/issues/6073
+recantodasletras.com.br##+js(aopr, RL.licenseman.init)
+
+! https://github.com/uBlockOrigin/uAssets/issues/6093
+starblast.io##+js(ra, oncontextmenu)
+@@||cdnjs.cloudflare.com/ajax/libs/blockadblock/*/blockadblock.min.js$script,domain=starblast.io
+@@||starblast.io^$generichide
+
+! https://github.com/NanoMeow/QuickReports/issues/1692
+@@||thesaurus.com/assets/ads.js$xhr,1p
