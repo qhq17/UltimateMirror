@@ -7,7 +7,7 @@ dn.se##^.adblock
 dn.se##^#ads-bundle
 di.se##^script:has-text(checkAdBlockEnabled)
 aftonbladet.se##^script:has-text(preLoadAds)
-svd.se##^script:has-text(SvD.ads)
+svd.se##^script:has-text(SvD.ads.preDefineAd)
 expressen.se##^#rich-media-ads
 expressen.se##^script:has-text(window.Exp.bamData)
 expressen.se##^script[id="ads-script"]
@@ -31,11 +31,8 @@ teknikidag.se##^amp-ad
 !#if env_mobile
 aftonbladet.se##div[data-reactroot] > div > div#MegaAd ~ div[class]:not(#header):not(.abThemeGradientPage)
 swedroid.se##div[id$="_ad_mobile"]
+swedroid.se##.externalTopMobile
 ikea.com##.cookie-info__panel--show
-/sv/local-extensions/header-footer/scripts/adform/*$domain=ikea.com
-/sv/local-extensions/header-footer/scripts/track.$script,domain=ikea.com
-/sv/local-extensions/header-footer/scripts/hotjar.$script,domain=ikea.com
-/sv/analytics/*$domain=ikea.com
 !#endif
 !#if !env_mobile
 forum.macworld.se,forum.studio.se,idg.se##.idgcp__modal--in .idgcp__layer:style(background: none !important;)
@@ -52,9 +49,10 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se##body.logged
 ttela.se##body.logged-out *> .c-user-menu:style(display: inherit !important; border: none !important; box-shadow: none !important; background: none !important; top: 187px !important;)
 !#endif
 !#if !env_firefox
-di.se##+js(setInterval-defuser.js, runAdBlockPaywall, 1000)
+di.se##+js(sid, runAdBlockPaywall, 1000)
 !#endif
 !#if !env_mobile
+lundagard.se##+js(aeld, wheel)
 /rokophoto-lite/js/SmoothScroll.$script
 /plugins/wp-enqueue/smoothscroll.$script
 !#endif
