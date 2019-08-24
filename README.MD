@@ -32,8 +32,9 @@ severe issue with the content of any mirrored files.
 
 ## Truncate History
 
-To keep the size of this repository under control, Git history can be
-truncated. About a week worth of history should be kept just in case.
+To keep the size of this repository under control, Git history should be
+truncated from time to time. About a week worth of history should be kept just
+in case.
 
 ```Bash
 git checkout --orphan temp <commit_hash>
