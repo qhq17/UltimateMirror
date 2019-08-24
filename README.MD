@@ -40,7 +40,7 @@ git checkout --orphan temp <commit_hash>
 git commit --message="Truncate history"
 git rebase --onto temp <commit_hash> master
 git branch --delete --force temp
-git push --force
+git push --force-with-lease
 ```
 
 ## License
