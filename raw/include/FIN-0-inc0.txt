@@ -1,0 +1,89 @@
+! Video ads
+! https://github.com/finnish-easylist-addition/finnish-easylist-addition/issues/14#issuecomment-438683057
+! https://github.com/finnish-easylist-addition/finnish-easylist-addition/issues/12#issuecomment-438682037
+||damoh.katsomo.fi/*$media,redirect=noopmp3-0.1s,domain=mtvuutiset.fi|mtv.fi|suomiareena.fi|www.studio55.fi|lumijapyry.fi|www.msn.com
+
+! mobiili.fi small sponsored text
+mobiili.fi##p:has(small:has-text(Mainos:))
+
+! mobiili.fi sponsored articles on frontpage
+mobiili.fi##div.fullarticle:has(img[src="https://mobiili.fi/aaa.png"])
+mobiili.fi##a.isobrick.half.one_col > .featuredinner:has(.bubble:has-text(Sponsoroitu))
+! appears when blocking ^^:
+||mobiili.fi/wp-content/themes/mobiilitheme/images/small-loading.gif$image
+
+! io-tech.fi sidebar ads
+bbs.io-tech.fi##.sidebar > div:has(a:has(img[src^="https://bbs.io-tech.fi/images/"]))
+
+! aamulehti.fi - sponsored articles
+www.aamulehti.fi##DIV[id*="pipe"] > div > div:has-text(Kaupallinen yhteistyö)
+www.aamulehti.fi##DIV[id^="morearticles_"]:has(h2:has(span:has-text(Kaupallinen yhteistyö)))
+
+! anti adblock killer
+aamulehti.fi,satakunnankansa.fi,valkeakoskensanomat.fi,nokianuutiset.fi,janakkalansanomat.fi,kmvlehti.fi,jamsanseutu.fi,suurkeuruu.fi,kankaanpaanseutu.fi,rannikkoseutu.fi,tyrvaansanomat.fi,merikarvialehti.fi,sydansatakunta.fi##script:inject(setTimeout-defuser.js, adblockDetected, 0)
+
+! Mikrobitti anti adblock
+mikrobitti.fi##+js(setTimeout-defuser.js)
+
+! Iltalehti.fi - Kaupallinen yhteistyö
+www.iltalehti.fi##[href^="/omaguru/"]:has(.article-container:has-text(Kaupallinen yhteistyö: ))
+www.iltalehti.fi##[href^="/hintaopas/"]:has(.article-container:has-text(Kaupallinen yhteistyö Hintaopas: ))
+www.iltalehti.fi##.default.drfront-full-article:has([href^="/hintaopas/"]):has(img[src*="assets.ilcdn.fi/mainosnauhta_digi_hintaopas.jpg"])
+www.iltalehti.fi##div.article-container:has-text(Kaupallinen yhteistyö: ):has([href^="/omaguru/"])
+
+www.iltalehti.fi##[href^="/rahoitufi/"]:has(.article-image-content):has([src*="static.ilcdn.fi/kuvat/nauhat/mainosnauha-asuminen-rahoitufi.jpg"])
+www.iltalehti.fi##[href^="/asumisartikkelit/"]:has(.article-banner):has([src*="assets.ilcdn.fi/asuminen_vattenfall_palkki.jpg"])
+www.iltalehti.fi##[href^="/kodin-turvallisuus/"]:has(img[src*="assets.ilcdn.fi/mainosnauha-asuminen-verisure.jpg"])
+www.iltalehti.fi##[href^="/matkajutut/"]:has(img[src*="assets.ilcdn.fi/Nauha_Rantapallo"])
+iltalehti.fi##[href^="https://www.rantapallo.fi/"]:has([src*="assets.ilcdn.fi/Nauha_Rantapallo_"])
+iltalehti.fi##[href^="/ruoka-artikkelit/a/"]:has([src*="static.ilcdn.fi/kuvat/nauhat/nauha_ky_pippuri_citymarket.jpg"])
+www.iltalehti.fi##.drfront-full-article:has-text(Kaupallinen yhteistyö Urakkamaailma: )
+www.iltalehti.fi##[href^="/thaimaaextra"]:has([src*="assets.ilcdn.fi/Nauha_Rantapallo_"])
+www.iltalehti.fi##[href^="/unikulma/"]:has-text(Kaupallinen yhteistyö)
+www.iltalehti.fi##.block > .article-list-api-wrapper > .article-list > div > a > .article-container:has-text(Kaupallinen yhteistyö )
+
+! suomi.fi kaupallinen yhteistyö
+www.iltalehti.fi##.drfront-full-article:has([src="https://assets.ilcdn.fi/f6d9bb889ba0d9fde55f3e67169fcbb61802a5597e5eb7e0765d262c6733dda6.jpg"])
+
+! Tori.fi
+www.tori.fi##.item_row.ds-box:has(img[src*="cloudfront.net/img/veikkaus"])
+www.tori.fi##.item_row.ds-box:has(img[src*="cloudfront.net/img/vepsalainen"])
+
+! Tivi.fi - Kaupallinen yhteistyö
+www.tivi.fi##.teaser-partner-blog:has-text(KAUPALLINEN YHTEISTYÖ: )
+www.tivi.fi##.section-partner:has-text(Kaupallinen yhteistyö)
+
+! Lapinkansa.fi - Commercial cooperation ("Kaupallinen yhteistyö") articles
+www.lapinkansa.fi##article.narrow.news-item:has(.topic-link-nat.topic-link:has-text(Kaupallinen yhteistyö))
+www.lapinkansa.fi##article.news-item.front-page-news-item.featured:has(.topic-link-nat.topic-link:has-text(Kaupallinen yhteistyö))
+www.lapinkansa.fi##div.small-news-item.content > .border-bottom.news-item.front-page-news-item:has(.topic-link-nat.topic-link:has-text(Kaupallinen yhteistyö))
+
+! hs.fi - "Markkinapaikka" ad container
+www.hs.fi##.embedded:has-text(Markkinapaikka)
+
+! iltalehti.fi - ad container
+www.iltalehti.fi##div.card:has-text(Mainos: )
+
+basso.fi###header:style(min-height: auto !important)
+basso.fi###header-main:style(margin-top: 0px !important)
+
+anna.fi##article[class^="grid__item_"]:has(.list-tag_commercial)
+kotiliesi.fi##article[class^="grid__item_"]:has(.template-item_nativead)
+kipparilehti.fi##article[class^="grid__item_"]:has(.js-native-link)
+venelehti.fi##article[class^="grid__item_"]:has(.bg-category_mainos)
+
+savonsanomat.fi,ess.fi,itahame.fi,ksml.fi##+js(setTimeout-defuser.js,linkEl)
+
+uusisuomi.fi,xxl.fi,kaleva.fi##+js(abort-current-inline-script.js, NREUM)
+
+! Taisto.org - ad containers
+taisto.org###siteNotice:has-text(Mainos / Advertisement:):has(.adsbygoogle)
+taisto.org###mw-data-after-content > div:has-text(Mainos / Advertisement:):has(.adsbygoogle)
+
+proxyproxy.fi,pirateproxy.fi,piratesbay.fi,tpbproxy.fi,piratebays.fi##+js(window.open-defuser.js)
+
+! Viafree - anti-adblock
+||fwmrm.net^*/admanager.js$domain=viafree.fi,important
+viafree.fi##+js(setTimeout-defuser.js, r, 0)
+viafree.fi##+js(addEventListener-defuser.js, error, (t,n))
+||cdn.ravenjs.com^$script,domain=viafree.fi
