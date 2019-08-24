@@ -30,6 +30,19 @@ severe issue with the content of any mirrored files.
 **For other filters related problems, please open issues in the
 [NanoFilters](https://github.com/NanoAdblocker/NanoFilters) repository.**
 
+## Truncate History
+
+To keep the size of this repository under control, Git history can be
+truncated. About a week worth of history should be kept just in case.
+
+```Bash
+git checkout --orphan temp <commit_hash>
+git commit --message="Truncate history"
+git rebase --onto temp <commit_hash> master
+git branch --delete --force temp
+git push --force
+```
+
 ## License
 
 Files mirrored here are under various open source or almost open source
