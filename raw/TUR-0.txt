@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: naqdij1KBIFB1rd7PS2LOg
+! Checksum: EzyTuV5VJ7IQ4sZnxIYBxg
 ! Title: AdGuard Turkish filter
 ! Description: Filter list that specifically removes ads on websites in Turkish language.
-! Version: 2.0.8.57
-! TimeUpdated: 2019-08-23T11:30:05+03:00
+! Version: 2.0.8.59
+! TimeUpdated: 2019-08-24T00:02:27+03:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#turkish
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -364,6 +364,7 @@
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/38801
 @@||videonuz.ensonhaber.com/player/ads.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/38792
 ! https://github.com/AdguardTeam/AdguardFilters/issues/38538
 !+ PLATFORM(ext_ff, ext_opera, ios, ext_android_cb, ext_safari, ext_ublock)
 @@||res-simler.blogspot.com^$generichide
@@ -1671,6 +1672,7 @@ zargan.com#$#section#results #header {background-image: none!important; }
 !---------------------------------------------------------------------------!
 !-------------- General URL blocking rules ---------------------------------!
 !---------------------------------------------------------------------------!
+/melbet728.gif
 /melbetvideo.mp4
 /melbet.mp4
 /escort.jpg
@@ -1815,6 +1817,9 @@ betting-roulette.com,insaatnoktasi.com,fullhdfilmdeposu.com,filmifullizle.tv,diz
 vivaldimagazin.com,tafdi.org,gzt.com,topraklagelen.com.tr,thebrandage.com,gamer.com.tr,direkizleyin.com,medyafaresi.com,silentall.com,tafdi.com,gazeteden.com,amsev.party,amseyret.party,azginlar.party,ciplak.party,sanalyer.com,direkizle2.com,indir.com,memuruz.net,1cubukadam.com,bjk.com.tr,bursadabugun.com,emlakeki.com,gercekgundem.com,haber7.com,internethaber.com,memurhaber.com,milligazete.com.tr,webtekno.com##.ads
 !
 !
+diziyo7.net##.dzy-pageskin
+limitsizamca.org##center > a[href^="https://goo.gl/"] > img
+||limitsizamca.org/dizi/background3.jpg
 ||tplayer.vanlongstream.com/public/js_pop.js
 hdfilmcehennemi1.com##div[class^="player-"][class$="-metin"]
 ||lh3.googleusercontent.com^$media,domain=webteizle.pw
@@ -1841,6 +1846,7 @@ pasada.com.tr##div[class$="reklam"]
 pasada.com.tr##div[itemprop="articleBody"] > div[style] > a[target="_blank"] > img
 pasada.com.tr###ortaKategori > div[style] > div[class$="Reklam"]
 sosyorol.com###reklam-ver-link
+milliyet.com.tr##.smart-ads
 ||danimarkakonsoloslugu.com/asset/*/*-banner-*
 haberx.com##a[href^="https://www.ikinciyeni.com/araba-sat?utm_source=banner"] > img
 ||haberx.com/images/ikinciyeni.gif
