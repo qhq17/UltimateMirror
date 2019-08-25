@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: GHcmQquor9aZFUGOZ2iqsA
+! Checksum: NX3wWHxxcUF/RoWhJyBZ2Q
 ! Title: AdGuard Mobile Ads filter
 ! Description: Filter for all known mobile ad networks. Useful for mobile devices.
-! Version: 2.0.7.40
-! TimeUpdated: 2019-08-19T15:30:02+03:00
+! Version: 2.0.7.49
+! TimeUpdated: 2019-08-23T22:29:59+03:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#mobile
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -155,6 +155,7 @@
 !
 ||buysellads.com^
 ||casino-ad-mediation.me2zengame.com^
+||postut.cn^$third-party
 ||eysmaa.pw^$third-party
 ||vennala.pw^$empty
 ||promoted.soundcloud.com^
@@ -1780,12 +1781,19 @@ m.news.de##.unisterAdsStart
 !+ NOT_PLATFORM(ios, ext_android_cb)
 ||mobile.donanimhaber.com/ads^
 !
+m.eprice.com.tw##div[class^="ad-"]
+/banner/*$domain=travel-star.jp
+yesiltopuklar.com##div[class^="mobil-header-banner"]
 oggito.com##.oggito-ads
+||m.manhuafen.com/js/mhf.js
 yemektarifleri-sitesi.com##.footer_fix_reklam
+nijinchu.com###icon-adv
 m.thethao247.vn###add
 rbc.ru##.banners__mobile-freeze
 m.salihlisektorgazetesi.com##iframe[src^="/mobil-reklam-"]
 ||m.salihlisektorgazetesi.com/mobil-reklam-
+.html?$domain=wap.dulaidw.com
+.xhtmm?$domain=wap.dulaidw.com
 swedroid.se##.externalTopMobile
 maxfoodfun.com##.header-fixed-area
 maxfoodfun.com##.recommend-diy
@@ -2089,7 +2097,6 @@ motherless.com###advertisement-below-menu
 ||motherless.com/floater_iframe.php
 imagebam.com,motherless.com##._ln-floater
 kp.ru###mobile_push_bottom
-anyporn.com##.inplb
 anyporn.com###mh-ad
 ||anyporn.com/xml^$media,mp4
 blog.livedoor.com##.MdAdBox01
@@ -2879,6 +2886,8 @@ m.news.yandex.by,m.news.yandex.com,m.news.yandex.fr,m.news.yandex.kz,m.news.yand
 ! Blocking Facebook mobile ads
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/38987
+! https://github.com/AdguardTeam/AdguardFilters/issues/39018
 ! https://github.com/AdguardTeam/AdguardFilters/issues/38689
 ! https://github.com/AdguardTeam/AdguardFilters/issues/36310
 ! https://github.com/AdguardTeam/AdguardFilters/issues/37195
@@ -3447,7 +3456,6 @@ m.news.yandex.by,m.news.yandex.com,m.news.yandex.fr,m.news.yandex.kz,m.news.yand
 ||statistics.videofarm.daum.net^
 ||stats.popcap.com^
 ||stats.unity3d.com^
-||sypi.gpshopper.com^
 ||tapjoy.com^
 ||tapjoy.net^
 ||taurus.iad.appboy.com^
