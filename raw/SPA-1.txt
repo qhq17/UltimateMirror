@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: qa6boUMcsHkLhijpgZiyYQ
+! Checksum: 6uu2Xz0DydxGVkYMI6e8kA
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish and Portuguese languages.
-! Version: 2.0.4.43
-! TimeUpdated: 2019-08-12T18:03:36+03:00
+! Version: 2.0.4.51
+! TimeUpdated: 2019-08-28T19:31:17+03:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#spanish
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -243,46 +243,18 @@ urlcloud.us##.banner
 !
 ! These rules are against all kinds of ad blocking reinjection/circumvention scripts
 !
-!--- antiblock.org ---
-@@||peruanazotv.com^$generichide
-@@||sacheats.com^$generichide
-@@||filmes-torrent-baixar.blogspot.com^$generichide
-@@||acienciasgalilei.com^$generichide
-@@||anime-extremo.com^$generichide
-@@||bludvfilmes.com^$generichide
-@@||deportesmax.com^$generichide
-@@||deportesmax.info^$generichide
-@@||dompl3.info^$generichide
-@@||futbol-envivohd.com^$generichide
-@@||generacionretro.net^$generichide
-@@||goaldirecto.blogspot.com.ar^$generichide
-@@||goaldirecto.blogspot.com^$generichide
-@@||lacajetillaroja.blogspot.com^$generichide
-@@||latornamesa.blogspot.com^$generichide
-@@||letras2.com^$generichide
-@@||majesy.com^$generichide
-@@||megafilmestorrents.net^$generichide
-@@||netflink.top^$generichide
-@@||novelasd.com^$generichide
-@@||novelasymangasjpo.blogspot.com^$generichide
-@@||nuevos-mu.ucoz.com^$generichide
-@@||otakuworldsite.blogspot.com^$generichide
-@@||pajaslocas.com^$generichide
-@@||parasitipedia.net^$generichide
-@@||sharecool.us^$generichide
-@@||textflix.us^$generichide
-@@||torrentdosfilmes.co^$generichide
-@@||torrentmegafilmes.com^$generichide
-@@||tv-onlinehd.com^$generichide
-@@||vivo-tv.com^$generichide
-@@||vivotvhd.com^$generichide
-@@||yoututosjeff.es^$generichide
-@@||zonasports.es^$generichide
-!
-!
+! https://github.com/AdguardTeam/AdguardFilters/issues/39171
+hobba.tv#@##ad-block
+hobba.tv#@##ad-box
+! https://github.com/AdguardTeam/AdguardFilters/issues/39048
+@@||estaticos.serpadres.es/bundles/nogoffrontend/js/custom/ads.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/39154
+yayanimes.net#@##banner_ad
 ! https://github.com/AdguardTeam/AdguardFilters/issues/38314
 enrt.eu#@#.ad-banner
 enrt.eu#@##ad-banner
+! https://github.com/AdguardTeam/AdguardFilters/issues/38810
+emu-games.com#@##adsense
 ! https://github.com/AdguardTeam/AdguardFilters/issues/35529
 premiumtvchannels.com###divadblock
 @@||cdnjs.cloudflare.com/ajax/libs/fuckadblock/3.2.1/fuckadblock.min.js$domain=premiumtvchannels.com
@@ -1158,6 +1130,7 @@ maisgasolina.com###main [id$="Block"][-ext-has='.adsbygoogle']
 ! https://github.com/AdguardTeam/AdguardFilters/issues/15842
 ! https://github.com/AdguardTeam/AdguardFilters/issues/12258
 ! https://github.com/AdguardTeam/AdguardFilters/issues/10865
+! https://github.com/AdguardTeam/AdguardFilters/issues/39390
 ! https://forum.adguard.com/index.php?threads/identi-li-pop-up.27296/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/7559
 ! https://forum.adguard.com/index.php?threads/26449/
@@ -1324,6 +1297,8 @@ http://adw.
 !-------------------- Specific rules --------------------!
 !--------------------------------------------------------!
 !
+||identi.li/js/identili.js
+otakuteca.com##.pbl
 pivigames.blog##a[href="https://pivigames.blog/descargar.php"]
 pelis24tv.co###custom_html-26
 mercadolivre.com.br##.menu-myml-ads
