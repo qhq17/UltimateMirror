@@ -703,6 +703,37 @@ dummies.com##.ads
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/47#issuecomment-523706883
 fark.com##.top_right_container
 
+# https://github.com/NanoMeow/QuickReports/issues/1723
+imggram.org##div:has(:scope > div[data-ad])
+
+# https://github.com/NanoMeow/QuickReports/issues/1725
+thesilphroad.com###keepinTheLightsOn
+thesilphroad.com###keepinTheLightsOnWrap:style(height: 1px !important;)
+thesilphroad.com##p:has-text(Why Ads?)
+thesilphroad.com##div.light:has(:scope span.ezoic-ad)
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/48#issuecomment-525092917
+pinknews.co.uk##div[class^="pn-ad-"]
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/49#issuecomment-526419848
+austinchronicle.com###top-leaderboard
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/49#issuecomment-526419871
+comedycentral.com.au##.pane-vimn-coda-gpt-panes
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/49#issuecomment-526419896
+thedailybeast.com##.ConnatixAd
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/50#issuecomment-526861679
+friv-games.com##.website-ad-space-area
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/50#issuecomment-526861685
+appuals.com##div[class^="appua"]:has(:scope > .adsbygoogle)
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/50#issuecomment-526861702
+kongregate.com##.adcontainer
+kongregate.com##div[id^="rec_spot_ad"]
+
 # End English
 
 # -------------------------------------------------------------------------------------------------------------------- #
@@ -726,6 +757,15 @@ rule34.paheal.net##section:has(:scope > .blockbody > div[align="center"])
 hentaifox.com##.atop
 
 # End English NSFW
+
+# -------------------------------------------------------------------------------------------------------------------- #
+
+# French
+
+# https://github.com/NanoMeow/QuickReports/issues/1724
+20minutes.fr##.ad
+
+# End French
 
 # -------------------------------------------------------------------------------------------------------------------- #
 
@@ -812,6 +852,9 @@ momoniji.com##.widget-content-top:has(script[src*="://blogroll.livedoor.net/js/b
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/34#issuecomment-508301035
 seiga.nicovideo.jp###top_ads_box
 seiga.nicovideo.jp##.ads_prtext
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/48#issuecomment-525092904
+toranoana.jp##.tora-ads-list-item
 
 # End Japanese NSFW
 
