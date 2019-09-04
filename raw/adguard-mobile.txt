@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: NX3wWHxxcUF/RoWhJyBZ2Q
+! Checksum: 0HpGJqLThmYTnweu5RgskQ
 ! Title: AdGuard Mobile Ads filter
 ! Description: Filter for all known mobile ad networks. Useful for mobile devices.
-! Version: 2.0.7.49
-! TimeUpdated: 2019-08-23T22:29:59+03:00
+! Version: 2.0.7.62
+! TimeUpdated: 2019-09-03T23:29:57+03:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#mobile
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -1138,7 +1138,7 @@ m.empflix.com#$?##flixPlayer > div[id="inttt"][style*="z-index:"] { remove: true
 ! https://github.com/AdguardTeam/AdguardFilters/issues/37428
 mobil.konhaber.com#?#div.jqm-fullwidth[role="main"] > .listele > li:has(> a.ui-link[href][title$="Reklam"])
 !
-brestcity.com#?#.BlockTop1
+brestcity.com#?#.BlockT1
 ! https://github.com/AdguardTeam/AdguardFilters/issues/36670
 m.galya.ru##.themes-block-cont > tbody > tr[class="tr-kind4"] > td:has(> div[style="width:320px;height:250px;"])
 m.galya.ru##.themes-block-cont > tbody > tr[class="tr-kind4"] > td:has(> div[id^="yandex_rtb_R-A-"])
@@ -1280,6 +1280,7 @@ zen.yandex.by,zen.yandex.com,zen.yandex.kz,zen.yandex.ru,zen.yandex.ua#?#.touch-
 ! https://forum.adguard.com/index.php?threads/12443/
 !#################
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/38730
 ! https://github.com/AdguardTeam/AdguardFilters/issues/30369
 ! https://github.com/AdguardTeam/AdguardFilters/issues/30366
 ! https://github.com/AdguardTeam/AdguardFilters/issues/22801
@@ -1781,6 +1782,16 @@ m.news.de##.unisterAdsStart
 !+ NOT_PLATFORM(ios, ext_android_cb)
 ||mobile.donanimhaber.com/ads^
 !
+techbook.de##.amp-wp-article-content > figure.aligncenter > a[target="_blank"][rel="noopener"] > amp-img
+techbook.de##.amp-wp-article-content > amp-iframe[src*="affiliate"]
+||amazonaws.com/embed/live/techbook/affiliate^
+||batikaradeniz.net/*/eliz.jpg
+||batikaradeniz.net/*/medikarrr.jpg
+abc.es##.publicidad-portada
+m.delfi.lt##.mosaic > span > img
+hclips.com##.rek
+hclips.com##.rek-link
+google.com##header[id="hdr"] ~ div#main > div[class="ZINbbc xpd O9g5cc uUPGi"]
 m.eprice.com.tw##div[class^="ad-"]
 /banner/*$domain=travel-star.jp
 yesiltopuklar.com##div[class^="mobil-header-banner"]
@@ -1823,7 +1834,7 @@ analdin.com##.banner-top
 pluggedin.ru##a[target="_blank"][href^="https://ads.adfox.ru"] > img
 community.spiceworks.com##.ad-content-slot
 community.spiceworks.com##.ad-leaderboard-slot
-up.ymgt.xyz,google.de,www-bento-de.cdn.ampproject.org##.ads
+siirtpress.com,up.ymgt.xyz,google.de,www-bento-de.cdn.ampproject.org##.ads
 up.ymgt.xyz##.play-wrap > #background
 woman.ru##.notification__ad
 woman.ru##div[data-name^="MobList"]
@@ -1961,7 +1972,6 @@ egmnow.com##.pt_mobile_ad_iframe
 egmnow.com##.pt-embed-ad-single-mobile
 m.sondakika.com##.text_reklam
 jayisgames.com##.widget-support
-newtoki.com###hd_pop
 dl-android.com##iframe[src="https://dlandroid.com/mello.php"]
 carsales.com.au##.mrec-container
 m.bulbapedia.bulbagarden.net##a[href="http://playiconoclasts.com/"]
@@ -2866,6 +2876,13 @@ m.news.yandex.by,m.news.yandex.com,m.news.yandex.fr,m.news.yandex.kz,m.news.yand
 !
 ! END: Yandex
 !
+! START: Livejournal.com
+!
+livejournal.com##data-banner-place-id
+livejournal.com##div[id^="billboard_mobile_"]
+livejournal.com##.mdspost-aside__item--banner
+!
+! END: Livejournal.com
 !---------------------------------------------------------------------------!
 !-------------- Rules for specific applications ----------------------------!
 !---------------------------------------------------------------------------!
@@ -3148,6 +3165,7 @@ m.news.yandex.by,m.news.yandex.com,m.news.yandex.fr,m.news.yandex.kz,m.news.yand
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/31290
 ! https://github.com/AdguardTeam/AdguardFilters/issues/7099
+! https://github.com/AdguardTeam/AdguardForAndroid/issues/908
 !
 ! For apps
 ||analytics.kidoz.net^
