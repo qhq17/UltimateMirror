@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Checksum: y+DRynH/2pKQVlvqibBJfw
+! Checksum: IBtdIedE7Jv+EeBq8IO+Sw
 ! Title: Fanboy's Enhanced Tracking List
-! Updated: 23 Aug 2019
+! Updated: 3 Sep 2019
 ! Expires: 5 days
 ! License: http://creativecommons.org/licenses/by/3.0/
 ! Homepage: http://www.fanboy.co.nz/
@@ -409,11 +409,13 @@ jsonline.com##.blockOverlay
 jsonline.com##.blockPage
 nautil.us###adpayload
 ||accu.fm/audio/sweeper/
+||api.ffx.io/graphql*Paywall$xmlhttprequest,domain=smh.com.au|theage.com.au|brisbanetimes.com.au|watoday.com.au|afr.com
 ||cointent.com^$third-party
 ||concert.io^$third-party
 ||contentpass.net^$third-party
 ||mediapass.com^$third-party
 ||newsmemory.com^$third-party
+||nytimes.com/meter.js
 ||piano-media.com^$third-party
 ||platform.californiatimes.com/meter/latspot.min.js
 ||ppjol.net^$third-party
@@ -1199,6 +1201,7 @@ eurogamer.net##.collapsible.stack-mpu
 ! metabomb.net
 metabomb.net#@#.plainAd
 ! notebookcheck.com
+@@||notebookcheck-ru.com/ads.js$script
 @@||notebookcheck.com/fileadmin/scripts/pagecall_dfp_async.js
 ! https://github.com/ryanbr/fanboy-adblock/issues/619
 abs-cbn.com#@#.ads-block
@@ -2876,7 +2879,6 @@ tvtropes.org##.social-item
 ##.fc-pinned-message-container
 ##.fc-root
 ##.o-AdhesionNotifier
-##.swal-overlay--show-modal.swal-overlay
 1337x.info###popDiv
 8muses.com##.top-warning
 9anime.is##div[class*="message"]
@@ -2926,7 +2928,7 @@ xkorean.net##a[href*="&aff_id"]
 ! ---------- Whitelisting rules ----------
 !
 ! test filter for google/gpt
-@@||googletagservices.com/tag/js/gpt.js$domain=aviationweek.com|tmz.com|goibibo.com|gamespot.com|gry.pl|whosampled.com|zdnet.com|thewrap.com|expansion.com|hardware.info|techrepublic.com|abczdrowie.pl|playrust.io|v3.co.uk|wired.com|ebaumsworld.com|pocketnow.com|cityam.com|computerworlduk.com|cwtv.com|forbes.com|independent.co.uk|techworld.com|my5.tv|ocregister.com|phoronix.com|realtor.com|seahawks.com|wwe.com
+@@||googletagservices.com/tag/js/gpt.js$domain=nfl.com|aviationweek.com|tmz.com|goibibo.com|gamespot.com|gry.pl|whosampled.com|zdnet.com|thewrap.com|expansion.com|hardware.info|techrepublic.com|abczdrowie.pl|playrust.io|v3.co.uk|wired.com|ebaumsworld.com|pocketnow.com|cityam.com|computerworlduk.com|cwtv.com|forbes.com|independent.co.uk|techworld.com|my5.tv|ocregister.com|phoronix.com|realtor.com|seahawks.com|wwe.com
 ||googletagmanager.com/ns.html$third-party
 ||googletagservices.com/tag/js/gpt.js$third-party
 ||marfeelcache.com/*.googletagservices.com/tag/js/gpt.js
