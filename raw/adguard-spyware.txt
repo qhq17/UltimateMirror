@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: WVRNgsYQRUJSAmjj+vVrdw
+! Checksum: j17wvh8XyiRvLpc9nmv7oQ
 ! Title: AdGuard Tracking Protection filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.8.81
-! TimeUpdated: 2019-08-30T14:30:37+03:00
+! Version: 2.0.8.93
+! TimeUpdated: 2019-09-06T12:30:36+03:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#privacy
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -147,6 +147,7 @@ journal-plaza.net##.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч�
 !
 ||px.staticfiles.at^^$third-party
 ||vast.videocdn.tv^$third-party
+||wapempire.com^$third-party
 ||chali.info^$third-party
 ||ulogin-stats.ru^$third-party
 ||stat.enter-system.com^$third-party
@@ -2555,10 +2556,6 @@ journal-plaza.net##.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч�
 ||statok.net^$third-party
 ||statowl.com^$third-party
 ||stats-analytics.info^$third-party
-||stats.cz^$third-party
-||stats.de^$third-party
-||stats.fr^$third-party
-||stats.lt^$third-party
 ||stats2.com^$third-party
 ||stats21.com^$third-party
 ||stats2513.com^$third-party
@@ -3416,6 +3413,7 @@ nethunt.com/api/v1/track/email/$image
 !+ NOT_PLATFORM(ios, ext_safari, ext_android_cb)
 ||tags.news.com.au^$~script
 !
+||spr.welt.de^
 ||analytics-ingress-global.bitmovin.com^
 ||logs.insight.rapid7.com^
 ||count.rtl.de^
@@ -5053,11 +5051,13 @@ _tracking.php?b=
 ! The site should be carefully checked when you add this rule
 ||tags.tiqcdn.com/utag/*/prod/utag.js$domain=radissonhotels.com
 !
+||welt.de/assets/resources/webtrekk^
 ||movie2.kinoche.ru/iframe.js?id=$third-party
 ||articles2.marketrealist.com/aptrk^
 ||addthisedge.com/live/boost/*/_ate.track
 ||macworld.com/www/js/analytics/tracking.js
 ||sheego.de/request/pvp.php
+||yastatic.net/s3/distribution/yanalytics/yanalytics.js
 ||c0.froala.com/i?
 ||streamlava.cc/stats^
 ||pjstat.com^$third-party
@@ -5891,7 +5891,7 @@ m.lenta.ru##.b-footer_counters
 ||r.nnm.me/api/server
 ||88688.ru/api/geoip/
 ||openculture.com/wp-admin/admin-ajax.php*^action=rxn_
-||googletagservices.com/tag/js/gpt.js$domain=sinoptik.ua|gutefrage.net|qtv.ua|dt.ua|ngs.ru|unian.net|easybib.com|bohenon.com|linuxtopia.org|newsroom.kh.ua|hclips.com|noticierodigital.com
+||googletagservices.com/tag/js/gpt.js$domain=sinoptik.ua|gutefrage.net|qtv.ua|dt.ua|ngs.ru|unian.net|easybib.com|bohenon.com|linuxtopia.org|newsroom.kh.ua|hclips.com|noticierodigital.com|northumberlandgazette.co.uk|mywebtimes.com
 ||imagecrest.com/asset/view/stats.php
 ||uaswitcher.org/logic/page/data
 ||success.trendmicro.com/jslibrary/*/NetworkTracking.js
@@ -6650,6 +6650,28 @@ link.gmapp*.net$image
 !-------------- Whitelist ------------------------------------------------------!
 !-------------------------------------------------------------------------------!
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/39990
+@@||cdn.amplitude.com/libs/amplitude-*-min.gz.js$domain=agroros.ru
+! https://github.com/AdguardTeam/AdguardFilters/issues/39966
+@@||omtrdc.net/rest/v*/delivery?client=$domain=hpe.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/39931
+@@||dpm.demdex.net/id^$domain=rogers.com
+@@||omtrdc.net/rest/v*/delivery?client=$domain=rogers.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/39923
+@@||omtrdc.net/id^$domain=vodafone.cz
+@@||omtrdc.net/rest/v*/delivery?client=$domain=vodafone.cz
+@@||vodafonecz.demdex.net/id^$domain=vodafone.cz
+! https://github.com/AdguardTeam/AdguardFilters/issues/39886
+@@||google-analytics.com/analytics.js$domain=keepassium.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/39733
+@@||omtrdc.net/id^$domain=officeworks.com.au
+@@||omtrdc.net/rest/v*/delivery?client=$domain=officeworks.com.au
+@@||dpm.demdex.net/id^$domain=officeworks.com.au
+! https://github.com/AdguardTeam/AdguardFilters/issues/39871
+@@||omtrdc.net/rest/v*/delivery?client=$domain=westjet.com
+@@||dpm.demdex.net/id^$domain=westjet.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/39751
+@@||reutersmedia.net/resources_v*/js/rcom-scroll-tracker.js$domain=reuters.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/39399
 @@||tt.omtrdc.net/rest/*/delivery$domain=baynews9.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/39122
