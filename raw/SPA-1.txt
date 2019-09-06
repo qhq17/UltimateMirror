@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: 6uu2Xz0DydxGVkYMI6e8kA
+! Checksum: tdcpCrV8PmFogTCTI3eGqw
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish and Portuguese languages.
-! Version: 2.0.4.51
-! TimeUpdated: 2019-08-28T19:31:17+03:00
+! Version: 2.0.4.56
+! TimeUpdated: 2019-09-04T12:02:25+03:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#spanish
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -309,7 +309,9 @@ animesonline.cz#@#.afs_ads
 ! https://github.com/AdguardTeam/AdguardFilters/issues/32516
 !+ PLATFORM(ext_ff, ext_opera, ios, ext_android_cb, ext_safari, ext_ublock)
 @@||pokexgames-tutoriais.blogspot.com^$generichide
+! https://github.com/AdguardTeam/AdguardFilters/issues/39889
 ! https://github.com/AdguardTeam/AdguardFilters/issues/32467
+@@||animeshouse.net/*/ads.js
 animeshouse.net#@#.afs_ads
 @@||player*.animeshouse.net^$generichide
 ! https://github.com/AdguardTeam/AdguardFilters/issues/32439
@@ -1297,8 +1299,17 @@ http://adw.
 !-------------------- Specific rules --------------------!
 !--------------------------------------------------------!
 !
+superflix.net##aside.widget-area > #custom_html-16
+comandotorrents.com##center > a[href][target="_blank"] > img
+||sdks.shopifycdn.com^$domain=superflix.net
+mastercuriosidadesbr.com##.conteudo[id^="adx"]
 ||identi.li/js/identili.js
+||ticotimes.net/*/*Banner*
+ticotimes.net##a[href^="https://ticotimes.net/linkout/"]
 otakuteca.com##.pbl
+lavoz.com.ar##.bloque-ads
+lavoz.com.ar##.block-banner
+lavoz.com.ar##div[class*="block-ad"]
 pivigames.blog##a[href="https://pivigames.blog/descargar.php"]
 pelis24tv.co###custom_html-26
 mercadolivre.com.br##.menu-myml-ads
@@ -1473,6 +1484,7 @@ vergol.com###interVeil
 vergol.com###interContainer
 ||vergol.com/live/interstitial.js
 ||vergol.com/vergol.php
+uol.com.br##.label-publicidade::before
 baixarsoftware.com##a[href^="http://www.tradeadexchange.com/jump/next.php"]
 ||bludvfilmes.com/barra.php
 torrentrapid.com##div[style="float:left;width:620px;height:250px;margin:auto;"]
