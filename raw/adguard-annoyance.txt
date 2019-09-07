@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: 6HCCGACkpLkhXPL6XuDn9A
+! Checksum: 9wOUggrtgCHWpZip7Rhtbg
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups.
-! Version: 2.0.27.83
-! TimeUpdated: 2019-09-04T19:30:07+03:00
+! Version: 2.0.28.1
+! TimeUpdated: 2019-09-06T19:30:09+03:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#annoyances
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -1132,6 +1132,7 @@ sprashivalka.com##div[class="a1 "][style="height: 90px;"]
 !***
 !* Subscriptions/newsletters (not popups)
 !*
+sibnet.ru##.b-dzen-widget
 1plus1.ua##.article__content > .subscribe
 videoplenka.info##form[name="qualsub"]
 ilrestodelcarlino.it###newsletter--mailupform
@@ -1160,7 +1161,7 @@ sebeadmin.ru###scrollable
 vertex-academy.com##.widget_knews_widget
 softonic.cn,softonic.com,softonic.pl##.popup-newsletter
 bigleaguepolitics.com##.ifklicked-subscribe-form-below
-kauppalehti.fi##.newsletter-subscribe-container
+itnews.com.au,kauppalehti.fi##.newsletter-subscribe-container
 bohenon.com##.post_subscribe_block
 masterpaiki.ru#?##secondary .widget-title:contains(Новые статьи на почту)
 bowandtie.ru,realnyezarabotki.com##.widget_wysija
@@ -2297,6 +2298,7 @@ vladan.fr#@#.text-ads
 vladan.fr#@#.textAd
 vladan.fr#@#.text_ads
 !
+||venea.net/web/ab_message
 ||salik.biz/templates/default/js/stopblock/stopblock.js
 winhelp.us###pleasehelp
 apkmaza.net#@#.adsBox
@@ -3378,6 +3380,12 @@ wotspeak.ru##.adb
 ||static.cdnslate.com/etc/designs/slate/js/plus-upsell-adblock.js
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/38630
+! https://github.com/AdguardTeam/AdguardFilters/issues/38404
+!+ NOT_PLATFORM(ios)
+@@||static.doubleclick.net/instream/ad_status.js$domain=youtube.com
+!#safari_cb_affinity(general)
+@@||ad.71i.de/somtag/loader/loader.js$domain=dtm.com|sportdeutschland.tv
+!#safari_cb_affinity
 !
 ! imgview.net
 imgoutlet.pw,imgview.net,imgtown.pw,imgmaze.pw,imgdew.pw,imgrock.pw,imgview.pw#@#.adsbox
@@ -5198,16 +5206,25 @@ shifter.shop,berrybase.de,kalypsomedia.com,obd-2.de,universaledition.com,geschen
 ! ##.cookiePolicyNotice
 david-forum.de,vlc-forum.de,community.rabeneltern.org,pubg.world,clashroyaleforum.de,analog-forum.de,forum.gameware.at##.cookiePolicyNotice
 ! ##.sliding-popup-bottom
-rae.es,avvir.no,questionmark.com,paladinomedia.com,ligainsider.de,kodi.tv,veggiepeople.org,worldpressphoto.org,syfy.com,orange.be,handballerd.hu,nationalinterest.org,sonntagsblatt.de,helsinginkaupunginorkesteri.fi,domradio.de,topuniversities.com,piaggiogroup.com,asobostudio.com,stainlessgames.com,reinisfischer.com,nnieuws.be,thuisarts.nl##.sliding-popup-bottom
+dtm.com,rae.es,avvir.no,questionmark.com,paladinomedia.com,ligainsider.de,kodi.tv,veggiepeople.org,worldpressphoto.org,syfy.com,orange.be,handballerd.hu,nationalinterest.org,sonntagsblatt.de,helsinginkaupunginorkesteri.fi,domradio.de,topuniversities.com,piaggiogroup.com,asobostudio.com,stainlessgames.com,reinisfischer.com,nnieuws.be,thuisarts.nl##.sliding-popup-bottom
 ! ###cookieWarningR
 andoveradvertiser.co.uk,asianimage.co.uk,banburycake.co.uk,barryanddistrictnews.co.uk,basildonstandard.co.uk,basingstokegazette.co.uk,bicesteradvertiser.net,borehamwoodtimes.co.uk,braintreeandwithamtimes.co.uk,brentwoodlive.co.uk,bridportnews.co.uk,bromsgroveadvertiser.co.uk,bucksfreepress.co.uk,burytimes.co.uk,campaignseries.co.uk,chelmsfordweeklynews.co.uk,chorleycitizen.co.uk,clactonandfrintongazette.co.uk,cotswoldjournal.co.uk,cravenherald.co.uk,croydonguardian.co.uk,dailyecho.co.uk,darlingtonandstocktontimes.co.uk,dorsetecho.co.uk,droitwichadvertiser.co.uk,dudleynews.co.uk,ealingtimes.co.uk,echo-news.co.uk,enfieldindependent.co.uk,eppingforestguardian.co.uk,epsomguardian.co.uk,eveshamjournal.co.uk,falmouthpacket.co.uk,freepressseries.co.uk,gazette-news.co.uk,gazetteherald.co.uk,gazetteseries.co.uk,guardian-series.co.uk,halesowennews.co.uk,halsteadgazette.co.uk,hampshirechronicle.co.uk,harrowtimes.co.uk,harwichandmanningtreestandard.co.uk,heraldseries.co.uk,herefordtimes.com,hillingdontimes.co.uk,ilkleygazette.co.uk,keighleynews.co.uk,kidderminstershuttle.co.uk,knutsfordguardian.co.uk,lancashiretelegraph.co.uk,ledburyreporter.co.uk,leighjournal.co.uk,ludlowadvertiser.co.uk,maldonandburnhamstandard.co.uk,malverngazette.co.uk,messengernewspapers.co.uk,middlewichguardian.co.uk,milfordmercury.co.uk,newsshopper.co.uk,northwichguardian.co.uk,northyorkshireadvertiser.co.uk,oxfordmail.co.uk,oxfordtimes.co.uk,penarthtimes.co.uk,prestwichandwhitefieldguide.co.uk,redditchadvertiser.co.uk,richmondandtwickenhamtimes.co.uk,romseyadvertiser.co.uk,runcornandwidnesworld.co.uk,salisburyjournal.co.uk,smallholder.co.uk,southendstandard.co.uk,southwalesargus.co.uk,southwalesguardian.co.uk,southwestfarmer.co.uk,stalbansreview.co.uk,sthelensstar.co.uk,stourbridgenews.co.uk,surreycomet.co.uk,suttonguardian.co.uk,tewkesburyadmag.co.uk,theargus.co.uk,theboltonnews.co.uk,thenational.scot,thenorthernecho.co.uk,theoldhamtimes.co.uk,thescottishfarmer.co.uk,thetelegraphandargus.co.uk,thetottenhamindependent.co.uk,thewestmorlandgazette.co.uk,thurrockgazette.co.uk,times-series.co.uk,tivysideadvertiser.co.uk,wandsworthguardian.co.uk,watfordobserver.co.uk,wearvalleyadvertiser.co.uk,westerntelegraph.co.uk,wharfedaleobserver.co.uk,wilmslowguardian.co.uk,wiltsglosstandard.co.uk,wimbledonguardian.co.uk,wirralglobe.co.uk,witneygazette.co.uk,worcesternews.co.uk,yorkpress.co.uk,yourlocalguardian.co.uk###cookieWarningR
 ! ###gdpr
 escortbook.com,looper.com,fromdoctopdf.com,learnersdictionary.com,spanishdict.com,merriam-webster.com,digi24.ro,antena3.ro,wikihow.com.tr,wikihow.cz,wikihow.it,wikihow.jp,wikihow.vn,wikihow.com,mobil.se,digisport.ro,periscope-solutions.com###gdpr
 !
+tarifikolay.com###warnings > .personal-data-usage
+burgan.com.tr###footer_cerez_politikasi
+meinestadt.de###ms_cookie_ok
+filmin.es##.alert-fixed[data-init="js-accept-cookies"]
+baxov.net###gdpr-popup
+userbenchmark.com###notForm > div[id="notForm:userNot"] > .nb-parent
+vodafone.cz##.vf-gdpr-settings
+181fm.com###ovgdpr
 obywatel.gov.pl#$#.modal-rodo { display: none!important; }
 obywatel.gov.pl#$#.modal-backdrop { display: none!important; }
 obywatel.gov.pl#$#body.modal-open { overflow: visible!important; padding-right: 0!important; }
 westjet.com##.wj-header-usercookies
+||cmp.macworld.co.uk^
 blablacar.ru##.CookieBanner
 gencgazete.net###cookie_information
 bordoklavyeli.net###text-5
@@ -7051,7 +7068,7 @@ justfab.de,fabletics.de##.cookienav
 sarenza.de##.notif-bar
 onygo.com##.cookie_info_container
 fashionette.de##.header__cookies-notice__wrapper
-hotnewhiphop.com,yurticikargo.com,vonovia.de##.cookie-policy-wrapper
+whitehatsec.com,hotnewhiphop.com,yurticikargo.com,vonovia.de##.cookie-policy-wrapper
 stihl.de##.privacyTop
 istockphoto.com##.notification-list
 blueband.nl###cookie_message_holder
@@ -9289,6 +9306,15 @@ sodapdf.com##.be-tooltip
 !
 ! Specific sites
 !
+egyptianstreets.com###newsletterModal
+egyptianstreets.com##.modal-backdrop
+novate.ru##.top_window
+rambler.ru#?##main > footer+div[class]:has(> div[class] > div:contains(стартовой страницей))
+nosteamgames.ro###main_content_section > #drop[style*="z-index:"]
+sibnet.ru##.rt2019_sibnet
+lolhehehe.com#$#.tdarkoverlay { display: none !important; }
+lolhehehe.com#$#.tbrightcontent { display: none !important; }
+lolhehehe.com#$#body { overflow: visible !important }
 kitanalure.xxx###offline-notifications-message
 kitanalure.xxx###valentines-gifts-popup
 drogerienatura.pl#$#.modal-backdrop { display: none!important; }
@@ -11152,6 +11178,7 @@ bomb01.com#$#.modal-open { overflow: visible!important; }
 !
 ||list-news.net^$third-party
 ||tutad.ru^
+||wwsercher.biz^$third-party
 ||pushofferpro.com^$third-party
 ||install.searchfrit.com^$third-party
 ||pushland.net^$third-party
