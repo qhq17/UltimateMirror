@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: 0HpGJqLThmYTnweu5RgskQ
+! Checksum: D7rrNyrRl/quItNDTdjL1w
 ! Title: AdGuard Mobile Ads filter
 ! Description: Filter for all known mobile ad networks. Useful for mobile devices.
-! Version: 2.0.7.62
-! TimeUpdated: 2019-09-03T23:29:57+03:00
+! Version: 2.0.7.67
+! TimeUpdated: 2019-09-08T17:29:57+03:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#mobile
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -1782,6 +1782,8 @@ m.news.de##.unisterAdsStart
 !+ NOT_PLATFORM(ios, ext_android_cb)
 ||mobile.donanimhaber.com/ads^
 !
+koinmedya.com##.amp-sticky-ads
+ubr.ua##body > div[style*="height: 300px;"][style*="text-align: center;"]
 techbook.de##.amp-wp-article-content > figure.aligncenter > a[target="_blank"][rel="noopener"] > amp-img
 techbook.de##.amp-wp-article-content > amp-iframe[src*="affiliate"]
 ||amazonaws.com/embed/live/techbook/affiliate^
@@ -1794,6 +1796,7 @@ hclips.com##.rek-link
 google.com##header[id="hdr"] ~ div#main > div[class="ZINbbc xpd O9g5cc uUPGi"]
 m.eprice.com.tw##div[class^="ad-"]
 /banner/*$domain=travel-star.jp
+yesiltopuklar.com##.home-adbox-for-m
 yesiltopuklar.com##div[class^="mobil-header-banner"]
 oggito.com##.oggito-ads
 ||m.manhuafen.com/js/mhf.js
@@ -2904,7 +2907,6 @@ livejournal.com##.mdspost-aside__item--banner
 !
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/38987
-! https://github.com/AdguardTeam/AdguardFilters/issues/39018
 ! https://github.com/AdguardTeam/AdguardFilters/issues/38689
 ! https://github.com/AdguardTeam/AdguardFilters/issues/36310
 ! https://github.com/AdguardTeam/AdguardFilters/issues/37195
