@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: ktZIZURBFnrL3N9vRUUEmQ
-! Version: 201909050521
+! Checksum: 5r7yB4hKkkcd3pI0geT9Dg
+! Version: 201909102141
 ! Title: Fanboy's Social Blocking List
-! Last modified: 05 Sep 2019 05:21 UTC
+! Last modified: 10 Sep 2019 21:41 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.to/
 ! License: http://creativecommons.org/licenses/by/3.0/
@@ -179,8 +179,8 @@
 -social-instagram.
 -social-linked-
 -social-linkedin.
--social-media-$~script,~stylesheet,~xmlhttprequest
--social-media.
+-social-media-$~document,~script,~stylesheet,~xmlhttprequest
+-social-media.$~document,~script,~stylesheet,~xmlhttprequest
 -social-panel.
 -social-panel/
 -social-pinterest-
@@ -8838,6 +8838,7 @@ _youtube_social_
 ##.gigyaShareDirectApi
 ##.gizmo-fb-mini
 ##.gizmo-twitter
+##.glide-slide-sharebar
 ##.global--social--share-menu
 ##.global-fb-like
 ##.global-follow_us
@@ -10515,6 +10516,9 @@ _youtube_social_
 ##.moreShareIcons
 ##.more_btn_soc
 ##.moretweetsmsg
+##.most-shared
+##.most-shared--container
+##.most-shared--placeholder
 ##.motherboard-widget-social
 ##.motogpSocial
 ##.move-social
@@ -10948,6 +10952,7 @@ _youtube_social_
 ##.pinterest-share-button
 ##.pinterest-sharetool
 ##.pinterest-top-button
+##.pinterest-transparent
 ##.pinterest-wrapper
 ##.pinterest1
 ##.pinterestButton
@@ -13038,16 +13043,15 @@ _youtube_social_
 ##.social-links__container
 ##.social-links__list
 ##.social-linksnbt
-##.social-list
 ##.social-list-art
 ##.social-list-bubble
 ##.social-list-container
 ##.social-list-icon
-##.social-listing
+##.social-list:not(html):not(body)
+##.social-listing:not(html):not(body)
 ##.social-mail
 ##.social-main-footer
 ##.social-meadia-share
-##.social-media
 ##.social-media--container
 ##.social-media-16x16
 ##.social-media-banner
@@ -13066,7 +13070,7 @@ _youtube_social_
 ##.social-media-connect
 ##.social-media-connect--readonly
 ##.social-media-container
-##.social-media-div
+##.social-media-div:not(html):not(body)
 ##.social-media-facebook
 ##.social-media-fixed
 ##.social-media-follow
@@ -13100,6 +13104,7 @@ _youtube_social_
 ##.social-media-widget
 ##.social-media-widget-icon-bar
 ##.social-media3
+##.social-media:not(html):not(body)
 ##.social-media__link
 ##.social-medias
 ##.social-menu
@@ -13213,6 +13218,7 @@ _youtube_social_
 ##.social-share-container
 ##.social-share-count
 ##.social-share-count-full
+##.social-share-counter__shares
 ##.social-share-counts-cont
 ##.social-share-custom
 ##.social-share-facebook
@@ -13709,7 +13715,7 @@ _youtube_social_
 ##.social_logos
 ##.social_m
 ##.social_m_a
-##.social_media
+##.social_media:not(html):not(body)
 ##.social_media_block
 ##.social_media_btns
 ##.social_media_bttn
@@ -13839,7 +13845,7 @@ _youtube_social_
 ##.socialcount
 ##.socialdigg
 ##.socialdiv
-##.sociale_media
+##.sociale_media:not(html):not(body)
 ##.socialem
 ##.socialfancysliderCenterInner
 ##.socialfancysliderCenterOuter
@@ -13881,13 +13887,13 @@ _youtube_social_
 ##.sociallinks
 ##.sociallist
 ##.socialmain
-##.socialmedia
 ##.socialmedia--ArticleFacebook
 ##.socialmedia--ArticleTwitter
 ##.socialmedia-article
 ##.socialmedia-buttons
 ##.socialmedia-container
 ##.socialmedia-side
+##.socialmedia:not(html):not(body)
 ##.socialmedia_article_linkbox
 ##.socialmedia_float
 ##.socialmedia_link
@@ -16735,6 +16741,7 @@ buzzfeed.com,marriott.com##.action-bar
 slideshare.net##.action-btns-container
 linkfm.co.za,proactiveinvestors.co.uk,rfi.fr##.actions
 goodnet.org##.activity
+metro.co.uk##.ada-banner-container
 askmen.com##.addThis
 christiannews.net##.adrand
 internationalsocialist.org##.adv-icon-wrap
@@ -17365,6 +17372,7 @@ msn.com##.stbp-topWidget
 urbanghostsmedia.com,wegotserved.com##.stf
 droid-life.com##.sticky
 upworthy.com##.sticky-bar--bottom
+broadway.com##.sticky-footer
 nmpoliticalreport.com##.sticky-footer-holder
 metro.us,newtimes.co.rw##.sticky-media
 hellou.co.uk##.sticky-nav
@@ -19045,6 +19053,7 @@ wykop.pl#@#.social-list
 coeffee.com,flipboard.com,getyounity.com,howdoyou.do#@#.social-login
 ethias.be,technorati.com#@#.social-media
 f-secure.com,howtogeek.com#@#.social-media-buttons
+chorus.co.nz#@#.social-media-links
 schuermann.eu#@#.social-media-list
 insideover.com#@#.social-menu
 nvidia.pl#@#.social-newsletter
@@ -19227,6 +19236,7 @@ fark.com,github.com,github.io,marketplace.firefox.com,vvhp.net#@#img[title="YouT
 @@/share-sprite-$domain=askubuntu.com|mathoverflow.net|serverfault.com|stackapps.com|stackexchange.com|stackoverflow.com|superuser.com
 @@/socialmedia_$domain=defacto.expert
 @@/static/themes/*/img/icons/*$image,~third-party
+@@/url?*&source=$subdocument,domain=google.ad|google.ae|google.al|google.am|google.as|google.at|google.az|google.ba|google.be|google.bf|google.bg|google.bi|google.bj|google.bs|google.bt|google.by|google.ca|google.cat|google.cd|google.cf|google.cg|google.ch|google.ci|google.cl|google.cm|google.cn|google.co.ao|google.co.bw|google.co.ck|google.co.cr|google.co.id|google.co.il|google.co.in|google.co.jp|google.co.ke|google.co.kr|google.co.ls|google.co.ma|google.co.mz|google.co.nz|google.co.th|google.co.tz|google.co.ug|google.co.uk|google.co.uz|google.co.ve|google.co.vi|google.co.za|google.co.zm|google.co.zw|google.com|google.com.af|google.com.ag|google.com.ai|google.com.ar|google.com.au|google.com.bd|google.com.bh|google.com.bn|google.com.bo|google.com.br|google.com.bz|google.com.co|google.com.cu|google.com.cy|google.com.do|google.com.ec|google.com.eg|google.com.et|google.com.fj|google.com.gh|google.com.gi|google.com.gt|google.com.hk|google.com.jm|google.com.kh|google.com.kw|google.com.lb|google.com.ly|google.com.mm|google.com.mt|google.com.mx|google.com.my|google.com.na|google.com.nf|google.com.ng|google.com.ni|google.com.np|google.com.om|google.com.pa|google.com.pe|google.com.pg|google.com.ph|google.com.pk|google.com.pr|google.com.py|google.com.qa|google.com.sa|google.com.sb|google.com.sg|google.com.sl|google.com.sv|google.com.tj|google.com.tr|google.com.tw|google.com.ua|google.com.uy|google.com.vc|google.com.vn|google.cv|google.cz|google.de|google.dj|google.dk|google.dm|google.dz|google.ee|google.es|google.fi|google.fm|google.fr|google.ga|google.ge|google.gg|google.gl|google.gm|google.gp|google.gr|google.gy|google.hn|google.hr|google.ht|google.hu|google.ie|google.im|google.iq|google.is|google.it|google.je|google.jo|google.kg|google.ki|google.kz|google.la|google.li|google.lk|google.lt|google.lu|google.lv|google.md|google.me|google.mg|google.mk|google.ml|google.mn|google.ms|google.mu|google.mv|google.mw|google.ne|google.nl|google.no|google.nr|google.nu|google.pl|google.pn|google.ps|google.pt|google.ro|google.rs|google.ru|google.rw|google.sc|google.se|google.sh|google.si|google.sk|google.sm|google.sn|google.so|google.sr|google.st|google.td|google.tg|google.tk|google.tl|google.tm|google.tn|google.to|google.tt|google.vg|google.vu|google.ws
 @@/wp-content/js/googleplus-sign-in.js$script
 @@/wp-content/plugins/2-click-socialmedia-buttons/js/social_bookmarks-min.js?$~third-party
 @@/wp-content/plugins/facebook-page-promoter-lightbox/includes/featherlight/close.png$image,~third-party
