@@ -99,6 +99,11 @@ imgdew.pw##.adbwarning
 teemo.gg##section:has(:scope > div.alert:has-text(adblock))
 2ality.com##.ad-box
 smashboards.com##.funboxWrapper:has(#noticeMain)
+@@||belfasttelegraph.co.uk^$generichide
+belfasttelegraph.co.uk##.adsbygoogle
+belfasttelegraph.co.uk##.advert
+@@||release-apk.com^$generichide
+release-apk.com##[id*="ScriptRoot"]
 outlook.live.com##a[href="https://windows.microsoft.com/outlook/ad-free-outlook"]:nth-ancestor(4)
 libgen.io##+js(setTimeout-defuser.js, (), 500)
 @@||html-online.com^$generichide
@@ -243,6 +248,7 @@ bitblokes.de##+js(acis, document.getElementsByTagName, null)
 @@||thesaurus.com/assets/ads.js$xhr,1p
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=noopjs,domain=files2zip.com
 files2zip.com##div.black.banner
+||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xhr,redirect=noopjs,domain=maxedtech.com
 altadefinizione.*##.sm_header.sm_nomobile:has(:scope > a[href*="/HD/play"])
 @@||wired.com^$generichide
 wired.com##.ad
@@ -255,6 +261,12 @@ avseesee.com##iframe[src*="top.fadama.com"]
 avseesee.com##.ads
 avseesee.com##.right:has(:scope > .content > .ads)
 filmozercy.com##a[href$="filmozercy.com/wspieraj-nasza-prace-wylacz-adblocka"]
+bitblokes.de###idg_up
+bitblokes.de###google_ad_2_amazon
+bitblokes.de###ga_sub_single_wrap
+bitblokes.de###sidebar-ads-single
+bitblokes.de###adscale_down
+bitblokes.de##a[href^="https://go.nordvpn.net/aff_c?"]
 !#if env_edge
 businessinsider.com##+js(set-constant.js, _PIANO.setAdblockerCookie, noopFunc)
 businessinsider.com##+js(set-constant.js, setAdblockerCookie, noopFunc)
