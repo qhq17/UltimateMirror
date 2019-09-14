@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Checksum: IBtdIedE7Jv+EeBq8IO+Sw
+! Checksum: hG3loDdAMMEzgFVpBfHV7Q
 ! Title: Fanboy's Enhanced Tracking List
-! Updated: 3 Sep 2019
+! Updated: 14 Sep 2019
 ! Expires: 5 days
 ! License: http://creativecommons.org/licenses/by/3.0/
 ! Homepage: http://www.fanboy.co.nz/
@@ -50,7 +50,6 @@
 /ajax/hit/*
 /akqa.tracking.
 /amp-analytics-
-/analytics/*/xtcore.js
 /analytics/mbox_
 /at.js.php|
 /atm_code.js
@@ -286,8 +285,6 @@
 /tealium/*
 /thcn_code.js
 /thcn_code_
-/touch-clarity.
-/TouchClarity.
 /tracking/hbx-
 /urchin_util.
 /vs_code.js
@@ -410,9 +407,11 @@ jsonline.com##.blockPage
 nautil.us###adpayload
 ||accu.fm/audio/sweeper/
 ||api.ffx.io/graphql*Paywall$xmlhttprequest,domain=smh.com.au|theage.com.au|brisbanetimes.com.au|watoday.com.au|afr.com
+||bostonglobe.com/js/meter.js?
 ||cointent.com^$third-party
 ||concert.io^$third-party
 ||contentpass.net^$third-party
+||hadrianpaywall.com^$third-party
 ||mediapass.com^$third-party
 ||newsmemory.com^$third-party
 ||nytimes.com/meter.js
@@ -423,6 +422,9 @@ nautil.us###adpayload
 ||subscriptiongenius.com^$third-party
 ||syncronex.com^$third-party
 ||tinypass.com^$third-party
+||washingtonpost.com/wp-stat/pwapi/prod/pwapi-proxy.min.js
+! UBo-specific blocks
+theatlantic.com##+js(cookie-remover.js, articleViews)
 !
 .gsqx2fkx78q.$script,domain=goal.com
 .itzgqjhqnhp.$script,domain=atvrider.com|baggersmag.com|cruisingworld.com|destinationweddingmag.com|diversitybestpractices.com|floridatravellife.com|hotbikeweb.com|marlinmag.com|scubadiving.com|scubadivingintro.com|sportdiver.com|sportfishingmag.com|streetchopperweb.com|superstreetbike.com|utvdriver.com|wakeboardingmag.com|waterskimag.com|workingmother.com|yachtingmagazine.com
@@ -1665,22 +1667,14 @@ kinja.com,lifehacker.com,gizmodo.com,deadspin.com,theroot.com,jalopnik.com,earth
 kinja.com,lifehacker.com,gizmodo.com,deadspin.com,theroot.com,jalopnik.com,earther.com,splinternews.com,jezebel.com,avclub.com##.mezzanine
 kinja.com,lifehacker.com,gizmodo.com,deadspin.com,theroot.com,jalopnik.com,earther.com,splinternews.com,jezebel.com,avclub.com##.newsletter-subscribe
 ! cnet.com
-@@.js?$script,domain=cnet.com
-@@?&$image,domain=cnet.com
-@@?*=$domain=cnet.com
+@@||c-5uwzmx78pmca90x24ktqmvbx2evivwdqawzx2eqw.g00.cnet.com^$script,domain=www.cnet.com
+@@||c-5uwzmx78pmca90x24kvmb1x2ekjaqabibqkx2ekwu.g00.cnet.com^$script,domain=www.cnet.com
 @@||cnet.com^$generichide
-@@||js-sec.indexww.com^$script,domain=cnet.com
-@@||mtrx.go.sonobi.com^$script,domain=cnet.com
-@@||native.sharethrough.com/assets/$script,domain=cnet.com
-@@||s0.2mdn.net^$media,domain=cnet.com
-@@||securepubads.g.doubleclick.net/gpt/$script,domain=cnet.com
-@@||tpc.googlesyndication.com^$other,domain=cnet.com
-@@||us-ads.openx.net^$media,domain=cnet.com
-@@||widget.perfectmarket.com/cbsinteractive-cnet/$script,domain=cnet.com
 cnet.com###gdpr_area
 cnet.com###googleplus
 cnet.com##.ad-incontent-ad-plus-billboard-top
 cnet.com##.ad-mpu-plus-top
+cnet.com##.skybox-collapseBtn.skybox-closeBtn
 cnet.com##.social-inner
 cnet.com##.socialSharing
 cnet.com##.type-native
@@ -1688,6 +1682,7 @@ cnet.com##div[id^="leader-top-"]
 cnet.com##div[id^="nav-ad-"]
 cnet.com#@#.trc_elastic
 cnet.com#@#div[id^="trc_wrapper_"]
+||g00.cnet.com^$script,domain=www.cnet.com
 ! doridro.net
 @@||doridro.net^$generichide
 ! indianhotcomics.com
@@ -2928,7 +2923,7 @@ xkorean.net##a[href*="&aff_id"]
 ! ---------- Whitelisting rules ----------
 !
 ! test filter for google/gpt
-@@||googletagservices.com/tag/js/gpt.js$domain=nfl.com|aviationweek.com|tmz.com|goibibo.com|gamespot.com|gry.pl|whosampled.com|zdnet.com|thewrap.com|expansion.com|hardware.info|techrepublic.com|abczdrowie.pl|playrust.io|v3.co.uk|wired.com|ebaumsworld.com|pocketnow.com|cityam.com|computerworlduk.com|cwtv.com|forbes.com|independent.co.uk|techworld.com|my5.tv|ocregister.com|phoronix.com|realtor.com|seahawks.com|wwe.com
+@@||googletagservices.com/tag/js/gpt.js$domain=watchme.co.nz|nfl.com|aviationweek.com|tmz.com|goibibo.com|gamespot.com|gry.pl|whosampled.com|zdnet.com|thewrap.com|expansion.com|hardware.info|techrepublic.com|abczdrowie.pl|playrust.io|v3.co.uk|wired.com|ebaumsworld.com|pocketnow.com|cityam.com|computerworlduk.com|cwtv.com|forbes.com|independent.co.uk|techworld.com|my5.tv|ocregister.com|phoronix.com|realtor.com|seahawks.com|wwe.com
 ||googletagmanager.com/ns.html$third-party
 ||googletagservices.com/tag/js/gpt.js$third-party
 ||marfeelcache.com/*.googletagservices.com/tag/js/gpt.js
