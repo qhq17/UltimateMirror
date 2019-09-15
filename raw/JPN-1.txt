@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: ySF+T8gsVCt7LIfC3bI3Gw
+! Checksum: Rc6TvGsTteFKcrV5agcOtQ
 ! Title: AdGuard Japanese filter
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.2.23
-! TimeUpdated: 2019-09-09T13:30:48+03:00
+! Version: 2.0.2.25
+! TimeUpdated: 2019-09-14T01:30:55+03:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#japanese
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -480,33 +480,36 @@ anipo.jp#@#.adbanner
 !---------------------------------------------------------------------------!
 !
 ! Extended CSS rules
+! https://github.com/AdguardTeam/AdguardFilters/issues/40218
+! https://github.com/AdguardTeam/AdguardFilters/issues/23716
+ascii.jp#?#body > #jpWrap > #header:has(> .adsize728)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/24644
-blogs.yahoo.co.jp##.timelineArticle > ul.timelineArticle__list > li.timelineArticle__item:has(> div[id^="ad"]:empty)
+blogs.yahoo.co.jp#?#.timelineArticle > ul.timelineArticle__list > li.timelineArticle__item:has(> div[id^="ad"]:empty)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/24647
-sankei.com##.entry_column > .entry_list > .entry:has(> .entry_content > .entry_meta > i.yellow:contains(Sponsored))
+sankei.com#?#.entry_column > .entry_list > .entry:has(> .entry_content > .entry_meta > i.yellow:contains(Sponsored))
 ! https://github.com/AdguardTeam/AdguardFilters/issues/23282
-erogazou-s.com###sougo:has(> div.eromannga)
+erogazou-s.com#?##sougo:has(> div.eromannga)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/24163
-withnews.jp##.articleList > .articleBox:has(> #ad1)
-withnews.jp##.articleList > .articleBox:has(> #ad_article)
-withnews.jp##section > .sInner > .boxmatome:not([id]):has(> .OUTBRAIN)
+withnews.jp#?#.articleList > .articleBox:has(> #ad1)
+withnews.jp#?#.articleList > .articleBox:has(> #ad_article)
+withnews.jp#?#section > .sInner > .boxmatome:not([id]):has(> .OUTBRAIN)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/23927
-toyokeizai.net###sub-column > #information:has(> .title-parts > span.ad)
-toyokeizai.net###main-column > #trend-library:has(> .title-parts > span.ad)
-toyokeizai.net###article-body > #topic-board.subsection:has(> .title-parts > span.ad)
-toyokeizai.net###article-bottom > #trend-library.subsection:has(> .title-parts > span.ad)
+toyokeizai.net#?##sub-column > #information:has(> .title-parts > span.ad)
+toyokeizai.net#?##main-column > #trend-library:has(> .title-parts > span.ad)
+toyokeizai.net#?##article-body > #topic-board.subsection:has(> .title-parts > span.ad)
+toyokeizai.net#?##article-bottom > #trend-library.subsection:has(> .title-parts > span.ad)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/23925
-appllio.com###main-content > #content > .block.odd:has(aside[id^="div-gpt-ad"])
-appllio.com##.sidebar > .region-inner > .block.odd:has(div[id^="div-gpt-ad"])
+appllio.com#?##main-content > #content > .block.odd:has(aside[id^="div-gpt-ad"])
+appllio.com#?#.sidebar > .region-inner > .block.odd:has(div[id^="div-gpt-ad"])
 ! https://github.com/AdguardTeam/AdguardFilters/issues/23120
-mindhack2ch.com##.article-body > .ad:has(> .adsbygoogle)
-mindhack2ch.com##.article-body > .rss:has(> script)
-mindhack2ch.com##.article-post-bottom > .rss-article:has(> .rss-article-item)
+mindhack2ch.com#?#.article-body > .ad:has(> .adsbygoogle)
+mindhack2ch.com#?#.article-body > .rss:has(> script)
+mindhack2ch.com#?#.article-post-bottom > .rss-article:has(> .rss-article-item)
 !
 nijinchu.com#?#article > div.entry_content > h3:contains(おすすめ商品)
-melos.media##.x1_article > .x1_articleArea[-ext-has='div.x1_siteTitle:contains([PR])']
-repeat-drama.info##.side_inner > .box:contains(スポンサーリンク)
-momon-ga.com##.repo-title:has(> strong)
+melos.media#?#.x1_article > .x1_articleArea[-ext-has='div.x1_siteTitle:contains([PR])']
+repeat-drama.info#?#.side_inner > .box:contains(スポンサーリンク)
+momon-ga.com#?#.repo-title:has(> strong)
 !---------------------------------------------------------------------------!
 !-------------- General element hiding rules -------------------------------!
 !---------------------------------------------------------------------------!
@@ -846,7 +849,6 @@ tokyomotion.net##.nva-center
 ||pc-koubou.jp^$domain=ascii.jp,image
 ascii.jp###sideR > .ban
 ascii.jp##.banR
-ascii.jp##body:not(#jpHome) > #jpWrap > #header
 gendai.ismedia.jp###GB_pc_inread_mov + div[style="min-height: 250px; overflow: hidden;"]
 gendai.ismedia.jp###GB_pc_inread_mov
 famitsu.com##.ad-super-jack-link-container
