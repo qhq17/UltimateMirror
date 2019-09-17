@@ -3,7 +3,7 @@
 ! License: https://github.com/yous/YousList#license
 ! Title: YousList
 ! Expires: 4 days
-! Version: 20190830
+! Version: 20190916
 
 ! Workaround for BlockAdBlock
 #@#.pub_300x250
@@ -339,6 +339,7 @@
 ##iframe[src^="https://syndication.exosrv.com/ads-iframe-display.php"]
 ##iframe[src^="https://www.da-ads.com/da_safeframe.html"]
 ##iframe[src^="https://www.da-ads.com/google.html"]
+##iframe[src^="https://www.dianomi.com/smartads.epl"]
 ##iframe[src^="https://www.kodcad.kr/ad/"]
 ##iframe[src^="https://www.msadsense.com/BannerFrm.asp"]
 ##iframe[src^="https://www.mxttrf.com/ads"]
@@ -1832,6 +1833,7 @@
 ||urldelivery.com/watch.
 ||util.simply-hentai.com/prod/*?d=$domain=simply-hentai.com
 ||utildown.co.kr/adv/adv.php^
+||v.24liveblog.com/iframe/ad*.php^$domain=v.24liveblog.com
 ||v5.actionteaser.ru/news.php^
 ||veritas-a.com/banner/$domain=veritas-a.com
 ||veta.naver.com/fxshow^
@@ -1955,7 +1957,7 @@
 67k8k.com##div.ad-site
 9to5google.com,9to5mac.com,9to5toys.com,dronedj.com,electrek.co##div.ad-container
 9to5google.com,9to5mac.com,9to5toys.com,dronedj.com,electrek.co##div.inlinead
-9to5mac.com##div.post-body>a[rel="noopener noreferrer"][target="_blank"]
+9to5mac.com##div.post-body>a[rel="noopener"][target="_blank"]
 aagag.com##body>div[rel="top_aagag"]
 aagag.com##div#c_main>div>div[rel="home_center"]
 aagag.com##div#c_main>div[rel="aa_content_center"]
@@ -2486,6 +2488,8 @@ deviantart.com##div.mobile_inline_ad
 deviantart.com##div.mobile_instream_ad_resizable
 deviantart.com##div.partial-ad
 deviantart.com##div.squareBrowsead
+dictionary.com##div.ad
+dictionary.com##li.widget_ad
 digitalspy.com##div.ad-gpt-breaker
 digitalspy.com##div.ad-gpt-breaker-container
 digitalspy.com##div.ad-gpt-main
@@ -2652,6 +2656,7 @@ edaily.co.kr##iframe[src^="/v2/iframe/iwAD.asp"]
 edaily.co.kr##section.boxbanner_970x90
 embed.nicovideo.jp##div#overlayBanner
 embed.nicovideo.jp##iframe[src^="https://ads.nicovideo.jp/bannertext"]
+embedded.com##div.ads
 emoticonfun.com##div.notice_1
 emoticonfun.com##div.notice_2
 en.seoul.co.kr##div.adbox03
@@ -3964,6 +3969,7 @@ m.news1.kr##div.ads_seeninfo
 m.news1.kr##div.ads_shoppingbox
 m.news1.kr##div.ads_text_banner
 m.news1.kr##div.ads_text_list1
+m.news1.kr##div.article_content>div[style="float:right;margin-top:5px;margin-left:10px;width:200px;height:200px;background:#fff;"]
 m.news1.kr##div.banner01
 m.news1.kr##div.text_ad
 m.news1.kr##div[class^="ads_article"]
@@ -4789,6 +4795,7 @@ nytimes.com##div#bottom-wrapper
 nytimes.com##div#top-wrapper
 nytimes.com##div.ad
 nytimes.com##div.e12j3pa50
+nytimes.com##div.g-ad
 nytimes.com##div[id^="story-ad-"][id$="-wrapper"]
 nzkoreapost.com##a[class^="main-ad-"]
 nzkoreapost.com##div#ads_plus
@@ -4992,6 +4999,7 @@ readwrite.com##phx-advertisement
 rec.netinsight.co.kr##div.side_ifm_area>div.side_nw>div[style="border:1px solid #000; width:200px; height:200px;margin:15px 0 5px 4px;text-align:center;"]
 recode.net##div.ad-wrapper
 recordchina.co.jp##div.ad728
+reddit.com##div#comment-atf
 reddit.com##div.dfp-ad-container
 reddit.com##div.promotedlink
 reddit.com##div.promotedvideolink
@@ -5012,7 +5020,7 @@ reuters.com##div.StandardArticleBody_trustBadgeContainer>div[class]
 reuters.com##div.StandardArticleBody_trustBadgeContainer>div[id]
 reuters.com##div.StandardArticle_content>div[class]:not(.TwoColumnLayout_column)
 reuters.com##div.StandardArticle_content>div[id]:not(.TwoColumnLayout_column)
-reuters.com##div.TwoColumnLayout_column>div[class]::not(.ArticleHeader_content-container):not(.StandardArticleBody_container)
+reuters.com##div.TwoColumnLayout_column>div[class]:not(.ArticleHeader_content-container):not(.StandardArticleBody_container)
 reuters.com##div.TwoColumnLayout_column>div[id]:not(.ArticleHeader_content-container):not(.StandardArticleBody_container)
 reuters.com##div[data-template="article_list"]>div[class]:not([data-reactroot])
 reuters.com##div[data-template="article_list"]>div[data-reactroot]>div[class]:not(.ArticlePage_container):not(.BreakpointDetector_container)
@@ -5427,6 +5435,7 @@ togetter.com##div.ad_list_top
 togetter.com##div.ad_rectangle
 togetter.com##div.ad_topics_custom
 togetter.com##div.lazy-dfp
+topgear.com##div.ad
 topstarnews.net##article.article-veiw-body>div.clearfix>center>div[style="width:320px;height:50px;margin:0;padding:0"]
 topstarnews.net##iframe[src^="http://www.topstarnews.net/html/default/html_tpl_mobile/ad/"]
 torrent.mom##a[href^="https://torrent.mom/page/partner_jump"][href$=".php"]
@@ -5574,6 +5583,9 @@ urbo.com##section#sidebar_top_ad
 usatoday.com##div[id^="ad-position-"]
 usatoday.com##partner-banner
 ustream.tv##div#LeaderboardWrapper
+v.24liveblog.com##div.lb24-component-ad
+v.24liveblog.com##div.lb24-default-list-ad
+v.24liveblog.com##iframe[src^="//v.24liveblog.com/iframe/ad"][src*=".php"]
 v.entertain.media.daum.net##div.bar_ad
 v.kakao.com##div#daum-ad-root
 v.kakao.com##div.box_ad
