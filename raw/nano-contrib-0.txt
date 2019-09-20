@@ -140,6 +140,9 @@ vimeo.com##div:has(:scope > div[id^="gpt-ad"][role="complementary"])
 distrowatch.com##td:nth-of-type(2) > table.Info
 distrowatch.com##.sovrn-onetag-ad
 
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/54#issuecomment-533186962
+allrecipes.com.au,allrecipes.co.uk,allrecipes.ca##.gridResponsive__column:has(:scope > .docked_rail > div[id^="ads"])
+
 # End Multilingual
 
 # -------------------------------------------------------------------------------------------------------------------- #
@@ -210,9 +213,6 @@ games2jolly.com###leaderboard_area
 games2jolly.com###leaderboard_area_home
 games2jolly.com##.ads_310_610_sidebar_new
 games2jolly.com##.game_play > div:nth-of-type(1)
-
-# https://github.com/NanoMeow/QuickReports/issues/58
-streamhentaimovies.com##.popmake-overlay
 
 # https://github.com/NanoMeow/QuickReports/issues/156
 cryptomininggame.com###sticky_bot_right
@@ -764,11 +764,45 @@ tomsguide.com##.slot-before_popular_box
 tomsguide.com##.slot-leaderboard
 tomsguide.com##.slot-lightbox1
 
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/53#issuecomment-531989604
+forward.com###blog-sidebar-ad-container
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/53#issuecomment-531989626
+ctrl.blog##.cbox
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/53#issuecomment-531989653
+getdroidtips.com##.code-block
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/53#issuecomment-531989688
+fonearena.com###sponsor
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/53#issuecomment-531989716
+cyanogenmods.org##aside:has(span[id^="ezoic-pub-ad"])
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/53#issuecomment-531989750
+androidfilehost.com##.col-md-4:has-text(advertisement:)
+
+# https://github.com/NanoMeow/QuickReports/issues/1052
+ancient.eu##.pub
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/54#issuecomment-533187215
+apkpure.com##.adsbypure
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/54#issuecomment-533187018
+allrecipes.com###block-karma-slo
+
+# https://github.com/NanoMeow/QuickReports/issues/1865
+typing-speed.net##.advertising_vertical_title
+typing-speed.net##.advertising_horizontal_title
+
 # End English
 
 # -------------------------------------------------------------------------------------------------------------------- #
 
 # English NSFW
+
+# https://github.com/NanoMeow/QuickReports/issues/58
+streamhentaimovies.com##.popmake-overlay
 
 # https://github.com/NanoMeow/QuickReports/issues/489
 yespornplease.com##.well:has(:scope > center > iframe[src^="https://a.adtng.com/get/"])
@@ -785,6 +819,11 @@ rule34.paheal.net##section:has(:scope > .blockbody > div[align="center"])
 
 # https://github.com/NanoMeow/QuickReports/issues/1541
 hentaifox.com##.atop
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/54#issuecomment-533187391
+!#if !env_mobile
+rule34.xxx##.content:style(width: calc(100% - 220px) !important)
+!#endif
 
 # End English NSFW
 
