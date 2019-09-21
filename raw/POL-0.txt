@@ -9,18 +9,17 @@
 ! Wsparcie:
 !   Patronite ==> https://patronite.pl/polskiefiltry
 !   PayPal ==> https://www.paypal.com/pools/c/87zNJ8OJ3I
-! Last modified: 8 September 2019
+! Last modified: 18 September 2019
 ! Expires: 1 day
-! Version: 2019090801
+! Version: 2019091802
 ! Support:
-!   Email >> errors@certyficate.it
-!   Discord >> http://ds.certyficate.it
+!   Email >> errorsfilters@certyficate.it
 !   Github >> https://github.com/MajkiIT/polish-ads-filter/issues
 ! Redundant Checker >> https://www.certyficate.it/redundant_checker/redundantRuleChecker.html
 ! License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ! Copyright © 2019 Certyficate IT
 ! Najnowsza wersja zawsze na: https://www.certyficate.it/adblock
-! v.2019090801 aktualizacja: nie, 8 wrzesnia 2019, 16:45:00
+! v.2019091802 aktualizacja: sr, 18 wrzesnia 2019, 14:545:00
 !
 !
 !1#-----------------------General advert blocking filters-----------------------!
@@ -201,7 +200,7 @@ vshare.io###sendif
 ##img[alt="reklama"]
 ##ul.sharing-tools
 .pl/www/sys/ajs*.php?$script
-/reklamy/*$image,object,subdocument,domain=~selgros24.pl|~jacus.pl
+/reklamy/*$image,object,subdocument,domain=~selgros24.pl|~jacus.pl|~csbydgoszcz.pl
 /wp-content/uploads/*/baner$image,domain=lubanski.eu|miastoiludzie.pl|eksmagazyn.pl|infokatowice.pl|mma.pl|tvwlodawa.pl
 24tp.pl,lca.pl,112tychy.pl,30minut.pl,twoje-podhale.pl,upflix.pl,grylogiczne.biz.pl,grydladziewczyn.net.pl,moja-ostroleka.pl,bielsko.info,polonia.nl,dukania.pl,dkl24.pl,czecho.pl##[class*="reklama"]
 mclista.pl,bialystokonline.pl,ewgt.com.pl,tugazeta.pl,dbpolska.net,mojmac.pl,piszanin.pl,tubasiedlec.pl,pracawkatowicach.com.pl,pracawkrakowie.com.pl,sevillafc.pl,miastokolobrzeg.pl,wirtualnynowydwor.pl##[id*="reklama"]
@@ -233,7 +232,7 @@ pl/popup.js|$script
 popkiller.pl,tygodnikpodhalanski.pl,cnc.info.pl##[class*="reklamy"]
 ~allegro.pl,~dipp.pl##.advert
 ~astrosalus.pl,~przegladsportowy.pl,~medonet.pl,~fakt.pl,~forbes.pl,~auto-swiat.pl,~noizz.pl,~plejada.pl,~businessinsider.com.pl,~komputerswiat.pl,~onet.pl,~vod.pl,~uwaga.tvn.pl,anglia.today,dbnao.net,pl##.ad
-~avclub.gr##[id^="ad_global"]
+~avclub.gr,~csbydgoszcz.pl##[id^="ad_global"]
 ~esanok.pl,pl###top-reklama
 ~facebook.com,~pi.hole##[id^="ads_"]
 ~fakt.pl,pl##.trizer-bnr
@@ -286,7 +285,7 @@ popkiller.pl,tygodnikpodhalanski.pl,cnc.info.pl##[class*="reklamy"]
 24pr.pl,tu.swinoujscie.pl###text-22
 24starogard.pl##[id^="bannerlistwidget-"]
 24wroclaw.pl##div.linia_4
-24wspolnota.pl,kociewiak.pl,cooltura24.co.uk,halogorlice.info,dziennikpowiatowy.pl,tczewska.pl,wejherowo24.info,koscierzyna24.info##.visible-lg
+24wspolnota.pl,kociewiak.pl,cooltura24.co.uk,halogorlice.info,dziennikpowiatowy.pl,tczewska.pl,wejherowo24.info,koscierzyna24.info,tvsudecka.pl##.visible-lg
 2bstyle.pl##.header-ads-wrapper
 2conv.com,flvto.biz,glos.pl,cefarm24.pl##.banner
 2x45.info##.Bilboard_750x100_na_dole
@@ -1012,6 +1011,7 @@ fotka.com##[id^="billboard_"]
 fotoszok.pl###tablewraper > center
 fotoszok.pl##center > a[href="http://www.boxing.pl"]
 fpiec.pl###a-slot-content-13047-blog-body-7, [id^="offerID-"]
+fragrantica.pl##[id^="\35"]
 franchising.pl###right, .imgBnr
 franchising.pl##[id^="scrAd"]
 francuskie.pl##.pem-caption-below.pem-caption
@@ -1243,6 +1243,7 @@ iautomatyka.pl###custom_html-30
 icelandnews.is##.theiaStickySidebar
 ideagrafika.pl###adswidget7-quick-adsense
 ideas2action.pl##.o_inner
+ifrancja.fr##.top-main-ads.row
 igostyn.pl,ikalisz.pl,iostrowwlkp.pl,ijarocin.pl,ipleszew.pl##.partners2
 igrit.pl##.boczniak, #polifoska
 igrit.pl##a[href^="redirect/"]
@@ -1284,7 +1285,7 @@ informatorbrzeski.pl##.e3lan-top
 infosecurity24.pl#?#section.section:nth-of-type(1):-abp-has(.adv)
 infoship.pl,infoair.pl,infobike.pl,infotram.pl,inforail.pl,transinfo.pl,infobus.pl##.reklamaR2Napis
 infoship.pl,infoair.pl,infobike.pl,infotram.pl,inforail.pl,transinfo.pl,infobus.pl##[id^="reklama"][idrekl]
-infoship.pl,infoair.pl,infobike.pl,infotram.pl,inforail.pl,transinfo.pl,infobus.pl,polskiedrogi-tv.pl,mckenzie.pl###banner
+infoship.pl,infoair.pl,infobike.pl,infotram.pl,inforail.pl,transinfo.pl,infobus.pl,polskiedrogi-tv.pl,mckenzie.pl,devilpage.pl###banner
 infoskierniewice.pl##[class*="td_uid_42_"]
 innemedium.pl###block-block-16, #block-block-19, #block-block-17, #block-views-reklama-block
 innemedium.pl###block-block-16, .even.field-item > div
@@ -1454,6 +1455,7 @@ korso.pl,debica24.eu##.legal-notice
 korsosanockie.pl,korso.pl##.no-bg.widget
 koscian.net##.span_15.col
 koszalininfo.pl,wlkp24.info,wwl24.info,b2-biznes.pl,sporteuro.pl,metropoliabydgoska.pl,brzeg24.pl,pabianice.tv,zambrowiacy.pl,e-play.pl,wrc.net.pl,dziennik.walbrzych.pl,asta24.pl,nswiecie.pl,blogtransportowy.pl,portalprzemyski.pl,wzielonej.pl,mikrokontroler.pl,naszawielkopolska.pl,radio-wrzesnia.pl,life4style.pl,zachodniemazowsze.info,mlecznepodroze.pl,ziemiadebicka.pl,szydlowiecki.eu,skarzyski.eu,konecki24.pl,starachowicki.eu,swiatmotocykli.pl,magazyn.elubin.pl,topmejt.co.uk##.g
+kronikamontrealska.com##.textwidget > A
 kozaczek.pl##.nsg_ad_box
 kozaczek.pl##img[src^="data:image/jpeg;base64"]
 kozienice24.pl###adocr
@@ -2589,6 +2591,7 @@ strefawolnejprasy.pl##.rev_slider_wrapper
 studentka.pl##.s_dodatkowa > .box
 studentnews.pl##.s_dodatkowa
 studentnews.pl,gramatyka-angielska.info##a[href^="http://studentnews.pl/klik.php"]
+studio-mebli.eu###banery
 stw24.pl##.advads-widget
 styl.fm##[style^="overflow:"] > [target="_blank"] > IMG
 styl.pl###headerTopWraper > .headerPre
@@ -2687,6 +2690,7 @@ telchina.pl##[style="padding: 5px 5px 2px 5px; font-size: 1.1em; background-colo
 telchina.pl##img[src^="https://s1.postimg.org/"]
 telefonowal.pl##.right.col-md-3 > A[href^="http://"]
 telefonowal.pl##div.last_coment:nth-of-type(1) > table
+teletoonplus.pl###nctop, #nctopcontainer
 telemagazyn.pl##.callToActionTarget
 telemagazyn.pl##[class^="fiszka"]
 teleman.pl###leaderboard-bottom
@@ -2888,6 +2892,7 @@ wadowice24.pl###region1, .mobilehide.borderwrap, [href*="://reklamawadowice24.pl
 wadowiceonline.pl###top-header, #jmMobile
 wadowiceonline.pl##[id^="wo-poz-"]
 wagaciezka.com##a[href^="http://www.wagaciezka.com/banery/redirect/"]
+wagrowiec-wydarzeniazostatniejchwili.pl##.banner-promotions-wrapper, #top_10
 wakai.pl###text-html-widget-5
 wakai.pl###text-html-widget-6
 wakai.pl##.youtube-widget
@@ -3968,6 +3973,7 @@ autocentrum.pl,demotywatory.pl,dziennik.pl,facetemjestem.pl,gala.pl,garnek.pl,gr
 !23#--------------------------Pages with bad reputation------------!
 filmyfilmy.pl###play
 ||udater.net^
+||anetakurier.info^
 !
 !24#--------------------------Rules for ublock, but can be use with adblock------------!
 ||imasdk.googleapis.com/js/core/bridge*.html$subdocument,domain=exs.pl,important
@@ -4268,7 +4274,7 @@ hiro.pl##.vc_align_left.wpb_content_element.wpb_single_image
 historykon.pl###text-3
 iknurow.pl###text-91
 jazdaprawna.pl##.widget_sp_image.widget.td_block_template_1
-jedzbawsie.pl,ekspert.ceneo.pl,slupca.pl,fsgk.pl,inforiders.pl,gadzet.telchina.pl,lifemanagerka.pl,eduzabawy.com,kucharenka.pl###text-7
+jedzbawsie.pl,ekspert.ceneo.pl,slupca.pl,fsgk.pl,inforiders.pl,gadzet.telchina.pl,lifemanagerka.pl,eduzabawy.com,kucharenka.pl,stopnadwadze.pl###text-7
 kamienskie.info##[class^="ads-index"]
 kamienskie.info##[id^="text-"]
 konflikty.pl###vw_widget_custom_text-2
