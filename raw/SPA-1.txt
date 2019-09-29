@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: KX8poAzf0mYicteCIQW3Cg
+! Checksum: 3mjSNh23VsO2lzVpMapjFQ
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish and Portuguese languages.
-! Version: 2.0.4.63
-! TimeUpdated: 2019-09-17T23:31:01+03:00
+! Version: 2.0.4.69
+! TimeUpdated: 2019-09-28T05:31:08+03:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#spanish
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -72,6 +72,7 @@
 !
 ! https://forum.adguard.com/index.php?threads/ivoox-com-podcasts-issues.29530/
 ! ||addevweb.com^$third-party
+||ymonetize.com^$third-party
 ||cowcash.net^$third-party
 ||nucleo.ml^$third-party
 ||c9p7at3pctmprvb5ecq66vvd.ml^$third-party
@@ -243,6 +244,10 @@ urlcloud.us##.banner
 !
 ! These rules are against all kinds of ad blocking reinjection/circumvention scripts
 !
+! AdRegain
+!
+! https://github.com/AdguardTeam/AdguardFilters/issues/41215
+@@||file4go.net/ads.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/39171
 hobba.tv#@##ad-block
 hobba.tv#@##ad-box
@@ -337,7 +342,7 @@ liketvw.com###divadblock
 ! https://github.com/AdguardTeam/AdguardFilters/issues/31398
 anitube.cz#@#.afs_ads
 @@||animesonline.cz^$~third-party,script
-@@||anitube.cz/js/advertisement.js
+@@||anitube.cz/*advert*.js
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=anitube.cz|animesonline.cz
 ||cdn.adtrue.com/rtb/async.js$empty,important,domain=anitube.cz|animesonline.cz
 ||cdn.onesignal.com/sdks/OneSignalSDK.js$empty,important,domain=anitube.cz|animesonline.cz
@@ -985,6 +990,7 @@ jokerfansub.com#@##adsense
 yahoo.com#?#ul[class^="Mb(0)"] > li.js-stream-content:has(> div > a[rel="nofollow noopener noreferrer"]+div:contains(Patrocinado))
 !
 mangahosted.com#?#.sidebar > .clearfix > .newlateral:has(> .adsbygoogle)
+tudogostoso.com.br#?#.tdg-main > div[class]:has(> div.ads-super-footer)
 imperiodefamosas.com#?#.col-md-8 > section > div.row > div[class^="col-"]:has(> div.grid-item > p > a[rel="nofollow"] > img)
 jornaldestaquebaixada.com#?#.sidebar > .widget:has(> div > .adsbygoogle)
 nsctotal.com.br#?#.StyledDiv > .Title:contains(publicidade)
@@ -1105,6 +1111,7 @@ maisgasolina.com#?##main [id$="Block"][-ext-has='.adsbygoogle']
 !--------------------------------------!
 !------- JS rules ---------------------!
 !--------------------------------------!
+! https://github.com/AdguardTeam/AdguardFilters/issues/40879
 ! https://github.com/AdguardTeam/AdguardFilters/issues/38339
 ! https://github.com/AdguardTeam/AdguardFilters/issues/37186
 ! https://github.com/AdguardTeam/AdguardFilters/issues/35418
@@ -1298,10 +1305,14 @@ http://adw.
 !-------------------- Specific rules --------------------!
 !--------------------------------------------------------!
 !
+file4go.net##.banner300b
+file4go.net###conteudo_download > .lateral
+||tuhentaionline.com/qysfqwtqvcdg.php
 ||insurances.tips/insurances.html
 ||libros4.com/randomadm.php
 ||bit.ly^$subdocument,domain=libros4.com
 dade68.com##img[class^="responsive_ads_"]
+tudogostoso.com.br##.home-taboola
 racingdealma.com.ar##.racin-widget
 ||wp.com/www.racingdealma.com.ar/wp-content/uploads/*/banner
 ||dade68.com/imgc/center/c_10.gif
