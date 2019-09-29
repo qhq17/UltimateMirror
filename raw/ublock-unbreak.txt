@@ -1199,17 +1199,12 @@ techadvisor.co.uk#@#.adsbygoogle
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2931
 ! https://github.com/uBlockOrigin/uAssets/issues/2966
-@@||fusion.ddmcdn.com^$script,domain=discovery.com|investigationdiscovery.com|sciencechannel.com
-@@||src.litix.io/core/*/mux.js$script,domain=discovery.com|investigationdiscovery.com|sciencechannel.com
+@@||fusion.ddmcdn.com^$script,domain=animalplanet.com|cookingchanneltv.com|discovery.com|diynetwork.com|foodnetwork.com|hgtv.com|investigationdiscovery.com|sciencechannel.com|tlc.com|travelchannel.com
+@@||src.litix.io/core/*/mux.js$script,domain=animalplanet.com|cookingchanneltv.com|discovery.com|diynetwork.com|foodnetwork.com|hgtv.com|investigationdiscovery.com|sciencechannel.com|tlc.com|travelchannel.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3034
 @@||cdn.scarabresearch.com/js/*/scarab-v*.js$script,domain=remixshop.com
 @@||recommender.scarabresearch.com/merchants/*$xmlhttprequest,domain=remixshop.com
-
-! https://www.reddit.com/r/uBlockOrigin/comments/91v4qz
-! https://github.com/NanoMeow/QuickReports/issues/209
-@@||fusion.ddmcdn.com^*/comscore$script,domain=tlc.com
-@@||litix.io/core/*/mux.js$script,domain=tlc.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3051
 @@||js-sec.indexww.com^$script,domain=mashable.com
@@ -1735,9 +1730,6 @@ windowscentral.com#@#a[href^="/e?link="]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3703#issuecomment-453920675
 @@||instagram.com^$popup,domain=msn.com
-
-! https://forums.lanik.us/viewtopic.php?p=144832#p144832
-@@||dailymotion.com/embed/video/$frame
 
 ! https://github.com/easylist/easylist/issues/2631
 /performancetimer.js$badfilter
@@ -2643,11 +2635,6 @@ motherless.com#@#.media-linked
 ! https://github.com/NanoMeow/QuickReports/issues/1696
 indoxx1.center#@#.lazy
 
-! https://forums.lanik.us/viewtopic.php?f=64&t=43405&p=149357#p149357
-! https://forums.lanik.us/viewtopic.php?f=64&t=43422
-@@||adhesion.l214.com/$css,script,image,1p
-@@||adhesion.anpaa.asso.fr^$script,css,image,1p
-
 ! https://forums.lanik.us/viewtopic.php?f=64&t=43415
 ||acidcow.com^$csp=script-src 'self' * blob: data:,badfilter
 
@@ -2660,9 +2647,6 @@ indoxx1.center#@#.lazy
 ! https://forums.lanik.us/viewtopic.php?f=64&t=43426&p=149429#p149426
 @@||myreadingmanga.info/wp-content/uploads/*.jpg$image,1p
 ||myreadingmanga.info/wp-content/uploads/*.gif$image
-
-! https://forums.lanik.us/viewtopic.php?f=64&t=43429&p=149433#p149433
-@@||att.com/ui/services_co_myatt_common/*/scripts/libs/jsnlog.js$script,1p
 
 ! https://github.com/NanoMeow/QuickReports/issues/1727
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=gazzetta.it
@@ -2690,9 +2674,6 @@ techpowerup.com##[rel="nofollow external"]
 @@||api.infowarsmedia.com/videojs-event-tracking/$script,1p
 |https://$third-party,script,domain=infowars.com,badfilter
 
-! https://forums.lanik.us/viewtopic.php?f=64&t=43465&p=149584#p149583
-maaikeschrijftop.nl#@#a[href^="https://tc.tradetracker.net/"]
-
 ! https://forums.lanik.us/viewtopic.php?f=64&t=43469&p=149630#p149630
 techradar.com#@#a[href^="https://amazon."][href*="tag="]
 
@@ -2711,10 +2692,6 @@ techradar.com#@#a[href^="https://amazon."][href*="tag="]
 ! https://github.com/uBlockOrigin/uAssets/issues/6272
 @@||motika.com.mk/wp-content/plugins/ajax-hits-counter/$xhr,1p
 ||motika.com.mk/reklam$image
-
-! https://forums.lanik.us/viewtopic.php?p=149677#p149677
-agar.io#@##openfl-content
-agar.io#@##openfl-overlay
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/d2b40o/help_why_ublock_breaks_my_website/
 @@||cdn.onesignal.com/sdks/OneSignalSDK.js$script,xhr,domain=elazizi.com
@@ -2782,5 +2759,12 @@ twitter.com#@#article[role="article"]:has-text(Promoted)
 ! https://www.reddit.com/r/uBlockOrigin/comments/d8uc9z/remove_peter_lowes_list_from_company_ublock/f1ed6id/
 @@||en25.com^$image,domain=eloquaeditors.com
 
-! https://forums.lanik.us/viewtopic.php?f=64&t=42619&p=150005#p145636
-@@||c.paypal.com/da/r/fb.js$script
+! https://github.com/easylist/easylist/issues/4067
+/v1/events|$other,xmlhttprequest,badfilter
+/v2/events|$other,xmlhttprequest,badfilter
+
+! https://github.com/uBlockOrigin/uAssets/issues/6352
+@@||googletagmanager.com/gtm.js$script,domain=carvana.com
+
+! https://github.com/NanoMeow/QuickReports/issues/1319
+@@||moatads.com/aolvidibleapi*$script,domain=bloombergquint.com
