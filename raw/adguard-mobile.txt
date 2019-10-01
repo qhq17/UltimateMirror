@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: OvA+ADQhR9L/Ih/1jOBZ0g
+! Checksum: W8mgItnaS6R50MA8JkIMtQ
 ! Title: AdGuard Mobile Ads filter
 ! Description: Filter for all known mobile ad networks. Useful for mobile devices.
-! Version: 2.0.7.90
-! TimeUpdated: 2019-09-21T17:30:07+03:00
+! Version: 2.0.7.98
+! TimeUpdated: 2019-09-30T22:30:07+03:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#mobile
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -120,6 +120,9 @@
 ||criteo.com^
 ||criteo.net^
 !
+||banner.hpmdnetwork.ru^
+||hybrid.ai^
+||px.adhigh.net^
 ||ad.auditude.com^
 ||adfiles.auditude.com^
 ||cdn.auditude.com^
@@ -1784,11 +1787,17 @@ m.news.de##.unisterAdsStart
 !+ NOT_PLATFORM(ios, ext_android_cb)
 ||mobile.donanimhaber.com/ads^
 !
+m.timesofindia.com##.hzroot
+m.timesofindia.com##iframe#di_iframe
+m.timesofindia.com##.toi-amazon
+m.timesofindia.com##div[data-primead]
 m.ariva.de###siteTeaserLayer
 m.ariva.de##div[id^="ariva.de_m_300x"]
 m.ariva.de##div[id^="ariva.de_m_320x150_"]
+m.rst.ua###rst-index-adb
 vesti.ua##body > div[style^="height: 300px; z-index: 65000; position: fixed;"]
 accuweather.com##.adhesion-ad-frame
+/*xmtl$domain=xhxswz.com
 novinky.cz##.ogm-advert-mobile-square
 reddit.com##.BannerAd__320x50
 tabletowo.pl##.amp_widget_below_the_header a[data-bid] > amp-img
@@ -1824,7 +1833,7 @@ rbc.ru##.banners__mobile-freeze
 m.salihlisektorgazetesi.com##iframe[src^="/mobil-reklam-"]
 ||m.salihlisektorgazetesi.com/mobil-reklam-
 .html?$domain=wap.dulaidw.com
-.xhtmm?$domain=wap.dulaidw.com
+.xhtmm?$domain=wap.dulaidw.com|m.hebao9.com
 swedroid.se##.externalTopMobile
 maxfoodfun.com##.header-fixed-area
 maxfoodfun.com##.recommend-diy
@@ -2228,7 +2237,7 @@ wasabisyrup.com##.top-group
 wasabisyrup.com##.article-gallery > .article-gallery-group > .content-group
 redtube.com###content_container > div[class]:not(.show_page_modals):not([id]):not([style])
 youtube.com##ytm-promoted-video-renderer
-iphone.facebook.com,m.facebook.com,touch.facebook.com###m_newsfeed_stream article[data-ft*='"ei\":']
+b-m.facebook.com,iphone.facebook.com,m.facebook.com,touch.facebook.com###m_newsfeed_stream article[data-ft*='"ei\":']
 m.voyeurhit.com##.container > .section--normal[style*="margin-top: -15px"]
 avcanada.ca##.postbody > div[id^="post_content"] > .content ~ center
 xbabe.com###fltd
@@ -3208,6 +3217,9 @@ livejournal.com##.mdspost-aside__item--banner
 !+ NOT_PLATFORM(ios, ext_safari, ext_android_cb)
 ||adj.st^
 !
+||pgapi.ksmobile.com^
+||helpgrid1.ksmobile.com^
+||gcm.ksmobile.net^
 ||gameanalisys.appcpi.net^
 ||adsaccount.appcpi.net^
 ||adtrack.appcpi.net^
