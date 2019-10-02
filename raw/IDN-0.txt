@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Checksum: qVbOWa/uftC3Q9gqdCHLNw
+! Checksum: ulANBKiaOfRZ8uBgf2HDpA
 ! Title: ABPindo
-! Last modified: 2019 September 20, 14:42:41
+! Last modified: 2019 October 01, 04:59:12
 ! Expires: 4 days (update frequency)
 ! Homepage: http://abpindo.blogspot.com/
 ! Licence: https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/LICENSE
@@ -58,6 +58,7 @@
 ||adtival.network^$third-party
 ||adtng.com^$popup
 ||advertnative.com^$third-party
+||ae25079147984d4d.com^
 ||aenan.pw^$third-party
 ||afbcashidr.com^$popup,third-party
 ||ahcnxuepput.com^$popup
@@ -72,6 +73,7 @@
 ||aopxnvrugx.com^$third-party
 ||axzsd.pro^$popup,third-party
 ||azxsd.pro^$popup,third-party
+||b13481647cf775c5.com^
 ||badskies.com^$third-party
 ||bakaratonline.$popup
 ||bakaratonline.$third-party
@@ -108,6 +110,7 @@
 ||doathair.com^$third-party
 ||doghoust.net^$third-party
 ||dolohen.com^$third-party
+||domnovrek.com^$third-party
 ||drda5yf9kgz5p.cloudfront.net^
 ||dubshub.com$script,third-party
 ||dulcetcgvcxr.com^$popup,third-party
@@ -300,6 +303,7 @@
 ||xbfk51p7.review^$popup,third-party
 ||xqkzsifxgv.com^
 ||yesads.com^$third-party
+||yhig.info^$third-party
 ||yllix.com^$popup,third-party
 ||ys3e965d.top^
 ||yx-ads6.com^$third-party
@@ -355,8 +359,6 @@ $xmlhttprequest,domain=mangacanblog.com
 /banner_iklan/*
 /bb17-iklan.
 /blockadblock.$script
-/ezgif-$image
-/ezgif.*.gif$image,~third-party
 /iklancpm.
 /images/iklan/*
 /internetsehatdanamanfastnet.html|
@@ -646,6 +648,7 @@ iklan300x250.gif|
 ||hentaiheroes.com^$popup,domain=hentai2read.com
 ||hightech.web.id^*/?site=$popup
 ||hotabis.com/wp-content/uploads/*.gif$image
+||i.ibb.co/*.gif$image,domain=kazefuri.web.id
 ||i.imgur.com/*.gif$image,domain=bokep24.site
 ||id.hao123.com/resource/id/banner/
 ||id.techinasia.com/OneSignalSDKWorker.js
@@ -900,6 +903,7 @@ detik.com###adpoint5
 cinemaindo.web.id,filmapik.tv###ads
 dapurpacu.com###ads-728
 dapurpacu.com###ads-960-mid
+kumparan.com###ads-container
 harianjogja.com,solopos.com###ads-float
 dapurpacu.com###ads-mid
 downloadfilmbaru.com###ads-stack
@@ -1035,7 +1039,8 @@ dunia21.me,dunia21.net,dunia21.org###overlay-pop
 lihat.co.id###overlay[style="display: block;"]
 cinema-indo.com,cinemaindo.web.id,layarkaca21.net,layarkaca21.web.id,lk21.org,nonton21.net,nontonmovie.web.id###pbanner
 eramuslim.com###peluang
-indoxx1.com###player-side-right
+idxx1.top###player-side-left
+idxx1.top,indoxx1.com###player-side-right
 iyottube.com###playerOverlay
 indoxx1.pw###popup
 cafecinema.cc,lk21.io###popup_content
@@ -1390,6 +1395,7 @@ neonime.net##[data-src^="https://neonime.net/wp-content/"]:xpath(..)
 idfl.top##[href="http://dewanmas.com/"]
 idfl.top##[href="http://menangvip.org/"]
 kazefuri.blogspot.com##[href="http://www.cocobet."]
+idxx1.top##[href="https://indoxplay.com/promosi/slots"]
 www.kazefuri.web.id##[href="https://kdslots.com/"]
 www.kazefuri.web.id##[href="javascript:showHideGB()"]
 animeboy.me##[href^="http://bit.ly/"]
@@ -1399,8 +1405,10 @@ dewantn.com##[href^="http://www.dukungbpjs.com/ref.php"]
 bioskop45.co,bokepvid.online,kawanfilm21.online,www.nontondramas.net##[href^="https://bit.ly/"]
 kabarviral.blog,lewat.club##[href^="https://manjur.id/search.php"]
 bioskop168.pro##[href^="https://tinyurl.com/"]
+kazefuri.web.id##[href^="https://www.indovegas."]
 idfl.me##[id^="yui-gen"].postcontainer
 iberita.com##[style="float:right; margin:7px 0 10px 10px;"] > small
+idxx1.top##a.bnner
 bioskop78.com##a:nth-of-type(2)
 bioskop19.com##a[href="http://162.144.35.114/"]
 kshowid.com##a[href="http://kshowid.com/advertising/"]
@@ -1503,6 +1511,9 @@ greget.space,siherp.com,tetew.info##h2
 icinema3satu.*##.textwidget:has-text(SPACE)
 idbioskop.*##a[href^="http://bit.ly/"]
 idfl.*###ad_global_below_navbar
+idxx1.*###player-side-left
+idxx1.*###player-side-right
+idxx1.*##[href="https://indoxplay.com/promosi/slots"]
 kompas.com,tribunnews.com##iframe[title="3rd party ad content"]
 cinema-indo.net##img.aligncenter
 jakbos.com##img:nth-of-type(2)
@@ -3094,6 +3105,7 @@ woof.tube#@#.adsbox
 ||layananqq.$third-party
 ||lazabet.$third-party
 ||lazacasino.$third-party
+||lazacasino.^$popup
 ||liburpoker.$popup
 ||liburpoker.$third-party
 ||lig369.$popup
@@ -3372,6 +3384,7 @@ woof.tube#@#.adsbox
 ||obccash.$third-party
 ||obipoker.$third-party
 ||obobet.$third-party
+||obobet.^$popup
 ||okebos.$third-party
 ||okebos.top^$popup
 ||okecas.$third-party
@@ -4471,6 +4484,7 @@ woof.tube#@#.adsbox
 ##[href^="https://lapakceme."]
 ##[href^="https://liga95."]
 ##[href^="https://tbola88."]
+##[href^="https://www.indovegas."]
 ##[href^="https://www.lapak.poker/"]
 ##[src="http://livesgp."]
 ##a[href$="/77megabet"]
@@ -5947,6 +5961,7 @@ woof.tube#@#.adsbox
 ##a[href^="https://www.vimaxasli."]
 ##img[alt=" judi bola online"]
 ##img[alt="1xbet"]
+##img[alt="381bet"]
 ##img[alt="5Starsbet"]
 ##img[alt="7naga bet"]
 ##img[alt="7naga poker"]
@@ -5965,9 +5980,11 @@ woof.tube#@#.adsbox
 ##img[alt="Agen Domino QQ"]
 ##img[alt="Agen Dominoqq"]
 ##img[alt="Agen Judi Bola"]
-##img[alt="Agen Judi Online Terpercaya di Indonesia"]
 ##img[alt="Agen Judi Online"]
 ##img[alt="Agen Judi Poker"]
+##img[alt="Agen Judi Terpercaya"]
+##img[alt="Agen Online"]
+##img[alt="Agen Poker Indonesia"]
 ##img[alt="Agen Poker Online"]
 ##img[alt="Agen Poker Terpercaya"]
 ##img[alt="Agen Poker"]
@@ -6004,6 +6021,7 @@ woof.tube#@#.adsbox
 ##img[alt="DivaQQ"]
 ##img[alt="Domino 99"]
 ##img[alt="Domino QQ"]
+##img[alt="DominoQQ"]
 ##img[alt="FIFAQQ"]
 ##img[alt="GARUDAQQ"]
 ##img[alt="GoldenPoker"]
@@ -6012,6 +6030,7 @@ woof.tube#@#.adsbox
 ##img[alt="ISOPOKER "]
 ##img[alt="Ibosport"]
 ##img[alt="Indomaxbet"]
+##img[alt="Informasi Bandar Terpercaya"]
 ##img[alt="Itucasino"]
 ##img[alt="JasaGol"]
 ##img[alt="Judi Bola"]
@@ -6051,12 +6070,12 @@ woof.tube#@#.adsbox
 ##img[alt="Sbosbet"]
 ##img[alt="Situs Bandarq Online"]
 ##img[alt="Situs Bola Indonesia"]
-##img[alt="Situs Judi Online Terpercaya"]
 ##img[alt="Situs Judi"]
 ##img[alt="Situs QQ"]
 ##img[alt="Situs Togel Terpercaya"]
 ##img[alt="TEXASPOKER"]
 ##img[alt="TEXASPOKERCC"]
+##img[alt="TEXASQQ"]
 ##img[alt="TajirQQ"]
 ##img[alt="Taruhan Bola"]
 ##img[alt="TexasPoker"]
@@ -6142,6 +6161,7 @@ woof.tube#@#.adsbox
 ##img[alt="selebtoto"]
 ##img[alt="senibet"]
 ##img[alt="sepakbola.cc"]
+##img[alt="situs poker online"]
 ##img[alt="situs poker"]
 ##img[alt="situs togel online"]
 ##img[alt="superdomino"]
@@ -6158,6 +6178,7 @@ woof.tube#@#.adsbox
 ##img[alt="wigobet"]
 ##img[title=" judi bola online"]
 ##img[title="1xbet"]
+##img[title="381bet"]
 ##img[title="5Starsbet"]
 ##img[title="7naga bet"]
 ##img[title="7naga poker"]
@@ -6177,9 +6198,10 @@ woof.tube#@#.adsbox
 ##img[title="Agen Domino QQ"]
 ##img[title="Agen Dominoqq"]
 ##img[title="Agen Judi Bola"]
-##img[title="Agen Judi Online Terpercaya di Indonesia"]
 ##img[title="Agen Judi Online"]
 ##img[title="Agen Judi Poker"]
+##img[title="Agen Judi Terpercaya"]
+##img[title="Agen Online"]
 ##img[title="Agen Poker Indonesia"]
 ##img[title="Agen Poker Online"]
 ##img[title="Agen Poker Terpercaya"]
@@ -6223,6 +6245,7 @@ woof.tube#@#.adsbox
 ##img[title="Dewa Poker"]
 ##img[title="DivaQQ"]
 ##img[title="Domino 99"]
+##img[title="DominoQQ"]
 ##img[title="FIFAQQ"]
 ##img[title="GARUDAQQ"]
 ##img[title="GanoolQQ"]
@@ -6231,6 +6254,7 @@ woof.tube#@#.adsbox
 ##img[title="ISOPOKER "]
 ##img[title="Ibosport"]
 ##img[title="Indomaxbet"]
+##img[title="Informasi Bandar Terpercaya"]
 ##img[title="JasaGol"]
 ##img[title="Judi Bola"]
 ##img[title="Judi Online"]
@@ -6269,6 +6293,7 @@ woof.tube#@#.adsbox
 ##img[title="Situs Togel Terpercaya"]
 ##img[title="TEXASPOKER"]
 ##img[title="TEXASPOKERCC"]
+##img[title="TEXASQQ"]
 ##img[title="Tangkas Online"]
 ##img[title="Taruhan Bola"]
 ##img[title="TexasPoker"]
@@ -6316,7 +6341,6 @@ woof.tube#@#.adsbox
 ##img[title="cara daftar sbobet"]
 ##img[title="domino99"]
 ##img[title="hoyajackpot"]
-##img[title="indobet - agen bola online"]
 ##img[title="indobookies"]
 ##img[title="intanbet"]
 ##img[title="itucasino"]
@@ -6350,6 +6374,7 @@ woof.tube#@#.adsbox
 ##img[title="selebtoto"]
 ##img[title="senibet"]
 ##img[title="sepakbola.cc"]
+##img[title="situs poker online"]
 ##img[title="situs togel online"]
 ##img[title="superdomino"]
 ##img[title="taruhan bola online"]
