@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: deKAQsxAsEGqTdhhROwcHw
+! Checksum: smb8jo+CNu3deg393dc6Sw
 ! Title: AdGuard Turkish filter
 ! Description: Filter list that specifically removes ads on websites in Turkish language.
-! Version: 2.0.9.55
-! TimeUpdated: 2019-09-24T17:30:12+03:00
+! Version: 2.0.9.69
+! TimeUpdated: 2019-10-03T14:30:12+03:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#turkish
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -1221,8 +1221,15 @@ turkanime.tv#?#td[valign="top"][style="padding-top:10px; padding-left:5px; width
 !------- CSS fixes --------------------!
 !--------------------------------------!
 !
+! selcuksportshd15.live - ads
+selcuksportshd15.live#$##myModal { display: none!important; }
+selcuksportshd15.live#$#.modal-backdrop { display: none!important; }
+selcuksportshd15.live#$#body.modal-open { overflow: visible!important; padding-right: 0!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/39106
 finansgundem.com#$##head > .menu-bar.cloned { top: 0!important; }
+! https://github.com/AdguardTeam/AdguardFilters/issues/41231
+queenbet4.tv#$#body { background: #143a00!important; }
+queenbet4.tv#$?#.navbar-nav > li:has(> a[href*="queenbet4.tv/"]) { left: -400px!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/41014
 fullhdfilmizlersen.net#$#body { background: #00050e!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/39701
@@ -1943,8 +1950,44 @@ vivaldimagazin.com,tafdi.org,gzt.com,topraklagelen.com.tr,thebrandage.com,gamer.
 dizifilmix.org,sineturk.pw,altyazilifilmizle.tv,1080pfilmizle.net,dolufilmizle.com,filmizleve.com,indirmedenfilmizle.pw,filmizle.us,filmihdizlet.com,moodfilmizle.com,fullhdiziizle.com,rexfilmizle.com,dizipub.org,filmizlevip.org,dizisiniizle.org,filmizlefilmsitesi.com,sineturk1.com,hdfilmizle.fun,nettenfilm.net,dizifilmix.com,fullizlefilmizle.com,fanfilmizle.com,nettenfilm.com,filmkomedi.com,indirmedenfilmizle1.com,xfullfilmizle.com,fullhizlifilmizlesen.com,hdhergundizi.com,sinemapol.org,hdciyiz.com,sinefilm.net,hdfilmizle.life,hdcehennem.com,sendeizlesene.net,cilekfilm.com,hizlifullfilmizle.com,diziizlevv.com##.footer-sticky
 !
 !
+kitaptansanattan.com##.banner-src
+kitaptansanattan.com##figure > a[onclick^="__gaTracker"] > img
+kitaptansanattan.com##.ad
+tekmagazin.com##.sidebar > .widget > .textwidget > p > a[href][target="blank"][rel="noopener noreferrer"] > img
+elitehayat.com##.promotion-primary
+elitehayat.com##.header-right-inner
+elitehayat.com###block-ispanya
+elitehayat.com###block-maritzainsaat
+elitehayat.com###block-brandandmore
+elitehayat.com###block-hayatpaylasim
+elitehayat.com###block-ashley-joy-zen
+basedistanbul.com##img[width="300"][height="600"]
+selcuksportshd15.live##a[href^="http://www.riccobet12.com/"]
+selcuksportshd15.live##a[href^="http://www.texbet12.com/"]
+selcuksportshd15.live##a[href^="https://media.winaffiliates.com/"]
+selcuksportshd15.live##a[href="https://www.androturkiptv.com/"] > img
+medyaayvalik.com##.splash-popup
+||medyaayvalik.com/wp-content/uploads/2019/08/WhatsApp-
+||medyaayvalik.com/wp-content/uploads/2019/08/hasyilmaz-
+||medyaayvalik.com/wp-content/uploads/2017/09/sitezireklam.jpeg
+canlimacizle.davkhabara.org##.footerholder
+filmmodu.org,canlimacizle.davkhabara.org##a[href^="https://bit.ly/"][target="_blank"]
+futbolcafe23.xyz##.clpr-emre.marquee
+||futbolcafe23.xyz/tablo.html
+||futbolcafe23.xyz/bahispop21.js
+||futbolcafe23.xyz/kutular/*.html$subdocument
+||futbolcafe23.xyz/poop.js
+duzceninsesi.com.tr##.tavan_reklam
+duzceninsesi.com.tr##.haberDetay_reklam
+perakendeisdunyasi.com##div[id^="advertising-"]
+perakendeisdunyasi.com##.HeaderAdvertising
+perakendeisdunyasi.com##.advertising728x90_MansetAlti
+diziyo7.net##.sonraki-onceki > center > iframe
+||vidmo.cc/*/dizilla.js
+||diziyo7.net/videoaltust.php
 ||heheco.com^$popup,domain=mdiziizle.com
 technopat.net##.jeg_header > .jeg_midbar.normal
+queenbet4.tv##.navbar-nav > li > a:not([href*="queenbet4.tv/"])
 dizimom.com##.body-clickable
 dizimom.com###videoonu
 ||dizimom.com/video.js
@@ -2349,8 +2392,6 @@ saglikaktuel.com##.side_pub > a[href]:not([href*=".saglikaktuel.com"])[target="_
 ||saglikaktuel.com/d/other/toyota1.gif
 ||saglikaktuel.com/d/file/medisoft-hizgif.gif
 karamangundem.com,cukurovaexpres.com##a[href*="banner.php"][target="_blank"] > img
-iddaa.com##.index-adv-box
-||iddaa.com/iddaa/*-320x50-banner.
 ||hdfilmcehennemi1.com/wp-content/uploads/Brand_melbet.jpg
 oyungezer.com.tr###banner
 oyungezer.com.tr##iframe[src^="https://sam.setimedia.com"]
@@ -2467,9 +2508,6 @@ webteizle.vip,filmakinesi.net###video-onu2
 ||ekranlardan.com/wp-content/uploads/*/arkaplan.jpg
 ||merakligencler.net/reklam2.html
 ||makroo.kanal7-cdn.com/bip_ingilizce_floater/expand.js
-diziyo6.net##.sonraki-onceki > center > iframe
-||diziyo6.net/videoalti1.html
-||diziyo6.net/videoustu1.html
 haber7.com##.main-menu > .main-menu-item > a[href="http://ekonomi.haber7.com/kobi"] > img
 ||makroo.kanal7-cdn.com^$domain=donanimhaber.com|haber7.com
 ||makroo.kanal7-cdn.com/*_responsive_fullvideo/expand.js
@@ -2780,7 +2818,7 @@ adiyamanhaber.com##.sagadayalireklam
 filmionlineizle1.net,dizipub.net,dizilab.vip,720p-izle.com,dizilab.com,dizipub.co##a[href^="https://bit.ly/"] > img
 ||dizipub.co/images/text.html
 ||dizipub.co/images/vegabet.gif
-celtabettv5.com,jojobet34.tv,vevobahis25.tv,volestream13.com,hiltonbettv2.com,jokerbet27.tv,ligsenin1.com,tipobet1.tv,forvettv6.com,galabettv14.com,forvettv6.com,betestream12.com,betcup2.tv,restizle4.com,savoytv12.com,turkbettv.com,sahadanskor.com,betkanyontv4.com,hiltonbettv1.com,celtabettv3.com,pasizle5.com##.make-coupon
+queenbet4.tv,celtabettv5.com,jojobet34.tv,vevobahis25.tv,volestream13.com,hiltonbettv2.com,jokerbet27.tv,ligsenin1.com,tipobet1.tv,forvettv6.com,galabettv14.com,forvettv6.com,betestream12.com,betcup2.tv,restizle4.com,savoytv12.com,turkbettv.com,sahadanskor.com,betkanyontv4.com,hiltonbettv1.com,celtabettv3.com,pasizle5.com##.make-coupon
 ||pasizle*.com/assets/uploads/banners/
 ||pasizle*.com/assets/uploads/settings/player_bg_*.jpg
 1mac24.tv##.mobilrekla
@@ -3267,8 +3305,8 @@ journo.com.tr##a[href^="https://digitalagesummit.com/"][href*="&utm_medium=banne
 ||indirmedenfilmizle1.com/wp-content/uploads/AKN7
 ||odeontv.tv/assets/uploads/banners/
 teknokulis.com,otohaber.com.tr,ahaber.com.tr##.ligatusAdvert
-ghasrchat.org,trgool.com,2taraftarium24.com##.black-bg
-ghasrchat.org,trgool.com,2taraftarium24.com###m-popup
+canlimacizle.davkhabara.org,ghasrchat.org,trgool.com,2taraftarium24.com##.black-bg
+canlimacizle.davkhabara.org,ghasrchat.org,trgool.com,2taraftarium24.com###m-popup
 ||futbolcafe19.xyz^$domain=ghasrchat.org
 ghasrchat.org##header > table .iletp
 ||vdcasinotv*.com/assets/uploads/banners^
@@ -3406,7 +3444,7 @@ macburda.tv###p-page-skin
 ||macburda.tv/wp-content/uploads/*/arkaplasn.jpg
 filmakinesi.net,trgool.com##a[href][rel="nofollow"] > img
 trgool.com##.sidebar > #HTML10
-beinsportstv.co,bspor.stream,ligtvbu.com,futbolcafetv6.org###metin_alani
+futbolcafe23.xyz,beinsportstv.co,bspor.stream,ligtvbu.com,futbolcafetv6.org###metin_alani
 ||canlimac.futbolcafetv6.org/trgool.js
 ||canlimac.futbolcafetv6.org/trgool.player.js
 ||canlimac.futbolcafetv*.org/kutular/
@@ -3759,7 +3797,6 @@ donanimhaber.com##.reklam-kare
 ||filmarenasi.org/wp-content/uploads/enkolaykredi.png
 ||filmarenasi.org/wp-content/uploads/cialis.jpg
 filmarenasi.org##.rkapat
-playtusu.com##div[class^="b-banner b-banner--"]
 ||img2-digitouch.mncdn.com/include/donanimhaber.js
 dreamfancy.org##a[href*="epincity.net/"][target="_blank"]
 aydinlik.com.tr##a[href^="http://www.kaynakyayinlari.com/"]
@@ -4872,7 +4909,6 @@ basakgazetesi.com##.adtype-marka
 basakgazetesi.com##.adtype-up
 akyazihaber.com,futbolarena.com,yeryuzuhaber.com##.adv
 teknotimi.com##.adv0
-iddaa.com##.adv728p-90
 gazetevatan.com##.adv728x90
 arkeolojikhaber.com,iha.com.tr##.advbox
 ahaber.com.tr##.advertItem
@@ -4893,7 +4929,7 @@ denizlihaber.com##.ap-928x100
 denizlihaber.com##.ap-928x90
 denizlihaber.com##.apw-xib
 hdfullfilmizlesene.net,hdfullfilmizlesene.tv##.arakatman
-kingbetting.tv##.arkaplan
+selcuksportshd15.live,kingbetting.tv##.arkaplan
 webtekno.com##.article-300x250
 zargan.com##.asdWrapper
 begendirin.com##.ateslike-splash
