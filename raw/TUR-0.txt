@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: smb8jo+CNu3deg393dc6Sw
+! Checksum: Zbux8BxCCLlYCBidW2O4jw
 ! Title: AdGuard Turkish filter
 ! Description: Filter list that specifically removes ads on websites in Turkish language.
-! Version: 2.0.9.69
-! TimeUpdated: 2019-10-03T14:30:12+03:00
+! Version: 2.0.9.72
+! TimeUpdated: 2019-10-05T11:30:11+03:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#turkish
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -356,6 +356,8 @@
 !
 ! These rules are against all kinds of ad blocking reinjection/circumvention scripts
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/41730
+hknkr.com#@##adcontent
 ! https://github.com/AdguardTeam/AdguardFilters/issues/39358
 yabancidizi.club#@#.reklam
 yabancidizi.club#@#.advertisement:not(body)
@@ -1511,9 +1513,9 @@ sinefilm.net,thesinema.org#$##reklami { display:none!important; }
 sinefilm.net,thesinema.org#$##kendisi { display:block!important; }
 filmizlefilmsitesi.com#$##cn-content { display: block!important; }
 filmizlefilmsitesi.com#$##rk-content { display: none!important; }
-hdfilmcehennemi.org#$##reki { display: none!important; }
+jetfilmizle.vip,hdfilmcehennemi.org#$##reki { display: none!important; }
 hdfilmcehennemi.org#$##rekmine { display:none!important; }
-hdfilmcehennemi.org#$##kendisi { display: block!important; }
+jetfilmizle.vip,hdfilmcehennemi.org#$##kendisi { display: block!important; }
 diziizletek.com#$#.tab-embed { display: block!important; }
 diziizletek.com#$#.tab-reklam { display: none!important; }
 ozdizi.net#$##tum-icerik { display: block!important; position: relative!important; left: 0!important; z-index: 100!important; }
@@ -1950,6 +1952,7 @@ vivaldimagazin.com,tafdi.org,gzt.com,topraklagelen.com.tr,thebrandage.com,gamer.
 dizifilmix.org,sineturk.pw,altyazilifilmizle.tv,1080pfilmizle.net,dolufilmizle.com,filmizleve.com,indirmedenfilmizle.pw,filmizle.us,filmihdizlet.com,moodfilmizle.com,fullhdiziizle.com,rexfilmizle.com,dizipub.org,filmizlevip.org,dizisiniizle.org,filmizlefilmsitesi.com,sineturk1.com,hdfilmizle.fun,nettenfilm.net,dizifilmix.com,fullizlefilmizle.com,fanfilmizle.com,nettenfilm.com,filmkomedi.com,indirmedenfilmizle1.com,xfullfilmizle.com,fullhizlifilmizlesen.com,hdhergundizi.com,sinemapol.org,hdciyiz.com,sinefilm.net,hdfilmizle.life,hdcehennem.com,sendeizlesene.net,cilekfilm.com,hizlifullfilmizle.com,diziizlevv.com##.footer-sticky
 !
 !
+||cdn.jetcdn.co/bah*.mp4
 kitaptansanattan.com##.banner-src
 kitaptansanattan.com##figure > a[onclick^="__gaTracker"] > img
 kitaptansanattan.com##.ad
@@ -2689,7 +2692,7 @@ sportbosshd2.wtf###domainChangedBar
 sportbosshd2.wtf##img[width="468"][height="60"]
 fiilmizleyeni.com,hdfilmcehennemi2.org##.reklam-s-kodd
 forum.donanimhaber.com##a[onclick^="adThisAfterSet"]
-paratic.com##a[href="https://goo.gl/b18Pcg"]
+paratic.com##.paratic_sidebar > a[target="_blank"][title]
 fullhdfilmizlesene.net###vidrek
 fullhdfilmizlesene.net###vidrekvid
 ||fullhdfilmizlesene.net/rkl/
@@ -5875,6 +5878,8 @@ mail.yandex.com.tr##.mail-DirectLine
 !------ White list. Fixing filtration errors (false-positive)---------------!
 !---------------------------------------------------------------------------!
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/41774
+@@||cdn.jetcdn.co/reklam-button.png
 ! https://github.com/AdguardTeam/AdguardFilters/issues/38609
 trgoals8.live#@##ads-blog
 trgoals8.live#@#.reklamUst
