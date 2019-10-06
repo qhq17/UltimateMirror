@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Checksum: ulANBKiaOfRZ8uBgf2HDpA
+! Checksum: T8gHSWx/NnOZTaAOj5ni9Q
 ! Title: ABPindo
-! Last modified: 2019 October 01, 04:59:12
+! Last modified: 2019 October 05, 16:27:11
 ! Expires: 4 days (update frequency)
 ! Homepage: http://abpindo.blogspot.com/
 ! Licence: https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/LICENSE
@@ -14,13 +14,18 @@
 ! *** abpindo_adservers.txt ***
 ||05ee3a24ed11df058c8.com^$popup,third-party
 ||108.168.231.179^$popup,third-party
+||2d7bd9e6eb370143.com^
 ||2go7v1nes8.com^
 ||35.188.59.75^$popup
+||3585656d9351553f.com^
 ||3b7c0f01022f61d5.com^$popup,third-party
+||47f624b2e6c6072e.com^
+||564d28256cddaeba.com^
 ||66cpwgln.space^$popup,third-party
 ||690179b5160e450.com^$popup,third-party
 ||6a0e2d19ac28.com^$popup,third-party
 ||6c37f8a12dede103bf7.com^$popup,third-party
+||7667bab1751ff777.com^
 ||86a6b542l7.com^$third-party
 ||8a333bc2b4d6.com^$popup,third-party
 ||9icmzvn6.website^$popup,third-party
@@ -74,6 +79,7 @@
 ||axzsd.pro^$popup,third-party
 ||azxsd.pro^$popup,third-party
 ||b13481647cf775c5.com^
+||b60228e270e363f6.com^
 ||badskies.com^$third-party
 ||bakaratonline.$popup
 ||bakaratonline.$third-party
@@ -115,6 +121,7 @@
 ||dubshub.com$script,third-party
 ||dulcetcgvcxr.com^$popup,third-party
 ||dzbx8qv1at614.cloudfront.net^
+||e6081b73afec581f.com^
 ||e7393e33565ce805.com^
 ||e7393e33565ce805.com^$popup
 ||eclkmpbn.com^$third-party
@@ -123,6 +130,7 @@
 ||etoads.net^$popup
 ||etoads.net^$third-party
 ||fd7qz88ckd.com^
+||fd9523b31ff93b5c.com^
 ||feewoajy.net^$third-party
 ||fethungi.com^$third-party
 ||flexterkita.com^$third-party
@@ -193,6 +201,7 @@
 ||javaiklan.com^$third-party
 ||jillsclickcorner.com^$third-party
 ||jjxsdkphpcwu.com^$popup,third-party
+||jsc.adskeeper.co.uk^$third-party
 ||juruiklan.com^$third-party
 ||jwpltx.com^$third-party
 ||katurars.com^$popup
@@ -215,8 +224,10 @@
 ||mousheen.net^$third-party
 ||mybannermaker.com^$third-party
 ||naetoris.pw^$popup
+||newsupdatewe.info^$third-party
 ||octafx.com^$popup,third-party
 ||offerjuice.me^$popup,third-party
+||ojeergoy.com^
 ||olmsoneenh.info^$popup
 ||olmsoneenh.info^$third-party
 ||onclkds.com^$popup,third-party
@@ -234,6 +245,7 @@
 ||phastoag.com^$third-party
 ||pheersie.com^$popup
 ||pheersie.com^$third-party
+||phokukse.com^$third-party
 ||phudrour.net^$popup
 ||pippio.com^$third-party
 ||pondokiklan.com^$third-party
@@ -257,6 +269,7 @@
 ||replase.ml^$popup,third-party
 ||ridingintractable.com^$popup
 ||roojouma.com^$third-party
+||rufadses.net^
 ||runreproducerow.com^$popup,third-party
 ||s2pops.club^$popup,third-party
 ||sanglah.com^$third-party
@@ -307,9 +320,11 @@
 ||yllix.com^$popup,third-party
 ||ys3e965d.top^
 ||yx-ads6.com^$third-party
+||zinrora.pw^$third-party
 ||zoagremo.net^$third-party
 ||zukxd6fkxqn.com^$popup
 ||zy16eoat1w.com^
+||zywfpkagwwpm.com^
 ! *** abpindo_thirdparty.txt ***
 ||c-stat.eu^$third-party
 ||cfs1.uzone.id^$third-party
@@ -348,6 +363,7 @@ $xmlhttprequest,domain=mangacanblog.com
 .me/iklan/
 .my/iklan/
 .net/iklan/
+.space/Banner/*.gif$image
 .tv/iklan/
 .win^$popup
 .win^$third-party
@@ -356,10 +372,12 @@ $xmlhttprequest,domain=mangacanblog.com
 /adsterra.js|
 /adtrace2.js|
 /adv/iklan.
+/banner-728px-
 /banner_iklan/*
 /bb17-iklan.
 /blockadblock.$script
 /iklancpm.
+/images/idxbet/*.gif$image
 /images/iklan/*
 /internetsehatdanamanfastnet.html|
 /plugins/soralink/*.js$script,domain=animebaru.in|animebatch.id|animebatch.web.id|anitoki.com|batch.id|maxnime.com
@@ -429,6 +447,7 @@ iklan300x250.gif|
 ###iklanarea
 ###iklanatas
 ###iklanpersegi
+###myadsmodal
 ###netkevin-popup
 ###pbanner
 ###popupwindow
@@ -518,6 +537,7 @@ iklan300x250.gif|
 ##.iklanmini
 ##.iklanpusat
 ##.iklanright
+##.kill-adblock-container
 ##.kotak_iklan
 ##.ktz-aftermenubanner
 ##.ktz-bannersingletop
@@ -885,6 +905,7 @@ templink.org##+js(abort-on-property-read.js, app_vars.force_disable_adblock)
 tribunnews.com##+js(abort-current-inline-script.js, Math, ='\x)
 tribunnews.com##+js(abort-on-property-read.js, $getWin)
 updatetribun.org##+js(addEventListener-defuser.js, load, onload)
+hightech.web.id##+js(abort-current-inline-script, document.getElementById, adback)
 ! *** abpindo_specific_hide.txt ***
 wowkeren.com###Ad300B
 wowkeren.com###Ad728
@@ -1030,7 +1051,7 @@ hdtvku.com###mybannerpopup
 hdtvku.com###mybannerpopup2
 nobartv.com###nbpopx-wrapper
 cafecinema.cc,lk21.world,sidrama.com,www.ibugil.net###netkevin-overlay
-duniasex.co,ibugil.net,sidrama.com###netkevin-popup
+duniasex.co,ibugil.net,nontonfilmdrama.com,sidrama.com###netkevin-popup
 mangashiro.net###openpopunder
 viva.co.id###otp_ads
 detik.com###otp_banner
@@ -1092,7 +1113,7 @@ hotabis.com###text-28 > .textwidget
 videocrot.org###text-30 > .textwidget
 videocrot.org###text-6 > .textwidget
 indotelko.com###title_kanal
-ganool.watch,kebioskop21.com,kebioskop21.online,lk21.web.id,lk21tv.com,sinemaindo.web.id###top-banner
+bioskopkerenin.com,ganool.watch,kebioskop21.com,kebioskop21.online,lk21.web.id,lk21tv.com,sinemaindo.web.id###top-banner
 layarxxi.online###top-banner-content
 indoxxi.tv,xx1.tv###top-bnner-content
 detik.com###top_banner
@@ -1150,7 +1171,7 @@ antaranews.com##.ads_top_728
 ainimeindo.com##.adsbawah1
 ainimeindo.com##.adsbawah2
 www.eramuslim.com##.adsbyadop
-apkmod.id,nama.web.id,paraedu.id,radarlombok.co.id,www.eramuslim.com##.adsbygoogle
+apkmod.id,hightech.web.id,nama.web.id,paraedu.id,radarlombok.co.id,www.eramuslim.com##.adsbygoogle
 www.pontianakpost.co.id##.adsense
 www.ganol.si##.adsincenter
 kshowid.com##.adssingle
@@ -1380,7 +1401,7 @@ bioskop007.club##.textwidget > p
 bioskoptigalima.com,icinema3satu.net##.textwidget img
 klikseru.com##.textwidget img[width="300"][height="250"]
 utusan.com.my##.tonal__standfirst
-lapar.com,nontonitu.com##.top-banner
+dewabioskop21.org,lapar.com,nontonitu.com##.top-banner
 xx1.me##.top-bnner.lazy
 bioskopxxi.net,sinemakaca.com##.ujipopup
 128.199.232.232##.video-archive-ad
@@ -1677,6 +1698,7 @@ zonabola.*##a[href^="http://bit.ly/"]
 @@||nekonime.$generichide
 @@||nekonime.tv^$generichide
 @@||nekopoi.*/wp-content/themes/ThemeNekopoi/js/adsbygoogle.js$script,~third-party
+@@||nekopoi.*/wp-content/themes/themenekopoi/js/adsbygoogle.js$~third-party
 @@||nekopoi.care/wp-content/themes/ThemeNekopoi/js/adsbygoogle.js$script,~third-party
 @@||nekopoi.cash/wp-content/themes/ThemeNekopoi/js/adsbygoogle.js$script,~third-party
 @@||nekopoi.lol/wp-content/themes/ThemeNekopoi/js/adsbygoogle.js$script,~third-party
@@ -1921,7 +1943,6 @@ woof.tube#@#.adsbox
 ||agentaruhanbandar.$third-party
 ||agentaruhanbola-ibcbet.$third-party
 ||agentaruhanbola.$third-party
-||agentaruhanbola1388.com^$third-party
 ||agentaruhanbolaonline.$third-party
 ||agentaruhanbolatangkas.$third-party
 ||agentaruhanibcbet.$third-party
@@ -1992,6 +2013,8 @@ woof.tube#@#.adsbox
 ||aon-bet.$third-party
 ||aonbet.$third-party
 ||aoncash.$third-party
+||aosbobet.com^$popup
+||aosbobet.com^$third-party
 ||areabet.$third-party
 ||areabola.$popup
 ||areabola.$third-party
@@ -2137,11 +2160,9 @@ woof.tube#@#.adsbox
 ||bandartaruhancasino.$third-party
 ||bandartaruhanibcbet.$third-party
 ||bandartaruhanjudi.$third-party
-||bandartaruhanonline.com^$third-party
 ||bandartogel.$third-party
 ||bandartogelsingapore.$popup
 ||bandartogelsingapore.$third-party
-||bandartogelsingapura.com^$third-party
 ||bandartoke.$third-party
 ||barakjudi.$popup
 ||barakjudi.$third-party
@@ -2295,7 +2316,6 @@ woof.tube#@#.adsbox
 ||cahayapoker.$third-party
 ||cahayaqq.$popup
 ||cahayaqq.$third-party
-||cakepokerbonuscode.com^$third-party
 ||callofpoker.com^$third-party
 ||cantikqq.$third-party
 ||capqq.$popup
@@ -2305,7 +2325,6 @@ woof.tube#@#.adsbox
 ||capsaqq.$third-party
 ||capsaqqnew.$third-party
 ||carabermainpoker.$third-party
-||caradaftarjudionline.com^$third-party
 ||caradaftarpoker.$popup
 ||caradaftarpoker.$third-party
 ||carajudionline.com^$third-party
@@ -2316,7 +2335,6 @@ woof.tube#@#.adsbox
 ||caramenangtaruhan.$third-party
 ||caramenangtogel.com^$third-party
 ||carbonpoker.$third-party
-||caribbeanpokeronline.com^$third-party
 ||cariqqiu.$popup
 ||cariqqiu.$third-party
 ||cash-harvest.$popup
@@ -2392,8 +2410,6 @@ woof.tube#@#.adsbox
 ||daftarfun88.$popup
 ||daftarfun88.$third-party
 ||daftarjudibola.com^$third-party
-||daftarjudibolaonline.com^$third-party
-||daftarjudibolasbobet.com^$third-party
 ||daftarjudicasino.com^$third-party
 ||daftarjudionline.$third-party
 ||daftarpoker.$popup
@@ -2528,7 +2544,6 @@ woof.tube#@#.adsbox
 ||duniajudi.$third-party
 ||duniajudicasino.$third-party
 ||duniajudionline.$third-party
-||duniapasangtaruhan.com^$third-party
 ||duniasarana.$third-party
 ||duniaspa.$popup
 ||duniaspa.$third-party
@@ -2571,7 +2586,6 @@ woof.tube#@#.adsbox
 ||faktavimax.$third-party
 ||fast2bet.$popup
 ||fast2bet.$third-party
-||featuredpokerrooms.com^$third-party
 ||feltpoker.com^$third-party
 ||fifadomino.$third-party
 ||fifaqq.$third-party
@@ -2630,7 +2644,6 @@ woof.tube#@#.adsbox
 ||gengtoto.$third-party
 ||gentingpoker.com^$third-party
 ||gerhanaqq.$third-party
-||giochi-poker-on-line.com^$third-party
 ||go88sbo.$third-party
 ||gohbet.$third-party
 ||goldencrownpoker.$third-party
@@ -2722,7 +2735,6 @@ woof.tube#@#.adsbox
 ||i88cash.$popup
 ||i88cash.$third-party
 ||ibcbetagenjudi.com^$third-party
-||ibcbetbandarjudi.com^$third-party
 ||ibcbetjudi.$third-party
 ||ibcqq.$popup
 ||ibcqq.$third-party
@@ -2941,7 +2953,6 @@ woof.tube#@#.adsbox
 ||judibola88.com^$third-party
 ||judibolaaman.$third-party
 ||judibolacasino.com^$third-party
-||judiboladiinternet.com^$third-party
 ||judiboladunia.com^$third-party
 ||judibolaeuro2012.$third-party
 ||judibolaibc.$third-party
@@ -2950,21 +2961,14 @@ woof.tube#@#.adsbox
 ||judibolaonline.$third-party
 ||judibolaonline1.com^$third-party
 ||judibolaonline99.com^$third-party
-||judibolaonlineibcbet.com^$third-party
 ||judibolaonlines.com^$third-party
-||judibolaonlinesbobet.com^$third-party
 ||judibolaonlineterpercaya.$third-party
 ||judibolasbo.$third-party
 ||judibolatangkas.$third-party
 ||judibolaterbesar.com^$third-party
-||judibolaterpercaya.biz^$third-party
-||judibolaterpercaya.com^$third-party
-||judibolaterpercaya1388.com^$third-party
-||judibolaviainternet.com^$third-party
 ||judicasino338a.$third-party
 ||judicasinoibcbet.$third-party
 ||judicasinoonline.$third-party
-||judicasinoonlines.com^$third-party
 ||judicasinoroyale.com^$third-party
 ||judicasinosbobet.$third-party
 ||judigratis.$third-party
@@ -2977,13 +2981,10 @@ woof.tube#@#.adsbox
 ||judionline368bet.com^$third-party
 ||judionlineagen.$third-party
 ||judionlinebet.com^$third-party
-||judionlinebetting.com^$third-party
 ||judionlinebola.$third-party
 ||judionlineibcbet.$third-party
-||judionlineinternet.com^$third-party
 ||judionlinepoker.com^$third-party
 ||judionlinesbobet.$third-party
-||judionlinetanpamodal.com^$third-party
 ||judionlineterbaik.$third-party
 ||judionlineterpercaya.$third-party
 ||judipokerking.$third-party
@@ -2992,19 +2993,15 @@ woof.tube#@#.adsbox
 ||judisbobet-online.com^$third-party
 ||judisbobet.$third-party
 ||judisbobetonline.$third-party
-||judisepakbolaonline.com^$third-party
 ||juditangkas.$third-party
 ||juditaruhan.$third-party
 ||juditaruhanbola.$third-party
-||juditaruhanbolaibcbetonline.$third-party
-||juditaruhanbolasbobet.biz^$third-party
 ||juditaruhanonline.$third-party
 ||juditaruhansbobet.$third-party
 ||juditogel.$third-party
 ||juditogelaman.$third-party
 ||juditogelisin4d.com^$third-party
 ||juditogelonline.$third-party
-||juditogelterpercaya.com^$third-party
 ||k7poker.com^$third-party
 ||kacangmaspoker.$third-party
 ||kafetogel.$third-party
@@ -3198,7 +3195,6 @@ woof.tube#@#.adsbox
 ||mainjudimmmbet.com^$third-party
 ||mainjudionline.$third-party
 ||mainjudipoker.$third-party
-||mainpokerkingonline.com^$third-party
 ||mainqiu.$third-party
 ||mainqq.$popup
 ||mainqq.$third-party
@@ -3311,7 +3307,6 @@ woof.tube#@#.adsbox
 ||mobilepokerclub.com^$third-party
 ||mobilgoyang.$third-party
 ||modalqq.$third-party
-||modernpokereducation.com^$third-party
 ||momopk2.$popup
 ||momopk2.$third-party
 ||momopoker88.$third-party
@@ -3375,7 +3370,7 @@ woof.tube#@#.adsbox
 ||obatjogja.$popup
 ||obatjogja.$third-party
 ||obatpembesarpenisklg.$third-party
-||obatpembesarpenisklg.id^$popup
+||obatpembesarpenisklg.^$popup
 ||obatpembesarvimax.$popup
 ||obatpembesarvimax.$third-party
 ||obcbet.$popup
@@ -3404,7 +3399,6 @@ woof.tube#@#.adsbox
 ||onclinic24.$third-party
 ||onesbet.$popup
 ||onesbet.$third-party
-||online-casino-games-videopoker.com^$third-party
 ||online-poker-rules.$third-party
 ||online5poker.com^$third-party
 ||onlineactionpoker.com^$third-party
@@ -3416,7 +3410,6 @@ woof.tube#@#.adsbox
 ||onlinejudisbobet.$third-party
 ||onlinepoker66.com^$third-party
 ||onlinepokerextra.com^$third-party
-||onlinepokergamereview.com^$third-party
 ||onlinepokermachines.$third-party
 ||onlinetaruhan338a.$third-party
 ||onlinetaruhanbola.$third-party
@@ -3436,7 +3429,6 @@ woof.tube#@#.adsbox
 ||pamelapoker.$popup
 ||pamelapoker.$third-party
 ||panduanjudionline.com^$third-party
-||panduantogelonline.com^$third-party
 ||pandujudionline.com^$third-party
 ||panenbonus.$third-party
 ||panenpk2.$popup
@@ -3462,14 +3454,12 @@ woof.tube#@#.adsbox
 ||pasangagenjudi.com^$third-party
 ||pasangagentogel.com^$third-party
 ||pasangjudibola.$third-party
-||pasangjudibolaonline.com^$third-party
 ||pasangjudionline.com^$third-party
 ||pasangnomor2.$popup
 ||pasangnomor2.$third-party
 ||pasangtaruhan.$third-party
 ||pasangtaruhanbola.$third-party
 ||pasangtaruhanjudi.com^$third-party
-||pasangtaruhanonline.com^$third-party
 ||pasangtogel.$third-party
 ||pasangtogelonline.com^$third-party
 ||pasaranqq.$popup
@@ -3483,10 +3473,8 @@ woof.tube#@#.adsbox
 ||pasarjudisbobet.com^$third-party
 ||pasarkartu.$third-party
 ||pasartaruhanbola.$third-party
-||pasartaruhanibcbet.com^$third-party
 ||pasartaruhanjudi.$third-party
 ||pasartaruhanonline.$third-party
-||pasartaruhansbobet.com^$third-party
 ||pastibet.$popup
 ||pastibet.$third-party
 ||pastipoker.$third-party
@@ -3503,8 +3491,6 @@ woof.tube#@#.adsbox
 ||pemaintogel.$third-party
 ||pendekarqq.$popup
 ||pendekarqq.$third-party
-||perjudianbolaonline.com^$third-party
-||perjudiancasinoonline.com^$third-party
 ||perjudianonline.com^$third-party
 ||pesonaqq.$popup
 ||pesonaqq.$third-party
@@ -3552,7 +3538,6 @@ woof.tube#@#.adsbox
 ||pokerastro.$third-party
 ||pokerbola.$third-party
 ||pokerbonuscodes.com^$third-party
-||pokerbonuscodesonline.com^$third-party
 ||pokerbonusguy.com^$third-party
 ||pokerbonussource.com^$third-party
 ||pokerboya.$third-party
@@ -3602,7 +3587,6 @@ woof.tube#@#.adsbox
 ||pokeronline.$third-party
 ||pokeronlinecc.$popup
 ||pokeronlinecc.$third-party
-||pokeronlineitalia.com^$third-party
 ||pokerpediaz.$popup
 ||pokerpediaz.$third-party
 ||pokerplayerus.com^$third-party
@@ -3651,7 +3635,6 @@ woof.tube#@#.adsbox
 ||prediksitogelonline.$third-party
 ||prediksitogelsgp.com^$third-party
 ||prediksitogelsingapura.$third-party
-||prediksitogelterbaru.com^$third-party
 ||prediksitoptogel.com^$third-party
 ||premier188.$popup
 ||premier188.$third-party
@@ -3922,7 +3905,6 @@ woof.tube#@#.adsbox
 ||sirajaqq.$third-party
 ||situs-judibola.com^$third-party
 ||situs-judionline.$third-party
-||situs-taruhanbola.com^$third-party
 ||situsagenjudi.com^$third-party
 ||situsbet368.$popup
 ||situsbet368.$third-party
@@ -3930,10 +3912,8 @@ woof.tube#@#.adsbox
 ||situsjudi.$popup
 ||situsjudi.$third-party
 ||situsjudibolaonline.$third-party
-||situsjudibolaterbaik.com^$third-party
 ||situsjudicasino.com^$third-party
 ||situsjudionline.$third-party
-||situsjuditerpercaya.com^$third-party
 ||situsjuditogel.$third-party
 ||situskiu.$third-party
 ||situstaruhan.com^$third-party
@@ -4027,17 +4007,14 @@ woof.tube#@#.adsbox
 ||taruhan.$third-party
 ||taruhan188.$third-party
 ||taruhan338aonline.$third-party
-||taruhan368betonline.com^$third-party
 ||taruhan855.$third-party
 ||taruhanagen368bet.com^$third-party
 ||taruhanagenbola.$third-party
 ||taruhanagencasino.com^$third-party
-||taruhanagenguavita.com^$third-party
 ||taruhanagenibcbet.$third-party
 ||taruhanagenjudi.$third-party
 ||taruhanagensbobet.$third-party
 ||taruhanbandar.$third-party
-||taruhanbandarcasino.com^$third-party
 ||taruhanbet.$third-party
 ||taruhanbetbola.biz^$third-party
 ||taruhanbetting.com^$third-party
@@ -4057,30 +4034,19 @@ woof.tube#@#.adsbox
 ||taruhanbolaibcbet.$third-party
 ||taruhanbolainternet.$third-party
 ||taruhanbolaku.com^$third-party
-||taruhanbolaldiinternet.com^$third-party
 ||taruhanbolalewatinternet.$third-party
 ||taruhanbolaliga.$third-party
-||taruhanbolaligachampions.com^$third-party
-||taruhanbolaligainggris.com^$third-party
 ||taruhanbolamati.com^$third-party
 ||taruhanbolamenang.com^$third-party
 ||taruhanbolaonline.$third-party
 ||taruhanbolaonlines.$third-party
-||taruhanbolaonlinesbobet.com^$third-party
-||taruhanbolaonlineterbaik.com^$third-party
-||taruhanbolaonlineterpercaya.com^$third-party
 ||taruhanbolapenipu.com^$third-party
 ||taruhanbolaresmi.$third-party
 ||taruhanbolasbo.$third-party
 ||taruhanbolasbo168.com^$third-party
 ||taruhanbolasbobet.$third-party
-||taruhanbolasbobet2.com^$third-party
 ||taruhanbolasepak.com^$third-party
-||taruhanbolateraman.com^$third-party
-||taruhanbolaterbaik.com^$third-party
-||taruhanbolaterbesar.com^$third-party
 ||taruhanbolaterpercaya.$third-party
-||taruhanbolaterpercaya1388.com^$third-party
 ||taruhancasino.com^$third-party
 ||taruhancasino338.com^$third-party
 ||taruhancasinoonline.$third-party
@@ -4093,7 +4059,6 @@ woof.tube#@#.adsbox
 ||taruhanjudi.com^$third-party
 ||taruhanjudibola.$third-party
 ||taruhanjudibolaonline.$third-party
-||taruhanjudibolaonlines.com^$third-party
 ||taruhanjudicasino.$third-party
 ||taruhanjudiibcbet.$third-party
 ||taruhanjudionline.$third-party
@@ -4134,14 +4099,11 @@ woof.tube#@#.adsbox
 ||temanpoker99.$popup
 ||temanpoker99.$third-party
 ||tempatagenjudibola.$third-party
-||tempatjudibolaonline.com^$third-party
-||tempatjudibolatangkas.com^$third-party
 ||tempatjudiibcbet.$third-party
 ||tempatjudionline.com^$third-party
 ||tempatjudipalingrame.$third-party
 ||tempatjuditaruhanbola.$third-party
 ||tempatmainjudi0nline.$third-party
-||tempatpasangtaruhanbola.com^$third-party
 ||tempattaruhanbola.$third-party
 ||tendangsakti.$popup
 ||tendangsakti.$third-party
@@ -4158,13 +4120,11 @@ woof.tube#@#.adsbox
 ||tipsberjudi.com^$third-party
 ||tipstaruhan368bet.com^$third-party
 ||tipstaruhanbola.com^$third-party
-||tipstaruhanboladunia.com^$third-party
 ||tipstaruhanibcbet.$third-party
 ||tipstaruhansbobet.$third-party
 ||tipstrikjuditogel.com^$third-party
 ||togel-harian.com^$third-party
 ||togel-id.com^$third-party
-||togel-jakarta-singapore.com^$third-party
 ||togel-king4d.com^$third-party
 ||togel-mania.com^$third-party
 ||togel-thailand.com^$third-party
@@ -4206,7 +4166,6 @@ woof.tube#@#.adsbox
 ||togeljackpot2.$third-party
 ||togeljakarta.com^$third-party
 ||togeljitu.$third-party
-||togeljudionline.com^$third-party
 ||togelkita.$third-party
 ||togelkite.$third-party
 ||togellaos.com^$third-party
@@ -4225,7 +4184,6 @@ woof.tube#@#.adsbox
 ||togelnet.$third-party
 ||togelo.com^$third-party
 ||togelonline.$third-party
-||togelonlinecommunity.com^$third-party
 ||togelperawan.com^$third-party
 ||togelplus.$third-party
 ||togelprediksi.$third-party
@@ -4327,7 +4285,6 @@ woof.tube#@#.adsbox
 ||unogoal88.$third-party
 ||usahatoto.$popup
 ||usahatoto.$third-party
-||uspokersites2013.com^$third-party
 ||utamabet.$third-party
 ||utamaqq.$popup
 ||utamaqq.$third-party
@@ -4398,13 +4355,9 @@ woof.tube#@#.adsbox
 ||webjuditerpercaya.com^$third-party
 ||websitejudi.com^$third-party
 ||websitejudibola.$third-party
-||websitejudibolaterpercaya.com^$third-party
 ||websitejudionline.$third-party
-||websitejuditerpercaya.com^$third-party
 ||websitetaruhan.$third-party
 ||websitetaruhanbola.$third-party
-||websitetaruhanbolaonline.com^$third-party
-||websitetaruhanjudionline.com^$third-party
 ||websitetaruhanonline.$third-party
 ||webtaruhan-bola.$third-party
 ||wedepoker.$third-party
@@ -4442,7 +4395,6 @@ woof.tube#@#.adsbox
 ||wongpkr.$popup
 ||wongpkr.$third-party
 ||wongpoker.$third-party
-||worldpokerdirectory.com^$third-party
 ||wpbet365.$third-party
 ||www.bmwpoker.^$popup
 ||www.lotusbola.$popup
@@ -4481,8 +4433,10 @@ woof.tube#@#.adsbox
 ##[href^="http://www.asuspoker."]
 ##[href^="http://www.crownvvip."]
 ##[href^="http://www.qqjoker5.com/"]
+##[href^="https://bmwqq."]
 ##[href^="https://lapakceme."]
 ##[href^="https://liga95."]
+##[href^="https://nusantaraqq."]
 ##[href^="https://tbola88."]
 ##[href^="https://www.indovegas."]
 ##[href^="https://www.lapak.poker/"]
@@ -4510,6 +4464,7 @@ woof.tube#@#.adsbox
 ##a[href$="/bisabet"]
 ##a[href$="/bromopoker"]
 ##a[href$="/cantikqq"]
+##a[href$="/capsaprofree"]
 ##a[href$="/cmd368"]
 ##a[href$="/dorapoker"]
 ##a[href$="/hdpbet"]
@@ -5143,6 +5098,7 @@ woof.tube#@#.adsbox
 ##a[href^="http://mkvpoker."]
 ##a[href^="http://mobilgoyang."]
 ##a[href^="http://momopk2."]
+##a[href^="http://mpoagen."]
 ##a[href^="http://mta77."]
 ##a[href^="http://musimqq."]
 ##a[href^="http://mustika168."]
@@ -6703,11 +6659,13 @@ woof.tube#@#.adsbox
 /itubandar.
 /itucasino.
 /itudewa.
+/itudomino728.
 /itugol.
 /itupk.
 /itupoker-
 /itupoker.
 /ituqq.
+/ituqq728.
 /itutoto.
 /ituvip.
 /ivopoker.
