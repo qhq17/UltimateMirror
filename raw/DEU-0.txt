@@ -1,8 +1,8 @@
 [Adblock Plus 1.1]
-! Checksum: FE2YDSsI0pqZtrT5kOmyNQ
-! Version: 201909300041
+! Checksum: FUS5SH48gHFyUeUBjmMoWw
+! Version: 201910090341
 ! Title: EasyList Germany
-! Last modified: 30 Sep 2019 00:41 UTC
+! Last modified: 09 Oct 2019 03:41 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.github.io/
 ! Licence: https://easylist.github.io/pages/licence.html
@@ -76,6 +76,7 @@
 /medien/werbung/*
 /mod/werbung/*
 /nativendo.js
+/nativendo/*
 /o2-layer.
 /partner/werbung-
 /partneradzwerk/*
@@ -2379,6 +2380,7 @@ guterhut.de,hardwareluxx.de,hbf-info.de,rakuten.at,rakuten.de,zalando.de#@#div[i
 ||freeload.to^*/lovedate.gif
 ||freeload.to^*/lovedate160.gif
 ||freenet.de/www/export/$script
+||freenet.de^*/mail/ads/
 ||freizeitparks.de/fileadmin/user_upload/banner/
 ||fremdwort.de/image/$subdocument
 ||fremdwort.de/images/banner_
@@ -4435,6 +4437,11 @@ kueche1.com###empfbox
 hot-warez.org###error
 deutsche-mittelstands-nachrichten.de###euroconf-banner
 immobilo.de###expose-promo-links-wrapper
+freenet.de###ext-frn-adtag-nativendo-1
+freenet.de###ext-frn-adtag-nativendo-2
+freenet.de###ext-frn-adtag-rectangle-1
+freenet.de###ext-frn-adtag-rectangle-2
+freenet.de###ext-frn-adtag-sky-1
 fremdwort.de###ezisgib
 spielen.com###fakebody
 newsroom.de###far_right > div[style="height:600px"]
@@ -5156,6 +5163,7 @@ ksta.de,rundschau-online.de##.BoxAnzeige
 rundschau-online.de##.BoxContentPosAnzeige
 ksta.de##.BoxHeaderKalaydo
 sex-up.net##.BoxSidebarGoogleSexUp
+chip.de##.ButtonAuswahl--Green
 mactechnews.de##.CommercialPanel
 momondo.de##.Common-Kn-Display
 momondo.de##.Common-Kn-Rp-FlightInline
@@ -6925,6 +6933,7 @@ hornoxe.com##center > a[target="_blank"][href^="http://amzn.to/"] > img
 repage.de##center > br + table[style="background-color:FFFFCC;border:1px solid;border-color:;table-layout:visible;width:468px;height:60px;padding-top:0px;padding-left:5px;padding-right:5px;padding-bottom:0px;"]
 abload.de##center > table > tbody > tr > td[valign="bottom"][align="center"][style="width: 100%;"]
 englische-briefe.de##center > table[width="574"][cellspacing="0"][cellpadding="0"][border="0"]
+chip.de#?#.Listing[style="min-height:500px;"] > div[id]:-abp-contains(Gesponserte Empfehlung)
 wuerzburger-kickers.de##div > h3 + #ais_129_wrapper
 rundumkoeln.de##div[align="center"] > #top[name="top"]:first-child + table[border="0"]:last-child
 handy-faq.de##div[align="center"] > span[style="text-decoration:none; color:red;font-size:18px;"]:first-child
@@ -7608,8 +7617,6 @@ okbb.de##tr[bgcolor="#FFFF00"]
 vibe.cd##tr[height="180px"]:first-child + tr:last-child > td[style="background-color:transparent; margin:0px; padding:0px;"]:first-child
 gmd-music.com##tr[onclick^="window.open(\"http://gmd-music.com/mirror/"]
 ddl-warez.in##tr[style="background:#D0F5A9"]
-twitter.com#?#article[role="article"]:-abp-contains(Gesponsert)
-twitter.com#?#div[data-testid="UserCell"]:-abp-contains(Gesponsert)
 radforum.de##ul[class^="ebayitems"]
 r-b-a.de##ul[style="padding: 0px; margin: 0px; border: 0px none;"]
 ! Specific hiding filters necessary for sites whitelisted with $generichide filter option
