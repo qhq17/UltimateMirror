@@ -236,9 +236,13 @@ phoronix.com#@#div[style^="text-align: center;"]
 @@||ad.crwdcntrl.net/*/callback=jsonp_callback$script,domain=weather.com
 
 ! https://adblockplus.org/forum/viewtopic.php?f=1&t=44930
+! https://github.com/uBlockOrigin/uAssets/issues/4353#issuecomment-449159137
+! https://github.com/jspenguin2017/uBlockProtector/issues/1085
 @@||data.cnn.com/jsonp/cfg/*/videoconfig/cnn/desktop/domesticsectionconfig.json$script,domain=cnn.com
 @@||cnn.com/.element/apps/cvp/3.0/cfg/spider/cnn/expansion/ad_policy.xml$xmlhttprequest,domain=cnn.com
 @@||z.cdn.turner.com/analytics/cnnexpan/jsmd.min.js$script,domain=cnn.com
+@@||cdn.turner.com/cnn/van/resources/*/scripts/vendor/loggly.tracker.js$xhr,domain=trentonian.com
+@@||cdn.cnn.com/analytics/cnn_arabic/jsmd.min.js$script,1p
 
 ! https://github.com/uBlockOrigin/uAssets/issues/20
 @@||gamespot.com/*/trackingWithCT.js$script,first-party
@@ -902,6 +906,7 @@ oxforddictionaries.com##.banbox-mini
 ! unbreak sites broken by EasyList uponit filter
 ! https://forums.lanik.us/viewtopic.php?f=64&t=40885
 ! https://forums.lanik.us/viewtopic.php?f=64&t=41514
+||pocketnow.com^$csp=script-src 'self' * 'unsafe-inline',badfilter
 @@||ytimg.com^$image,domain=pocketnow.com
 101greatgoals.com,colourlovers.com,crackberry.com,datpiff.com,destructoid.com,getinmybelly.com,imore.com,mmorpg.com,omgcheckitout.com,pocketnow.com,sportspickle.com,tetrisfriends.com,vrheads.com,windowscentral.com,xda-developers.com#@#[style*="background-image:"]
 blacklistednews.com,datpiff.com#@#div > iframe
@@ -1199,16 +1204,12 @@ techadvisor.co.uk#@#.adsbygoogle
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2931
 ! https://github.com/uBlockOrigin/uAssets/issues/2966
-@@||fusion.ddmcdn.com^$script,domain=animalplanet.com|cookingchanneltv.com|discovery.com|diynetwork.com|foodnetwork.com|hgtv.com|investigationdiscovery.com|sciencechannel.com|tlc.com|travelchannel.com
-@@||src.litix.io/core/*/mux.js$script,domain=animalplanet.com|cookingchanneltv.com|discovery.com|diynetwork.com|foodnetwork.com|hgtv.com|investigationdiscovery.com|sciencechannel.com|tlc.com|travelchannel.com
+@@||fusion.ddmcdn.com^$script,domain=ahctv.com|animalplanet.com|cookingchanneltv.com|destinationamerica.com|discovery.com|discoverylife.com|diynetwork.com|foodnetwork.com|hgtv.com|investigationdiscovery.com|motortrend.com|sciencechannel.com|tlc.com|travelchannel.com
+@@||src.litix.io/core/*/mux.js$script,domain=ahctv.com|animalplanet.com|cookingchanneltv.com|destinationamerica.com|discovery.com|discoverylife.com|diynetwork.com|foodnetwork.com|hgtv.com|investigationdiscovery.com|motortrend.com|sciencechannel.com|tlc.com|travelchannel.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3034
 @@||cdn.scarabresearch.com/js/*/scarab-v*.js$script,domain=remixshop.com
 @@||recommender.scarabresearch.com/merchants/*$xmlhttprequest,domain=remixshop.com
-
-! https://github.com/uBlockOrigin/uAssets/issues/3051
-@@||js-sec.indexww.com^$script,domain=mashable.com
-@@||amazon-adsystem.com/*/apstag.js$script,domain=mashable.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3057
 @@||addthis.com/js/*/addthis_widget.js$script,domain=sainsburys.jobs
@@ -1665,9 +1666,6 @@ gplcanyon.com#@#.adsbygoogle
 ! https://github.com/uBlockOrigin/uAssets/issues/4350
 @@||dk4ywix.com^$domain=endocrineweb.com
 @@||rebelsubway.com^$domain=endocrineweb.com
-
-! https://github.com/uBlockOrigin/uAssets/issues/4353#issuecomment-449159137
-@@||cdn.turner.com/cnn/van/resources/*/scripts/vendor/loggly.tracker.js$xhr,domain=trentonian.com
 
 ! https://forums.lanik.us/viewtopic.php?p=144333#p144333
 ||marketo.com^$badfilter
@@ -2768,3 +2766,33 @@ twitter.com#@#article[role="article"]:has-text(Promoted)
 
 ! https://github.com/NanoMeow/QuickReports/issues/1319
 @@||moatads.com/aolvidibleapi*$script,domain=bloombergquint.com
+
+! https://github.com/NanoMeow/QuickReports/issues/1949
+@@||pladform.ru/*/hls-vod/*$xhr,domain=rutube.ru
+
+! https://forums.lanik.us/viewtopic.php?f=64&t=43644&p=150145#p150145
+.php$image,script,subdocument,domain=3movs.com|4tube.com|alotporn.com|alrincon.com|anysex.com|badjojo.com|bobs-tube.com|dreamamateurs.com|dump.xxx|efukt.com|eroxia.com|extremetube.com|gfsvideos.com|gottanut.com|home-made-videos.com|hotpornfile.org|keezmovies.com|letmejerk.com|mofosex.com|monsoonx.top|mypornstarbook.net|myvidster.com|nuvid.com|orsm.net|porndoe.com|pornoreino.com|pornozot.com|pornsexer.com|pussyspace.com|shameless.com|spankwire.com|thenipslip.com|tryboobs.com|xcafe.com|xnxx-sexfilme.com,badfilter
+
+! https://github.com/uBlockOrigin/uAssets/issues/6375
+||dailyheadlines.com^$csp=script-src 'self' *.leadpages.net *.gstatic.com *.google.com *.googleapis.com *.playwire.com *.facebook.com *.bootstrapcdn.com *.twitter.com *.spot.im,badfilter
+
+! https://github.com/easylist/easylist/issues/4114
+/thermostat.js$badfilter
+/thermostat.js$script,domain=royle.com
+
+! https://github.com/uBlockOrigin/uAssets/issues/6401
+||admitad.com^$badfilter
+||ad.admitad.com^$badfilter
+||admitad.com^$3p
+
+! https://www.reddit.com/r/uBlockOrigin/comments/ddlli7/blocking_on_quest_od_uk_causes_video_error/
+@@||litix.io/videojs/$script,domain=questod.co.uk
+
+! https://github.com/easylist/easylist/issues/4108
+||unileversolutions.com/*/config/analytics.js$script,3p,important,redirect=noopjs
+
+! https://github.com/uBlockOrigin/uAssets/issues/6408#issuecomment-538757351
+@@||rest.cinepapaya.com/stat/img/static-cp/cine/advertisement/*$image,domain=fandango.lat
+
+! https://forums.lanik.us/viewtopic.php?f=64&t=43671&p=150291#p150286
+||farnell.com/*tracking.js$script,1p,redirect=noopjs
