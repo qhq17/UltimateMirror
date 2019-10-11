@@ -1,18 +1,18 @@
 [Adblock Plus 3.4]
-! Version: 01October2019v1
-! Version: 011020191 (for Adblock Plus' issue report system)
+! Version: 10October2019v2
+! Version: 101020192 (for Adblock Plus' issue report system)
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites
 ! Expires: 12 hours
 ! Redirect: https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersABP.txt
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
-! 🇩🇰: Denne liste dækker websider for Danmark, Norge, Island, Færøerne, Grønland, og den samiske befolkning. For mere information, detaljer, nyttige værktøjer og andre lister, jeg har lavet, besøg https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
+! 🇩🇰: Denne liste dækker websider for Danmark, Norge, Island, Færøerne, Grønland, og den samiske befolkning. For mere information-, detaljer-, nyttige værktøjer- og andre lister, jeg har lavet, besøg https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
 ! Description: 🇬🇧: This list covers websites for Norway, Denmark, Iceland, Danish territories, and the Sami indigenous population. For more information, details, helpful tools, and other lists that I've made, visit https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 ! If you wish to remove cookie banners from Nordic websites, check out https://www.i-dont-care-about-cookies.eu/
 
 ! 🇳🇴: Ukategoriserte oppføringer
-! 🇩🇰: Ukategoriserede opføringer
+! 🇩🇰: Ukategoriserede regler
 ! 🇬🇧: Uncategorised entries
 ###inlineannonse
 ##.ad-centered
@@ -553,6 +553,8 @@ yrkesbil.no###side > div:nth-of-type(1)
 gamer.no##.aaa-placeholder
 google.*###cnsi ~ [jsaction*="dismiss"]
 180.no##.ai-top-ad-outer
+forum.klikk.no##.ehm-megaboard
+tv2.dk##.tc_ad
 ! — — — — —
 !#if !env_mobile
 seher.no##.content-marketing-ribbon:style(margin-top: 20px !important)
@@ -646,15 +648,19 @@ pensjonistferie.no#@##adsense
 krom.is#@#.share-container
 @@/images/*youtube.jpg$domain=realityportalen.dk
 @@||api.instagram.com^$domain=www.samiteahter.org
-! Attempting to fix a problem with voting online on Idol Norway when using EasyPrivacy
+! Attempting to fix a problem with voting online on Idol Norway when using "EasyPrivacy"
 @@||tv2.no/*/config/analytics.json$xhr,1p
-! Attempts to resolve how some frontpage articles are hard to open when using EasyPrivacy.
+! Attempts to resolve how some frontpage articles are hard to open when using "EasyPrivacy".
 @@||schibsted.com/autoTracker$domain=www.vg.no
 ! https://github.com/easylist/easylist/issues/1861
 @@_prebid_$domain=seher.no
 ! 🇳🇴: Solcellespesialisten, innlastingsproblem
 ! 🇬🇧: Solcellespesialisten, loading issue
 ||wo.tc
+! 🇳🇴: Får Dplay sin påloggingsside til å vises riktig når «EasyPrivacy» blir brukt
+! 🇬🇧: Makes Dplay's login page show up properly when using "EasyPrivacy"
+@@||mparticle.com$script,domain=auth.dplay.no|auth.dplay.dk
+@@||assets.adobedtm.com/*/satelliteLib-$domain=auth.dplay.no|auth.dplay.dk
 
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇬🇧: ——— Anti-anti-adblocking, in the event that https://forums.lanik.us/viewtopic.php?f=23&t=42273 were to specifically mention such entries as a reason to be denied EasyList affiliation or native ABP inclusion ———
@@ -700,7 +706,7 @@ viafree.*##.avodp.pause-ad-showing .vjs-progress-control, .avodp.ad-playing .vjs
 ! 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
 ! Takk til THEtomaso (https://github.com/THEtomaso) for de fleste av disse oppføringene.
 ! 🇩🇰: ——— Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud) ———
-! Tak til THEtomaso (https://github.com/THEtomaso) for de fleste av disse opføringer.
+! Tak til THEtomaso (https://github.com/THEtomaso) for de fleste af disse regler.
 ! 🇬🇧: ——— De-blurrers for paid articles (so that the last few lines of a preview doesn't fade out) ———
 ! Thanks to THEtomaso (https://github.com/THEtomaso) for most of these entries.
 ##.Article-header-body:before
@@ -733,7 +739,7 @@ vglive.no##.tipster-liveodds-embed
 
 ! ——— Gamereactor ———
 ! 🇳🇴: Disse oppføringene synkroniseres med de til «Frellwit's Swedish Filter» med noen måneders mellomrom, så det hadde blitt for strevsomt å kategorisere dem.
-! 🇩🇰: Disse opføringer bliver synkroniseret med de hos «Frellwit's Swedish Filter» med nogle måneders mellemrum, så det hadde blivet for tungt at kategorisere dem.
+! 🇩🇰: Disse regler bliver synkroniseret med de hos «Frellwit's Swedish Filter» med nogle måneders mellemrum, så det hadde blivet for tungt at kategorisere dem.
 ! 🇬🇧: These entries are synchronised with those of "Frellwit's Swedish Filter" every few months-ish, and as such it'd be too much work to categorise them.
 gamereactor.*###pagebackground:style(background-image: none !important)
 gamereactor.*##+js(abort-current-inline-script.js, phpads_deliver)
@@ -819,7 +825,7 @@ frihetskamp.net##a[href*="nordenstil.no"]
 
 ! 🇳🇴: Landseksklusive versjoner for enkle reklameblokkerere, av flernasjonsoppføringer som er i utvidelsesfilen for avanserte reklameblokkerere; ettersom Adblock Plus og AdGuard for øyeblikket ikke støtter *-jokertegn i nettadressene til blokkeringsregler.
 ! ABP diskuterte på et tidspunkt å støtte det i https://issues.adblockplus.org/ticket/6773, men det bunnet ut i ingenting.
-! 🇩🇰: Landseksklusive versioner til enkle adblockere, af flerlandsposter, der findes i udvidelsesfilen for avancerede adblockere; eftersom Adblock Plus og AdGuard i øjeblikket ikke understøtter * -jokertegn i blokeringsregel-URL-er.
+! 🇩🇰: Landseksklusive versioner til enkle adblockere, af flerlandsregler, der findes i udvidelsesfilen for avancerede adblockere; eftersom Adblock Plus og AdGuard i øjeblikket ikke understøtter * -jokertegn i blokeringsregel-URL-er.
 ! ABP drøftede på et tidspunkt at støtte det i https://issues.adblockplus.org/ticket/6773, men det førede ikke til noget.
 ! 🇬🇧: Country-exclusive versions for simple adblockers, of multi-country entries that are found in the extensions file for advanced adblockers; because Adblock Plus and AdGuard currently doesn't support *-wildcards in blocking-rule URLs.
 ! ABP was at one point discussing supporting it in https://issues.adblockplus.org/ticket/6773, but it stranded out into nothing.
@@ -921,6 +927,14 @@ fuglelyder.net#@##banner_ad
 ||surveryrewards1.com^$doc
 ! https://www.nrk.no/mr/1.14649436
 ||pprfct.com^$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Posten.
+! https://www.datahjelperne.no/gratulerer-du-har-vunnet-en-gave-mail-svindel/
+||liveshopdealz.com^$doc,domain=~ Warning displayed due to: Fake giftcard scam.
+! https://www.datahjelperne.no/facebook-slankesvindel/
+||fxqt.uk.com^$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av VG
+! https://www.nrk.no/livsstil/1.14732503
+||elkjop*.club^$doc,domain=~ Advarselen vises grunnet: Falsk kampanjesvindel.
+! https://www.datahjelperne.no/sparebank1-kortet-ditt-er-blokkert-mail-phishing/
+||*/css/*sparebank1.no^$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Sparebank1.
 
 ! 🇳🇴: Falske nett-"butikker" som er så dårlige, at de står oppført på Forbrukertilsynet egen svarteliste.
 ! 🇩🇰: Falske web-"butikker" der er så dårlige, at de er opført på svartelisten til Forbrukertilsynet (Norges svar på Forbrugerombudsmanden).
