@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: Kzk1Oe0rGNnUGpdLovgJ7A
+! Checksum: BbFGZ3QX0RQUb+RaeIXFog
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish and Portuguese languages.
-! Version: 2.0.4.80
-! TimeUpdated: 2019-10-08T15:03:08+03:00
+! Version: 2.0.4.82
+! TimeUpdated: 2019-10-11T15:31:35+03:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#spanish
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -1114,6 +1114,7 @@ maisgasolina.com#?##main [id$="Block"][-ext-has='.adsbygoogle']
 !--------------------------------------!
 !------- JS rules ---------------------!
 !--------------------------------------!
+! https://github.com/AdguardTeam/AdguardFilters/issues/41818
 ! https://github.com/AdguardTeam/AdguardFilters/issues/41643
 ! https://github.com/AdguardTeam/AdguardFilters/issues/40879
 ! https://github.com/AdguardTeam/AdguardFilters/issues/38339
@@ -1311,6 +1312,10 @@ http://adw.
 !-------------------- Specific rules --------------------!
 !--------------------------------------------------------!
 !
+brasilescola.uol.com.br##.box-publicidade-topo
+brasilescola.uol.com.br##.publicidade-content
+brasilescola.uol.com.br##.pub_insert_content
+brasilescola.uol.com.br###bloco-native-rodape
 segredosdomundo.r7.com###custom_html-6
 r7.com##.r7-flex-adv__placeholder
 ||descargaonline.xyz/ads$domain=subdivx.com
