@@ -2307,9 +2307,6 @@ medicalnewstoday.com##.sticky_ad_container
 themesradar.com##+js(addEventListener-defuser.js, contextmenu)
 themesradar.com##body:style(-webkit-user-select: text !important;-moz-user-select: text !important;-ms-user-select: text !important;user-select: text !important;)
 
-! https://github.com/NanoAdblocker/NanoFilters/issues/346
-oregonlive.com##+js(abort-on-property-read.js, googletag)
-
 ! https://github.com/uBlockOrigin/uAssets/issues/5759
 !#if env_firefox
 youtube.com##.no-scroll #page-manager:style(margin-top: 0px !important)
@@ -2718,3 +2715,31 @@ tunein.com##.dark-theme-dialog__dialogBody___106Di:nth-ancestor(4)
 ! https://github.com/uBlockOrigin/uAssets/issues/6398
 mountaintopwebdesign.com###wmpci-popup-wrp
 mountaintopwebdesign.com##html:style(overflow: auto !important;)
+
+! https://github.com/uBlockOrigin/uAssets/issues/6405
+otvfoco.com.br##+js(aopr, addLink)
+
+! flightconnections.com anti adb message
+flightconnections.com##+js(set, canRunAds, true)
+
+! balticlivecam .com anti adb annoyance
+balticlivecam.com##+js(acis, document.getElementById, none)
+
+! legionprogramas .org right click, select
+legionprogramas.org##+js(acis, document.oncontextmenu)
+legionprogramas.org##+js(aopw, document.onselectstart)
+
+! clasicotas .org right click, select
+clasicotas.org##+js(ra, oncontextmenu|onselectstart|ondragstart)
+
+! https://github.com/uBlockOrigin/uAssets/issues/6421
+portalportuario.cl##+js(aopr, addLink)
+
+! https://github.com/AdguardTeam/AdguardFilters/issues/41965#issuecomment-539653929
+r7.com##.floating.share-btn
+
+! https://github.com/NanoMeow/QuickReports/issues/2024
+@@||haberturk.com^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/6426
+cronista.com##+js(aeld, copy, replaceCopiedText)
