@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: MvFDRFIu4wVGbEBPQQAimw
+! Checksum: y9USz74F5EDHXb/4EioRjA
 ! Title: AdGuard Tracking Protection filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.9.66
-! TimeUpdated: 2019-10-11T00:31:08+03:00
+! Version: 2.0.9.74
+! TimeUpdated: 2019-10-15T18:31:14+03:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#privacy
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -150,6 +150,7 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ! ||e.crashlytics.com^
 ! ||settings.crashlytics.com^
 !
+||lists-tracking.komando.com^
 ||js.hsadspixel.net^$third-party
 ||opentracking.ru^$third-party
 ||clickanalytics208.com^$third-party
@@ -1014,7 +1015,6 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ||crosswalkmail.com^$third-party
 ||crowdscience.com^$third-party
 ||crowdskout.com^$third-party
-||crowdtwist.com^$third-party
 ||crsspxl.com^$third-party
 ||crwdcntrl.net^$third-party
 ||csdata1.com^$third-party
@@ -3438,6 +3438,7 @@ nethunt.com/api/v1/track/email/$image
 !+ NOT_PLATFORM(ios, ext_safari, ext_android_cb)
 ||tags.news.com.au^$~script
 !
+||d5nxst8fruw4z.cloudfront.net^
 ||stats.guiamais.com.br^
 ||d2yh8t8mdj4l9x.cloudfront.net^
 ||detwzgl8cvciv.cloudfront.net^
@@ -4837,6 +4838,7 @@ charlestownwyllie.oaklawnnonantum.com^
 ! dynaTrace Monitor
 /ruxitagentjs_
 !
+/pixel/?block_id=*&hash=*&host=
 /VisitorIdentification.js
 .demandbase.*.js
 /zaius.gif?
@@ -5089,6 +5091,9 @@ _tracking.php?b=
 .demdex.net/id^$empty,important
 ||omtrdc.net/id^$empty,important
 !
+||pitomec.ru/top.gif
+||cdn.gamer-network.net/*/scripts/mormont
+||crowdtwist.com/trck/
 ||turnto.com/webEvent/$third-party
 ||ardmediathek.de/rdpmaf.js
 jaiefra.com###Stats10_content
@@ -5946,7 +5951,7 @@ m.lenta.ru##.b-footer_counters
 ||r.nnm.me/api/server
 ||88688.ru/api/geoip/
 ||openculture.com/wp-admin/admin-ajax.php*^action=rxn_
-||googletagservices.com/tag/js/gpt.js$domain=sinoptik.ua|gutefrage.net|qtv.ua|dt.ua|ngs.ru|unian.net|easybib.com|bohenon.com|linuxtopia.org|newsroom.kh.ua|hclips.com|noticierodigital.com|northumberlandgazette.co.uk|mywebtimes.com|watchuseek.com|telekritika.ua|gamepedia.com|fontanka.ru|vesti.ua|bhub.com.ua|guhoyas.com|rst.ua|hh.ru
+||googletagservices.com/tag/js/gpt.js$domain=sinoptik.ua|gutefrage.net|qtv.ua|dt.ua|ngs.ru|unian.net|easybib.com|bohenon.com|linuxtopia.org|newsroom.kh.ua|hclips.com|noticierodigital.com|northumberlandgazette.co.uk|mywebtimes.com|watchuseek.com|telekritika.ua|gamepedia.com|fontanka.ru|vesti.ua|bhub.com.ua|guhoyas.com|rst.ua|hh.ru|buhgalter.com.ua|unocero.com|autonews.com
 ||imagecrest.com/asset/view/stats.php
 ||uaswitcher.org/logic/page/data
 ||success.trendmicro.com/jslibrary/*/NetworkTracking.js
