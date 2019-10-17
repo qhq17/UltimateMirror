@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 201910100812
-! Title: ABPVN List [optimize filter]
-! Last modified: 10 Oct 2019 08:12 UTC+7
+! Version: 201910150806
+! Title: ABPVN List [anonyviet.com]
+! Last modified: 15 Oct 2019 08:06 UTC+7
 ! Expires: 1 days (update frequency)
 ! Homepage: https://abpvn.com/
 !
@@ -152,6 +152,7 @@ $webrtc,domain=phim14.net|phimotv.net|appvn.com
 ||images.asianbookie.com/vwin/
 ||images.digistar.vn/Banner
 ||images.tuyensinh247.com^$image,domain=sachbaitap.com
+||images.tuyensinh247.com^*banner-
 ||images1.violympic.vn/assets/images/*.gif
 ||images2.imgbox.com^*.gif$domain=ngonphongcomics.com
 ||images2-focus-opensocial.googleusercontent.com^*.gif$image,domain=tvhay.org|90phut.tv|binhluan.tv
@@ -565,6 +566,9 @@ eva.vn##.bai_pr_recomment_2
 eva.vn##.banner_top_masthead
 eva.vn##.banner300250-L
 eva.vn,24h.com.vn##[id^="ADS"]
+files.pw##.adscenter
+files.pw##.adscenter2
+files.pw##.adscenter3
 fimfast.com##.ff-banner
 font.vn,news.zing.vn,shareyou.pro##.banner
 forums.voz.vn##TD[width="160"]
@@ -820,6 +824,7 @@ ybox.vn##a[href^="http://bit.ly/"]
 @@/css.php$stylesheet
 @@/fuckadblock.js$script,domain=vatlypt.com|phimbathu.com|upload.exam24h.com|blogvatly.com|kenhtao.net
 @@/wp-content/plugins/advanced-ads/admin/assets/js/advertisement.js
+@@||ad.doubleclick.net/ddm/adj/$domain=anonyviet.com
 @@||ads.tinmoi.vn$stylesheet,image
 @@||animet.net/ad/banner/_adsense_/_adserver/_adview_.ad.json$xmlhttprequest
 @@||animevsub.tv/ad/banner/_adsense_/_adserver/_adview_.ad.json$xmlhttprequest
