@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: y9USz74F5EDHXb/4EioRjA
+! Checksum: GPgtr/9rgiftuYU/1PLRuw
 ! Title: AdGuard Tracking Protection filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.9.74
-! TimeUpdated: 2019-10-15T18:31:14+03:00
+! Version: 2.0.9.82
+! TimeUpdated: 2019-10-18T17:31:06+03:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#privacy
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -150,6 +150,8 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ! ||e.crashlytics.com^
 ! ||settings.crashlytics.com^
 !
+||distiltag.com^$third-party
+||deep.bi^$third-party
 ||lists-tracking.komando.com^
 ||js.hsadspixel.net^$third-party
 ||opentracking.ru^$third-party
@@ -3438,6 +3440,13 @@ nethunt.com/api/v1/track/email/$image
 !+ NOT_PLATFORM(ios, ext_safari, ext_android_cb)
 ||tags.news.com.au^$~script
 !
+||kiupoo.stroeerdp.de^$third-party
+||phiesi.stroeerdp.de^$third-party
+||ohcohz.stroeerdp.de^$third-party
+||harvester.hbpl.co.uk^
+||harvester.eu.square-enix.com^
+||harvester.ext.square-enix-europe.com^
+||harvester.hnonline.sk^
 ||d5nxst8fruw4z.cloudfront.net^
 ||stats.guiamais.com.br^
 ||d2yh8t8mdj4l9x.cloudfront.net^
@@ -5091,6 +5100,10 @@ _tracking.php?b=
 .demdex.net/id^$empty,important
 ||omtrdc.net/id^$empty,important
 !
+||rezka.ag/setinfo/
+||experience.tinypass.com/xbuilder/experience/execute?aid=
+||piano.io/tracker/
+||strm.yandex.ru/log?
 ||pitomec.ru/top.gif
 ||cdn.gamer-network.net/*/scripts/mormont
 ||crowdtwist.com/trck/
@@ -5951,7 +5964,7 @@ m.lenta.ru##.b-footer_counters
 ||r.nnm.me/api/server
 ||88688.ru/api/geoip/
 ||openculture.com/wp-admin/admin-ajax.php*^action=rxn_
-||googletagservices.com/tag/js/gpt.js$domain=sinoptik.ua|gutefrage.net|qtv.ua|dt.ua|ngs.ru|unian.net|easybib.com|bohenon.com|linuxtopia.org|newsroom.kh.ua|hclips.com|noticierodigital.com|northumberlandgazette.co.uk|mywebtimes.com|watchuseek.com|telekritika.ua|gamepedia.com|fontanka.ru|vesti.ua|bhub.com.ua|guhoyas.com|rst.ua|hh.ru|buhgalter.com.ua|unocero.com|autonews.com
+||googletagservices.com/tag/js/gpt.js$domain=sinoptik.ua|gutefrage.net|qtv.ua|dt.ua|ngs.ru|unian.net|easybib.com|bohenon.com|linuxtopia.org|newsroom.kh.ua|hclips.com|noticierodigital.com|northumberlandgazette.co.uk|mywebtimes.com|watchuseek.com|telekritika.ua|gamepedia.com|fontanka.ru|vesti.ua|bhub.com.ua|guhoyas.com|rst.ua|hh.ru|buhgalter.com.ua|unocero.com|autonews.com|metropoles.com|okezone.com
 ||imagecrest.com/asset/view/stats.php
 ||uaswitcher.org/logic/page/data
 ||success.trendmicro.com/jslibrary/*/NetworkTracking.js
@@ -6709,6 +6722,12 @@ link.gmapp*.net$image
 !-------------- Whitelist ------------------------------------------------------!
 !-------------------------------------------------------------------------------!
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/42574
+@@||cdn.georiot.com/snippet.js$domain=webwereld.nl
+! https://github.com/AdguardTeam/AdguardFilters/issues/42417
+@@||cdn.segmentify.com/*/segmentify.js$domain=gittigidiyor.com
+@@||segmentify.com//get/key/v*.json?$domain=gittigidiyor.com
+@@||segmentify.com//add/events/v*.json?apiKey=$domain=gittigidiyor.com
 ! factor.ua - slow loading
 @@||google-analytics.com/analytics.js$domain=factor.ua
 ! 24timezones.com - slow loading
