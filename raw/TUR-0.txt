@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: nuqYnuKwGI+iYX58EoylWA
+! Checksum: evwwD554HTztVMoxuM1P/Q
 ! Title: AdGuard Turkish filter
 ! Description: Filter list that specifically removes ads on websites in Turkish language.
-! Version: 2.0.9.91
-! TimeUpdated: 2019-10-14T17:30:17+03:00
+! Version: 2.0.9.99
+! TimeUpdated: 2019-10-18T17:30:18+03:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#turkish
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -67,6 +67,7 @@
 !-------------- Advertising networks ---------------------------------------!
 !---------------------------------------------------------------------------!
 !
+||app.gelirartisi.com^$third-party
 ||vvhatsappsohbetim.site^
 ||bformu12.tk^$third-party
 ||cdn.sportlabs.online^$third-party
@@ -746,6 +747,7 @@ vizyonfilmizle.tv#$?#.fancybox-overlay-fixed[-ext-has="> div"] { display: none!i
 vizyonfilmizle.tv#$?#.fancybox-lock body[-ext-has="> div"] { overflow: visible!important; }
 vizyonfilmizle.tv#$?#html[-ext-has="> body"] { overflow: visible!important; }
 !
+arabam.com#?##js-hook-for-observer-tabs-wrapper > .detail-head-wrapper:not([id]) > h4.detail-head-separator:contains(/^SPONSORLU BAĞLANTILAR$/)
 lordiz.com#?#.side2 > .box1 > .title-red:has(> .red-inside > .red-title:contains(/^Reklam$/))
 odatv.com#?#span[itemprop="articleBody"] > #rekx[style]:not([style*="margin-bottom"]):has(> center:only-child > div[id^="div-gpt-ad"])
 kulturmafyasi.com#?#aside > div.cb-sidebar-widget:has(> div.textwidget > p > a[target="_blank"][rel^="noopener"] > img)
@@ -1958,6 +1960,14 @@ vivaldimagazin.com,tafdi.org,gzt.com,topraklagelen.com.tr,thebrandage.com,gamer.
 dizifilmix.org,sineturk.pw,altyazilifilmizle.tv,1080pfilmizle.net,dolufilmizle.com,filmizleve.com,indirmedenfilmizle.pw,filmizle.us,filmihdizlet.com,moodfilmizle.com,fullhdiziizle.com,rexfilmizle.com,dizipub.org,filmizlevip.org,dizisiniizle.org,filmizlefilmsitesi.com,sineturk1.com,hdfilmizle.fun,nettenfilm.net,dizifilmix.com,fullizlefilmizle.com,fanfilmizle.com,nettenfilm.com,filmkomedi.com,indirmedenfilmizle1.com,xfullfilmizle.com,fullhizlifilmizlesen.com,hdhergundizi.com,sinemapol.org,hdciyiz.com,sinefilm.net,hdfilmizle.life,hdcehennem.com,sendeizlesene.net,cilekfilm.com,hizlifullfilmizle.com,diziizlevv.com##.footer-sticky
 !
 !
+turkishtimedergi.com##.Ad
+||magazinekibi.com/banner/
+magazinekibi.com##table[bgcolor="#FFFFFF"] > tbody > tr > td[width="728"]
+||fileru.me/*/720pizle.js
+/ana_yukle/720pizle.js$domain=720p-izle.com
+turkhackteam.org##.ikili-reklamlar
+arabam.com##.mutlu-aku-banner
+arabam.com###js-hook-for-kocfinans-credit
 ||crackerteam.com/pop.js
 lordiz.com##.side2 > .box1 > .bluelisting > center > a[href][rel^="nofollow"][data-wpel-link="external"] > img
 haberakdeniz.com.tr##.saniyereklam
@@ -2297,7 +2307,7 @@ betting-roulette.com##.textBand
 eskisehirgundem.com##.galleryWidget.petrol
 eskisehirgundem.com##div[class="galleryWidget homeWidget colorbox gray photo"]
 eskisehirgundem.com##.hreklam
-eskisehirgundem.com##div[class^="singleAd"]
+turkiyedeenerji.com,eskisehirgundem.com##div[class^="singleAd"]
 qualitydergisi.com##.megaBanner
 bodrumolay.com###custom_html-5
 bodrumolay.com###custom_html-2
@@ -4454,7 +4464,7 @@ hdfullfilmizlesene.tv##a[href^="http://affiliatesbnow.com/"]
 ||hdfullfilmizlesene.tv/wp-content/uploads/2017/07/1.gif
 ||xn--altyazlfilm-4zbb.comm^$popup,domain=filmbizdeizlenir.com|filmizle.film
 ||higshoes.com/asyabahis/banners/
-antakyagazetesi.com##.fixedAd
+turkiyedeenerji.com,antakyagazetesi.com##.fixedAd
 canlimaclar.co###p-page-skin
 sporx.com##a[href="http://bit.ly/2kAD1db"]
 webaslan.com##.hbrbody > div[style="margin:3px;"] > a[href^="http://bit.ly/"]
@@ -5901,6 +5911,10 @@ mail.yandex.com.tr##.mail-DirectLine
 !------ White list. Fixing filtration errors (false-positive)---------------!
 !---------------------------------------------------------------------------!
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/42417
+@@||cdn.segmentify.com/*/segmentify.js$domain=gittigidiyor.com
+@@||segmentify.com//get/key/v*.json?$domain=gittigidiyor.com
+@@||segmentify.com//add/events/v*.json?apiKey=$domain=gittigidiyor.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/42234
 @@||vsh.visilabs.net/Visilabs.min.js^$domain=makyajtrendi.com
 @@||s.visilabs.net/Target.js^$domain=makyajtrendi.com
