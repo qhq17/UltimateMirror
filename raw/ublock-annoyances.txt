@@ -1714,8 +1714,17 @@ rfi.fr##header:style(position:static !important;)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/4985
 ! https://github.com/uBlockOrigin/uAssets/issues/5030
-instagram.com##button:has(>span[aria-label="Close"]):xpath(..)
 instagram.com##.ZUqME:has(a[href^="/accounts/emailsignup/"])
+
+! https://old.reddit.com/r/uBlockOrigin/comments/dimzi2/how_to_block_login_pop_up_on_instagram/
+instagram.com##.Yx5HN.RnEpo > div > div > div:has-text(/Log in to continue/):nth-ancestor(3)
+instagram.com##body:style(overflow-y: scroll !important;)
+instagram.com##body[style*="overflow: hidden;"] .XQXOT:style(width: calc(100% - 12px) !important; padding-right: 0 !important;)
+
+! instagram app download nag banner
+!#if env_mobile
+instagram.com##.xZ2Xk:has-text(/App/)
+!#endif
 
 ! https://github.com/uBlockOrigin/uAssets/issues/852#issuecomment-469927777
 ! https://github.com/NanoAdblocker/NanoFilters/issues/282
@@ -1798,7 +1807,8 @@ theclever.com###overlay_search
 beprobeproud.org##.movement-popup
 
 ! https://github.com/uBlockOrigin/uAssets/issues/5030
-prestashop.com##.cTopicPostArea:has(> div > .cGuestTeaser)
+! https://github.com/uBlockOrigin/uAssets/issues/6425
+discussion.evernote.com,prestashop.com##.cTopicPostArea:has(.cGuestTeaser)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/5030
 bookbub.com##.blur.signup-gate
@@ -2654,9 +2664,6 @@ bloomberg.com##+js(raf-if, !paywall-inline-tout)
 bloomberg.com###paywall-banner
 bloomberg.com##.paywall-inline-tout
 
-! https://www.reddit.com/r/uBlockOrigin/comments/d91jgm/need_help_with_a_specific_anti_adblocker_message/
-@@||kupujemprodajem.com^$generichide
-
 ! https://forums.lanik.us/viewtopic.php?f=62&t=43618
 bold.dk##+js(acis, eval, abd)
 
@@ -2743,3 +2750,16 @@ r7.com##.floating.share-btn
 
 ! https://github.com/uBlockOrigin/uAssets/issues/6426
 cronista.com##+js(aeld, copy, replaceCopiedText)
+
+! gamershit .altervista .org right click msg
+gamershit.altervista.org##+js(aopr, document.oncontextmenu)
+
+! https://github.com/uBlockOrigin/uAssets/issues/4802
+@@||minecraft-schematics.com^$ghide
+
+! theitaliantimes .it right click, select, copy ..
+theitaliantimes.it##+js(ra, oncontextmenu|onselectstart|ondragstart|oncopy|oncut|onpaste|onbeforecopy)
+
+! https://github.com/ryanbr/fanboy-adblock/issues/1211#issuecomment-543317975
+researchgate.net##.nova-c-modal
+researchgate.net##.nova-has-modal:style(overflow: auto !important;)
