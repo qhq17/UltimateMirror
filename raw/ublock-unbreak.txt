@@ -1256,9 +1256,6 @@ techadvisor.co.uk#@#.adsbygoogle
 ! https://github.com/NanoAdblocker/NanoCore/issues/201
 @@||nxp.com/*/resources/scripts/analytics/webanalytics.js$script,first-party
 
-! https://github.com/uBlockOrigin/uAssets/issues/3295
-@@||rapidvideo.com/js/videojs-contrib-hls.min.js$script,first-party
-
 ! fix for issues caused by `EasyList` regex for anime sites
 ! https://github.com/uBlockOrigin/uAssets/issues/2333#issuecomment-415652949
 /^https?:\/\/([0-9a-z\-]+\.)?(9anime|animeland|animenova|animeplus|animetoon|animewow|gamestorrent|goodanime|gogoanime|igg-games|kimcartoon|memecenter|readcomiconline|toonget|toonova|watchcartoononline)\.[a-z]{2,4}\/(?!([Ee]xternal|[Ii]mages|[Ss]cripts|[Uu]ploads|ac|ajax|assets|combined|content|cov|cover|(img\/bg)|(img\/icon)|inc|jwplayer|player|playlist-cat-rss|static|thumbs|wp-content|wp-includes)\/)(.*)/$first-party,script,domain=~animeland.hu
@@ -2338,8 +2335,8 @@ downloadsource.*##.date:not(dt):style(display: block !important;)
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=live.antena3.ro
 
 ! https://forums.lanik.us/viewtopic.php?f=64&t=43073&p=147868#p147852
-://adv.$domain=~adv.bet|~adv.cincsys.com|~adv.co.it|~adv.cryptonetlabs.it|~adv.derfunke.at|~adv.ee|~adv.gg|~adv.michaelgat.com|~adv.msk.ru|~adv.ru|~adv.vg|~adv.works|~adv.yomiuri.co.jp|~advids.co|~erti.se|~escreverdireito.com|~farapp.com|~forex-tv-online.com|~r7.com|~typeform.com|~welaika.com,badfilter
-://adv.$domain=~adv.bet|~adv.cincsys.com|~adv.co.it|~adv.cr|~adv.cryptonetlabs.it|~adv.derfunke.at|~adv.ee|~adv.gg|~adv.michaelgat.com|~adv.msk.ru|~adv.ru|~adv.vg|~adv.works|~adv.yomiuri.co.jp|~advids.co|~erti.se|~escreverdireito.com|~farapp.com|~forex-tv-online.com|~r7.com|~typeform.com|~welaika.com
+://adv.$domain=~adv.bet|~adv.cincsys.com|~adv.co.it|~adv.cryptonetlabs.it|~adv.derfunke.at|~adv.ee|~adv.gg|~adv.michaelgat.com|~adv.msk.ru|~adv.ru|~adv.trinet.ru|~adv.vg|~adv.works|~adv.yomiuri.co.jp|~advids.co|~erti.se|~escreverdireito.com|~farapp.com|~forex-tv-online.com|~r7.com|~typeform.com|~welaika.com,badfilter
+://adv.$domain=~adv.bet|~adv.cincsys.com|~adv.co.it|~adv.cr|~adv.cryptonetlabs.it|~adv.derfunke.at|~adv.ee|~adv.gg|~adv.michaelgat.com|~adv.msk.ru|~adv.ru|~adv.trinet.ru|~adv.vg|~adv.works|~adv.yomiuri.co.jp|~advids.co|~erti.se|~escreverdireito.com|~farapp.com|~forex-tv-online.com|~r7.com|~typeform.com|~welaika.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/5688
 ||amazonaws.com^*/funders-$domain=globalvoices.org,badfilter
@@ -2578,11 +2575,6 @@ wallpaperplay.com##.adsbygoogle
 ! https://github.com/uBlockOrigin/uAssets/issues/6055
 ||googletagservices.com/tag/js/gpt.js$script,redirect=noopjs,domain=ladbible.com
 
-! https://github.com/NanoMeow/QuickReports/issues/1638
-@@||rapidvideo.*/assets/$css,script
-@@||rapidvid.*/assets/js/videojs-contrib-ads.js$script
-@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=rapidvideo.com|rapidvideo.is|rapidvid.to
-
 ! https://www.drupal.org/project/webmasters/issues/3073568
 @@||register.drupal.org/ga*.js$xhr,1p
 
@@ -2820,3 +2812,33 @@ twitter.com#@#article[role="article"]:has-text(Promoted)
 ! from Peter Lowe's
 ||viafoura.com^$badfilter
 ||viafoura.com^$3p
+
+! broken videos https://github.com/uBlockOrigin/uAssets/issues/6434#issuecomment-542715184
+@@||doubleclick.net/tag/js/gpt.js$script,domain=accuweather.com
+@@||doubleclick.net/gpt/pubads_impl_$script,domain=accuweather.com
+@@||accuweather.com^$script,1p
+@@||c.amazon-adsystem.com/aax2/apstag.js$script,domain=accuweather.com
+
+! https://github.com/uBlockOrigin/uAssets/issues/6443
+@@||xtool.ru/js/analyze.js$script,1p
+
+! https://www.reddit.com/r/uBlockOrigin/comments/diqia5/dailywirecom_articles_not_working/
+@@||outbrain.com^$script,domain=dailywire.com
+
+! https://forums.lanik.us/viewtopic.php?p=150510#p150510
+@@||affirm.com/api/v2/checkout
+
+! https://github.com/NanoMeow/QuickReports/issues/2064
+@@||s.yimg.com/ss/rapid3.js$script,domain=techcrunch.com
+
+! https://github.com/gorhill/uBO-Extra/issues/119#issuecomment-543469244
+@@||doubleclick.net/$script,domain=webmd.com
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=webmd.com
+@@||doubleclick.net/gampad/ads*www.webmd.com$xhr,domain=imasdk.googleapis.com
+*/videoplayback?expire$media,redirect=noopmp3-0.1s,domain=webmd.com
+
+! https://github.com/uBlockOrigin/uAssets/issues/6456
+@@||googletagmanager.com/gtm.js$script,domain=eclipse.org
+
+! https://www.reddit.com/r/uBlockOrigin/comments/dktx86/weather_radar_not_showing_up_on_website/
+@@||modules-prod.franklyinc.com/cml.js$script,domain=newson6.com
