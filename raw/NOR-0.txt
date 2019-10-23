@@ -1,6 +1,6 @@
 [Adblock Plus 3.4]
-! Version: 10October2019v2
-! Version: 101020192 (for Adblock Plus' issue report system)
+! Version: 21October2019v1
+! Version: 211020191 (for Adblock Plus' issue report system)
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites
 ! Expires: 12 hours
@@ -24,10 +24,8 @@
 ##.mvp-feat1-list-ad
 ##.rotating-junglebogen
 ##div.size-300x160.fixed-placement
-~cdon.no,~cdon.dk,~cdon.se,~cdon.fi##.horseshoe
 
-! 🇳🇴: ——— Reklamer ———
-! 🇩🇰: ——— Reklamer ———
+! 🇳🇴/🇩🇰: ——— Reklamer ———
 ! 🇬🇧: ——— Ads ———
 ##.annonselenker
 ##.content-adunit
@@ -166,7 +164,9 @@ nettavisen.no#?#.story:-abp-has(.vignette)
 .no/ads/
 /*-annonse-*$image,domain=resett.no
 /_bm/abd$script,domain=eurosport.no|eurosport.dk
+/annonsar/*
 /annonse/*
+/annonser/*
 /auglysing/*
 /Bannere/*$image,domain=tek.no|gamer.no
 /bazaar/*$script,domain=nettavisen.no
@@ -197,7 +197,6 @@ nettavisen.no#?#.story:-abp-has(.vignette)
 ||akamaihd.net/video-assets/$media,redirect=noopmp4-1s,domain=dplay.no
 ||amino.dk/images/partners/agera/240x140-forside-hardcoded*.jpg$image
 ||annonser.*.no^
-||austevollforlag.no/wp-content/*/annonsar/$image
 ||austevollforlag.no/wp-content/*/yachtmarine2014.$image
 ||avod-fw-config.mtg-api.com^$important,xhr,domain=viafree.no|viafree.dk
 ||banner.*.no^
@@ -216,7 +215,7 @@ nettavisen.no#?#.story:-abp-has(.vignette)
 ||dust2.dk/img/banners/*$image
 ||easy-ad.no^
 ||emerio.no^
-||euroads.dk
+||euroads.dk^
 ||euroads.no^
 ||eyjar.net/skrar/ads
 ||freewheel-mtgx-tv.akamaized.net^$media,domain=viafree.no|viafree.dk
@@ -260,6 +259,8 @@ nettavisen.no#?#.story:-abp-has(.vignette)
 utrop.no##.lazyautosizes
 utrop.no#?#.td-pb-span4:-abp-contains(ANNONSØRINNHOLD)
 /annonse_$image
+||tv2a.dk^
+blogg.no##.contentmarketing-box
 ! — — — — —
 !#if !ext_ublock
 @@||vgtv.no$generichide
@@ -276,6 +277,11 @@ utrop.no#?#.td-pb-span4:-abp-contains(ANNONSØRINNHOLD)
 ##.ad-paied-cont-front
 ! https://www.langrenn.com/cppage.6250314-1743.html
 ##.spklw-post-attr[data-recommendation-type="ad"]
+! https://sport.tv2.dk/formel-1/2019-10-15-jeg-viste-alle-hvad-man-ikke-skal-goere-siger-magnussen
+@@||tv2a.dk/js/lazysizes
+! https://bobilverden.no/
+/annonse-$image
+##img[alt^="Annonse"]
 
 ! 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
 ! 🇩🇰: ——— Tomme restebokser, som EasyList har efterladt ———
@@ -549,12 +555,18 @@ yrkesbil.no###side > div:nth-of-type(1)
 ||bilnorge.no/gifs/*emty.gif$image
 ||gaysir.no/rek/bb_inline$subdocument
 ||static.vg.no/css/admark_top.gif
-~raymond.cc,~win-rar.com,~bolha.com,~wiwo.de##.ad
+~raymond.cc,~bolha.com,~wiwo.de##.ad:not(html):not(a)
 gamer.no##.aaa-placeholder
 google.*###cnsi ~ [jsaction*="dismiss"]
 180.no##.ai-top-ad-outer
 forum.klikk.no##.ehm-megaboard
 tv2.dk##.tc_ad
+tek.no##div[class^=styles__]
+tek.no##section[class*="canvas"]
+tek.no##section[class^="GreatCanvas__smallArticles-"]:style(width: 100% !important)
+finn.no#?#.ad-stream__unit:-abp-has(div[id*=google-ad])
+trening.no##[id^="dt-netboard"]
+itavisen.no##.ad:before
 ! — — — — —
 !#if !env_mobile
 seher.no##.content-marketing-ribbon:style(margin-top: 20px !important)
@@ -562,7 +574,6 @@ seher.no##.content-marketing-ribbon:style(margin-top: 20px !important)
 ! https://sol.no/
 ##.advertisement
 ##div[itemtype$="WPAdBlock"]
-##[type="advertisement"]
 ! http://www.qxl.no/
 ###BannerEniro
 ###GoogleAdsenseWideSkyscraper
@@ -606,6 +617,11 @@ vafo.dk##.adform-flexblock
 ##.ticker-ad
 ! https://adressa.no
 ##div[data-contenttype="ad"]
+! kk.no, sol.no
+##[type="advertisement"]
+##[class^="AdWrapper"]
+! historienet.no, natgeo.no, komputer.no
+##.wallpaper > .horseshoe
 
 ! 🇳🇴: ——— Tomme skillebokser ———
 ! 🇩🇰: ——— Tomme adskillerbokser ———
@@ -641,9 +657,6 @@ pensjonistferie.no#@##adsense
 ! 🇳🇴: Fikser videoavspillerene på nettstedene til norske fotballklubber når man bruker «uBlock Filters - Unbreak»
 ! 🇬🇧: Fixes video players on Norwegian football club sites when using "uBlock Filters - Unbreak"
 @@||play2.qbrick.com/framework/modules/analytics/analytics.min.js$script
-! 🇩🇰: Gør det muligt igen at scrolle når «I Don't Care About Cookies» er benyttet
-! 🇬🇧: Re-enables scrolling when using "I Don't Care About Cookies"
-||scripts.tv2a.dk/oil/
 ! 🇬🇧: Unbreaks significant content breakage when using "Fanboy's Social Blocking List", if I recall correctly
 krom.is#@#.share-container
 @@/images/*youtube.jpg$domain=realityportalen.dk
@@ -661,6 +674,9 @@ krom.is#@#.share-container
 ! 🇬🇧: Makes Dplay's login page show up properly when using "EasyPrivacy"
 @@||mparticle.com$script,domain=auth.dplay.no|auth.dplay.dk
 @@||assets.adobedtm.com/*/satelliteLib-$domain=auth.dplay.no|auth.dplay.dk
+! 🇩🇰: Fikser knækking af videoer på TV 2 når "EasyList" bliver brugt
+! 🇬🇧: Unbreaks videos at TV2 Denmark when using "EasyList"
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=tv2.dk
 
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇬🇧: ——— Anti-anti-adblocking, in the event that https://forums.lanik.us/viewtopic.php?f=23&t=42273 were to specifically mention such entries as a reason to be denied EasyList affiliation or native ABP inclusion ———
@@ -724,6 +740,8 @@ morgenbladet.no##.preview-overlay
 dagogtid.no##.dot-shorttext:before
 aftenposten.no##.widget-salesposter:before
 fiskeribladet.no##.teaser_overlay
+information.dk##.greyed-text
+information.dk##.paywall-box:style(margin-top: 0px !important)
 
 ! 🇳🇴: ——— Norsk Tipping, inkl. tvilsomt motiverte lottoreklamer (Noen ikke-påtrengende tippereklamer er greit nok i mine øyne) ———
 ! 🇩🇰: ——— Norsk Tipping, inkl. nogle tvivlsomt motiverede lottoreklamer (Nogle ikke-påtrængende sportstipsreklamer er akseptabelt i mine øjne) ———
@@ -937,7 +955,7 @@ fuglelyder.net#@##banner_ad
 ||*/css/*sparebank1.no^$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Sparebank1.
 
 ! 🇳🇴: Falske nett-"butikker" som er så dårlige, at de står oppført på Forbrukertilsynet egen svarteliste.
-! 🇩🇰: Falske web-"butikker" der er så dårlige, at de er opført på svartelisten til Forbrukertilsynet (Norges svar på Forbrugerombudsmanden).
+! 🇩🇰: Forbrukertilsynets black-list over falske netbutikker (Norges svar på Forbrugerombudsmanden).
 ! 🇬🇧: Fake and fraudulent web-"stores" that are so bad, that they're listed on the blacklist of the Norwegian state-sponsored Consumer Authority.
 ! Source: https://www.forbrukertilsynet.no/netthandel/falske-nettbutikker.
 ||adidasko.com^$doc,domain=~ Advarselen vises grunnet: En grovt falsk nettbutikksvindel som er svartelistet av Forbrukertilsynet.
