@@ -3,7 +3,7 @@
 ! License: https://github.com/yous/YousList#license
 ! Title: YousList
 ! Expires: 4 days
-! Version: 20191021
+! Version: 20191025
 
 ! General element hiding rules
 ##amp-ad
@@ -107,6 +107,9 @@
 ##iframe[src^="//onedrive.su/code/swf_banner.php"]
 ##iframe[src^="//plugin.adplex.co.kr/iframe/"][src*=".html"]
 ##iframe[src^="//searchmaster.pro/b.php"]
+##iframe[src^="//server.cpmstar.com/cached/client/"][src*="/carouselv1.html"]
+##iframe[src^="//shop.nate.com/shopbox/shopbox.htm"]
+##iframe[src^="//shop.nate.com/shopbox/shopbox_V3.htm"]
 ##iframe[src^="//ssp.adpies.com/ssp/request"]
 ##iframe[src^="//ssp.advg.jp/ssp/p/iframe"]
 ##iframe[src^="//ssp.realclick.co.kr/"][src*="c=iframe"]
@@ -124,6 +127,7 @@
 ##iframe[src^="//www.mediacategory.com/servlet/adPlayLinkServlet"]
 ##iframe[src^="//www.mediacategory.com/servlet/adbnMobileBanner"]
 ##iframe[src^="//www.mediacategory.com/servlet/iadbn"]
+##iframe[src^="//www.sunnyworks.co.kr/data/SW"][src$=".html"]
 ##iframe[src^="//x.jd.com/exsites"]
 ##iframe[src^="//y.one.impact-ad.jp/imp"]
 ##iframe[src^="http://178.175.132.130/script/ad.php"]
@@ -303,6 +307,7 @@
 ##iframe[src^="http://www.sunnyworks.co.kr/data/SW"][src$=".html"]
 ##iframe[src^="http://www.ti-center.co.kr/"]
 ##iframe[src^="http://zone5.adpopcon.com/cgi-bin/PelicanC.dll"]
+##iframe[src^="https://a.adtng.com/get/"]
 ##iframe[src^="https://ad.luxnet.ua/dfp/spot.html"]
 ##iframe[src^="https://ad.pentabox.net/ron/html/"]
 ##iframe[src^="https://adbiz3.co.kr/"]
@@ -321,6 +326,7 @@
 ##iframe[src^="https://rcm-"][src*=".amazon-adsystem.com/e/cm"]
 ##iframe[src^="https://s.yimg.jp/images/listing/tool/yads/yads-iframe.html"]
 ##iframe[src^="https://search2.nuriclick.co.kr/banner.php"]
+##iframe[src^="https://server.cpmstar.com/cached/client/"][src*="/carouselv1.html"]
 ##iframe[src^="https://syndication.exdynsrv.com/ads-iframe-display.php"]
 ##iframe[src^="https://syndication.exoclick.com/ads-iframe-display.php"]
 ##iframe[src^="https://syndication.exosrv.com/ads-iframe-display.php"]
@@ -378,6 +384,7 @@
 ||3407.tm.zedo.com/v1/*/atm.js^
 ||58.120.226.147^
 ||7fkm2r4pzi.com/*/*/*/*.js^
+||a.adtng.com/get/
 ||a.bf-ad.net/makabo/js_ng/adplayer/js/adplayer.min.js^
 ||a.bf-ad.net/pubjs/*/adengine.js^
 ||a.komoona.com/tag/*.js^
@@ -1107,6 +1114,9 @@
 ||hb.vntsm.com/v2/live/hb.js^
 ||health.chosun.com/js/2015/center_botbanner_2015s.js^$domain=health.chosun.com
 ||health.chosun.com/js/2015/center_mtree_2015s.js^$domain=health.chosun.com
+||health.chosun.com/js/2015/right_bestdoctor_2015s.js^$domain=health.chosun.com
+||health.chosun.com/js/2018/left_wing.js^$domain=health.chosun.com
+||health.chosun.com/js/2018/right_wing.js^$domain=health.chosun.com
 ||hei.hankyung.com/js/ad/iconad_hankyung_heien.js^$domain=hei.hankyung.com
 ||hei.hankyung.com/js/ad/inspace_hankyung_hei.js^$domain=hei.hankyung.com
 ||hentaifromhell.org/sw.js^$domain=hentaifromhell.org
@@ -1657,6 +1667,7 @@
 ||serve.popads.net/c^
 ||serve.popads.net/checkInventory.php^
 ||serve.popads.net/s^
+||server.cpmstar.com/cached/client/*/carouselv1.html^
 ||server.cpmstar.com/view.aspx^
 ||server1.affiz.net/tracking/ads_display.php^
 ||servicer.marketgid.com^
@@ -1666,6 +1677,7 @@
 ||shop.kbench.com/09shop/article_right_box.php^$domain=kbench.com
 ||shop.nate.com/shopbox/news.htm^
 ||shop.nate.com/shopbox/shopbox.htm^
+||shop.nate.com/shopbox/shopbox_V3.htm^
 ||shoplayer.zum.com/view/zum/hubzum/shoppingbox^$domain=hub.zum.com
 ||shoppingbox.joinsmsn.com^
 ||si.nuggad.net/javascripts/nuggad-ls.js^
@@ -2266,6 +2278,8 @@ cafe.naver.com##table.searchad
 car.chosun.com##iframe[src^="http://car.chosun.com/common/right/banner/index.html"]
 carisyou.com##div.main_right_banner
 carisyou.com##div.top_banner
+cdn-city.livere.com##div.contents-container>div.content>div.content-description>a[title^="[AD] "]
+cdn-city.livere.com##div.contents-container>div.content>div.content-thumnail>a[title^="[AD] "]
 cdn-city.livere.com##ul.contents-list>li.tenping-title
 cdn.ampproject.org##aside.amp-bottom-ad
 cdn.ampproject.org##aside.amp-md-ad
@@ -2988,6 +3002,9 @@ hdblog.it##div[id^="banner4"]
 health.chosun.com##dd.rel_ad
 health.chosun.com##dd.rel_ad_first
 health.chosun.com##dd.rel_pd
+health.chosun.com##div.aside_doctor
+health.chosun.com##div.left_banner
+health.chosun.com##div.right_banner
 healthcarenous.com##div.header-right
 healthmedi.net##div.imagead-taskbar-anchor
 hellmoney.kr##div#shallwead_div
@@ -3952,6 +3969,8 @@ m.mydaily.co.kr##div.read_wrap>div[style="margin-left:6px; margin-top:-5px;"]
 m.mydaily.co.kr##div.read_wrap>div[style="margin-top:3px; margin-left:10px;"]
 m.mydaily.co.kr##div.read_wrap>div[style="text-align:left; margin-top:-3px;"]
 m.mydaily.co.kr##p.mobitree
+m.nate.com##div.mainBnFull
+m.nate.com##div.new_ad
 m.naver.com##div.grid_ad
 m.naver.com##div.id_uio_cd_fbanner
 m.naver.com##div[data-da]
@@ -3997,9 +4016,11 @@ m.newsworks.co.kr##div.body>div[style="height:60px !important"]
 m.newsworks.co.kr##section.advertisment
 m.nocutnews.co.kr##div#divContent>div[style="width:200px; float:right; padding:5px 0 0 5px;"]
 m.nocutnews.co.kr##div#divContent>div[style="width:200px; height:200px;float:right; padding:5px 0 0 5px;"]
+m.nocutnews.co.kr##div#pnlTopAd
 m.nocutnews.co.kr##div.ad_ft
 m.nocutnews.co.kr##div.con_b>div.ct_box
 m.nocutnews.co.kr##div.ct1>div.con_b>div:not([class]):not([id])
+m.nocutnews.co.kr##div.ct2>div.con_b>div[style="text-align: center; padding: 0; height:100px; overflow:hidden;"]
 m.nocutnews.co.kr##iframe[src^="/ad/adnca.html"]
 m.ohmynews.com##div#adDaum
 m.ohmynews.com##div#adDaum_top
@@ -4527,6 +4548,8 @@ net.hr##div.banner
 net.hr##div.banner_adsense
 newdaily.co.kr##div#ad1
 newdaily.co.kr##div#iw_ad4
+newgrounds.com##div#afrc_skin
+newgrounds.com##div[class^="ng-ad-container-"]
 news.chosun.com##div.ad_aside_box
 news.chosun.com##div.ad_box
 news.chosun.com##div.ad_mid_box
