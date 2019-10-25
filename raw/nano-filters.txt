@@ -30,6 +30,7 @@ captchme.com##script:inject(set-constant.js, CaptchmeState.adb, undefined)
 ||jamexistence.com^$important
 ||levelbehavior.com^$important
 ||lumberamount.com^$important
+||markedmeasure.com^$important
 ||nullnorth.com^$important
 ||pedropanther.com^$important
 ||plainplayground.com^$important
@@ -109,7 +110,7 @@ unlockapk.com###detect
 @@||nzz.ch^$generichide
 nzz.ch##.pageblock.recommendations
 @@||megaup.net/ads.js$script,1p
-haberturk.com##+js(abort-current-inline-script.js, Uint8Array, googlefcPresent)
+haberturk.com,dumpert.nl##+js(abort-current-inline-script.js, Uint8Array, googlefcPresent)
 outlook.live.com##a[href="https://windows.microsoft.com/outlook/ad-free-outlook"]:nth-ancestor(4)
 libgen.io##+js(setTimeout-defuser.js, (), 500)
 @@||html-online.com^$generichide
@@ -266,6 +267,7 @@ videohelp.com##+js(abort-current-inline-script.js, document.getElementById, bloc
 @@||as.com^$generichide
 as.com##.publi
 pureinfotech.com##+js(aopw, ai_adb_overlay)
+@@||bbombproxy.github.io^$script,1p
 altadefinizione.*##.sm_header.sm_nomobile:has(:scope > a[href*="/HD/play"])
 @@||wired.com^$generichide
 wired.com##.ad
