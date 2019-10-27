@@ -2826,7 +2826,9 @@ twitter.com#@#article[role="article"]:has-text(Promoted)
 @@||outbrain.com^$script,domain=dailywire.com
 
 ! https://forums.lanik.us/viewtopic.php?p=150510#p150510
-@@||affirm.com/api/v2/checkout
+||affirm.com/api/v2/$3p,badfilter
+||affirm.com/api/v2/session/touch_track$xhr
+||affirm.com/api/v2/cookie_sent$xhr
 
 ! https://github.com/NanoMeow/QuickReports/issues/2064
 @@||s.yimg.com/ss/rapid3.js$script,domain=techcrunch.com
@@ -2842,3 +2844,25 @@ twitter.com#@#article[role="article"]:has-text(Promoted)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/dktx86/weather_radar_not_showing_up_on_website/
 @@||modules-prod.franklyinc.com/cml.js$script,domain=newson6.com
+
+! https://news.ycombinator.com/item?id=21325661
+arstechnica.com#@#a[href^="https://www.amazon."][href*="tag="]
+
+! https://github.com/NanoMeow/QuickReports/issues/2114
+@@||webticketing2.cinestar.de/app/scripts/provider/GoogleTagManager.js$script,1p
+
+! https://github.com/uBlockOrigin/uAssets/issues/6474
+@@||analytics.analytics-egain.com/onetag/$script,domain=xfinity.com
+
+! https://github.com/uBlockOrigin/uAssets/issues/6480
+||pushengage.com^$badfilter
+||pushengage.com^$3p
+
+! https://github.com/easylist/easylist/issues/4185
+||cbsistatic.com/*/dw-tracking$script,important,redirect=noopjs,domain=techrepublic.com
+
+! https://github.com/easylist/easylist/issues/4187
+wallpaperset.com#@#.ads1
+
+! https://github.com/easylist/easylist/issues/4203
+||2mdn.net/instream/html5/ima3.js$script,important,redirect=noopjs,domain=playercdn.earthtv.com
