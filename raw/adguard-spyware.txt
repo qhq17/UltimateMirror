@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: GPgtr/9rgiftuYU/1PLRuw
+! Checksum: jJnmz88V88BuvdasgBR1Yg
 ! Title: AdGuard Tracking Protection filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.9.82
-! TimeUpdated: 2019-10-18T17:31:06+03:00
+! Version: 2.0.10.8
+! TimeUpdated: 2019-10-29T15:31:10+03:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#privacy
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -150,6 +150,14 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ! ||e.crashlytics.com^
 ! ||settings.crashlytics.com^
 !
+||rob.megaopen.ru^$third-party
+||instana.io^$third-party
+||srv.dc-1.net^
+||votetoda.com^$third-party
+||promclickapp.biz^$third-party
+||count.nuanyuehanxing.com^
+||itrustzone.site^$third-party
+||dable.io^$third-party
 ||distiltag.com^$third-party
 ||deep.bi^$third-party
 ||lists-tracking.komando.com^
@@ -3313,6 +3321,23 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ! start: Big Star Labs
 ||yourblocksite.com^
 ||taskapi.net^
+! https://github.com/AdguardTeam/AdguardFilters/issues/42797
+! goguardian tracking
+||beacon-fullpage-predictor.goguardian.com^
+||countvoncount.goguardian.com^
+||ext.goguardian.com^
+||inquisition.goguardian.com^
+||ip.goguardian.com^
+||panther.goguardian.com^
+||quiddity.goguardian.com^
+||sakura.goguardian.com^
+||screenshots.goguardian.com^
+||snat.goguardian.com^
+||sock*-goguardian.pusher.com^
+||sockjs-goguardian.pusher.com^
+||ws-goguardian.pusher.com^
+||x3-policy-maker.goguardian.com^
+||x3-predictor.goguardian.com^
 !
 ! popin.cc tracking
 ||rlog.popin.cc^
@@ -3440,6 +3465,11 @@ nethunt.com/api/v1/track/email/$image
 !+ NOT_PLATFORM(ios, ext_safari, ext_android_cb)
 ||tags.news.com.au^$~script
 !
+||analytics.dpd.com^
+||cfg.imtt.qq.com^
+||log.tbs.qq.com^
+||mqqad.html5.qq.com^
+||beacon.qq.com^
 ||kiupoo.stroeerdp.de^$third-party
 ||phiesi.stroeerdp.de^$third-party
 ||ohcohz.stroeerdp.de^$third-party
@@ -4214,7 +4244,7 @@ nethunt.com/api/v1/track/email/$image
 ||hit.dogannet.tv^$third-party
 ||hindsight.significanceapps.com^
 ||hc.uralweb.ru^
-||||j.uralweb.ru^
+||j.uralweb.ru^
 ||hits.theguardian.com^
 ||hits.top.lv^$third-party
 ||ext.host-tracker.com^$third-party
@@ -4627,7 +4657,6 @@ charlestownwyllie.oaklawnnonantum.com^
 ||stat.sputnik.ru^
 ||wstat.ozon.ru^
 ||analytics.vooxe.com^
-||udc.yahoo.com^
 ||tracker.giftd.ru^$third-party
 ||collector.retailcrm.pro^$third-party
 ||tr1.admeira.ch^$third-party
@@ -5100,6 +5129,11 @@ _tracking.php?b=
 .demdex.net/id^$empty,important
 ||omtrdc.net/id^$empty,important
 !
+||beam.remp.nv.ua^
+||eum.instana.io/eum.min.js
+||player.ani-stream.com/log
+||static-skin.ru/assets/js/tracking-frame.min.js
+||static.spankbang.com/static_desktop/gen/*-ai-with-privacy.js
 ||rezka.ag/setinfo/
 ||experience.tinypass.com/xbuilder/experience/execute?aid=
 ||piano.io/tracker/
@@ -5964,7 +5998,7 @@ m.lenta.ru##.b-footer_counters
 ||r.nnm.me/api/server
 ||88688.ru/api/geoip/
 ||openculture.com/wp-admin/admin-ajax.php*^action=rxn_
-||googletagservices.com/tag/js/gpt.js$domain=sinoptik.ua|gutefrage.net|qtv.ua|dt.ua|ngs.ru|unian.net|easybib.com|bohenon.com|linuxtopia.org|newsroom.kh.ua|hclips.com|noticierodigital.com|northumberlandgazette.co.uk|mywebtimes.com|watchuseek.com|telekritika.ua|gamepedia.com|fontanka.ru|vesti.ua|bhub.com.ua|guhoyas.com|rst.ua|hh.ru|buhgalter.com.ua|unocero.com|autonews.com|metropoles.com|okezone.com
+||googletagservices.com/tag/js/gpt.js$domain=sinoptik.ua|gutefrage.net|qtv.ua|dt.ua|ngs.ru|unian.net|easybib.com|bohenon.com|linuxtopia.org|newsroom.kh.ua|hclips.com|noticierodigital.com|northumberlandgazette.co.uk|mywebtimes.com|watchuseek.com|telekritika.ua|gamepedia.com|fontanka.ru|vesti.ua|bhub.com.ua|guhoyas.com|rst.ua|hh.ru|buhgalter.com.ua|unocero.com|autonews.com|metropoles.com|okezone.com|m.yeniakit.com.tr|kanalukraina.tv
 ||imagecrest.com/asset/view/stats.php
 ||uaswitcher.org/logic/page/data
 ||success.trendmicro.com/jslibrary/*/NetworkTracking.js
@@ -6252,7 +6286,6 @@ dreamprogs.net##td[width="88"][height="31"]
 ||cultofmac.com/presslabs.js
 ||d395ev7kdef0wl.cloudfront.net/a.gif?
 ||d3sbxpiag177w8.cloudfront.net/Analytics/
-||dable.io/logs
 ||dailymotion.com/gravity/report
 ||dailymotion.com/logger/*?session_id=
 ||dailymotion.com^*/log/
@@ -6696,6 +6729,9 @@ link.gmapp*.net$image
 ||hh.ru/analytics^
 ! End: cnet.com trackers
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/43140
+||rum-static.pingdom.net/*-*.js$empty,important,domain=leboncoin.fr
+!
 !+ NOT_PLATFORM(ios, ext_safari, ext_android_cb)
 ||bing.com/fd/ls/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/19165
@@ -6722,6 +6758,18 @@ link.gmapp*.net$image
 !-------------- Whitelist ------------------------------------------------------!
 !-------------------------------------------------------------------------------!
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/42981
+@@||repco.com.au/_ui/shared/js/analyticsmediator.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/43037
+@@||googletagmanager.com/gtm.js$domain=shop.mango.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/42667
+@@||googletagmanager.com/gtm.js$domain=migros.com.tr
+@@||cdn.segmentify.com/*/segmentify.css$domain=migros.com.tr
+@@||cdn.segmentify.com/*/segmentify.js$domain=migros.com.tr
+@@||segmentify.com//get/key/v*.json?$domain=migros.com.tr
+@@||segmentify.com//add/events/v*.json?apiKey=$domain=migros.com.tr
+! https://github.com/AdguardTeam/AdguardFilters/issues/42692
+@@||ws.skoda-auto.com/sap/*_piwik/Piwik.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/42574
 @@||cdn.georiot.com/snippet.js$domain=webwereld.nl
 ! https://github.com/AdguardTeam/AdguardFilters/issues/42417
@@ -6924,8 +6972,9 @@ link.gmapp*.net$image
 @@||wilko.com/_ui/shared/js/analyticsmediator.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/33135
 ! https://github.com/AdguardTeam/AdguardFilters/issues/31097
-@@||marketo.com/js/forms$domain=kaspersky.com|workspace.circuitmaker.com
-@@||marketo.com/index.php/form/$domain=kaspersky.com|workspace.circuitmaker.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/42985
+@@||marketo.com/js/forms$domain=kaspersky.com|workspace.circuitmaker.com|collab.net
+@@||marketo.com/index.php/form/$domain=kaspersky.com|workspace.circuitmaker.com|collab.net
 ! https://forum.adguard.com/index.php?threads/31245/
 @@||ssl.google-analytics.com/ga.js$domain=gmail.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/30981
@@ -6949,9 +6998,9 @@ link.gmapp*.net$image
 @@||pro.ip-api.com/json/?key=$domain=aljazeera.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/30347
 @@||tr-swissotel-cloudfront-prod.onelink-translations.com/sw/prod-ld1/delivery/$domain=swissotel.com.tr
-! https://github.com/AdguardTeam/AdguardFilters/issues/30343
+! https://github.com/AdguardTeam/AdguardFilters/issues/33627#issuecomment-546462756
 @@||google-analytics.com/analytics.js$domain=atv.com.tr
-@@||ipcheck.tmgrup.com.tr/ipcheck/getcountry?json=$domain=atv.com.tr
+@@||ipcheck.tmgrup.com.tr/ipcheck/get$domain=atv.com.tr
 ! https://github.com/AdguardTeam/AdguardFilters/issues/30253
 @@||mc.yandex.ru/metrika/watch.js$domain=woman.ru
 @@||mc.yandex.ru/metrika/tag.js$domain=woman.ru
@@ -7173,8 +7222,9 @@ link.gmapp*.net$image
 @@||matchesfashion.com/_ui/shared/js/analyticsmediator.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/19024
 @@||googletagmanager.com/gtm.js^$domain=profootballfocus.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/42783
 ! https://github.com/AdguardTeam/AdguardFilters/issues/18605
-@@||akamaihd.net/worldwide_analytics/tagcommander/UbisoftConnect^$domain=account.ubisoft.com
+@@||akamaihd.net/worldwide_analytics/tagcommander/Ubisoft$domain=account.ubisoft.com|connect.ubisoft.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/18449
 @@||googletagmanager.com/gtm.js$domain=givingfuel.com|regfox.com|ticketspice.com|redpodium.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/18178
@@ -7394,8 +7444,6 @@ link.gmapp*.net$image
 @@||google-analytics.com/analytics.js$domain=pcworld.com
 ||googletagmanager.com/gtm.js$domain=kabel.canaldigital.no,empty,important
 ||tags.tiqcdn.com/utag/telenor/telenor.no/prod/utag.*js$domain=kabel.canaldigital.no,empty,important
-! https://github.com/AdguardTeam/AdguardFilters/issues/9339
-@@||googletagmanager.com/gtm.js$domain=sanalmarket.com.tr
 ! https://github.com/AdguardTeam/AdguardFilters/issues/9283
 @@||analytics.edgekey.net/html5/akamaihtml5-min.js$domain=nhk.or.jp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/9192
@@ -7411,8 +7459,6 @@ link.gmapp*.net$image
 @@||recommender.scarabresearch.com/merchants/$domain=avansas.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/8975
 @@||geolocation.stroeerdp.de^$domain=t-online.de
-! https://github.com/AdguardTeam/AdguardFilters/issues/8957
-@@||google-analytics.com/analytics.js$domain=sanalmarket.com.tr
 ! https://github.com/AdguardTeam/AdguardFilters/issues/8883
 @@||nexus.ensighten.com/hearst/tv-mos/$domain=wcvb.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/8872
