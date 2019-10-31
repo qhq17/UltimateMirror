@@ -1372,6 +1372,8 @@ warszawawpigulce.pl##.eklama
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/9hy3s7/mlb_standings_not_working/
 ! https://github.com/NanoMeow/QuickReports/issues/810
+! https://github.com/uBlockOrigin/uAssets/issues/6503
+@@||doubleclick.net/gampad/ads*mlb.com$xhr,domain=imasdk.googleapis.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=mlb.com
 @@||mlbstatic.com/*/AppMeasurement$script,domain=mlb.com
 @@||mlbstatic.com/*/VisitorAPI.js$script,domain=mlb.com
@@ -2226,7 +2228,8 @@ videos.giga.de#@#+js(set-constant.js, String.prototype.charCodeAt, trueFunc)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/blgisr/cannot_click_through_to_video_on_nhlcom/
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=nhl.com
-||static.adsafeprotected.com/vans-adapter-google-ima.js$script,redirect=noopjs,domain=nhl.com
+@@||doubleclick.net/gampad/ads*nhl.com$xhr,domain=imasdk.googleapis.com
+@@||static.adsafeprotected.com/vans-adapter-google-ima.js$script,domain=nhl.com
 
 ! https://github.com/NanoAdblocker/NanoFilters/issues/323
 @@||d8rk54i4mohrb.cloudfront.net/js/video.js$script,domain=forbes.com
@@ -2866,3 +2869,28 @@ wallpaperset.com#@#.ads1
 
 ! https://github.com/easylist/easylist/issues/4203
 ||2mdn.net/instream/html5/ima3.js$script,important,redirect=noopjs,domain=playercdn.earthtv.com
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=43771
+@@||pubads.g.doubleclick.net/ssai/$xhr,domain=timesnownews.com
+
+! https://github.com/uBlockOrigin/uAssets/issues/6490
+@@||dogtime.com/wp-content/plugins/bwp-minify/min/*-google-analytics-$script,1p
+
+! https://forums.lanik.us/viewtopic.php?f=103&t=43784
+@@||epimg.net/js/pbs/$script,domain=los40.com
+@@||doubleclick.net^$script,xhr,domain=los40.com
+@@||c.amazon-adsystem.com/aax2/apstag.js$script,domain=los40.com
+@@||tpc.googlesyndication.com/safeframe/$frame,domain=los40.com
+@@||adservice.google.*/adsid/integrator.js$script,domain=los40.com
+@@||los40.com^$generichide
+los40.com##iframe[id^="google_ads_iframe"]:style(max-height: 1px !important;)
+los40.com##div[id^="google_ads_iframe_"]:style(max-height: 1px !important;)
+los40.com##.publi_luto_horizontal:style(max-height: 1px !important;)
+los40.com###los40_gpt-MPU3
+los40.com##.publi_luto_vertical
+
+! https://github.com/NanoMeow/QuickReports/issues/593
+@@||cds.connatix.com/embed/$frame,domain=rawstory.com
+
+! https://github.com/uBlockOrigin/uAssets/issues/3462#issuecomment-547684961
+@@||ipinfo.io/json$xhr,domain=futbollibre.online
