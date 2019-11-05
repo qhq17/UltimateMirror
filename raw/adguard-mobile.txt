@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: SrN5raDKChYF+BNbaGUlww
+! Checksum: MWdTHl1FcnDZVyK4cI5jmQ
 ! Title: AdGuard Mobile Ads filter
 ! Description: Filter for all known mobile ad networks. Useful for mobile devices.
-! Version: 2.0.8.37
-! TimeUpdated: 2019-10-29T00:30:11+03:00
+! Version: 2.0.8.49
+! TimeUpdated: 2019-11-05T15:02:30+03:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#mobile
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -1152,6 +1152,8 @@ westseattleblog.com#@#.header-ad
 !
 ! Extended CSS rules
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/43312
+game735.com#?#div[style^="text-align: center;"]:has(> em:contains(ADVERTISEMENT))
 ! https://github.com/AdguardTeam/AdguardFilters/issues/42830
 m.haberler.com#?#ul.home-news-list > li:not([data-haber-id]):has(> div[id^="ENGAGEYA_WIDGET_"])
 ! https://github.com/AdguardTeam/AdguardFilters/issues/42401
@@ -1509,7 +1511,9 @@ m.veporns.com#@##topAds
 @@||leanplum.com^$domain=nbc.com|leanplum.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/26520
 ! https://github.com/AdguardTeam/AdguardFilters/issues/25363
-@@||redirect.appmetrica.yandex.com/?appmetrica_tracking_id=
+! https://github.com/AdguardTeam/AdguardFilters/issues/43046
+@@||redirect.appmetrica.yandex.*/?appmetrica_tracking_id=
+@@||redirect.appmetrica.yandex.com/serve/*&mode=routes
 ! https://github.com/AdguardTeam/AdguardFilters/issues/23294
 @@||79423.analytics.edgekey.net^|
 @@||79423.analytics.edgekey.net/html5/akamaihtml5-min.js$domain=nhk.or.jp
@@ -1809,9 +1813,18 @@ m.news.de##.unisterAdsStart
 !+ NOT_PLATFORM(ios, ext_android_cb)
 ||mobile.donanimhaber.com/ads^
 !
+tek.id###footer_sticky
+rakyatku.com##.ads_mobile_wrap
+hentai2read.com##div[data-type^="leaderboard"]
+m.cnnindonesia.com##.footer_banner
+game735.com##.blockOverlay
+game735.com##.blockPage
+ukraina.ru##.article-share ~ div.heading
+ukraina.ru##amp-embed[type="smi2"]
+m.otosia.com##.ads-flying_carpet
 m.veporns.com##iframe[name^="spot_id_"]
 ||m.yeniakit.com.tr/anlasma
-m.tribunnews.com###anchorads
+tribunnews.com###anchorads
 m.detik.com##.footer_banner
 m.detik.com##.parallax
 m.detik.com##center > p[style^="margin:0px;font-size:10px;padding:"][style$="background-color:#204099;color:white;"]
@@ -2130,7 +2143,7 @@ m.doisongphapluat.com##.list_news > li div.title_news > label._mB
 m.doisongphapluat.com##.list_news > li div.title_news > a[href^="http://bit.ly/"]
 m.doisongphapluat.com##.list_news > li > div.block_image_news > .thumb > a[href^="http://bit.ly/"]
 eg.ru##amp-embed[type="smi2"]
-dailystar.co.uk,www-dailystar-co-uk.cdn.ampproject.org,express.co.uk,chip.de,asahi.com,mainichi.jp,jp.ign.com##amp-embed[type="outbrain"]
+www-express-co-uk.cdn.ampproject.org,dailystar.co.uk,www-dailystar-co-uk.cdn.ampproject.org,express.co.uk,chip.de,asahi.com,mainichi.jp,jp.ign.com##amp-embed[type="outbrain"]
 m.dcinside.com##.adv-inner
 m.dcinside.com##.adv-group
 m.dcinside.com##.adv-groupin
@@ -2273,7 +2286,7 @@ wasabisyrup.com###main > .content-group:not(.gallery-section)
 wasabisyrup.com##.top-group
 /wasabisyrup.com\/storage\/[-_a-zA-Z0-9]{8,}.gif/$domain=wasabisyrup.com
 wasabisyrup.com##.article-gallery > .article-gallery-group > .content-group
-redtube.com###content_container > div[class]:not(.show_page_modals):not([id]):not([style])
+redtube.com###content_container > div[class]:not(.show_page_modals):not([id]):not([style]):not([class^="content"])
 youtube.com##ytm-promoted-video-renderer
 b-m.facebook.com,iphone.facebook.com,m.facebook.com,touch.facebook.com###m_newsfeed_stream article[data-ft*='"ei\":']
 m.voyeurhit.com##.container > .section--normal[style*="margin-top: -15px"]
