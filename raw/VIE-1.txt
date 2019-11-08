@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 201911022253
-! Title: ABPVN List [mangak.info]
-! Last modified: 02 Nov 2019 22:53 UTC+7
+! Version: 201911080640
+! Title: ABPVN List [xemhdo.com]
+! Last modified: 08 Nov 2019 06:40 UTC+7
 ! Expires: 1 days (update frequency)
 ! Homepage: https://abpvn.com/
 !
@@ -13,6 +13,7 @@
 ! Email: support@abpvn.com
 ! Facebook Fanpage: https://www.facebook.com/abpvn.org
 ! Forum: https://forums.voz.vn/showthread.php?t=5246802
+
 ! ---------- Generic Blocking Rules ----------
 $popup,third-party,domain=appvn.com|khophimplus.com|megaurl.in|hamtruyen.com|hatde.tv
 $webrtc,domain=phim14.net|phimotv.net|appvn.com
@@ -98,6 +99,7 @@ $webrtc,domain=phim14.net|phimotv.net|appvn.com
 ||code.hoiquantinhoc.vn/$third-party,script
 ||cohet.org/images/nohuvip/
 ||congdongvip.com/forum.js
+||core.vnecdn.com^*_noblock_pc.js
 ||dailymotion.com/embed$subdocument,domain=blogtruyen.com|truyentranhtuan.com|truyensieuhay.com|webtruyen.com
 ||data.chiasenhac.com/banner/
 ||demkhuya.tv^*.gif$image
@@ -353,6 +355,7 @@ $webrtc,domain=phim14.net|phimotv.net|appvn.com
 ||cdn.videonow.ru^
 ||cdn9now.com^$script
 ||click.advertnative.com^
+||cpx.vnecdn.com^
 ||d2ho1n52p59mwv.cloudfront.net^
 ||d3t5ngjixpjdho.cloudfront.net^
 ||daezorwyn.xyz^
@@ -796,6 +799,8 @@ vkool.tv###overlay
 vkool.tv##.box-rating
 vndoc.com,download.com.vn##.adbox
 vndoc.com,quantrimang.com###ouibounce-modal
+vnexpress.net###banner_top
+vnexpress.net##.box_banner_ad_vne
 vnexpress.net##.box_sanpham
 vnexpress.net##.box_shopvne
 vnexpress.net##.box_sp
@@ -813,6 +818,9 @@ webtruyen.com###content > div[align="right"]
 webtruyen.com##.video-player
 www.fshare.vn##.bannerinfooter_ags
 xem.vn##div.photoListItem:nth-of-type(2)
+xemhdo.com###overlay
+xemhdo.com##.float-ck
+xemhdo.com##.float-top
 xemtivingon.com,yan.vn##[id^="Balloon_"]
 xemtiviso.com##.textqc
 xemtiviso.com##.textqcp
