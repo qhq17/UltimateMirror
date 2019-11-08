@@ -41,6 +41,7 @@
 @@||akamaihd.net/player/*/akamai/amp/prebid/*$script,domain=static.foxnews.com
 @@||global.fncstatic.com/$script,domain=video.foxnews.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=insider.foxnews.com
+@@||amazon-adsystem.com/aax2/apstag.js$script,domain=foxnews.com
 
 ! http://forums.lanik.us/viewtopic.php?f=64&t=17842&start=30#p59663
 ! To counter `statcounter.com` in Peter Lowe's, MVPS, Dan Pollock's and hpHosts
@@ -1814,9 +1815,6 @@ xtube.com#@#[style*="height: 330px;"]
 ! https://github.com/uBlockOrigin/uAssets/issues/4784#issuecomment-459778667
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=chicagotribune.com|mcall.com
 
-! https://github.com/NanoMeow/QuickReports/issues/589
-@@||oloadcdn.net/dl/*$xhr,domain=openload.co|openload.pw
-
 ! ranker.com breakage (prev / next)
 @@||cdn.zidedge.com/zp/ranker/$script,domain=ranker.com
 @@||petametrics.com^$script,domain=ranker.com
@@ -2244,9 +2242,11 @@ drstevenlin.com##html:style(overflow: auto !important;)
 tele5.de##.break-ads
 
 ! https://forums.lanik.us/viewtopic.php?p=147357#p147357
+! https://forums.lanik.us/viewtopic.php?p=150840#p150840
 ||exoclick.com^$document,badfilter
 ||exoclick.com^$badfilter
 @@||exoclick.com/privacy-and-cookies-policy/*$popup
+@@||api.exoclick.com^$domain=exoclick.com
 
 ! https://github.com/NanoMeow/QuickReports/issues/1185
 @@||googletagmanager.com/gtag/js$script,domain=hentaifox.com
@@ -2666,6 +2666,7 @@ techradar.com#@#a[href^="https://amazon."][href*="tag="]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/6257
 @@||game-cdn.poki.*^$frame,1p
+@@||poki-gdn.com^$frame
 
 ! https://github.com/uBlockOrigin/uAssets/issues/6262
 ||api.stopad.io/link/*/pixel$image,1p,redirect=1x1.gif
@@ -2828,11 +2829,6 @@ twitter.com#@#article[role="article"]:has-text(Promoted)
 ! https://www.reddit.com/r/uBlockOrigin/comments/diqia5/dailywirecom_articles_not_working/
 @@||outbrain.com^$script,domain=dailywire.com
 
-! https://forums.lanik.us/viewtopic.php?p=150510#p150510
-||affirm.com/api/v2/$3p,badfilter
-||affirm.com/api/v2/session/touch_track$xhr
-||affirm.com/api/v2/cookie_sent$xhr
-
 ! https://github.com/NanoMeow/QuickReports/issues/2064
 @@||s.yimg.com/ss/rapid3.js$script,domain=techcrunch.com
 
@@ -2894,3 +2890,38 @@ los40.com##.publi_luto_vertical
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3462#issuecomment-547684961
 @@||ipinfo.io/json$xhr,domain=futbollibre.online
+
+! https://forums.lanik.us/viewtopic.php?f=64&p=150848#p150848
+@@||safecurr.g2afse.com/click?pid=*&offer_id$popup
+
+! https://github.com/NanoMeow/QuickReports/issues/2191
+@@||brid.tv/player/build/plugins/prebid/$script,domain=realhousemoms.com
+
+! https://forums.lanik.us/viewtopic.php?p=150873#p150873
+||xxxbunker.com^$popup,third-party,badfilter
+
+! https://github.com/NanoMeow/QuickReports/issues/2199
+@@||tvtime.com/ga-assets/*$1p
+
+! https://www.reddit.com/r/uBlockOrigin/comments/drl79f/ublock_is_blocking_button_actions_on_page/
+@@||epaper.eenadu.net/Home/GetAds$xhr,1p
+@@||securepubads.g.doubleclick.net/tag/js/gpt.js$script,domain=epaper.eenadu.net
+@@||securepubads.g.doubleclick.net/gpt/pubads_impl$script,domain=epaper.eenadu.net
+
+! https://github.com/uBlockOrigin/uAssets/issues/6518
+@@||taboola.com^$script,domain=gizmodo.com.au|lifehacker.com.au
+
+! https://github.com/uBlockOrigin/uAssets/issues/6521
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=klix.ba
+
+! chess table broken https://2700chess.com/games/vachier-lagrave-wei-r1.1-hamburg-2019-11-03
+@@||2700chess.com/js/analysis.js$script,1p
+
+! https://github.com/NanoMeow/QuickReports/issues/2223
+||rjno1.com^$csp=script-src 'self' *;style-src,badfilter
+
+! https://github.com/uBlockOrigin/uAssets/issues/6523
+||assets.adobedtm.com/*/satelliteLib$script,redirect-rule=noopjs,domain=8world.com
+||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect-rule=noopjs,domain=8world.com
+||player.ooyala.com^$script,redirect-rule=noopjs,domain=8world.com
+||scorecardresearch.com/*/plugins/$script,redirect=noopjs,domain=8world.com
