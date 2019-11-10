@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: MWdTHl1FcnDZVyK4cI5jmQ
+! Checksum: TuWeuOGvpwoKIHJla5kt3A
 ! Title: AdGuard Mobile Ads filter
 ! Description: Filter for all known mobile ad networks. Useful for mobile devices.
-! Version: 2.0.8.49
-! TimeUpdated: 2019-11-05T15:02:30+03:00
+! Version: 2.0.8.59
+! TimeUpdated: 2019-11-10T10:30:10+03:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#mobile
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -174,6 +174,24 @@
 ||plugin.mobopay.baidu.com^
 ||mo.freeindoapp.com^
 !
+||ads-brand-postback.unityads.unity3d.com^
+||ads-game-configuration-master.ads.prd.ie.internal.unity3d.com^
+||cdn-creatives-akamai-prd.unityads.unity3d.com^
+||cdn-creatives-highwinds-prd.unityads.unity3d.com^
+||cdn-creatives-prd.unityads.unity3d.com^
+||cdn-store-icons-akamai-prd.unityads.unity3d.com^
+||cdn-store-icons-highwinds-prd.unityads.unity3d.com^
+||cdn-webview-pge.unityads.unity3d.com^
+||cdp.cloud.unity3d.com^
+||china-cdn3.unityads.unity3d.com^
+||data-optout-service.uca.cloud.unity3d.com^
+||dsp-endscreens.unityads.unity3d.com^
+||geocdn.unityads.unity3d.com^
+||nginx-auction-prd-gcp.adsx.unityads.unity3d.com^
+||pge.unityads.unity3d.com^
+||thind-gke-euw.prd.data.corp.unity3d.com^
+||unityads.unity3d.com^
+||gop1.co^
 ||m.wangliqin.top^$third-party
 ||m.yangzhenpeng.top^$third-party
 ||adpriv.nikkei.com^
@@ -1152,6 +1170,8 @@ westseattleblog.com#@#.header-ad
 !
 ! Extended CSS rules
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/43683
+tempo.co#$?#section#update.list > .block-box:has(> h2:contains(/^Baca Juga$/) + div:last-child > .adsbygoogle) { visibility: hidden!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/43312
 game735.com#?#div[style^="text-align: center;"]:has(> em:contains(ADVERTISEMENT))
 ! https://github.com/AdguardTeam/AdguardFilters/issues/42830
@@ -1476,6 +1496,9 @@ deviantart.com#$#div[class*="dp-ad-"] {height: 0!important; width: 0!important; 
 !
 !#####################
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/43809
+@@||google-analytics.com/analytics.js$domain=uniqlo.com
+@@||google-analytics.com/gtm/js^$domain=uniqlo.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/37935
 ! https://github.com/AdguardTeam/AdguardFilters/issues/38428
 @@||etimg.com/js_etsub/*minify-*.cms$domain=m.economictimes.com
@@ -1813,6 +1836,14 @@ m.news.de##.unisterAdsStart
 !+ NOT_PLATFORM(ios, ext_android_cb)
 ||mobile.donanimhaber.com/ads^
 !
+ampproject.org##.ads-flying_carpet
+m.tvzvezda.ru##.partners
+m.xuehongxs.com##div[style^="height: 90px;"]
+||wap*.m.xuehongxs.com$script
+evrimagaci.org##.eaads-mobile
+tempo.co###adsfooter
+tempo.co###Affinity_BTF_Tempo
+tempo.co##div[id^="inarticle"] > p[style="font-size:11px;font-weight:500;color: #c2c2c2 !important;"]
 tek.id###footer_sticky
 rakyatku.com##.ads_mobile_wrap
 hentai2read.com##div[data-type^="leaderboard"]
@@ -1821,7 +1852,7 @@ game735.com##.blockOverlay
 game735.com##.blockPage
 ukraina.ru##.article-share ~ div.heading
 ukraina.ru##amp-embed[type="smi2"]
-m.otosia.com##.ads-flying_carpet
+m-liputan6-com.cdn.ampproject.org,m.otosia.com##.ads-flying_carpet
 m.veporns.com##iframe[name^="spot_id_"]
 ||m.yeniakit.com.tr/anlasma
 tribunnews.com###anchorads
@@ -1859,7 +1890,7 @@ m.ariva.de##div[id^="ariva.de_m_320x150_"]
 m.rst.ua###rst-index-adb
 vesti.ua##body > div[style^="height: 300px; z-index: 65000; position: fixed;"]
 accuweather.com##.adhesion-ad-frame
-/*xmtl$domain=xhxswz.com
+/*xmtl$domain=xhxswz.com|biqubao.com
 novinky.cz##.ogm-advert-mobile-square
 reddit.com##.BannerAd__320x50
 tabletowo.pl##.amp_widget_below_the_header a[data-bid] > amp-img
@@ -3263,6 +3294,16 @@ livejournal.com##.mdspost-aside__item--banner
 !+ NOT_PLATFORM(ios, ext_safari, ext_android_cb)
 ||adj.st^
 !
+||hwstats.unity3d.com^
+||dsp-tracking.unityads.unity3d.com^
+||installtracker.unityads.unity3d.com^
+||issuetracker.unity3d.com^
+||tracking.adsx.unityads.unity3d.com^
+||tracking.prd.mz.internal.unity3d.com^
+||publisher-event.ads.prd.ie.internal.unity3d.com^
+||publisher-event.unityads.unity3d.com^
+||userreporting.cloud.unity3d.com^
+||analytics.cloud.unity3d.com^
 ||cdn-adn.rayjump.com^
 ||sg01.rayjump.com^
 ||cafe-log.myshoplus.com^
