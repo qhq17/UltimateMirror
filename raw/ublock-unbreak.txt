@@ -999,8 +999,6 @@ kotaku.com#@##dfp-ad-1
 ! https://www.reddit.com/r/uBlockOrigin/comments/9p41kw
 ||x.kinja-static.com/assets/packaged-js/OnionAM.$script,domain=avclub.com|clickhole.com|deadspin.com|earther.com|gizmodo.com|jalopnik.com|jezebel.com|kotaku.com|lifehacker.com|splinternews.com|theinventory.com|theonion.com|theroot.com|thetakeout.com
 
-
-
 ! https://forums.lanik.us/viewtopic.php?f=64&t=40826
 @@||d1xrtnyoeeet33.cloudfront.net/assets/js/lib/*$script,domain=calgaryherald.com|calgarysun.com|canoe.com|edmontonsun.com|financialpost.com|leaderpost.com|lfpress.com|montrealgazette.com|nationalpost.com|ottawacitizen.com|ottawasun.com|theprovince.com|thestarphoenix.com|torontosun.com|vancouversun.com|windsorstar.com|winnipegsun.com
 
@@ -1327,6 +1325,8 @@ nbcsports.com#@##nbcsports-leaderboard
 @@||a.4cdn.org/*.json$xmlhttprequest,domain=4chan.org
 ! https://github.com/uBlockOrigin/uAssets/issues/4740
 @@||google.com/recaptcha/*$xmlhttprequest,domain=boards.4chan.org
+! https://github.com/uBlockOrigin/uAssets/issues/6550
+@@||4cdn.org/adv/*$image,domain=4channel.org
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3516
 @@||cdn.cxense.com/cx.js$script,domain=mega.cl
@@ -2925,3 +2925,34 @@ los40.com##.publi_luto_vertical
 ||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect-rule=noopjs,domain=8world.com
 ||player.ooyala.com^$script,redirect-rule=noopjs,domain=8world.com
 ||scorecardresearch.com/*/plugins/$script,redirect=noopjs,domain=8world.com
+
+! broken site https://www.sky.com/watch/title/series/090664e1-402f-492b-ac52-595aed218812/britannia
+@@||analytics.global.sky.com/sky-tags/*/sky-tags-without-adobe.min.js$script,1p
+
+! https://github.com/uBlockOrigin/uAssets/issues/1826#issuecomment-551992939
+@@||google.com/recaptcha/*$csp
+
+! https://github.com/NanoMeow/QuickReports/issues/2255
+@@||sourcepoint.vice.com^$script,xhr,domain=video.vice.com
+
+! https://github.com/NanoMeow/QuickReports/issues/2253
+@@||mac-torrent-download.net^$generichide
+mac-torrent-download.net##[href^="//sundhopen.site/"]
+
+! https://github.com/NanoMeow/QuickReports/issues/2259
+@@||linuxandubuntu.com^$font,1p
+
+! https://github.com/uBlockOrigin/uAssets/issues/6537
+||doubleclick.net/gpt/pubads_impl_rendering_$script,domain=metacritic.com,important
+@@||doubleclick.net/gpt/pubads_impl$script,domain=metacritic.com
+@@||doubleclick.net/tag/js/gpt.js$script,domain=metacritic.com
+
+! https://github.com/uBlockOrigin/uAssets/issues/6539
+@@||pinpng.com^$css,1p
+@@||pngfind.com^$css,1p
+
+! https://www.reddit.com/r/uBlockOrigin/comments/dv8zb2/video_player_controls_blocked/
+||wcostream.com/inc/$script,badfilter
+
+! https://www.reddit.com/r/uBlockOrigin/comments/dvha50/having_issues_with_twitter_embeds_on_kotakucomau/
+@@||automate-prod.s3.amazonaws.com/minified_logic.js$xhr,domain=kotaku.com.au
