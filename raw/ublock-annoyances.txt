@@ -163,7 +163,9 @@ slain.io##+js(abort-current-inline-script.js, $, ablocked)
 slain.io###ads
 
 ! https://github.com/uBlockOrigin/uAssets/issues/933
+! https://github.com/easylist/EasyListHebrew/issues/332
 ||holyclock.com^$third-party
+||shomershabes.co.il^$3p
 
 ! https://github.com/jspenguin2017/uBlockProtector/issues/843
 ! https://github.com/jspenguin2017/uBlockProtector/issues/848
@@ -1095,10 +1097,6 @@ newsbook.pl##.unselectable:style(-moz-user-select: text !important; -ms-user-sel
 cmg24.pl,pogradajmy.pl##+js(abort-on-property-write.js, document.oncontextmenu)
 ligowiec.net,radio5.com.pl,romet.pl,sat-charts.eu,skionline.pl,trentino.pl,pcpobierz.pl##+js(remove-attr.js, oncontextmenu)
 roztoczanskipn.pl##+js(addEventListener-defuser.js, contextmenu)
-komp-net.eu##+js(set-constant.js, clickExplorer, trueFunc)
-!#if env_chromium
-||komp-net.eu^$csp=script-src 'self' *.googleapis.com
-!#endif
 malybelgrad.pl##+js(abort-on-property-read.js, document.oncontextmenu)
 
 ! right click savingshelpers com
@@ -2031,6 +2029,8 @@ aliexpress.com##.ui-mask
 ! https://github.com/uBlockOrigin/uAssets/issues/6184
 aliexpress.com##.next-overlay-wrapper:has(.newuser-container)
 aliexpress.com##body:style(overflow: auto !important; padding: 0 !important;)
+! https://github.com/uBlockOrigin/uAssets/issues/6551
+aliexpress.com##.ui-newuser-layer-dialog.ui-window-transition.ui-window-normal.ui-window
 
 ! https://github.com/uBlockOrigin/uAssets/issues/5284
 mlbshop.com##.modal, .modal-backdrop, .modal-wrapper
@@ -2820,3 +2820,36 @@ molineuxmix.co.uk##+js(acis, $, undefined)
 
 ! hulkstreams .com right click
 hulkstreams.com##+js(aeld, contextmenu)
+
+! https://github.com/uBlockOrigin/uAssets/issues/6520
+defenseone.com,govexec.com,nextgov.com,routefifty.com##.conversion-module, .conversion-module-bootstrap, .gemg-interstitial
+defenseone.com,govexec.com,nextgov.com,routefifty.com##body:style(overflow-x: auto !important; overflow-y: scroll !important; margin-right: 0 !important;)
+
+! https://github.com/uBlockOrigin/uAssets/issues/6522
+webtor.io#@#.adsbox
+
+! https://github.com/NanoMeow/QuickReports/issues/2232
+@@||starwars-universe.com/js/anti_adblock/advertisement.js$script,1p
+
+! https://github.com/NanoMeow/QuickReports/issues/2240
+foxnews.com##:xpath(//*[contains(text(),"blocking software")]/../../..)
+/google-funding-choices.js$script,domain=foxnews.com,important
+
+! smartpeople .id right click, select
+smartpeople.id##+js(ra, onkeydown|oncontextmenu|onselectstart|ondragstart)
+smartpeople.id##.post-body:style(-webkit-touch-callout: default !important; -webkit-user-select: text !important;-moz-user-select: text !important;-ms-user-select: text !important;user-select: text !important; -khtml-user-select: text !important; -o-user-select: text !important;)
+
+! nfltraderumors.co right click, select
+nfltraderumors.co##+js(aopw, ondragstart)
+nfltraderumors.co##body:style(-webkit-touch-callout: default !important; -webkit-user-select: text !important;-moz-user-select: text !important;-ms-user-select: text !important;user-select: text !important;)
+
+! blog.kwick.de right click select
+blog.kwick.de##+js(acis, jQuery, contextmenu)
+blog.kwick.de##+js(aopr, disableselect)
+blog.kwick.de##+js(aopr, document.onkeydown)
+
+! https://github.com/NanoMeow/QuickReports/issues/2257
+laptopmag.com##+js(aopr, _sp_.mms.startMsg)
+
+! https://github.com/NanoMeow/QuickReports/issues/2267
+@@||murha.info^$generichide
