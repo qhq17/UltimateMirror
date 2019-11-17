@@ -165,6 +165,7 @@ slain.io###ads
 ! https://github.com/uBlockOrigin/uAssets/issues/933
 ! https://github.com/easylist/EasyListHebrew/issues/332
 ||holyclock.com^$third-party
+||shomershabes.com^$3p
 ||shomershabes.co.il^$3p
 
 ! https://github.com/jspenguin2017/uBlockProtector/issues/843
@@ -2793,10 +2794,6 @@ lgbtqnation.com##+js(aopr, googletag)
 ! https://github.com/NanoMeow/QuickReports/issues/2123
 @@||beinsports.com^$generichide
 
-! https://github.com/NanoMeow/QuickReports/issues/2134
-@@||calciomercato.com^$generichide
-calciomercato.com##.adv
-
 ! https://github.com/NanoMeow/QuickReports/issues/2143
 @@||mizonatv.com^$generichide
 
@@ -2853,3 +2850,11 @@ laptopmag.com##+js(aopr, _sp_.mms.startMsg)
 
 ! https://github.com/NanoMeow/QuickReports/issues/2267
 @@||murha.info^$generichide
+
+! https://github.com/uBlockOrigin/uAssets/issues/6572
+windows101tricks.com##+js(aopr, __cmpGdprAppliesGlobally)
+windows101tricks.com##+js(set, better_ads_adblock, 0)
+
+! https://github.com/uBlockOrigin/uAssets/issues/6575
+virpe.com##+js(aopr, document.oncontextmenu)
+virpe.com##+js(ra, onselectstart)
