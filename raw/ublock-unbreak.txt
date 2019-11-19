@@ -188,9 +188,6 @@
 ||taboola.com^$third-party
 ||api.taboola.com^
 
-! https://github.com/gorhill/uBlock/issues/1296
-@@||odb.outbrain.com/crossdomain.xml$object-subrequest
-
 ! https://twitter.com/SeanHood/status/692387495993024512
 ! To counter `207.net` in Peter Lowe's, Disconnect‎'s Malvertising filter list
 @@||ticketmaster.122.2o7.net^$image,domain=ticketweb.co.uk
@@ -816,7 +813,9 @@ arduino.cc#@#.addthis_toolbox
 ||frog.wix.com/da-client$image,redirect=1x1-transparent.gif,domain=deviantart.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1704#issuecomment-372543282
+! https://forums.lanik.us/viewtopic.php?f=64&t=43860&p=151105#p151105
 @@||bostonglobe.com/js/*/chartbeat.js,dist/*$script,first-party
+@@||pages.bostonglobe.com/login/js/lib/AppMeasurement.js$script,1p
 
 ! https://forums.lanik.us/viewtopic.php?p=133754#p133754
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js?$script,domain=dugout.com
@@ -1311,6 +1310,8 @@ archive.org#@#.oasad
 @@||adobedtm.com^*/satellitelib-$script,domain=fantasy.nfl.com
 @@||d1z2jf7jlzjs58.cloudfront.net/p.js$script,domain=nfl.com
 @@||static.parsely.com/p.js$script,domain=nfl.com
+! fix nflgamepass.com video breakage
+@@||googletagmanager.com/gtm.js$script,domain=nflgamepass.com
 
 ! https://forums.lanik.us/viewtopic.php?f=64&t=41670
 nbcsports.com#@##nbcsports-leaderboard
@@ -1935,6 +1936,7 @@ nypost.com,pagesix.com#@#.recirc
 @@/https?:\/\/.*[=|&|%|#|+].*/$popup,domain=animeflv.net|jkanime.net
 |https://$third-party,script,domain=animeflv.net|descargasnsn.com|jkanime.net,badfilter
 |https://$third-party,xmlhttprequest,domain=animeflv.net|descargasnsn.com|jkanime.net,badfilter
+*$third-party,script,domain=animeflv.net,badfilter
 
 ! https://forums.lanik.us/viewtopic.php?f=64&t=42683
 thewirecutter.com#@#.callout
@@ -2956,3 +2958,41 @@ mac-torrent-download.net##[href^="//sundhopen.site/"]
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/dvha50/having_issues_with_twitter_embeds_on_kotakucomau/
 @@||automate-prod.s3.amazonaws.com/minified_logic.js$xhr,domain=kotaku.com.au
+
+! https://github.com/NanoMeow/QuickReports/issues/2274
+@@||googletagservices.com/tag/js/gpt.js$script,domain=phonearena.com
+
+! https://forums.lanik.us/viewtopic.php?p=151140#p151140
+/^https?:\/\/.*[&|%|+|=].*/$popup,domain=0123movies.com|1337x.to|1movies.is|9anime.vip|a-o.ninja|adsrt.com|ahlamtv.com|ahoypirate.in|akvideo.stream|allmyvideos.net|ancensored.com|animeflv.net|avgle.com|bayception.pw|bittorrent.am|cherry.fruithosts.net|clipconverter.cc|cruzing.xyz|dospelis.com|dropapk.com|egoallstars.com|emule-island.co|escdn.co|estream.to|extreme-board.com|fflares.com|ffmovies.ru|fileflares.com|fileone.tv|flash-x.tv|flashsx.tv|flashx.cc|flashx.co|flashx.me|flashx.run|flashx.sx|flashx.to|flashx.tv|flashx.ws|flashx1.tv|fmovies.taxi|fmovies.to|fruithosted.net|gelbooru.com|gogoanime.io|gomovieshub.is|grammarist.com|hdvid.life|hdvid.tv|hdvid.xyz|hqq.tv|imagebam.com|imagefruit.com|imagerar.com|imgadult.com|imgbox.com|imgdew.pw|imgdrive.net|imgmaze.pw|imgshots.com|imgspice.com|imgtaxi.com|imgtown.pw|imgview.pw|imgwallet.com|indoxxi.tv|jkanime.net|kissanime.ru|kissasian.ch|kissasian.sh|kisscartoon.ac|limetorrents.info|m4ufree.com|m4ufree.tv|masterani.me|megaup.net|monova.org|monova.to|movie4k.is|movies123.xyz|moviesweb.info|mp3indirdur.mobi|mp4upload.com|msn.com|mstream.cloud|myreadingmanga.info|mywebtv.info|newser.com|noobnoob.rocks|nosteam.ro|nosteamgames.ro|nowvideo.club|nowvideo.pw|oload.club|oload.download|oload.fun|oload.icu|oload.life|oload.site|oload.stream|oload.win|oload.xyz|oloadcdn.net|olpair.com|olympicstreams.me|onhax.me|onlinevideoconverter.com|onvid.xyz|openload.co|openload.pw|otakustream.tv|ourl.io|piratebay.tel|piratebay.town|piratebayblocked.com|pirateproxy.sh|playercdn.net|pornparadise.org|powvideo.net|proxyindia.net|putlockers.fm|putlockers.mn|putlockertv.to|rarbg.to|rarbgaccess.org|rarbgmirror.com|rarbgmirror.org|rarbgmirror.xyz|rarbgmirrored.org|rarbgproxy.org|rarbgprx.org|rarbgunblock.org|readcomiconline.to|repelis.net|rule34hentai.net|seehd.pl|sendvid.com|sexuria.com|solarmoviesc.com|sportp2p.com|stream2watch.org|streamango.com|streamcherry.com|streamplay.to|superbay.link|swatchseries.to|telepisodes.co|thefmovies.me|thepiratebay.kiwi|thepiratebay.org|thepiratebay10.org|topeuropix.net|torrentdownload.ch|torrentdownloads.me|torrentfunk.com|torrentfunk2.com|torrentz.to|ukpirate.org|unblocker.cc|unblocktheship.org|uploadproper.com|userscloud.com|vev.io|vidlox.me|vidlox.tv|vidotodo.com|vidoza.net|vidtoro.com|vidup.io|vidz7.com|vidzi.tv|vipbox.live|vipleague.pw|vipstand.se|watchonlinemovies.com.pk|ymovies.tv|youwatch.org,badfilter
+
+! https://github.com/uBlockOrigin/uAssets/issues/6563
+*$script,domain=ancensored.com,badfilter
+
+! https://www.reddit.com/r/uBlockOrigin/comments/dwmk3v/how_to_seemingly_unblock_httpmactorrentdownloadnet/
+|https://$3p,script,domain=mac-torrent-download.net,badfilter
+|https://$3p,stylesheet,domain=mac-torrent-download.net,badfilter
+
+! https://forums.lanik.us/viewtopic.php?f=64&t=43866
+@@||certona.net/*/canadiantire.ca/scripts/resonance.js$script,domain=canadiantire.ca
+
+! https://github.com/uBlockOrigin/uAssets/issues/6570
+|https://$script,3p,domain=zone-anime.net,badfilter
+*.gif$domain=www.zone-anime.net,image
+zone-anime.net##.code-block
+
+! https://github.com/NanoMeow/QuickReports/issues/1009
+|https://$script,3p,domain=nowvideo.club,badfilter
+
+! https://github.com/NanoMeow/QuickReports/issues/232#issuecomment-555086451
+@@||pcgamer.com^$shide
+
+! https://forums.lanik.us/viewtopic.php?f=64&t=43885
+@@||spankmasters.com/EmbedPlayer.aspx$frame
+
+! https://forums.lanik.us/viewtopic.php?f=64&t=43856#p151086
+||play-asia.com^$image,subdocument,third-party,badfilter
+||play-asia.com/*banner*$subdocument,third-party
+||play-asia.com^$image,third-party
+
+! https://github.com/uBlockOrigin/uAssets/issues/1144#issuecomment-555724924
+*$script,3p,domain=al.ly,badfilter
