@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: Gpl8TMY21/TAhiQajWjJjg
+! Checksum: EqqWpkqErK/WRaXXapiPmA
 ! Title: AdGuard Tracking Protection filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.10.25
-! TimeUpdated: 2019-11-10T10:31:05+03:00
+! Version: 2.0.10.47
+! TimeUpdated: 2019-11-20T20:31:09+03:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#privacy
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -150,7 +150,26 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ! ||e.crashlytics.com^
 ! ||settings.crashlytics.com^
 !
+||zeotap.com^$third-party
+||engagetosell.com^$third-party
+||edw.edmunds.com^$third-party
+||z.opmnstr.com^
+||a.quora.com^
+||alocdn.com^$third-party
+||fuelx.com^$third-party
+||fuel451.com^$third-party
+||pbbl.co^$third-party
+||friendbuy.com^$third-party
+||tag.getdrip.com^$third-party
+||dojomojo.ninja^$third-party
+||sc-static.net^$third-party
+||vyg.mobi^$third-party
+||ya-counter.ru^$third-party
+||tracker.convead.io^$third-party
+||trafficscanner.pl^$third-party
+||stat.livesportbar.net^
 ||analytics.datahc.com^
+||collect.blishtech.co^$third-party
 ||s99i.org^$third-party
 ||g.vev.io^$third-party
 ||rob.megaopen.ru^$third-party
@@ -3468,6 +3487,12 @@ nethunt.com/api/v1/track/email/$image
 !+ NOT_PLATFORM(ios, ext_safari, ext_android_cb)
 ||tags.news.com.au^$~script
 !
+||d2dq2ahtl5zl1z.cloudfront.net^
+||d18p8z0ptb8qab.cloudfront.net^
+||pixel.welt.de^
+||pixel.trackverify.com^$third-party
+||cdn.contalyze.com^$third-party
+||log.news.zing.vn^
 ||px.gfycat.com^
 ||vhsrwd.aip24.pl^
 ||analytics.dpd.com^
@@ -3949,7 +3974,6 @@ nethunt.com/api/v1/track/email/$image
 ||stbt.coupons.com^
 ||stcollection.moneysupermarket.com^
 ||t-ak.hulu.com^
-||t.appsflyer.com^
 ||t.blinkist.com^
 ||t.cinemablend.com^
 ||t.delfi.
@@ -4881,6 +4905,8 @@ charlestownwyllie.oaklawnnonantum.com^
 ! dynaTrace Monitor
 /ruxitagentjs_
 !
+/partner-analytics/*
+/friendbuy.min.js
 /pixel/?block_id=*&hash=*&host=
 /VisitorIdentification.js
 .demandbase.*.js
@@ -5040,8 +5066,6 @@ charlestownwyllie.oaklawnnonantum.com^
 /player_counter.ashx?
 /plista.js
 /sayac.html
-/sbbi/?sbbpg=sbbShell&
-/sbbi/?sbbpg=utMedia&
 /shareCounts.
 /shinystat.
 /shinystat_
@@ -5134,6 +5158,14 @@ _tracking.php?b=
 .demdex.net/id^$empty,important
 ||omtrdc.net/id^$empty,important
 !
+||cloudfront.net/analytics.js
+||affirm.com/api/*/cookie_sent
+||app.opmnstr.com/v2/geolocate/
+||cdn.livechatinc.com/tracking.js
+||my.kapook.com/asset/js/track.js
+||mrtg.emailpartners.net^$image,third-party
+||paypalobjects.com/*/pixel.gif
+||usenetoffer.download/metrika^
 ||iboysoft.com/js/track.js
 ||get.geojs.io^$domain=pirate-bay.net
 ||beam.remp.nv.ua^
@@ -5601,7 +5633,6 @@ abp?type=js&session$domain=prosieben.de|sat1.de|kabeleins.de|sixx.de|prosiebenma
 ||alibaba.com/js/beacon_
 ||amazonaws.com/?wsid=
 ||api.apisolutions.work/track/$third-party
-||api.branch.io/*/event
 ||api.aio.media/stat?
 ||yandex.ru/*/watch.js$domain=~mp3poisk.ru|~yandex.by|~yandex.com|~yandex.kz|~yandex.ru|~yandex.ua
 ||yandeg.ru/count$third-party
@@ -5990,8 +6021,8 @@ computerbild.de##.articleAdditional > .mehrthema
 ||xtraffstat.com/js/ktr.js
 ||zapcdn.space/zapret.js
 ||patreon.com/api/tracking^
-/index/ping^$domain=xterca.net|gloyah.net|uclaut.net|atabencot.net|thouth.net|cinebo.net|baymaleti.net|briskgram.net|ad.bdcraft.net|swiftviz.net|ad.sapixmedia.com|activetect.net|brightvar.bid|clearload.bid|restorecosm.bid|bee.anime-loads.org|threadsphere.bid|queuecosm.bid|yoitect.com|skamaker.com|adf.ly|ay.gy|cracksurl.com|tinyium.com|skamason.com|redir2.auto-login-xxx.com|dl.underclassblog.com|special.picons.eu|quainator.com|yoalizer.com|kibuilder.com|kimechanic.com|zo.ee|viahold.com|tinyical.com|mmoity.com|pintient.com|riffhold.com|picocurl.com|bitigee.com|picocurl.com|atomcurve.com|atominik.com|battleate.com|kaitect.com|simizer.com|coginator.com|cogismith.com|twineer.com|yobuilder.com|go.awanpc.me|viwright.com|yabuilder.com|yamechanic.com|kializer.com|yoineer.com
-/callback/*$domain=xterca.net|gloyah.net|uclaut.net|atabencot.net|thouth.net|cinebo.net|baymaleti.net|briskgram.net|ad.bdcraft.net|swiftviz.net|ad.sapixmedia.com|activetect.net|brightvar.bid|clearload.bid|restorecosm.bid|bee.anime-loads.org|threadsphere.bid|queuecosm.bid|yoitect.com|skamaker.com|adf.ly|ay.gy|cracksurl.com|tinyium.com|skamason.com|redir2.auto-login-xxx.com|dl.underclassblog.com|special.picons.eu|quainator.com|yoalizer.com|kibuilder.com|kimechanic.com|zo.ee|viahold.com|tinyical.com|mmoity.com|pintient.com|riffhold.com|picocurl.com|bitigee.com|picocurl.com|atomcurve.com|atominik.com|battleate.com|kaitect.com|simizer.com|coginator.com|cogismith.com|twineer.com|yobuilder.com|go.awanpc.me|viwright.com|yabuilder.com|yamechanic.com|kializer.com|yoineer.com
+/index/ping^$domain=cowner.net|xterca.net|gloyah.net|uclaut.net|atabencot.net|thouth.net|cinebo.net|baymaleti.net|briskgram.net|ad.bdcraft.net|swiftviz.net|ad.sapixmedia.com|activetect.net|brightvar.bid|clearload.bid|restorecosm.bid|bee.anime-loads.org|threadsphere.bid|queuecosm.bid|yoitect.com|skamaker.com|adf.ly|ay.gy|cracksurl.com|tinyium.com|skamason.com|redir2.auto-login-xxx.com|dl.underclassblog.com|special.picons.eu|quainator.com|yoalizer.com|kibuilder.com|kimechanic.com|zo.ee|viahold.com|tinyical.com|mmoity.com|pintient.com|riffhold.com|picocurl.com|bitigee.com|picocurl.com|atomcurve.com|atominik.com|battleate.com|kaitect.com|simizer.com|coginator.com|cogismith.com|twineer.com|yobuilder.com|go.awanpc.me|viwright.com|yabuilder.com|yamechanic.com|kializer.com|yoineer.com
+/callback/*$domain=cowner.net|xterca.net|gloyah.net|uclaut.net|atabencot.net|thouth.net|cinebo.net|baymaleti.net|briskgram.net|ad.bdcraft.net|swiftviz.net|ad.sapixmedia.com|activetect.net|brightvar.bid|clearload.bid|restorecosm.bid|bee.anime-loads.org|threadsphere.bid|queuecosm.bid|yoitect.com|skamaker.com|adf.ly|ay.gy|cracksurl.com|tinyium.com|skamason.com|redir2.auto-login-xxx.com|dl.underclassblog.com|special.picons.eu|quainator.com|yoalizer.com|kibuilder.com|kimechanic.com|zo.ee|viahold.com|tinyical.com|mmoity.com|pintient.com|riffhold.com|picocurl.com|bitigee.com|picocurl.com|atomcurve.com|atominik.com|battleate.com|kaitect.com|simizer.com|coginator.com|cogismith.com|twineer.com|yobuilder.com|go.awanpc.me|viwright.com|yabuilder.com|yamechanic.com|kializer.com|yoineer.com
 ||tracking-opi.fonpit.de/tracking/
 ||cdn3.net/pixe/
 ||dig.ultimedia.com^
@@ -6223,7 +6254,6 @@ dreamprogs.net##td[width="88"][height="31"]
 ||aol.com/ping?
 ||aol.com/track/
 ||api.b2c.com/api/x.gif
-||api.branch.io/v1/has-app/*?browser_fingerprint_id=
 ||api.crossengage.io/api/*/track^
 ||api.giga.de/*tracking
 ||api.parsely.com/*/analytics/
@@ -6741,7 +6771,6 @@ link.gmapp*.net$image
 ||bing.com/fd/ls/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/19165
 !
-!
 !-------------------------------------------------------------------------------!
 !-------------- Cookies --------------------------------------------------------!
 !-------------------------------------------------------------------------------!
@@ -6758,11 +6787,462 @@ link.gmapp*.net$image
 !------------------------------
 !---- Generic rules -----------
 !------------------------------
+!-------------------------------------------------------------------------------!
+!-------------- Mobile analytics  ----------------------------------------------!
+!-------------------------------------------------------------------------------!
 !
+! Section contains rules for mobile analytics and spyware
+!
+! Do not block pixapi.net. It causes issues
+!
+! https://github.com/AdguardTeam/AdguardForAndroid/issues/249
+||adeventtracker.spotify.com^
+||do-not-tracker.org^
+||eviltracker.net^
+||spotify.com/ads/
+||trackersimulator.org^
+!
+! https://github.com/AdguardTeam/AdguardFilters/issues/31290
+! https://github.com/AdguardTeam/AdguardFilters/issues/7099
+! https://github.com/AdguardTeam/AdguardForAndroid/issues/908
+!
+! For apps
+||analytics.kidoz.net^
+||tracker.mtrtb.com^
+||tracking.ws.eurosport.com^
+||tracker.rqmob.com^
+||logconfig.polarisoffice.com
+||analysis.polarisoffice.com
+||stream.shuzilm.cn/report
+||daa.shuzilm.cn/report
+||fraudmetrix.cn^
+||plbslog.umeng.com^
+||analysys.cn^
+||logs.supersonic.com^
+||graph.facebook.com/*/activities?access_token=&event=
+||graph.facebook.com/*?fields=supports_implicit_sdk_logging
+!
+! Appsflyer
+!
+||api.appsflyer.com^
+||register.appsflyer.com^
+||events.appsflyer.com^
+||stats.appsflyer.com^
+||t.appsflyer.com^
+||track.appsflyer.com^
+! Relap - avoid breaking their website on desktop
+! but make sure it's blocked in apps
+!+ NOT_PLATFORM(ios, ext_safari, ext_android_cb)
+||adj.st^
+!
+||hwstats.unity3d.com^
+||dsp-tracking.unityads.unity3d.com^
+||installtracker.unityads.unity3d.com^
+||issuetracker.unity3d.com^
+||tracking.adsx.unityads.unity3d.com^
+||tracking.prd.mz.internal.unity3d.com^
+||publisher-event.ads.prd.ie.internal.unity3d.com^
+||publisher-event.unityads.unity3d.com^
+||userreporting.cloud.unity3d.com^
+||analytics.cloud.unity3d.com^
+||cdn-adn.rayjump.com^
+||sg01.rayjump.com^
+||cafe-log.myshoplus.com^
+||de01.rayjump.com^
+||stat.m.360.cn^
+||stats-a.maxthon.com^
+||pgapi.ksmobile.com^
+||helpgrid1.ksmobile.com^
+||gcm.ksmobile.net^
+||gameanalisys.appcpi.net^
+||adsaccount.appcpi.net^
+||adtrack.appcpi.net^
+||remain.appcpi.net^
+||appmetr.com^
+||track.tenjin.io^
+||stats.abbi.io^
+||api.goodbarber.net/statsapi/
+||tr.snapchat.com^
+||tracking.aatkit.com^
+||reporting.aatkit.com^
+||geo.go2s.co^
+||log.go2s.co^
+||batsavcdn.ksmobile.net^
+||cfg.cml.ksmobile.com^
+||tealand.cmcm.com^
+||geoinfo.i2w.io^
+||cmplay.did.ijinshan.com^
+||tracking.i2w.io^
+||google-analytics.com^$domain=avgle.com
+||detect.rayjump.com^
+||26f396e0b71780f057be4d4af8ebe55b.com^
+||a.appbaqend.com^
+||ue.flipboard.com^
+||helpshift.com/api/lib/2/events/
+||mobileapptracking.com^
+||mobile.bigfishgames.com/telemetry/
+||ilyonanalytics.herokuapp.com^
+||gcm.ksmobile.com^
+||ninja.onap.io^
+||api.splkmobile.com^
+||sdk.stats-locations.com^
+||config.safedk.com^
+||api.safedk.com^
+||elephantdata.net^
+||sdks.stats-locations.com^
+||imp.startappservice.com^
+||tracking.intl.miui.com^
+||storeconfig.mistat.intl.xiaomi.com^
+||ploy.batmobi.net^
+||an.batmobi.net^
+||ustat.batmobi.net^
+||analytics.any.do^
+||zeus.ad.intl.xiaomi.com^
+||api.ad.intl.xiaomi.com^
+||sdkconfig.ad.intl.xiaomi.com^
+||alog.umeng.co^
+||oc.umeng.co^
+||m.vpadn.com^
+||parse-ppom-prod.herokuapp.com/parse/events^
+||api.instabug.com^
+||sts.batmobi.net^
+||api.facebook.com/method/logging.clientevent
+||pps-log.op-mobile.opera.com^
+||event.allnews.uodoo.com^
+||tktracker.aotter.net^
+||tkrecorder.aotter.net^
+||android.bugly.qq.com^
+||astat.bugly.qq.com^
+||ios.bugly.qq.com^
+||fdplttrk.com^
+||tracking.trnox.com^
+||rts.mobula.sdk.duapps.com^
+||aftonbladetnya.sc.omtrdc.net^
+||omni-ads.omni.news^
+||npario-inc.net^
+||engine.mobileapptracking.com^
+||open.oneplus.net^
+||wzrkt.com^
+||analytics-events.inshorts.com^
+||e-ssl.apsalar.com^
+||collector-axa.cloud.ca.com^
+||track.adform.net^
+||analytics.ff.avast.com^
+||api.miui.security.xiaomi.com^
+||metok.sys.miui.com^
+||sync.adotmob.com^
+||logger.cloudmobi.net^
+||tracker.adotmob.com^
+||dmx.sync.yume.com/tracker/
+||measuread.com^
+||global.cmcs.service.amazonsilk.com/metrics
+||analytics-tracker.thescore.com^
+||app.roximity.com^
+||dc.webtrends.com^
+||report*.appmetrica.webvisor.com^
+||api.oneaudience.com^
+||api.gameofwhales.com^
+||geoplugin.net^
+||d.applvn.com^
+||rt.applvn.com^
+||sdklogs.avocarrot.com^
+||ip-api.com^$domain=~ip-api.com
+||apiv2.moengage.com^
+||rt.applovin.com^
+||track.uc.cn^
+||uc.ucweb.com^
+||puds.ucweb.com^
+||patriot.cs.pp.cn^
+||amdc.m.taobao.com^
+||sdk-orion.appboy.com^
+||api.elysium.opera.com/api/elysium/log_session_events
+||api.elysium.opera.com/api/elysium/log_session_info
+||pippio.com^
+||io.narrative.io^
+||loadus.exelator.com^
+||tracking.viewster.com^
+||logcollector.viewster.com^
+||api.mixpanel.com/track
+||api.mixpanel.com/engage
+||decide.mixpanel.com^
+||api.segment.io/v1/
+||applog.uc.cn^
+||dispatcher.upmc.uc.cn^
+||gj.applog.uc.cn^
+||gjapplog.uc.cn^
+||mazu.sec.miui.com^
+||shenghuo.xiaomi.com^
+||globalapi.ad.xiaomi.com^
+||api.ad.xiaomi.com^
+||a.bitmango.com^
+||bitmango.com/log
+||tracking.directservices.it^
+||vortex.data.microsoft.com^
+||onedrive-collection.device.mobileengagement.windows.net^
+||metrics.timewarnercable.com^
+||flurry.agentportal-*.yahoodns.net^
+||amptrack-dailymail-co-uk.cdn.ampproject.org^
+||metrics-cbslocal-com.cdn.ampproject.org^
+||startappservice.com/tracking/
+||counter.hdvb.info^
+||tracking-server-prod-1.zenmxapps.com^
+||config.uca.cloud.unity3d.com^
+||api.uca.cloud.unity3d.com^
+||resolver.msg.xiaomi.net^
+||resolver.gslb.mi-idc.com^
+||o2o.api.xiaomi.com^
+||auth.be.sec.miui.com^
+||thm.market.xiaomi.com/thm/stats
+||geoip.ifunny.co^
+||alogs.umeng.com^
+||alogs.umengcloud.com^
+||stats.umsns.com^
+||device-metrics-*.amazon.com^
+||flurry.agentportal.*.yahoodns.net^
+||analytics.rayjump.com^
+||iapp-cp.nuggad.net^
+||2o7.net^
+||4seeresults.com^
+||abcd.mdc.akamaized.net/materials/index/?country=
+||abtest.mistat.xiaomi.com^
+||ad-analytics-bootstrap.metaps.com^
+||adash.m.taobao.com/rest/sur?ak=
+||adfuture.cn^
+||adserver.snapads.com^
+||adsunflower.com^
+||adv.sec.miui.com^
+||advmob.cn^
+||alog.umeng.com^
+||alog.umengcloud.com^
+||amp-error-reporting.appspot.com^
+||analytics-server.gimbal.com^
+||analytics.ad.daum.net^
+||analytics.liftoff.io^
+||analytics.mobile.yandex.net^
+||analytics.mopub.com^
+||analytics.query.yahoo.com^
+||analyzer.omniata.com^
+||andmlb.kshwtj.com^
+||api-analytics-bootstrap.metaps.com^
+||api-analytics.metaps.com^
+||api.amplitude.com^
+||api.analytics.omgpop.com^
+||api.appsee.com^
+||api.apptentive.com^
+||api.branch.io^
+||api.crittercism.com^
+||rubick.gameanalytics.com^
+||api.gameanalytics.com^
+||api.gimbal.com^
+||api.sec.miui.com^
+||api.taplytics.com^
+||appmetrica.yandex.net^
+||appmetrica.yandex.com^
+||ar.umeng.com^
+||beacon.carfax.com^
+||beacon.qq.com^
+||beacon.shazam.com^
+||beha.ksmobile.com^
+||bidder.mdspinc.com^
+||bmbs.baidu.com/reportinfo.php
+||brahe.apptimize.com^
+||c.bigmir.net^
+||carfax.sc.omtrdc.net^
+||cb.ksmobile.com^
+||cedexis-radar.net^
+||cedexis.com^
+||click.webeyemob.com/*/ad/click?subsite_id=
+||clientmetrics-augmentum.kik.com^
+||clientmetrics.kik.com^
+||clktrk.display.io^
+||collector.brandify.com^
+||config2.mparticle.com^
+||counter.kingsoft.com^
+||crasheye.cn^
+||crittercism.com/api/
+||crwdcntrl.net^
+||data.mistat.*.xiaomi.com^
+||data.mistat.xiaomi.com^
+||data.sec.miui.com^
+||dc.services.visualstudio.com/v2/track
+||demdex.net^
+||dsg.sc.omtrdc.net^
+||ep.xone.com^
+||etl.xlmc.sandai.net^
+||events.lbesecapi.com^
+||facebook.com/rtb_impression/?tr=
+||geoip.fotoable.net^
+||google-analytics.com^
+||googleadapis.l.google.com^
+||graph.instagram.com/logging_client_events
+||iam-agof-app.irquest.com^
+||imp.apprevolve.com^
+||inst.platform.bing.com/api/log
+||installtracker.com^
+||invenio_tracking_*.sgnapps.com^
+||krxd.net^
+||lepodownload.mediatek.com^
+||lhzbdvm.com^
+||log.droid4x.cn^
+||log.umsns.com^
+||logger.ntracecloud.com^
+||logupdate.avlyun.sec.miui.com^
+||lp4.io^
+||m.vk.com/counters.php
+||m.xiangce.baidu.com/mobileapp/motu-*?guid=
+||metrics.adflake.com^
+||metrics.bestbuy.com^
+||metrics.macys.net^
+||metrics.sdkbox.com^
+||mixpanel.com/track
+||mlb.did.ijinshan.com^
+||mobile-collector.newrelic.com^
+||mobile-global.baidu.com/mbrowser/stat/
+||mobileanalytics.*.amazonaws.com^
+||mobilelog.upqzfile.com^
+||ms.cmcm.com^
+||mtlog.droid4x.cn^
+||nativesdks.mparticle.com^
+||nlog.droid4x.cn^
+||nrc.tapas.net^
+||oc.umeng.com^
+||online-metrix.net^
+||openstat.net^
+||ping.taplytics.com^
+||ping.xlmc.sandai.net^
+||pingma.qq.com/mstat/
+||pingma.qq.com^
+||pipe.aria.microsoft.com/Collector/
+||play.googleapis.com/log|
+||play.googleapis.com/play/log^
+||prugskh.com^
+||prugskh.net^
+||quantcount.com^
+||r.browser.miui.com^
+||rc.dxsvr.com^
+||regist.fotoable.net/regist/
+||report.appmetrica.yandex.net^
+||rlog-api.under9.co^
+||rlog.9gag.com^
+||sc-analytics.appspot.com^
+||sdk-api.yozio.com/?os
+||sdk.appbrain.com/api/
+||sdkconfig.ad.xiaomi.com^
+||ssl-google-analytics.l.google.com^
+||sstats.economist.com/b/ss/econdarwinproduction/
+||stat.duokanbox.com^
+||statistics.videofarm.daum.net^
+||stats.popcap.com^
+||stats.unity3d.com^
+||tapjoy.com^
+||tapjoy.net^
+||taurus.iad.appboy.com^
+||tknet.rayjump.com^
+||tns.simba.taobao.com^
+||track.pingstart.com^
+||tracker-api.my.com^
+||tracking.lenzmx.com^
+||tracking.miui.com^
+||trk.pinterest.com^
+||tu.dxcnd.cn^
+||tumblr.com/services/cslog
+||tunein.adswizz.com^
+||ulink.adjust.com^
+||umeng.com/app_logs
+||upalytics.com^
+||ups.ksmobile.net^
+||ws.ksmobile.net^
+||www-google-analytics.l.google.com^
+||xiti.com^
+||xlmc.sec.miui.com^
+||yadro.ru^
+||yikyakapi.net/api/logEvent?
+||ymtracking.com^
+||zdbb.net^
+! UC Browser
+||alog.umeng.co/app_logs^
+||localytics.com^
+||upoll.umengcloud.com^
+||utop.umengcloud.com^
+! KingRoot
+||analy.qq.com^
+||appsupport.qq.com/cgi-bin/appstage/mstats_batch_report
+||monitor.uu.qq.com/analytics/
+! Google News
+||play.google.com/newsstand/api/*/people/me/analytics^
+!-------------------------------------------------------------------------------!
+!-------------- Mobile analytics exceptions  -----------------------------------!
+!-------------------------------------------------------------------------------!
+!
+! Exception rules that fix broken mobile apps and mobile websites
+!
+!
+! https://github.com/AdguardTeam/AdguardFilters/issues/43809
+@@||google-analytics.com/analytics.js$domain=uniqlo.com
+@@||google-analytics.com/gtm/js^$domain=uniqlo.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/37935
+! https://github.com/AdguardTeam/AdguardFilters/issues/35634
+@@||google-analytics.com/analytics.js$domain=mediamarkt.nl
+@@||googletagmanager.com/gtm.js$domain=mediamarkt.nl
+@@||google-analytics.com/plugins/ua/ec.js$domain=mediamarkt.nl
+! https://forum.adguard.com/index.php?threads/www-dailymotion-com.31223
+! https://github.com/AdguardTeam/AdguardFilters/issues/25363
+! https://github.com/AdguardTeam/AdguardFilters/issues/43046
+@@||redirect.appmetrica.yandex.net^
+@@||redirect.appmetrica.yandex.com^
+! https://github.com/AdguardTeam/AdguardFilters/issues/23294
+@@||79423.analytics.edgekey.net^|
+@@||79423.analytics.edgekey.net/html5/akamaihtml5-min.js$domain=nhk.or.jp
+! https://github.com/AdguardTeam/AdguardFilters/issues/22628
+! https://github.com/AdguardTeam/AdguardFilters/issues/22498
+! https://github.com/AdguardTeam/AdguardFilters/issues/24331
+! Will work for the YT app only
+@@||s.youtube.com^|
+! https://github.com/AdguardTeam/AdguardFilters/issues/22724
+! https://github.com/AdguardTeam/AdguardFilters/issues/21412
+@@||collect.igodigital.com^$domain=m.harborfreight.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/19399
+@@||google-analytics.com/analytics.js$domain=brownbagcoffee.co.kr
+@@||google-analytics.com/gtm/js^$domain=brownbagcoffee.co.kr
+! https://forum.adguard.com/index.php?threads/28222/
+! https://github.com/AdguardTeam/AdguardFilters/issues/15495
+@@||relap.io/api/*/similar_pages_jsonp.js$domain=adme.ru
+! https://github.com/AdguardTeam/AdguardFilters/issues/2263
+@@||relap.io/api/*/head.js?$domain=surfingbird.ru
+! https://forum.adguard.com/index.php?threads/12119/
+@@||googletagmanager.com/gtm.js$domain=society6.com
+@@||google-analytics.com/analytics.js$domain=society6.com
+@@||google-analytics.com/plugins/ua/ec.js$domain=society6.com
+@@||b.scorecardresearch.com/r$domain=macworld.com|elmundo.es|pcworld.com|seattletimes.com|ancestry.com|ancestry.co.uk|ancestry.ca|ancestry.de|ancestry.it|ancestry.fr|ancestry.se|ancestry.mx
+@@||scorecardresearch.com/r$image,domain=billetnet.dk|billettservice.no|lippupalvelu.fi|pcworld.com|techhive.com|ticketmaster.ae|ticketmaster.co.uk|ticketmaster.de|ticketmaster.ie|ticketmaster.nl|ticnet.se|wsj.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/3085
+@@||mc.yandex.ru/metrika/watch.js$domain=m.market.yandex.ru|m.market.yandex.ua|m.market.yandex.by|m.market.yandex.kz
+! https://github.com/AdguardTeam/AdguardFilters/issues/4060
+@@||google-analytics.com/plugins/ua/ec.js$domain=saturn.de
+@@||google-analytics.com/analytics.js$domain=saturn.de
+@@||googletagmanager.com/gtm.js$domain=saturn.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/2943
+@@||metrics.us.playstation.com/b/ss/
+! https://github.com/AdguardTeam/AdguardFilters/issues/8900
+@@||app.adjust.com^$domain=dawanda.com
 !-------------------------------------------------------------------------------!
 !-------------- Whitelist ------------------------------------------------------!
 !-------------------------------------------------------------------------------!
 !
+! Exception rules that fix different issues caused by blocking trackers
+!
+! https://github.com/AdguardTeam/AdguardFilters/issues/44298
+@@||google-analytics.com/analytics.js^$domain=linetv.tw
+! https://github.com/AdguardTeam/AdguardFilters/issues/44076
+@@||static.webclicks24.com/js/app.min.js$domain=fattyvideos.com
+@@||static.webclicks24.com/images/$domain=fattyvideos.com
+@@||static.webclicks24.com/fonts/fontello.css$domain=fattyvideos.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/43965
+@@||googletagmanager.com/gtm.js$domain=accupass.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/43823
+@@||tags.crwdcntrl.net/c/*/cc_ajax.js$domain=gotrip.hk
+! https://github.com/AdguardTeam/AdguardFilters/issues/43924
+@@||googletagmanager.com/gtm.js$domain=shieldsgazette.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/43809
 @@||google-analytics.com/analytics.js$domain=uniqlo.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/43656
@@ -6993,12 +7473,13 @@ link.gmapp*.net$image
 @@||tags.tiqcdn.com/utag/tegna^$domain=kvue.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/30497
 @@||wilko.com/_ui/shared/js/analyticsmediator.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/44062
 ! https://github.com/AdguardTeam/AdguardFilters/issues/43717
 ! https://github.com/AdguardTeam/AdguardFilters/issues/33135
 ! https://github.com/AdguardTeam/AdguardFilters/issues/31097
 ! https://github.com/AdguardTeam/AdguardFilters/issues/42985
-@@||marketo.com/js/forms$domain=sherweb.com|kaspersky.com|workspace.circuitmaker.com|collab.net
-@@||marketo.com/index.php/form/$domain=sherweb.com|kaspersky.com|workspace.circuitmaker.com|collab.net
+@@||marketo.com/js/forms$domain=rocketsoftware.com|sherweb.com|kaspersky.com|workspace.circuitmaker.com|collab.net
+@@||marketo.com/index.php/form/$domain=rocketsoftware.com|sherweb.com|kaspersky.com|workspace.circuitmaker.com|collab.net
 ! https://forum.adguard.com/index.php?threads/31245/
 @@||ssl.google-analytics.com/ga.js$domain=gmail.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/30981
@@ -7388,10 +7869,6 @@ link.gmapp*.net$image
 @@||googletagmanager.com/gtm.js$domain=mediamarkt.com.tr
 @@||google-analytics.com/analytics.js$domain=mediamarkt.com.tr
 @@||google-analytics.com/plugins/ua/ec.js$domain=mediamarkt.com.tr
-! https://github.com/AdguardTeam/AdguardFilters/issues/38405
-! https://github.com/AdguardTeam/AdguardFilters/issues/13239
-! https://github.com/AdguardTeam/AdguardFilters/issues/10490
-@@/sbbi/?sbbpg=sbbShell&*&sbbgs$~third-party,domain=cutlinks.pro|androidfilehost.com|dlh.net|cellartracker.com|sahibinden.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/12464
 @@||d3c3cq33003psk.cloudfront.net/opentag$domain=sunglasses-shop.co.uk|sunglasses-shop.fi|sunglasses-shop.nl|sunglasses-shop.se|sunglassesshop.com|sunglassesshop.dk|sunglassesshop.fr|sunglassesshop.no
 ! https://github.com/AdguardTeam/AdguardFilters/issues/12426
