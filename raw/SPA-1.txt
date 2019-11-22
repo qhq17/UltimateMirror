@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: HbWgyBvrl/7DVeJZEG+jTA
+! Checksum: hzsl5onbmgcXqkmBkHcVZw
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish and Portuguese languages.
-! Version: 2.0.5.0
-! TimeUpdated: 2019-11-09T09:03:38+03:00
+! Version: 2.0.5.5
+! TimeUpdated: 2019-11-19T20:31:40+03:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#spanish
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -994,6 +994,7 @@ jokerfansub.com#@##adsense
 ! https://github.com/AdguardTeam/AdguardFilters/issues/24801
 yahoo.com#?#ul[class^="Mb(0)"] > li.js-stream-content:has(> div > a[rel="nofollow noopener noreferrer"]+div:contains(Patrocinado))
 !
+sexomoda.com#?#.column.middle > article:has(> span#ze)
 paginasiete.bo#?##main-content > .region > .fila > .container > .row[id] > .col-md-4.p33:has(> .cleft:only-child > .bnn > div[id^="div-gpt-ad"])
 r7.com#?#.column  > div > div[class="box rw flex show-box-flex"]:has(> div > div.proporcinal4columns a[href^="http://pubads.g.doubleclick.net/"])
 subdivx.com#?#td[style="padding-right:15px;"] > font:contains(/^Espacio publicitario$/)
@@ -1122,6 +1123,8 @@ maisgasolina.com#?##main [id$="Block"][-ext-has='.adsbygoogle']
 !--------------------------------------!
 !------- JS rules ---------------------!
 !--------------------------------------!
+! https://github.com/AdguardTeam/AdguardFilters/issues/44237
+! https://github.com/AdguardTeam/AdguardFilters/issues/43603#issuecomment-553749336
 ! https://github.com/AdguardTeam/AdguardFilters/issues/42704
 ! https://github.com/AdguardTeam/AdguardFilters/issues/41818
 ! https://github.com/AdguardTeam/AdguardFilters/issues/41643
@@ -1322,6 +1325,12 @@ http://adw.
 !-------------------- Specific rules --------------------!
 !--------------------------------------------------------!
 !
+revistamonet.globo.com##.middle-banner
+revistamonet.globo.com##.container-adv
+revistamonet.globo.com##li[data-item-type="advertising"]
+sexomoda.com##iframe[src^="https://adserver.juicyads.com/"]
+||lcgsr.seuseriado.com/js/
+seuseriado.com##.itfbppl_overlay
 ||harpiacode.com/gen.php
 viajenaviagem.com##.block.kayak
 uol.com.br###responsive-vitrine-publicidade-vitrine-1
@@ -1750,7 +1759,7 @@ televalltv.net###floatLayer6
 cinemaniahdd.com##a[href^="//mellowads.com"]
 tufutbolpro.com##a[href^="http://bit.ly/"]
 elconfidencial.com##.hide-div
-elespanol.com##.adv
+revistamonet.globo.com,elespanol.com##.adv
 elespanol.com##.article-adv
 atresplayer.com##.mod_ad_top
 atresplayer.com###bannerTop
@@ -3073,6 +3082,8 @@ urlcloud.us##.banner
 !
 ! White list. Fixing filtration errors (false-positive)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/44371
+@@||glbimg.com/*/300x250/smart/$domain=revistamonet.globo.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/43603
 @@||hentaihd.xyz/repro/ads/ads.php
 ! https://github.com/AdguardTeam/AdguardFilters/issues/37782
