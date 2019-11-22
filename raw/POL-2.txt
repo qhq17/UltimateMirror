@@ -1,14 +1,14 @@
 [Adblock Plus 2.0]
 ! Title: Polish Anti Adblock Filters
 ! Oficjalne polskie filtry przeciwko alertom o Adblocku
-! Last modified: 10 November 2019
+! Last modified: 21 November 2019
 ! Expires: 2 days
-! Version: 2019111002
+! Version: 2019112102
 ! Support:
 !   Github >> https://github.com/olegwukr/polish-privacy-filters/issues
 ! License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ! Copyright (C) 2019
-! v.2019111002 aktualizacja: nie, 10 listopada 2019, 20:15:00
+! v.2019112102 aktualizacja: czw, 21 listopada 2019, 17:20:00
 !
 !
 !-----------------------Integration of supplement lists for uBlock & AdGuard-----------------------!
@@ -18,7 +18,7 @@
 !1#---------------------------------Anti Adblock Rules element hide----------------------------------!
 ##.kill-adblock-container
 12zawodnik.pl##.ads-checker-msg
-24gliwice.pl,wyborkierowcow.pl,kino123.pl,jednoslad.pl,how2play.pl,polskiedzieje.pl,ciekawe.org,baza-lekow.com.pl,testhub.pl,widzewtomy.net,gadzet.telchina.pl,ostatniatawerna.pl,kulturalnemedia.pl,newonce.net#@##adsense
+24gliwice.pl,wyborkierowcow.pl,kino123.pl,jednoslad.pl,how2play.pl,polskiedzieje.pl,ciekawe.org,baza-lekow.com.pl,testhub.pl,widzewtomy.net,gadzet.telchina.pl,ostatniatawerna.pl,kulturalnemedia.pl,newonce.net,variatkowo.pl#@##adsense
 24opole.pl,webcamera.pl,darmowe-torenty.pl,dziennikwschodni.pl,vorek.pl,katowickisport.pl,torrentcity.pl,wtkplay.pl,epoznan.pl,comperia.pl,poradnikzdrowie.pl#@#.ad
 ##.adblock-alt
 ##.adblock-placeholder
@@ -166,6 +166,7 @@ vitalia.pl###topbborlayer
 vod.pl#@#.infoCloud
 vod.pl#@#.text-ad
 vorek.pl,gry-planszowe.pl,darmowe-torenty.pl,torrentcity.pl,bitnova.info,waw4free.pl,darmowyskin.pl,lunaticfiles.com,www.nadmorski24.pl,www.realmadryt.pl#@#.adsbox
+virpe.com#@#.adsBox
 vorek.pl,shinden.pl#@#.ads
 waw4free.pl#@#.showad
 waw4free.pl#@#.showbox
@@ -271,6 +272,8 @@ zycietoprzygoda.pl##[class^="tws_"]
 @@||filmweb.pl^$generichide
 @@||fm.tuba.pl^$xmlhttprequest,domain=fm.tuba.pl
 @@||fm.tuba.pl/adblockDetector.js
+@@||games.softgames.com/assets/showads.js$script,domain=games.softgames.com
+@@||games.softgames.com/assets/advertisement.js$script,domain=games.softgames.com
 @@||gapl.hit.gemius.pl/gemiuslib.js$script,domain=auto-swiat.pl|businessinsider.com.pl|fakt.pl|forbes.pl|komputerswiat.pl|noizz.pl|onet.pl|plejada.pl|vod.pl
 @@||gapl.hit.gemius.pl/gplayer.js$script,domain=auto-swiat.pl|businessinsider.com.pl|fakt.pl|forbes.pl|komputerswiat.pl|noizz.pl|onet.pl|plejada.pl|vod.pl
 @@/^(https|http):\/\/a-o\.ninja\/[0-9a-zA-z-]{10,200}\.js/$script
@@ -289,7 +292,7 @@ zycietoprzygoda.pl##[class^="tws_"]
 @@/js/ads-1.js$script,domain=www.napiprojekt.pl
 @@/advertisement.js$domain=vodnews.pl|cyfrowydoradca.pl|pajacyk.pl|psgfc.pl|ifotos.pl|ps3-hack.pl|arkowcy.pl|szlaki.net.pl|przeslij.com
 @@||kinonet.pl^$generichide
-@@||jbzd.cc^$generichide
+@@||jbzd.*^$generichide
 @@||js.iplsc.com/inpl.adb/*/empt.js?*&adserv=$domain=interia.pl
 @@||komputerswiat.pl^$generichide
 @@||kubofonista.net/r/ad.htm$script,domain=kubofonista.net
@@ -297,7 +300,7 @@ zycietoprzygoda.pl##[class^="tws_"]
 @@||kwejk.pl^$generichide
 @@||legionisci.com^$generichide
 @@||lib.wtg-ads.com/lib.min.js$script,domain=legia.net
-@@||lib.wtg-ads.com/prebid/prebid_*.js$xmlhttprequest,domain=joemonster.org|innpoland.pl|dadhero.pl
+@@||lib.wtg-ads.com/prebid/prebid_*.js$xmlhttprequest,domain=joemonster.org|innpoland.pl|dadhero.pl|wroclawskiejedzenie.pl|natemat.pl
 @@||manjaro.pl/abd/adserver/adlogger_tracker.php
 @@||medonet.pl^$generichide
 @@||megane.com.pl^$generichide
@@ -325,7 +328,7 @@ zycietoprzygoda.pl##[class^="tws_"]
 @@||poradnikzdrowie.pl^$generichide
 @@||ppstatic.pl/lib/adblockdetect/$script
 @@/show_ads.js$script,domain=ki24.info|portalplock.pl|faktypilskie.pl|e-krajna.pl|swiecie24.pl|zyciesokolowa.pl|zyciesiedleckie.pl|koronowo.net.pl|ciechocinek.biz|gniewkowo.eu|kolniak24.pl|itvszubin.pl|uniejow.net.pl|nizanskie.info|pluznica.info|superchodziez.pl|tygodnik.pl|ekutno.pl|naszbrzesc.pl|bydgoszcz24.pl|terazlipno.pl|saskakepa.waw.pl|gwe24.pl|kolniak24.eu|mp3.teledyski.info|tibiopedia.pl
-@@||portel.pl/phpads*/*adv*.js$script,domain=www.portel.pl
+@@||portel.pl/*/*adv*.js$script,domain=www.portel.pl
 @@||potplayerclub.pl^$generichide
 @@||przegladsportowy.pl^$generichide
 @@||ps3-hack.pl^$generichide
@@ -339,8 +342,8 @@ zycietoprzygoda.pl##[class^="tws_"]
 @@||code.skript.pl/*.js?ad_type=skript
 @@/Scripts/ads.js$script,domain=www.reklama.pl
 @@/showad_.js$domain=flashx.tv
-@@/showads.js$script,domain=www.eskago.pl|czasdzieci.pl|towideo.pl|biznesradar.pl|krs-online.com.pl|dziennikwschodni.pl|dziennikwschodni.pl
-@@/ads.js$script,domain=sjp.pwn.pl|lunaticfiles.com|eveline.wp.pl|static.webcamera.pl|realmadryt.pl
+@@/showads.js$script,domain=www.eskago.pl|czasdzieci.pl|towideo.pl|biznesradar.pl|krs-online.com.pl|dziennikwschodni.pl|dziennikwschodni.pl|terrarium.com.pl
+@@/ads.js$script,domain=sjp.pwn.pl|lunaticfiles.com|eveline.wp.pl|static.webcamera.pl|realmadryt.pl|lowcygier.pl 
 @@||s.spolecznosci.net/js/core2-min.js$script,domain=shinden.pl
 @@||static-pilot.wp.pl/static/assets/js/ads.js$xmlhttprequest,domain=pilot.wp.pl
 @@||s-pt.ppstatic.pl/*/reklama.js$script,domain=dzienniklodzki.pl|gloswielkopolski.pl|dziennikpolski24.pl|echodnia.eu|polskatimes.pl|expressbydgoski.pl|expressilustrowany.pl|nowiny24.pl|gazetakrakowska.pl|pomorska.pl|nto.pl|gazetawroclawska.pl|wspolczesna.pl|gp24.pl|dziennikzachodni.pl|gazetalubuska.pl|dziennikbaltycki.pl|stronazdrowia.pl
