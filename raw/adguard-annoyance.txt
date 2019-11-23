@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: drQi5uPRR/O0AGC995cGvA
+! Checksum: YETr3m77BWXZfD1/6vLY6g
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups.
-! Version: 2.0.33.97
-! TimeUpdated: 2019-11-23T01:03:36+03:00
+! Version: 2.0.34.1
+! TimeUpdated: 2019-11-23T18:30:27+03:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#annoyances
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -5451,6 +5451,7 @@ tripadvisor.be,tripadvisor.ca,tripadvisor.co,tripadvisor.co.id,tripadvisor.co.uk
 ! ###cross-dialog
 dziennikbaltycki.pl,dzienniklodzki.pl,dziennikpolski24.pl,dziennikzachodni.pl,echodnia.eu,expressbydgoski.pl,expressilustrowany.pl,gazetakrakowska.pl,gazetalubuska.pl,gazetawroclawska.pl,gk24.pl,gloswielkopolski.pl,gol24.pl,gp24.pl,gratka.pl,gs24.pl,katowice.naszemiasto.pl,kurierlubelski.pl,motofakty.pl,naszemiasto.pl,nowiny24.pl,nowosci.com.pl,nto.pl,polskatimes.pl,pomorska.pl,poranny.pl,sportowy24.pl,strefaagro.pl,strefabiznesu.pl,stronakobiet.pl,telemagazyn.pl,to.com.pl,wspolczesna.pl###cross-dialog
 !
+betterworldbooks.com###gdprCookieNotice
 meteoreporter.pl###privacyAlert
 gdata-software.com###gd-cookiebar
 unoeuro.com###cookieuse-warning
@@ -8308,6 +8309,11 @@ bmwfaq.org#?#.Notices[-ext-has='a[href="//www.bmwfaq.org/help/cookies"]']
 !######### White list. Fixing filtering errors #########
 !#######################################################
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/44373
+@@||internetinthecar.vodafone.com/*/js/jquery/plugins/cookieconsent/jquery.cookieconsent.min.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/44602
+@@||betterworldbooks.com/app/components/cookieNotice.js
+@@||betterworldbooks.com/app/components/templates/cookieNotice.html
 ! https://github.com/AdguardTeam/AdguardFilters/issues/43961
 bokadirekt.se#@##cookie-modal
 bokadirekt.se#@#.cookie-modal
@@ -9819,6 +9825,9 @@ sodapdf.com##.be-tooltip
 !
 ! Specific sites
 !
+statesman.com#$#.modal-scrollable { display: none!important; }
+statesman.com#$#.connext-modal-backdrop { display: none!important; }
+statesman.com#$#body { overflow: visible!important; }
 writingexplained.org##.atlanta-lightbox
 boxberry.ru##.sweet-modal-overlay
 kompasiana.com##.konten__menarik
@@ -12771,6 +12780,9 @@ radio.yandex.by,radio.yandex.kz,radio.yandex.ru,radio.yandex.ua##.page-station__
 @@||yastatic.net/daas/atom.js$domain=mail.yandex.by|mail.yandex.kz|mail.yandex.ru|mail.yandex.ua|mail.yandex.com|mail.yandex.com.tr
 !-----------------------------------------------
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/44550
+nero.com###fancybox-wrap
+nero.com###fancybox-overlay
 ! https://github.com/AdguardTeam/AdguardFilters/issues/44364
 freiepresse.de###aboBanner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/44090
