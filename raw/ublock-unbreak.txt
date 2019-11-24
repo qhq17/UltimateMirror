@@ -2996,3 +2996,34 @@ zone-anime.net##.code-block
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1144#issuecomment-555724924
 *$script,3p,domain=al.ly,badfilter
+
+! broken videos on reuters.com
+@@||reutersmedia.net/*/js/rcom-scroll-tracker.js$script,domain=reuters.com
+
+! https://github.com/uBlockOrigin/uAssets/issues/6601
+@@||cdn.mxpnl.com/libs/mixpanel-*-latest.min.js$script,domain=groupme.com
+
+! https://forums.lanik.us/viewtopic.php?f=64&t=43894
+@@||komus.ru/_ui/shared/js/ga/googleTagManager.js$script,1p
+
+! https://github.com/NanoMeow/QuickReports/issues/2328
+@@||googletagmanager.com^$script,domain=subscriptions.amd.com
+@@/gtm.js$script,domain=subscriptions.amd.com
+
+! https://www.reddit.com/r/uBlockOrigin/comments/dzoyt2/video_player_not_working_when_ublock_is_enabled/
+@@||analytics.edgekey.net/ma_library/html5/html5_malibrary.js$script,domain=mxplayer.in
+
+! https://github.com/uBlockOrigin/uAssets/issues/6609
+@@|blob:$popup,domain=box.com
+
+! https://github.com/uBlockOrigin/uAssets/issues/6615
+@@||epicgames.com/id/api/analytics/tracking$xhr,1p
+
+! https://github.com/uBlockOrigin/uAssets/issues/6613
+@@||googletagmanager.com/gtm.js$script,domain=pochta.ru
+@@||google-analytics.com/analytics.js$script,domain=pochta.ru
+
+! https://github.com/gorhill/uBlock/commit/a16e4161de5b
+! fonts.gstatic.com is alias of gstaticadssl.l.google.com (blocked by EasyList)
+||gstaticadssl.l.google.com^$3p,badfilter
+||gstaticadssl.l.google.com^$3p,~font
