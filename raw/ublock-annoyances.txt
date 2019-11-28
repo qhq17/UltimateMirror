@@ -403,9 +403,6 @@ mc-mod.net##body:style(-webkit-touch-callout: default !important; -webkit-user-s
 ! https://github.com/uBlockOrigin/uAssets/issues/2737
 listegaleri.com##+js(remove-attr.js, oncontextmenu|onselectstart|ondragstart)
 
-! https://www.ghacks.net/2018/07/02/windows-10-installing-unwanted-store-apps/#comment-4383524
-ghacks.net##+js(abort-current-inline-script.js, jQuery, aba_detector)
-
 ! https://forums.lanik.us/viewtopic.php?f=62&t=41150
 ||api.live365.com/geocheck
 
@@ -2858,3 +2855,51 @@ windows101tricks.com##+js(set, better_ads_adblock, 0)
 ! https://github.com/uBlockOrigin/uAssets/issues/6575
 virpe.com##+js(aopr, document.oncontextmenu)
 virpe.com##+js(ra, onselectstart)
+
+! https://github.com/NanoMeow/QuickReports/issues/2296
+dreamlandresort.com##+js(aopr, alert)
+
+! https://github.com/NanoMeow/QuickReports/issues/2297
+hebrew4christians.com##+js(acis, document.oncontextmenu)
+hebrew4christians.com##+js(ra, onselectstart|ondragstart)
+
+! https://github.com/NanoMeow/QuickReports/issues/2298
+gazzetta.it##+js(aeld, adblockActivated)
+
+! jpopsingles.eu right click, select, function keys
+jpopsingles.eu##+js(aopw, stopPrntScr)
+||jpopsingles.eu^$csp=style-src *
+
+! https://github.com/uBlockOrigin/uAssets/issues/6590#issuecomment-555175891
+skymovies.live##+js(set, confirm, noopFunc)
+
+! https://github.com/uBlockOrigin/uAssets/issues/6594
+musixmatch.com##+js(set, MutationObserver, trueFunc)
+musixmatch.com##body:style(-webkit-touch-callout: default !important; -webkit-user-select: text !important;-moz-user-select: text !important;-ms-user-select: text !important;user-select: text !important;)
+
+! https://github.com/uBlockOrigin/uAssets/issues/6607
+@@||animestreaming.biz^$ghide
+
+! https://reddit.com/r/uBlockOrigin/comments/dzzxp1
+ecosia.org##.js-whitelist-notice
+ecosia.org##.result-snippet:style(-webkit-touch-callout: default !important; -webkit-user-select: text !important;-moz-user-select: text !important;-ms-user-select: text !important;user-select: text !important;)
+
+! https://www.reddit.com/r/uBlockOrigin/comments/e0gpcu/fandomcom_wikis_cookie_warning_banner_stubbornness/
+fandom.com##[data-tracking-opt-in-overlay="true"]
+fandom.com##body:style(overflow: auto !important;)
+
+! https://github.com/NanoMeow/QuickReports/issues/2369
+licensekeys.org##+js(aopr, nocontext)
+licensekeys.org##+js(acis, disableSelection, reEnable)
+licensekeys.org##.unselectable:style(-moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important; khtml-user-select: text !important; -webkit-touch-callout: default !important; -webkit-user-select: text !important;)
+
+! https://github.com/NanoMeow/QuickReports/issues/2366
+fullregistrationkey.com##+js(aopr, nocontext)
+fullregistrationkey.com##+js(acis, disableSelection, reEnable)
+fullregistrationkey.com##.unselectable:style(-moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important; khtml-user-select: text !important; -webkit-touch-callout: default !important; -webkit-user-select: text !important;)
+
+! ctrl key https://github.com/uBlockOrigin/uAssets/issues/6621
+yusepjaelani.blogspot.com##+js(aopr, document.onkeydown)
+
+! ghanatvon .com right click
+ghanatvon.com##+js(acis, document.oncontextmenu)
