@@ -1,8 +1,8 @@
 [Adblock Plus 1.1]
-! Checksum: xidhLc8mjjrEH7XA3PAOXw
-! Version: 201911171641
+! Checksum: SEHx6PRiAeHWA9Cl363NAQ
+! Version: 201911290721
 ! Title: EasyList Germany
-! Last modified: 17 Nov 2019 16:41 UTC
+! Last modified: 29 Nov 2019 07:21 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.github.io/
 ! Licence: https://easylist.github.io/pages/licence.html
@@ -576,6 +576,7 @@ wieistmeineip.at,wieistmeineip.ch,wieistmeineip.de#@#.trc_rbox_div .syndicatedIt
 computerbild.de,wieistmeineip.at,wieistmeineip.ch,wieistmeineip.de#@#.trc_related_container div[data-item-syndicated="true"]
 christophhubrich.blogspot.co.uk,christophhubrich.blogspot.de,delamar.de,ews-markt.de,mediamarkt.de,paolo-film.de,transfermarkt.de#@#.werbung
 spiele.rtl.de#@#.wide-ad
+fitbook.de#@#a[href*=".smartadserver.com"]
 ebay.de#@#a[href^="http://ad-emea.doubleclick.net/"]
 zdnet.de#@#a[href^="http://ad.doubleclick.net/"]
 marketing-a.akamaihd.net#@#a[href^="http://adclick.g.doubleclick.net/"]
@@ -5275,6 +5276,8 @@ yelp.de##.add-search-result
 sport1.de##.addPicture
 aero.de##.add_balken
 tes-5-skyrim.de##.addleft
+kochbar.de##.admanager__ems div[id^="google_ads_iframe"]:not([id$="magazin_4__container__"])
+kochbar.de##.admanager__ems__teaser .emsTeaserContainer
 oxygen-scene.com##.adoxygen
 baronbuff.de##.adp_pls
 20min.ch,250kb.de,app-kostenlos.de,arbeitszeugnisgenerator.de,autoscout24.ch,bild.de,channelpartner.de,dhb.de,eintracht.de,fischkopf.de,helpster.de,israelnetz.com,mtv.de,playmassive.de,regenbogen.de,tageblatt.lu,tecchannel.de,tus-n-luebbecke.de,viamichelin.at,viamichelin.ch,worldofminecraft.eu,zdnet.de##.ads
@@ -6346,6 +6349,7 @@ pi-news.net##a[href$="/werbung.pdf"]
 94.199.241.194##a[href$="_zalando"]
 pctipp.ch##a[href*="&utm_campaign="]
 metager.de##a[href*=".overture.com/"][href$="?plmg=1"]
+fitbook.de##a[href*=".smartadserver.com"][rel="noopener"]
 bild.de##a[href*=".smartadserver.com/"]
 lesen.to##a[href*="/?f="]
 windowspro.de##a[href*="/adclick."]
@@ -7664,7 +7668,7 @@ gofeminin.de#?#.af-block-native:-abp-contains(Sponsored Post)
 welt.de#?#div[id][data-qa]:-abp-has(.c-buelent-linkbox__label:-abp-contains(Anzeige))
 !------------------Ausnahmeregeln zum Beheben von Problemen-------------------!
 ! *** easylistgermany:easylistgermany/easylistgermany_whitelist.txt ***
-@@/gujAd.$domain=kochbar.de|vip.de|wetter.de
+@@/gujAd.$domain=kochbar.de|stern.de|vip.de|wetter.de
 @@|http://byte.to/js/javascript.js|
 @@|http://byte.to/js/wz_tooltip.js|
 @@||1000steine.de/img/ads/
@@ -7847,6 +7851,7 @@ welt.de#?#div[id][data-qa]:-abp-has(.c-buelent-linkbox__label:-abp-contains(Anze
 @@||ekitchen.de^$generichide
 @@||eltern.de^*_300x250px.$image,domain=eltern.de
 @@||emsservice.de/autoNative/$script,domain=kochbar.de
+@@||emsservice.de^$image,xmlhttprequest,domain=kochbar.de
 @@||engine.spotrails.com/delivery/pls.php?oasid=*&mediaurl=http%3a//vdn-mobile.oas-limited.com/ad/video.flv$object,domain=mobile.de
 @@||enjoykitz.tv/werbung.txt$object
 @@||event.mivitec.net/dist/js/$script,domain=event.mivitec.net
@@ -7877,16 +7882,16 @@ welt.de#?#div[id][data-qa]:-abp-has(.c-buelent-linkbox__label:-abp-contains(Anze
 @@||fotoschloebe.de/Werbung/$~third-party
 @@||fotostudio-katikrueger.de/werbung/$~third-party
 @@||fussball.sv-kehlen.de/werbepartner.htm
-@@||g.doubleclick.net/gampad/$xmlhttprequest,domain=immonet.de|vip.de
+@@||g.doubleclick.net/gampad/$xmlhttprequest,domain=immonet.de|kochbar.de|vip.de
 @@||g.doubleclick.net/gampad/ads?$script,xmlhttprequest,domain=guterhut.de|hardwareluxx.de|hbf-info.de|notebooksbilliger.de|rakuten.at|rakuten.de|rtl.de|zalando.de
-@@||g.doubleclick.net/gampad/ads?$xmlhttprequest,domain=auto-motor-und-sport.de
+@@||g.doubleclick.net/gampad/ads?$xmlhttprequest,domain=auto-motor-und-sport.de|stern.de
 @@||g.doubleclick.net/gampad/ads?*&iu_parts=6032%2Ckochbar.de%2Chomepage&$domain=kochbar.de
 @@||g.doubleclick.net/gampad/ads?*300x250^$script,domain=11freunde.de
 @@||g.doubleclick.net/gampad/ads?*970x250$script,domain=welt.de
 @@||g.doubleclick.net/gampad/ads?*^sz=970x250^$subdocument,domain=welt.de
 @@||g.doubleclick.net/gampad/adx?$xmlhttprequest,domain=7tv.de
 @@||g.doubleclick.net/gpt/$script,domain=gofeminin.de|immonet.de|vip.de
-@@||g.doubleclick.net/gpt/pubads_impl_$script,domain=11freunde.de|auto-motor-und-sport.de|guterhut.de|hardwareluxx.de|hbf-info.de|kochbar.de|notebooksbilliger.de|rakuten.at|rakuten.de|rtl.de|welt.de|zalando.de
+@@||g.doubleclick.net/gpt/pubads_impl_$script,domain=11freunde.de|auto-motor-und-sport.de|guterhut.de|hardwareluxx.de|hbf-info.de|kochbar.de|notebooksbilliger.de|rakuten.at|rakuten.de|rtl.de|stern.de|welt.de|zalando.de
 @@||g.doubleclick.net/pagead/js/rum.js$domain=auto-motor-und-sport.de
 @@||g.doubleclick.net/static/glade.js$domain=welt.de
 @@||g.doubleclick.net/tag/js/gpt.js$domain=auto-motor-und-sport.de
@@ -7909,6 +7914,7 @@ welt.de#?#div[id][data-qa]:-abp-has(.c-buelent-linkbox__label:-abp-contains(Anze
 @@||googlesyndication.com/safeframe/$subdocument,domain=kochbar.de
 @@||googlesyndication.com/simgad/$image,domain=notebooksbilliger.de
 @@||googlesyndication.com/simgad/14155692645477451130$image,domain=guterhut.de
+@@||googletagservices.com/tag/js/gpt.js?$script,domain=stern.de
 @@||googlewatchblog.de/img/index-icons/$image
 @@||googlewatchblog.de^*/adsense.png
 @@||goolive.de/templatesv2/smileys/ad.gif
