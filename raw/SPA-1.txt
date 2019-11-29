@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: hzsl5onbmgcXqkmBkHcVZw
+! Checksum: RUr2CJOBuSgoCByiF2XTvQ
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish and Portuguese languages.
-! Version: 2.0.5.5
-! TimeUpdated: 2019-11-19T20:31:40+03:00
+! Version: 2.0.5.8
+! TimeUpdated: 2019-11-28T23:31:06+03:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#spanish
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -244,6 +244,8 @@
 !
 ! AdRegain
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/44950
+@@||libertaddigital.com/ad/adservice/banner/*/*.ad.json$domain=libertaddigital.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/43752
 @@||doramedplay.com/wp-content/plugins/dh-anti-adblocker/assets/js/showads.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/41215
@@ -1325,6 +1327,11 @@ http://adw.
 !-------------------- Specific rules --------------------!
 !--------------------------------------------------------!
 !
+cifraclub.com.br##div[id^="pub_"]
+cifraclub.com.br##.floatingBottomAd
+elnuevodia.com##div[class^="advertising"]
+elnuevodia.com##.highlight-box-header-partner
+elnuevodia.com##.highlight-box-header-partner + div.tabs-gold
 revistamonet.globo.com##.middle-banner
 revistamonet.globo.com##.container-adv
 revistamonet.globo.com##li[data-item-type="advertising"]
