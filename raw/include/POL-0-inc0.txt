@@ -6,16 +6,16 @@
 ! Wsparcie:
 !   Patronite ==> https://patronite.pl/polskiefiltry
 !   PayPal ==> https://www.paypal.com/pools/c/87zNJ8OJ3I
-! Last modified: 9 November 2019
+! Last modified: 27 November 2019
 ! Expires: 1 day
-! Version: 2019110902
+! Version: 2019112701
 ! Support:
 !   Email >> errorsfilters@certyficate.it
 !   Github >> https://github.com/MajkiIT/polish-ads-filter/issues
 ! License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ! Copyright © 2019 Certyficate IT
 ! Najnowsza wersja zawsze na: https://www.certyficate.it/adblock
-! v.2019110902 aktualizacja: sob, 9 listopada 2019, 13:52:00
+! v.2019112701 aktualizacja: sr, 27 listopada 2019, 10:45:00
 !
 !
 !--------------------------Rules only to uBlock-------------!
@@ -135,9 +135,11 @@ filmweb.pl##^#advertBar-pl_PL
 filmweb.pl##+js(nano-remove-elements-onready.js, #skyBanner)
 !
 ! Grupa WP
+~www.wp.pl,portal.abczdrowie.pl,parenting.pl,kafeteria.pl,dobreprogramy.pl,o2.pl,pudelek.pl,wp.pl##+js(set-constant.js, Object.prototype.rekid, undefined)
+money.pl##div[class]:if(>div[class]:first-child:has-text(REKLAMA):if-not(>*))
+!money.pl###app > div[data-reactroot] > div[class]:matches-css(background-image: /\/static\/bg\.png/)
 money.pl##div[class]:if(>div[class]:first-child:has-text(REKLAMA):if-not(>*))
 ~pilot.wp.pl,~poczta.wp.pl,~sportowefakty.wp.pl,wp.pl##+js(abort-on-property-read.js, WP.inline)
-!money.pl###app > div[data-reactroot] > div[class]:matches-css(background-image: /\/static\/bg\.png/)
 abczdrowie.pl,echirurgia.pl,fotoblogia.pl,komorkomania.pl,money.pl,wp.pl##+js(set-constant.js, PWA_adbd, 2)
 facet.wp.pl,gwiazdy.wp.pl,teleshow.wp.pl##+js(abort-on-property-write.js, iaqExt)
 poczta.wp.pl##body > #page:style(display: block !important;)
@@ -168,7 +170,7 @@ abczdrowie.pl,allani.pl,autokrata.pl,autokult.pl,biztok.pl,dzieci.pl,easygo.pl,e
 www.wp.pl##html, html > body:style(overflow: visible!important;)
 www.wp.pl##+js(set-constant.js, WP.gaf.loadBunch, noopFunc)
 !wp.pl,~pilot.wp.pl,~sportowefakty.wp.pl##+js(set-constant.js, WP.gaf.loadBunch, noopFunc)
-o2.pl,pudelek.pl,wp.pl##+js(set-constant, Object.prototype.isGoogleBot, true)
+!o2.pl,pudelek.pl,wp.pl##+js(set-constant, Object.prototype.isGoogleBot, true)
 !
 ! o2.pl
 poczta.o2.pl,poczta.wp.pl##body > #page:style(display: block !important;)
@@ -289,6 +291,7 @@ a-o.ninja##a[href^="http://allegro.pl/"]
 !
 ! webcamera.pl
 ||webcamera.pl/videointro/filead*.mp4$important,media,redirect=noop-0.1s.mp3
+webcamera.pl##.adsbygoogle:style(position: absolute!important; left: -3000px!important;)
 !
 ! motomi.pl
 motomi.pl##.partnership-header-banner:style(height: 80px !important;)
