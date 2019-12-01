@@ -2196,7 +2196,8 @@ kzstock.blogspot.com#@##ad-target
 ||olx.com.br^*/lurker.$badfilter
 
 ! https://github.com/uBlockOrigin/uAssets/issues/5479
-@@||cdn.amplitude.com/libs/amplitude-*.gz.js$script,domain=elconfidencial.com
+@@||elconfidencial.com/*/EventTracker.js$script,1p
+||cdn.amplitude.com/libs/amplitude-*.gz.js$script,domain=elconfidencial.com,redirect=noopjs,important
 
 ! https://github.com/easylist/easylist/issues/3352
 ||stackpathdns.com^$image,domain=boomsbeat.com|dramastars.com|enstarz.com|foreverymom.com|hngn.com|itechpost.com|kpopstarz.com|latinpost.com|natureworldnews.com|parentherald.com|readysethealth.com|realtytoday.com|sciencetimes.com|sportsworldreport.com|universityherald.com|vcpost.com|youthhealthmag.com,badfilter
@@ -3027,3 +3028,47 @@ zone-anime.net##.code-block
 ! fonts.gstatic.com is alias of gstaticadssl.l.google.com (blocked by EasyList)
 ||gstaticadssl.l.google.com^$3p,badfilter
 ||gstaticadssl.l.google.com^$3p,~font
+
+! https://github.com/NanoMeow/QuickReports/issues/2371
+@@||moto.it/ads/bundle$script,1p
+
+! https://github.com/uBlockOrigin/uAssets/issues/6623
+@@||api.ipify.org/?format=json$xhr,domain=cyberpower.com
+
+! https://forums.lanik.us/viewtopic.php?f=64&t=43928
+@@||captcha.px-cdn.net^$script
+@@||perimeterx.net/api/v2/collector/ocaptcha$xhr
+
+! https://github.com/uBlockOrigin/uAssets/issues/6632
+@@||crosscountrytrains.co.uk/js/analytics.js$script,1p
+
+! fix fembed.com download button
+*$script,3p,domain=fembed.com,badfilter
+
+! https://github.com/uBlockOrigin/uAssets/issues/4542#issuecomment-559369797
+@@||mixdrop.co^$frame
+
+! https://forums.lanik.us/viewtopic.php?f=64&t=43926
+@@||promo.com/shopify/shopify-store-script.js$script
+@@||promo.local/shopify/shopify-store-script.js$script
+@@||promo.com/shopify-backend/*/user-videos/public/video-urls$xmlhttprequest
+
+! https://forums.lanik.us/viewtopic.php?f=64&t=43903
+@@||volterra.us/api/*/advertise_policys*$~third-party
+@@||volterra.io/api/*/advertise_policys*$~third-party
+@@||volterra.us/cdn/*/advertise_policy*$~third-party
+@@||volterra.io/cdn/*/advertise_policy*$~third-party
+
+! https://github.com/uBlockOrigin/uAssets/issues/6541#issuecomment-559874594
+/homad-global-$badfilter
+
+! https://github.com/uBlockOrigin/uAssets/issues/6638
+@@||daumcdn.net/tiara/js/*/tiara.min.js$script,domain=tv.kakao.com
+||track.tiara.kakao.com/queen/footsteps$image,domain=tv.kakao.com
+
+! https://github.com/DandelionSprout/adfilt/issues/7#issuecomment-560023272
+@@||amazon-adsystem.com/aax2/apstag.js$script,domain=gala.fr
+@@||tra.scds.pmdstatic.net/advertising-core-config/*/statics/gal-config.json$xhr,domain=gala.fr
+@@||tra.scds.pmdstatic.net/advertising-core-libs/*/prebid.js$script,domain=gala.fr
+@@||tra.scds.pmdstatic.net/bundle.php$xhr,domain=gala.fr
+@@||tra.scds.pmdstatic.net/pmd-browsertools/*$script,domain=gala.fr
