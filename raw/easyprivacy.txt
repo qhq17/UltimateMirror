@@ -1,8 +1,8 @@
 [Adblock Plus 1.1]
-! Checksum: mVIhAA2Oi/u7FWK4U4ei1g
-! Version: 201911291721
+! Checksum: lWDeHc2kz9AfUuAQnUfdLA
+! Version: 201912020921
 ! Title: EasyPrivacy
-! Last modified: 29 Nov 2019 17:21 UTC
+! Last modified: 02 Dec 2019 09:21 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -219,6 +219,7 @@
 .gif?event=
 .gif?hit_
 .gif?Log=$~xmlhttprequest
+.gif?logid=*&event_
 .gif?page_refer_
 .gif?pixels=
 .gif?pixelToken=
@@ -2855,6 +2856,7 @@
 /page_analytics.
 /page_counter.
 /page_imp;
+/page_monitor_log?
 /page_view.*&ref=
 /pageaction/trackEvent
 /pagead/conversion_
@@ -3713,6 +3715,7 @@
 /status.gif?*=
 /StatV1?
 /stcollection.
+/stdlog?
 /store-uniq-client-id?bomuuid=
 /storeAdvImpression.
 /stracking.js
@@ -4233,6 +4236,7 @@
 /trk.gif?
 /trk.php?
 /trk/p.gif?
+/trk2.*/open?$image
 /trk_tb.
 /trk_zbo.
 /trkga.
@@ -11573,6 +11577,7 @@ _mongo_stats/
 ||tracking.quillion.com^
 ||tracking.quisma.com^
 ||tracking.rapidape.com^
+||tracking.rightmessage.com^
 ||tracking.searchmarketing.com^
 ||tracking.sembox.it^$third-party
 ||tracking.skyword.com^$third-party
@@ -15921,6 +15926,7 @@ $csp=worker-src 'none',domain=alltube.pl|alltube.tv|animeteatr.ru|annuaire-bleu.
 ||baidu.com/click.gif?
 ||baidu.com/dalog/
 ||baidu.com/dv.gif?
+||baidu.com/nocache/mp/b.jpg?cmd=
 ||baidu.com/tb/pms/img/st.gif?
 ||baidu.com^*/adlog?
 ||baidu.com^*/c.gif?
@@ -15976,6 +15982,7 @@ $csp=worker-src 'none',domain=alltube.pl|alltube.tv|animeteatr.ru|annuaire-bleu.
 ||hisense.com/ta.js
 ||hk.ndx.nextmedia.com^
 ||ifeng.com/i?p=
+||imgstat.baidu.com^
 ||imp.appledaily.com^
 ||jcm.jd.com^
 ||jiayuan.com^*/pv.js
@@ -16001,7 +16008,11 @@ $csp=worker-src 'none',domain=alltube.pl|alltube.tv|animeteatr.ru|annuaire-bleu.
 ||logx.mtime.cn^
 ||logx.mtime.com^
 ||luobo.tv/staticts.html
+||map.baidu.com/newmap_test/static/common/images/transparent.gif?*&code=
 ||mar.vip.com^
+||mp.weixin.qq.com/mp/appmsgreport?
+||mp.weixin.qq.com/mp/getappmsgad?
+||mp.weixin.qq.com/mp/report?
 ||narutom.com/stat.js
 ||nstat.tudou.com^
 ||on.cc^*/checkrev.gif?
@@ -16599,6 +16610,7 @@ $csp=worker-src 'none',domain=alltube.pl|alltube.tv|animeteatr.ru|annuaire-bleu.
 @@||cdn-care.com/js/vendor/yarn_components/amplitude-js/amplitude.min.js$script,domain=care.com
 @@||cdn.optimizely.com/js/*.js$domain=compassion.com|creditsesame.com|freeshipping.com|heroku.com|imageshack.com
 @@||certona.net^*/scripts/resonance.js$script,domain=canadiantire.ca
+@@||changenow.io/js/tracking.js$script
 @@||chessfriends.com/js/live/GoogleAnalytics.js?$~third-party
 @@||clearcode.cc/piwik.pro/$image,domain=piwik.pro
 @@||clicsante.ca^*/angulartics-google-tag-manager.min.js$domain=clicsante.ca
@@ -16655,7 +16667,7 @@ $csp=worker-src 'none',domain=alltube.pl|alltube.tv|animeteatr.ru|annuaire-bleu.
 @@||github.com^*/heatmap.js$~third-party,xmlhttprequest
 @@||go.com/disneyid/responder$subdocument
 @@||google-analytics.com/analytics.js$domain=afternic.com|allmusic.com|amctv.com|bebo.com|bennysva.com|blastingnews.com|ch10.co.il|cliphunter.com|daemon-tools.cc|desigual.com|easyjet.com|firehousesubs.com|gamepix.com|greentoe.com|housing.wisc.edu|infogr.am|jackbox.tv|jobs.net|keygames.com|manowthaimordialloc.com.au|maxiclimber.com|orbitum.com|pluto.tv|pure.com|rebtel.com|sbnation.com|sci2.tv|seatgeek.com|stitcher.com|support.amd.com|tagheuer.com.au|theverge.com|tv10play.se|tv3play.se|tv6play.se|tv8play.se|video.pbs.org|vox.com|vpnster.com|weather.gov|westernunion.at|westernunion.be|westernunion.ca|westernunion.ch|westernunion.cl|westernunion.co.jp|westernunion.co.nz|westernunion.co.uk|westernunion.co.za|westernunion.com|westernunion.com.au|westernunion.com.co|westernunion.com.hk|westernunion.com.my|westernunion.com.pe|westernunion.de|westernunion.fr|westernunion.ie|westernunion.it|westernunion.nl|westernunion.ph|westernunion.pl|westernunion.se|westernunion.sg|www.google.com
-@@||google-analytics.com/gtm/js$script,domain=curbed.com|eater.com|funnyordie.com|mmafighting.com|mmamania.com|polygon.com|racked.com|riftherald.com|sbnation.com|theringer.com|theverge.com|vox.com
+@@||google-analytics.com/gtm/js$script,domain=curbed.com|eater.com|funnyordie.com|mmafighting.com|mmamania.com|nflgamepass.com|polygon.com|racked.com|riftherald.com|sbnation.com|theringer.com|theverge.com|vox.com
 @@||google-analytics.com/plugins/ga/inpage_linkid.js$domain=lovehoney.co.uk|maxiclimber.com|opendns.com|openshift.com|vimeo.com|westernunion.at|westernunion.be|westernunion.ca|westernunion.ch|westernunion.cl|westernunion.co.jp|westernunion.co.nz|westernunion.co.uk|westernunion.co.za|westernunion.com|westernunion.com.au|westernunion.com.co|westernunion.com.hk|westernunion.com.my|westernunion.com.pe|westernunion.de|westernunion.fr|westernunion.ie|westernunion.it|westernunion.nl|westernunion.ph|westernunion.pl|westernunion.se|westernunion.sg
 @@||google.com/js/gweb/analytics/autotrack.js$domain=gradleplease.appspot.com
 @@||googletagmanager.com/gtag/js$script,domain=m.putlocker.how|theverge.com
@@ -16697,6 +16709,8 @@ $csp=worker-src 'none',domain=alltube.pl|alltube.tv|animeteatr.ru|annuaire-bleu.
 @@||metrics.mozilla.com^$~third-party
 @@||metrics.torproject.org^$~third-party
 @@||mixpanel.com/track/?data=$xmlhttprequest,domain=greentoe.com
+@@||mlb.com/scripts/stats/app/bam.stats.app.unified_file.js$script
+@@||mlb.com/scripts/stats/app/bbq_hashmgmt.js$script
 @@||monetate.net/img/$script,domain=newegg.com
 @@||monetate.net/js/$domain=newegg.com|nike.com
 @@||monetate.net/trk/$script,domain=newegg.com
