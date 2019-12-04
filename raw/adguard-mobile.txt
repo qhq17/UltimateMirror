@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: +1IjhM50PRaO6YJ3UbXKhg
+! Checksum: Eyx8fEvcGSelLX9DQbKkHg
 ! Title: AdGuard Mobile Ads filter
 ! Description: Filter for all known mobile ad networks. Useful for mobile devices.
-! Version: 2.0.9.16
-! TimeUpdated: 2019-11-29T20:30:09+03:00
+! Version: 2.0.9.30
+! TimeUpdated: 2019-12-04T17:30:10+03:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#mobile
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -1097,6 +1097,8 @@
 ! https://github.com/AdguardTeam/AdguardForiOS/issues/255
 @@||m.beautypageants.in^$elemhide
 !---
+! https://github.com/AdguardTeam/AdguardFilters/issues/44990
+@@||m.da.mgtv.com/m/player?_type_object=$domain=m.mgtv.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/32971
 ! https://github.com/AdguardTeam/AdguardFilters/issues/27586
 @@||js.kanald.com.tr/assets/dist/js/custom/ads.js
@@ -1172,6 +1174,11 @@ westseattleblog.com#@#.header-ad
 !
 ! Extended CSS rules
 !
+! m.quotenmeter.de - left-over at startpage
+m.quotenmeter.de#?##qm-home > .qm-item:has(> div[id^="div-gpt-ad-"])
+! mobil.stern.de - ads on startpage
+mobil.stern.de#?#.teaserlist__items > .mod-teaser:has(> a > .teaser > .sponsorship)
+mobil.stern.de#?#.teaserlist__items > .i-frame-element:has(> .guj-iframe-parent > iframe[src*="stern.de/vergleich/wp-content/themes/stern"][src*="/iframe-startseite"])
 ! mobil.mopo.de - ads and left-over
 mobil.mopo.de#?#.article-list > section:has(> .OUTBRAIN )
 ! https://github.com/AdguardTeam/AdguardFilters/issues/44243
@@ -1358,6 +1365,9 @@ zen.yandex.by,zen.yandex.com,zen.yandex.kz,zen.yandex.ru,zen.yandex.ua#?#.touch-
 !-------CSS---------
 !-------------------
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/45238
+xhamster2.com#$#.video-view-ads { display: none!important; }
+xhamster2.com#$#body.xh-scroll-disabled { overflow: visible!important; position: unset!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/43035
 m.detik.com#$#body[style^="overflow:"] { overflow: auto!important; height: auto!important; }
 m.detik.com#$#html[style^="overflow:"] { overflow: auto!important; height: auto!important; }
@@ -1801,6 +1811,20 @@ m.news.de##.unisterAdsStart
 !+ NOT_PLATFORM(ios, ext_android_cb)
 ||mobile.donanimhaber.com/ads^
 !
+avclub.com,clickhole.com,deadspin.com,gizmodo.com,jalopnik.com,jezebel.com,kotaku.com,lifehacker.com,splinternews.com,theinventory.com,theonion.com,theroot.com,thetakeout.com##.js_movable_ad_slot
+hot-grid-id.cdn.ampproject.org###outbrain-container
+||yqingge.com/wap.js
+m.kaskus.co.id###my-ad-slot
+tribunnewswiki.com###adsoutofpage-premiumTopframe
+tube8.com###js-mobile-top-banner
+||qhdi.com/ttxnb.php
+anime2you.de##.td-ss-main-content div[class^="anime-content"]
+m.quotenmeter.de###qm-home > .qm-item + a ~ div[style*="width:300px;display:block;"]
+m.quotenmeter.de##body > div[style]:not([class]):not([id]) > #comments + div[style*="width:300px;height:250px"]
+stuttgarter-nachrichten.de##div[data-b-title*="Sponsored"]
+stuttgarter-nachrichten.de##div[data-b-title*="Ad (Mobile"]
+||stern.de/vergleich/wp-content/themes/stern/*/iframe-startseite
+coinmarketcap.com###ad-slot--leaderboard-top
 txxx.com##.hYbuslay
 txxx.com###im-block_wrapper
 ||meijuck.com/js/dfw.js
@@ -1877,7 +1901,7 @@ ukraina.ru##amp-embed[type="smi2"]
 m.merdeka.com,ampproject.org,m.otosia.com##.ads-flying_carpet
 m.veporns.com##iframe[name^="spot_id_"]
 ||m.yeniakit.com.tr/anlasma
-tribunnews.com###anchorads
+tribunnewswiki.com,tribunnews.com###anchorads
 m.detik.com##.footer_banner
 m.detik.com##.parallax
 m.detik.com##center > p[style^="margin:0px;font-size:10px;padding:"][style$="background-color:#204099;color:white;"]
@@ -2634,7 +2658,7 @@ m.augsburger-allgemeine.de##main > .aa-teaser-mini-group
 m.augsburger-allgemeine.de##.aa-swatch-topdown-nice.aa-teaser > a[href="https://abo.augsburger-allgemeine.de/epaper-app-login-und-download-uebersicht"]
 m.donanimhaber.com##.yorum-ustu-alan
 nudevista.at,nudevista.be,nudevista.com,nudevista.com.br,nudevista.com.pl,nudevista.es,nudevista.it,nudevista.jp,nudevista.net,nudevista.nl,nudevista.se,nudevista.tw##.mob_adv
-||x99.nudevista.com/_/x/a*.html
+||x99.nudevista.com/_/x*/*.html
 m.hclips.com##div#pane_related[role="tabpanel"] > .collapse.in
 m.hclips.com##.container > .section--normal[style^="margin-top:"] > .section__panel.text-center
 telegraph.co.uk##div[class^="mobileAdvertInStream"]
@@ -3016,6 +3040,7 @@ livejournal.com##.mdspost-aside__item--banner
 ! Blocking Facebook mobile ads
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/45192
 ! https://github.com/AdguardTeam/AdguardFilters/issues/42482
 ! https://github.com/AdguardTeam/AdguardFilters/issues/42305
 ! https://github.com/AdguardTeam/AdguardFilters/issues/42029
