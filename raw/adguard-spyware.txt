@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: 0gCP6Hv9vhB+Evr1kqR4zw
+! Checksum: Z4khZ2Nn8BLHzkgin4rv9g
 ! Title: AdGuard Tracking Protection filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.10.61
-! TimeUpdated: 2019-11-25T20:31:31+03:00
+! Version: 2.0.10.85
+! TimeUpdated: 2019-12-04T17:31:06+03:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#privacy
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -151,6 +151,8 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ! ||e.crashlytics.com^
 ! ||settings.crashlytics.com^
 !
+||audsp.com^$third-party
+||mparticle.com^$third-party
 ||stat.analytiall.com^
 ||zeotap.com^$third-party
 ||engagetosell.com^$third-party
@@ -1195,7 +1197,6 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ||emjcd.com^$third-party
 ||emltrk.com^$third-party
 ||emsecure.net^$third-party
-||en25.com^$third-party
 ||enecto.com^$third-party
 ||enectoanalytics.com^$third-party
 ||engageya.com^$third-party
@@ -1236,7 +1237,6 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ||etrigue.com^$third-party
 ||etyper.com^$third-party
 ||eu-survey.com^$third-party
-||eulerian.net^$third-party
 ||euleriancdn.net^$third-party
 ||eum-appdynamics.com^$third-party
 ||euro-pr.eu^$third-party
@@ -1689,7 +1689,6 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ||kavijaseuranta.fi^$third-party
 ||keen.io^$third-party,domain=~keen.github.io|~keen.io
 ||kerebro.com^$third-party
-||keyade.com^$third-party
 ||keymetric.net^$third-party
 ||keytrack.de^$third-party
 ||keywee.co^$third-party
@@ -2060,7 +2059,6 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ||omguk.com^$third-party
 ||omkt.co^$third-party
 ||omnitagjs.com^$third-party
-||omtrdc.net^$third-party
 ||on-line.lv^$third-party
 ||onefeed.co.uk^$third-party
 ||onelink-translations.com^$third-party
@@ -2682,7 +2680,6 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ||t4ft.de^$third-party
 ||taboola.com^$third-party
 ||tag4arm.com^$third-party
-||tagcommander.com^$third-party
 ||tagifydiageo.com^$third-party
 ||tagsrvcs.com^$third-party
 ||tagtray.com^$third-party
@@ -3094,7 +3091,6 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ||xcounter.ch^$third-party
 ||xg4ken.com^$third-party
 ||xhit.com^$third-party
-||xiti.com^$third-party
 ||xl-counti.com^$third-party
 ||xpanama.net^$third-party
 ||xplosion.de^$third-party
@@ -3369,6 +3365,29 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ||r.popin.cc^
 ||inrecsys.popin.cc^
 ||jp-axia.m0mentum.net^
+! Keyade
+||keyade.net^
+||keyade.com^
+! Criteo
+||storetail.io^
+||dnsdelegation.io^
+! AT Internet
+||at-o.net^
+||atinternet.com^
+||xiti.com^
+! Eulerian
+||eulerian.net^
+||eulerian.com^
+! Adobe Experience Cloud
+||2o7.net^
+||omtrdc.net^
+! Commanders Act
+||tagcommander.com^
+||commandersact.com^
+! Wizaly
+||wizaly.com^
+! Ingenious Technologies
+||affex.org^
 !
 ! start: Mail Tracking
 ! note that we don't use || prefixes because mail tracking pixels are often proxied by mail providers
@@ -3489,6 +3508,9 @@ nethunt.com/api/v1/track/email/$image
 !+ NOT_PLATFORM(ios, ext_safari, ext_android_cb)
 ||tags.news.com.au^$~script
 !
+||stat.thestartmagazine.com^
+||statistics.news1.kr^
+||e.dr-zh.com^$third-party
 ||swa.metro.co.uk^
 ||crta.dailymail.co.uk^
 ||rta2.metro.co.uk^
@@ -4815,7 +4837,6 @@ charlestownwyllie.oaklawnnonantum.com^
 ||intent.cbsi.com^
 ||bonfire.spklw.com^
 ://r.i.ua^
-||adanalytics.openload.co^$third-party
 ||analyticapi.piri.net^
 ||analytics-rollout-*.amazonaws.com^$third-party
 ||analytics-static.ugc.bazaarvoice.com^
@@ -4884,7 +4905,6 @@ charlestownwyllie.oaklawnnonantum.com^
 ||log.adap.tv^
 ||log.olark.com^
 ||log.rutube.ru^
-||logdev.openload.co^
 ||logs.thebloggernetwork.com^
 ||ls.srvcs.tumblr.com^
 ||lt*.tritondigital.com^
@@ -4917,7 +4937,6 @@ charlestownwyllie.oaklawnnonantum.com^
 ||stats.mako.co.il^
 ||stats.mirror.co.uk^
 ||stats.olark.com^
-||stats.openload.co^
 ||stats.videoseyredin.net^
 ||stats2.arstechnica.com^
 ||su.addthis.com^
@@ -4960,6 +4979,7 @@ charlestownwyllie.oaklawnnonantum.com^
 ! YouTube
 /log_event?
 !
+/js/sync?visitor_id=
 /partner-analytics/*
 /friendbuy.min.js
 /pixel/?block_id=*&hash=*&host=
@@ -5213,6 +5233,14 @@ _tracking.php?b=
 .demdex.net/id^$empty,important
 ||omtrdc.net/id^$empty,important
 !
+||www.uz/counter/collect?
+||fernomius.com/event/
+||sweetshow.com/r_log.php
+||tubepleasure.com/r_log.php
+||analdin.com/de/player/html.php
+||baidu.com/xzhstatistics^
+||etl-xlmc-ssl.xunlei.com/api/stat^
+||sp0.baidu.com*/s.gif?l=$third-party
 ||static.metro.co.uk/rta2/
 ||metro.co.uk/wp-content/themes/metro-parent/dist/components/measurement.min.js
 ||wblt.oui.sncf/prod/*/vsca.js
@@ -6208,7 +6236,6 @@ thehill.com###block-thehill-blocks-amp-outbrain
 ||gjapplog.uc.cn/collect^
 ||hqq.tv/js/counters.js
 ||hqq.tv/cdn-cgi/trace
-||oload.tv/log|
 ||hqq.tv/js/gcounter.js
 ||hqq.tv/js/amung_counter.js
 ||reutersmedia.net/*/js/analytics/win-GTM.js$domain=mobile.reuters.com
@@ -6584,7 +6611,6 @@ dreamprogs.net##td[width="88"][height="31"]
 ||notebooksbilliger.de/*/webtrekk
 ||omniture.chip.de/b/ss/
 ||ooyala.com/sas/analytics?
-||openload.co/log|
 ||ophan.theguardian.com/a.gif
 ||orbitz.com/api/datacapture/track
 ||orbitz.com/cl/data/bingpixels.json?
@@ -6895,6 +6921,7 @@ link.gmapp*.net$image
 !+ NOT_PLATFORM(ios, ext_safari, ext_android_cb)
 ||adj.st^
 !
+||analytics.metrix.ir^
 ||hwstats.unity3d.com^
 ||dsp-tracking.unityads.unity3d.com^
 ||installtracker.unityads.unity3d.com^
@@ -7061,7 +7088,6 @@ link.gmapp*.net$image
 ||flurry.agentportal.*.yahoodns.net^
 ||analytics.rayjump.com^
 ||iapp-cp.nuggad.net^
-||2o7.net^
 ||4seeresults.com^
 ||abcd.mdc.akamaized.net/materials/index/?country=
 ||abtest.mistat.xiaomi.com^
@@ -7213,7 +7239,6 @@ link.gmapp*.net$image
 ||ups.ksmobile.net^
 ||ws.ksmobile.net^
 ||www-google-analytics.l.google.com^
-||xiti.com^
 ||xlmc.sec.miui.com^
 ||yadro.ru^
 ||yikyakapi.net/api/logEvent?
@@ -7291,6 +7316,39 @@ link.gmapp*.net$image
 !
 ! Exception rules that fix different issues caused by blocking trackers
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/45318
+@@||googletagservices.com/tag/js/gpt.js$domain=news.tvb.com
+@@||googletagmanager.com/gtm.js$domain=news.tvb.com
+@@||b.scorecardresearch.com/beacon.js$domain=news.tvb.com
+! Taboola newsfeed in the samsung browser:
+! https://news.internet.apps.samsung.com
+@@||images-dl.taboola.com^$domain=samsung.com
+@@||api.taboola.com^$domain=samsung.com
+! https://forum.adguard.com/index.php?threads/36199/
+@@||googletagmanager.com/gtm.js$domain=prostoprosport.ru
+! https://forum.adguard.com/index.php?threads/36096/
+@@||googletagmanager.com/gtm.js$domain=xn--80adinvscgek9d.xn--p1ai
+! fix ticket adding to the cart
+@@||cloud.roistat.com/dist/module.*$script,stylesheet,domain=britvabarber.ru|tickets.bckhimki.ru
+@@||cloud.roistat.com/api/site/$script,domain=britvabarber.ru|tickets.bckhimki.ru
+! breaks signing for a barber session
+@@||cloud.roistat.com/dist/module.*$script,stylesheet,domain=britvabarber.ru
+@@||cloud.roistat.com/api/site/$script,domain=britvabarber.ru
+! https://github.com/AdguardTeam/AdguardFilters/issues/45046
+@@||static.webclicks24.com/js/app.min.js^$domain=tubepleasure.com
+@@||static.webclicks24.com/images^$domain=tubepleasure.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/45056
+@@||luluhypermarket.com/_ui/shared/js/analyticsmediator.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/45044
+@@||static.webclicks24.com/images/$domain=sweetshow.com
+@@||static.webclicks24.com/js/app.min.js$domain=sweetshow.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/44948
+@@||embeddedanalytics.com/updateeakpi.html$domain=brocardi.it
+! https://github.com/AdguardTeam/AdguardFilters/issues/44837
+@@||experience.tinypass.com/xbuilder/experience/execute?aid=$domain=diepresse.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/44701
+||googletagservices.com/tag/js/gpt.js$domain=epaper.timesgroup.com,redirect=googletagservices-gpt,important
+@@||googletagservices.com/tag/js/gpt.js$domain=epaper.timesgroup.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/44731
 @@||cloudflare.com/ajax/libs/fingerprintjs2/*/fingerprint2.min.js$domain=nfmovies.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/44656
