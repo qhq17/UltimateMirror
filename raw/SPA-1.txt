@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: RUr2CJOBuSgoCByiF2XTvQ
+! Checksum: Dn6X+3BBgRIiYu2IwEJx7g
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish and Portuguese languages.
-! Version: 2.0.5.8
-! TimeUpdated: 2019-11-28T23:31:06+03:00
+! Version: 2.0.5.17
+! TimeUpdated: 2019-12-05T17:31:43+03:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#spanish
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -183,7 +183,6 @@
 ||informtext.blogspot.com^$third-party
 ||intrastats.com^$third-party
 ||italianos.it/2008/Tim/$third-party
-||keyade.com^$third-party
 ||kontextua.com^$third-party
 ||linkeasy.org^$third-party
 ||logs.eresmas.com^$third-party
@@ -244,10 +243,10 @@
 !
 ! AdRegain
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/45254
+@@||neoteo.com/wp-content/plugins/*/adblock-detector/advertisement.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/44950
 @@||libertaddigital.com/ad/adservice/banner/*/*.ad.json$domain=libertaddigital.com
-! https://github.com/AdguardTeam/AdguardFilters/issues/43752
-@@||doramedplay.com/wp-content/plugins/dh-anti-adblocker/assets/js/showads.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/41215
 @@||file4go.net/ads.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/39171
@@ -1125,6 +1124,7 @@ maisgasolina.com#?##main [id$="Block"][-ext-has='.adsbygoogle']
 !--------------------------------------!
 !------- JS rules ---------------------!
 !--------------------------------------!
+! https://github.com/AdguardTeam/AdguardFilters/issues/45361
 ! https://github.com/AdguardTeam/AdguardFilters/issues/44237
 ! https://github.com/AdguardTeam/AdguardFilters/issues/43603#issuecomment-553749336
 ! https://github.com/AdguardTeam/AdguardFilters/issues/42704
@@ -1327,6 +1327,8 @@ http://adw.
 !-------------------- Specific rules --------------------!
 !--------------------------------------------------------!
 !
+||topflix.tv/js/prot2.js
+||goyabu.uk/random.js
 cifraclub.com.br##div[id^="pub_"]
 cifraclub.com.br##.floatingBottomAd
 elnuevodia.com##div[class^="advertising"]
@@ -1335,6 +1337,11 @@ elnuevodia.com##.highlight-box-header-partner + div.tabs-gold
 revistamonet.globo.com##.middle-banner
 revistamonet.globo.com##.container-adv
 revistamonet.globo.com##li[data-item-type="advertising"]
+||wp.com/afiliados.hostgator.com.br^$domain=neemias.info
+||magazinevoce.com.br/js/banner.js
+||magazinevoce.com.br/neemiasinfo/banner^$domain=neemias.info
+neemias.info##.widget_themoneytizer_widget
+neemias.info###text-7
 sexomoda.com##iframe[src^="https://adserver.juicyads.com/"]
 ||lcgsr.seuseriado.com/js/
 seuseriado.com##.itfbppl_overlay
@@ -1502,6 +1509,7 @@ otempo.com.br##div[id^="ads-"]
 foros.3dgames.com.ar###posts > li.postcontainer[id^="yui-gen"]
 as.com##.publi-vertical
 as.com##.publi
+as.com##.slider-producto
 ||futbol-envivohd.com/publi/cerrar.png
 ||futbol-envivohd.com/publi/publi.png
 mundodonghua.com##.info-player > .banner-blue
@@ -1704,7 +1712,7 @@ xrivonet.info##.sidebar > #HTML1 > .widget-content [style="font-weight:bold;"]
 ||capodeportes.net/extremotv/arriba.php
 ||capodeportes.net/extremotv/lateral.php
 capodeportes.net##[id^="floatLayer"]
-liketvw.com,jaffmisshwedd.com,tvcanales.cf###ventana-flotante
+televisiongratishd.com,liketvw.com,jaffmisshwedd.com,tvcanales.cf###ventana-flotante
 rojadirectaonlinetv.com,extremotvplay.com##.sidebar > .encabezados:nth-child(2)
 ||drylnk.com/apu.php?zoneid=
 desdesoria.es###publitop
