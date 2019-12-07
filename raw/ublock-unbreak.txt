@@ -1807,11 +1807,16 @@ xtube.com#@#[style*="height: 330px;"]
 ! https://forums.lanik.us/viewtopic.php?f=64&t=42673&p=145936#p145933
 ! https://github.com/uBlockOrigin/uAssets/issues/5246#issuecomment-478177132
 ! https://github.com/uBlockOrigin/uAssets/issues/5246#issuecomment-478181113
+! https://forums.lanik.us/viewtopic.php?f=64&t=43957&p=151579#p151579
 @@||marketo.com/js/forms2/js/forms2.min.js$script,3p
 @@||marketo.com/index.php/form/$script,3p
-@@||marketo.com/js/forms2/*$css,domain=bettercloud.com
+@@||marketo.com/js/forms2/*$css
+@@||marketo.com/jsloader/*/loader.php.js$script,3p
+@@||marketo.com/index.php/form/$frame,3p
 ! https://github.com/uBlockOrigin/uAssets/issues/5246
 @@||munchkin.marketo.net/munchkin.js$badfilter
+! 
+@@||marketo.com^$script,frame,css,domain=pages.awscloud.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/4784#issuecomment-459778667
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=chicagotribune.com|mcall.com
@@ -2021,6 +2026,10 @@ readmng.com#@#div > iframe:first-child
 ! https://www.reddit.com/r/uBlockOrigin/comments/b1udi2/eztvio_select_show_dropdown_blocked/
 |https://$script,domain=eztv.ag|eztv.io|eztv.tf|eztv.yt,badfilter
 ||eztv.io^$csp=script-src 'self' 'unsafe-inline',badfilter
+! https://forums.lanik.us/viewtopic.php?f=64&t=43920#p151391
+eztv.io#@#a[href][target="_blank"]
+eztv.io#@#td > a[href][style]
+eztv.io#@#table[class] + * + * + table[width]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/5160
 ! To counter Peter Lowe's `qualtrics.com`
@@ -2836,9 +2845,6 @@ twitter.com#@#article[role="article"]:has-text(Promoted)
 @@||s.yimg.com/ss/rapid3.js$script,domain=techcrunch.com
 
 ! https://github.com/gorhill/uBO-Extra/issues/119#issuecomment-543469244
-@@||doubleclick.net/$script,domain=webmd.com
-@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=webmd.com
-@@||doubleclick.net/gampad/ads*www.webmd.com$xhr,domain=imasdk.googleapis.com
 */videoplayback?expire$media,redirect=noopmp3-0.1s,domain=webmd.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/6456
@@ -3059,16 +3065,29 @@ zone-anime.net##.code-block
 @@||volterra.us/cdn/*/advertise_policy*$~third-party
 @@||volterra.io/cdn/*/advertise_policy*$~third-party
 
-! https://github.com/uBlockOrigin/uAssets/issues/6541#issuecomment-559874594
-/homad-global-$badfilter
-
-! https://github.com/uBlockOrigin/uAssets/issues/6638
-@@||daumcdn.net/tiara/js/*/tiara.min.js$script,domain=tv.kakao.com
-||track.tiara.kakao.com/queen/footsteps$image,domain=tv.kakao.com
-
 ! https://github.com/DandelionSprout/adfilt/issues/7#issuecomment-560023272
 @@||amazon-adsystem.com/aax2/apstag.js$script,domain=gala.fr
 @@||tra.scds.pmdstatic.net/advertising-core-config/*/statics/gal-config.json$xhr,domain=gala.fr
 @@||tra.scds.pmdstatic.net/advertising-core-libs/*/prebid.js$script,domain=gala.fr
 @@||tra.scds.pmdstatic.net/bundle.php$xhr,domain=gala.fr
 @@||tra.scds.pmdstatic.net/pmd-browsertools/*$script,domain=gala.fr
+
+! https://www.reddit.com/r/uBlockOrigin/comments/e4zk0b/live_chat_link_disappears_when_ublock_is_enabled/
+@@||googletagmanager.com/gtm.js$script,domain=thenorthface.com
+
+! https://forums.lanik.us/viewtopic.php?f=64&t=43950&p=151548#p151548
+@@||tag.rightmessage.com^$domain=conservation-careers.com
+
+! https://www.reddit.com/r/uBlockOrigin/comments/e62v33/kissasian_comment_section_inaccessible/
+*$script,3p,domain=kissasian.sh,badfilter
+
+! https://www.reddit.com/r/uBlockOrigin/comments/e6do2r/seems_like_ublock_is_blocking_too_much/f9qd3ak/
+@@||tags.bkrtx.com/js/bk-coretag.js$script,domain=thequint.com
+
+! https://forums.lanik.us/viewtopic.php?f=91&t=43718&p=151658#p150548
+||systeme.io^$~image,third-party,badfilter
+
+! https://www.reddit.com/r/uBlockOrigin/comments/e6lash/cant_log_in_on_digital_news_website/
+@@||track.tagesanzeiger.ch^$script,1p
+@@||tagger.opecloud.com^$xhr,domain=tagesanzeiger.ch
+@@||tgt.tamedia.ch/*/api/$xhr,domain=tagesanzeiger.ch
