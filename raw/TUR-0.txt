@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: 6mpYztox0SFNpwnkWnMZhQ
+! Checksum: coiZcb5WdxihH/MyK/4h5w
 ! Title: AdGuard Turkish filter
 ! Description: Filter list that specifically removes ads on websites in Turkish language.
-! Version: 2.0.11.14
-! TimeUpdated: 2019-12-06T02:30:18+03:00
+! Version: 2.0.11.18
+! TimeUpdated: 2019-12-06T20:30:17+03:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#turkish
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -360,11 +360,13 @@
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/44479
 @@||cdnjs.cloudflare.com/ajax/libs/fuckadblock/3.2.1/fuckadblock.min.js$domain=turkanime.net
-@@||server.cpmstar.com/view.aspx?poolid=$domain=turkanime.net
-@@||server.cpmstar.com/cached/js/lib.js$domain=turkanime.net
-@@||server.cpmstar.com/cached/zonefiles/*_turkanime.js$domain=turkanime.net
-@@||server.cpmstar.com/cached/js/textad_async_*.pack.js$domain=turkanime.net
-@@||ssl.cdne.cpmstar.com/cached/zonemasters/mobilemodules.js$domain=turkanime.net
+!+ NOT_PLATFORM(windows, mac, android)
+@@||ssl.cdne.cpmstar.com/cached/creatives/*/300x250.v3.jpg$xmlhttprequest,domain=turkanime.net
+! @@||server.cpmstar.com/view.aspx?poolid=$domain=turkanime.net
+! @@||server.cpmstar.com/cached/js/lib.js$domain=turkanime.net
+! @@||server.cpmstar.com/cached/zonefiles/*_turkanime.js$domain=turkanime.net
+! @@||server.cpmstar.com/cached/js/textad_async_*.pack.js$domain=turkanime.net
+! @@||ssl.cdne.cpmstar.com/cached/zonemasters/mobilemodules.js$domain=turkanime.net
 ! https://github.com/AdguardTeam/AdguardFilters/issues/45302
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=bunuokusana.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/45303
@@ -769,6 +771,7 @@ vizyonfilmizle.tv#$?#.fancybox-overlay-fixed[-ext-has="> div"] { display: none!i
 vizyonfilmizle.tv#$?#.fancybox-lock body[-ext-has="> div"] { overflow: visible!important; }
 vizyonfilmizle.tv#$?#html[-ext-has="> body"] { overflow: visible!important; }
 !
+turkanime.net#?#.row > .col-xs-12[style] > .panel:has(> .panel-ust > .panel-title:contains(/^ÜCRETSİZ MMPORG OYUNLAR$/))
 yenimeram.com.tr#?#section > div.textwidget:has(> p > a[target="_blank"][rel^="noopener"])
 gidaturk.com.tr#?#.main_container + div.main-sidebar > div.tr_e3lan-widget:has(img[alt="ad"])
 gidaturk.com.tr#?#.tr_e3lan-widget:has(> script)
@@ -1172,6 +1175,7 @@ turkanime.tv#?#td[valign="top"][style="padding-top:10px; padding-left:5px; width
 ! END: Clickunders
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/45496
 ! https://github.com/AdguardTeam/AdguardFilters/issues/44026
 ! https://github.com/AdguardTeam/AdguardFilters/issues/43976
 ! https://github.com/AdguardTeam/AdguardFilters/issues/43030
@@ -1817,6 +1821,7 @@ sinemapol.org#$##video { display: block!important; }
 !
 ! Removing branded background
 !
+filmkovani.com#$#body { background-color: #000!important; }
 pchocasi.com.tr#$#body { background-image: none!important; }
 filmionlineizle.pw#$#body { background-image: none!important; }
 sineturk.pw#$#body { background-image: none!important; }
@@ -2032,6 +2037,16 @@ filmmodu.co,dizifilmix.org,sineturk.pw,altyazilifilmizle.tv,1080pfilmizle.net,do
 ! move to general_url.txt later
 /thumb.php?src=*/images/banner/*
 !
+filmkovani.com##.dqstfzuwc
+filmkovani.com###cash2hive
+filmkovani.com##body > a[href][target="_blank"][rel="nofollow"]
+filmkovani.com##a[href^="https://www.filmkovani.com/wp-content/api/zone"][target="_blank"]
+||filmkovani.com/ajax/login-ajax.php|
+||filmkovani.com/wp-content/cache/*.mp4
+tplayer.e-kredim.org###clk_btn
+||tplayer.e-kredim.org/public/js_pop.js
+||rapidrame.com/js/js_pop.js
+720p-izle.com##div[class="oval golge a950"][style^="padding:"]
 yenimeram.com.tr##a[href="http://www.torku.com.tr/"]
 gidaturk.com.tr##.widget_custom_html
 gidaturk.com.tr##.main_container + div.main-sidebar a:not([href*="gidaturk.com.tr"]) > img
@@ -2093,8 +2108,6 @@ koinbulteni.com##.leaderboard-1-banner
 dizitube.net##.yatay-reklam
 filmkovani.com##a[href^="https://clbanners"]
 filmkovani.com##a[href][target="_blank"][rel="nofollow"] > img
-||filmkovani.com/ajax/libs.php
-||filmkovani.com/cloudflare/loader.php
 720p-izle.com##div[id$="TextContainer"] > div[style^="background:"]
 ||asusetkinlik1.com/reklam
 ||fullhdfilmizle24.com/pop.js
@@ -2495,7 +2508,7 @@ gmag.com.tr##.entry-content > div.code-block > a[target="_blank"] > img
 /amca*.js$domain=limitsizamca.org
 /limitsizamca.js$domain=limitsizamca.org
 uludagsozluk.com##.offset-index > a[href^="http://bit.ly/"][target="_blank"]
-hdfilmcehennemi1.com##a[href*="/click.php"][target="_blank"] > img
+hdfilmcehennemi1.com##a[href][target="_blank"][rel="nofollow"] > img
 ||tikobahis.org/*.mp4$domain=hdfilmcehennemi1.com
 ||mp3indirelim.com/uploads/banner.gif
 ||mp3indirelim.com/uploads/tvbet_jackpot_300h250_tr.gif
@@ -5167,7 +5180,7 @@ posta.com.tr##.bannerContent
 siirtliler.net##.banner_320x50
 karar.com##.banner_alani
 turkiyegazetesi.com.tr##.banner_article
-magazind.net,ajans32tv.com,bolugundem.com,ozgurkocaeli.com.tr##.banner_code
+arti49.com,magazind.net,ajans32tv.com,bolugundem.com,ozgurkocaeli.com.tr##.banner_code
 karnaval.com##.banner_container
 tarsushaber.com##.banner_pos
 filmiizle.gen.tr##.bannergroup-pageskin
