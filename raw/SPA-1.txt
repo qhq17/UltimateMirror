@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: Dn6X+3BBgRIiYu2IwEJx7g
+! Checksum: P3nXVPVctqepSLhDJHB0MQ
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish and Portuguese languages.
-! Version: 2.0.5.17
-! TimeUpdated: 2019-12-05T17:31:43+03:00
+! Version: 2.0.5.21
+! TimeUpdated: 2019-12-12T13:31:40+03:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#spanish
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -72,6 +72,7 @@
 !
 ! https://forum.adguard.com/index.php?threads/ivoox-com-podcasts-issues.29530/
 ! ||addevweb.com^$third-party
+||potu.xyz^
 ||afiliados.hostgator.com.br^$third-party
 ||ymonetize.com^$third-party
 ||cowcash.net^$third-party
@@ -1124,6 +1125,8 @@ maisgasolina.com#?##main [id$="Block"][-ext-has='.adsbygoogle']
 !--------------------------------------!
 !------- JS rules ---------------------!
 !--------------------------------------!
+! https://github.com/AdguardTeam/AdguardFilters/issues/45783
+! https://github.com/AdguardTeam/AdguardFilters/issues/45492
 ! https://github.com/AdguardTeam/AdguardFilters/issues/45361
 ! https://github.com/AdguardTeam/AdguardFilters/issues/44237
 ! https://github.com/AdguardTeam/AdguardFilters/issues/43603#issuecomment-553749336
@@ -1167,6 +1170,8 @@ maisgasolina.com#?##main [id$="Block"][-ext-has='.adsbygoogle']
 !--------------------------------------!
 !------- CSS fixes --------------------!
 !--------------------------------------!
+! mastercuriosidadesbr.com - skip timer
+mastercuriosidadesbr.com#$#iframe.video { display: block!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/41813
 diariodoiguacu.com.br#$#div[class="vc_row wpb_row td-pb-row"][style^="padding-top: 1"] { padding-top: 0 !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/34146
@@ -1327,6 +1332,8 @@ http://adw.
 !-------------------- Specific rules --------------------!
 !--------------------------------------------------------!
 !
+repelisplus.vip###adxx
+||descargaranimehentai.com/unrmnewzpt.php
 ||topflix.tv/js/prot2.js
 ||goyabu.uk/random.js
 cifraclub.com.br##div[id^="pub_"]
@@ -3097,6 +3104,8 @@ urlcloud.us##.banner
 !
 ! White list. Fixing filtration errors (false-positive)
 !
+! rapidotorrents.net - fixes incorrectly blocked images
+@@||i.imgur.com^$domain=rapidotorrents.net
 ! https://github.com/AdguardTeam/AdguardFilters/issues/44371
 @@||glbimg.com/*/300x250/smart/$domain=revistamonet.globo.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/43603
