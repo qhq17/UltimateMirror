@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: 5hjPwiV7Ei5ceKUjb0hkcg
+! Checksum: gZtRK+BbJCHOYcORd41v3w
 ! Title: AdGuard Tracking Protection filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.10.96
-! TimeUpdated: 2019-12-11T21:03:14+03:00
+! Version: 2.0.11.1
+! TimeUpdated: 2019-12-15T20:31:07+03:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#privacy
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -98,6 +98,7 @@
 !
 ! Hide counters images
 !
+##amp-embed[type="taboola"]
 ###qoo-counter
 ###ramblerCounter
 ###top100counter
@@ -151,6 +152,7 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ! ||e.crashlytics.com^
 ! ||settings.crashlytics.com^
 !
+||ringsrecord.com^$third-party
 ||plantdigestion.com^$third-party
 ||leadsmonitor.io^$third-party
 ||audsp.com^$third-party
@@ -3509,6 +3511,7 @@ nethunt.com/api/v1/track/email/$image
 !+ NOT_PLATFORM(ios, ext_safari, ext_android_cb)
 ||tags.news.com.au^$~script
 !
+||d1miwkthq39xj8.cloudfront.net^$third-party
 ||stats1.wpmudev.com^$third-party
 ||stats.wpmucdn.com^$third-party
 ||stat.thestartmagazine.com^
@@ -4373,7 +4376,6 @@ nethunt.com/api/v1/track/email/$image
 ||log.invodo.com^$third-party
 ||log.iyunmai.com^$empty
 ||log.krs-ix.ru^
-||log.musical.ly^$empty
 ||log.outbrain.com^
 ||log.pinterest.com^$third-party
 ||logger.virgul.com^$third-party
@@ -4886,7 +4888,6 @@ charlestownwyllie.oaklawnnonantum.com^
 ||eclick.baidu.com^
 ||epiv.cardlytics.com^$third-party
 ||event.scimo.io^
-||events-endpoint-*.amazonaws.com^
 ||events.apester.com^$third-party
 ||events.mobile.optimizely.com^
 ||exacttarget.api.mashery.com^
@@ -4962,6 +4963,11 @@ charlestownwyllie.oaklawnnonantum.com^
 ||xtag.autotrader.com^
 ||xtag.kbb.com^
 ||zdlogs.sphereup.com^
+! Tiktok app
+||log.musical.ly^
+||log2.musical.ly^
+||frontier.musical.ly^
+||xlog-va.musical.ly^
 !-------------------------------------------------------------------------------!
 !-------------- General (unsorted) url blocking --------------------------------!
 !-------------------------------------------------------------------------------!
@@ -5238,6 +5244,8 @@ _tracking.php?b=
 ||nd.demdex.net/event?d_mid=$empty,important,domain=9now.com.au
 ||adc.nine.com.au/?token=$empty,important,domain=9now.com.au
 !
+||asadcdn.com/bt^
+||merkur.de/_cua.html
 ||cdn.cr.org/etc/designs/electronics/clientlibs/tracking.js
 ||run.crtx.info/track.min.js
 ||track.searchiq.co/api/tr?callback=*&event=
@@ -7324,6 +7332,9 @@ link.gmapp*.net$image
 !
 ! Exception rules that fix different issues caused by blocking trackers
 !
+! EasyPrivacy Exclusion (iOS)
+! https://github.com/AdguardTeam/AdguardFilters/issues/45992
+@@||asadcdn.com/adlib/pages/sport1.js$domain=sport1.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/45761
 @@||player-feedback-v1.glomex.com/pf/|$domain=player.glomex.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/45755
