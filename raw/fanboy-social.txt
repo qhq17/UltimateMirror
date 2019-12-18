@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: CtEZpzq6bEM7MLUhrYYHmQ
-! Version: 201912070342
+! Checksum: 6pWvneWVrJf9pOOAn1eWzA
+! Version: 201912181221
 ! Title: Fanboy's Social Blocking List
-! Last modified: 07 Dec 2019 03:42 UTC
+! Last modified: 18 Dec 2019 12:21 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.to/
 ! License: http://creativecommons.org/licenses/by/3.0/
@@ -653,6 +653,7 @@
 /facebookred.
 /facebookShare-
 /facebookshare.
+/facebooksharebutton.
 /FacebookShares?
 /facebooksmall2.
 /facebooksocialplugins.
@@ -1438,6 +1439,7 @@
 /instagram-icon.
 /instagram-logo-
 /instagram-logo.
+/instagram-widget-
 /instagram.svg
 /instagram1.gif
 /instagram_48.
@@ -3510,6 +3512,7 @@ _youtube_social_
 ###cojp_social
 ###colBoxTwitterLink
 ###coma_social_share
+###commentsShare
 ###communityshare
 ###component-sharethis
 ###component-sharethis-horiz-border
@@ -3573,6 +3576,7 @@ _youtube_social_
 ###desktop-share-wrapper
 ###desktop-social-buttons
 ###detailHeadlineStickySocial
+###details-share-icon-link
 ###dhSocial
 ###diaspora-button-container
 ###digg-widget
@@ -4753,6 +4757,7 @@ _youtube_social_
 ###shareMenu
 ###shareOptionMore
 ###shareOverlay
+###sharePage
 ###sharePageButtons
 ###sharePageControl
 ###sharePinterest
@@ -11116,6 +11121,7 @@ _youtube_social_
 ##.post-share-panel
 ##.post-share-pt
 ##.post-share-row
+##.post-share-toolbar
 ##.post-share-twitter
 ##.post-share-widget
 ##.post-sharebox
@@ -11843,6 +11849,7 @@ _youtube_social_
 ##.share-tw
 ##.share-twitter
 ##.share-twitter-icon
+##.share-via-facebook
 ##.share-viber
 ##.share-video
 ##.share-video-link
@@ -14477,6 +14484,8 @@ _youtube_social_
 ##.tge-sharing-buttons
 ##.tgla7-share
 ##.th-sharecounts
+##.thb-social-links-container
+##.thb-social-top
 ##.the-social-links
 ##.theChampSharing
 ##.the_champ_sharing_container
@@ -18175,6 +18184,7 @@ nikkei-cnbc.co.jp##.twitter
 !
 !---------- German Site Specific Hiding Rules ----------
 !
+visitberlin.de###block-page-tools
 finanznachrichten.de###bookmarks_container
 clipfish.de###cf-player-googleplus
 clipfish.de###cf-player-twitter
@@ -18910,7 +18920,7 @@ appspot.com,younow.com#@#.btn-instagram
 appspot.com,foodit.com#@#.btn-linkedin
 appspot.com#@#.btn-reddit
 azlyrics.com,theoldreader.com,userzoom.com#@#.btn-share
-bacardi.com,bellazon.com,bintray.com,epaka.pl,filterlists.com,freecodecamp.org,player.fm,swappa.com,thegamebusters.it,webgate.ec.europa.eu#@#.btn-social
+bacardi.com,bellazon.com,bintray.com,epaka.pl,filterlists.com,freecodecamp.org,player.fm,stimulusjs.org,swappa.com,thegamebusters.it,webgate.ec.europa.eu#@#.btn-social
 appspot.com#@#.btn-social-icon
 accounts.pixiv.net,appspot.com,crowdin.net,curiouscat.me,help.getadblock.com,magine.com,qz.com,setlist.fm,thegamebusters.it,webgate.ec.europa.eu,younow.com#@#.btn-twitter
 rockstargames.com#@#.btnFacebook
@@ -18958,13 +18968,14 @@ jappy.de#@#.facebookbutton
 100pour100foot.fr,6ter.fr,achetezfacile.com,clubic.com,deco.fr,fan2.fr,girondins.com,groupem6.fr,jeuxvideo.fr,jolidressing.com,m6.fr,m6blog.fr,m6bonus.fr,m6info.fr,m6jeux.fr,m6kid.fr,m6mobile.fr,m6pubdigital.fr,minuitsexy.fr,minutefacile.com,mobinaute.com,neteco.com,nouvellestar.fr,ozap.com,paris-premiere.fr,teva.fr,turbo.fr,w9.fr,wideo.fr#@#.fb-box
 academia.edu,twitter.com#@#.fb-btn
 airbnb.cat,airbnb.com,airbnb.de,dobreprogramy.pl#@#.fb-button
+mediaexpert.leszczynscy.pl#@#.fb-container
 kizlarsoruyor.com#@#.fb-content
 firebase.google.com#@#.fb-dialog
 allegro.pl,itweb.co.za#@#.fb-icon
 e-biznes.pl,facebook.com,fb.com#@#.fb-like
 facebook.com#@#.fb-likebox
 facebook.com,fb.com#@#.fb-link
-cieplikpodrozuje.pl,fashionvoyager.pl,majkrafci.pl#@#.fb-page
+cieplikpodrozuje.pl,fashionvoyager.pl,majkrafci.pl,mediaexpert.leszczynscy.pl#@#.fb-page
 facebook.com#@#.fb-quote
 facebook.com#@#.fb-recommendations
 facebook.com#@#.fb-recommendations-bar
@@ -19076,7 +19087,7 @@ marieclaire.ru#@#.pinterestShare
 google.at,google.be,google.ca,google.ch,google.co.id,google.co.il,google.co.in,google.co.jp,google.co.ke,google.co.th,google.co.za,google.com,google.com.ar,google.com.au,google.com.br,google.com.hk,google.com.mx,google.com.tr,google.com.ua,google.cz,google.dk,google.es,google.fi,google.fr,google.hu,google.it,google.nl,google.pl,google.ro,google.ru,google.se,google.sk#@#.plusone
 privatecore.com#@#.post-fb
 facebook.com#@#.post-fb-like
-23-59.com.ua,kliknijwzdrowie.pl,maze.fr,pokoleniesmart.pl,truepundit.com,velodaily.ru#@#.post-share-container
+23-59.com.ua,kliknijwzdrowie.pl,maze.fr,pokoleniesmart.pl,tidssonen.no,truepundit.com,velodaily.ru#@#.post-share-container
 imgur.com#@#.post-share-panel
 reddit.com#@#.post-sharing
 guildwars2.com#@#.post-social
@@ -19260,7 +19271,7 @@ amazon.co.uk,amazon.com,amazon.com.au,amazon.de,amazon.fr,gitlab.com,reddit.com,
 fewo-direkt.de,nvidia.pl#@#.subscribe-container
 nvidia.pl#@#.subscribe-text
 first-class-and-more.de,geekgamer.tv#@#.subscribe-widget
-mozvr.com#@#.tag-social
+greenlemon.me,mozvr.com#@#.tag-social
 twitch.tv#@#.tw-icon
 twitch.tv#@#.tw-share
 chinadaily.com.cn,twitch.tv#@#.twBox
@@ -19281,6 +19292,7 @@ electnext.com#@#.twitter-share
 boingboing.net#@#.twitter-share-button
 nothiefsallowed.com,twitter.com#@#.twitter-timeline
 about.me,busqueda.com.uy,modhoster.com,mozillamessaging.com,pinterest.com#@#.twitter.icon
+feedly.com#@#.twitterFeeds
 simonscat.com#@#.twitterShare
 pinterest.com#@#.twitterWrapper
 twitter.com#@#.twtr-widget
@@ -19702,6 +19714,7 @@ fark.com,github.com,github.io,marketplace.firefox.com,vvhp.net#@#img[title="YouT
 @@||jrjimg.cn/js.do?f=/share/js/
 @@||jsfiddle.net^$generichide
 @@||junglevibe2.net/min/?$script
+@@||justwatch.com^$generichide
 @@||kcrw.com^*/images/social-icons-$image,domain=kcrw.com
 @@||keepa.com/img/social/Google.svg
 @@||koszykowkanawozkach.pl^*/Header-facebook.jpg
@@ -19717,6 +19730,7 @@ fark.com,github.com,github.io,marketplace.firefox.com,vvhp.net#@#img[title="YouT
 @@||letyshops.com/build/core/images/fb-white.
 @@||lifetricks.com/wp-content/plugins/nextend-facebook-connect/
 @@||liggoo.com/min/?$script
+@@||limanowianin.in/wp-content/plugins/soslider-social-slider/js/jquery.soslider.min.js$script
 @@||lipis.github.io^$generichide
 @@||livescience.com/images/site/social/footer_*.gif
 @@||login.kataweb.it^*/sprite-social.png
@@ -19925,6 +19939,7 @@ fark.com,github.com,github.io,marketplace.firefox.com,vvhp.net#@#img[title="YouT
 @@||stipple.cachefly.net^$domain=stipple.com
 @@||stuff.co.nz/video/*.mp4$media
 @@||style.aliunicorn.com/js/$script,domain=alibaba.com
+@@||superstars.news/wp-content/uploads/*-social-media-$image,~third-party
 @@||swappa.com/static/icons/social/login_$image
 @@||symantec.com/content/*/about/images/social/b-$image
 @@||syndication.twitter.com/tweets.json?*&callback=$script
