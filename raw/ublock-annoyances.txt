@@ -573,7 +573,9 @@ tweakers.net##.notificationsContainer:has-text(whitelisten of beleef Tweakers)
 hqq.tv##+js(setTimeout-defuser.js, check, 100)
 
 ! https://github.com/NanoMeow/QuickReports/issues/29
+! https://reddit.com/r/uBlockOrigin/comments/ea6rv3
 zerohedge.com###abd-banner
+zerohedge.com##.modal__overlay
 
 ! https://github.com/NanoMeow/QuickReports/issues/30
 firstonetv.net##+js(setTimeout-defuser.js, fadeIn, 3000)
@@ -2076,8 +2078,9 @@ cepuluh.com##+js(remove-attr.js, oncontextmenu|onkeydown|onmousedown)
 cinemahd.eu##+js(abort-on-property-write.js, document.onkeydown)
 cinemahd.eu##+js(remove-attr.js, oncontextmenu)
 
-! globalnews .ca/news/2093794/couples-wedding-photo-captures-moment-before-massive-summer-storm/
+! https://github.com/NanoMeow/QuickReports/issues/1324
 @@||globalnews.ca^$generichide
+globalnews.ca##.ad-container
 
 ! https://github.com/uBlockOrigin/uAssets/issues/5321
 dailymail.co.uk##^script:has-text(We think our Android)
@@ -2863,9 +2866,6 @@ dreamlandresort.com##+js(aopr, alert)
 hebrew4christians.com##+js(acis, document.oncontextmenu)
 hebrew4christians.com##+js(ra, onselectstart|ondragstart)
 
-! https://github.com/NanoMeow/QuickReports/issues/2298
-gazzetta.it##+js(aeld, adblockActivated)
-
 ! jpopsingles.eu right click, select, function keys
 jpopsingles.eu##+js(aopw, stopPrntScr)
 ||jpopsingles.eu^$csp=style-src *
@@ -2940,3 +2940,71 @@ skidrowreloaded.com##+js(acis, document.onmousedown)
 
 ! https://github.com/NanoMeow/QuickReports/issues/2465
 magyarhang.org##+js(aopw, ai_adb)
+
+! https://github.com/uBlockOrigin/uAssets/issues/6672 
+/snow.js|$script,domain=medistore.se|nordiskehandel.com|nordiskehandel.se|simbutiken.se
+
+! adevarul .ro tricky copy text
+adevarul.ro##+js(aopr, addLink)
+
+! https://github.com/NanoMeow/QuickReports/issues/2469
+mobilarena.hu##+js(nosiif, 0x)
+mobilarena.hu##+js(nostif, 0x)
+
+! https://github.com/uBlockOrigin/uAssets/issues/6659
+hindipix.*,hqq.tv,putlock.org##+js(set, console.debug, trueFunc)
+hindipix.*,hqq.tv,putlock.org##+js(set, console.clear, trueFunc)
+hindipix.*,hqq.tv,putlock.org##+js(set, h, noopFunc)
+
+! https://github.com/NanoMeow/QuickReports/issues/2476
+kusonime.com##+js(acis, document.oncontextmenu)
+kusonime.com##+js(acis, document.onkeydown)
+kusonime.com##+js(acis, addEventListener, which)
+
+! https://github.com/NanoAdblocker/NanoFilters/issues/434
+statesman.com##+js(aopr, googletag)
+
+! https://github.com/NanoMeow/QuickReports/issues/2488
+harunasubs.web.id##+js(acis, document.oncontextmenu)
+
+! https://github.com/NanoMeow/QuickReports/issues/2487
+otakudesu.org##+js(acis, document.oncontextmenu)
+otakudesu.org##+js(acis, window.addEventListener, ctrlKey)
+
+! https://github.com/NanoMeow/QuickReports/issues/2486
+samehadaku.tv##+js(acis, document.oncontextmenu)
+samehadaku.tv##+js(acis, document.onkeydown)
+samehadaku.tv##+js(acis, window.addEventListener, ctrlKey)
+samehadaku.tv##+js(aopr, disableSelection)
+
+! https://github.com/easylist/EasyListHebrew/issues/324#issuecomment-565395081
+themarker.com##[href*="4.90"]:nth-ancestor(4)
+
+! https://github.com/uBlockOrigin/uAssets/issues/6683
+||maskmagazine.com/assets/substrate.png$image,1p
+
+! https://github.com/uBlockOrigin/uAssets/issues/6585#issuecomment-565731774
+fcportables.com##+js(aeld, /^(contextmenu|copy|dragstart|selectstart)$/)
+
+! https://github.com/NanoMeow/QuickReports/issues/2496
+mikanime.com##+js(aopr, nocontext)
+mikanime.com##+js(acis, disableSelection, reEnable)
+mikanime.com##*:style(-webkit-touch-callout: default !important; -webkit-user-select: text !important;-moz-user-select: text !important;-ms-user-select: text !important;user-select: text !important;)
+
+! https://github.com/NanoMeow/QuickReports/issues/2497
+wizardsubs.com##+js(acis, disableSelection, reEnable)
+wizardsubs.com##+js(aopr, nocontext)
+wizardsubs.com##*:style(-webkit-touch-callout: default !important; -webkit-user-select: text !important;-moz-user-select: text !important;-ms-user-select: text !important;user-select: text !important;)
+
+! https://github.com/NanoMeow/QuickReports/issues/2504
+pehawe.me##*:style(-webkit-touch-callout: default !important; -webkit-user-select: text !important;-moz-user-select: text !important;-ms-user-select: text !important;user-select: text !important;)
+
+! https://github.com/NanoMeow/QuickReports/issues/2508
+@@||index.hr^$ghide
+index.hr##.ad-container
+
+! https://github.com/NanoMeow/QuickReports/issues/2520
+@@||cnnturk.com^$ghide
+
+! https://github.com/uBlockOrigin/uAssets/issues/6701
+estadao.com.br##+js(aeld, copy)
