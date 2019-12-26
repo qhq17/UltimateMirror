@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: P3nXVPVctqepSLhDJHB0MQ
+! Checksum: wIjObM41K5GDFSVJd5q0yg
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish and Portuguese languages.
-! Version: 2.0.5.21
-! TimeUpdated: 2019-12-12T13:31:40+03:00
-! Expires: 2 days (update frequency)
+! Version: 2.0.5.28
+! TimeUpdated: 2019-12-23T19:31:39+03:00
+! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#spanish
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
 !
@@ -244,6 +244,9 @@
 !
 ! AdRegain
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/46412
+eletronicabr.com#@#.adsbygoogle
+eletronicabr.com#$#.adsbygoogle { position: absolute!important; left: -3000px!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/45254
 @@||neoteo.com/wp-content/plugins/*/adblock-detector/advertisement.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/44950
@@ -313,11 +316,13 @@ animesonline.cz#@#.afs_ads
 ! https://github.com/AdguardTeam/AdguardFilters/issues/32516
 !+ PLATFORM(ext_ff, ext_opera, ios, ext_android_cb, ext_safari, ext_ublock)
 @@||pokexgames-tutoriais.blogspot.com^$generichide
+! https://github.com/AdguardTeam/AdguardFilters/issues/46190
 ! https://github.com/AdguardTeam/AdguardFilters/issues/43447
 ! https://github.com/AdguardTeam/AdguardFilters/issues/39889
 ! https://github.com/AdguardTeam/AdguardFilters/issues/32467
-@@||tatsumaki.cf/ads/ad.min.js
+@@/ad.min.js$domain=animeshouse.net
 @@/ads/ad*.js$domain=animeshouse.net|feralhosting.com
+@@||paradiseirltrue.tk/$script,domain=animeshouse.net
 @@||tatsumaki.cf/$script,domain=animeshouse.net|feralhosting.com
 @@||animeshouse.net/*/ads.js
 animeshouse.biz#@#.afs_ads
@@ -667,6 +672,7 @@ noticias.mrpiracy.xyz#@##adsense
 ! https://github.com/AdguardTeam/AdguardFilters/issues/14875
 ! https://github.com/AdguardTeam/AdguardFilters/issues/14707
 @@||sakuraanimes.com/ANAD/advertisement.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/45940
 ! https://github.com/AdguardTeam/AdguardFilters/issues/40164
 ! https://github.com/AdguardTeam/AdguardFilters/issues/36734
 ! https://github.com/AdguardTeam/AdguardFilters/issues/34336
@@ -996,6 +1002,8 @@ jokerfansub.com#@##adsense
 ! https://github.com/AdguardTeam/AdguardFilters/issues/24801
 yahoo.com#?#ul[class^="Mb(0)"] > li.js-stream-content:has(> div > a[rel="nofollow noopener noreferrer"]+div:contains(Patrocinado))
 !
+unionleitor.top#?#.col-md-4 > h2:contains(/^Publicidade$/)
+animeflv.net#?#.Container section.WdgtCn:has(> .OUTBRAIN)
 sexomoda.com#?#.column.middle > article:has(> span#ze)
 paginasiete.bo#?##main-content > .region > .fila > .container > .row[id] > .col-md-4.p33:has(> .cleft:only-child > .bnn > div[id^="div-gpt-ad"])
 r7.com#?#.column  > div > div[class="box rw flex show-box-flex"]:has(> div > div.proporcinal4columns a[href^="http://pubads.g.doubleclick.net/"])
@@ -1125,6 +1133,7 @@ maisgasolina.com#?##main [id$="Block"][-ext-has='.adsbygoogle']
 !--------------------------------------!
 !------- JS rules ---------------------!
 !--------------------------------------!
+! https://github.com/AdguardTeam/AdguardFilters/issues/45935
 ! https://github.com/AdguardTeam/AdguardFilters/issues/45783
 ! https://github.com/AdguardTeam/AdguardFilters/issues/45492
 ! https://github.com/AdguardTeam/AdguardFilters/issues/45361
@@ -1332,6 +1341,9 @@ http://adw.
 !-------------------- Specific rules --------------------!
 !--------------------------------------------------------!
 !
+online-dvdrip.com##.mvic-btn > a.btn-successful[target="_blank"]
+onyxplay.com###ad
+||hoy21.com^$domain=animeflv.net
 repelisplus.vip###adxx
 ||descargaranimehentai.com/unrmnewzpt.php
 ||topflix.tv/js/prot2.js
