@@ -2830,7 +2830,7 @@ webtor.io#@#.adsbox
 
 ! https://github.com/NanoMeow/QuickReports/issues/2240
 foxnews.com##:xpath(//*[contains(text(),"blocking software")]/../../..)
-/google-funding-choices.js$script,domain=foxnews.com,important
+/google-funding-choices.js$script,domain=foxnews.com
 
 ! smartpeople .id right click, select
 smartpeople.id##+js(ra, onkeydown|oncontextmenu|onselectstart|ondragstart)
@@ -2950,6 +2950,8 @@ adevarul.ro##+js(aopr, addLink)
 ! https://github.com/NanoMeow/QuickReports/issues/2469
 mobilarena.hu##+js(nosiif, 0x)
 mobilarena.hu##+js(nostif, 0x)
+! https://github.com/uBlockOrigin/uAssets/issues/6714
+gamepod.hu,itcafe.hu,prohardver.hu##+js(nostif, , 7000)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/6659
 hindipix.*,hqq.tv,putlock.org##+js(set, console.debug, trueFunc)
@@ -3008,3 +3010,19 @@ index.hr##.ad-container
 
 ! https://github.com/uBlockOrigin/uAssets/issues/6701
 estadao.com.br##+js(aeld, copy)
+
+! https://github.com/NanoMeow/QuickReports/issues/2528
+kimkazandi.com##*:style(-webkit-touch-callout: default !important; -webkit-user-select: text !important;-moz-user-select: text !important;-ms-user-select: text !important;user-select: text !important;)
+kimkazandi.com##.autoplay
+
+! https://github.com/NanoMeow/QuickReports/issues/2530
+@@||bloomberght.com^$ghide
+
+! https://github.com/NanoMeow/QuickReports/issues/2535
+minecraftforge.net##+js(nostif, body)
+
+! https://github.com/NanoMeow/QuickReports/issues/2545
+forum.nlmod.net##+js(acis, document.createElement, adblock)
+
+! impotsurlerevenu.or enable right click
+impotsurlerevenu.org##+js(aopr, alerte_declanchee)
