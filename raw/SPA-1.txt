@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: wIjObM41K5GDFSVJd5q0yg
+! Checksum: TYOfs8SWWNXAkf3vYeg1hw
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish and Portuguese languages.
-! Version: 2.0.5.28
-! TimeUpdated: 2019-12-23T19:31:39+03:00
+! Version: 2.0.5.33
+! TimeUpdated: 2019-12-31T13:31:40+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#spanish
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -72,6 +72,7 @@
 !
 ! https://forum.adguard.com/index.php?threads/ivoox-com-podcasts-issues.29530/
 ! ||addevweb.com^$third-party
+||widgets.informars.com^
 ||potu.xyz^
 ||afiliados.hostgator.com.br^$third-party
 ||ymonetize.com^$third-party
@@ -244,6 +245,10 @@
 !
 ! AdRegain
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/46694
+@@||luchaonline.com/*/js/adsbygoogle.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/46603
+@@||p.jwpcdn.com/player/*/googima.js$domain=13.cl
 ! https://github.com/AdguardTeam/AdguardFilters/issues/46412
 eletronicabr.com#@#.adsbygoogle
 eletronicabr.com#$#.adsbygoogle { position: absolute!important; left: -3000px!important; }
@@ -1002,6 +1007,7 @@ jokerfansub.com#@##adsense
 ! https://github.com/AdguardTeam/AdguardFilters/issues/24801
 yahoo.com#?#ul[class^="Mb(0)"] > li.js-stream-content:has(> div > a[rel="nofollow noopener noreferrer"]+div:contains(Patrocinado))
 !
+terra.com.br#?#.table-related-content-new:has(> #related-bellow-news > .taboola-placeholder)
 unionleitor.top#?#.col-md-4 > h2:contains(/^Publicidade$/)
 animeflv.net#?#.Container section.WdgtCn:has(> .OUTBRAIN)
 sexomoda.com#?#.column.middle > article:has(> span#ze)
@@ -1341,6 +1347,10 @@ http://adw.
 !-------------------- Specific rules --------------------!
 !--------------------------------------------------------!
 !
+gnula.co##.buttons-p
+terra.com.br###advRuller2--wrapper
+luchaonline.com##.Anuncios
+13.cl##.center-banner
 online-dvdrip.com##.mvic-btn > a.btn-successful[target="_blank"]
 onyxplay.com###ad
 ||hoy21.com^$domain=animeflv.net
@@ -3116,6 +3126,10 @@ urlcloud.us##.banner
 !
 ! White list. Fixing filtration errors (false-positive)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/46603
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=13.cl
+@@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=13.cl
+@@||pubads.g.doubleclick.net/ssai/event/*/streams$domain=13.cl
 ! rapidotorrents.net - fixes incorrectly blocked images
 @@||i.imgur.com^$domain=rapidotorrents.net
 ! https://github.com/AdguardTeam/AdguardFilters/issues/44371
