@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: wYLsFs3084GW+t/2TZAiyg
-! Version: 201912231040
+! Checksum: OToElLk9FmDqrQXhI6bMHg
+! Version: 202001022320
 ! Title: EasyList Cookie List
-! Last modified: 23 Dec 2019 10:40 UTC
+! Last modified: 02 Jan 2020 23:20 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.to/
 ! License: http://creativecommons.org/licenses/by/3.0/
@@ -402,6 +402,7 @@
 /cookies-policy-
 /cookies-policy.
 /cookies-policy/*
+/cookies-popup.
 /cookies-requirement.
 /cookies-requirement/*
 /cookies-window.js
@@ -3605,6 +3606,7 @@ _site_cookie_
 ###cookies-auth
 ###cookies-aviso
 ###cookies-banner
+###cookies-banner-block
 ###cookies-bar
 ###cookies-bar-en
 ###cookies-bar-etro
@@ -3822,6 +3824,7 @@ _site_cookie_
 ###cookiesLaw
 ###cookiesLayer
 ###cookiesLayoutModule
+###cookiesLegacy
 ###cookiesLegal
 ###cookiesLegalMessage
 ###cookiesLequipe
@@ -4248,6 +4251,7 @@ _site_cookie_
 ###data-privacy-bar
 ###data-protection-banner
 ###data-protection-notification
+###data-protection-overlay
 ###data-protection-regulation
 ###data-store-permission-popup
 ###dataPrivacyDialog
@@ -6811,6 +6815,7 @@ _site_cookie_
 ##.NotificationCookies
 ##.O-CookieLaw
 ##.ObsCnilWarning
+##.PPolicyDisclaimer
 ##.Page-cookies
 ##.PartialCookieCompliance
 ##.PartialCookieCompliance-hp
@@ -6881,6 +6886,7 @@ _site_cookie_
 ##.accept-cookies-wrapper
 ##.accept-cookies:not(html)
 ##.accept-my-cookie
+##.accept-privacypolicy
 ##.acceptCookie
 ##.acceptCookieBar
 ##.acceptCookieButton
@@ -7554,6 +7560,7 @@ _site_cookie_
 ##.components-cookie-law-basic
 ##.cond_utilis_cookie
 ##.confidentialite_header
+##.confirm-cookie:not(html):not(body)
 ##.confirm_cookies_box
 ##.connect-cookie-bar
 ##.consent-banner
@@ -8531,6 +8538,7 @@ _site_cookie_
 ##.cookie_policy_cont
 ##.cookie_policy_container
 ##.cookie_policy_message
+##.cookie_policy_outer
 ##.cookie_policy_pop
 ##.cookie_popup
 ##.cookie_popup_wrapper
@@ -8833,7 +8841,6 @@ _site_cookie_
 ##.cookies-open:not(body)
 ##.cookies-overlay
 ##.cookies-panel
-##.cookies-policy
 ##.cookies-policy-alert
 ##.cookies-policy-banner
 ##.cookies-policy-container
@@ -8841,6 +8848,7 @@ _site_cookie_
 ##.cookies-policy-message
 ##.cookies-policy-popover-container
 ##.cookies-policy-popup
+##.cookies-policy:not(body):not(html)
 ##.cookies-politic
 ##.cookies-popin
 ##.cookies-popup
@@ -10724,6 +10732,7 @@ _site_cookie_
 ##.pum[data-popmake*="gdpr"]
 ##.puppet-cookie-banner
 ##.pure-cookies-notice-wrapper
+##.push-cnil
 ##.puu-cookie
 ##.pw-cookie-window
 ##.pw_consent_messagediv
@@ -10863,6 +10872,7 @@ _site_cookie_
 ##.sgs-cookies-consent
 ##.sgsCookies
 ##.sh-cookie-confirmation
+##.sh-cookie-dialog
 ##.shareaholic-cookie-consent
 ##.shared-alert__cookie
 ##.show-cookie-consent
@@ -11055,6 +11065,8 @@ _site_cookie_
 ##.tpl-cookies
 ##.tpl-g-cookies
 ##.tplis-cl-cookies
+##.tr-cookies-banner
+##.tr-privacy-policy-banner
 ##.tracking-banner
 ##.tracking-consent
 ##.tracking-contenant
@@ -12200,6 +12212,7 @@ amazon.com##.mo-wp
 arlingtoncemetery.mil,axminster.co.uk,daf.be,daf.co.uk,daf.com,daf.fr,daf.global,daf.nl,daf.ru,daf.se,daftrucks.de,daftrucks.dk,daftrucks.it,daftrucks.pl,daftrucks.sk,ferratum.co.uk,fiveguys.co.uk,kon-boot.com,lam.co.mz,medtronic.com,primaresearch.org##.modal-backdrop
 myanimelist.net##.modal-container
 myanimelist.net##.modal-content
+environmental-finance.com##.modal-dialog
 usnews.com##.modal-window
 motorsport.com##.ms-footer-messages
 motorsport.com##.ms-header-messages
@@ -12223,12 +12236,13 @@ cgtrader.com,cortesdecima.com,dialight.com,discordapp.com,dotmailer.com,expositi
 anime2enjoy.com##.notice-board
 veritasbooksonline.com##.notice-wrap
 square-enix-games.com##.notice_Notices_29tRQ
-3arena.ie,about.me,bertil.com,bethesda.net,brandalley.co.uk,cambridge.org,delfortgroup.com,dlink.com,eveningtelegraph.co.uk,fastcompany.com,gw2treasures.com,inc.com,lindex.com,postimees.ee,preoday.com,princeofwales.gov.uk,puregym.com,redbet.com,sciencex.com,spreds.com,toluna.com,wmeentertainment.com,ybs.co.uk,yola.com##.notification
+3arena.ie,about.me,bertil.com,bethesda.net,brandalley.co.uk,cambridge.org,delfortgroup.com,dlink.com,eveningtelegraph.co.uk,fastcompany.com,gw2treasures.com,inc.com,lindex.com,postimees.ee,preoday.com,princeofwales.gov.uk,puregym.com,redbet.com,sciencex.com,spreds.com,toluna.com,vialibri.net,wmeentertainment.com,ybs.co.uk,yola.com##.notification
 harvester.co.uk##.notification--notification
 brouwland.com##.notification-alert
 bettyblocks.com##.notification-bar
 gumtree.com##.notification-box
 autotrader.co.za##.notification-container
+tennistv.com##.notification-wrapper
 parallels.com##.notification.orange
 jaguar-me.com,jaguar.ca,jaguar.co.za,jaguar.com,jaguar.com.au,jaguarusa.com,landrover-me.com,landrover.ca,landrover.com,landrover.com.au,landrover.com.hk,landrover.gi##.notificationBars
 insurancebusinessmag.com##.notification_strip
@@ -13834,7 +13848,7 @@ flybe.com#@##cookie-policy-modal
 bk.com#@##cookie-popup
 lauritz.com,qxl.de,qxl.dk,qxl.fi,qxl.no,qxl.se#@##cookie-wrapper
 media.netflix.com#@##cookieAlert
-ad.win.nl,techopital.com#@##cookieConsent
+ad.win.nl,dehn.de,techopital.com#@##cookieConsent
 ad.win.nl#@##cookieConsentBox
 techopital.com#@##cookieConsentContainer
 indebuurt.nl,tweakers.net#@##cookieContainer
@@ -13972,7 +13986,7 @@ bosch-mobility-solutions.com#@#.m-cookie
 bosch-mobility-solutions.com#@#.m-cookie-intro
 makelaarsland.nl#@#.m-cookie-notice
 theverge.com#@#.m-privacy-consent
-gct.com,oattravel.com,pentestpartners.com,piaggiogroup.com#@#.mod_cookies
+gct.com,herbritts.com,oattravel.com,pentestpartners.com,piaggiogroup.com#@#.mod_cookies
 multimediago.pl#@#.modal-cookie
 betway.it#@#.module-cookie
 ramics-conference.org#@#.nf-form-content
@@ -13982,7 +13996,7 @@ bosch-home.com#@#.o-cookielaw
 pieseauto.ro#@#.page-cookies
 apple.com#@#.privacy-consent
 account.microsoft.com#@#.privacy-container
-www.google.ac,www.google.ad,www.google.ae,www.google.al,www.google.am,www.google.as,www.google.at,www.google.az,www.google.ba,www.google.be,www.google.bf,www.google.bg,www.google.bi,www.google.bj,www.google.bs,www.google.bt,www.google.by,www.google.ca,www.google.cat,www.google.cd,www.google.cf,www.google.cg,www.google.ch,www.google.ci,www.google.cl,www.google.cm,www.google.co.ao,www.google.co.bw,www.google.co.ck,www.google.co.cr,www.google.co.id,www.google.co.il,www.google.co.in,www.google.co.jp,www.google.co.ke,www.google.co.kr,www.google.co.ls,www.google.co.ma,www.google.co.mz,www.google.co.nz,www.google.co.th,www.google.co.tz,www.google.co.ug,www.google.co.uk,www.google.co.uz,www.google.co.ve,www.google.co.vi,www.google.co.za,www.google.co.zm,www.google.co.zw,www.google.com,www.google.com.af,www.google.com.ag,www.google.com.ai,www.google.com.ar,www.google.com.au,www.google.com.bd,www.google.com.bh,www.google.com.bn,www.google.com.bo,www.google.com.br,www.google.com.by,www.google.com.bz,www.google.com.cn,www.google.com.co,www.google.com.cu,www.google.com.cy,www.google.com.do,www.google.com.ec,www.google.com.eg,www.google.com.et,www.google.com.fj,www.google.com.gh,www.google.com.gi,www.google.com.gt,www.google.com.hk,www.google.com.jm,www.google.com.jo,www.google.com.kh,www.google.com.kw,www.google.com.lb,www.google.com.ly,www.google.com.mm,www.google.com.mt,www.google.com.mx,www.google.com.my,www.google.com.na,www.google.com.ng,www.google.com.ni,www.google.com.np,www.google.com.om,www.google.com.pa,www.google.com.pe,www.google.com.pg,www.google.com.ph,www.google.com.pk,www.google.com.pr,www.google.com.py,www.google.com.qa,www.google.com.ru,www.google.com.sa,www.google.com.sb,www.google.com.sg,www.google.com.sl,www.google.com.sv,www.google.com.tj,www.google.com.tn,www.google.com.tr,www.google.com.tw,www.google.com.ua,www.google.com.uy,www.google.com.vc,www.google.com.ve,www.google.com.vn,www.google.cv,www.google.cz,www.google.de,www.google.dj,www.google.dk,www.google.dm,www.google.dz,www.google.ee,www.google.es,www.google.fi,www.google.fm,www.google.fr,www.google.ga,www.google.ge,www.google.gg,www.google.gl,www.google.gm,www.google.gp,www.google.gr,www.google.gy,www.google.hk,www.google.hn,www.google.hr,www.google.ht,www.google.hu,www.google.ie,www.google.im,www.google.iq,www.google.is,www.google.it,www.google.it.ao,www.google.je,www.google.jo,www.google.jp,www.google.kg,www.google.ki,www.google.kz,www.google.la,www.google.li,www.google.lk,www.google.lt,www.google.lu,www.google.lv,www.google.md,www.google.me,www.google.mg,www.google.mk,www.google.ml,www.google.mn,www.google.ms,www.google.mu,www.google.mv,www.google.mw,www.google.ne,www.google.ne.jp,www.google.ng,www.google.nl,www.google.no,www.google.nr,www.google.nu,www.google.pl,www.google.pn,www.google.ps,www.google.pt,www.google.ro,www.google.rs,www.google.ru,www.google.rw,www.google.sc,www.google.se,www.google.sh,www.google.si,www.google.sk,www.google.sm,www.google.sn,www.google.so,www.google.sr,www.google.st,www.google.td,www.google.tg,www.google.tl,www.google.tm,www.google.tn,www.google.to,www.google.tt,www.google.us,www.google.vg,www.google.vu,www.google.ws#@#.privacyBar
+google.ac,google.ad,google.ae,google.al,google.am,google.as,google.at,google.az,google.ba,google.be,google.bf,google.bg,google.bi,google.bj,google.bs,google.bt,google.by,google.ca,google.cat,google.cd,google.cf,google.cg,google.ch,google.ci,google.cl,google.cm,google.co.ao,google.co.bw,google.co.ck,google.co.cr,google.co.id,google.co.il,google.co.in,google.co.jp,google.co.ke,google.co.kr,google.co.ls,google.co.ma,google.co.mz,google.co.nz,google.co.th,google.co.tz,google.co.ug,google.co.uk,google.co.uz,google.co.ve,google.co.vi,google.co.za,google.co.zm,google.co.zw,google.com,google.com.af,google.com.ag,google.com.ai,google.com.ar,google.com.au,google.com.bd,google.com.bh,google.com.bn,google.com.bo,google.com.br,google.com.by,google.com.bz,google.com.cn,google.com.co,google.com.cu,google.com.cy,google.com.do,google.com.ec,google.com.eg,google.com.et,google.com.fj,google.com.gh,google.com.gi,google.com.gt,google.com.hk,google.com.jm,google.com.jo,google.com.kh,google.com.kw,google.com.lb,google.com.ly,google.com.mm,google.com.mt,google.com.mx,google.com.my,google.com.na,google.com.ng,google.com.ni,google.com.np,google.com.om,google.com.pa,google.com.pe,google.com.pg,google.com.ph,google.com.pk,google.com.pr,google.com.py,google.com.qa,google.com.ru,google.com.sa,google.com.sb,google.com.sg,google.com.sl,google.com.sv,google.com.tj,google.com.tn,google.com.tr,google.com.tw,google.com.ua,google.com.uy,google.com.vc,google.com.ve,google.com.vn,google.cv,google.cz,google.de,google.dj,google.dk,google.dm,google.dz,google.ee,google.es,google.fi,google.fm,google.fr,google.ga,google.ge,google.gg,google.gl,google.gm,google.gp,google.gr,google.gy,google.hk,google.hn,google.hr,google.ht,google.hu,google.ie,google.im,google.iq,google.is,google.it,google.it.ao,google.je,google.jo,google.jp,google.kg,google.ki,google.kz,google.la,google.li,google.lk,google.lt,google.lu,google.lv,google.md,google.me,google.mg,google.mk,google.ml,google.mn,google.ms,google.mu,google.mv,google.mw,google.ne,google.ne.jp,google.ng,google.nl,google.no,google.nr,google.nu,google.pl,google.pn,google.ps,google.pt,google.ro,google.rs,google.ru,google.rw,google.sc,google.se,google.sh,google.si,google.sk,google.sm,google.sn,google.so,google.sr,google.st,google.td,google.tg,google.tl,google.tm,google.tn,google.to,google.tt,google.us,google.vg,google.vu,google.ws#@#.privacyBar
 metallica.com#@#.privacy_policy_message_box
 jyllands-posten.dk#@#.qc-cmp-showing
 jyllands-posten.dk#@#.qc-cmp-ui-container
@@ -14034,6 +14048,7 @@ unicode.org#@#div[data-nconvert-cookie]
 @@||evbstatic.com^*/cookie_header.js
 @@||evidon.com/sitenotice/evidon-banner.js$domain=etonline.com|popsugar.co.uk
 @@||flowbox.io/wp-content/plugins/uk-cookie-consent/
+@@||gearbest.com/static/dist/minjs/jcookie.js
 @@||geolocation.onetrust.com/cookieconsentpub/$script,domain=cnn.com
 @@||hellenicbank.com/portalserver/*/cookies-consent.js$script
 @@||hp.com^*/caas-privacy-cookie-$script
