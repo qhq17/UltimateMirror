@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: KNLBb+dzcHbUd1KfH3Bp8g
-! Version: 201912231640
+! Checksum: 6hEDIQngEFRh9Tg1I3EeTw
+! Version: 202001031320
 ! Title: Adblock Warning Removal List
-! Last modified: 23 Dec 2019 16:40 UTC
+! Last modified: 03 Jan 2020 13:20 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -401,7 +401,6 @@ cs-amba.ru##.banka
 medical-club.net##.blocker-notice,.blocker-overlay
 electric-house.ru##.blok_forum > div[style]
 audio-hi-fi.ru,electro-sila.ru##.blok_new > div[style]
-it-actual.ru##.blznok
 rutor1.ru##.box_in > .text > p > font
 tsn.ua##.c-aside-embed
 kanobu.ru##.c-moneyPlace_empty
@@ -443,6 +442,7 @@ qaru.site##.similar.a[style]
 l-a-w.ru,mhelp.kz##.swal2-container
 objavlenija.respublika.cz##.sweet-alert,.sweet-overlay
 kinoafisha.ua##.turn-off-add-block-text
+e-xecutive.ru##.warning
 kinoprofi.net##.warning-adblock
 xn--80aikhbrhr.net,кинокрад.net##.warning-adblock-box
 forum.bestflowers.ru##.xenOverlay
@@ -488,6 +488,13 @@ igorchernomoretz.com##body > div[id^="ab"] + div[style*="cursor"]
 tut.by##body > div[style*="position: fixed;"][style*="right: 0;"]
 1snau.ru,bychico.net,dyrik.ru,ecosounds.net,in-drive.ru,inforpost.com,musecube.org,obozrevatel.com,oknotivi.ru,pogodnik.com,sandero.ru,tehnobzor.ru,turbominer.ru##body > div[style*="z-index"][style*="9999"]
 dugtor.ru##body > noindex
+it-actual.ru#?#div:-abp-has(> [href="/donate.html"])
+it-actual.ru#?#div:-abp-has(> img[style] ~ a)
+it-actual.ru#?#div:-abp-has(> img + [href])
+it-actual.ru#?#div:-abp-has(> img ~ a[href][style])
+it-actual.ru#?#div:-abp-has(> img ~ a:-abp-properties(animation))
+it-actual.ru#?#div:-abp-has(> .donlnk)
+it-actual.ru#?#div:-abp-properties(animation)
 www.qrz.ru#?#div[class]:-abp-has(> .inner > a[href="/help/adblock/"])
 blackdesert-info.ru##div[class][style*="z-index"][style*="999999;"][style*="background"][style*="rgb"]
 megogo.net,megogo.ru##div[class^="adBlockBanner"]
@@ -500,6 +507,7 @@ savevideo.me##div[id^="ads_notice_"]
 forvk.space##div[id^="block"][style*="display: block;"]
 acomics.ru##div[style*="/design/common/pic/please"]
 abc-people.com##div[style*="background-color"][style*="position"][style*="z-index"]
+anime.anidub.life,online.anidub.com#?#div[style^="position: fixed;"]:-abp-has(> h3:-abp-contains(Обнаружена блокировка рекламы))
 pvcalc.ru##div[style^="position:fixed; top:0px; left:0px; opacity: 0.9;"]
 ph4.ru##div[style^="width: 728px; height: 90px;"]
 bdmbase.ru##html > .q1
