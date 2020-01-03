@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: QGL8Gh6sZQ2/2qhBk0DaSg
+! Checksum: WlUoPMVEb2p/eWhGOZTxNg
 ! Title: AdGuard Mobile Ads filter
 ! Description: Filter for all known mobile ad networks. Useful for mobile devices.
-! Version: 2.0.9.62
-! TimeUpdated: 2019-12-21T09:02:19+03:00
+! Version: 2.0.10.0
+! TimeUpdated: 2020-01-02T19:30:12+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#mobile
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -172,7 +172,9 @@
 ||plugin.mobopay.baidu.com^
 ||mo.freeindoapp.com^
 !
+||adxcorp.kr^
 ||api-*.bidmachine.io^
+||adsmobila.com^$third-party
 ||a.4ee395e5b8a076c7bd8592851ff8cad.com^
 ||tw-api.vpon.com^
 ||haorun.pw^$third-party
@@ -1100,6 +1102,8 @@
 ! https://github.com/AdguardTeam/AdguardForiOS/issues/255
 @@||m.beautypageants.in^$elemhide
 !---
+! merkur.de amp adblock detection for glomex video (Android)
+@@||imasdk.googleapis.com/*/ima3.js$domain=player.glomex.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/44990
 @@||m.da.mgtv.com/m/player?_type_object=$domain=m.mgtv.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/32971
@@ -1177,6 +1181,14 @@ westseattleblog.com#@#.header-ad
 !
 ! Extended CSS rules
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/46433
+uludagsozluk.com#?#.mobil_bugun > li:has(> a[href^="http://bit.ly/"][rel="nofollow"] + b[style="color: #a09f9f;"]:contains(reklam))
+! m.news.de amp - left-over
+m-news-de.cdn.ampproject.org#?#.article > amp-fx-flying-carpet:has(> div > div > #aduptech-container)
+! buffed.de - ad on main page
+buffed.de#?#ul[data-role="listview"] > .ticker_item:has(> a[href^="/E-Commerce"])
+! amp.n-tv.de - left-over in article
+amp.n-tv.de#?#span[itemprop="articleBody"] > amp-fx-flying-carpet:has(> div > div > amp-ad)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/45694
 hurriyet.com.tr#?#.news-wrapper > div > amp-fx-flying-carpet:has(> div > div > amp-ad)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/45869
@@ -1340,6 +1352,7 @@ zen.yandex.by,zen.yandex.com,zen.yandex.kz,zen.yandex.ru,zen.yandex.ua#?#.touch-
 ##.amp-ad-container
 ##.amp-ad container
 ##amp-ad
+##.amp_ad
 !---------------------------------------------------------------------------!
 !-------------- General javascript, CSS and HTML extensions ----------------!
 !---------------------------------------------------------------------------!
@@ -1376,6 +1389,8 @@ zen.yandex.by,zen.yandex.com,zen.yandex.kz,zen.yandex.ru,zen.yandex.ua#?#.touch-
 !-------CSS---------
 !-------------------
 !
+! ixbt.com - исправление отступа в мобильной версии
+~forum.ixbt.com,ixbt.com#$#body { margin-top: 3em!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/46115
 zmovs.com#$#.holder-rich-media { display: none!important; }
 zmovs.com#$#body { position: inherit!important; }
@@ -1827,22 +1842,66 @@ m.news.de##.unisterAdsStart
 !
 ! Common names
 ! ##amp-embed[type="outbrain"]
-amp.mopo.de,rtl.de,amp.tagesspiegel.de,transfermarkt.de,filmstarts.de,sportbuzzer.de,m.gala.de,amp.vip.de,derwesten.de,waz.de,amp.express.de,www-ilmessaggero-it.cdn.ampproject.org,www-express-co-uk.cdn.ampproject.org,dailystar.co.uk,www-dailystar-co-uk.cdn.ampproject.org,express.co.uk,chip.de,asahi.com,mainichi.jp,jp.ign.com##amp-embed[type="outbrain"]
+morgenpost.de,amp.n-tv.de,amp.mopo.de,rtl.de,amp.tagesspiegel.de,transfermarkt.de,filmstarts.de,sportbuzzer.de,m.gala.de,amp.vip.de,derwesten.de,waz.de,amp.express.de,www-ilmessaggero-it.cdn.ampproject.org,www-express-co-uk.cdn.ampproject.org,dailystar.co.uk,www-dailystar-co-uk.cdn.ampproject.org,express.co.uk,chip.de,asahi.com,mainichi.jp,jp.ign.com##amp-embed[type="outbrain"]
 ! ##amp-embed[type="taboola"]
 techbook.de,sueddeutsche.de,hurriyet.com.tr,elmundo.es,timesnownews.com,biz-journal.jp,sankei.com,m.mynet.com,amp.ibtimes.co.uk,lifehacker.com,jalopnik.com,ndtv.com,gizmodo.com,cnbc.com##amp-embed[type="taboola"]
 ! ##amp-ad
 techbook.de,forbes.com,auto-swiat.pl,dialog.ua,mobile.reuters.com,spiegel.de,amp.welt.de,forum.xda-developers.com,sueddeutsche.de,amp.usatoday.com,m.gadgets.ndtv.com##amp-ad
 !
-pcgameshardware.de,www-pcgameshardware-de.cdn.ampproject.org##.anzLab
+prothomalo.com##.anchor_ad_wrapper
+tgd.kr##body > div[style="background: #efefef;padding:0;"]
+tgd.kr##div[align="center"][style^="width:320px;height:50px;"][style*="background:url(https://upload.tgd.kr/banner/"]
+m.baidu.com##.afd-ad
+bz-berlin.de##.container > .row > .hidden-sm:not([class*="pos-"])
+||23wxc.com/js/adgd.js
+||cqsng.com/mm.js
+||avtt123.cc/*/dm.js
+suslusozluk.com###sticky
+||dy496.com/vvpg.js
+||dy496.com/js/c10pg.js
+||huanjugu.com/dm289*.js
+||xinqingdou.com/dist/vue/element.*.js
+duzheba.cc##div[style="height:100px;"]
+||999xs.com/safari.php
+||999xs.com/*/1xhtml?
+ihuaben.com##.container[style*="position:relative;"][style*="width:100%;"]
+ihuaben.com##div[id^="BDBanner"]
+ihuaben.com##.chapterTopBanner
+m.6080w.com##.hy-player > div.item > div[class] > a[rel^="external"] > img
+mkan.eastday.com##.db_gg_div
+||heiye.cc/js/bf.js
+heiye.cc##div[style*="position: fixed;"][style*="text-align: center;"][style*="width: 100%;"]
+370kk.com,m.ttkmj.tv###ldgindexbuttom
+m.ttkmj.tv##nav[role="navigation"]
+insideevs-com.cdn.ampproject.org##amp-iframe.sellwild
+insideevs-com.cdn.ampproject.org##a[href^="https://www.myev.com/cars-for-sale"]
+insideevs-com.cdn.ampproject.org##amp-list.related-items[src^="https://www.myev.com/feed/amp"]
+insideevs-com.cdn.ampproject.org##amp-embed.amp-notbuilt > i-amphtml-sizer[style^="display: block; padding-top:"]
+||widget.sellwild.com/amp/insideevs$domain=insideevs-com.cdn.ampproject.org
+uludagsozluk.com##.mobil_bugun > li > a[href^="http://bit.ly/"][rel="nofollow"]
+uludagsozluk.com##.mobil_bugun > li > a[href^="http://bit.ly/"][rel="nofollow"] + b[style="color: #a09f9f;"]
+sosok.grid.id###div-top-banner-transparent
+sosok.grid.id##div[id^="afdf-"][style*="height"]
+sosok.grid.id##div[id^="div-Inside-MediumRectangle"]
+radio-canada.ca##.g-adbox-sticky
+m.banglanews24.com##.adwrp
+m.banglanews24.com###welcomeModal
+m.banglanews24.com##.modal-backdrop
+m.banglanews24.com###contentDetails > p[style^="text-align:"] > .col-sm-12[align="center"] > img
+m.banglanews24.com##.col-sm-12 > div[style="text-align: center;"] > a[href]:not([href*="banglanews24.com"]) > img
+wizaz.pl##.adocean-placeholder
+||imagecdn.doallsoft.com/img/$domain=bbs.52codes.net
+wunderweib.de##amp-embed[type="doubleclick"]
+m.kn-online.de##.pdb-ad-container
+buffed.de,pcgameshardware.de,cdn.ampproject.org##.anzLab
 rtl.de##.adslot.amp
 rtl.de##.ad-show-heroes
 sport1.de##.s1-placement-label
 sport1.de##.amp-ad-align-center
-fnp.de##.id-Amp-recommendation
+fr.de,fnp.de##.id-Amp-recommendation
 kino.de##div[data-sdg-ad]
 zeit.de##.advertising
 amp.focus.de##.ct_ampad
-derwesten.de##.article__body > .admarker + amp-fx-flying-carpet
 dadroidrd.com##.widget-content > div[id^="fanback"]
 viva.co.id###sticky-bottom
 m.timesofindia.com##li[data-ptype="sponsoredcityent"]
@@ -1889,7 +1948,7 @@ mobil.express.de,mobil.mopo.de##article[data-title="ANZEIGE"]
 t-online.de##div[id^="ma_ar_"]
 fapality.com##.had
 lexico.com##.banbox
-||alicdn.com^$domain=m.petdianping.com|m.caomintv.com
+||alicdn.com^$domain=m.petdianping.com|m.caomintv.com|bbs.52codes.net|m.ttkmj.tv|m.6080w.com
 ||m.shazi8.com/mg^
 ||mm.shazi8.com/mg^
 /jx.3aym.cn\/[0-9]{1,6}.gif/$domain=3aym.cn
@@ -1899,6 +1958,7 @@ bbs.51credit.com##[data-adshow]
 bbs.51credit.com##[data-adid]
 tv889.com##.topbanner
 fux.com##.video-list-top-ad
+bbs.52codes.net##div[style*="display: block;"][style*="width: 100%;"][style*="background-repeat: initial initial;"]
 bbs.52codes.net##div[style="position: fixed; z-index: 9999999999;"]
 eporner.com###admobiletop
 fxykx.com##a[href*="zyttx.com/"]
@@ -1910,13 +1970,12 @@ yyy4480.net##div[style*="position:relative;"][style*="clear:both;"]
 m.ixinshijue.com##a[href="http://ag9.8803610.com"]
 m.ixinshijue.com##body > div.wrap a[target="_blank"]
 ||m.6080w.com/d.js
-m.6080w.com##.container > .row > .hy-layout.clearfix
+m.6080w.com##.row > div.hy-layout > a[rel^="external"] > img
 m.6080w.com##body > .hy-head-menu ~ strong > div[style="text-align: center;"] > span[style^="color: rgb"]
 m.spankbang.com##.ads_placement
 xnxx.com###content-ad-top-zone-contener
 amp-focus-de.cdn.ampproject.org##[height="500"][width="500"]
 amp-focus-de.cdn.ampproject.org##article[data-teaser-type="unspecified_group"]
-filmkovani.com##div[class^="mobilaktif"]
 asianmilfhub.com##.happy-under-player-mobile
 porntrex.com###index-link
 app-liv.jp##.js-appliv-ad-imp-trigger
@@ -1925,7 +1984,7 @@ onet.pl##.placeholder-container
 .ru^$third-party,script,domain=muzmob.org
 gridoto.com###sticky-mobile-r
 gridoto.com###js-banner-sticky
-waz.de##.article__body > .admarker + amp-fx-flying-carpet
+morgenpost.de,derwesten.de,waz.de##.article__body > .admarker + amp-fx-flying-carpet
 suara.com##.footer-ads__container
 kompasiana.com###sticky-mobile-r
 m.timesofindia.com##.asprime1
@@ -2726,7 +2785,7 @@ chip.de##.amp-article-ad
 newsweekjapan.jp,chip.de##.amp-outbrain
 trustedreviews.com##.ipc-advert
 |http$third-party,script,domain=kinotut.tv
-mobil-nwzonline-de.cdn.ampproject.org##.advert
+mobil.nwzonline.de,mobil-nwzonline-de.cdn.ampproject.org##.advert
 m.sweclockers.com##.header > .container > #topBanner
 lenfilm.tv##.rek
 mp4mania.rocks##center > a[rel="nofollow"] > img
@@ -2852,6 +2911,7 @@ economictimes.com##style[type="text/css"] + div[class]:not([id]):not([style]):no
 theatlantic.com##.ad-loaded
 theatlantic.com##.native-promo-slider
 ulm-news.de###SWU-schwabenstrom
+ulm-news.de##div[id^="banner_"]
 www.yahoo.com###act-ad-parallax
 wap.lexun.com###ad
 kisscartoon.me###adsFloat1
@@ -3053,6 +3113,8 @@ yandex.by,yandex.com,yandex.com.tr,yandex.fr,yandex.kz,yandex.ru,yandex.ua,~afis
 ! Yandex.Images
 yandex.by,yandex.com,yandex.com.tr,yandex.fr,yandex.kz,yandex.ru,yandex.ua,~afisha.yandex.by,~afisha.yandex.kz,~afisha.yandex.ru,~afisha.yandex.ua,~avia.yandex.by,~avia.yandex.kz,~avia.yandex.ru,~avia.yandex.ua,~bilet.yandex.com.tr,~flights.yandex.com,~disk.yandex.by,~disk.yandex.com,~disk.yandex.com.tr,~disk.yandex.fr,~disk.yandex.kz,~disk.yandex.ru,~disk.yandex.ua,~mail.yandex.by,~mail.yandex.kz,~mail.yandex.ru,~mail.yandex.ua,~mail.yandex.com,~mail.yandex.com.tr,~money.yandex.ru,~music.yandex.ru,~music.yandex.ua,~music.yandex.by,~music.yandex.kz,~rabota.yandex.by,~rabota.yandex.kz,~rabota.yandex.ru,~rabota.yandex.ua,~radio.yandex.by,~radio.yandex.kz,~radio.yandex.ru,~radio.yandex.ua,~realty.yandex.by,~realty.yandex.kz,~realty.yandex.ru,~realty.yandex.ua,~tv.yandex.by,~tv.yandex.kz,~tv.yandex.ru,~tv.yandex.ua,~yadi.sk,~zen.yandex.by,~zen.yandex.com,~zen.yandex.kz,~zen.yandex.ru,~zen.yandex.ua,~docviewer.yandex.by,~docviewer.yandex.com,~docviewer.yandex.com.tr,~docviewer.yandex.fr,~docviewer.yandex.kz,~docviewer.yandex.ru,~docviewer.yandex.ua,~rasp.yandex.by,~rasp.yandex.kz,~rasp.yandex.ru,~rasp.yandex.ua##.direct_type_between
 yandex.by,yandex.com,yandex.com.tr,yandex.fr,yandex.kz,yandex.ru,yandex.ua,~afisha.yandex.by,~afisha.yandex.kz,~afisha.yandex.ru,~afisha.yandex.ua,~avia.yandex.by,~avia.yandex.kz,~avia.yandex.ru,~avia.yandex.ua,~bilet.yandex.com.tr,~flights.yandex.com,~disk.yandex.by,~disk.yandex.com,~disk.yandex.com.tr,~disk.yandex.fr,~disk.yandex.kz,~disk.yandex.ru,~disk.yandex.ua,~mail.yandex.by,~mail.yandex.kz,~mail.yandex.ru,~mail.yandex.ua,~mail.yandex.com,~mail.yandex.com.tr,~money.yandex.ru,~music.yandex.ru,~music.yandex.ua,~music.yandex.by,~music.yandex.kz,~rabota.yandex.by,~rabota.yandex.kz,~rabota.yandex.ru,~rabota.yandex.ua,~radio.yandex.by,~radio.yandex.kz,~radio.yandex.ru,~radio.yandex.ua,~realty.yandex.by,~realty.yandex.kz,~realty.yandex.ru,~realty.yandex.ua,~tv.yandex.by,~tv.yandex.kz,~tv.yandex.ru,~tv.yandex.ua,~yadi.sk,~zen.yandex.by,~zen.yandex.com,~zen.yandex.kz,~zen.yandex.ru,~zen.yandex.ua,~docviewer.yandex.by,~docviewer.yandex.com,~docviewer.yandex.com.tr,~docviewer.yandex.fr,~docviewer.yandex.kz,~docviewer.yandex.ru,~docviewer.yandex.ua,~rasp.yandex.by,~rasp.yandex.kz,~rasp.yandex.ru,~rasp.yandex.ua##.direct_type_search
+! Yandex.Mail
+mail.yandex.by,mail.yandex.com,mail.yandex.com.tr,mail.yandex.fr,mail.yandex.kz,mail.yandex.ru,mail.yandex.ua##.direct
 ! Yandex.TV
 m.tv.yandex.by,m.tv.yandex.kz,m.tv.yandex.ru,m.tv.yandex.ua##.adv-manager__wrapper
 m.tv.yandex.by,m.tv.yandex.kz,m.tv.yandex.ru,m.tv.yandex.ua##.grid-chunk__adv-wide
@@ -3086,6 +3148,9 @@ livejournal.com##.mdspost-aside__item--banner
 ! Blocking Facebook mobile ads
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/46634
+! https://github.com/AdguardTeam/AdguardFilters/issues/46374
+! App does not work if any analytics is blocked. No ads in this app.
 ! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/207
 ! https://github.com/AdguardTeam/AdguardFilters/issues/46054
 ! https://github.com/AdguardTeam/AdguardFilters/issues/45993
