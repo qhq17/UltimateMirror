@@ -29,6 +29,7 @@ captchme.com##script:inject(set-constant.js, CaptchmeState.adb, undefined)
 ||fadedsnow.com^$important
 ||forecasttiger.com^$important
 ||heavyplayground.com^$important
+||honorablehall.com^$important
 ||hypnoticwound.com^$important
 ||jamexistence.com^$important
 ||levelbehavior.com^$important
@@ -116,6 +117,7 @@ nzz.ch##.pageblock.recommendations
 @@||megaup.net/ads.js$script,1p
 beinsports.com,dumpert.nl,haberturk.com##+js(abort-current-inline-script.js, Uint8Array, googlefcPresent)
 mizonatv.com##.aviso-publicidad-sup
+solarmovie.fun##.hhotnews:has-text(AdBlocker)
 outlook.live.com##a[href="https://windows.microsoft.com/outlook/ad-free-outlook"]:nth-ancestor(4)
 libgen.io##+js(setTimeout-defuser.js, (), 500)
 @@||html-online.com^$generichide
@@ -291,8 +293,10 @@ globalnews.ca##.ad-container
 @@||bloomberght.com^$ghide
 minecraftforge.net##+js(nostif, body)
 forum.nlmod.net##+js(acis, document.createElement, adblock)
+insidermonkey.com##+js(aopr, ABD)
 altadefinizione.*##.sm_header.sm_nomobile:has(:scope > a[href*="/HD/play"])
 ||mail-ads.google.com^
+bing.com##+js(nano-remove-elements-onready, #b_results > .b_ad)
 @@||wired.com^$generichide
 wired.com##.ad
 @@||rapidvideo.com/js/jquery.min.js$script,1p
@@ -312,11 +316,6 @@ bitblokes.de###ga_sub_single_wrap
 bitblokes.de###sidebar-ads-single
 bitblokes.de###adscale_down
 bitblokes.de##a[href^="https://go.nordvpn.net/aff_c?"]
-!#if env_edge
-businessinsider.com##+js(set-constant.js, _PIANO.setAdblockerCookie, noopFunc)
-businessinsider.com##+js(set-constant.js, setAdblockerCookie, noopFunc)
-businessinsider.com##+js(nanop-easy-set-cookie.js, __adblocker=false)
-!#endif
 @@||hulu.com^$generichide
 hulu.com###banner-ad-container
 hulu.com##.ad-choices
