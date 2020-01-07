@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: 6hEDIQngEFRh9Tg1I3EeTw
-! Version: 202001031320
+! Checksum: BZbGOYx6zcdaGu8hud2JRQ
+! Version: 202001071130
 ! Title: Adblock Warning Removal List
-! Last modified: 03 Jan 2020 13:20 UTC
+! Last modified: 07 Jan 2020 11:30 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -311,7 +311,6 @@ usgang.ch###rectangle-wrapper
 ! *** antiadblockfilters:antiadblockfilters/antiadblock_latvian.txt ***
 ! *** antiadblockfilters:antiadblockfilters/antiadblock_romanian.txt ***
 ! *** antiadblockfilters:antiadblockfilters/antiadblock_russian.txt ***
-##.adblock-stop
 delfi.ee###ab--notification-ribbon
 minimultik.ru###abDetected
 patrioty.org.ua###ad_pu_modal
@@ -351,8 +350,8 @@ ostroh.info###modal.modal-bg
 rbkgames.com###norris-detector
 all-episodes.net###odin
 mover.uz###oframeplayer > [class][style^="display: block"]
-filmix.cc,filmix.co,filmix.ink,filmix.site,filmix.today###oframeplayer > pjsdiv[style^="position: absolute; left:"][style*="display: block; visibility: visible;"] ~ pjsdiv[style^="position: absolute; left:"][style*="pointer-events: none; display: block; visibility:"]
-filmix.cc,filmix.co,filmix.ink,filmix.site,filmix.today#?##oframeplayer > pjsdiv[style^="position: absolute; left:"][style*="display: block; visibility: visible;"]:-abp-contains(/adblock/i)
+filmix.cc,filmix.co,filmix.ink,filmix.online,filmix.site,filmix.today,filmix.zone###oframeplayer > pjsdiv[style^="position: absolute; left:"][style*="display: block; visibility: visible;"] ~ pjsdiv[style^="position: absolute; left:"][style*="pointer-events: none; display: block; visibility:"]
+filmix.cc,filmix.co,filmix.ink,filmix.online,filmix.site,filmix.today,filmix.zone#?##oframeplayer > pjsdiv[style^="position: absolute; left:"][style*="display: block; visibility: visible;"]:-abp-contains(/adblock/i)
 md4u.ru###pagecontent > div[style*="background-color"]
 alensat.org,forummikrotik.ru###phpbb-ads-ab
 kompravda.eu,kp.ru###popapIsBlockedAd
@@ -381,6 +380,7 @@ forum.qrz.ru,hentaiz.org,life.ru,mastergrad.com##.adblock
 pimpletv.ru##.adblock-notification
 nevasport.ru##.adblock-notify
 exler.ru##.adblock-pls
+##.adblock-stop
 zakon.kz##.adblock_alert
 ogorod.ru##.adblock_popup_warning
 hentaiz.org##.adblocker
@@ -488,12 +488,16 @@ igorchernomoretz.com##body > div[id^="ab"] + div[style*="cursor"]
 tut.by##body > div[style*="position: fixed;"][style*="right: 0;"]
 1snau.ru,bychico.net,dyrik.ru,ecosounds.net,in-drive.ru,inforpost.com,musecube.org,obozrevatel.com,oknotivi.ru,pogodnik.com,sandero.ru,tehnobzor.ru,turbominer.ru##body > div[style*="z-index"][style*="9999"]
 dugtor.ru##body > noindex
-it-actual.ru#?#div:-abp-has(> [href="/donate.html"])
-it-actual.ru#?#div:-abp-has(> img[style] ~ a)
-it-actual.ru#?#div:-abp-has(> img + [href])
-it-actual.ru#?#div:-abp-has(> img ~ a[href][style])
-it-actual.ru#?#div:-abp-has(> img ~ a:-abp-properties(animation))
 it-actual.ru#?#div:-abp-has(> .donlnk)
+it-actual.ru#?#div:-abp-has(> [href="/donate.html"])
+it-actual.ru#?#div:-abp-has(> a[href^="/"]:not([title]))
+it-actual.ru#?#div:-abp-has(> a[href][title*="пoмочь"])
+it-actual.ru#?#div:-abp-has(> a[href][title*="помочь"])
+it-actual.ru#?#div:-abp-has(> img + [href])
+it-actual.ru#?#div:-abp-has(> img ~ a:-abp-properties(animation))
+it-actual.ru#?#div:-abp-has(> img ~ a[href][style])
+it-actual.ru#?#div:-abp-has(> img[src*="gif"] ~ a[href])
+it-actual.ru#?#div:-abp-has(> img[style] ~ a)
 it-actual.ru#?#div:-abp-properties(animation)
 www.qrz.ru#?#div[class]:-abp-has(> .inner > a[href="/help/adblock/"])
 blackdesert-info.ru##div[class][style*="z-index"][style*="999999;"][style*="background"][style*="rgb"]
