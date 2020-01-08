@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: YjF/fpW/X2LpS/UIU3apTQ
+! Checksum: dNnvxTRqt+UBondvPYAK+A
 ! Title: AdGuard Tracking Protection filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.11.32
-! TimeUpdated: 2019-12-28T16:31:18+03:00
+! Version: 2.0.11.52
+! TimeUpdated: 2020-01-07T14:31:08+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#privacy
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -152,6 +152,7 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ! ||e.crashlytics.com^
 ! ||settings.crashlytics.com^
 !
+||betohomeall.com^$third-party
 ||mc.yandex.ru^
 ||track.segmentstream.com^$third-party
 ||vboro.de^$third-party
@@ -3162,6 +3163,8 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ! Admiral domains
 ! These domains are used for tracking purposes according to the data that is being sent there.
 ! More info: https://getadmiral.com/products/measure
+||fadedsnow.com^$third-party
+||nervoussummer.com^$third-party
 ||horsenectar.com^$third-party
 ||symbolizebeast.com^$third-party
 ||cannontwin.com^$third-party
@@ -3524,8 +3527,10 @@ nethunt.com/api/v1/track/email/$image
 !+ NOT_PLATFORM(ios, ext_safari, ext_android_cb)
 ||tags.news.com.au^$~script
 !
+||counter.pr-cy.ru^
 ||journey.unicef.de^
 ||telemetry.art19.com^
+||infinityid.condenastdigital.com^$third-party
 ||track.berliner-kurier.de^
 ||collect.usefathom.com^
 ||wwwlog.thebell.co.kr^
@@ -5005,6 +5010,8 @@ charlestownwyllie.oaklawnnonantum.com^
 ! YouTube
 /log_event?
 !
+/owa.tracker-combined-min.js
+/mip-stats-cnzz/*
 /rtoaster.js
 /fbevents.js
 /js/sync?visitor_id=
@@ -5264,11 +5271,17 @@ _tracking.php?b=
 ||nd.demdex.net/event?d_mid=$empty,important,domain=9now.com.au
 ||adc.nine.com.au/?token=$empty,important,domain=9now.com.au
 !
+||api-js.datadome.co/js/
+||subscribe.washingtonpost.com/acquisition/views/tracking
+||a.nytimes.com/svc/nyt/data-layer?sourceApp
+||a.pr-cy.ru/assets/js/counter.sqi.min.js
+||a.pr-cy.ru/assets/img/analysis-counter.png$third-party
+||ir.ebaystatic.com/rs/c/makeebayfasterscript-src-scripts-logger-cbdc5549.js
 ||r.nikkei.com/.resources/tracking/
 ctvnews.ca##img[alt="comscorebeacon"]
 ||s.pixfs.net/visitor.pixplug.in/
 ||siteoid.com/matomo/matomo.js
-iPZ0kPU6Tg93l3kcH29dH2ftTENcGEf5lOtrkg5rj20dG$domain=9to5google.com|9to5mac.com|9to5toys.com|electrek.co
+jQA0lQV6Uh93m3ldI29eI2guUFOdHFg5mPuslh5sk20eH$domain=9to5google.com|9to5mac.com|9to5toys.com|electrek.co
 ||s.aimg.sk/livemonitor/js/aztracker.js
 ||vidazoo.com/aggregate?
 ||vidazoo.com/event/
@@ -5962,8 +5975,6 @@ dizibey.com##.sidebar > #text-19
 ||dawanda.com/trck^
 ||dawanda.com/uo/trck.gif
 ||dawanda.com/_strck^
-||api.hdfilmizle8.com/my.php^
-hdfilmizle8.com##iframe[src^="https://api.hdfilmizle8.com/my.php"]
 ||akamai.net/*.huluim.com/*/plustracking/
 ||vortex.hulu.com/*/events|
 ||instamp3.tv/js/analytics.js
@@ -7048,7 +7059,6 @@ link.gmapp*.net$image
 ||omni-ads.omni.news^
 ||npario-inc.net^
 ||engine.mobileapptracking.com^
-||open.oneplus.net^
 ||wzrkt.com^
 ||analytics-events.inshorts.com^
 ||e-ssl.apsalar.com^
@@ -7356,6 +7366,22 @@ link.gmapp*.net$image
 !
 ! Exception rules that fix different issues caused by blocking trackers
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/46988
+@@||ngastatic.com/*/tracker.js$domain=ads.allegro.pl
+@@||googletagmanager.com/gtm.js$domain=ads.allegro.pl
+! https://forum.adguard.com/index.php?threads/36580/
+@@||googletagmanager.com/gtm.js$domain=info.lifecell.ua
+! https://github.com/AdguardTeam/AdguardFilters/issues/46917
+@@||googletagmanager.com/gtm.js$domain=malltina.com
+@@||googletagmanager.com/gtag/js$domain=malltina.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/46851
+@@||googletagmanager.com/gtm.js$domain=sciencesetavenir.fr
+! https://github.com/AdguardTeam/AdguardFilters/issues/46948
+@@||cedexis.com/zones/*/customers/*/apps/*/decision$domain=play.history.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/46887
+@@||googletagmanager.com/gtag/js^$domain=timparty.tim.it
+! https://github.com/AdguardTeam/AdguardFilters/issues/46809
+@@||googletagmanager.com/gtm.js$domain=nunnbush.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/46603
 @@||scdn.cxense.com/cx.js$domain=13.cl
 ! pcgames.de - mobile view main page - hidden article overview
