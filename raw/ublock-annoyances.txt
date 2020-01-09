@@ -19,10 +19,6 @@ nerdmaldito.com##+js(abort-on-property-write.js, document.onselectstart)
 ! https://github.com/uBlockOrigin/uAssets/issues/1118
 portaleds.com##+js(remove-attr.js, oncontextmenu|onselectstart)
 
-! https://www.reddit.com/r/uBlockOrigin/comments/7imqbx/firefox_quantum_working_antiadblockkill
-! https://github.com/NanoMeow/QuickReports/issues/74
-libgen.io##+js(setTimeout-defuser.js, (), 500)
-
 ! re-enabling of right-click functionality
 ! https://forums.lanik.us/viewtopic.php?f=62&t=36339
 ! https://github.com/uBlockOrigin/uAssets/issues/1144#issuecomment-354648833
@@ -2411,9 +2407,6 @@ panditfiles.pro##+js(abort-current-inline-script.js, disableSelection, reEnable)
 panditfiles.pro##+js(abort-on-property-write.js, nocontext)
 panditfiles.pro##.unselectable:style(-moz-user-select: text !important; khtml-user-select: text !important; -webkit-user-select: text !important;)
 
-! https://github.com/NanoMeow/QuickReports/issues/1458
-@@||ratemyprofessors.com^$generichide
-
 ! https://github.com/uBlockOrigin/uAssets/issues/5916
 lifo.gr##+js(setTimeout-defuser.js, slideout)
 
@@ -3055,3 +3048,42 @@ skidrowcodex.net##+js(aopw, stopPrntScr)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/6764
 lordoftheseries.gr##+js(aopr, wpt)
+
+! https://github.com/uBlockOrigin/uAssets/issues/6767
+earnload.com##+js(set, blurred, false)
+
+! https://github.com/NanoMeow/QuickReports/issues/2622
+mdpr.jp##+js(ra, oncontextmenu|onmousedown|onselectstart)
+
+! https://github.com/NanoMeow/QuickReports/issues/2635
+theherald-news.com##+js(nostif, null)
+
+! https://github.com/NanoMeow/QuickReports/issues/2605
+insidermonkey.com##+js(aopr, ABD)
+
+! https://www.reddit.com/r/uBlockOrigin/comments/ekd00p/antiblocking_at_foxbusiness/
+@@||foxbusiness.com^$ghide
+
+! https://github.com/NanoMeow/QuickReports/issues/2640
+venea.net##+js(aeld, , ads)
+
+! https://github.com/NanoAdblocker/NanoFilters/issues/442
+thumpertalk.com##+js(cookie-remover, tt4_detectadblock_time)
+
+! https://github.com/NanoMeow/QuickReports/issues/2341
+@@||puhutv.com^$ghide
+
+! https://github.com/NanoMeow/QuickReports/issues/2665
+libgen.*##+js(nostif, appendMessage)
+
+! https://github.com/NanoMeow/QuickReports/issues/2677
+nontongratis88.live##*:style(-webkit-touch-callout: default !important; -webkit-user-select: text !important;-moz-user-select: text !important;-ms-user-select: text !important;user-select: text !important;)
+
+! https://github.com/NanoMeow/QuickReports/issues/2680
+bricksrus.com##+js(aopr, document.oncontextmenu)
+
+! https://github.com/NanoMeow/QuickReports/issues/2682
+jacquieetmichel.net##+js(aopr, document.oncontextmenu)
+
+! https://github.com/NanoMeow/QuickReports/issues/2681
+||botanical-online.com^$csp=script-src * 'sha256-2CsG6wVEDHDuVTizO7FQRClnqwerbIv5IVcltZC42NE=' 'sha256-bbeH00JH/XWsDN1dwYVImvUhHMPgNZGPbZmDZevqu/g=' 'sha256-6Zvm42UlZqiAZPm9t1vUzmrP05q8SlwZNAsWvKYvjOE=' 'sha256-jOdqp0KiuhTr2bY+C/OhP63LsTLJUWpPMo6nDtxcBCs='
