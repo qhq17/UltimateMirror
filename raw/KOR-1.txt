@@ -3,7 +3,7 @@
 ! License: https://github.com/yous/YousList#license
 ! Title: YousList
 ! Expires: 4 days
-! Version: 20200102
+! Version: 20200108
 
 ! General element hiding rules
 ##amp-ad
@@ -248,6 +248,7 @@
 ##iframe[src*="//nads.lumieyes.com/show/media/"]
 ##iframe[src*="//news.nate.com/etc/AD"]
 ##iframe[src*="//newsbanner.co.kr/newsad/advertiser/ad_blank.php"]
+##iframe[src*="//nvapi.feeldmc.com/ad/"]
 ##iframe[src*="//nws.lumieyes.com/"]
 ##iframe[src*="//ojsfile.ohmynews.com/AD_FILE/"]
 ##iframe[src*="//onedrive.su/code/swf_banner.php"]
@@ -472,7 +473,7 @@
 ||ad.luxnet.ua/dfp/spot.html^
 ||ad.mediafarm.co.kr/mad/
 ||ad.mediatoday.co.kr^
-||ad.medicaltimes.com/ADManager/2018/$domain=medicaltimes.com
+||ad.medicaltimes.com/ADManager2018/$domain=medicaltimes.com
 ||ad.mox.tv/mox/mwayss_invocation.min.js^
 ||ad.naver.com/fxshow^
 ||ad.newssense.co.kr/cgi-bin/PelicanC.dll^
@@ -899,6 +900,7 @@
 ||comm.news.nate.com/Etc/ViewADThumb^$domain=news.nate.com
 ||compass.adop.cc/RD/
 ||compass.adop.cc/assets/js/adop/adop.js^
+||compass.adop.cc/assets/js/adop/adopHB.js^
 ||compass.adop.cc/assets/js/adop/adopJ.js^
 ||config.ad-brix.com/*/init.json^
 ||connect.facebook.net/en_US/fbadnw*-tag.js^
@@ -1215,6 +1217,7 @@
 ||img.tvchosun.com/test/ad/$domain=news.tvchosun.com
 ||img.tvchosun.com/upload_img/n2017/ad/$domain=m.tvchosun.com|news.tvchosun.com|vod.tvchosun.com
 ||img.tvchosun.com/upload_img/n2017/banner/$domain=news.tvchosun.com
+||img.wowtv.co.kr/common/script/ad/$domain=wowtv.co.kr
 ||img.yonhapnews.co.kr/basic/svc/00_ko/resources/js/main_youtube.js^$domain=yonhapnews.co.kr
 ||img2.keywordsconnect.com/iconAdImg*.gif^
 ||imnews.busan.com/media/busan/article/img/banner_top_ad.jpg^$domain=imnews.busan.com
@@ -2549,6 +2552,9 @@ deal.11st.co.kr##div.sponsor_link_wrap
 deezer.com##div#ads_banner_left
 deezer.com##div.ads
 deezer.com##section#ads_expand
+demilked.com##div.articles>div.adv.article
+demilked.com##div.desktop-ad
+demilked.com##div.mobile-ad
 develop.sunshiny.co.kr##div#googleAdBottom
 develop.sunshiny.co.kr##div#googleAdTop1
 develop.sunshiny.co.kr##div#googleAdTop2
@@ -4285,6 +4291,7 @@ m.wikitree.co.kr##iframe[src^="/ad/"]
 m.windowscentral.com##div.adunit
 m.womennews.co.kr##div.ad_banner
 m.womennews.co.kr##div.container>div.tcenter
+m.wowtv.co.kr##div.banner-area
 m.xportsnews.com##div#article-ad-area
 m.xportsnews.com##div#cot_tl_fixed
 m.xportsnews.com##div.\32 nd_3x3_ad
@@ -4303,10 +4310,17 @@ m.xportsnews.com##div[itemprop="articleBody"]>div[style="width:100%;height:100px
 m.yakup.com##div.banner1
 m.yakup.com##div[role="main"]>div.wrap>div.ui-block-a>div[style="margin-bottom:10px;text-align:center;max-height:80px;background: #000;"]
 m.yakup.com##ins[data-ad-slot="9994183061"]
+m.yeongnam.com##div.ad-area
+m.yeongnam.com##div.view-ad
 m.yeongnam.com##form[name="listFrm"]>center
+m.yeongnam.com##ins[data-ad-slot="3633942697"]
+m.yeongnam.com##ins[data-ad-slot="4970217444"]
 m.yeongnam.com##ins[data-ad-slot="6066499044"]
+m.yeongnam.com##ins[data-ad-slot="6799377687"]
 m.yeongnam.com##ins[data-ad-slot="9019965446"]
+m.yeongnam.com##ins[data-ad-slot="9917098255"]
 m.yeongnam.com##span.c_art1>table[style="border:1px solid #dfdfdf; margin-bottom:10px; margin-right:10px;"]
+m.yeongnam.com##table.ad-table
 m.yna.co.kr##aside.amp-ad-container
 m.yna.co.kr##aside.aside-bnr02
 m.yna.co.kr##aside.aside-box02
@@ -4433,6 +4447,9 @@ mediatoday.co.kr##div.banner_box
 mediatoday.co.kr##iframe[src*="/adItem/"]
 mediaus.co.kr##iframe[src^="/banner/"]
 mediaus.co.kr##iframe[src^="http://www.mediaus.co.kr/banner/"]
+medicaltimes.com##a[href^="/Users/ADManager2018/ADMamagerCountStat.html"]
+medicaltimes.com##div.ad
+medicaltimes.com##div.footerAD
 medicaltimes.com##div.newsBody>div[style="margin:10px 15px; padding:15px;"]
 medicaltimes.com##div.newsTxt>div[style="padding-top: 15px;"]
 medicaltimes.com##div.thirdSection>div[style="background-color: #f2f2f2;border: 1px solid #cccccc;box-sizing: border-box;margin-bottom: 15px;text-align:center;padding:32px 0px"]
@@ -5262,6 +5279,7 @@ siminsori.com##ins[data-ad-slot="I_시민의소리_바이라인하단1_300_250"]
 siminsori.com##ins[data-ad-slot="I_시민의소리_바이라인하단2_300_250"]
 sisain.co.kr##div#sliding_adop
 sisain.co.kr##div#sliding_adopP
+sisain.co.kr##div.ad-template
 sisain.co.kr##div.edit_inner_content>div.banner_box
 sisain.co.kr##div.float_banner
 sisainlive.com##div#TopBanners2
@@ -5899,26 +5917,8 @@ woman.chosun.com##div.banner
 woman.chosun.com##div.main_banner
 womennews.co.kr##iframe[src^="/news/sidebar_banner_realclick01.html"]
 wowhead.com##div.banner-ad
-wowtv.co.kr##div#absBannerRight
-wowtv.co.kr##div#ad_div
-wowtv.co.kr##div#article_cont>div[style="clear:both; float:left; width:650px; margin:30px auto 0"]
-wowtv.co.kr##div#bottomWrap>div[style="margin-top: 15px;"]
-wowtv.co.kr##div#header>div.view_absBannerLeft>div[style="position:absolute; z-index :0; left:42px; top: -117px;"]
-wowtv.co.kr##div#scrollDiv
-wowtv.co.kr##div#viewContent_3>div[style="display:inline; float:left; width:250px; height:250px; margin:10px 10px 10px 0;"]
-wowtv.co.kr##div#viewContent_3>div[style="float: left; width: 250px; height: 250px; margin: 10px 10px 10px 0px;"]
-wowtv.co.kr##div.ad120731
-wowtv.co.kr##div.ad250w280
-wowtv.co.kr##div.ad_areaHeadline
-wowtv.co.kr##div.ad_tab_AllInOne
-wowtv.co.kr##div.adbaner
-wowtv.co.kr##div.article_view>div[style="clear:both; width:100%; height:275px; margin:15px auto 0"]
-wowtv.co.kr##div.top_sub_top_area>div[style="clear:both; float:left"]
-wowtv.co.kr##div.top_sub_top_area>div[style="float:right; width:120px; height:130px"]
-wowtv.co.kr##div.topbanner
-wowtv.co.kr##div.view-AD-area
-wowtv.co.kr##div.wrap-bottomad
-wowtv.co.kr##div[class^="common_AD"]
+wowtv.co.kr##div#divTopBanner
+wowtv.co.kr##div.adv-area
 www-clien-net.cdn.ampproject.org##div.list_bottom_ad
 www-clien-net.cdn.ampproject.org##div.list_center_ad
 www-clien-net.cdn.ampproject.org##div.list_top_ad
