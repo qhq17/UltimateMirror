@@ -16,6 +16,7 @@ captchme.com##script:inject(set-constant.js, CaptchmeState.adb, undefined)
 /wp-content/plugins/end-of-adblock-cycle/*
 /wp-content/plugins/pause-adblocker/*$domain=~roboticsandautomationnews.com
 ||fastly.net/js/prebid-*$script,redirect=noopjs
+###adtoniq-msgr-bar
 ||absorbingcorn.com^$important
 ||arcticamber.com^$important
 ||breakfastboat.com^$important
@@ -119,7 +120,6 @@ beinsports.com,dumpert.nl,haberturk.com##+js(abort-current-inline-script.js, Uin
 mizonatv.com##.aviso-publicidad-sup
 solarmovie.fun##.hhotnews:has-text(AdBlocker)
 outlook.live.com##a[href="https://windows.microsoft.com/outlook/ad-free-outlook"]:nth-ancestor(4)
-libgen.io##+js(setTimeout-defuser.js, (), 500)
 @@||html-online.com^$generichide
 raiplay.it##.tagManagerError
 sportsnet.ca##+js(abort-on-property-read.js, uxGuid)
@@ -281,7 +281,6 @@ foxnews.com##:xpath(//*[contains(text(),"blocking software")]/../../..)
 laptopmag.com##+js(aopr, _sp_.mms.startMsg)
 @@||murha.info^$generichide
 dzone.com##+js(aopr, adtoniq)
-coloring.ws##+js(acis, atob, googlefc)
 magyarhang.org##+js(aopw, ai_adb)
 mobilarena.hu##+js(nosiif, 0x)
 mobilarena.hu##+js(nostif, 0x)
@@ -294,6 +293,9 @@ globalnews.ca##.ad-container
 minecraftforge.net##+js(nostif, body)
 forum.nlmod.net##+js(acis, document.createElement, adblock)
 insidermonkey.com##+js(aopr, ABD)
+venea.net##+js(aeld, , ads)
+thumpertalk.com##+js(cookie-remover, tt4_detectadblock_time)
+libgen.*##+js(nostif, appendMessage)
 altadefinizione.*##.sm_header.sm_nomobile:has(:scope > a[href*="/HD/play"])
 ||mail-ads.google.com^
 bing.com##+js(nano-remove-elements-onready, #b_results > .b_ad)
