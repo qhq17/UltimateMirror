@@ -136,6 +136,9 @@ rpmseek.com###lbanner_top
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/41#issuecomment-515740473
 edition.cnn.com###story-bottom
+www.cnn.com##[class*="outbrain__Container-"]
+www.cnn.com##iframe[src^="https://widgets.tree.com/"]:nth-ancestor(3)
+www.cnn.com##section:not(:has-text(/\w/))
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/44#issuecomment-519327973
 manuall.*,handleidingkwijt.com,shuomingshu88.com##.col-sm-9 > div:has-text(advertisement)
@@ -175,6 +178,9 @@ ign.com##.secondary-ad
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/73#issuecomment-569457513
 armenianweekly.com##.mh-header-widget-1
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/76#issuecomment-573438246
+nytimes.com,nytimes3xbfgragh.onion##section[name="articleBody"] > div:not(.StoryBodyCompanionColumn):not([data-testid]):not(:last-of-type)
 
 # End Multilingual
 
@@ -1120,6 +1126,28 @@ dailypress.com##.pb-container:last-of-type
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/75#issuecomment-570643369
 ddtonline.com##.block-inner:not(:has(a)):not(:has(iframe)):not(:has(form))
+
+# https://github.com/NanoMeow/QuickReports/issues/2640
+venea.net###ag_more
+venea.net##.ag_banner
+venea.net##.ag_content
+
+# https://github.com/NanoMeow/QuickReports/issues/2648
+thumpertalk.com##[id*=".adloc."]:nth-ancestor(1)
+thumpertalk.com##[data-role="sidebarAd"]
+
+# https://github.com/NanoMeow/QuickReports/issues/2665
+libgen.*##td[bgcolor="#F5F6CE"]
+libgen.*##td:not(:has(img)):not(:has-text(/\w/))
+
+# https://github.com/NanoMeow/QuickReports/issues/2664
+ratemyprofessors.com##+js(remove-attr, class, #body)
+ratemyprofessors.com##[class^="StickyLeaderboard__"]
+ratemyprofessors.com##[class^="AdRail__"]
+ratemyprofessors.com##[class*="__AdWrapper-"]
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/76#issuecomment-573438259
+askapache.com##.GAD
 
 # End English
 
