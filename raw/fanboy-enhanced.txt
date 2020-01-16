@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Checksum: PcSYUe2K0Syfxn93r3g3Ow
+! Checksum: 41Z7FjQ4tOsc3MeXG7xl9A
 ! Title: Fanboy's Enhanced Tracking List
-! Updated: 5 Jan 2020
+! Updated: 9 Jan 2020
 ! Expires: 5 days
 ! License: http://creativecommons.org/licenses/by/3.0/
 ! Homepage: http://www.fanboy.co.nz/
@@ -399,6 +399,7 @@ nautil.us###adpayload
 ||subscriptiongenius.com^$third-party
 ||syncronex.com^$third-party
 ||tinypass.com^$third-party
+||unlock-protocol.com^$third-party
 ||washingtonpost.com/wp-stat/pwapi/prod/pwapi-proxy.min.js
 ! UBo-specific blocks
 theatlantic.com##+js(cookie-remover.js, articleViews)
@@ -2445,6 +2446,8 @@ independent.co.uk##a[title="Twitter"]
 @@||experience.tinypass.com^$xmlhttprequest,script,domain=independent.co.uk
 @@||tinypass.com/api/tinypass.min.js$script,domain=independent.co.uk
 independent.co.uk###footerPrompt
+! https://github.com/ryanbr/fanboy-adblock/issues/1287
+@@||tinypass.com^$domain=economist.com
 ! telegraph.co.uk
 @@||telegraph.co.uk^*/ads.js
 telegraph.co.uk##.adblocker-message
