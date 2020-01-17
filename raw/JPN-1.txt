@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: Ihpg/vR6lsWNKvJxSzNghA
+! Checksum: Ftq5heavM+we5W7s0AosMg
 ! Title: AdGuard Japanese filter
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.2.51
-! TimeUpdated: 2019-12-30T15:31:33+03:00
+! Version: 2.0.2.53
+! TimeUpdated: 2020-01-14T16:31:40+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#japanese
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -718,6 +718,9 @@ _ds_adtag_
 ! Section contains rules for specific websites
 !
 ! /banner/banner_ - if it is necessary, make this rule domain specific
+!
+japan.zdnet.com##.ad-bnr-rect
+forbesjapan.com##.pop2
 macsoft.jp##table[width="96%"] + div[class="K12"] > div[align="left"] > br + br + center
 gpoint.co.jp###footerbnr
 helpsupport.blog.fc2.com##.adsbygoogle
