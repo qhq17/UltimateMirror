@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: PMNB+zMGJ6yUmySzuBkpjg
+! Checksum: v6/0sc50t3su6oZ9hlZndw
 ! Title: AdGuard Tracking Protection filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.11.56
-! TimeUpdated: 2020-01-11T00:03:04+03:00
+! Version: 2.0.11.71
+! TimeUpdated: 2020-01-17T01:31:15+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#privacy
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -152,6 +152,14 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ! ||e.crashlytics.com^
 ! ||settings.crashlytics.com^
 !
+||deliver.ptgncdn.com^
+||u-on.eu^$third-party
+||steadfastsystem.com^$third-party
+||monetate.net^$third-party
+||instana.io^$third-party
+||sitelabweb.com^$third-party
+||scripts.jixie.io^$third-party
+||tr.jixie.io^$third-party
 ||betohomeall.com^$third-party
 ||mc.yandex.ru^
 ||track.segmentstream.com^$third-party
@@ -2259,7 +2267,6 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ||prostats.it^$third-party
 ||provenpixel.com^$third-party
 ||providence.voxmedia.com^$third-party
-||proxad.net^$third-party
 ||prtracker.com^$third-party
 ||pstats.com^$third-party
 ||psyma-statistics.com^$third-party
@@ -3163,6 +3170,7 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ! Admiral domains
 ! These domains are used for tracking purposes according to the data that is being sent there.
 ! More info: https://getadmiral.com/products/measure
+||farshake.com^$third-party
 ||fadedsnow.com^$third-party
 ||nervoussummer.com^$third-party
 ||horsenectar.com^$third-party
@@ -3527,6 +3535,7 @@ nethunt.com/api/v1/track/email/$image
 !+ NOT_PLATFORM(ios, ext_safari, ext_android_cb)
 ||tags.news.com.au^$~script
 !
+||apv-launcher.minute.ly^$third-party
 ||counter.pr-cy.ru^
 ||journey.unicef.de^
 ||telemetry.art19.com^
@@ -5271,6 +5280,8 @@ _tracking.php?b=
 ||nd.demdex.net/event?d_mid=$empty,important,domain=9now.com.au
 ||adc.nine.com.au/?token=$empty,important,domain=9now.com.au
 !
+||bilder-a.akamaihd.net/ip/js/ipdvdc/dbav.js
+||js-agent.newrelic.com^$domain=chaturbate.com,empty,important
 ||api-js.datadome.co/js/
 ||subscribe.washingtonpost.com/acquisition/views/tracking
 ||a.nytimes.com/svc/nyt/data-layer?sourceApp
@@ -7366,6 +7377,24 @@ link.gmapp*.net$image
 !
 ! Exception rules that fix different issues caused by blocking trackers
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/47131
+@@||cdn.petametrics.com/*.js$domain=lanacion.com.ar
+@@||query1.petametrics.com/*&sdk=bc-jsonp$domain=lanacion.com.ar
+! https://github.com/AdguardTeam/AdguardFilters/issues/47926
+@@||googletagservices.com/tag/js/gpt.js$domain=gentside.com|gentside.de|gentside.co.uk|gentside.com.br|esgentside.com|maxisciences.com|ohmymag.com|ohmymag.de|ohmymag.com.br|ohmirevista.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/47757
+@@||googletagmanager.com/gtm.js$domain=easycredit.de
+@@||google-analytics.com/analytics.js$domain=easycredit.de
+@@||google-analytics.com/gtm/js?id=$domain=easycredit.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/46619
+@@||gaua.hit.gemius.pl/gplayer.js$domain=1plus1.video
+! https://github.com/AdguardTeam/AdguardFilters/issues/46352
+@@||cdn.taboola.com/libtrc/alluremedia-network/loader.js$domain=gizmodo.com.au
+@@||cdn.taboola.com/libtrc/impl.*-RELEASE.js$domain=gizmodo.com.au
+@@||trc.taboola.com/alluremedia-gizmodoau/trc/*$domain=gizmodo.com.au
+! https://github.com/AdguardTeam/AdguardFilters/issues/47632
+@@||googletagmanager.com/gtm.js$domain=wibc.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/46786
 ! https://github.com/AdguardTeam/AdguardFilters/issues/46679
 @@||tracfone.inq.com/tagserver/postToServer.min.htm$domain=totalwireless.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/47334
