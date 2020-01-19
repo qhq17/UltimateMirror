@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: v6/0sc50t3su6oZ9hlZndw
+! Checksum: y6xwJnFwyWIwDxTh30R0gQ
 ! Title: AdGuard Tracking Protection filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.11.71
-! TimeUpdated: 2020-01-17T01:31:15+03:00
+! Version: 2.0.11.74
+! TimeUpdated: 2020-01-19T12:31:15+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#privacy
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -5280,6 +5280,8 @@ _tracking.php?b=
 ||nd.demdex.net/event?d_mid=$empty,important,domain=9now.com.au
 ||adc.nine.com.au/?token=$empty,important,domain=9now.com.au
 !
+||google-analytics.com^$domain=promiflash.de,empty,important
+||csi.gstatic.com^$domain=promiflash.de,empty,important
 ||bilder-a.akamaihd.net/ip/js/ipdvdc/dbav.js
 ||js-agent.newrelic.com^$domain=chaturbate.com,empty,important
 ||api-js.datadome.co/js/
@@ -7377,6 +7379,11 @@ link.gmapp*.net$image
 !
 ! Exception rules that fix different issues caused by blocking trackers
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/48066
+@@||t2.hulu.com/*/adinteraction^$domain=player.hulu.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/48010
+@@||google-analytics.com/gtm/js?id=$domain=joblo.com
+@@||google-analytics.com/analytics.js$domain=joblo.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/47131
 @@||cdn.petametrics.com/*.js$domain=lanacion.com.ar
 @@||query1.petametrics.com/*&sdk=bc-jsonp$domain=lanacion.com.ar
