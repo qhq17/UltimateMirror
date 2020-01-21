@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: +Sd4v+en6ELuSLtt8KXoVA
+! Checksum: pNu3nsyw00iCfWFXtjEiLw
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish and Portuguese languages.
-! Version: 2.0.5.38
-! TimeUpdated: 2020-01-13T23:31:43+03:00
+! Version: 2.0.5.49
+! TimeUpdated: 2020-01-20T18:04:48+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#spanish
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -72,6 +72,7 @@
 !
 ! https://forum.adguard.com/index.php?threads/ivoox-com-podcasts-issues.29530/
 ! ||addevweb.com^$third-party
+||tags.orquideassp.com^$third-party
 ||widgets.informars.com^
 ||potu.xyz^
 ||afiliados.hostgator.com.br^$third-party
@@ -245,6 +246,15 @@
 !
 ! AdRegain
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/48065
+ggames.com.br#@#.adsbygoogle
+ggames.com.br#$#.adsbygoogle { display: block!important; position: absolute!important; left: -3000px!important; }
+! https://github.com/AdguardTeam/AdguardFilters/issues/47860
+aquariumgays.com#@#.adsBox
+! https://github.com/AdguardTeam/AdguardFilters/issues/47777
+@@||minhasdelicias.com/*/adsbygoogle.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/47640
+@@||mastercoria.com/js/ad_serve.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/47555
 !+ NOT_PLATFORM(windows, mac, android, ext_chromium, ext_ff, ext_opera)
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=profesor10demates.com
@@ -330,12 +340,13 @@ animesonline.cz#@#.afs_ads
 ! https://github.com/AdguardTeam/AdguardFilters/issues/43447
 ! https://github.com/AdguardTeam/AdguardFilters/issues/39889
 ! https://github.com/AdguardTeam/AdguardFilters/issues/32467
+@@/cnads.js$domain=animeshouse.net
+@@/adscript.js$domain=animeshouse.net
 @@/delivery.ads.js$domain=animeshouse.net
 @@/adsbygoogle.js$script,domain=animeshouse.net
 @@/ad.min.js$domain=animeshouse.net
 @@/ads/ad*.js$domain=animeshouse.net|feralhosting.com
-@@||rana-ah.cf/$script,domain=animeshouse.net
-@@||satellizer-ah.cf/$script,domain=animeshouse.net
+@@|http*://*.cf/*.js$script,domain=animeshouse.net
 @@||paradiseirltrue.tk/$script,domain=animeshouse.net
 @@||tatsumaki.cf/$script,domain=animeshouse.net|feralhosting.com
 @@||animeshouse.net/*/ads.js
@@ -849,9 +860,9 @@ clubedohardware.com.br##.caixa_topo
 ! https://github.com/AdguardTeam/AdguardFilters/issues/6774
 @@||static.as-cdn.tk/js/ads.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/6766
-uol.com.br#$##banner_b {display:block!important;}
-uol.com.br#$#iframe#google_ads_iframe_b {display:block!important;}
-uol.com.br#$#iframe#google_ads_iframe_123_bait {display:block!important;}
+uol.com.br#$##banner_b { display: block !important; }
+uol.com.br#$#iframe#google_ads_iframe_b { display: block !important; }
+uol.com.br#$#iframe#google_ads_iframe_123_bait { display: block !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/6666
 !+ PLATFORM(ext_ff, ext_opera, ios, ext_android_cb, ext_ublock)
 @@||wakfutemporada2subs.blogspot.com^$generichide
@@ -1148,6 +1159,8 @@ maisgasolina.com#?##main [id$="Block"][-ext-has='.adsbygoogle']
 !--------------------------------------!
 !------- JS rules ---------------------!
 !--------------------------------------!
+! https://github.com/AdguardTeam/AdguardFilters/issues/47860
+! https://github.com/AdguardTeam/AdguardFilters/issues/39547
 ! https://github.com/AdguardTeam/AdguardFilters/issues/45935
 ! https://github.com/AdguardTeam/AdguardFilters/issues/45783
 ! https://github.com/AdguardTeam/AdguardFilters/issues/45492
@@ -1356,6 +1369,14 @@ http://adw.
 !-------------------- Specific rules --------------------!
 !--------------------------------------------------------!
 !
+ultimasnoticias.com.ve##div[class^="ultim-"]
+ultimasnoticias.com.ve##.ultim-adlabel + a[rel="nofollow"]
+lanacion.com.ar###bn-lateral
+lanacion.com.ar##.temas > div.titulares-del-dia
+||fakings.com/images/revive/pepeporn/
+tv.fakings.com##.separabot2 > .centrado
+tv.fakings.com###banners_footer
+minhasdelicias.com##.TextAnuncio
 gnula.co##.buttons-p
 terra.com.br###advRuller2--wrapper
 luchaonline.com##.Anuncios
@@ -1487,7 +1508,6 @@ mg.superesportes.com.br##.hidden-xs > .showcase.no-negative-xs
 ||domainpctn.pctnew.com/*/ad/*/*.js
 g1novelas.online,g1novelas.org##center > a[href^="https://bit.ly/"][rel="noopener"] > img
 librosgratisxd.com##center > a[href^="https://tinyurl.com/"] > img
-globo.com##.banner
 ||peruanazotv.com/publi/
 install.lctutors.com.br##.e3lan-top > a[href][target="_blank"] > img
 ||install.lctutors.com.br/wp-content/uploads/*/PohFHt_Q.png
@@ -2391,7 +2411,7 @@ lared.cl##.aviso728x90
 laprensa.com.ni##.baner_centro
 laprensa.com.ni##.baner_superior
 terra.es##.bann
-defesanet.com.br,mibrujula.com,lyon.kim,26noticias.com.ar,auniao.com,clickpb.com.br,emagister.com,lanacion.com.ar,parana-online.com.br,r7.com,toxico-pc.com,uol.com.br##.banner
+dalealbo.cl,globo.com,defesanet.com.br,mibrujula.com,lyon.kim,26noticias.com.ar,auniao.com,clickpb.com.br,emagister.com,lanacion.com.ar,parana-online.com.br,r7.com,toxico-pc.com,uol.com.br##.banner
 iol.pt##.banner-area
 series-br.com##.banner-home
 ionline.pt##.banner-obj
