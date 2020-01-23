@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: qavftLsFHBlQN+D5zuxf7A
+! Checksum: +1FgWt86KWLz59V248E7jw
 ! Title: AdGuard Turkish filter
 ! Description: Filter list that specifically removes ads on websites in Turkish language.
-! Version: 2.0.12.80
-! TimeUpdated: 2020-01-17T20:30:21+03:00
+! Version: 2.0.12.89
+! TimeUpdated: 2020-01-22T19:30:23+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#turkish
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -67,6 +67,7 @@
 !-------------- Advertising networks ---------------------------------------!
 !---------------------------------------------------------------------------!
 !
+||admoxi.com^$third-party
 ||adbetnetwork.com^$third-party
 ||areabet.net^$third-party
 ||smrtbnr.info^
@@ -367,6 +368,9 @@
 !
 ! These rules are against all kinds of ad blocking reinjection/circumvention scripts
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/48252
+kastamonutasarim.com#@#.adsbygoogle
+kastamonutasarim.com#$#.adsbygoogle { display: block!important; position: absolute!important; left: -3000px!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/15571
 simulationmods.com##div[id^="ai-adb-"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/47230
@@ -414,13 +418,6 @@ tr.petitchef.com#@#.adBanner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/44479
 @@||cdnjs.cloudflare.com/ajax/libs/fuckadblock/3.2.1/fuckadblock.min.js$domain=turkanime.net
 @@||turkanime.net^$generichide
-! @@||cpmstar.com/cached/*.jpg$domain=turkanime.net
-! @@||cpmstar.com/cached/js/lib.js$domain=turkanime.net
-! @@||cpmstar.com/view.aspx?poolid=$domain=turkanime.net
-! @@||cpmstar.com/cached/js/textad_async_v*.pack.js$domain=turkanime.net
-! @@||cpmstar.com/cached/zonefiles/*_turkanime.js$domain=turkanime.net
-! @@||cpmstar.com/cached/zonemasters/mobilemodules.js$domain=turkanime.net
-! @@||cpmstar.com/cached/zonemasters/lib/prebid/prebid_*.js$domain=turkanime.net
 ! https://github.com/AdguardTeam/AdguardFilters/issues/45302
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=bunuokusana.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/45303
@@ -865,7 +862,6 @@ appleyardim.org#?##sidebar > li[-ext-has='span.blocktitle:contains(Reklamlar)']
 filmloves.com#?#.right > .title:has(> h6:contains(SPONSOR REKLAM ALANI))
 hdfilmizlep.com,fullhdtekpartizle.org#?##sidebar > .sidebarborder:has(> .sidebar-right > .textwidget > p > a[target="_blank"][rel="nofollow noopener noreferrer"])
 yeniakit.com.tr#?#.module-default-topHeadlines > .box > ul > li:has(> a[href^="https://yeniakit.com.tr/ads"])
-mobile.donanimhaber.com#?##pop-container > .konular > .displayOrder1_:has(> h3 > a[href^="https://www.n11.com/kampanyalar/"])
 wmaraci.com#?#.page > div[align="left"] > div[id^="edit"] > .vbseo_like_postbit[align="center"]:has(> tbody > tr > td > a[rel="nofollow external"])
 star.com.tr#?#li:has(> a[href*="//apps.star.com.tr/advredir"])
 gazeteoku.tv#?#td[valign="top"]:has(table[cellspacing="1"] b:contains(Reklamlar))
@@ -2002,6 +1998,12 @@ uyumhaber.com,kmarashaber.com,yenimeram.com.tr,vivaldimagazin.com,tafdi.org,gzt.
 filmmodu.co,dizifilmix.org,sineturk.pw,altyazilifilmizle.tv,1080pfilmizle.net,dolufilmizle.com,filmizleve.com,indirmedenfilmizle.pw,filmizle.us,filmihdizlet.com,moodfilmizle.com,fullhdiziizle.com,rexfilmizle.com,filmizlevip.org,filmizlefilmsitesi.com,sineturk1.com,hdfilmizle.fun,nettenfilm.net,fullizlefilmizle.com,fanfilmizle.com,nettenfilm.com,indirmedenfilmizle1.com,xfullfilmizle.com,fullhizlifilmizlesen.com,hdhergundizi.com,sinemapol.org,hdciyiz.com,sinefilm.net,hdfilmizle.life,hdcehennem.com,sendeizlesene.net,cilekfilm.com,hizlifullfilmizle.com,diziizlevv.com##.footer-sticky
 !
 !
+donanimhaber.com##.konulisteTextReklam
+donanimhaber.com##a[href^="https://tr.rdrtr.com/aff_c?"]
+evrensel.net##.haber-sidebar-banner
+||belesmp3indir.com/sw.js
+menuburada.com##a[href^="https://menuburada.com/reklam-zipla.php"]
+guncelmp3indir.com##.content a[href][target="_blank"] > img
 teknobalta.com##.otw-sticky-wrapoer
 filmkovani.com###wrap > div[class] > a[target="_blank"] > img
 forum.donanimhaber.com##div[class^="Forum_Anasayfa_YeniMasthead_"]
@@ -2467,7 +2469,7 @@ wmaraci.com##.alt1 > a[target="_blank"][rel="nofollow"] > img
 wmaraci.com##a[href="https://vevomedya.com/"][rel="nofollow"] > img
 onlinehitfilm.com##a[href="https://www.navitech.site/"]
 ||onlinehitfilm.com/960x*00.jpg
-indir.pub##center > a[href][rel="nofollow"] > img
+cilekmp3.com,indir.pub##center > a[href][rel="nofollow"] > img
 indir.pub##center > a[href]:not([href^="https://indir.pub/"]).red
 kayseritelgraf.com,tranimeizle.com##.add-inner
 tekpartizlefullhd.org##a[href][rel="nofollow"]:not([class]) > img
@@ -2500,7 +2502,7 @@ dizilla.com##.footerFixedAdWrapper
 dizired1.com###footer-kayan
 dizired1.com###cboxOverlay
 dizired1.com###colorbox
-diziyo8.net,diziyo7.net,filmw.org###reklamCodeiframe
+setfilmizle.me,diziyo8.net,diziyo7.net,filmw.org###reklamCodeiframe
 ||filmra.org/mel.mp4
 ||filmw.org/video_onu_yeni.php
 ||guvenlifilmizle.com/mlebetreklamvideosu.mp4
@@ -3285,8 +3287,6 @@ araba.waa2.com.tr##.detailPegesLeft336x280
 izlesene.com##.virgul-ad
 izlesene.com###nativeAd
 trendus.com###PlistaWidget
-sakaryayenihaber.com##.SagBlok a[href^="http"]:not([href*="sakaryayenihaber.com"])
-sakaryayenihaber.com##body > div[style="position:relative; width:980px; margin:0 auto;"]
 akillitelefon.com##.g1-advertisement
 dizifilmsizle.com###custom_html-32
 ||diziyo4.net/videoyaniyeni
@@ -4093,7 +4093,7 @@ fullhdfilm.gen.tr###MrXAbeSawra666
 paratic.com###yaziSonuBanners
 paratic.com##a[href^="https://www.gcmforex.com/"]
 ||referrer.website^$popup,domain=filmtat1.com
-unutulmazfilmler.pw,bolfilmizle.com,stukface.com,mach1digital.com,mp3indirco.info,ekranlardan.com,ilkfullfilmizle.com,diziyo4.net,muzikmp3indir.com,hdfilmcehennemibox.com,iddaanet.com,nettenfilm.com##center > a[href][target="_blank"] > img
+belesmp3indir.com,mobilmp3indir.org,unutulmazfilmler.pw,bolfilmizle.com,stukface.com,mach1digital.com,mp3indirco.info,ekranlardan.com,ilkfullfilmizle.com,diziyo4.net,muzikmp3indir.com,hdfilmcehennemibox.com,iddaanet.com,nettenfilm.com##center > a[href][target="_blank"] > img
 nettenfilm.com##.film-icerik > a[href][target="_blank"] > img
 ||nettenfilm.com/wp-content/uploads/*/Lnzy31.gif
 ||nettenfilm.com/wp-content/uploads/*/banner.jpg
