@@ -28,7 +28,7 @@
 ! 2015-04-??: http://anleitung.trojaner-board.de/chip-installer
 ! https://github.com/uBlockOrigin/uAssets/issues/6587
 chip.de##[href^="javascript:"]
-chip.de##.download_button:has-text(Kostenlos)
+chip.de##a:not([href]) > button:has(*:matches-css-before(content: /K/))
 
 ! 2015-03-11: http://blog.emsisoft.com/2015/03/11/mind-the-pup-top-download-portals-to-avoid/
 ! 2015-01-21: http://www.howtogeek.com/207692/yes-every-freeware-download-site-is-serving-crapware-heres-the-proof/
@@ -81,9 +81,6 @@ chip.de##.download_button:has-text(Kostenlos)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1943
 ||securetoolext.com^$document
-
-! https://github.com/NanoAdblocker/NanoFilters/issues/99
-upload.ac##+js(remove-attr.js, checked, #chkIsAdd)
 
 ! https://github.com/HandyUserscripts/AntiAdware/issues/52
 upload4earn.org##+js(remove-attr.js, checked)
@@ -448,3 +445,9 @@ howtoremove.guide###gray_de
 
 ! https://github.com/uBlockOrigin/uAssets/pull/6757
 ||tncrun.net^$all
+
+! https://github.com/NanoMeow/QuickReports/issues/2772
+||d3125zvx5yi5sj.cloudfront.net^$all
+
+! https://github.com/NanoMeow/QuickReports/issues/2813
+||mp3hub.com^$document
