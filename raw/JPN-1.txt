@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: Ftq5heavM+we5W7s0AosMg
+! Checksum: Rx8ljt28Xt3UmMaG5CZkAw
 ! Title: AdGuard Japanese filter
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.2.53
-! TimeUpdated: 2020-01-14T16:31:40+03:00
+! Version: 2.0.2.56
+! TimeUpdated: 2020-01-23T01:31:38+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#japanese
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -486,6 +486,8 @@ anipo.jp#@#.adbanner
 !
 ! Extended CSS rules
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/47356
+himasoku.com#?#.article-body > center:has(> a[href^="https://wu."] > img)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/45195
 helpsupport.blog.fc2.com#?#.mdl-quigo > div[style^="height:"][style*="margin-bottom:"]:not([class]):not([id]):has(> script:first-child:contains(amzn_assoc_ad_type))
 ! https://github.com/AdguardTeam/AdguardFilters/issues/43602
@@ -719,6 +721,7 @@ _ds_adtag_
 !
 ! /banner/banner_ - if it is necessary, make this rule domain specific
 !
+followcheck.itby.net##.mms.uk-margin-top
 japan.zdnet.com##.ad-bnr-rect
 forbesjapan.com##.pop2
 macsoft.jp##table[width="96%"] + div[class="K12"] > div[align="left"] > br + br + center
@@ -1398,6 +1401,8 @@ gtoys.blog48.fc2.com###adright
 !
 ! White list. Fixing filtration errors(false-positive)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/47520
+@@||static.rebates.jp/img/*_300x250.
 ! https://github.com/AdguardTeam/AdguardFilters/issues/43771
 signal-flag-z.blogspot.com#@#.vertical-ads
 ! https://github.com/AdguardTeam/AdguardFilters/issues/41967
