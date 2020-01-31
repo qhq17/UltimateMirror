@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: gUdPbbM2QFEFzrzeeBDmgA
+! Checksum: 5P7/bFDjdf+06OjAS7t+8A
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish and Portuguese languages.
-! Version: 2.0.5.50
-! TimeUpdated: 2020-01-22T15:03:46+03:00
+! Version: 2.0.5.53
+! TimeUpdated: 2020-01-31T14:31:46+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#spanish
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -1029,6 +1029,8 @@ yahoo.com#?#ul[class^="Mb(0)"] > li.js-stream-content:has(> div > a[rel="nofollo
 !
 terra.com.br#?#.table-related-content-new:has(> #related-bellow-news > .taboola-placeholder)
 unionleitor.top#?#.col-md-4 > h2:contains(/^Publicidade$/)
+animeflv.net#?#.Container section.WdgtCn:has(> center > a[href="https://www.patreon.com/somoskudasai"] > img)
+animeflv.net#?#.Container div.WdgtCn:has(> div[style] > center > script[src^="//server.cpmstar.com/"])
 animeflv.net#?#.Container section.WdgtCn:has(> .OUTBRAIN)
 sexomoda.com#?#.column.middle > article:has(> span#ze)
 paginasiete.bo#?##main-content > .region > .fila > .container > .row[id] > .col-md-4.p33:has(> .cleft:only-child > .bnn > div[id^="div-gpt-ad"])
@@ -1950,7 +1952,7 @@ animeflv.co##.episodeList > div > div:empty
 animeflv.co##.episodeList > div > div[style="float: left;"]
 xn--hentaienespaol-1nb.net##.pr-widget
 ||hentai-heroes.com/deaf/mo_script.php
-muchohentai.com###page > div[id^="__"]
+muchohentai.com###content > div.type-post > div[id^="__"]
 muyinteresante.es##.size_static.mega1
 muyinteresante.es###sidebar > [class^="roba"]
 ||i0.wp.com/autoblog.com.ar/wp-content/uploads/2015/03/*800x100*.gif?resize=800%2C100
@@ -3156,6 +3158,7 @@ urlcloud.us##.banner
 !
 ! White list. Fixing filtration errors (false-positive)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/47494
 ! https://github.com/AdguardTeam/AdguardFilters/issues/46603
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=13.cl
 @@||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$domain=13.cl
