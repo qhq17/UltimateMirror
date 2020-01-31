@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: 2JDO2saYd5IYNe+7G1/y+g
-! Version: 202001262212
+! Checksum: Y/KNPF+ITHJ0yAqfrJQRNA
+! Version: 202001310551
 ! Title: Fanboy's Social Blocking List
-! Last modified: 26 Jan 2020 22:12 UTC
+! Last modified: 31 Jan 2020 05:51 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.to/
 ! License: http://creativecommons.org/licenses/by/3.0/
@@ -820,6 +820,7 @@
 /footer-youtube-
 /footer/facebook-
 /footer/facebook.
+/footer/facebook_
 /footer/fb-
 /footer/google-
 /footer/instagram-
@@ -831,6 +832,7 @@
 /footer/twit-
 /footer/twitter-
 /footer/twitter.
+/footer/twitter_
 /footer/youtube.
 /footer_facebook.
 /footer_fb-
@@ -1363,6 +1365,7 @@
 /images/social_$image
 /images/socials/*
 /images/soicial/*
+/images/tmblur.
 /images/tumblr-
 /images/tw_
 /images/twiter
@@ -2360,6 +2363,7 @@
 /socialcount.
 /socialcounters/*
 /socialcounts/*$script
+/socialCounts?
 /socialfacebookdark.
 /socialFooterSprite.
 /socialgoogledark.
@@ -3628,6 +3632,8 @@ _youtube_social_
 ###em-sharer
 ###embed-share
 ###embed-share-button
+###entry-footer-social-buttons
+###entry-header-social-buttons
 ###entry-social-float
 ###enw-share-btn
 ###epoch-floating-social
@@ -3834,6 +3840,7 @@ _youtube_social_
 ###fb_twitter_bar
 ###fb_video_link
 ###fb_widget
+###fbbestshare
 ###fbbox
 ###fbbox-relocated
 ###fbbox1
@@ -4304,6 +4311,7 @@ _youtube_social_
 ###linkedin_social_sidebar
 ###list--share-buttons
 ###listMasterShareListBottom
+###lnkSocial
 ###logShare
 ###logo-socials-follow
 ###lr_social_tout
@@ -6316,6 +6324,7 @@ _youtube_social_
 ##.addthis_default_style
 ##.addthis_digg
 ##.addthis_email
+##.addthis_fallback
 ##.addthis_header
 ##.addthis_horizontal
 ##.addthis_horizontal_follow_toolbox
@@ -6812,6 +6821,9 @@ _youtube_social_
 ##.big-share-col
 ##.big-share-container
 ##.big_facebook_share
+##.bigsocialblock__bg
+##.bigsocialblock__item
+##.bigsocialblock__social-icon
 ##.bimber-microshare-item-share
 ##.bio-socials
 ##.bio-with-share
@@ -6926,6 +6938,8 @@ _youtube_social_
 ##.bot_aa_share
 ##.bot_sociales
 ##.botart-share-line
+##.boton_googleplus
+##.boton_twitter
 ##.bottom-article-share
 ##.bottom-bar--sharing
 ##.bottom-bar-share-button
@@ -8606,6 +8620,7 @@ _youtube_social_
 ##.footer-main__socials
 ##.footer-nav-connect
 ##.footer-nav-social
+##.footer-network-social
 ##.footer-pin
 ##.footer-pinterest-icon
 ##.footer-quote-share
@@ -9932,6 +9947,7 @@ _youtube_social_
 ##.j-social-actions
 ##.j-social-button
 ##.j-twitter
+##.jSocialShare
 ##.janrainEngagePublishShareBar
 ##.janrainShareCountContainer
 ##.janrainSocialBar
@@ -10754,6 +10770,7 @@ _youtube_social_
 ##.network-bar-social-media-links
 ##.network-social-box
 ##.new-bdsharebuttonbox
+##.new-footer-social
 ##.new-share
 ##.new-side-share
 ##.new-social
@@ -11132,13 +11149,17 @@ _youtube_social_
 ##.post-share-container
 ##.post-share-count
 ##.post-share-element
+##.post-share-email
 ##.post-share-facebook
+##.post-share-item
 ##.post-share-links
 ##.post-share-panel
+##.post-share-pinterest
 ##.post-share-pt
 ##.post-share-row
 ##.post-share-toolbar
 ##.post-share-twitter
+##.post-share-whatsapp
 ##.post-share-widget
 ##.post-sharebox
 ##.post-sharebtns
@@ -13085,6 +13106,7 @@ _youtube_social_
 ##.social-icons-block
 ##.social-icons-bottom-set
 ##.social-icons-c
+##.social-icons-classic
 ##.social-icons-color-black
 ##.social-icons-container
 ##.social-icons-float
@@ -13273,6 +13295,7 @@ _youtube_social_
 ##.social-networks-container
 ##.social-networks-float
 ##.social-networks-footer
+##.social-networks-link
 ##.social-networks-links
 ##.social-networks__badges
 ##.social-networks__item
@@ -13862,6 +13885,7 @@ _youtube_social_
 ##.social_media_header
 ##.social_media_icon
 ##.social_media_links
+##.social_media_list
 ##.social_media_section
 ##.social_media_share
 ##.social_media_ul_li_a
@@ -15750,6 +15774,7 @@ _youtube_social_
 ##a[onclick^="popUp=window.open('http://pinterest.com/pin/create/button/"]
 ##a[onclick^="popUp=window.open('http://www.tumblr.com/share/"]
 ##a[onclick^="popUp=window.open('https://plus.google.com/share?"]
+##a[onclick^="popUp=window.open('https://www.facebook.com/sharer/sharer.php?"]
 ##a[onclick^="shareVideo"]
 ##a[onclick^="teleShare"]
 ##a[onclick^="window.open('http://twitter.com/home?status="]
@@ -15856,6 +15881,8 @@ _youtube_social_
 ##a[title^="Join us on Linkedin"]
 ##a[title^="Like us on Facebook"]
 ##a[title^="Partager cet article"]
+##a[title^="Partager via Facebook"]
+##a[title^="Partager via Google Plus"]
 ##a[title^="Share a link on Facebook"]
 ##a[title^="Share a link on Google"]
 ##a[title^="Share a link on Twitter"]
@@ -15899,6 +15926,7 @@ _youtube_social_
 ##div[class^="FooterSocialLinks"]
 ##div[class^="ShareButtons_"]
 ##div[class^="ShareLinks_"]
+##div[class^="SocialIconsGroup"]
 ##div[class^="SocialTool"]
 ##div[class^="article-sticky-share_"]
 ##div[class^="article__shared_bar"]
@@ -18864,6 +18892,7 @@ facebook.com#@##fb_header
 163.com#@##layout-social
 facebook.com#@##likebtn
 recite.com#@##main-share
+mmo13.ru#@##menu-share
 iab.org.pl#@##menu-social
 satkurier.pl#@##menu_social
 digg.com#@##module_digg
@@ -18872,6 +18901,7 @@ linkedin.com#@##share-box
 code2flow.com#@##share-button
 competitor.com#@##share-links
 voicethread.com#@##share-menu
+app.sococo.com#@##share-more
 reddit.com#@##share-reddit
 lastampa.it,tomshardware.com#@##shareBar
 getpocket.com#@##shareMenu
@@ -19049,6 +19079,7 @@ academia.edu,epicgames.com,martini.com,oneplus.net#@#.google-btn
 9gag.com,google.at,google.be,google.ca,google.ch,google.co.id,google.co.il,google.co.in,google.co.jp,google.co.ke,google.co.th,google.co.za,google.com,google.com.ar,google.com.au,google.com.br,google.com.hk,google.com.mx,google.com.tr,google.com.ua,google.cz,google.dk,google.es,google.fi,google.fr,google.hu,google.it,google.nl,google.pl,google.ro,google.ru,google.se,google.sk,wpolityce.pl#@#.google-plus
 google.at,google.be,google.ca,google.ch,google.co.id,google.co.il,google.co.in,google.co.jp,google.co.ke,google.co.th,google.co.za,google.com,google.com.ar,google.com.au,google.com.br,google.com.hk,google.com.mx,google.com.tr,google.com.ua,google.cz,google.dk,google.es,google.fi,google.fr,google.hu,google.it,google.nl,google.pl,google.ro,google.ru,google.se,google.sk,inoreader.com#@#.google_plus
 apertura.com,quotidiani.gelocal.it#@#.googleplus
+yandex.by,yandex.kz,yandex.ru#@#.gplus
 youtube.com#@#.gplus-icon
 vk.com#@#.group_share
 ulrichesch.de#@#.headersocial
@@ -19101,6 +19132,7 @@ fider.io,jellyfin.org#@#.m-social
 epicdrama.pl,iab.org.pl#@#.menu-social
 arkansasmatters.com,kark.com#@#.meta-share
 adobe.com#@#.mod-facebook
+blmagazine.it#@#.mvp-post-soc-wrap
 moneycanbuylipstick.com#@#.nav-social
 atelierdeschefs.fr#@#.navbar-social
 disroot.org#@#.new-share
@@ -19108,6 +19140,7 @@ mouthshut.com#@#.openshare
 newsweek.com,vidcloud.co#@#.page-share
 atvmedia.ru#@#.page-social
 renren.com#@#.photo-share
+hotforfoodblog.com#@#.pin-it
 pinterest.com#@#.pin-it-button
 feedly.com#@#.pinButton
 pinterest.com#@#.pinit-btn
@@ -19151,7 +19184,7 @@ sharesansar.com#@#.share-head
 greatbritishchefs.com#@#.share-header
 howtogeek.com#@#.share-heading
 ida2at.com#@#.share-holder
-iherb.com,vimeo.com#@#.share-icon
+app.sococo.com,iherb.com,vimeo.com#@#.share-icon
 golem.de,tumblr.com#@#.share-item
 vimeo.com#@#.share-label
 recite.com#@#.share-left
@@ -19159,7 +19192,7 @@ askubuntu.com,baidu.com,broadcast.app.net,imgur.com,kuechenstud.io,logbuch-netzp
 pornhub.com#@#.share-link-container
 autokult.pl,channelnewsasia.com,fotoblogia.pl,imgur.com,komorkomania.pl#@#.share-links
 channelnewsasia.com,recite.com#@#.share-list
-disqus.com,disroot.org,google.at,google.be,google.ca,google.ch,google.co.id,google.co.il,google.co.in,google.co.jp,google.co.ke,google.co.th,google.co.za,google.com,google.com.ar,google.com.au,google.com.br,google.com.hk,google.com.mx,google.com.tr,google.com.ua,google.cz,google.dk,google.es,google.fi,google.fr,google.hu,google.it,google.nl,google.pl,google.ro,google.ru,google.se,google.sk,livelib.ru,tumblr.com#@#.share-menu
+app.sococo.com,disqus.com,disroot.org,google.at,google.be,google.ca,google.ch,google.co.id,google.co.il,google.co.in,google.co.jp,google.co.ke,google.co.th,google.co.za,google.com,google.com.ar,google.com.au,google.com.br,google.com.hk,google.com.mx,google.com.tr,google.com.ua,google.cz,google.dk,google.es,google.fi,google.fr,google.hu,google.it,google.nl,google.pl,google.ro,google.ru,google.se,google.sk,livelib.ru,tumblr.com#@#.share-menu
 flickr.com,fxhome.com#@#.share-options
 dropbox.com,ge.tt,gfycat.com,recite.com#@#.share-page
 flickr.com,imgur.com,tobii.com,youtube.com#@#.share-panel
@@ -19503,7 +19536,7 @@ fark.com,github.com,github.io,justwatch.com,marketplace.firefox.com,vvhp.net#@#i
 @@||androidpolice.com/wp-content/*_facebook-$image
 @@||androidpolice.com/wp-content/themes/ap2/ap_resize/ap_resize.php?*_Twitter-$image
 @@||angvremya.ru/engine/classes/min/index.php?*/js/social-$stylesheet
-@@||apis.google.com/js/platform.js$domain=9gag.com|discogs.com|duolingo.com|febbit.com|id.logi.com|jakdojade.pl|moshi.com|passeidireto.com|sato.fi
+@@||apis.google.com/js/platform.js$domain=9gag.com|discogs.com|duolingo.com|febbit.com|id.logi.com|jakdojade.pl|moshi.com|olx.pl|olx.ro|passeidireto.com|sato.fi
 @@||app.hrlab.de/assets/icons/$image,domain=app.hrlab.de
 @@||apple.com/kb/resources/images/i_facebook.png
 @@||apynews.pl/assets/ranking-facebook.jpg
@@ -19557,6 +19590,7 @@ fark.com,github.com,github.io,justwatch.com,marketplace.firefox.com,vvhp.net#@#i
 @@||cdn-immedia.net/img/share/
 @@||cdn.jamatto.com/api/images/*-login/facebook.png
 @@||cdn.pinknews.co.uk/images/$image,domain=pinknews.co.uk
+@@||cdn.syndication.twimg.com/tweets.json
 @@||cdn.ubi.com/uplay-connect/*/images/FB.png$domain=connect.ubi.com
 @@||cdnslate.com^*/social/colored-social-$image
 @@||chesscomfiles.com/images/fb_logo.png$domain=chess.com
@@ -19641,6 +19675,7 @@ fark.com,github.com,github.io,justwatch.com,marketplace.firefox.com,vvhp.net#@#i
 @@||facebook.com/share/share_now_menu/$xmlhttprequest,domain=facebook.com
 @@||facebook.com^*/like.php?$domain=archivedbook.com|e-biznes.pl|farmville.com|gmx.net|gu-facebook.appspot.com|home.1und1.de|likearea.com|porn99.net|web.de
 @@||facebook.com^*/plugins/page.php?$domain=cieplikpodrozuje.pl|fashionvoyager.pl|majkrafci.pl|makulscy.com
+@@||facebook2.poker.zynga.com^$subdocument,domain=facebook.com
 @@||factorio.com/images/Steam.png$image
 @@||fansshare.com/media/*social$image
 @@||fark.net/images/*/links/
@@ -19986,8 +20021,6 @@ fark.com,github.com,github.io,justwatch.com,marketplace.firefox.com,vvhp.net#@#i
 @@||superstars.news/wp-content/uploads/*-social-media-$image,~third-party
 @@||swappa.com/static/icons/social/login_$image
 @@||symantec.com/content/*/about/images/social/b-$image
-@@||syndication.twitter.com/tweets.json?*&callback=$script
-@@||syndication.twitter.com/tweets.json?callback=$script
 @@||t3n.de/news/wp-content/uploads/*/social_media_
 @@||tabletowo.pl/wp-content/uploads/$image
 @@||teamquest.pl/img/static/$image
@@ -20026,7 +20059,6 @@ fark.com,github.com,github.io,justwatch.com,marketplace.firefox.com,vvhp.net#@#i
 @@||tv-kino.net/wp-content/plugins/fb-traffic-pop/
 @@||twimg.com/client_application_images/$image,domain=twitter.com
 @@||twimg.com/profile_images/$image,domain=twitter.com
-@@||twimg.com/tweets.json?*callback$script
 @@||twimg.com/widgets/video?$script
 @@||twimg.com^*/img/twitter_web_sprite_$domain=twitter.com
 @@||twimg.com^*/tweets.js$domain=twitter.com
@@ -20078,6 +20110,7 @@ fark.com,github.com,github.io,justwatch.com,marketplace.firefox.com,vvhp.net#@#i
 @@||wp.com/wp-content/mu-plugins/post-flair/sharing/images/icon-facebook.png
 @@||wp.com/wp-content/mu-plugins/post-flair/sharing/images/icon-twitter.png
 @@||wp.com^*/Twitter_$image,domain=stadt-bremerhaven.de
+@@||wp.com^*/wp-content/uploads/$image,domain=inoreader.com
 @@||wphub.com/wp-content/uploads/2010/05/design-freebies-vector-social-icon-set1-138x98.png
 @@||wpimg.pl^*/dynamic_content/$image,domain=pilot.wp.pl
 @@||wsj.net^*/social_icons.png$domain=marketwatch.com
