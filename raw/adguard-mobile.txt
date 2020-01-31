@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: Jj2VFWGtjG+T44q2WbwOTQ
+! Checksum: w884uXc8P2rIuQiVTTmMrg
 ! Title: AdGuard Mobile Ads filter
 ! Description: Filter for all known mobile ad networks. Useful for mobile devices.
-! Version: 2.0.10.48
-! TimeUpdated: 2020-01-24T19:30:13+03:00
+! Version: 2.0.10.64
+! TimeUpdated: 2020-01-31T22:30:14+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#mobile
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -172,6 +172,7 @@
 ||plugin.mobopay.baidu.com^
 ||mo.freeindoapp.com^
 !
+||api.tapsell.ir^
 ||jioads.akamaized.net^
 ||ajdivotdelbloab24.jio.com^
 ||adxcorp.kr^
@@ -1183,6 +1184,10 @@ westseattleblog.com#@#.header-ad
 !
 ! Extended CSS rules
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/48739
+m.glavnoe.ua#?#.ui-content > div.ui-listview > div[align]:has(> ins.adsbygoogle)
+! https://github.com/AdguardTeam/AdguardFilters/issues/48486
+vip.tiin.vn#?#.sub-top > div > div.netnews-item:has(> div.nn-item-top > p > a:contains(Tin tài trợ))
 ! txxx.tube - remains of ads
 txxx.tube#?#.video-page div.text:has(> a[target="_blank"][-ext-contains="Advertisement"])
 ! https://github.com/AdguardTeam/AdguardFilters/issues/47779
@@ -1867,6 +1872,15 @@ tomshardware.com,techbook.de,sueddeutsche.de,hurriyet.com.tr,elmundo.es,timesnow
 ! ##amp-ad
 dobreprogramy.pl,amp.pcwelt.de,tomshardware.com,techbook.de,forbes.com,auto-swiat.pl,dialog.ua,mobile.reuters.com,spiegel.de,amp.welt.de,forum.xda-developers.com,sueddeutsche.de,amp.usatoday.com,m.gadgets.ndtv.com##amp-ad
 !
+ipad.hotnews.ro###ci-div-banner
+nfmovies.com##div[id^="sponsorAd"]
+spankwire.com##.sw-videoUnderplayerAd
+spankwire.com##.sw-footer-adv-wrapper
+m.apkpure.com##.ad-box
+news.mail.ru##.js-article-swipe__banner
+gfycat.com##.sharepage-mobile-adunit
+finance.yahoo.com##.ys-mobileFeaturedAd
+dailywire.com##div[style^="width: 320px; height: 50px;"]
 it-here.ru##.pum-overlay
 mobile.donanimhaber.com##div[style="width: 100%; float: left; position: relative; height: auto; text-align: center;"]
 gadgets.ndtv.com##._ad._gry-bg
@@ -2315,7 +2329,6 @@ m.bulbapedia.bulbagarden.net##a[href="http://playiconoclasts.com/"]
 m.adevarul.ro##.article > div[style="width:336px;height:280px;margin:5px auto;"]:not([id]):not([class])
 mail.yahoo.com##a[href*="beap.gemini.yahoo.com/bmclk"]
 mail.yahoo.com##form[name="showFolderForm"] > div.mb
-ndtv.com##amp-iframe[src^="https://drop.ndtv.com/common/gadgets360/pricee/pricee-widget.html?"]
 m.rp5.by,m.rp5.kz,m.rp5.ru,m.rp5.ua##div[onclick*="/reClickAdvert.php?key="]
 sagligabiradim.com##.mrf-adv
 ||momon-ga.com/*/pickup1.js
@@ -2336,8 +2349,9 @@ banglachotikahinii.com##.mt_banner
 banglachotikahinii.com##span[style="width: 320px; height: 70px;"]
 banglachotikahinii.com##span[style="width: 300px; height: 50px;"]
 banglachotikahinii.com##span[style*="text-align: center;"] > span[style="width: 300px; height: 250px;"]
+sports-ndtv-com.cdn.ampproject.org,ndtv.com##amp-iframe[src^="https://drop.ndtv.com/common/gadgets360/pricee/pricee-widget.html?"]
 www-ndtv-com.cdn.ampproject.org##iframe[src^="https://drop.ndtv.com/common/gadgets360/pricee/pricee-widget.html"]
-www-ndtv-com.cdn.ampproject.org##.add-section
+sports-ndtv-com.cdn.ampproject.org,www-ndtv-com.cdn.ampproject.org##.add-section
 dict.cc##dl > div[style="margin-left:10px"] > div[id^="snhb-detail_rectangle-"][style="width:300px; height:250px; overflow:hidden"]
 ||forum.lowyat.net/random-mobile.php
 forum.lowyat.net###ipbwrapper > div[style="padding:10px 0;min-height:100px;"][align="center"]:not([class]):not([id])
@@ -3215,6 +3229,7 @@ livejournal.com##.mdspost-aside__item--banner
 ! Blocking Facebook mobile ads
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/48570
 ! https://github.com/AdguardTeam/AdguardFilters/issues/46634
 ! https://github.com/AdguardTeam/AdguardFilters/issues/46374
 ! App does not work if any analytics is blocked. No ads in this app.
