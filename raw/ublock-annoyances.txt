@@ -2230,6 +2230,7 @@ playonlinux.com##+js(abort-current-inline-script.js, $, load)
 tabonitobrasil.video##+js(abort-on-property-read.js, disableSelection)
 tabonitobrasil.video##+js(abort-on-property-write.js, document.oncontextmenu)
 tabonitobrasil.video##+js(addEventListener-defuser.js, keydown, preventDefault)
+tabonitobrasil.video##*:style(-webkit-touch-callout: default !important; -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important;)
 
 ! blocking annoying foxpush notification
 ||foxpush.net^$3p
@@ -2372,7 +2373,7 @@ lookmovie.ag##+js(setTimeout-defuser.js, __ext_loaded)
 500ish.com,artplusmarketing.com,atrium.co,backchannel.com,backstage.1blocker.com,badootech.badoo.com,bitcointechtalk.com,bitwarden.com,blazingdb.com,blog.angularindepth.com,blog.coinbase.com,blog.confiant.com,blog.devcolor.org,blog.growthhackers.com,blog.hiri.com,blog.ltse.com,blog.statebox.org,blog.twitch.tv,blog.waffle.io,bluerockpublicradio.com,bolt.io,boomsupersonic.com,bradfieldcs.com,brightthemag.com,broadcast.listennotes.com,checkio.org,citizen428.net,coach.me,codeburst.io,dave-bailey.com,discordapp.com,doist.com,doit-intl.com,dotandline.net,doublepulsar.com,economist.com,electricliterature.com,elidourado.com,esciencecenter.nl,fossa.io,freecodecamp.org,fritz.ai,getadblock.com,greylock.com,headmelted.com,helium.com,howwegettonext.com,iheart.com,injusticetoday.com,insightdatascience.com,iota.org,itnext.io,itsyourturnblog.com,jupyter.org,keepingstock.net,kiwi.com,learngoprogramming.com,learningbyshipping.com,ledwards.com,legalist.com,logrocket.com,mapbox.com,medium.com,melmagazine.com,mondaynote.com,newco.co,news.smugmug.com,nyulocal.com,ofdollarsanddata.com,okmeter.io,open.nytimes.com,postlight.com,prototypr.io,rainway.io,sagefy.org,signalvnoise.com,slack.engineering,slackhq.com,springboard.com,standardnotes.org,startupsventurecapital.com,stoplight.io,tech.buzzfeed.com,theabacus.io,theawl.com,thebigroundtable.com,thebillfold.com,thebolditalic.com,thecontrol.co,theringer.com,thinkprogress.org,thriveglobal.com,timeline.com,towardsdatascience.com,udacity.com,unpatent.co,usejournal.com,uxdesign.cc,uxplanet.org,warisboring.com,wearemel.com,whatahowler.com,x.company###root > div > div:has-text(Get one more story in your member)
 
 ! https://github.com/NanoMeow/QuickReports/issues/656
-heidisql.com##+js(setTimeout-defuser.js, increaserev, 1000)
+heidisql.com##+js(setTimeout-defuser.js, increaserev)
 
 ! https://github.com/NanoMeow/QuickReports/issues/1417 enable text select
 chimica-online.it##+js(abort-on-property-read.js, disableselect)
@@ -3272,3 +3273,38 @@ snapito.com,web-capture.net##+js(acis, document.getElementById, test-block)
 ! https://github.com/NanoMeow/QuickReports/issues/2875 right click select
 bfoni.com##+js(acis, document.oncontextmenu)
 bfoni.com##*:style(-webkit-touch-callout: default !important; -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important;)
+
+! https://github.com/NanoMeow/QuickReports/issues/2878
+adnan-tech.com##+js(ra, oncontextmenu)
+adnan-tech.com##*:style(-webkit-touch-callout: default !important; -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important;)
+
+! https://github.com/NanoMeow/QuickReports/issues/2883
+ahzaa.net##.post-body:style(-webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important;)
+
+! https://github.com/NanoMeow/QuickReports/issues/2882
+karyawanesia.com##+js(aopr, document.oncontextmenu)
+
+! https://github.com/uBlockOrigin/uAssets/issues/6901
+zoom.com.br###exit-modal-signup, #overlay-modal
+
+! https://forums.lanik.us/viewtopic.php?f=62&t=44254
+@@||linux.org^$ghide
+
+! https://github.com/NanoMeow/QuickReports/issues/2904
+drivedrama.asia##+js(aopr, document.oncontextmenu)
+drivedrama.asia##.post-body:style(-webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important;)
+
+! pclifetutoriales .com right click select
+pclifetutoriales.com##^script:has-text(contextmenu)
+pclifetutoriales.com##*:style(-webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important;)
+pclifetutoriales.com##+js(ra, ondragstart|onselectstart)
+
+! myschool-eng .com right click - select - copy - keys
+myschool-eng.com##+js(aeld, /contextmenu|copy|keydown/)
+myschool-eng.com##*:style(-webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important;)
+
+! https://github.com/uBlockOrigin/uAssets/issues/6908
+ofuxico.com.br##+js(aeld, copy)
+
+! novels.pl antiadblock nag
+@@||www.novels.pl/js/ads.js$script,1p
