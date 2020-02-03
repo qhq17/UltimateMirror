@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: Rx8ljt28Xt3UmMaG5CZkAw
+! Checksum: NGfXgAAWo7+d1lq37ET0+w
 ! Title: AdGuard Japanese filter
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.2.56
-! TimeUpdated: 2020-01-23T01:31:38+03:00
+! Version: 2.0.2.59
+! TimeUpdated: 2020-01-31T16:31:32+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#japanese
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -367,6 +367,10 @@
 !
 ! These rules are against all kinds of ad blocking reinjection/circumvention scripts
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/48715
+gigaho.com#$##unblk { display: none!important; }
+gigaho.com#$#.entry-content { display: block!important; }
+gigaho.com#$#.pub_300x250.pub_300x250m.pub_728x90.text-ad.textAd.text_ad.text_ads.text-ads.text-ad-links { display:block!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/46430
 ! https://github.com/AdguardTeam/AdguardFilters/issues/45195
 @@||helpsupport.blog.fc2.com^$generichide
@@ -721,6 +725,11 @@ _ds_adtag_
 !
 ! /banner/banner_ - if it is necessary, make this rule domain specific
 !
+humoruniv.com##div[style^="width:300px;height:250px;"]
+gigaho.com##.box_drc
+gigaho.com##.amaw_box
+gigaho.com##.entry-content > span[style="display: block;"] > div[style="font-size:75%; color:#00BBDD;text-align: center;"]
+de-baystars.doorblog.jp##.blogroll_wrapper
 followcheck.itby.net##.mms.uk-margin-top
 japan.zdnet.com##.ad-bnr-rect
 forbesjapan.com##.pop2
