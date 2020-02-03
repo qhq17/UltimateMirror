@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: WiFTBJeVJZcm6A6OryJiOw
+! Checksum: TFcjRngatnhzjyNnrvsEbg
 ! Title: AdGuard Tracking Protection filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.11.90
-! TimeUpdated: 2020-01-24T20:31:17+03:00
+! Version: 2.0.12.5
+! TimeUpdated: 2020-02-03T19:31:12+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#privacy
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -152,6 +152,9 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ! ||e.crashlytics.com^
 ! ||settings.crashlytics.com^
 !
+||lumitos.com^$third-party
+||dynameex.com^$third-party
+||seedtag.com^$third-party
 ||minisrclink.cool^
 ||quantummetric.com^$third-party
 ||bluecore.com^$third-party
@@ -3174,6 +3177,7 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ! Admiral domains
 ! These domains are used for tracking purposes according to the data that is being sent there.
 ! More info: https://getadmiral.com/products/measure
+||acidpigs.com^$third-party
 ||farshake.com^$third-party
 ||fadedsnow.com^$third-party
 ||nervoussummer.com^$third-party
@@ -4813,6 +4817,7 @@ charlestownwyllie.oaklawnnonantum.com^
 ||track.zappos.com^
 ||track.price.ru^
 ||kraken.rambler.ru^$third-party
+||dkhywqapojyk7.cloudfront.net^
 ||d169bbxks24g2u.cloudfront.net^
 ||d1cdnlzf6usiff.cloudfront.net^
 ||d1cerpgff739r9.cloudfront.net^
@@ -5283,6 +5288,8 @@ _tracking.php?b=
 ||nd.demdex.net/event?d_mid=$empty,important,domain=9now.com.au
 ||adc.nine.com.au/?token=$empty,important,domain=9now.com.au
 !
+||preved.tut.by/1px.gif
+||comgood.me/1px/
 ||cdn.branch.io^$domain=underarmour.com
 ||static.rebates.jp/rc/static/js/external/loggly.tracker-*.min.js
 ||google-analytics.com^$domain=promiflash.de,empty,important
@@ -7386,6 +7393,25 @@ link.gmapp*.net$image
 !
 ! Exception rules that fix different issues caused by blocking trackers
 !
+! pdftoword.com - broken download button
+@@||app-*.marketo.com/*/form$domain=pdftoword.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/48961
+@@||analytics.edgekey.net/ma_library/html5/html5_malibrary.js$domain=mxplayer.in
+! https://forum.adguard.com/index.php?threads/37146/
+@@||googletagmanager.com/gtm.js$domain=chainreactioncycles.com
+@@||googletagmanager.com/gtag/js?id=$domain=chainreactioncycles.com
+@@||google-analytics.com/analytics.js$domain=chainreactioncycles.com
+@@||google-analytics.com/gtm/js?id=$domain=chainreactioncycles.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/48863
+@@||googletagmanager.com/gtm.js$domain=scotsman.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/48850
+@@||tag.aticdn.net/*/smarttag.js$domain=rte.ie
+! https://github.com/AdguardTeam/AdguardFilters/issues/48571
+@@||cdn.blueconic.net/salemmediagroup.js$domain=biblestudytools.com
+! https://forum.adguard.com/index.php?threads/adguard-tracking-protection-filter-is-blocking-captcha.37103
+@@||cdn.trackjs.com/releases/current/tracker.js$domain=express.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/48667
+@@||cdnjs.cloudflare.com/ajax/libs/fingerprintjs2/*/fingerprint2.min.js$domain=moretvtime.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/47754
 @@||googletagmanager.com/gtm.js$domain=beterbed.nl
 ! https://github.com/AdguardTeam/AdguardFilters/issues/47512
@@ -7540,11 +7566,11 @@ link.gmapp*.net$image
 @@||cdn-gl.imrworldwide.com/novms/*/ggng*.js$domain=bodyandsoul.com.au|whimn.com.au
 ! https://github.com/AdguardTeam/AdguardFilters/issues/43411
 @@||cdn-gl.imrworldwide.com/novms/*/ggng*.js$domain=taste.com.au
-! https://github.com/AdguardTeam/AdguardFilters/issues/43271
-@@||relap.io/api/v*/head.js$domain=briefly.ru
-@@||relap.io/api/v*/similar_pages.js$domain=briefly.ru
-@@||cdn.relap.io^$image,domain=briefly.ru
-@@||relap.io/css/api/v*/block.css$domain=briefly.ru
+! https://github.com/AdguardTeam/AdguardFilters/issues/49069
+@@||relap.io/api/v*/head.js$domain=briefly.ru|kulturologia.ru
+@@||relap.io/api/v*/similar_pages.js$domain=briefly.ru|kulturologia.ru
+@@||cdn.relap.io^$image,domain=briefly.ru|kulturologia.ru
+@@||relap.io/css/api/v*/block.css$domain=briefly.ru|kulturologia.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/42981
 @@||repco.com.au/_ui/shared/js/analyticsmediator.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/43037
