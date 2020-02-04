@@ -1,4 +1,4 @@
-! Version: 25January2020v1
+! Version: 02February2020v4
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites
 ! Expires: 12 hours
@@ -239,13 +239,24 @@ nettavisen.no#?#.rel-article:-abp-has(span:-abp-contains(Reklame))
 ||cdnboligkanalen.azureedge.net^$3p
 ||tankeogteknikk.no^$3p
 digi.no##.native
+||adservice.dk^
+||mediasense.dk^
+||easy-ads.dk^
+||3.248.18.175^
+||adframe.no^
+||adstream.no^
+||advertising.no^
+bt.no##section[class$=-ad]
+||finn.no$subdocument,domain=bt.no
 ! — — — — —
+! 🇳🇴: Generelle oppføringer med kilder
+! 🇬🇧: Generic entries that have sources
 !#if !ext_ublock
 @@||vgtv.no$generichide
 ||adnxs.com^$domain=vgtv.no
 !#endif
 ! framtia.no, sovesten.no, arendalstidende.no, bil24.no, 730.no, frettatiminn.is, opp.no
-! The ':not' exception is needed for opp.no
+! (Exception: opp.no)
 ##.gofollow:not([href*="radioe6"])
 ! https://www.totensblad.no/2019/nyheter/forsynte-seg-gradig-av-medaljene-i-nm/
 ##a[href*="/?utm_source=strossle"]
@@ -269,6 +280,8 @@ digi.no##.native
 ~prisguiden.no##.prisguidePost
 ! tv2.no
 ##.spklw-post-attr[data-type=ad]
+! bt.no
+||finn.no/distribution-carousel?$object,3p
 
 ! 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
 ! 🇩🇰: ——— Tomme restebokser, som EasyList har efterladt ———
@@ -581,16 +594,19 @@ kanalfrederikshavn.dk###c890
 kanalfrederikshavn.dk###c1670
 m.kanalfrederikshavn.dk##.OA
 m.kanalfrederikshavn.dk##.OX
-tv2.no#?#.large-12:not(.article-figure):not(:-abp-has(a))
+tv2.no#?#.large-12:not(.article-figure):not(:-abp-has(a)):not(:-abp-has(img))
 fyens.dk##.adblock__text
 friflyt.no###ads_fullwidth_container
 tek.no##.b
-tek.no##.i
+tek.no###application > div[class]:nth-of-type(1):nth-last-of-type(2)
 railgun.dk##.widget_widget_ads
 krs247.no##.prl-span-12 + h5
 gamer.no##.aaa-980x150
 studievalg.no###top-announce
+bt.no##.vertical-x1-ad > .column--big
 ! — — — — —
+! 🇳🇴: Generelle oppføringer med kilder
+! 🇬🇧: Generic entries that have sources
 !#if !env_mobile
 seher.no##.content-marketing-ribbon:style(margin-top: 20px !important)
 !#endif
@@ -795,11 +811,16 @@ information.dk##.paywall-box:style(margin-top: 0px !important)
 ##.ntbox-tab.bg-primary
 ###sportspill-box-top
 vglive.no##.tipster-liveodds-embed
+ba.no##.sportspill
 ! https://www.nettavisen.no/
 ~norsk-tipping.no,~tipster.no##a[href*="norsk-tipping.no/lotteri/vikinglotto"]
 ~norsk-tipping.no,~tipster.no##a[href*="norsk-tipping.no/lotteri/lotto"]
 ~norsk-tipping.no,~tipster.no##a[href*="norsk-tipping.no/lotteri/eurojackpot"]
 ~norsk-tipping.no,~tipster.no##a[href*="norsk-tipping.no/lotteri/extra"]
+! https://www.ba.no/s/5-8-1221171
+~norsk-tipping.no,~tipster.no##a[href*="norsk-tipping.no/lotteri/viking-lotto"]
+~norsk-tipping.no,~tipster.no##a[href*="norsk-tipping.no/sales/validateCouponAndStoreToSession.json"]
+~norsk-tipping.no,~tipster.no##a[href*="nettavisen.no/sportspill/tipping/blir-du-mangemillionr-pa-onsdag"]
 
 ! ——— Gamereactor + Viafree ———
 ! 🇳🇴: Disse oppføringene synkroniseres med de til «Frellwit's Swedish Filter» med noen måneders mellomrom, så det hadde blitt for strevsomt å kategorisere dem.
@@ -851,7 +872,7 @@ viafree.*##.pause-ad-container
 ||viafree.*/collect$important,xhr
 
 ! 🇳🇴: Korrigerer veldig grell feilinformasjon på Elkjøp og Elgiganten Danmark, hvor EU-energimerkingen til en del produkter fortsatt brukte før-2016-fargene, som førte til tilfeller hvor f.eks. en A-merking var mørkegrønn mens en A+-merking var gul med et hint av grønt.
-! 🇩🇰: Rætter op i rigtigt grim fejlinformation på Elgiganten og Elkjøp, der EU-energimærkingen til mange produkter stadigt benytter før-2016-fargene, noget der førede til tilfelder der fx. et A-merke var mørkegrøn mens et A+-merke var gult med et hint af grøn.
+! 🇩🇰: Rætter op i rigtigt grim fejlinformation på Elgiganten og Elkjøp, der EU-energimærkingen for mange produkter stadigt benytter før-2016-farvene, noget der førede til tilfelder der fx. et A-merke var mørkegrøn mens et A+-merke var gult med et hint af grøn.
 ! 🇬🇧: Fixing very severe misadvertising on Elkjøp and Elgiganten Denmark, in which the EU energy labels for a lot of products were still showing the colours of the pre-2016 labels, leading to cases where e.g. an A label was dark green while an A+ label was yellow with a hint of green.
 ! Amazingly, this does not seem to be a problem on elko.is or elding.fo, so kudos to them.
 elkjop.no,elgiganten.dk###A-value:style(fill: #fff12c !important)
@@ -950,6 +971,15 @@ fuglelyder.net#@##banner_ad
 ||djurs.com-*.*^$doc,domain=~ Advarslen vises fordi: Falsk fupversjon af Djurs Sommerland
 ||com-airs1.com^$doc
 ||pensjonistferie.no^$doc,domain=~ Advarselen vises grunnet: Det tidligere legitime nettstedet har blitt tatt over av Bitcoin-svindlere.
+||postuksus.com^$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av VG.
+||52.216.146.90^
+||92.42.104.146^
+||beatsapple.top^$doc,domain=~ Advarselen vises grunnet: Falsk nettbutikksvindel
+||jimmychoostore.top^$doc,domain=~ Advarselen vises grunnet: Falsk nettbutikksvindel
+||hervelegeroutletusa.com^$doc,domain=~ Advarselen vises grunnet: Falsk nettbutikksvindel
+||replicapatekphilippe.com^$doc,domain=~ Advarselen vises grunnet: Falsk nettbutikksvindel
+||hot-rap-beats.top^$doc,domain=~ Advarselen vises grunnet: Falsk nettbutikksvindel
+||replicarolexyachtmaster.com^$doc,domain=~ Advarselen vises grunnet: Falsk nettbutikksvindel
 
 ! 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
 ! 🇩🇰: Som nævnt i diverse nyhedsartikler om fupwebsider
@@ -1032,6 +1062,11 @@ fuglelyder.net#@##banner_ad
 ||sky.gs^$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Netflix.
 ! https://www.online.no/sikkerhet/falsk-online-nettside
 ||is-a-personaltrainer.com^$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Telenors E-posttjeneste.
+! IP addresses of servers notorious for hosting many of the sites above
+||138.201.126.227^
+||156.236.126.173^
+||136.243.73.30^
+||82.118.242.69^
 
 ! 🇳🇴: Falske nett-"butikker" som er så dårlige, at de står oppført på Forbrukertilsynet egen svarteliste.
 ! 🇩🇰: Forbrukertilsynets black-list over falske netbutikker (Norges svar på Forbrugerombudsmanden).
@@ -1123,4 +1158,10 @@ fuglelyder.net#@##banner_ad
 ! 🇬🇧: Pirate-product-selling stores registered by the serial scammers who go by the name of "xiang dao xin xi ji shu you xiang gong si".
 ||nofotballshop.com^$doc,domain=~ Advarselen vises grunnet: Selgere av falske piratprodukter.
 ||nofotballstore.com^$doc,domain=~ Advarselen vises grunnet: Selgere av falske piratprodukter.
+||nodrakts.com^$doc,domain=~ Advarselen vises grunnet: Selgere av falske piratprodukter.
 ||dkfodboldstore.com^$doc,domain=~ Advarslen vises fordi: Falske piratprodukter.
+||vmfodboldtoj.com^$doc,domain=~ Advarslen vises fordi: Falske piratprodukter.
+||minfodboldbutik.com^$doc,domain=~ Advarslen vises fordi: Falske piratprodukter.
+||5.39.217.206^
+||193.148.70.153^
+||5.39.221.180^
