@@ -1,8 +1,8 @@
 [Adblock Plus 1.1]
-! Checksum: HLNEJFi8baMVJrH2nd95hg
-! Version: 202001311151
+! Checksum: hnsUOUzvMd3KyRlDIqPj2A
+! Version: 202002061611
 ! Title: EasyList Germany
-! Last modified: 31 Jan 2020 11:51 UTC
+! Last modified: 06 Feb 2020 16:11 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.github.io/
 ! Licence: https://easylist.github.io/pages/licence.html
@@ -1071,6 +1071,7 @@ kochbar.de#@#iframe[name^="google_ads_iframe"]
 ||sevenads.net^$popup,third-party
 ||websc.org^$popup,third-party
 ||xx00.info^$popup,third-party
+||zomap.de^$popup,third-party
 !-----------------------------Third-party Werbung-----------------------------!
 ! *** easylistgermany:easylistgermany/easylistgermany_thirdparty.txt ***
 ||1deluxe.eu/banner/
@@ -2465,7 +2466,6 @@ kochbar.de#@#iframe[name^="google_ads_iframe"]
 ||gamestar.de/img/gamestar/_misc/prm_logoheader_gs_
 ||gamestar.de/img/gamestar/_misc/promotion/*/amazon_button*.png
 ||gamestar.de/promotion/promowidget/
-||gamestar.de^*/ova.swf
 ||gameswelt.net/public/upload/fullexpbranding/
 ||gaming-insight.de/images/amd-*.swf
 ||gaming-insight.de/images/banners/
@@ -3641,7 +3641,7 @@ kochbar.de#@#iframe[name^="google_ads_iframe"]
 ||teleboy.net^*/promobox_$subdocument
 ||teltarif.de/ad/
 ||testreich.com/layer*.html
-||threepi.de^$media,domain=gamestar.de
+||threepi.de^$media,domain=gamepro.de|gamestar.de
 ||ticket-leistung.de^*/banner/
 ||tinyurl.com^$domain=hardcoremetal.biz|hd-world.org|hoerbuch.us|kino24.to|kinox.tv|lesen.to|linkfarm.in|movie-blog.org|pornkino.to|rapidvideo.com|relink.us|smsit.me|xxx-blog.to
 ||titanic-magazin.de/fileadmin/content/anz/
@@ -4223,6 +4223,7 @@ wuppertaler-rundschau.de###anzeigen_oben
 apomio.de###anzeigen_wrapper
 haustechnikdialog.de###anzeigendiv
 amazon.de###ape_Detail_ad-endcap-1_Glance_placement
+amazon.de###ape_detail_btf_detail-mWeb_wrapper
 gamersglobal.de###arb
 computerbild.de###articleBody .codeteaser > .tarifteaser > .handytarife
 blick.ch###as24comblockContainer
@@ -5247,7 +5248,6 @@ t-online.de##.Tssshopst
 t-online.de##.Ttsc.Ttsh65.Tmc4a
 aol.de##.WOL
 helles-koepfchen.de##.Wer
-wetter.com##.\[.rectangle-home.\]
 gullipics.com##.a-zone
 dexerto.de##.aON
 winfuture.de##.a_box
@@ -5394,6 +5394,7 @@ playm.de##.asa_async_container
 augsburger-allgemeine.de##.aside_ad_caroussel
 sachsen-fernsehen.de##.asidebar
 spiegel.de##.asset-affiliatebox
+amazon.de##.aw-campaigns
 alternative-zu.de##.azuitem_googleAdSense
 alatest.de##.b_top_leaderboard
 walliserbote.ch##.ban-img
@@ -6982,6 +6983,7 @@ goldesel.to##div[class^="p"][style="margin-top:20px;"] > ul[class^="c"] > li > a
 bildderfrau.de,gofeminin.de##div[class^="sas_FormatID_"]
 goldesel.to##div[class^="warn"]
 car.de##div[class^="wrb-"]
+amazon.de##div[data-ad-id]
 rtl.de,sport.de,vox.de##div[data-adformat="halfpage"]
 rtl.de##div[data-adformat="octopus_hr"]
 rtl.de##div[data-adformat="octopus_mr"]
@@ -7640,7 +7642,6 @@ ddl-warez.in##tr[style="background:#D0F5A9"]
 radforum.de##ul[class^="ebayitems"]
 r-b-a.de##ul[style="padding: 0px; margin: 0px; border: 0px none;"]
 ! Specific hiding filters necessary for sites whitelisted with $generichide filter option
-bz-berlin####.trc_related_container div[data-item-syndicated="true"]:not(.inNetworkItem)
 focus.de##.adsBlock
 focus.de##.ob_container a[data-redirect^="http://paid.outbrain.com/network/redir?"]
 boote-forum.de,golem.de,jetzt.de,planetsnow.de,prosieben.at,prosieben.ch,prosieben.de,transfermarkt.de,tvspielfilm.de##.plistaList > .itemLinkPET
@@ -7649,7 +7650,7 @@ ariva.de,boote-forum.de,fanfiktion.de,notebookchat.com,notebookcheck.com,planets
 bz-berlin.de,computerbild.de,erdbeerlounge.de,giga.de,spieletipps.de,transfermarkt.de##.trc-content-sponsored
 computerbild.de,erdbeerlounge.de,giga.de,metal-hammer.de,spieletipps.de,transfermarkt.de##.trc-content-sponsoredUB
 computerbild.de,erdbeerlounge.de,fitbook.de,giga.de,noizz.de,spieletipps.de,sportbild.bild.de,stylebook.de,techbook.de,transfermarkt.de,travelbook.de,welt.de##.trc_related_container div[data-item-syndicated="true"]
-metal-hammer.de,musikexpress.de,rollingstone.de##.trc_related_container div[data-item-syndicated="true"]:not(.inNetworkItem)
+bz-berlin,metal-hammer.de,musikexpress.de,rollingstone.de##.trc_related_container div[data-item-syndicated="true"]:not(.inNetworkItem)
 @@||bz-berlin.de^$generichide
 @@||computerbild.de^$generichide
 @@||fitbook.de^$generichide
@@ -7787,6 +7788,7 @@ welt.de#?#div[id][data-qa]:-abp-has(.c-buelent-linkbox__label:-abp-contains(Anze
 @@||am-display.com/display-ad/tag-set/$subdocument,domain=hardbase.fm|housetime.fm|techno4ever.fm|technobase.fm
 @@||am-display.com/display-ad/tag/$script,domain=hardbase.fm|housetime.fm|techno4ever.fm|technobase.fm
 @@||amazon-adsystem.com/aax2/amzn_ads.js$domain=gamona.de|giga.de|spielaffe.de|spieletipps.de
+@@||amazon-adsystem.com/aax2/apstag.js$domain=gamepro.de|gamestar.de
 @@||amazon-adsystem.com/widgets/q?*^ad_type=product_link^$subdocument,domain=fotoworkshop-stuttgart.de
 @@||amgdgt.com/ads?$script,domain=deltaradio.de|freestream.nmdn.net|hardbase.fm|housetime.fm|techno4ever.fm|technobase.fm
 @@||ampproject.org/rtv/*/amp4ads-v*.js$domain=notebooksbilliger.de
@@ -8214,9 +8216,6 @@ welt.de#?#div[id][data-qa]:-abp-has(.c-buelent-linkbox__label:-abp-contains(Anze
 @@||pagead2.googlesyndication.com/pagead/js/*/show_ads_impl.js$domain=kalender-365.de
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=kalender-365.de
 kalender-365.de#@#.adsbygoogle
-! Necessary for AdBlock for Safari to fix blocked slider on shop.rewe.de
-@@||s1.adform.net/Banners/Elements/Files/34516/2017020/2017020.js?ADFassetID=2017020&bv=
-@@||s1.adform.net/Banners/Elements/Files/34516/2494523/Res ContentAd_main_asset/2494523.js?ADFassetID=2494523&bv=
 ! *** easylistgermany:easylistgermany/easylistgermany_whitelist_dimensions.txt ***
 @@||bueropartner24.de/out/pictures/generated/category/icon/728_90_$image,~third-party
 @@||campact.de^*_300x250.gif
