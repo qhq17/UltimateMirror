@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: TFcjRngatnhzjyNnrvsEbg
+! Checksum: avaLoGhTCyuCHtJ8PQ4beA
 ! Title: AdGuard Tracking Protection filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.12.5
-! TimeUpdated: 2020-02-03T19:31:12+03:00
+! Version: 2.0.12.11
+! TimeUpdated: 2020-02-06T13:31:12+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#privacy
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -152,11 +152,14 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ! ||e.crashlytics.com^
 ! ||settings.crashlytics.com^
 !
+||admetric.io^$third-party
+||bandborder.com^$third-party
 ||lumitos.com^$third-party
 ||dynameex.com^$third-party
 ||seedtag.com^$third-party
 ||minisrclink.cool^
 ||quantummetric.com^$third-party
+||mediator.mail.ru^$third-party
 ||bluecore.com^$third-party
 ||track.pnicnik.live^
 ||deliver.ptgncdn.com^
@@ -5028,6 +5031,7 @@ charlestownwyllie.oaklawnnonantum.com^
 /log_event?
 !
 /owa.tracker-combined-min.js
+/Web_JS_Stats.
 /mip-stats-cnzz/*
 /rtoaster.js
 /fbevents.js
@@ -5288,7 +5292,10 @@ _tracking.php?b=
 ||nd.demdex.net/event?d_mid=$empty,important,domain=9now.com.au
 ||adc.nine.com.au/?token=$empty,important,domain=9now.com.au
 !
+kanobu.ru##a[href^="https://www.liveinternet.ru/click"]
+||a24.biz/pixel/
 ||preved.tut.by/1px.gif
+||tp-link.com^*/addHits.html
 ||comgood.me/1px/
 ||cdn.branch.io^$domain=underarmour.com
 ||static.rebates.jp/rc/static/js/external/loggly.tracker-*.min.js
@@ -5935,7 +5942,6 @@ abp?type=js&session$domain=prosieben.de|sat1.de|kabeleins.de|sixx.de|prosiebenma
 ||istanbul.com/ui/js/analytics.js
 ||turkcell.com.tr/static_lib/assets/scripts/turkcell/google-analytics^
 ||mod.calltouch.ru/callback_event.php?*&analyticsId=
-||mediator.mail.ru/script/*/?cid=
 ||iqiyi.com/pixel
 ||iqiyi.com/track
 ||winfuture.de/ajax/pixel^
@@ -7397,6 +7403,8 @@ link.gmapp*.net$image
 @@||app-*.marketo.com/*/form$domain=pdftoword.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/48961
 @@||analytics.edgekey.net/ma_library/html5/html5_malibrary.js$domain=mxplayer.in
+! https://github.com/AdguardTeam/AdguardFilters/issues/48777
+@@||conversion.im/images/icons/google-analytics.png
 ! https://forum.adguard.com/index.php?threads/37146/
 @@||googletagmanager.com/gtm.js$domain=chainreactioncycles.com
 @@||googletagmanager.com/gtag/js?id=$domain=chainreactioncycles.com
