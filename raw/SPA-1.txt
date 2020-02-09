@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: 5P7/bFDjdf+06OjAS7t+8A
+! Checksum: ppJKHtnNM4jrwsXidDFWlA
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish and Portuguese languages.
-! Version: 2.0.5.53
-! TimeUpdated: 2020-01-31T14:31:46+03:00
+! Version: 2.0.5.55
+! TimeUpdated: 2020-02-05T18:04:14+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#spanish
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -246,6 +246,9 @@
 !
 ! AdRegain
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/49174
+@@||animeshd.biz/css/adsplay.css
+@@||animeshd.biz/player/$domain=animeshd.biz
 ! https://github.com/AdguardTeam/AdguardFilters/issues/48065
 ggames.com.br#@#.adsbygoogle
 ggames.com.br#$#.adsbygoogle { display: block!important; position: absolute!important; left: -3000px!important; }
@@ -1372,6 +1375,7 @@ http://adw.
 !-------------------- Specific rules --------------------!
 !--------------------------------------------------------!
 !
+lanacion.com.ar##div[class^="content-bnhoy"]
 ultimasnoticias.com.ve##div[class^="ultim-"]
 ultimasnoticias.com.ve##.ultim-adlabel + a[rel="nofollow"]
 lanacion.com.ar###bn-lateral
