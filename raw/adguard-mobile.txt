@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: i8Z9Rey9p4F+w1T/bV1h/w
+! Checksum: +F7ND9MmHJt9z8mMMh1cFw
 ! Title: AdGuard Mobile Ads filter
 ! Description: Filter for all known mobile ad networks. Useful for mobile devices.
-! Version: 2.0.10.67
-! TimeUpdated: 2020-02-04T18:02:15+03:00
+! Version: 2.0.10.81
+! TimeUpdated: 2020-02-12T14:30:13+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#mobile
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -172,6 +172,9 @@
 ||plugin.mobopay.baidu.com^
 ||mo.freeindoapp.com^
 !
+||config.88-f.net^
+||monetengine-d.openx.net^
+||cdn.88-f.net^
 ||ms.applvn.com^
 ||api.tapsell.ir^
 ||jioads.akamaized.net^
@@ -1185,6 +1188,10 @@ westseattleblog.com#@#.header-ad
 !
 ! Extended CSS rules
 !
+! epoznan.pl - ads
+epoznan.pl#?#.mobileNewsList__section > .mobileNewsList__container:has(> .mobileNewsList__right >a.postItem__category:contains(/^REKLAMA$/))
+! https://github.com/AdguardTeam/AdguardFilters/issues/48523
+filmkovani.com#?#body > div:has(> a[href^="https://bit.ly/"]):not(:has(> div))
 ! https://github.com/AdguardTeam/AdguardFilters/issues/48739
 m.glavnoe.ua#?#.ui-content > div.ui-listview > div[align]:has(> ins.adsbygoogle)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/48486
@@ -1380,6 +1387,7 @@ zen.yandex.by,zen.yandex.com,zen.yandex.kz,zen.yandex.ru,zen.yandex.ua#?#.touch-
 ! https://forum.adguard.com/index.php?threads/12443/
 !#################
 !
+! xhamster.com - popups
 ! https://github.com/AdguardTeam/AdguardFilters/issues/47222
 ! https://github.com/AdguardTeam/AdguardFilters/issues/47227
 ! https://github.com/AdguardTeam/AdguardFilters/issues/47217
@@ -1399,7 +1407,6 @@ zen.yandex.by,zen.yandex.com,zen.yandex.kz,zen.yandex.ru,zen.yandex.ua#?#.touch-
 ! estream - popups
 ! https://github.com/AdguardTeam/AdguardFilters/issues/9324
 ! https://forum.adguard.com/index.php?threads/20737/
-!
 ! https://github.com/AdguardTeam/AdguardFilters/issues/6895
 ! https://github.com/AdguardTeam/AdguardFilters/issues/6894
 ! https://github.com/AdguardTeam/AdguardFilters/issues/6811
@@ -1873,9 +1880,15 @@ tomshardware.com,techbook.de,sueddeutsche.de,hurriyet.com.tr,elmundo.es,timesnow
 ! ##amp-ad
 dobreprogramy.pl,amp.pcwelt.de,tomshardware.com,techbook.de,forbes.com,auto-swiat.pl,dialog.ua,mobile.reuters.com,spiegel.de,amp.welt.de,forum.xda-developers.com,sueddeutsche.de,amp.usatoday.com,m.gadgets.ndtv.com##amp-ad
 !
+epoznan.pl##.bannerBox__mob
+mail.yahoo.com##form[method="get"][action^="/mb/"] ~ div[class*=" "] > img[src*="beap.gemini.yahoo.com/"] + div
+m.52qumao.com##iframe[src*="sogou.com/wapxml?id="]
+m.ok.ru##li.feed-card.__adv
+m.ok.ru##.game-campaign
+udn.com##.udn-ads--mobile
+bbs.saraba1st.com##div[style="line-height:420px;height:420px"]
+||m.hamtruyen.com/Scripts/ads_vdc.js
 saglamindir.net##.text-center > a[class="download"][rel="nofollow"]
-filmkovani.com##.sogqrcimf
-filmkovani.com##.sogqrci
 ipad.hotnews.ro###ci-div-banner
 nfmovies.com##div[id^="sponsorAd"]
 spankwire.com##.sw-videoUnderplayerAd
@@ -2344,7 +2357,6 @@ momon-ga.com##.content > div[style="margin-bottom:12px;"]
 momon-ga.com##.container-inner > div[style="margin-bottom:12px;"]
 digit.in##.footerCatfishAdArea
 digit.in##iframe[src^="/blockarticledetailad/"][title="Advertisement"]
-kadikoylife.com##.gabfire_ad
 atmarkit.co.jp##div[style="width:300px;height:250px;margin:10px auto 20px;"]
 atmarkit.co.jp##div[style^="width:320px;height:50px;"]
 weblio.jp##.adBkOverlayClr
@@ -3504,6 +3516,8 @@ livejournal.com##.mdspost-aside__item--banner
 ||sensors.snaptubeapp.com^
 ! Snow Inc (Line) Apps
 ||log.kajicam.com^
+! Google Maps Promoted Pins
+||mobilemaps-pa.googleapis.com/google.internal.mothership.maps.mobilemaps.ads.v1.MobileMapsAdsService/ListPromotedPinAds^
 !---------------------------------------------------------------------------!
 !------------------ Content replacement rules ------------------------------!
 !---------------------------------------------------------------------------!
