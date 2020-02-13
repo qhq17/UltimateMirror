@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Version: 202002070141
+! Version: 202002101357
 ! Title: ABPindo
 ! Description: Filter tambahan untuk EasyList memblokir iklan berbahasa Indonesia dan Malaysia.
-! Last modified: 07 Feb 2020 01:41 UTC
+! Last modified: 10 Feb 2020 13:57 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: http://abpindo.blogspot.com/
 ! Licence: https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/LICENSE
@@ -139,7 +139,6 @@
 ||javaiklan.com^$third-party
 ||jillsclickcorner.com^$third-party
 ||juruiklan.com^$third-party
-||jwpltx.com^$third-party
 ||katurars.com^$popup
 ||klikajadeh.com^$third-party
 ||l9tdhe6.com^$popup
@@ -198,6 +197,7 @@
 ||see-work.info^$popup,third-party
 ||sentrapromosi.com^$third-party
 ||serbapromo.com^$third-party
+||shiiuojjccp.com^$popup
 ||shiokambing2.com^$popup,third-party
 ||sitti.co.id^$third-party
 ||situsiklanbaris.com^$third-party
@@ -218,6 +218,7 @@
 ||u-on.eu^$popup,third-party
 ||uadexchange.com^$third-party
 ||uoarbhxfyygn.com^$popup,third-party
+||uofmnbkm.com^$popup
 ||useads.com^$third-party
 ||vidcpm.com^third-party
 ||vrewpywootyu.com^$popup,third-party
@@ -227,6 +228,7 @@
 ||whjibbprhng.com^$popup,third-party
 ||window-close.cf^$popup,third-party
 ||window-close.ga^$popup,third-party
+||www.iwtserve.com^$popup
 ||yesads.com^$third-party
 ||yhig.info^$third-party
 ||yllix.com^$popup,third-party
@@ -530,7 +532,6 @@ $xmlhttprequest,domain=mangacanblog.com
 ||numpangnonton.*/wp-content/uploads/*.gif$image
 ||pergi.klik-link.us/wpsafelink.js$script,domain=www.kazefuri.web.id
 ||playwebgame.com/banner/$third-party
-||porntrex.com/images/pt728.gif
 ||primbon.com/banner/ilmugendam.gif
 ||pulsk.com/img/x.png
 ||pwbjlbz.com^$domain=kompas.com
@@ -832,6 +833,7 @@ maulandaru.com#@#.adsbygoogle
 oomph.co.id#@#.shareit
 qqcinema21.com#@#.headads
 short.awsubs.co#@#.iklan
+sporcle.com#@#.remodal
 woof.tube#@#.adsbox
 ! ----------------------- element hiding rules ------------------------!
 ! *** abpindo:src/elementhide/general_hide.txt ***
@@ -1038,7 +1040,6 @@ indogamers.com###IklanIDGS
 lihat.co.id###Kolom-random-300
 utusan.com.my###Taboola_widget
 chip.co.id###TopBannerBg
-hi10anime.com###__admvnlb__modal_container
 mangacanblog.com###aa
 173.199.189.86,forumbokep.com,idfl.biz,idfl.info,idfl.me,idfl.my.id,indofiles.web.id,kikil.net,sodasusu.com,unyil.net,vocland.com###ad_global_below_navbar
 detik.com###adpoint5
@@ -1173,7 +1174,6 @@ dewabioskop21.org,dwa21.org###main-popup
 dapurpacu.com###mid-banner
 dunia21.cx,ganool.watch,lk21tv.com,movies21.co###middle-banner
 fastdrama.co,hkfree.co###modal
-cinema-indo.com,layarkaca21.net,nontonmovie.web.id###modalPage > .modalContainer > .modal
 indotelko.com###more_stories
 fastdrama.co###myModal
 hdtvku.com###mybannerpopup
@@ -1223,7 +1223,6 @@ cinemaindo.tv###sidebar_right > .side:nth-of-type(6) > .textwidget
 cinemaindo.tv###sidebar_right > .side:nth-of-type(7) > .textwidget
 cinemaindo.tv###sidebar_right > .side:nth-of-type(8) > .textwidget
 cinemaindo.tv###sidebar_right > .side:nth-of-type(9) > .textwidget
-anibatch.me###sidebarid\ text-5:-abp-contains(BANNER)
 zonabola.com###simplemodal-container
 zonabola.com###simplemodal-overlay
 detik.com###skinad
@@ -1310,7 +1309,6 @@ dramacool.io,dramanice.io,k-vid.com##.adv-space
 teknoup.com##.advertisement_box1
 teknoup.com##.advertisement_box2
 indoxtream.com##.aligncenter
-bokep.click##.alignnone
 palingseru.com##.alignnone.size-large.wp-image-458
 terasjakarta.id##.animated.ads
 autonetmagz.com##.anm__flying--ads-holder
@@ -1414,7 +1412,6 @@ layarkaca21.tv,lk21.tv##.fancybox-skin
 dapurpacu.com##.fixed-ads-atas
 teknoup.com##.footer_banner
 manganime.id##.ftadss
-utusan.com.my##.g-slice__item:-abp-has(div[id="DFP-ads"])
 myasiantv.se##.glx-link
 myasiantv.se##.glx-teaser
 kompas.com##.hAds
@@ -1433,7 +1430,6 @@ mangaku.in##.iframeiklan
 suki48.web.id##.iklanSUKI
 awsubs.co##.iklansamping
 ld2tv.com##.img-banner
-cinemaindo.web.id,layarkaca21.com,layarkaca21.net,layarkaca21.web.id,lk21tv.com,nonton21.net##.img-responsive
 animeindo.video,animeindo.web.id##.in_up_ad-area
 www.alona.co.id##.inf_infusionsoft_popup
 ganoollk21.info,juraganfilm.com##.inner-floatbanner-bottom
@@ -1443,9 +1439,6 @@ kaskus.co.id##.kasad-h
 kompas.com##.kcm__horizontal.kcm
 kompas.com##.kcm__stick--left
 kompas.com##.kcm__stick--right
-mangapark.net##.kiwi-ad-sticky-wrapper
-mangapark.net##.kiwiad-desktop-popup-300x600-overlay
-mangapark.net##.kiwiad-popup-ad-container
 www.lewat.club##.klikdisini
 anoboy.id,mangashiro.net,nontondramaseri.com##.kln
 awsubs.co##.klnrec
@@ -1458,7 +1451,6 @@ lapar.com##.leftcontent[style="padding:0px; margin:0px auto; height:250px; width
 b201.info##.lenyap
 belapendidikan.com##.majalahpro-core-floatbanner
 www.smartphoneku.com##.margin-right-40.left.pullquotes
-animeindo.co##.marginbot:-abp-contains(Banner)
 nontonbokeps.com##.mask-ads
 dream.co.id##.masonry-brick.drm-banner-x.drm-artikel:nth-of-type(3)
 dapurpacu.com##.mid-banner
@@ -1478,7 +1470,6 @@ detik.com##.otp_banner_close
 susterbokep.com##.overlay
 tribunnews.com##.ovh[style="width:468px;height:60px"]
 hdfree.se##.page > div:nth-of-type(4) > div:nth-of-type(1)
-beritaharian.sg##.pane-block:-abp-has(div[id^="dfp-ad"])
 www.medcom.id##.parallax_ads
 viva.co.id##.portlet.sideskycrapper
 filem456.com##.pps-single-popup
@@ -1520,7 +1511,6 @@ idpelago.com##.sponsor_ads:nth-of-type(2)
 idpelago.com##.sponsor_ads:nth-of-type(4)
 okezone.com##.sponsored-belt468x60
 nontondramaonline.co,nontondramaonline.net##.td-banner-wrap-full
-nontononlinedrama.com##.td-container-wrap.td-banner-wrap-full
 mediapermata.com.bn,terkini.id##.td-header-rec-wrap
 film21terbaru.org##.teaser3
 internetpositif.uzone.id##.text-align-center.box-ads-content
@@ -1615,8 +1605,6 @@ bioskopgaul.*###adsimgxatas
 bioskopkeren.*##a[href^="https://bit.ly/"]
 bioskopkeren.*,lk21c.fun##a[href^="http://rebrand.ly/"]
 bioskopxxi.*##.ujipopup
-ceriwis.net##body > div:nth-of-type(2) > .page > .paddingmobile > .hideviews.bannerslot1
-ceriwis.net##body > div:nth-of-type(2) > .page > .paddingmobile > .mainContainer > .mainContent > .hideviews.bannerslot1
 bokepfull.*###kontolbanner
 bokepindoxxx.*##.videoOverAdBig
 bokepml.*##a[href^="http://bit.ly/"]
