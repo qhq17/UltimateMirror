@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: ppJKHtnNM4jrwsXidDFWlA
+! Checksum: 7OC2jm5ZxVepRsCjXpihUQ
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish and Portuguese languages.
-! Version: 2.0.5.55
-! TimeUpdated: 2020-02-05T18:04:14+03:00
+! Version: 2.0.5.59
+! TimeUpdated: 2020-02-11T14:31:40+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#spanish
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -74,6 +74,7 @@
 ! ||addevweb.com^$third-party
 ||tags.orquideassp.com^$third-party
 ||widgets.informars.com^
+||richaudience.com^$third-party
 ||potu.xyz^
 ||afiliados.hostgator.com.br^$third-party
 ||ymonetize.com^$third-party
@@ -339,18 +340,21 @@ animesonline.cz#@#.afs_ads
 ! https://github.com/AdguardTeam/AdguardFilters/issues/32516
 !+ PLATFORM(ext_ff, ext_opera, ios, ext_android_cb, ext_safari, ext_ublock)
 @@||pokexgames-tutoriais.blogspot.com^$generichide
+! https://github.com/AdguardTeam/AdguardFilters/issues/49399
 ! https://github.com/AdguardTeam/AdguardFilters/issues/46190
 ! https://github.com/AdguardTeam/AdguardFilters/issues/43447
 ! https://github.com/AdguardTeam/AdguardFilters/issues/39889
 ! https://github.com/AdguardTeam/AdguardFilters/issues/32467
+@@/adblock.js$domain=animeshouse.net
 @@/cnads.js$domain=animeshouse.net
 @@/adscript.js$domain=animeshouse.net
 @@/delivery.ads.js$domain=animeshouse.net
 @@/adsbygoogle.js$script,domain=animeshouse.net
 @@/ad.min.js$domain=animeshouse.net
 @@/ads/ad*.js$domain=animeshouse.net|feralhosting.com
+@@|http*://*.ga/*.js$script,domain=animeshouse.net
 @@|http*://*.cf/*.js$script,domain=animeshouse.net
-@@||paradiseirltrue.tk/$script,domain=animeshouse.net
+@@|http*://*.tk/*.js$script,domain=animeshouse.net
 @@||tatsumaki.cf/$script,domain=animeshouse.net|feralhosting.com
 @@||animeshouse.net/*/ads.js
 animeshouse.biz#@#.afs_ads
@@ -1164,6 +1168,8 @@ maisgasolina.com#?##main [id$="Block"][-ext-has='.adsbygoogle']
 !--------------------------------------!
 !------- JS rules ---------------------!
 !--------------------------------------!
+! pirlotv.es - popups
+! https://github.com/AdguardTeam/AdguardFilters/issues/49511
 ! https://github.com/AdguardTeam/AdguardFilters/issues/48208
 ! https://github.com/AdguardTeam/AdguardFilters/issues/47860
 ! https://github.com/AdguardTeam/AdguardFilters/issues/39547
@@ -1378,6 +1384,7 @@ http://adw.
 lanacion.com.ar##div[class^="content-bnhoy"]
 ultimasnoticias.com.ve##div[class^="ultim-"]
 ultimasnoticias.com.ve##.ultim-adlabel + a[rel="nofollow"]
+elmundo.es##.ue-c-ad--sticky
 lanacion.com.ar###bn-lateral
 lanacion.com.ar##.temas > div.titulares-del-dia
 ||fakings.com/images/revive/pepeporn/
@@ -3162,6 +3169,7 @@ urlcloud.us##.banner
 !
 ! White list. Fixing filtration errors (false-positive)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/49511
 ! https://github.com/AdguardTeam/AdguardFilters/issues/47494
 ! https://github.com/AdguardTeam/AdguardFilters/issues/46603
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=13.cl
