@@ -1314,12 +1314,13 @@ mind42.com###content.sidebar2:style(margin-right: 0 !important;)
 ||openx.net^$script,important,domain=latimes.com
 ||rubiconproject.com^$script,important,domain=latimes.com
 
-! https://github.com/uBlockOrigin/uAssets/issues/5352
-xhamster.*##+js(aopw, wil-popunder)
-xhamster.*##+js(aopr, wig-popunder)
+! https://github.com/uBlockOrigin/uAssets/issues/6947
+xhamster.*##+js(aopr, wih-popunder)
 xhamster.*##+js(aeld, , pop)
 xhamster.*##.wit-sponsor-banner
 xhamster.*##.wig-spb
+xhamster.*##.no-popunder.wih-spb
+xhamster.*##.wih-spl
 
 ! https://github.com/gorhill/uBlock/issues/2712
 mail.yahoo.com##iframe[src*="yimg.com/rq/darla/"]
@@ -8462,9 +8463,7 @@ linkfinal.com##+js(aopr, app_vars.force_disable_adblock)
 linkfinal.com##.banner
 linkfinal.com##.blog-content
 
-! https://www.reddit.com/r/uBlockOrigin/comments/910tjl
-! https://github.com/uBlockOrigin/uAssets/issues/4992
-! https://github.com/uBlockOrigin/uAssets/issues/5311
+! hotpornfile .org popups
 hotpornfile.org##+js(acis, jQuery, perpage)
 hotpornfile.org##+js(aopr, ExLdr.serve)
 hotpornfile.org##+js(aopr, ExoLoader)
@@ -8476,11 +8475,14 @@ hotpornfile.org##+js(aopw, overlay_as_script)
 hotpornfile.org##+js(aopw, popns)
 hotpornfile.org##+js(aeld, getexoloader)
 hotpornfile.org##+js(aopr, document.dispatchEvent)
-hotpornfile.org##+js(nosiif, _0x)
 ||hotpornfile.org^$frame,1p
-||hotpornfile.org/*.php$script,1p
-||a1.hotpornfile.org^$script,1p
 *$popunder,domain=hotpornfile.org
+@@||hotpornfile.org/17859.js$script
+||hotpornfile.org/*/push/$script,1p
+hotpornfile.org##+js(aopr, console.clear)
+hotpornfile.org##+js(nostif, _0x)
+hotpornfile.org##+js(nosiif, /^/)
+||meryjane.pro^$3p
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2986
 fullepisodes.me##+js(nostif, nextFunction, 250)
@@ -10612,7 +10614,8 @@ telecharger-igli4.*##+js(aopw, adBlockDetected)
 books-world.net##+js(aopw, killAdBlock)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3880
-addtobucketlist.com,droidtekno.com,hentaimx.com##+js(nostif, google_jobrunner)
+addtobucketlist.com##+js(nostif, google_jobrunner)
+droidtekno.com##+js(aopw, KillAdBlock)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3885
 syracusefan.com##+js(aopw, XF)
@@ -15802,7 +15805,9 @@ breviewofd.com##+js(aopr, runAdBlocker)
 ##.ads-block-warning
 
 ! https://github.com/NanoMeow/QuickReports/issues/1034
+! https://github.com/AdguardTeam/AdguardFilters/issues/49708
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=noopjs,domain=boycracked.com
+boycracked.com##+js(acis, eval, AdBlock)
 
 ! https://github.com/NanoMeow/QuickReports/issues/1032
 autocar.co.uk##+js(aopr, InstallTrigger)
@@ -22829,6 +22834,7 @@ keralatelecom.info##+js(aopr, blogantiadblock)
 ! https://github.com/uBlockOrigin/uAssets/issues/6823
 extreme-down.ninja##+js(aopr, AaDetector)
 extreme-down.ninja##+js(set, atob, trueFunc)
+extreme-down.ninja,extreme-download.ninja##+js(aopr, decodeURIComponent)
 ||ddf67683e4778d.com^
 
 ! https://github.com/NanoMeow/QuickReports/issues/2744
@@ -23648,3 +23654,15 @@ pinsec.xyz##center
 
 ! https://github.com/uBlockOrigin/uAssets/issues/6946
 hostingunlock.com##+js(acis, $, show)
+
+! https://github.com/uBlockOrigin/uAssets/issues/3886
+@@||osuskinner.com^$ghide
+
+! https://github.com/NanoMeow/QuickReports/issues/3029
+*$script,redirect-rule=noopjs,domain=tgbeautymedia.blogspot.com
+
+! https://github.com/NanoMeow/QuickReports/issues/3030
+wickedspot.org##+js(acis, jQuery, ai_adb)
+
+! https://github.com/NanoMeow/QuickReports/issues/3031
+*$script,redirect-rule=noopjs,domain=sportif.id
