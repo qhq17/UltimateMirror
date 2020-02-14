@@ -1,8 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 202002092
+! Version: 13February2020v3
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
-! Last modified: 9th of February 2020
 ! Expires: 4 days
 ! Homepage: https://github.com/finnish-easylist-addition/finnish-easylist-addition
 ! License: https://unlicense.org/
@@ -14,7 +13,6 @@
 ! -----GENERAL-----
 
 /bannerCounter.php
-/bannerit/*$domain=~www.jhl.fi|~www.karkkainen.com|~unisport.fi|~f9.fi
 /js/spring.js
 /karuselli/js/AgAdCarousel
 /mainokset.
@@ -46,9 +44,6 @@
 /yhteistyossa_
 _mainos.
 _mainosnappi.
-nelonenmedia.fi/hitcounter
-rac.ruutu.fi/rac.gif
-rac.ruutu.fi/sat/sat.gif
 
 ###atwAdFrame
 ###keskimainos
@@ -149,6 +144,7 @@ auto1.fi,ilmainensanakirja.fi,nauris.fi,telsu.fi,testeri.fi##.box_dt
 auto1.fi,ilmainensanakirja.fi,nauris.fi,telsu.fi,testeri.fi##[href^="/clk"]
 basso.fi##.ad-paraati
 basso.fi##div[id^="BannerBlock"]
+bbs.io-tech.fi##[href^="https://www.io-tech.fi/io/www/dlvr/glig.php"]
 bomber.fi###rt-sidebar-b
 brbikers.com##a[href*="tema.fi"]
 ! These etuovi rules are only being used on old.etuvi.com
@@ -390,6 +386,7 @@ viikonloppu.com###text-10 > .textwidget
 viikonloppu.com###text-8
 viikonloppu.com###text-9
 viikonloppu.com###ticker
+viikonloppu.com##.category-uutiset.category-pelit
 viikonloppu.com##.tag-eurojackpot.category-uutiset
 viikonloppu.com##.tag-kasino.category-uutiset
 viikonloppu.com##.tag-nettikasino.category-uutiset
@@ -400,6 +397,7 @@ viikonloppu.com##[href*="https://record.twinaffiliates.com/"]
 viikonloppu.com##[href*="https://tracker-pm2.fortunelegends.com/"]
 viikonloppu.com##[href*="https://www.kasinokaverit.com/"]
 viikonloppu.com##[href*="https://www.lainaovi.fi/"]
+viikonloppu.com##li > a[href*="-jackpot-"]
 voice.fi##div[class*="cxense-ad-container"]
 www.finder.fi##.Advertisement__Box
 www.is.fi##.border-b.lg\:w-main-lane.bg-is-ad-blue.mb-16
@@ -425,6 +423,7 @@ ylilauta.org###right > .center
 ||ad.ilcdn.fi^$third-party
 ||adap.io^$third-party
 ||adservicemedia.dk*sub=side*$image,domain=mobiili.fi,important
+||adswiper.eu^$third-party
 ||affiliate.guts.com^$third-party
 ||ah-me.com^$third-party
 ||alibi.fi/wp-content/uploads/2018/03/AL_sivupalkin_myyntiviesti2.jpg$image
@@ -433,7 +432,6 @@ ylilauta.org###right > .center
 ||assets.ilcdn.fi/891762d853d7700e83390696d1ad4cc1e29925ccb842717a4e0cd3994dbb4d9d.jpg$image
 ||assets.ilcdn.fi/Monster_IL_banneri_612x78.jpg$image
 ||auto1.fi^$third-party
-||buttons-for-website.com^$third-party
 ||c1.hinta.fi^$third-party,script
 ||carousel-prod-kaleva-fi.s3.amazonaws.com^$third-party
 ||cdn.asunnot.oikotie.fi/lib/images/logo/sahkovertailu-logo-sininen-360.png$image
@@ -492,6 +490,7 @@ ylilauta.org###right > .center
 ||mobiili.fi/wp-content/uploads/2019/08/bms_2019_980x120.jpg$image
 ||monster.almamedia.fi/nostobannerit/
 ||nayadaya.com^$third-party
+||nelonenmedia.fi/hitcounter$image
 ||network.bazaarvoice.com/st.gif
 ||newrelic.com^$third-party
 ||omataloyhtio.fi/ffsw-pushcrew.js
@@ -504,6 +503,7 @@ ylilauta.org###right > .center
 ||pliing.com^$third-party
 ||puutarha.net/ffsw-pushcrew.js
 ||puutarha.net/statb.asp
+||rac.ruutu.fi/sat/sat.gif$image
 ||rakentaja.fi/kuvat/pi.gif
 ||rantapallo.fi^$third-party
 ||reactandshare.com/track.gif
@@ -616,26 +616,24 @@ www.kaksplus.fi#@#.sponsored-content
 murha.info#@#.adsbygoogle
 murha.info#@#.adsbox
 
+! Unbreak product sort according to function (Easyprivacy)
+@@||dynamicyield.com/api/*/api_dynamic.js$script,domain=www.gigantti.fi
+
 ! -----UNSORTED END-----
 ! -----UNBREAK-----
 
 @@||leiki.com$domain=kaksplus.fi
-io-tech.fi#@#.sidebar-widgets
-@@||onyourmap.com$image,domain=finder.fi
 ! s-kanava.fi
 @@||leiki.com$domain=etuovi.com
-@@||turku.fi/sites/default/files/styles/current/public/images/
 etuovi.com#@#.rss-feed
 tjareborg.fi#@#.push-container
 @@||www.power.fi/Umbraco/Api/Tracking/TrackOrder$xmlhttprequest,domain=www.power.fi
 @@||uk.cdn-net.com/cc.js$script,domain=www.power.fi
 ! Unbreaks chat function
 @@-tracking.js?$domain=telia.fi|moi.fi
-@@/pixel.gif$domain=xhamster.com
 @@||/api/*/visitor?$domain=elisa.fi
 @@||adlibris.com/pixel.gif
 @@||adservicemedia.dk/$image,domain=mobiili.fi
-@@||eu1.snoobi.com/snoop.php?tili=fortum_fi_irene&rqjsbust=
 @@||googletagmanager.com/gtm.js?$third-party,domain=elisa.fi
 @@||leiki.com$domain=iltalehti.fi
 @@||pbs.twimg.com/ad_img/$image,domain=embed.is.fi
@@ -657,5 +655,9 @@ download.fi#@##ad-top-banner-placeholder
 @@/wp-content/*twitter.jpg$domain=tekniikanmaailma.fi
 ! ville.utu.fi unbreak
 @@||*/icons/google$image,domain=utu.fi
+
+! Easylist cookie causes header to display incorrectly when scrolling
+staypro.fi#@#.cookie-inner
+staypro.fi#@#.cookie-bar:not(body):not(html)
 
 ! -----UNBREAK END-----
