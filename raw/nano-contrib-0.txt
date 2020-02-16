@@ -9,25 +9,6 @@
 
 # Multilingual
 
-# https://github.com/NanoAdblockerLab/NanoContrib/pull/1#issuecomment-450592268
-# https://github.com/NanoAdblockerLab/NanoContrib/pull/9#issuecomment-455806136
-# https://github.com/NanoAdblockerLab/NanoContrib/pull/12#issuecomment-468103768
-# https://github.com/NanoAdblockerLab/NanoContrib/pull/16#issuecomment-473483145
-# https://github.com/NanoAdblockerLab/NanoContrib/pull/47#issuecomment-523706934
-# https://github.com/NanoAdblockerLab/NanoContrib/pull/73#issuecomment-569457506
-# https://github.com/NanoAdblockerLab/NanoContrib/pull/77#issuecomment-574410073
-!#if !env_mobile
-pixiv.net##.ads-top-info
-pixiv.net##.area_new:not(:has(.area_title))
-pixiv.net###root > header + div + div:not(:has(a)):not(:has(img))
-pixiv.net##.sc-AykKF:style(padding-bottom: 0px !important;)
-pixiv.net###js-mount-point-header.with-ad:style(min-height: 0px !important;)
-!#endif
-!#if env_mobile
-pixiv.net##.ad-frame-container
-pixiv.net##body[style^=margin-bottom]:style(margin-bottom: 0px !important;)
-!#endif
-
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/3#issuecomment-450736303
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/5#issuecomment-452149638
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/21#issuecomment-487796545
@@ -207,7 +188,50 @@ accuweather.com##.glacier-ad
 weatheronline.*,woeurope.eu,wofrance.fr,woitalia.it,woespana.es,havaturkiye.com,woweather.com,pogodaonline.ru,woweer.nl##.ad
 weatheronline.*,woeurope.eu,wofrance.fr,woitalia.it,woespana.es,havaturkiye.com,woweather.com,pogodaonline.ru,woweer.nl##.banner_oben
 
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/89#issuecomment-583693442
+transfermarkt.com##.werbung
+
+# https://github.com/NanoMeow/QuickReports/issues/3020
+kijiji.*##.inline-banner
+
+# https://github.com/NanoMeow/QuickReports/issues/2629
+linkedin.com##.org-container__ad-module
+
+# https://github.com/NanoMeow/QuickReports/issues/3034
+worldweatheronline.com###tob-banner
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/90#issuecomment-586649650
+gpfans.com##.top-leaderboard
+gpfans.com##.advertise-panel
+
 # End Multilingual
+
+# -------------------------------------------------------------------------------------------------------------------- #
+
+# Multilingual NSFW
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/1#issuecomment-450592268
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/9#issuecomment-455806136
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/12#issuecomment-468103768
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/16#issuecomment-473483145
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/47#issuecomment-523706934
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/73#issuecomment-569457506
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/77#issuecomment-574410073
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/87#issuecomment-582155483
+!#if !env_mobile
+pixiv.net##.ads-top-info
+pixiv.net##.area_new:not(:has(.area_title))
+pixiv.net###root > header + div + div:not(:has(a)):not(:has(img))
+pixiv.net##.sc-AykKF:style(padding-bottom: 0px !important;)
+pixiv.net###js-mount-point-header.with-ad:style(min-height: 0px !important;)
+pixiv.net##li:has(:scope > iframe[name="infeed"])
+!#endif
+!#if env_mobile
+pixiv.net##.ad-frame-container
+pixiv.net##body[style^="margin-bottom"]:style(margin-bottom: 0px !important;)
+!#endif
+
+# End Multilingual NSFW
 
 # -------------------------------------------------------------------------------------------------------------------- #
 
@@ -289,6 +313,13 @@ dhuvas.mv##.vc_column-inner:has(img[alt="sportsad"])
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/31#issuecomment-501930025
 allenetflixseries.nl##.textwidget > p:has(:scope > script[src*="/adsbygoogle"])
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/87#issuecomment-582155535
+telegraaf.nl##.ArticlePageWrapper__banner
+telegraaf.nl##.ArticleBodyBlocks__inlineArticleSpotXBanner
+telegraaf.nl##.TextArticlePage__bannerWrapper
+telegraaf.nl##.SectionPage__bannerWrapper
+telegraaf.nl##.SecondaryCuratedTeasersLayout__bannerWrapper
 
 # End Dutch
 
@@ -527,7 +558,11 @@ mythicscribes.com##aside[id^="ai_widget-"]
 itstillworks.com##div.whitecard:has(script[src*="/pagead/"])
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/38#issuecomment-511089775
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/64#issuecomment-557918382
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/89#issuecomment-583693450
 majorgeeks.com##.geekad
+majorgeeks.com##.navigation-light
+majorgeeks.com##center:has-text(=Advertisement=)
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/11#issuecomment-463024499
 !#if env_mobile
@@ -1004,9 +1039,6 @@ gamersnexus.net##.moduleContent:has-text(/^\n\t\t\tAdvertisements:\n/)
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/64#issuecomment-557918369
 sidereel.com##.partial-bordered-module:has(:scope > div.OUTBRAIN)
 
-# https://github.com/NanoAdblockerLab/NanoContrib/pull/64#issuecomment-557918382
-majorgeeks.com##.navigation-light
-
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/64#issuecomment-557918393
 allmovie.com,allmusic.com##.footer-leaderboard
 
@@ -1081,7 +1113,7 @@ washingtonpost.com###leaderboard-wrapper
 washingtonpost.com##div:has(:scope > wp-ad):not(#topper-headline-wrapper)
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/68#issuecomment-564256999
-worldarchitecture.org##div[class^=adv]
+worldarchitecture.org##div[class^="adv"]
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/68#issuecomment-564257061
 wallpaper.com##.newPageAd
@@ -1236,6 +1268,54 @@ appleinsider.com###leaderboard
 
 # https://github.com/NanoMeow/QuickReports/issues/1879
 streamable.com##.topbanner
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/87#issuecomment-582155581
+replacementdocs.com##body > table > tbody tbody tbody > tr > td > table:has-text(Sponsored Links)
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/88#issuecomment-583159081
+activistpost.com##.widget_text:not(:has(a))
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/88#issuecomment-583159111
+funnyand.com##.ad-unit-desktop
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/88#issuecomment-583159132
+naturalblaze.com##.single-widget:has([id^="div-gpt-ad-"])
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/88#issuecomment-583159164
+insidethegames.biz###ealert-banner
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/89#issuecomment-583693458
+winaero.com###page > div[style^="padding:"]
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/89#issuecomment-583693462
+petri.com##.single__ad
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/89#issuecomment-583693475
+ccm.net##.ccm_pugoo__sponso
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/89#issuecomment-583693493
+pcguide4u.com##div[id^="custom_html-"]:not(:has(iframe))
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/89#issuecomment-583693505
+techgenix.com##.code-block + p:not(:has-text(/\S/))
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/89#issuecomment-583693516
+edarabia.com##.sky-600
+edarabia.com##.mpu-300
+edarabia.com##.leaderboard-970
+edarabia.com##.leaderboard-728
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/90#issuecomment-586649656
+bikesportnews.com##.advert-break-inline
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/90#issuecomment-586649672
+golfmagic.com##.ad-bottom-margin
+golfmagic.com##.block-block
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/90#issuecomment-586649689
+visordown.com##.panels-flexible-region-home_section-dmpu
+visordown.com##.ad-dmpu
+visordown.com##.mpu1
 
 # End English
 
@@ -1468,6 +1548,9 @@ slobodenpecat.mk###stream-item-widget-4:has(img[src*="ADVERTISMENT"])
 
 # https://github.com/NanoMeow/QuickReports/issues/2514
 plejada.pl###stickyWrapperAlone
+
+# https://github.com/NanoMeow/QuickReports/issues/2981
+queer.pl##.box-adv-super
 
 # End Polish
 
