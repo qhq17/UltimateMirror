@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: avaLoGhTCyuCHtJ8PQ4beA
+! Checksum: p8aFdgBxHcMXDau+wjDmpQ
 ! Title: AdGuard Tracking Protection filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.12.11
-! TimeUpdated: 2020-02-06T13:31:12+03:00
+! Version: 2.0.12.14
+! TimeUpdated: 2020-02-18T01:31:08+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#privacy
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -127,6 +127,7 @@ donnerwetter.de#?#.col-xs-12 > div.block.prepend-top[-ext-has='> div.blocktitle-
 hdreactor.club,hdreactor.su,hdreactor.tv,hdreactor.net#?#.sidebar > div.menu-wrap > div.menu-head:contains(Счетчики)
 hdreactor.club,hdreactor.su,hdreactor.tv,hdreactor.net#?#.sidebar > div.menu-wrap > div.menu-head:contains(Счетчики) + div.menu-head1
 !
+elmundo.es#?#body > main[role="main"] > div.ue-l-article:has(> div.ue-l-article__inner > div.ue-l-article__main-column > aside > div[id^="taboola"])
 uniongang.org#?#td[align="center"][height="27"]:contains(Счётчики)
 novate.ru#?##right > div.bordered:has(> script:contains(relap))
 novate.ru#?##right > h2:contains(Рекомендуем)
@@ -5030,6 +5031,8 @@ charlestownwyllie.oaklawnnonantum.com^
 ! YouTube
 /log_event?
 !
+/ux_analytics/*
+/ux_analytics_
 /owa.tracker-combined-min.js
 /Web_JS_Stats.
 /mip-stats-cnzz/*
@@ -5292,6 +5295,8 @@ _tracking.php?b=
 ||nd.demdex.net/event?d_mid=$empty,important,domain=9now.com.au
 ||adc.nine.com.au/?token=$empty,important,domain=9now.com.au
 !
+||evgnet.com/beacon/
+||51nongyao.net/js/analytics.js
 kanobu.ru##a[href^="https://www.liveinternet.ru/click"]
 ||a24.biz/pixel/
 ||preved.tut.by/1px.gif
@@ -7399,6 +7404,8 @@ link.gmapp*.net$image
 !
 ! Exception rules that fix different issues caused by blocking trackers
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/49992
+@@||mc.yandex.ru/metrika/tag.js$domain=kuchenland.ru
 ! pdftoword.com - broken download button
 @@||app-*.marketo.com/*/form$domain=pdftoword.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/48961
