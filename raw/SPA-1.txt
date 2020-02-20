@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: 7OC2jm5ZxVepRsCjXpihUQ
+! Checksum: BingXqW3GJvCGO1P626lCw
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish and Portuguese languages.
 ! Version: 2.0.5.59
-! TimeUpdated: 2020-02-11T14:31:40+03:00
+! TimeUpdated: 2020-02-19T02:31:43+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#spanish
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -257,6 +257,7 @@ ggames.com.br#$#.adsbygoogle { display: block!important; position: absolute!impo
 aquariumgays.com#@#.adsBox
 ! https://github.com/AdguardTeam/AdguardFilters/issues/47777
 @@||minhasdelicias.com/*/adsbygoogle.js
+minhasdelicias.com##+js(set-constant.js, canRunAds, true)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/47640
 @@||mastercoria.com/js/ad_serve.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/47555
@@ -264,8 +265,10 @@ aquariumgays.com#@#.adsBox
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=profesor10demates.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/47337
 @@||anitube.be/*advert*.js
+anitube.be##+js(set-constant.js, ATESTADO, 1)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/46694
 @@||luchaonline.com/*/js/adsbygoogle.js
+luchaonline.com##+js(set-constant.js, canRunAds, true)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/46603
 @@||p.jwpcdn.com/player/*/googima.js$domain=13.cl
 ! https://github.com/AdguardTeam/AdguardFilters/issues/46412
@@ -274,9 +277,11 @@ eletronicabr.com#$#.adsbygoogle { position: absolute!important; left: -3000px!im
 ! https://github.com/AdguardTeam/AdguardFilters/issues/45254
 @@||neoteo.com/wp-content/plugins/*/adblock-detector/advertisement.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/44950
+libertaddigital.com##+js(set-constant.js, Object.prototype.adBlockerDetected, noopFunc)
 @@||libertaddigital.com/ad/adservice/banner/*/*.ad.json$domain=libertaddigital.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/41215
 @@||file4go.net/ads.js
+file4go.net##+js(set-constant.js, Lata, 1)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/39171
 hobba.tv#@##ad-block
 hobba.tv#@##ad-box
@@ -714,6 +719,11 @@ noticias.mrpiracy.xyz#@##adsense
 ! https://github.com/AdguardTeam/AdguardFilters/issues/16144
 ! https://github.com/AdguardTeam/AdguardFilters/issues/14353
 @@||cdnjs.cloudflare.com/ajax/libs/fuckadblock/3.2.1/fuckadblock.min.js$domain=mangahosted.com|mangahost1.com
+mangahosted.com##+js(set-constant.js, Goog_Osd_UnloadAdBlock, 1)
+mangahosted.com##+js(set-constant.js, google_osd_loaded, 1)
+mangahosted.com##+js(set-constant.js, stopMan, false)
+mangahosted.com##+js(set-constant.js, google_tag_data, 1)
+mangahosted.com##+js(set-constant.js, google_unique_id, 1)
 @@||mangahosted.com^$generichide
 @@||mangahost2.com^$generichide
 @@||mangahost1.com^$generichide
@@ -1168,22 +1178,37 @@ maisgasolina.com#?##main [id$="Block"][-ext-has='.adsbygoogle']
 !--------------------------------------!
 !------- JS rules ---------------------!
 !--------------------------------------!
+! https://github.com/AdguardTeam/AdguardFilters/issues/49711
+receitastops.ga##+js(nano-setTimeout-booster.js, contador, , 0.02)
 ! pirlotv.es - popups
+pirlotv.es##+js(abort-on-property-read.js, smrtSP)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/49511
 ! https://github.com/AdguardTeam/AdguardFilters/issues/48208
+adrenalinagames.com##+js(nano-setTimeout-booster.js, contador, , 0.02)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/47860
+aquariumgays.com##+js(abort-on-property-read.js, _cpp)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/39547
 ! https://github.com/AdguardTeam/AdguardFilters/issues/45935
 ! https://github.com/AdguardTeam/AdguardFilters/issues/45783
+!+ NOT_PLATFORM(windows, mac, android)
+repelisplus.vip##+js(abort-on-property-read.js, adbClick)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/45492
+!+ NOT_PLATFORM(windows, mac, android)
+descargaranimehentai.com##+js(abort-on-property-read.js, pub)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/45361
+!+ NOT_PLATFORM(windows, mac, android)
+a.topflix.tv##+js(nano-setInterval-booster.js, adsHandle, , 0.02)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/44237
+!+ NOT_PLATFORM(windows, mac, android)
+redirdx.in##+js(window.open-defuser.js, 1, redirdx.in/go/)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/43603#issuecomment-553749336
 ! https://github.com/AdguardTeam/AdguardFilters/issues/42704
 ! https://github.com/AdguardTeam/AdguardFilters/issues/41818
 ! https://github.com/AdguardTeam/AdguardFilters/issues/41643
 ! https://github.com/AdguardTeam/AdguardFilters/issues/42381
+playpaste.com##+js(window.open-defuser.js)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/40879
+tuhentaionline.com##+js(abort-on-property-read.js, Pub2)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/38339
 ! https://github.com/AdguardTeam/AdguardFilters/issues/37186
 ! https://github.com/AdguardTeam/AdguardFilters/issues/35418
@@ -1213,6 +1238,7 @@ maisgasolina.com#?##main [id$="Block"][-ext-has='.adsbygoogle']
 ! https://github.com/AdguardTeam/AdguardFilters/issues/39390
 ! https://forum.adguard.com/index.php?threads/identi-li-pop-up.27296/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/7559
+!+ NOT_PLATFORM(windows, mac, android)
 ! https://forum.adguard.com/index.php?threads/26449/
 ! puOverlay, puShown
 ! https://forum.adguard.com/index.php?threads/http-www-repelis-net.26264/
@@ -1381,6 +1407,10 @@ http://adw.
 !-------------------- Specific rules --------------------!
 !--------------------------------------------------------!
 !
+/\/img\/(160600|72890)\.png/$domain=iptvnow.top
+||engeplus.com.br/anuncios/
+engeplus.com.br##.anuncio
+engeplus.com.br##.break-com-texto
 lanacion.com.ar##div[class^="content-bnhoy"]
 ultimasnoticias.com.ve##div[class^="ultim-"]
 ultimasnoticias.com.ve##.ultim-adlabel + a[rel="nofollow"]
@@ -3169,6 +3199,10 @@ urlcloud.us##.banner
 !
 ! White list. Fixing filtration errors (false-positive)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/49849
+@@||adservice.google.com.ua^$domain=ucicinemas.pt
+@@||securepubads.g.doubleclick.net/gpt/pubads_impl_*.js$domain=ucicinemas.pt
+@@||googletagservices.com/tag/js/gpt.js$domain=ucicinemas.pt
 ! https://github.com/AdguardTeam/AdguardFilters/issues/49511
 ! https://github.com/AdguardTeam/AdguardFilters/issues/47494
 ! https://github.com/AdguardTeam/AdguardFilters/issues/46603
