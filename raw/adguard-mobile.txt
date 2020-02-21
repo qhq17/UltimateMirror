@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: fiJxpU79JC+dbX619Dx3Mw
+! Checksum: uZsy2NPxszSJ6DSYzfmJxA
 ! Title: AdGuard Mobile Ads filter
 ! Description: Filter for all known mobile ad networks. Useful for mobile devices.
-! Version: 2.0.10.88
-! TimeUpdated: 2020-02-18T01:30:11+03:00
+! Version: 2.0.10.97
+! TimeUpdated: 2020-02-21T01:30:11+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#mobile
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -136,6 +136,11 @@
 ||criteo.com^
 ||criteo.net^
 !
+||appodeal.com^
+||a.76674bdad304297eda3d325f449f6f49.com^
+||a.4ee395e5b8a076c7bd8592851ff8cad.com^
+||a.6d47c1118927cf53ba9654931df80e8d.com^
+!
 ||banner.hpmdnetwork.ru^
 ||hybrid.ai^
 ||px.adhigh.net^
@@ -182,7 +187,6 @@
 ||adxcorp.kr^
 ||api-*.bidmachine.io^
 ||adsmobila.com^$third-party
-||a.4ee395e5b8a076c7bd8592851ff8cad.com^
 ||tw-api.vpon.com^
 ||haorun.pw^$third-party
 ||pochengweiyuan.com^$third-party
@@ -251,7 +255,6 @@
 ||adsnative.com^
 ||liftoff.io^
 ||tapdaq-adverts.global.ssl.fastly.net^
-||a.6d47c1118927cf53ba9654931df80e8d.com^
 ||rtb.appbid.com^
 ||rtapi.abbi.io^
 ||ade.clmbtech.com^
@@ -625,7 +628,6 @@
 ||applift.com^empty
 ||applovin.com^
 ||appnext-a.akamaihd.net^
-||appodeal.com^
 ||appsdt.com^
 ||appserver-ap.com^
 ||appserver-cp.com^
@@ -1188,6 +1190,8 @@ westseattleblog.com#@#.header-ad
 !
 ! Extended CSS rules
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/50110
+dcard.tw#?#main > div[role="main"] > div > div[class^="sc-"]:has(> div[style="height:250px;width:300px"])
 ! epoznan.pl - ads
 epoznan.pl#?#.mobileNewsList__section > .mobileNewsList__container:has(> .mobileNewsList__right >a.postItem__category:contains(/^REKLAMA$/))
 ! https://github.com/AdguardTeam/AdguardFilters/issues/48523
@@ -1423,6 +1427,8 @@ m.nuvid.com##+js(abort-on-property-read.js, mobileAdvPop)
 !-------CSS---------
 !-------------------
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/49971
+dailymail.co.uk#$#body { margin-top: -80px!important; }
 ! ixbt.com - исправление отступа в мобильной версии
 ~forum.ixbt.com,ixbt.com#$#body { margin-top: 3em!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/46115
@@ -1887,12 +1893,19 @@ tomshardware.com,techbook.de,sueddeutsche.de,hurriyet.com.tr,elmundo.es,timesnow
 ! ##amp-ad
 dobreprogramy.pl,amp.pcwelt.de,tomshardware.com,techbook.de,forbes.com,auto-swiat.pl,dialog.ua,mobile.reuters.com,spiegel.de,amp.welt.de,forum.xda-developers.com,sueddeutsche.de,amp.usatoday.com,m.gadgets.ndtv.com##amp-ad
 !
+24tv.ua##.amp-ad-wrp
+gordonua.com,strana.ua,24tv.ua##amp-iframe
+24tv.ua##.delimiter
+nwanime.tv##.presented
+amazon.com###detailILMPercolate_feature_div
+zaycev.net###__next > section[class^="Rotatorstyled__"]
 itc.ua##.entry-content > div.post-txt > p + div.clearfix
 fullhdfilmonline.com##.sidebar-right > div.textwidget a[target="_blank"][rel^="noopener"] > img
 p4svip.com##body > style[type] + div[class*="_"][id]
 epoznan.pl##.bannerBox__mob
 mail.yahoo.com##form[method="get"][action^="/mb/"] ~ div[class*=" "] > img[src*="beap.gemini.yahoo.com/"] + div
 m.52qumao.com##iframe[src*="sogou.com/wapxml?id="]
+dayifullfilmizle.com##.content > div.code-block > a[target="_blank"] > img
 m.ok.ru##li.feed-card.__adv
 m.ok.ru##.game-campaign
 udn.com##.udn-ads--mobile
@@ -1949,7 +1962,7 @@ avgle.com##.hide-me-please2
 porntube.com##.interstitial
 m.3movs.com###int-over
 m.3movs.com##span[id="3Mm-Nat"]
-daftsex.com##iframe[src^="https://a.adtng.com/"]
+porntrex.com,daftsex.com##iframe[src^="https://a.adtng.com/"]
 youjizz.com##.underPlayerPr
 ||cdn.nsimg.net/cache/landing/pr/*/yjmobile-*.xml$domain=youjizz.com
 dailywire.com##article[class^="css-"] > div[style="width: 320px; height: 50px; margin: 0px auto 32px;"]
