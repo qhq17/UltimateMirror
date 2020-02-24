@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 202002172138
-! Title: ABPVN List [animetvn.tv]
-! Last modified: 17 Feb 2020 21:38 UTC+7
+! Version: 202002232323
+! Title: ABPVN List [phimmoi.net]
+! Last modified: 23 Feb 2020 23:23 UTC+7
 ! Expires: 1 days (update frequency)
 !
 ! ABPVN List filter
@@ -195,7 +195,7 @@ $webrtc,domain=phim14.net|phimotv.net|appvn.com
 ||luatvietnam.vn*/uploaded/*.gif
 ||media.coccoc.com$image,object,popup
 ||media.dabong247.com/ads/
-||media.giphy.com/media/$image,domain=animevsub.tv|phimgi.tv|thevang.tv|ngoac.tv|thevangtv.com|vaoroi.tv
+||media.giphy.com/media/$image,domain=animevsub.tv|phimgi.tv|thevang.tv|ngoac.tv|thevangtv.com|vaoroi.tv|dabong.net
 ||media.jxf88.com^$third-party
 ||media.store123doc.com/images/web_2/tuyen-dung-min.png
 ||media2d.net^$third-party
@@ -579,15 +579,20 @@ chovinh.com##.gqc
 coccoc.com###animation_container
 coccoc.com###top-block
 coccoc.com###video-banner-overlay
+coccoc.com##.adsv
 coccoc.com##.middlebar
 coccoc.com##.right-wrapper
 coccoc.com##[data-show-urls^="http://catalog.qc.coccoc.com"]
 coccoc.com##[data-show-urls^="http://context.qc.coccoc.com"]
 coccoc.com##a[href^="https://context.qc.coccoc.com"]
 coccoc.com##video
+coccoc.com#?#li:-abp-has(h3:-abp-contains(Sản phẩm))
 comicvn.net,phimmedia.tv,linkneverdie.com##.SC_TBlock
 cuoi.tuoitre.vn##.banner-bottom
-cuoi.tuoitre.vn##.banner-top
+cuoi.tuoitre.vn,dabong.net##.banner-top
+dabong.net##.under-h1
+dabong.net##div[class^="ballon-"]
+dabong.net##div[class^="float-"]
 dantri.com.vn##.admicro
 designs.vn##.qc-right2
 dongphim.net##.vast-checkpoint-wrapper
@@ -915,6 +920,8 @@ yeuphimmoi.com##.cash-fish
 @@||game24h.vn/js/ads_$script,~third-party
 @@||gateway.chotot.com^$xmlhttprequest,domain=chotot.com
 @@||htv3tv.com/ads1/mobile.js
+@@||iamcdn.net/players/ads.js
+@@||iamcdn.net/players/app.ads.js
 @@||imasdk.googleapis.com^$domain=vivo.vn|tving.vn|24h.com.vn|danet.vn|pose.com.vn|gamevui.vn|yan.vn|saostar.vn|anime47.com|fptplay.vn
 @@||joomla30.webkul.com/joomaddon//plugins/system/adblockerdetect/assets/js/adframe.js
 @@||kenhtao.net/ad/$xmlhttprequest
@@ -931,6 +938,7 @@ yeuphimmoi.com##.cash-fish
 @@||vatlypt.com/ad/banner/$xmlhttprequest,~third-party
 @@||vn-platform.bidgear.com$domain=notelink.me
 !--------Element Hiding Exception--------------
+@@||1shortlink.com$generichide
 @@||ani4u.org$generichide
 @@||anime47.com$generichide
 @@||animet.net$generichide
