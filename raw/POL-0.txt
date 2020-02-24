@@ -9,9 +9,9 @@
 ! Wsparcie:
 !   Patronite ==> https://patronite.pl/polskiefiltry
 !   PayPal ==> https://www.paypal.com/pools/c/87zNJ8OJ3I
-! Last modified: 12 February 2020
+! Last modified: 23 February 2020
 ! Expires: 1 day
-! Version: 2020021205
+! Version: 2020022301
 ! Support:
 !   Email >> errorsfilters@certyficate.it
 !   Github >> https://github.com/MajkiIT/polish-ads-filter/issues
@@ -19,7 +19,7 @@
 ! License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ! Copyright © 2020 Certyficate IT
 ! Najnowsza wersja zawsze na: https://www.certyficate.it/adblock
-! v.2020021205 aktualizacja: sr, 12 lutego 2020, 20:40:00
+! v.2020022301 aktualizacja: nie, 23 lutego 2020, 14:35:00
 !
 !
 !1#-----------------------General advert blocking filters-----------------------!
@@ -74,6 +74,7 @@ _banery/980x200
 gomoney.pl/article
 pl##a[href*="/adserwer/"]
 pl/*/rodzinnawycieczka/$image,domain=wp.pl
+/import_frame?version=*
 !
 !2#-----------------------Block pages-----------------------!
 /premium/player.php$domain=cyberkino.pl
@@ -1459,6 +1460,7 @@ kamienskie.info##.ads-subpage
 kanal10.pl##[class*="banner_"]
 kantorbitcoin.pl##.mom-e3lan
 kardiolo.pl##.content-sidebar > DIV
+kartuzy.info##.c-content__adv
 katalogsmakow.pl##.cOuterBlock-5
 katowice24.info##.inner, #text-4, #text-5, .background-url, div.k_ad.row
 katowicedzis.pl###g-sidebar > .g-grid
@@ -1783,7 +1785,7 @@ mhmkuchnie.eu##.custom-html-widget.textwidget
 miasto-gazeta.pl###media_image-9, #mvp-leader-wrap, .herald-entry-content.entry-content > div > A
 miasto-info.pl###halfpage
 miasto.koszalin.pl###ja-topsl
-miastodzieci.pl##[class^="bgov"]
+miastodzieci.pl##[class^="bgov"], .col-sm-12.widget_shwd.shwd-4
 miastoiludzie.pl###header
 miastoiludzie.pl,swiatoze.pl,gadzet.telchina.pl,premierywtv.pl,e-pingpong.pl###text-11
 miastokolobrzeg.pl###panel_baner
@@ -2499,6 +2501,7 @@ rynek.de###djslider199
 rynekaptek.pl,farmer.pl,promocjada.pl##.advB
 rynekzdrowia.pl##.marginTB.row, .advB, #boxSpodekMCK
 rzeszow-news.pl##IMG[class^="td-animation-stack-"][src^="http://rzeszow-news.pl/wp-content/uploads/201"]
+rzeszow.citybuzz.pl##.g1-sticky-widget
 rzeszowiak.pl###content-right
 rzeszowiak.pl###midtop
 rzeszowiak.pl##DIV.header-wizytowki
@@ -2706,7 +2709,7 @@ supertydzien.pl##.widget.row:nth-of-type(8)
 supertydzien.pl##a[href^="https://www.facebook.com"] > IMG[src*="ifotos.pl"]
 surek.pl###content-wrap > center:nth-of-type(1)
 surek.pl##iframe
-suwalki.info###banner-billboard, #bannerBn, .news-item2
+suwalki.info###banner-billboard, #bannerBn, .news-item2, .area.before_content
 suwalki24.pl###content_right > div:nth-of-type(2), #content_right > .box:nth-of-type(3), #content_right > div.box:nth-of-type(8), #exposeMask, #pupup_comercial
 suwalki24.pl##[class*="commercial"], [id*="commercial"]
 swarzedz24.pl###header-right-section, #media_image-85, #media_image-74, #media_image-282
@@ -3399,6 +3402,7 @@ zywiecinfo.pl##.promoted
 ||adv.wp.pl^
 ||advertising.com^
 ||aff.mediarotate.com/Click^
+||affiliates-solutions.com^
 ||affmy.pl/$script,domain=~affmy.pl
 ||agoraperformance.pl^$third-party
 ||alemiasto.pl/adds/
@@ -3487,6 +3491,7 @@ zywiecinfo.pl##.promoted
 ||exs.pl/embed*.php$script,domain=~wgospodarce.pl|~szczecinek.com|~polityka.pl|~ototorun.pl|~natemat.pl
 ||exs.pl/frame*.php$subdocument,domain=~wgospodarce.pl|~szczecinek.com|~polityka.pl|~ototorun.pl|~natemat.pl
 ||extremehobby.eu/banner/$subdocument
+||exyzz.pl^
 ||f01.esfr.pl/si_upload/gfx/*.png$image,domain=euro.com.pl
 ||fechallenge.com/images/*/brand
 ||fechallenge.com/images/*/partners
@@ -4175,6 +4180,9 @@ horrortube.fun##A[href*="viliaff.com"], .col-md-8 > A
 ||www.google.com$popup,domain=onlystream.tv
 ||track.aftermarket.pl^
 ||fads.online^
+||ww1.flashx.net^
+||cloudfront.net/atrk.js$script,domain=www.flashx.net
+||www.google.com$popup,domain=www.flashx.net
 !
 !28#--------------------------Rules for pages with random adv scripts regex------------!
 /apu.php?zoneid
@@ -4191,10 +4199,10 @@ horrortube.fun##A[href*="viliaff.com"], .col-md-8 > A
 /^https?:\/\/[a-z0-9-]{8,30}\.[a-z]{2,11}\/[0-9]{3,10}/$xmlhttprequest,script,stylesheet,subdocument,domain=raptu.com|flashx.tv|fileone.tv|animezone.pl|vidoza.net|kreskowkazone.pl|vidfile.net
 /^https?:\/\/[a-z0-9-]{8,30}\.[a-z]{2,11}\/[a-z]{1,3}\/[0-9]{5,10}/$script,domain=cda-tv.pl
 /^https?:\/\/[a-z0-9]{10,20}\.com\/[0-9]{5,10}\.html/$subdocument,domain=ekino-tv.pl
-/^https?:\/\/[a-z0-9]{5,}\.(com|top|pro)\/[a-z0-9]{1,}\/[a-z0-9]{1,}\/[a-z0-9]{1,}\/[a-z0-9/]{5,}\.js/$script,domain=vidto.me|fileone.tv|alltube.tv|srkcast.com|vidfile.net|alltube.pl|whostreams.net|szukajka.tv|cda-hd.co|filman.cc|cda-hd.cc|horrortube.fun|onlystream.tv|onlystream.tv|jetload.net
-/^https?:\/\/[a-zA-Z.0-9]{7,}\.(com|bid|info)\/[a-zA-Z.-]{1,}\.js/$script,domain=devil-torrents.pl|electro-torrent.pl|vidlox.tv|segos.es|fileone.tv|raptu.com|vidfile.net|sharevideo.pl|sharing-box.cloud|vidstream.xyz|cloudupload.co|veecast.net|openkatalog.com|shinden.pl|tele-wizja.is|ekinomaniak.tv|hqq.watch|whostreams.net|seriale-po-polsku.pl|virpe.com|filman.cc|horrortube.fun|onlystream.tv|clipwatching.com|upstream.to|videopenny.net
+/^https?:\/\/[a-z0-9]{5,}\.(com|top|pro)\/[a-z0-9]{1,}\/[a-z0-9]{1,}\/[a-z0-9]{1,}\/[a-z0-9/]{5,}\.js/$script,domain=vidto.me|fileone.tv|alltube.tv|srkcast.com|vidfile.net|alltube.pl|whostreams.net|szukajka.tv|cda-hd.co|filman.cc|cda-hd.cc|horrortube.fun|onlystream.tv|onlystream.tv|jetload.net|ekino.pw
+/^https?:\/\/[a-zA-Z.0-9]{7,}\.(com|bid|info)\/[a-zA-Z.-]{1,}\.js/$script,domain=devil-torrents.pl|electro-torrent.pl|vidlox.tv|segos.es|fileone.tv|raptu.com|vidfile.net|sharevideo.pl|sharing-box.cloud|vidstream.xyz|cloudupload.co|veecast.net|openkatalog.com|shinden.pl|tele-wizja.is|ekinomaniak.tv|hqq.watch|whostreams.net|seriale-po-polsku.pl|virpe.com|filman.cc|horrortube.fun|onlystream.tv|clipwatching.com|upstream.to|videopenny.net|flashx.net|vidspace.io
 /^https?:\/\/[a-zA-Z0-9]{10,}\.cloudfront\.net\/[a-zA-Z0-9%?=]{10,}/$script,domain=seriale-po-polsku.pl|animezone.pl
-/^https?:\/\/[a-zA-Z0-9]{15,}\.com\//$domain=horrortube.fun
+/^https?:\/\/[a-zA-Z0-9]{7,}\.com\//$script,domain=horrortube.fun|ekino.pw
 /^https?:\/\/[a-zA-Z0-9]{5,10}\.[a-z]{2,10}\/[a-zA-Z0-9?_=&-.%]{50,70}/$subdocument,script,popup,domain=tele-wizja.is|widestream.io|cdahd.ml|onlystream.tv
 /^https?:\/\/[a-zA-Z0-9]{5,15}\.(com|net)\/[a-z]{4,10}\/[0-9a-z.?=%A-Z-&]{60,100}/$script,popup,domain=veecast.net
 /^https?:\/\/[a-z]{3,10}\.[a-z]{3,4}\/[\w-]{4,10}.(css|png)[\w\W]{30,80}/$stylesheet,image,domain=freedisc.pl|cdahd.ml|cda-hd.cc|clipwatching.com
@@ -4203,6 +4211,9 @@ horrortube.fun##A[href*="viliaff.com"], .col-md-8 > A
 /^https?:\/\/[a-z]{5,10}\.com\/[a-zA-Z0-9+]{80,}/$subdocument,domain=embed.nowvideo.sx|cloudtime.to|darmowa-telewizja.info
 /https?:\/\/naekranie\.pl\/wp-content\/uploads\/[0-9]{4,4}\/[0-9]{2,2}\/(?!jpg)[0-9a-z]{7,10}$/$image
 /wp-content/plugins/wp-words-links-change/*$script,domain=businesstraveller.pl
+/^https?:\/\/[a-z]{3,15}\.[a-z]{3,4}\/[\w\W]{120,}/$subdocument,image,xmlhttprequest,domain=www.flashx.net
+/^https?:\/\/[a-z]{3,15}\.pro\/[a-zA-Z0-9?=&]{10,}/$xmlhttprequest,domain=flashx.net|filman.cc
+/^https?:\/\/[a-z]{3,15}\.[a-z]{3,4}\/[\w\W]{10,20}/$popup,domain=www.flashx.net
 !
 !29#--------------------------Rules on tv streams element hiding rules------------!
 ##a[href^="http://affiliates.bet-at-home.com/processing/clickthrgh.asp"]
