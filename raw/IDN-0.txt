@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Version: 202002101357
+! Version: 202002200658
 ! Title: ABPindo
 ! Description: Filter tambahan untuk EasyList memblokir iklan berbahasa Indonesia dan Malaysia.
-! Last modified: 10 Feb 2020 13:57 UTC
+! Last modified: 20 Feb 2020 06:58 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: http://abpindo.blogspot.com/
 ! Licence: https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/LICENSE
@@ -99,6 +99,7 @@
 ||flexterkita.com^$third-party
 ||fnkyyrgraizy.com^$popup
 ||furocmay.com^$popup
+||fuyuap.xyz^
 ||groucign.com^$third-party
 ||groupiklan.com^$third-party
 ||gudangbanner.com^$third-party
@@ -106,6 +107,7 @@
 ||hegarberetrof.pro^$popup
 ||herdethi.net^$third-party
 ||hitadsmedia.com^$third-party
+||iidfyyelvijfk.com^
 ||iklan-laris.com^$third-party
 ||iklanads.com^$third-party
 ||iklanbarisgratis.com^$third-party
@@ -304,7 +306,7 @@ iklan300x250.gif|
 $popup,domain=cinemamkv.net|kurina.co|mangacanblog.com
 $subdocument,third-party,domain=ironysub.net
 $xmlhttprequest,domain=mangacanblog.com
-.gif$image,domain=anime-indo.id|lk21.london
+.gif$image,domain=anime-indo.id|bioskopkerenin.org|lk21.london
 /floating-ads-bottom/*$image,domain=sukamovie.club
 /lebahmovie.com/wp-content/uploads/*.gif$image,domain=lebahmovie.com
 ||.wp.com/animenonton.*/wp-content/uploads/*.gif$image
@@ -332,12 +334,12 @@ $xmlhttprequest,domain=mangacanblog.com
 ||bioskop19.*/wp-content/uploads/*.gif$image
 ||bioskop21.*/wp-content/uploads/*.gif$image
 ||bioskop212.*/wp-content/uploads/*.gif$image
-||bioskop45.me/Banner/*.gif$image
+||bioskop45.*/Banner/*.gif$image
 ||bioskop55.*/wp-content/uploads/*.gif$image
 ||bioskopkeren.guru/images/*.gif$image
 ||bioskopkeren.xyz/images/*.gif$image
 ||bioskopxxi.*/wp-content/uploads/*.gif$image
-||bp.blogspot.com/*.gif$image,domain=animeindo.moe|anoboy.org|anoboy.video|awnime.net|awsubs.co|awsubs.tv|bioskopgalaxy21.com|bioskoptigalima.com|bokepman.com|bolehnonton.net|cinema81.net|cinemamovie21.net|cinemamovie365.com|drakorindo.co|drakorindo.com|drakorindo.net|drakorindo.tv|drakorindofilms.net|duniasex.ws|dwanonton.com|film-drama.co|filmbagus21.space|filmbagus88.net|filmku.net|idkomik.com|juragantomatx.com|kazefuri.me|kazefuri.web.id|kombatch.com|komikcast.com|layarkeren.com|layarmovie21.co|mangaindo.net|mangashiro.co|movie303.com|movie76.net|moviebaru21.com|neonime.com|neonime.net|neumanga.tv|nonton-streaming.com|nonton.club|nonton33.com|nonton33.net|nonton33.org|nonton33.tv|nontonbp.com|nontondrama.me|nontonfilm.mobi|nontonfilm21.club|nontonin.co|nontonmovie33.net|satujiwa.org|senimovies.net|smallencode.com|unyil.org|www.lk21id.com|zonabola.com
+||bp.blogspot.com/*.gif$image,domain=animeindo.moe|anoboy.org|anoboy.video|awnime.net|awsubs.co|awsubs.tv|bioskopgalaxy21.com|bioskoptigalima.com|bokepman.com|bolehnonton.net|cinema81.net|cinemamovie21.net|cinemamovie365.com|drakorindo.co|drakorindo.com|drakorindo.net|drakorindo.tv|drakorindofilms.net|duniasex.ws|dwanonton.com|film-drama.co|filmbagus21.space|filmbagus88.net|filmku.net|idkomik.com|juragantomatx.com|kazefuri.me|kazefuri.web.id|kombatch.com|komikcast.com|layarkeren.com|layarkeren.info|layarmovie21.co|mangaindo.net|mangashiro.co|movie303.com|movie76.net|moviebaru21.com|neonime.com|neonime.net|neumanga.tv|nonton-streaming.com|nonton.club|nonton33.com|nonton33.net|nonton33.org|nonton33.tv|nontonbp.com|nontondrama.me|nontonfilm.mobi|nontonfilm21.club|nontonin.co|nontonmovie33.net|satujiwa.org|senimovies.net|smallencode.com|unyil.org|www.lk21id.com|zonabola.com
 ||bp.blogspot.com/*/iklan_landscape.jpg$image,domain=mangacanblog.com
 ||cat3movie.us/banners/
 ||cat3movie.us/popup.js
@@ -471,9 +473,10 @@ $xmlhttprequest,domain=mangacanblog.com
 ||linkgenerator.xyz$script,third-party
 ||lk21.*/assets/*.gif$image
 ||lk21.*/wp-content/uploads/*.gif$image
-||lk21c.fun/wp-content/uploads/*.gif$image
+||lk21c.*/wp-content/uploads/*.gif$image
 ||lk21i.*/wp-content/uploads/*.gif$image
 ||lk21n.*/wp-content/uploads/banner/*.gif$image
+||lk21v.*/wp-content/uploads/*.gif$image
 ||lkxxi.*/wp-content/uploads/*.gif$image
 ||lytogame.com/images/partner/$third-party
 ||lytogame.com/partner/$third-party
@@ -713,6 +716,8 @@ wikitrik.com##+js(nano-setInterval-booster)
 yusepjaelani.blogspot.com##+js(no-setTimeout-if, Debug)
 movieon21.biz##+js(window.open-defuser)
 bolasport.com##+js(acis, document.addEventListener, iframe-network)
+sobatkeren.net##+js(window.open-defuser)
+nontonsub.top##+js(window.open-defuser)
 ! *** abpindo:src/advert/whitelist.txt ***
 @@.gif#/*/ad/$image,domain=ljutkeunvpn.blogspot.com|www.mangacanblog.com
 @@.jpg#$image,domain=komikcast.com
@@ -1782,12 +1787,14 @@ zonabola.*##a[href^="http://bit.ly/"]
 ||agentogel4d.com^$third-party
 ||agentogelresmi.com^$third-party
 ||allvegaspoker.com^$third-party
+||anaktogel.com^$popup
 ||anekataruhan.com^$third-party
 ||aosbobet.com^$popup
 ||aosbobet.com^$third-party
 ||areataruhan.com^$third-party
 ||arenajudi.com^$third-party
 ||asiapoker777.com^$third-party
+||astonwin.org^$popup
 ||bandarbolataruhan.com^$third-party
 ||bandarjuditogel.com^$third-party
 ||bebasjudi.com^$popup
@@ -1900,6 +1907,7 @@ zonabola.*##a[href^="http://bit.ly/"]
 ||onlinepoker66.com^$third-party
 ||onlinepokerextra.com^$third-party
 ||onlinetogel.com^$third-party
+||opuspoker.cc^$popup
 ||pacificpoker.com^$third-party
 ||panduanjudionline.com^$third-party
 ||pandujudionline.com^$third-party
@@ -1966,6 +1974,7 @@ zonabola.*##a[href^="http://bit.ly/"]
 ||situsjudicasino.com^$third-party
 ||situstaruhan.com^$third-party
 ||situstogelonline.com^$third-party
+||star88win.net^$popup
 ||sukajudibola.com^$third-party
 ||sunpoker.com^$third-party
 ||surgajudi.com^$third-party
@@ -2102,6 +2111,7 @@ zonabola.*##a[href^="http://bit.ly/"]
 /bolped77.$image,third-party
 /bosbobet.$image,third-party
 /bospoker.$image,third-party
+/bromopoker.$image,third-party
 /brotogel.$image,third-party
 /bsakong1.$image,third-party
 /bsakong2.$image,third-party
@@ -2127,6 +2137,7 @@ zonabola.*##a[href^="http://bit.ly/"]
 /dermaga4d.$image,third-party
 /detikbet.$image,third-party
 /dewa757.$image,third-party
+/dewabetQQ.$image,third-party
 /dewaboya.$image,third-party
 /dewadominoqq.$image,third-party
 /dewahoki.$image,third-party
@@ -2417,6 +2428,7 @@ zonabola.*##a[href^="http://bit.ly/"]
 /royaljackpot.$image,third-party
 /royalkasino.$image,third-party
 /royalpoker99.$image,third-party
+/ruangQQ.$image,third-party
 /rumahbokep.$image,third-party
 /sahabatarena.$image,third-party
 /sahamdomino.$image,third-party
@@ -2483,6 +2495,7 @@ zonabola.*##a[href^="http://bit.ly/"]
 /tuanbola.$image,third-party
 /tugupoker.$image,third-party
 /ubcwin.$image,third-party
+/unikpoker.$image,third-party
 /utamaqq.$image,third-party
 /vegas78bet.$image,third-party
 /vegasidn.$image,third-party
@@ -2978,7 +2991,6 @@ zonabola.*##a[href^="http://bit.ly/"]
 ||boyapoker.$image,third-party
 ||boyaqq.$image,third-party
 ||bromopk.$image,third-party
-||bromopoker.$image,third-party
 ||brotogel.$image,third-party
 ||bsakong1.$image,third-party
 ||bsakong2.$image,third-party
@@ -4680,7 +4692,6 @@ zonabola.*##a[href^="http://bit.ly/"]
 ||ujungkontol.$image,third-party
 ||ujungkontol.$popup
 ||ulrnaga.$image,third-party
-||unikpoker.$image,third-party
 ||universal-qq.$image,third-party
 ||unogoal88.$image,third-party
 ||unogoal88.$popup
@@ -4805,6 +4816,7 @@ zonabola.*##a[href^="http://bit.ly/"]
 ###togel
 ##.judi
 ##.togel
+##[href^="http://sq881sq.com/"]
 ##[href^="http://toto228.com"]
 ##[href^="http://www.menubola.life/"]
 ##[href^="https://bandarqq."]
@@ -7078,6 +7090,7 @@ zonabola.*##a[href^="http://bit.ly/"]
 -agenbet.$image
 -agenqq-$image
 -agungpoker.$image
+-bandarbetqq-$image
 -bandarkiu.$image
 -banner-togel-$image
 -bisabet.$image
@@ -7107,6 +7120,7 @@ zonabola.*##a[href^="http://bit.ly/"]
 -itubandar-$image
 -jakartaqq-$image
 -jakartaqq.$image
+-jasacash.gif|$image
 -jasaqq-$image
 -jasaqq.$image
 -joker123_$image
@@ -7201,6 +7215,7 @@ zonabola.*##a[href^="http://bit.ly/"]
 /banner-lapakqq.$image
 /bet2indo-$image
 /bet2poker-$image
+/bet2poker_$image
 /betking88-$image
 /betsaja-$image
 /bigwin-banner-$image
@@ -7266,6 +7281,7 @@ zonabola.*##a[href^="http://bit.ly/"]
 /kartu-online.gif|
 /kartuhoki-$image
 /kd777.gif|
+/kdslots-$image
 /klik66-$image
 /klik66banner.gif|
 /klikqq-$image
@@ -7305,6 +7321,7 @@ zonabola.*##a[href^="http://bit.ly/"]
 /obobet-$image
 /olopoker-$image
 /opuspoker-$image
+/oriqq728x90.gif|$image
 /pemainkasino-$image
 /pendekarqq-$image
 /pkutama2-$image
@@ -7319,6 +7336,7 @@ zonabola.*##a[href^="http://bit.ly/"]
 /prediksi-togel-$image
 /qq-simpati-$image
 /qq39-$image
+/qqindobet-$image
 /qqslot-$image
 /raja-poker-$image
 /rajacapsa-$image
