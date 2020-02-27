@@ -1,4 +1,4 @@
-! Version: 16February2020v3
+! Version: 27February2020v1
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites
 ! Expires: 12 hours
@@ -232,6 +232,7 @@ rett24.no##.p_banner-responsive
 utrop.no##.lazyautosizes
 utrop.no#?#.td-pb-span4:-abp-contains(ANNONSØRINNHOLD)
 /annonse_$image
+!+ NOT_OPTIMIZED
 ||tv2a.dk^
 blogg.no##.contentmarketing-box
 nettavisen.no#?#article:-abp-has(:scope > a[href*="?utm_source="])
@@ -243,12 +244,18 @@ nettavisen.no#?#.rel-article:-abp-has(span:-abp-contains(Reklame))
 ||tankeogteknikk.no^$3p
 digi.no##.native
 ||adservice.dk^
-||mediasense.dk^
+||mediasense.dk^$3p
 ||easy-ads.dk^
 ||3.248.18.175^
+!+ NOT_OPTIMIZED
 ||adframe.no^
+!+ NOT_OPTIMIZED
 ||adstream.no^
+!+ NOT_OPTIMIZED
 ||advertising.no^
+||fotbolti.net/banners^
+||auglysingar.*.is^$subdocument
+||samfilm.codelab.is^$3p
 bt.no##section[class$=-ad]
 ||finn.no$subdocument,domain=bt.no
 ! — — — — —
@@ -283,9 +290,11 @@ bt.no##section[class$=-ad]
 ~prisguiden.no##.prisguidePost
 ! tv2.no
 ##.spklw-post-attr[data-type=ad]
-##.spklw-post-attr[data-pc]
+tv2.no##.spklw-post-attr[data-pc]
 ! bt.no
 ||finn.no/distribution-carousel?$object,3p
+! https://kulturplot.no/synspunkt/2020/hva-er-malet-for-kultur-i-regionreformen
+##.spklw-post-attr[data-recommendation-type=sprinkleit]
 
 ! 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
 ! 🇩🇰: ——— Tomme restebokser, som EasyList har efterladt ———
@@ -425,6 +434,7 @@ information.dk##.masthead
 itavisen.no##.fifth-article-ad
 itavisen.no,tvguide.dk##div[id^=ad-]
 jn.fo##.lysingarspot
+sol.no##[class^=AdPrefix-]
 jubii.dk##.mobiletakeover-background
 jyllands-posten.dk###MegaBoard_Top
 jyllands-posten.dk##div[id^=MediumRectangle]
@@ -432,7 +442,7 @@ jyllands-posten.dk#?#.gridCol:-abp-has(div[class=annonceHolder])
 kart.1881.no##.panel-ad-skyscraper
 kommunikationsforum.dk##.banner-top
 kommunikationsforum.dk##div[style="padding-top: 20px; padding-bottom: 20px; "]
-komputer.no,natgeo.no,historienet.no,koplr.no##.top-banner
+komputer.no,natgeo.no,historienet.no,koplr.no,ing.dk##.top-banner
 komputer.no,natgeo.no,historienet.no##.wg-banner
 kreativeideer.no##.strossle-container
 lokal-avisen.no#?#.title:-abp-contains(/ANNONSE/i)
@@ -453,6 +463,7 @@ minmote.no##.ad-box
 minmote.no##.advert-container-inline
 minmote.no##.advert-horseshoe
 minmote.no#?#article:-abp-has(:scope > div[id^=advert-])
+tek.no#?#section + div:-abp-has(span)
 mobil.nu,mobilkunden.dk##.tower
 nattogdag.no##.category-annonse
 netdoktor.dk##.common-advert-bold
@@ -464,6 +475,8 @@ nordjyske.dk##div[class^=jubii-]
 nutiminn.is,newz.dk##.custom-html-widget.textwidget
 nutiminn.is##section[id^=wp_is_mobile]
 nyheder.tv2.dk##.o-article_sidebar > div.g-item
+tek.no#?#section:-abp-has(:scope > div > div:-abp-contains(/^annonse$/))
+tek.no#?#section[hidden] + section:style(column-count: 3 !important; width: 100% !important)
 onlinenytt.com##.textwidget > p
 parcferme.no##.code-block > p
 pengenytt.no##.footer-ad-wrap
@@ -473,6 +486,7 @@ pengenytt.no#?#.so-widget-sow-editor:-abp-has(a[href^="https://online.adservicem
 pengenytt.no#?#.textwidget:-abp-contains(Annonse)
 pengenytt.no#?#.widget-title:-abp-contains(Annonser)
 poki.no##div[class*=" advertisement-GP-"]
+tek.no#?#main > div > div:-abp-contains(kommersielle partner)
 politiken.dk##.u-clearfix.row--justify-center.row > .js-sticky-container
 prisjakt.*,prisjagt.dk###footer_header
 prisjakt.*,prisjagt.dk,dv.is##.adbox
@@ -502,8 +516,7 @@ spillespill.no###bannerAdmeenRectangleTopContainer
 spillespill.no##.banner-leaderboard
 spillespill.no##.push
 tek.no#?#main > section > section:-abp-contains(/^annonse$/)
-tek.no##.eA:style(column-count: 3 !important; width: 100% !important)
-tek.no##div[id$=_body_ad]:nth-ancestor(1)
+tek.no#?#article > div:-abp-contains(/^annonse$/)
 sporttv.is##div.col-xs-4.items:nth-of-type(5) > .box
 sporttv.is#?#.box:-abp-has(div[class^=auglysing-])
 sporttv.is,utdanningsnytt.no##.banner-right
@@ -550,6 +563,8 @@ visitnorway.no#?##dtnContainer:-abp-has(.dtnad)
 vl.no##.ad-cols
 vl.no##.ad-fullwidth-container
 vl.no##.vlDesktopAd
+telefonterror.co.no,ukendtnummer.dk##.ad-comments
+framtiden.no##.center[style*=";font-weight:700;"]
 itavisen.no##.itavi-after-content
 itavisen.no##.itavi-article-page-video-player-outstream
 vredens-gnag.no##.ab-appnexus-ads-wrapper
@@ -615,6 +630,12 @@ gamer.no##.aaa-980x150
 studievalg.no###top-announce
 bt.no##.vertical-x1-ad > .column--big
 friflyt.no###wallpaperCenterAd
+trening.no##.mb-top-banner-wrapper
+trening.no##.dfp-netboard
+!+ NOT_OPTIMIZED
+kulturplot.no,dagensperspektiv.no,velferd.no###main > .small-12:nth-of-type(1)
+version2.dk###headersub
+installator.dk##.addon--ad
 ! — — — — —
 ! 🇳🇴: Generelle oppføringer med kilder
 ! 🇬🇧: Generic entries that have sources
@@ -718,6 +739,7 @@ ice.no##.air-block
 tnt-tv.no,tnt-tv.dk##.desktop_element.promo
 tnt-tv.no,tnt-tv.dk##.logos
 tnt-tv.no,tnt-tv.dk##.tabs_placeholder
+!+ NOT_OPTIMIZED
 avvir.no###block-block-1 > p:nth-of-type(4)
 dyrevennene.no##.td-footer-wrapper
 
@@ -908,8 +930,10 @@ resett.no##[class="td_single_image_bg"]
 resett.no##a[href*="dekristne.no"]
 resett.no#?#.code-block:-abp-contains(annonse)
 resett.no##.td-visible-desktop
+!+ NOT_OPTIMIZED
 resett.no##a[href*="ekstrahus.no"]
 resett.no##.td-ss-main-sidebar
+!+ NOT_OPTIMIZED
 resett.no##a[href*="pureorganic.no"]
 /*-annonse-*$image,domain=resett.no
 resett.no#?#.code-block:-abp-contains(Reklame):not(:-abp-contains(butikk))
@@ -926,6 +950,13 @@ elkjop.no,elgiganten.dk###B-value:style(fill: #edb731 !important)
 elkjop.no,elgiganten.dk###C-value:style(fill: #ed8631 !important)
 
 ! 🇬🇧: Category: Compatibility entries for ABP users, EasyList, and/or functionality whitelisting
+
+! Hotfixes for Internet Explorer 11
+! https://github.com/AdguardTeam/AdguardForWindows/issues/3209
+!#if !ext_ublock
+!+ NOT_OPTIMIZED PLATFORM(windows)
+vg.no#?#span:style(font-feature-settings: normal)
+!#endif
 
 ! 🇳🇴: Viktig notis til tidligere brukere av sporerhvitelistingene for Prisjakt, Kickback, og Viatrumf: I lys av nye oppdagelser om reklameblokkereres støtte for sporeromdirigeringer, og endringer i sporernes egne verdier, har oppføringene nå blitt fjernet. Hvis du vil forbli sikker på å motta cashback, er du selv ansvarlig for å hviteliste "@@||doubleclick.net" og å ikke bruke EasyPrivacy. Skulle du selv da ikke motta cashback, kan du fortelle meg om det så fort du kan (Helst på GitHub).
 ! 🇬🇧: Important note to previous users of the tracker whitelistings for Prisjakt, Kickback, and Viatrumf: In light of new discoveries about adblockers' support for tracker redirections, and changes in the trackers' own values, the entries have now been removed. If you wish to remain certain of receiving cashback, you are yourself responsible for whitelisting "@@||doubleclick.net" and for not using EasyPrivacy. Should you fail to receive cashback even then, tell me about it as soon as you can (Preferably on GitHub).
@@ -962,6 +993,7 @@ fuglelyder.net#@##banner_ad
 ||nordea.no.$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Nordea
 ||sbanken.no.$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Sbanken
 ||danskebank.no.$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Danske Bank
+!+ NOT_OPTIMIZED
 ||*/?finn.no/login$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Finn
 ||komplett.no.$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Komplett
 ||nordnet.no.$doc,domain=~ Advarselen vises grunnet: Falsk lureversjon av Nordnet
@@ -1092,6 +1124,17 @@ fuglelyder.net#@##banner_ad
 ! https://nyheder.tv2.dk/krimi/2020-02-11-politiet-advarer-mod-svindler-smser-forsoger-at-fa-billede-af-nemid
 ||rigspolitiet.com^$doc,domain=~ Advarslen vises fordi: Falsk fupversjon af politiet
 ||nemid.org^$doc,domain=~ Advarslen vises fordi: Falsk fupversjon af NemID
+! https://www.tv2.no/nyheter/11203952/
+||topgadgetboom.com^$doc,domain=~ Advarselen vises grunnet: Bitcoin-svindel
+! https://www.faktisk.no/faktasjekker/vw8/erik-gikk-fra-arbeidsledig-til-millionaer-pa-8-uker
+||ocgadgets.com^$doc,domain=~ Advarselen vises grunnet: Bitcoin-svindel
+||ocgadgetss.myshopify.com^$doc,domain=~ Advarselen vises grunnet: Bitcoin-svindel
+! https://www.mm.dk/tjekdet/artikel/nej-mads-mikkelsen-har-stadig-ikke-skraemt-de-store-banker-med-bitcoins
+||dailynews.to^$doc,domain=~ Advarslen vises fordi: Falsk Bitcoin-fup.
+||onelifetechno.com^$doc,domain=~ Advarslen vises fordi: Falsk Bitcoin-fup.
+! https://www.mm.dk/tjekdet/artikel/ny-boelge-af-falske-ray-ban-annoncer-skyller-ind-over-danskerne
+||rbaab.net^$doc,domain=~ Advarslen vises fordi: Falsk Bitcoin-fup.
+||rbppg.net^$doc,domain=~ Advarslen vises fordi: Falsk Bitcoin-fup.
 ! IP addresses of servers notorious for hosting many of the sites above
 ||138.201.126.227^
 ||156.236.126.173^
