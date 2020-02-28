@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: ys0u3dffEscWsAa6lSFpbg
+! Checksum: MFOsp0FRAadY3YaqjlUARQ
 ! Title: AdGuard Japanese filter
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.2.63
-! TimeUpdated: 2020-02-18T20:31:38+03:00
+! Version: 2.0.2.66
+! TimeUpdated: 2020-02-27T21:05:03+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#japanese
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -661,7 +661,6 @@ iza.ne.jp#$#.sideFixedWrapper { position: relative!important; }
 .com/ufo/$script
 .com/Zen?
 .jp/ads/$image
-.jp/adsv/
 .jp/affiliate/
 .jp/analyze/
 .jp/bana/
@@ -731,6 +730,9 @@ _ds_adtag_
 !
 ! /banner/banner_ - if it is necessary, make this rule domain specific
 !
+style.nikkei.com###list1 > div[class^="sc-"] > div[class^="sc-"] > div[class^="sc-"]:not(.sc-1earddw-0)[id*="_q"]:empty
+magnet.so###p_ad
+magnet.so###AD
 ceron.jp##div[style="width:320px;min-height:100px;margin: 0 auto;background:#eee;"]
 itmedia.co.jp###cmsBody > div.inner > div > div[style="text-align:center;margin:40px 0;"]
 gendai.ismedia.jp##div.articleBottomSns + div[style="min-height: 250px; overflow: hidden;"]
