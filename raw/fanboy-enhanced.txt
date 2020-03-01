@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Checksum: 9QGo7U89UpYi3zzl7MOtAg
+! Checksum: xEqTbS3aPYM0F5Oa+oTWhQ
 ! Title: Fanboy's Enhanced Tracking List
-! Updated: 21 Feb 2020
+! Updated: 1 Mar 2020
 ! Expires: 5 days
 ! License: http://creativecommons.org/licenses/by/3.0/
 ! Homepage: http://www.fanboy.co.nz/
@@ -334,6 +334,133 @@ _webtrends_
 _wtBase.js
 _wtbaseV2.
 _wtInit.js
+! Snippet Tracking (Filtering)
+! arstechnica.com
+anandtech.com##+js(acis, _comscore)
+anandtech.com##+js(acis, _gaq)
+anandtech.com##+js(acis, _qevents)
+anandtech.com##+js(acis, g_o)
+anandtech.com##+js(acis, tmntag)
+anandtech.com#$#abort-current-inline-script _comscore
+anandtech.com#$#abort-current-inline-script _gaq
+anandtech.com#$#abort-current-inline-script _qevents
+anandtech.com#$#abort-current-inline-script g_o
+anandtech.com#$#abort-current-inline-script tmntag
+! arstechnica.com
+arstechnica.com##+js(acis, DQ)
+arstechnica.com##+js(acis, gtm.start)
+arstechnica.com##+js(acis, w.CN)
+arstechnica.com##+js(acis, window.dataLayer)
+arstechnica.com#$#abort-current-inline-script DQ
+arstechnica.com#$#abort-current-inline-script gtm.start
+arstechnica.com#$#abort-current-inline-script w.CN
+arstechnica.com#$#abort-current-inline-script window.dataLayer
+! bbc.co.uk
+bbc.co.uk##+js(acis, loadChartbeat)
+bbc.co.uk#$#abort-current-inline-script loadChartbeat
+bbc.co.uk,stuff.co.nz##+js(acis, _comscore)
+bbc.co.uk,stuff.co.nz#$#abort-current-inline-script _comscore
+! dexerto.com 
+dexerto.com##+js(acis, apstag.init)
+dexerto.com##+js(acis, dataLayer)
+dexerto.com##+js(acis, gtm.start)
+dexerto.com##+js(acis, topAdSlot)
+dexerto.com##+js(acis, window.enableDfpManager)
+dexerto.com#$#abort-current-inline-script apstag.init
+dexerto.com#$#abort-current-inline-script dataLayer
+dexerto.com#$#abort-current-inline-script gtm.start
+dexerto.com#$#abort-current-inline-script topAdSlot
+dexerto.com#$#abort-current-inline-script window.enableDfpManager
+! geekzone.co.nz
+geekzone.co.nz##+js(acis, _linkedin_data_partner_id)
+geekzone.co.nz##+js(acis, Fingerprint2)
+geekzone.co.nz##+js(acis, ga)
+geekzone.co.nz##+js(acis, GoogleAnalyticsObject)
+geekzone.co.nz##+js(acis, googletag)
+geekzone.co.nz#$#abort-current-inline-script _linkedin_data_partner_id
+geekzone.co.nz#$#abort-current-inline-script Fingerprint2
+geekzone.co.nz#$#abort-current-inline-script ga
+geekzone.co.nz#$#abort-current-inline-script GoogleAnalyticsObject
+geekzone.co.nz#$#abort-current-inline-script googletag
+! ghacks.net
+ghacks.net##+js(acis, gtm.start)
+ghacks.net##+js(acis, OptanonWrapper)
+ghacks.net##+js(acis, pbjs)
+ghacks.net##+js(acis, refreshSlots)
+ghacks.net##+js(acis, slots)
+ghacks.net##+js(acis, utmParams)
+ghacks.net##+js(acis, window.googletag)
+ghacks.net#$#abort-current-inline-script gtm.start
+ghacks.net#$#abort-current-inline-script OptanonWrapper
+ghacks.net#$#abort-current-inline-script pbjs
+ghacks.net#$#abort-current-inline-script refreshSlots
+ghacks.net#$#abort-current-inline-script slots
+ghacks.net#$#abort-current-inline-script utmParams
+ghacks.net#$#abort-current-inline-script window.googletag
+! slashdot.org
+slashdot.org##+js(acis, _gaq)
+slashdot.org##+js(acis, _paq)
+slashdot.org##+js(acis, googletag.cmd.push)
+slashdot.org##+js(acis, initPiwikAndNels)
+slashdot.org#$#abort-current-inline-script _gaq
+slashdot.org#$#abort-current-inline-script _paq
+slashdot.org#$#abort-current-inline-script googletag.cmd.push
+slashdot.org#$#abort-current-inline-script initPiwikAndNels
+! mixer.com
+mixer.com##+js(acis, gtag)
+mixer.com#$#abort-current-inline-script gtag
+! msn.com
+msn.com##+js(acis, chartBeatUID)
+msn.com##+js(acis, dap)
+msn.com#$#abort-current-inline-script chartBeatUID
+msn.com#$#abort-current-inline-script dap
+! neowin.net
+neowin.net##+js(acis, adsbygoogle)
+neowin.net##+js(acis, googletag.cmd.push)
+neowin.net##+js(acis, window.googletag)
+neowin.net##+js(acis, window.ZDStickyOpts)
+neowin.net#$#abort-current-inline-script adsbygoogle
+neowin.net#$#abort-current-inline-script googletag.cmd.push
+neowin.net#$#abort-current-inline-script window.googletag
+neowin.net#$#abort-current-inline-script window.ZDStickyOpts
+! Stackoverflow
+serverfault.com,superuser.com,stackoverflow.com,askubuntu.com,stackexchange.com##+js(acis, _comscore)
+serverfault.com,superuser.com,stackoverflow.com,askubuntu.com,stackexchange.com##+js(acis, _qevents)
+serverfault.com,superuser.com,stackoverflow.com,askubuntu.com,stackexchange.com##+js(acis, GoogleAnalyticsObject)
+serverfault.com,superuser.com,stackoverflow.com,askubuntu.com,stackexchange.com##+js(acis, StackExchange.ga.init)
+serverfault.com,superuser.com,stackoverflow.com,askubuntu.com,stackexchange.com#$#abort-current-inline-script _comscore
+serverfault.com,superuser.com,stackoverflow.com,askubuntu.com,stackexchange.com#$#abort-current-inline-script _qevents
+serverfault.com,superuser.com,stackoverflow.com,askubuntu.com,stackexchange.com#$#abort-current-inline-script GoogleAnalyticsObject
+serverfault.com,superuser.com,stackoverflow.com,askubuntu.com,stackexchange.com#$#abort-current-inline-script StackExchange.ga.init
+! stuff.co.nz
+stuff.co.nz##+js(acis, googletag)
+stuff.co.nz#$#abort-current-inline-script googletag
+! tagesspiegel.de
+tagesspiegel.de##+js(acis, Criteo)
+tagesspiegel.de#$#abort-current-inline-script Criteo
+! techpowerup.com
+techpowerup.com#$#abort-current-inline-script window.ga
+techpowerup.com#+js(acis, window.ga)
+! videocardz.com
+videocardz.com##+js(acis, __gaTrackerOptout)
+videocardz.com##+js(acis, em_track_user)
+videocardz.com##+js(acis, gaOptout)
+videocardz.com#$#abort-current-inline-script __gaTrackerOptout
+videocardz.com#$#abort-current-inline-script em_track_user
+videocardz.com#$#abort-current-inline-script gaOptout
+! wccftech.com
+wccftech.com##+js(acis, f.fbq)
+wccftech.com##+js(acis, GoogleAnalyticsObject)
+wccftech.com##+js(acis, googletag)
+wccftech.com##+js(acis, googletag.cmd.push)
+wccftech.com##+js(acis, pl_beacon)
+wccftech.com##+js(acis, window.NewzmateConfig)
+wccftech.com#$#abort-current-inline-script f.fbq
+wccftech.com#$#abort-current-inline-script GoogleAnalyticsObject
+wccftech.com#$#abort-current-inline-script googletag
+wccftech.com#$#abort-current-inline-script googletag.cmd.push
+wccftech.com#$#abort-current-inline-script pl_beacon
+wccftech.com#$#abort-current-inline-script window.NewzmateConfig
 ! utag
 @@||tags.tiqcdn.com/utag/*/utag.js$script,domain=mediaset.it|cbsnews.com|bleacherreport.com|cnet.com|mediaset.it
 ||tags.tiqcdn.com/utag/$script
@@ -2921,7 +3048,7 @@ xkorean.net##a[href*="&aff_id"]
 @@/omniture.js$domain=qz.com|ae.com|apple.com|corbisimages.com|couponcabin.com|delvenetworks.com|gq.com|healthgrades.com|mlb.com|newyorker.com|nfl.com|pogo.com|seek.co.nz|seek.com.au|shop.puma.com|slacker.com|teenvogue.com|veer.com|zdnet.com
 @@/ots_omniture_code.js$~third-party
 @@/s-code-$domain=elgiganten.dk|elgiganten.se|elkjop.no|gigantti.fi|markantalo.fi
-@@/s_code.$domain=freecharge.in|bahn.de|asda.com|mitele.es|inc.com|hostelworld.com|tmz.com|192.com|abc.go.com|abcnews.go.com|aetv.com|afl.com.au|americanexpress.com|anz.com|beatsbydre.com|blackberry.com|bodybuilding.com|boostmobile.com|canon.com.au|car2go.com|caranddriver.com|cbc.ca|cfnews13.com|channel4.com|cinemax.com|cio.com|countryliving.com|csoonline.com|debenhams.com|dhgate.com|dice.com|disneyinternational.com|diy.com|eonline.com|esquire.com|experian.com|fandango.com|fedex.com|filemaker.com|filmmagic.com|gatesnotes.com|goodhousekeeping.com|greenbot.com|hallmark.com|hasbro.com|hbogo.com|here.com|homedepot.com|infoworld.com|ingdirect.es|itworld.com|ksl.com|landsend.com|laptopmag.com|lexus.com|lg.com|macworld.com|madcatz.com|marieclaire.com|marthastewart.com|marthastewartweddings.com|move.com|msacademicverify.com|nba.com|nbc.com|nbcdfw.com|nbclosangeles.com|nbcmiami.com|networkworld.com|news12.com|nflcdn.com|nike.com|nintendo.com|nwolb.com|olivegarden.com|online.citibank.com|oreillyauto.com|overstock.com|pcworld.com|qz.com|randomhouse.com|redbookmag.com|rolandgarros.com|samsung.com|sephora.fr|sho.com|shop.puma.com|simyo.de|siriusxm.com|sonypictures.com|sprint.com|stamfordadvocate.com|staples.com|starz.com|style.com|syfy.com|symantec.com|techhive.com|teenvogue.com|telecom.co.nz|theglobeandmail.com|theweathernetwork.com|vendaria.com|verizonwireless.com|wdpromedia.com|welcome.ingdirect.com.au|wholeliving.com|wireimage.com|workingmother.com|yellow.co.nz|yellowpages.com.au|zdnet.com
+@@/s_code.$domain=hondafinancialservices.com|freecharge.in|bahn.de|asda.com|mitele.es|inc.com|hostelworld.com|tmz.com|192.com|abc.go.com|abcnews.go.com|aetv.com|afl.com.au|americanexpress.com|anz.com|beatsbydre.com|blackberry.com|bodybuilding.com|boostmobile.com|canon.com.au|car2go.com|caranddriver.com|cbc.ca|cfnews13.com|channel4.com|cinemax.com|cio.com|countryliving.com|csoonline.com|debenhams.com|dhgate.com|dice.com|disneyinternational.com|diy.com|eonline.com|esquire.com|experian.com|fandango.com|fedex.com|filemaker.com|filmmagic.com|gatesnotes.com|goodhousekeeping.com|greenbot.com|hallmark.com|hasbro.com|hbogo.com|here.com|homedepot.com|infoworld.com|ingdirect.es|itworld.com|ksl.com|landsend.com|laptopmag.com|lexus.com|lg.com|macworld.com|madcatz.com|marieclaire.com|marthastewart.com|marthastewartweddings.com|move.com|msacademicverify.com|nba.com|nbc.com|nbcdfw.com|nbclosangeles.com|nbcmiami.com|networkworld.com|news12.com|nflcdn.com|nike.com|nintendo.com|nwolb.com|olivegarden.com|online.citibank.com|oreillyauto.com|overstock.com|pcworld.com|qz.com|randomhouse.com|redbookmag.com|rolandgarros.com|samsung.com|sephora.fr|sho.com|shop.puma.com|simyo.de|siriusxm.com|sonypictures.com|sprint.com|stamfordadvocate.com|staples.com|starz.com|style.com|syfy.com|symantec.com|techhive.com|teenvogue.com|telecom.co.nz|theglobeandmail.com|theweathernetwork.com|vendaria.com|verizonwireless.com|wdpromedia.com|welcome.ingdirect.com.au|wholeliving.com|wireimage.com|workingmother.com|yellow.co.nz|yellowpages.com.au|zdnet.com
 @@/s_code_$domain=yesnetwork.com|qatarairways.com|abc.go.com|adobe.com|apple.com|autodesk.com|beautyoftheweb.com|deseretnews.com|eonline.com|eweek.com|forbes.com|frontdoor.com|java.com|kaspersky.co.uk|kmart.com|lego.com|lenovo.com|lg.com|makemytrip.com|nflcdn.com|norton.com|nvidia.com|optimum.net|pepperidgefarm.com|resources.ea.com|restaurant.com|samsung.com|style.com|talx.com|virginmedia.com|walgreens.com|wiley.com
 @@/thePlatform-omniture-core.js$~third-party
 @@/webtrends.js$domain=radio-canada.ca|canon.com|horizon-bcbsnj.com|kaiserpermanente.org|logitech.com|reuters.com|telegraph.co.uk|usps.com
