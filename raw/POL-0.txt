@@ -9,9 +9,9 @@
 ! Wsparcie:
 !   Patronite ==> https://patronite.pl/polskiefiltry
 !   PayPal ==> https://www.paypal.com/pools/c/87zNJ8OJ3I
-! Last modified: 23 February 2020
+! Last modified: 2 March 2020
 ! Expires: 1 day
-! Version: 2020022301
+! Version: 2020030201
 ! Support:
 !   Email >> errorsfilters@certyficate.it
 !   Github >> https://github.com/MajkiIT/polish-ads-filter/issues
@@ -19,7 +19,7 @@
 ! License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ! Copyright © 2020 Certyficate IT
 ! Najnowsza wersja zawsze na: https://www.certyficate.it/adblock
-! v.2020022301 aktualizacja: nie, 23 lutego 2020, 14:35:00
+! v.2020030201 aktualizacja: pon, 2 marca 2020, 08:05:00
 !
 !
 !1#-----------------------General advert blocking filters-----------------------!
@@ -1019,6 +1019,7 @@ forum.ebiznesy.pl,operatorzy.pl###sidebar
 forum.elportal.pl##.scale-with-grid
 forum.fedora.pl###document_modal
 forum.fordclubpolska.org##center:nth-of-type(2)
+forum.gazeta.pl##.mod_advertisment_slot.mod
 forum.gniezno.com.pl##.naglowek_re_grupa1
 forum.gniezno.com.pl##.stopka_re
 forum.gram.pl###top_1, #bottom_1, #inside_1_wide
@@ -1808,6 +1809,7 @@ milanos.pl#?#.post:-abp-contains(reklama)
 milionkobiet.pl##.onnetworkplayercontainer
 minecraft-list.pl##.smutnazabajpg_container.transparent_container, #a.pleaserinonoblokerino_display, div.gitjestgit_container
 minecraft.org.pl##.stone-module.well-sm.well:nth-of-type(4)
+minskmaz.com##.poster-1, .g-a-s
 mistrzowie.org###services_box
 mistrzowie.org##.clearfix.lbox.pic:nth-of-type(5)
 mistrzowie.org##[href*="utm_source=mistrzowie&utm_medium=banner&utm_campaign=pewexserwisy_mistrzowie"]
@@ -2246,6 +2248,7 @@ polskiinternet.com##IMG[src*="/banner/"]
 polskiobserwator.de###content-4 > p
 polskiprzemysl.com.pl##.banner-full-content
 polubione.pl##.execphpwidget
+polukr.net###weptile-image-slider-widget-8, #weptile-image-slider-widget-12, #weptile-image-slider-widget-11, .e3lan-bottom.e3lan, .e3lan-top.e3lan
 polwro.pl##.bodyline > table > tbody > tr > td:nth-of-type(1)
 polygamia.pl##.adwordbackground, .reklamawposcie, .fake-ad
 polygamia.pl##[onclick^="adwordsStatistic"]
@@ -2644,7 +2647,7 @@ sprzedajemy.pl###mon-AdsAdsDetailsTop
 sprzedajsuknie.pl##.adsblock1
 stalenierdzewne.pl##.col-banners-article
 stalker.pl##.al-wrapper
-stalowemiasto.pl##.main-cbaner
+stalowemiasto.pl##.main-cbaner, .slot-1280px.slot, .header-parent > .container > img, body > .container > .slot
 starachowicka.pl##div.commercial
 starcom-ntt.com.pl###g-container-header > .g-grid
 stargard.com.pl###index-01b
@@ -3718,11 +3721,12 @@ zywiecinfo.pl##.promoted
 ||sportslaski.pl/materialy/foto_tlo/$image
 ||spottedskarzysko.pl/images/data/*/UNINET-MAJ2.gif
 ||sprzedaz.akademiazysku.pl/program/baner.php$subdocument
-||stalowemiasto.pl//colada2/
+||stalowemiasto.pl/colada2/
 ||static*.jelonka.com^
 ||static*.mylead.global^$image
 ||static.biedronka.pl/*/background/$domain=www.biedronka.pl
 ||static.dpcdn.pl/*/assets/img/*.jpg$image,domain=dobreprogramy.pl
+||static.cda.pl/screening/$image
 ||static.evertiq.pl/bximg/cbtg/$image
 ||static.evertiq.pl/bximg/digi-key/$image
 ||static.evertiq.pl/images/other/$image
@@ -3966,6 +3970,7 @@ zywiecinfo.pl##.promoted
 @@||sascdn.com/diff/video$domain=wymarzonyogrod.pl
 @@||sascdn.com/video/flowplayer-plugin.swf$object,domain=wymarzonyogrod.pl
 @@||sascdn.com^$object-subrequest,script,domain=poradnikzdrowie.pl|www4.rp.pl|eskago.pl
+@@||sgqcvfjvr.onet.pl^$script,domain=www.komputerswiat.pl
 @@||smartadserver.com^$script,domain=poradnikzdrowie.pl|www4.rp.pl|fotka.pl
 @@||ssl.allegro.pl/order/^
 @@||staticpics2.allegrostatic.pl/adverts/otomoto_pl/*128x96$image,domain=allegro.pl
@@ -3987,6 +3992,7 @@ partech.pl#@#.advertising_block
 pks-czestochowa.pl#@#.widget-advertisement
 spottedlublin.pl#@#.share-container
 windowsowo.pl#@##adBanner
+poczta.interia.pl,int.pl#@#.ad-message
 !
 !14#---------------------------------Anti Adblock Rules element hide----------------------------------!
 !
