@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: AQQKWr2V/mfhAc2mo4hwjg
+! Checksum: Pjzb8c5ULVmjLBgsdRx6uA
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish and Portuguese languages.
-! Version: 2.0.5.60
-! TimeUpdated: 2020-02-21T16:31:38+03:00
+! Version: 2.0.5.67
+! TimeUpdated: 2020-03-02T14:32:13+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#spanish
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -72,6 +72,7 @@
 !
 ! https://forum.adguard.com/index.php?threads/ivoox-com-podcasts-issues.29530/
 ! ||addevweb.com^$third-party
+||bserver.gp-guia.net^
 ||tags.orquideassp.com^$third-party
 ||widgets.informars.com^
 ||richaudience.com^$third-party
@@ -247,6 +248,17 @@
 !
 ! AdRegain
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/50736
+@@||outerspace.com.br/js/siropu/am/ads.min.js
+outerspace.com.br##+js(set-constant.js, adBlockDetected, false)
+! https://github.com/AdguardTeam/AdguardFilters/issues/50290
+@@||libremercado.com/ad/adservice/$domain=libremercado.com
+@@||libertaddigital.com/ad/adservice/$domain=libertaddigital.com
+libertaddigital.com,libremercado.com##+js(set-constant.js, publd.adBlockerDetected, noopFunc)
+! https://github.com/AdguardTeam/AdguardFilters/issues/50426
+modagamers.com##+js(abort-on-property-read.js, mdp_deblocker)
+! https://github.com/AdguardTeam/AdguardFilters/issues/50157
+doramasmp4.com##+js(set-constant.js, isAdsDisplayed, true)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/49174
 @@||animeshd.biz/css/adsplay.css
 @@||animeshd.biz/player/$domain=animeshd.biz
@@ -1044,6 +1056,8 @@ jokerfansub.com#@##adsense
 ! https://github.com/AdguardTeam/AdguardFilters/issues/24801
 yahoo.com#?#ul[class^="Mb(0)"] > li.js-stream-content:has(> div > a[rel="nofollow noopener noreferrer"]+div:contains(Patrocinado))
 !
+libertaddigital.com,libremercado.com#?#.interior > section.conpubli:has(> div > .OUTBRAIN)
+modagamers.com#?#.sidebar aside.widget:has(> div.textwidget > ins.adsbygoogle)
 terra.com.br#?#.table-related-content-new:has(> #related-bellow-news > .taboola-placeholder)
 unionleitor.top#?#.col-md-4 > h2:contains(/^Publicidade$/)
 animeflv.net#?#.Container section.WdgtCn:has(> center > a[href="https://www.patreon.com/somoskudasai"] > img)
@@ -1407,6 +1421,10 @@ http://adw.
 !-------------------- Specific rules --------------------!
 !--------------------------------------------------------!
 !
+||eliteacompanhantes.com.br/bnr/
+||anunciogp.clubmodel.com.br/banner_cliente_iframe.php
+1v.to##.enlace_descarga
+libertaddigital.com,libremercado.com###mega-atf
 ole.com.ar###homeBannerSchneider
 /\/img\/(160600|72890)\.png/$domain=iptvnow.top
 ||engeplus.com.br/anuncios/
@@ -3200,10 +3218,14 @@ urlcloud.us##.banner
 !
 ! White list. Fixing filtration errors (false-positive)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/50188
+@@||ver.movistarplus.es/js/yomvi/scripts/publi.js$domain=ver.movistarplus.es
 ! https://github.com/AdguardTeam/AdguardFilters/issues/49849
 @@||adservice.google.com.ua^$domain=ucicinemas.pt
 @@||securepubads.g.doubleclick.net/gpt/pubads_impl_*.js$domain=ucicinemas.pt
 @@||googletagservices.com/tag/js/gpt.js$domain=ucicinemas.pt
+! https://github.com/AdguardTeam/AdguardFilters/issues/50157
+@@||jwpcdn.com/player/plugins/vast/*/vast.js$domain=doramasmp4.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/49511
 ! https://github.com/AdguardTeam/AdguardFilters/issues/47494
 ! https://github.com/AdguardTeam/AdguardFilters/issues/46603
