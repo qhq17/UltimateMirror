@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Checksum: xEqTbS3aPYM0F5Oa+oTWhQ
+! Checksum: nh3+Srf92Kie4bwpCC4aIA
 ! Title: Fanboy's Enhanced Tracking List
-! Updated: 1 Mar 2020
+! Updated: 5 Mar 2020
 ! Expires: 5 days
 ! License: http://creativecommons.org/licenses/by/3.0/
 ! Homepage: http://www.fanboy.co.nz/
@@ -397,6 +397,9 @@ ghacks.net#$#abort-current-inline-script refreshSlots
 ghacks.net#$#abort-current-inline-script slots
 ghacks.net#$#abort-current-inline-script utmParams
 ghacks.net#$#abort-current-inline-script window.googletag
+! gleam.io
+gleam.io##+js(acis, window.customGa)
+gleam.io#$#abort-current-inline-script window.customGa
 ! slashdot.org
 slashdot.org##+js(acis, _gaq)
 slashdot.org##+js(acis, _paq)
@@ -504,6 +507,8 @@ wccftech.com#$#abort-current-inline-script window.NewzmateConfig
 /check-ad-free/?
 /ep-paywall-portlet/*
 /jto_paywall/*
+/leaky-paywall-
+/leaky-paywall/*
 /paymeterconfig/*
 /paywall.min.js
 /PaywallMeter.js
@@ -521,6 +526,7 @@ nautil.us###adpayload
 ||concert.io^$third-party
 ||connector.laterpay.net^$third-party
 ||contentpass.net^$third-party
+||evolok.net^*/authorize/$third-party
 ||hadrianpaywall.com^$third-party
 ||mediapass.com^$third-party
 ||news.google.com/swg/js/v1/swg.js$script
