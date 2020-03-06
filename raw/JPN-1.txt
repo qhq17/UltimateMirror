@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: MFOsp0FRAadY3YaqjlUARQ
+! Checksum: Wx/QyRxAhVSqp//DQvPlhw
 ! Title: AdGuard Japanese filter
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.2.66
-! TimeUpdated: 2020-02-27T21:05:03+03:00
+! Version: 2.0.2.67
+! TimeUpdated: 2020-03-05T17:32:05+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#japanese
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -368,6 +368,8 @@
 !
 ! These rules are against all kinds of ad blocking reinjection/circumvention scripts
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/50977
+server-setting.info#@#.adsbygoogle
 ! https://github.com/AdguardTeam/AdguardFilters/issues/49015
 gendai.ismedia.jp#$#.fc-ab-root { display: none !important; }
 gendai.ismedia.jp#$#body { overflow: visible !important; }
@@ -730,6 +732,7 @@ _ds_adtag_
 !
 ! /banner/banner_ - if it is necessary, make this rule domain specific
 !
+server-setting.info##.adsbygoogle[data-ad-client]
 style.nikkei.com###list1 > div[class^="sc-"] > div[class^="sc-"] > div[class^="sc-"]:not(.sc-1earddw-0)[id*="_q"]:empty
 magnet.so###p_ad
 magnet.so###AD
