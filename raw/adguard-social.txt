@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: a+Bf8AR39BWdTQRIIB6yKg
+! Checksum: nvsRYBrPSe3vX04PyCxDVg
 ! Title: AdGuard Social Media filter
 ! Description: Filter for social media widgets such as 'Like' and 'Share' buttons and more.
-! Version: 2.0.22.50
-! TimeUpdated: 2020-03-04T14:31:33+03:00
+! Version: 2.0.22.61
+! TimeUpdated: 2020-03-06T15:31:32+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#social
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -325,6 +325,7 @@ lj_bookmarklet
 !
 sudouest.fr##.social-links > *:not(div)
 singleclickapps.com#?#.nav-list > li.nav-header:contains(/\sUs on\s/)
+geo.de#?#.sidebar-teasergroup:has(> .sidebar-headline:contains(Facebook))
 computerologia.ru#?#.widget-area > div[class] > aside.widget:has(> div.textwidget > div[id="vk_groups"])
 kindkino.ru#?#.eBlock > tbody > tr:has(> td[colspan] > div[class] > div[class^="ya-share"])
 joxi.ru#?#.dropdown-container > div.content:has(> h4.heading-stunner:contains(Поделиться))
@@ -873,6 +874,11 @@ hdfilmkamyonu.com,fullfilmvakti.com,indirmedenizleyin.com,hdfilmsizle1.com,hdfil
 ! ##.dp-share
 pornopank.com,3w-video.com,coqporn.com,paraticlube.com,turkeytv.info,pornopix.net,turkceingilizceceviri.info,turkfirmalar.info,isexpro.net,javhdonline.com,pornoworlds.org##.dp-share
 !
+sportonline.ua###txtselect_marker
+ruhr24.de##a[data-id-ct*="clicked"]
+simplemost.com##.footer-ad-container
+alligator.io##.tweet-it
+sadalskij.livejournal.com##.b-sharethis-livejournal
 androidmakaleniz.blogspot.com##.ikonz-social
 7news.com.au##button[class^="gtm-"][class*="-share-button"][class*="StyledButton"]
 sports.donga.com##.sns_area
@@ -880,6 +886,7 @@ sukabumiupdate.com##.fa-share-alt
 sukabumiupdate.com##.share-popup
 cmjornal.pt##.social_stick > li > a[href]:not(.save)
 delivembed.cc##.controls-top-right
+emlakjet.com##div[data-ej-label="link_ilanipaylas"]
 microsoft.com###btl-blog-social-media
 posta.com.tr##.sticky-header__share
 yahoo.com##.share-button-group
@@ -1355,7 +1362,7 @@ jyllands-posten.dk##.artView__shareToolbar
 daemon-hentai.com##.widget_twitter_timeline
 daemon-hentai.com##.widget_easy_facebook_like_box
 journal.tinkoff.ru##.article-footer__sharer
-hiji.ru,gorodokboxing.com,asusfone.ru##.entry-footer__share-title
+ironworld.ru,hiji.ru,gorodokboxing.com,asusfone.ru##.entry-footer__share-title
 auto-swiat.pl,komputerswiat.pl##.social-box
 itsfoss.com##.ss-inline-share-wrapper
 utofiles.com,torrentbe.net###tweet_notice
@@ -1915,7 +1922,7 @@ gadgetsnow.com##.scl-wdgt
 habr.com##.tm-sharing
 telemundonebraska.com##.whatsappme
 pereklad.online.ua##.share-affix
-enxf.net,pakkotoisto.com,kit-capper.cc,forum.adguard.com,forumandroid.com,openssource.info##div[data-widget-definition="share_page"]
+miningclub.info,enxf.net,pakkotoisto.com,kit-capper.cc,forum.adguard.com,forumandroid.com,openssource.info##div[data-widget-definition="share_page"]
 nevsedoma.com.ua##.share_widget
 nevsedoma.com.ua##.subscribe_widget
 ghacks.net##.mrf-shareOptionsWrapper
@@ -2873,7 +2880,7 @@ coub.com##.story__sharing-list
 coub.com##.story__sharing-dropdown
 thewincentral.com##.widget_facebook_likebox
 nahnews.org##div[class^="mb-share-"]
-comp-profi.com,amp.indiatimes.com,newatlas.com##.social-bar
+geo.de,comp-profi.com,amp.indiatimes.com,newatlas.com##.social-bar
 hgtv.ca##.socialMediaLinks-container
 m.aksam.com.tr##.interaction-buttons:not(.count-page)
 m.aksam.com.tr##.fixed-interaction-bar
@@ -4812,7 +4819,7 @@ trabzonspor.com,trabzonspor.org.tr##.newdetailsocialwrapper
 sozcu.com.tr##.news-content-share
 mynet.com##.news-fix-share
 anews.com##.news-item-sharing
-dalealbo.cl,yenienerji.com,pirogovclinic.ru,yenikocaeli.com,hellomagazine.com,hola.com,dk.ru,maxicep.com,sporx.com##.news-share
+aksam.com.tr,dalealbo.cl,yenienerji.com,pirogovclinic.ru,yenikocaeli.com,hellomagazine.com,hola.com,dk.ru,maxicep.com,sporx.com##.news-share
 kg-portal.ru##.news_shares
 ngs.ru,ngs55.ru##.ngs-share-button
 ngs.ru##.ngs-t-share-button
@@ -7102,6 +7109,10 @@ neokur.com#$#.jquery-modal.blocker { display: none!important; }
 ! #Social locker#
 ! #End Social locker
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/50864#issuecomment-594525860
+@@||addthis.com/js/*/addthis_widget.js$domain=nacongaming.com
+! https://forum.adguard.com/index.php?threads/37751/
+paywithapost.de#@#a[href^="https://www.facebook.com/sharer.php"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/50823
 thekrazycouponlady.com#@#.share-buttons
 ! https://github.com/AdguardTeam/AdguardFilters/issues/49604
