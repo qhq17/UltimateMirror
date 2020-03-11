@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: rla0FLF7oEql41An7Olsfw
+! Checksum: 9bOgXrV20RKfqHK+uo34GA
 ! Title: AdGuard Mobile Ads filter
 ! Description: Filter for all known mobile ad networks. Useful for mobile devices.
-! Version: 2.0.11.10
-! TimeUpdated: 2020-03-02T21:04:17+03:00
+! Version: 2.0.11.23
+! TimeUpdated: 2020-03-11T15:30:14+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#mobile
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -71,6 +71,13 @@
 !
 !
 ! ||mobileapptracking.com^ - don't block this domain with all subdomains. https://forum.adguard.com/index.php?threads/23917/
+!
+! Appnext
+||admin.appnext.com^
+||global.appnext.com^
+||cdn.appnext.com^
+||api.appnxt.net^
+||apis.appnxt.net^
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/3933
 ! Yandex apps
@@ -171,12 +178,12 @@
 ||xdrig.com^
 ||usp1.baidu.com^
 ||i2.myapkcdn.in^
-||admin.appnext.com^
 ||c3.myapkcdn.in^
 ||54.222.186.106^
 ||plugin.mobopay.baidu.com^
 ||mo.freeindoapp.com^
 !
+||ssp.otm-r.com^
 ||networksdk.ssacdn.com^
 ||config.88-f.net^
 ||monetengine-d.openx.net^
@@ -1594,6 +1601,8 @@ deviantart.com#$#div[class*="dp-ad-"] {height: 0!important; width: 0!important; 
 !
 ! ##### TEMPORARY END #####
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/50976
+@@||verticalscope-com.videoplayerhub.com/galleryplayer.js$domain=skyscrapercity.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/47849
 @@||bc.marfeelcache.com^$domain=01net.com
 @@||bc.marfeel.com^$domain=01net.com
@@ -1902,12 +1911,21 @@ tomshardware.com,techbook.de,sueddeutsche.de,hurriyet.com.tr,elmundo.es,timesnow
 ! ##amp-ad
 dobreprogramy.pl,amp.pcwelt.de,tomshardware.com,techbook.de,forbes.com,auto-swiat.pl,dialog.ua,mobile.reuters.com,spiegel.de,amp.welt.de,forum.xda-developers.com,sueddeutsche.de,amp.usatoday.com,m.gadgets.ndtv.com##amp-ad
 !
+purepc.pl##a[databx][href*="/red1r.php"]
+m.dcnews.ro##.mainContainer > div[align="center"] > a[href][rel="nofollow"][target="_blank"] > img
+mail.yahoo.com##div[data-test-id="ad-carousel-container"]
+brainly.co.id##.brn-ads-mobile-container
+focus.ua##.no-pad-top > div.clearfix > aside.content-block__col > div.f-block:last-child
+hockeybuzz.com##body .adFooterDFPMobile
+hockeybuzz.com##body > div[style^="position:fixed; bottom:"][style*="z-index:"]
 ||m.sporx.com/_js/postitial_check.php
 4gamers.com.tw##.mobile-bottom-ads
 4gamers.com.tw##.scroller-ads-wrapper
 4gamers.com.tw##.news-detail-bg a[href][target="_blank"] > img[src*="/ads-media/"]
 hdblog.it##.news-list-item.banner_list_container
 yahoo.com##div[id$="PencilAd"]
+m.sports.ru##.b-main-menu__section--x5
+m.sports.ru##.x5-header__icon-container
 m.karar.com###detail-area > .seperator.margin-bottom-md
 m.karar.com###detail-area > .seperator.margin-bottom-md + a[href][target="_blank"] > img
 ||m.karar.com/imgs/banner970x250.png
@@ -3289,6 +3307,7 @@ livejournal.com##.mdspost-aside__item--banner
 ! Blocking Facebook mobile ads
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/50947
 ! https://github.com/AdguardTeam/AdguardFilters/issues/48948
 ! https://github.com/AdguardTeam/AdguardFilters/issues/48570
 ! https://github.com/AdguardTeam/AdguardFilters/issues/46634
@@ -3417,8 +3436,6 @@ livejournal.com##.mdspost-aside__item--banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/6133
 ! https://forum.adguard.com/index.php?threads/13437/
 ! https://forum.adguard.com/index.php?threads/13437/
-! https://github.com/AdguardTeam/AdguardFilters/issues/5248
-||global.appnext.com/offerWallApi.aspx
 ! https://github.com/AdguardTeam/AdguardFilters/issues/3346
 ! https://forum.adguard.com/index.php?threads/le-bon-coin-apk-from-googleplay.18840/
 ! fix ?ad_id= in Liste FR
