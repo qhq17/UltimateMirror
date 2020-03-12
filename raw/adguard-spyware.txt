@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: C6oe01/BF+ksmug0PNuKSA
+! Checksum: ZqCakVA8zVKrtj8U6FEwlQ
 ! Title: AdGuard Tracking Protection filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.12.54
-! TimeUpdated: 2020-03-05T18:04:20+03:00
+! Version: 2.0.12.62
+! TimeUpdated: 2020-03-11T20:31:40+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#privacy
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -310,7 +310,6 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ||trl.upperbooking.com^$third-party
 ||getback.ch^$third-party
 ||meapk.com^
-||group-ib.ru^$third-party
 ||vidapi.expepp.de^$third-party
 ||builfico.de^$third-party
 ||s24-analytics.com^
@@ -452,7 +451,6 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ||izooto.com^$third-party
 ||userreplay.net^$third-party
 ||smartlook.com^$third-party
-||honeybadger.io^$third-party
 ||adclicks.io^$third-party
 ||getmygeo.com^$third-party
 ||trvtrk.com^$third-party
@@ -3571,6 +3569,7 @@ nethunt.com/api/v1/track/email/$image
 !+ NOT_PLATFORM(ios, ext_safari, ext_android_cb)
 ||tags.news.com.au^$~script
 !
+||stats-dev.brid.tv^
 ||videostats.kakao.com^
 ||stat.tiara.daum.net^
 ||webid.ad.daum.net^
@@ -5328,6 +5327,8 @@ _tracking.php?b=
 ||nd.demdex.net/event?d_mid=$empty,important,domain=9now.com.au
 ||adc.nine.com.au/?token=$empty,important,domain=9now.com.au
 !
+||rss-loader.com/track/
+||pixlee.com/assets/pixlee_events.js
 ||content.mql5.com/tr?
 ||responder.wt.heise.de/resp/api/
 ||sbm.nate.com/setCookie?
@@ -7055,6 +7056,10 @@ link.gmapp*.net$image
 !+ NOT_PLATFORM(ios, ext_safari, ext_android_cb)
 ||adj.st^
 !
+||sq.requestads.com^
+||insight.ucweb.com^
+||gjapplog.ucweb.com^
+||stat.meitudata.com^
 ||collect.media.jio.com^
 ||log.apk.v-mate.mobi^
 ||track.mobshark.net^
@@ -7454,6 +7459,8 @@ link.gmapp*.net$image
 !
 ! Exception rules that fix different issues caused by blocking trackers
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/51104
+@@||scdn.cxense.com/cx.js$domain=digisport.ro
 ! https://github.com/AdguardTeam/AdguardFilters/issues/50970
 @@||collect.igodigital.com/collect.js$domain=wilsonparking.com.au
 ! https://github.com/AdguardTeam/AdguardFilters/issues/50935
@@ -7732,8 +7739,6 @@ link.gmapp*.net$image
 @@||google-analytics.com/analytics.js$domain=keepassium.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/39751
 @@||reutersmedia.net/resources_v*/js/rcom-scroll-tracker.js$domain=reuters.com
-! https://github.com/AdguardTeam/AdguardFilters/issues/39122
-@@||js.honeybadger.io/v*/honeybadger.min.js$domain=player.tubia.com
 ! haz.de - delayed display of content
 @@||google-analytics.com/analytics.js$domain=haz.de
 @@||google-analytics.com/gtm/js?id=$domain=haz.de
