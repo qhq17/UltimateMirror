@@ -1,4 +1,4 @@
-! Version: 06March2020v4
+! Version: 13March2020v1
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites
 ! Expires: 12 hours
@@ -232,7 +232,6 @@ rett24.no##.p_banner-responsive
 ||langrenn.com/getbanner.php/*/getfile.php/$image
 ||dnitv.com^$media,domain=dplay.dk
 dplay.*##[class^=notificationArea]
-utrop.no##.lazyautosizes
 utrop.no#?#.td-pb-span4:-abp-contains(ANNONSØRINNHOLD)
 /annonse_$image
 !+ NOT_OPTIMIZED
@@ -244,6 +243,7 @@ nettavisen.no#?#.rel-article:-abp-has(span:-abp-contains(Reklame))
 ||heartbeat.airserve.net^$3p
 ||static.airserve.net^$3p
 ||cdnboligkanalen.azureedge.net^$3p
+@@||cdnboligkanalen.azureedge.net/*width=2000^
 ||tankeogteknikk.no^$3p
 digi.no##.native
 ||adservice.dk^
@@ -261,6 +261,30 @@ digi.no##.native
 ||samfilm.codelab.is^$3p
 bt.no##section[class$=-ad]
 ||finn.no$subdocument,domain=bt.no
+||tvkampen.com/media/*/banner*$image
+||tvkampen.com/media/partners/unibet-lo$image
+||1819.is/infosmall/$image
+||austurfrett.is/images/banners$image
+||austurfrett.is/images/*augl.jpg^
+||feltet.dk/*/wallpaper_1.jpg^
+||feltet.dk/*/topbanner_*.jpg^
+||feltet.dk/octo_cms/files/Feltet.dk//$image
+||feltet.dk/*_300x60.gif^
+||cdn.rikstoto.no/expert/GameShop^$subdocument,3p,domain=~tipster.no
+||youtube.com/embed/*&origin=https%3A%2F%2Fwww.feltet.dk&widgetid=1$subdocument
+||karfan.is/*-470x130*.jpg^
+||utrop.no/wp-content/uploads/*.gif$image
+||utrop.no/wp-content/uploads/*/Banner_utrop$image
+||adr.kulingen.no^
+!+ NOT_OPTIMIZED
+||karfan.is/wp-content/uploads/*.gif^
+||karfan.is/*300x250.jpg^
+*/vefauglysingar/
+|blob:https://www.veier24.no/$image
+samler.no##div[class^=sl-banner-outside-child-]
+||samler.no/images/banners/$image
+##a[href^="https://click-dk.plista.com/csc?"]
+ekstrabladet.dk##a[href^="https://click-dk.plista.com/csc?"]
 ! — — — — —
 ! 🇳🇴: Generelle oppføringer med kilder
 ! 🇬🇧: Generic entries that have sources
@@ -318,11 +342,10 @@ tv2.no##.spklw-post-attr[data-pc]
 ###ad_topp
 1001spill.no###footer
 1001spill.no##.omega.grid_6
-180.no##td[class^=frame-shadow-]
+180.*##td[class^=frame-shadow-]
 1881.no##.ad-sleepy
 730.no#?#.g-10:-abp-contains(Artikkelen fortsetter )
 abcnyheter.no#?#.o-grid__col:-abp-has(.c-ad)
-abcnyheter.no#?#.o-grid__col:-abp-has(article[id^=ad_native_])
 aftenbladet.no##.article-content:style(padding: 0 0 0 0)
 aftenposten.no##.standard-ad-container
 aftenposten.no,hockeymagasinet.dk###top-ads-container
@@ -582,7 +605,7 @@ yrkesbil.no###side > div:nth-of-type(1)
 ||static.vg.no/css/admark_top.gif
 gamer.no##.aaa-placeholder
 google.*###cnsi ~ [jsaction*=dismiss]
-180.no##.ai-top-ad-outer
+180.*##.ai-top-ad-outer
 forum.klikk.no##.ehm-megaboard
 tv2.dk##.tc_ad
 finn.no##div[id^=netboard_]
@@ -643,6 +666,16 @@ installator.dk##.addon--ad
 nakenprat.com##.sidebarleft
 nakenprat.com#?##content:style(margin-left: 0px !important)
 nakenprat.com##.threadbit:not([id])
+1001spill.no##.layout-two-columns-aside
+kreativtforum.no##.sidebar-box
+totensblad.no##.mobile-banner-widget
+sva.no##.code-block-1
+norskkalender.no##.spacerDesktop
+180.*##.ad-min-height
+180.*##.cc-top-ad-outer
+180.*##.idle-timeout-outer
+klikk.no##div[id^=lpc_belowArticle]
+hsfo.dk##.adblock
 ! — — — — —
 ! 🇳🇴: Generelle oppføringer med kilder
 ! 🇬🇧: Generic entries that have sources
@@ -876,6 +909,8 @@ ba.no##.sportspill
 ~norsk-tipping.no,~tipster.no##a[href*="norsk-tipping.no/lotteri/viking-lotto"]
 ~norsk-tipping.no,~tipster.no##a[href*="norsk-tipping.no/sales/validateCouponAndStoreToSession.json"]
 ~norsk-tipping.no,~tipster.no##a[href*="nettavisen.no/sportspill/tipping/blir-du-mangemillionr-pa-onsdag"]
+||vg.no/vgc/pool/tipster.png$image
+||vgc.no/pustehullet/betting-header.png$image
 
 ! ——— Gamereactor + Viafree ———
 ! 🇳🇴: Disse oppføringene synkroniseres med de til «Frellwit's Swedish Filter» med noen måneders mellomrom, så det hadde blitt for strevsomt å kategorisere dem.
