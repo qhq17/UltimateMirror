@@ -146,11 +146,6 @@ vanar.io##.frame-data
 ||shomershabes.com^$3p
 ||shomershabes.co.il^$3p
 
-! https://github.com/jspenguin2017/uBlockProtector/issues/843
-! https://github.com/jspenguin2017/uBlockProtector/issues/848
-! https://github.com/jspenguin2017/uBlockProtector/issues/869
-dn.pt,jn.pt,tsf.pt##+js(abort-on-property-read.js, canRunAds)
-
 ! https://github.com/uBlockOrigin/uAssets/issues/1532
 ! https://github.com/uBlockOrigin/uAssets/issues/4269
 fandom.com,wikia.com##.featured-video__wrapper
@@ -259,6 +254,8 @@ pinterest.*##.GrowthUnauthPinImage > a > div[class^="Jea"]:has(button[class^="no
 pinterest.*##.Hsu.iyn.zI7:nth-of-type(2) > div > .FullPageModal__scroller
 ! https://github.com/uBlockOrigin/uAssets/issues/5030#issuecomment-546342839
 pinterest.*##body:style(overflow-y: scroll !important;)
+! https://github.com/uBlockOrigin/uAssets/issues/7104
+pinterest.de##[style^="background-color: rgba(0, 0, 0"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2093
 fxporn69.*##+js(abort-on-property-write.js, document.oncontextmenu)
@@ -1773,7 +1770,7 @@ ndtv.com###___ndtvpushdiv
 facebook.com,facebookcorewwwi.onion##._5hn6
 facebook.com,facebookcorewwwi.onion##.generic_dialog_modal.pop_dialog
 ! https://github.com/uBlockOrigin/uAssets/issues/5136
-m.beta.facebook.com,m.facebook.com,m.facebookcorewwwi.onion,touch.facebook.com,touch.beta.facebook.com##div[style^="background: none;"]:has(#mobile_login_bar)
+touch.facebook.com,mtouch.facebook.com,x.facebook.com,iphone.facebook.com,m.beta.facebook.com,touch.beta.facebook.com,mtouch.beta.facebook.com,x.beta.facebook.com,iphone.beta.facebook.com,touch.facebookcorewwwi.onion,mtouch.facebookcorewwwi.onion,x.facebookcorewwwi.onion,iphone.facebookcorewwwi.onion,touch.beta.facebookcorewwwi.onion,m.facebook.com,m.facebookcorewwwi.onion,b-m.facebook.com,b-m.facebookcorewwwi.onion,mobile.facebook.com,mobile.facebookcorewwwi.onion##div[style^="background: none;"]:has(#mobile_login_bar)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/5030
 quora.com##.new_signup_dialog.modal_bg
@@ -1906,9 +1903,6 @@ filmpornoita.*##+js(abort-current-inline-script.js, disableSelection, reEnable)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2397
 anime-extremo.*##+js(abort-on-property-write.js, document.oncontextmenu)
-
-! https://github.com/uBlockOrigin/uAssets/issues/5189
-psprices.com##+js(abort-current-inline-script.js, document.getElementById, block)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/5193
 listatv.pl##+js(remove-attr.js, oncontextmenu)
@@ -2278,8 +2272,10 @@ youtube.com##ytd-popup-container > .ytd-popup-container > #contentWrapper > .ytd
 m.youtube.com###mealbar\:3 > ytm-mealbar.mealbar-promo-renderer
 
 ! https://github.com/uBlockOrigin/uAssets/issues/5763
+! https://redd.it/ffex0g
 patient.info##body:style(overflow: auto !important;)
 patient.info###cookie-policy, #cookie-policy-overlay
+patient.info##+js(aeld, touchmove)
 
 ! https://github.com/NanoMeow/QuickReports/issues/1338
 buienradar.nl##+js(set-constant.js, hideBannerBlockedMessage, true)
@@ -2493,9 +2489,6 @@ recantodasletras.com.br##+js(aopr, RL.licenseman.init)
 
 ! https://github.com/NanoMeow/QuickReports/issues/1692
 @@||thesaurus.com/assets/ads.js$xhr,1p
-
-! block medium.com "pardon the interruption" modal that prompts you to sign-up/log-in.
-medium.com##:xpath(//div[.//div[contains(@tabindex,"-1") and contains(@aria-modal,"true")]])
 
 ! https://forums.lanik.us/viewtopic.php?f=62&t=43420
 vedbex.com##.in.fade
@@ -3076,7 +3069,7 @@ medievalists.net##+js(aopr, googletag)
 gamebanana.com##+js(aopr, adBlockDetected)
 
 ! https://github.com/NanoMeow/QuickReports/issues/2750
-cnbc.com##+js(aopr, googletag)
+cnbc.com##+js(nostif, nrWrapper, 0)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/6826
 reddit.com##.XPromoPopup
@@ -3141,7 +3134,7 @@ dramaqu.me##+js(acis, $, contextmenu)
 
 ! https://github.com/NanoMeow/QuickReports/issues/2819
 kawanfilm21.org##+js(aeld, contextmenu)
-||kawanfilm21.org^$csp=script-src * 'unsafe-inline'
+kawanfilm21.org##+js(set, document.onselectstart, null)
 
 ! https://github.com/NanoMeow/QuickReports/issues/2822
 fdmovie.com##+js(acis, document.oncontextmenu)
@@ -3211,6 +3204,7 @@ fizyka.org##body:style(-webkit-touch-callout: default !important; -webkit-user-s
 ! https://github.com/uBlockOrigin/uAssets/issues/6892
 ! https://github.com/uBlockOrigin/uAssets/issues/6893
 snapito.com,web-capture.net##+js(acis, document.getElementById, test-block)
+web-capture.net###stw_ad
 
 ! https://github.com/NanoMeow/QuickReports/issues/2869
 @@||readonepiece.com/wp-content/$script,1p
@@ -3544,3 +3538,73 @@ kickante.com.br##+js(aeld, mouseleave)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/7070
 scribd.com##+js(aeld, /^(mouseout|mouseleave)$/)
+
+! https://github.com/AdguardTeam/AdguardFilters/issues/51240
+@@||dark-libra.it^$ghide
+
+! https://github.com/NanoMeow/QuickReports/issues/3265
+riie.net##+js(acis, document.oncontextmenu)
+riie.net##+js(acis, disableSelection)
+riie.net##+js(acis, addEventListener, keydown)
+riie.net##+js(aopr, document.onkeydown)
+
+! mt07-forum/xnalgas/auto-treff anti-adb
+mt07-forum.de##+js(set, adblockDisabled, null)
+xnalgas.com##+js(set, adblockDisabled, null)
+auto-treff.com##+js(set, adblockDisabled, null)
+
+! letsdownloads .com right click, select
+letsdownloads.com##+js(acis, document.oncontextmenu)
+
+! kickassanime.rs anti-adb notice
+kickassanime.rs###notes > div:nth-of-type(1)
+
+! https://github.com/uBlockOrigin/uAssets/issues/7093
+foreignaffairs.com##+js(nostif, noscroll, 3000)
+
+! baltasar5010purohentai.com anti-selection/contextmenu/selection
+baltasar5010purohentai.com##+js(aopr, disableSelection)
+baltasar5010purohentai.com##+js(aopw, nocontext)
+baltasar5010purohentai.com##.unselectable:style(-webkit-touch-callout: default !important; -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important;)
+
+! https://github.com/NanoMeow/QuickReports/issues/3293
+hienzo.com##+js(ra, oncontextmenu)
+hienzo.com##*:style(-webkit-touch-callout: default !important; -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important;)
+
+! https://github.com/NanoMeow/QuickReports/issues/3292
+doujindesu.cc##+js(acis, document.oncontextmenu)
+doujindesu.cc##+js(acis, document.onkeydown)
+doujindesu.cc##body:style(-webkit-touch-callout: default !important; -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important;)
+
+! tfp.is anticopy/selection/keydown
+tfp.is##+js(acis, document.oncontextmenu)
+tfp.is##body:style(-webkit-touch-callout: default !important; -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important;)
+
+! https://github.com/NanoMeow/QuickReports/issues/3308
+rxmovies.top##+js(aopr, onkeydown)
+rxmovies.top##+js(aopr, document.oncopy)
+rxmovies.top##+js(aopr, document.oncontextmenu)
+rxmovies.top##+js(aopr, document.body.oncontextmenu)
+rxmovies.top##+js(acis, document.onkeydown)
+rxmovies.top##+js(alert-buster.js)
+
+! https://github.com/NanoMeow/QuickReports/issues/3310
+dxmaps.com##+js(set, canRunAds, true)
+dxmaps.com##+js(set, canRunAds2, true)
+dxmaps.com##+js(nostif, adsbygoogle, 5000)
+
+! https://github.com/uBlockOrigin/uAssets/issues/7105
+kapiert.de##+js(aeld, contextmenu)
+
+! nadidetarifler.com overlay popup annoyance
+nadidetarifler.com###overlay, .social-media-popup
+
+! https://github.com/uBlockOrigin/uAssets/issues/7109
+japan-academy-prize.jp##+js(ra, oncontextmenu|onmousedown|onselectstart)
+
+! https://github.com/AdguardTeam/AdguardFilters/issues/51645
+lectortmo.com##body *:style(-webkit-touch-callout: default !important; -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important;)
+
+! https://github.com/NanoMeow/QuickReports/issues/3320
+@@||hack-sat.com^$ghide
+hack-sat.com###login_popup
