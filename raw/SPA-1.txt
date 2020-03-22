@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: 1XbtPUEqFo6rXUgFNfXF5A
+! Checksum: saNRyBX06SBSnMvD+bymfw
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish and Portuguese languages.
-! Version: 2.0.5.76
-! TimeUpdated: 2020-03-13T20:32:28+03:00
+! Version: 2.0.5.90
+! TimeUpdated: 2020-03-20T23:31:59+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#spanish
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -248,9 +248,6 @@
 !
 ! AdRegain
 !
-! https://github.com/AdguardTeam/AdguardFilters/issues/51380
-lesacdechips.com#$#.popup-adblocker { display: none !important; }
-lesacdechips.com#$#body { overflow: visible !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/51161
 @@||botinnifit.com/*/adsbygoogle.js
 botinnifit.com##+js(set-constant, canRunAds, true)
@@ -944,8 +941,6 @@ expansion.com#@#div[id^="div-gpt-ad"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/24440
 ! https://github.com/AdguardTeam/AdguardFilters/issues/6118
 radioset.es,bemad.es,cuatro.com,divinity.es,eltiempohoy.es,energytv.es,factoriadeficcion.com,mtmad.es,telecinco.es#$##adsFooter { height: 20px!important; width: 20px!important; }
-! https://forum.adguard.com/index.php?threads/24052/
-@@||animeflv.me/static/ads.js
 ! antiblock.org
 ! https://github.com/AdguardTeam/AdguardFilters/issues/35168
 ! https://github.com/AdguardTeam/AdguardFilters/issues/15231
@@ -1002,8 +997,6 @@ maisgasolina.com#@#.adsbygoogle
 @@||levante-emv.com/servicios/ads/dfp.js^
 ! uol.com.br antiadblock
 ||uol.com.br/camaleao/assets/web/javascript/detectadblock/detectadblock.js$important
-! https://forum.adguard.com/index.php?threads/21915/
-@@||player.animeid.io/static/ads.js
 ! https://forum.adguard.com/index.php?threads/21090/
 @@||connect-trojan.net^$generichide
 ! https://forum.adguard.com/index.php?threads/http-zonasports-me.20289/
@@ -1016,8 +1009,6 @@ maisgasolina.com#@#.adsbygoogle
 @@||diariovasco.com/comun/js/*/adfrm.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/3946
 @@||satcesc.com/*/banner.gif
-! https://forum.adguard.com/index.php?threads/11826/
-@@||cdn.komoona.com/scripts/kmn_sa.js$domain=mangahost.net
 ! https://forum.adguard.com/index.php?threads/14959/
 forum.outerspace.com.br#@#.adsbygoogle
 ! https://forum.adguard.com/index.php?threads/14945/
@@ -1061,6 +1052,7 @@ jokerfansub.com#@##adsense
 ! https://github.com/AdguardTeam/AdguardFilters/issues/24801
 yahoo.com#?#ul[class^="Mb(0)"] > li.js-stream-content:has(> div > a[rel="nofollow noopener noreferrer"]+div:contains(Patrocinado))
 !
+cokitos.com#?#.theiaStickySidebar > div.widget_text:has(> div.textwidget ins.adsbygoogle)
 muchohentai.com#$?##content > div.type-post > div[id^="_"] { remove: true; }
 animesonline.cz#?#.well.z-body:has(> .ad-title)
 libertaddigital.com,libremercado.com#?#.interior > section.conpubli:has(> div > .OUTBRAIN)
@@ -1082,7 +1074,6 @@ tudogostoso.com.br#?#.tdg-main > div[class]:has(> div.ads-super-footer)
 imperiodefamosas.com#?#.col-md-8 > section > div.row > div[class^="col-"]:has(> div.grid-item > p > a[rel="nofollow"] > img)
 jornaldestaquebaixada.com#?#.sidebar > .widget:has(> div > .adsbygoogle)
 nsctotal.com.br#?#.StyledDiv > .Title:contains(publicidade)
-buscape.com.br#?#.offer-result > div > .card__item:has(> .bui-card > .inner > .bui-product__sponsored)
 craftmybox.com#?#.table-wrapper > .table > tbody > tr.has-background-light:has(> th > a > span.is-warning:contains(Anúncio))
 em.com.br#?#div[class*="col-"]:has(> div.ads)
 rl-hackers.net#?#.pageContent > div[align="center"]:has(.adsbygoogle)
@@ -1103,7 +1094,6 @@ seriesgato.com#?#.TPlayerNv > li.Button:has(> span:contains(Publicidad))
 xtraordinaryfansub.com#?#.recomendados > h1:contains(Publicidad)
 xtraordinaryfansub.com#?##sidebar > .bloque[-ext-has=">h1:has-text(Publicidad)"]
 wikiseriesonline.com#?##media-episode > div.row > div[class="col-lg-12"][-ext-has="> div.embed-responsive > div.ads"]
-mangahost.net#?#.sidebar > section.clearfix[-ext-has='div.ads']
 maisgasolina.com#?##main [id$="Block"][-ext-has='.adsbygoogle']
 !---------------------------------------------------------------------------!
 !-------------- General element hiding rules -------------------------------!
@@ -1199,6 +1189,7 @@ maisgasolina.com#?##main [id$="Block"][-ext-has='.adsbygoogle']
 !--------------------------------------!
 !------- JS rules ---------------------!
 !--------------------------------------!
+! https://github.com/AdguardTeam/AdguardFilters/issues/51462
 ! https://github.com/AdguardTeam/AdguardFilters/issues/51052
 holanime.com##+js(abort-on-property-read, Object.prototype.Focm)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/49711
@@ -1268,6 +1259,8 @@ tuhentaionline.com##+js(abort-on-property-read, Pub2)
 !--------------------------------------!
 !------- CSS fixes --------------------!
 !--------------------------------------!
+! https://github.com/AdguardTeam/AdguardFilters/issues/51734
+clavejuegos.com#$#.banner { visibility: hidden !important; }
 ! mastercuriosidadesbr.com - skip timer
 mastercuriosidadesbr.com#$#iframe.video { display: block!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/41813
@@ -1430,10 +1423,26 @@ http://adw.
 !-------------------- Specific rules --------------------!
 !--------------------------------------------------------!
 !
+buscape.com.br##li.tp-sponsored
+shopping.uol.com.br##.tp-sponsored.tp-offer
+hentaila.com##iframe[src^="//ads2.contentabc.com/"]
+isladejuegos.es###bannerLeaderboardTop
+isladejuegos.es##div[id^="bannerAdmeen"]
+isladejuegos.es##div[id^="bannerGameSkyscraper"]
+isladejuegos.es###bannerAdmeenRectangleTopContainer
+||isladejuegos.es/bfb/game_*.php$subdocument
+playpaste.com##a[href^="https://track.wg-aff.com/"]
+juegosdechicas.com##.game-page-sidebar
+paisdelosjuegos.com.pe##div[class*="advertisement-"]
+juegos.com##.game-page-sidebar
+cdiscount.com##div[class^="regBloc"]
+1001juegos.com##.MuiGrid-container > div.MuiGrid-item > div.HalfPage > div[style="min-height: 250px;"]
 jumpmanclubbrasil.com.br###ads-blog-content
 jumpmanclubbrasil.com.br,3dsounada1.blogspot.com##a[href^="http://www.geragera.com.br/?ref="]
 jumpmanclubbrasil.com.br,3dsounada1.blogspot.com##a[href^="http://www.hipercontas.com.br/bit-share.php?id="]
 holanime.com##div[class^="glx-slider-container-"][style*="z-index:"]
+juegos.games##.Ad-Under-Game
+juegos.games##aside[id^="adace_ads_widget-"]
 ||eliteacompanhantes.com.br/bnr/
 ||anunciogp.clubmodel.com.br/banner_cliente_iframe.php
 1v.to##.enlace_descarga
@@ -2092,8 +2101,6 @@ anime-latino.net##iframe[name="Pub300"]
 anime-tube.tv##.ads
 windowsblogitalia.com##div[id^="ppsPopup"]
 windowsblogitalia.com##.sidebar > div.tile-top > div[class="tile-content"]
-animeflv.me##div[id^="divFloat"] > div.avm
-animeflv.me##.episodeList > div > div[class^="clear"]
 masmusicacristiana.club##.nuevos-anuncios
 seriesytv.tv,animeytv.tv,peliculasytv.com##.a728
 seriesytv.tv,animeytv.tv,peliculasytv.com##.main > center > a[target="_blank"] > img
@@ -2119,12 +2126,9 @@ jkanime.site##.page > div[style*="width:100%;"][style$=";text-align:center;"]
 jkanime.site##.item-grid-adv
 vizer.tv##body > .vizerNewBox.adsByVizer
 bemad.es,cuatro.com,divinity.es,eltiempohoy.es,energytv.es,factoriadeficcion.com,mtmad.es,telecinco.es##.cards__card_ad-3gZy
-animeflv.me##.banner_center
-animeid.io##.banner_center
 mitele.es##.ad-wrapper
 tudotv.tv##.Publicidade728
 holadoctor.com##.banner_cubo_space
-animeid.io###divFloatRight
 abril.com.br##div[id^="ad_"]
 abril.com.br##.ad-sense
 abril.com.br##.widget-superbanner
@@ -2449,7 +2453,6 @@ ondacero.es##.adContainer1
 informador.com.mx##.adHz
 informador.com.mx##.adSt
 informador.com.mx##.adVl
-mangahost.net##.ads
 brasilportais.com.br##.ads-lateral
 impre.com##.ads125BackTexture
 elnuevodiario.com.ni##.ads728_90
@@ -3229,6 +3232,8 @@ urlcloud.us##.banner
 !
 ! White list. Fixing filtration errors (false-positive)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/51457
+@@||movilzona.es/app/themes/mykonos-child/assets/js/stickyAds.min.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/50188
 @@||ver.movistarplus.es/js/yomvi/scripts/publi.js$domain=ver.movistarplus.es
 ! https://github.com/AdguardTeam/AdguardFilters/issues/49849
