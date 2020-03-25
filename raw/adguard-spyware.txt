@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: z9Fw7ig0ZUDIxKZHEM/qIg
+! Checksum: 4VAnzu6vGXSGP7OEdSNlqA
 ! Title: AdGuard Tracking Protection filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.12.87
-! TimeUpdated: 2020-03-19T19:19:01+03:00
+! Version: 2.0.12.97
+! TimeUpdated: 2020-03-24T21:31:22+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#privacy
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -153,6 +153,8 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ! ||e.crashlytics.com^
 ! ||settings.crashlytics.com^
 !
+||stats.datawrapper.de^$third-party
+||track.adabra.com^$third-party
 ||reindaks.com^$third-party
 ||go.rcvlinks.com^$third-party
 ||monu.delivery^$third-party
@@ -900,7 +902,6 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ||btttag.com^$third-party
 ||bubblestat.com^$third-party
 ||bugherd.com^$third-party
-||bugsnag.com^$third-party
 ||burstbeacon.com^$third-party
 ||burt.io^$third-party
 ||bux1le001.com^$third-party
@@ -3580,6 +3581,7 @@ nethunt.com/api/v1/track/email/$image
 !+ NOT_PLATFORM(ios, ext_safari, ext_android_cb)
 ||tags.news.com.au^$~script
 !
+||tagger.ope.scmp.com^
 ||telemetry.soundcloud.com^
 ||e2e.mashable.com^
 ||stats-dev.brid.tv^
@@ -5416,7 +5418,6 @@ jQA0lQV6Uh93m3ldI29eI2guUFOdHFg5mPuslh5sk20eH$domain=9to5google.com|9to5mac.com|
 ||cloudfront.net/analytics.js
 ||affirm.com/api/*/cookie_sent
 ||app.opmnstr.com/v2/geolocate/
-||cdn.livechatinc.com/tracking.js
 ||my.kapook.com/asset/js/track.js
 ||mrtg.emailpartners.net^$image,third-party
 ||paypalobjects.com/*/pixel.gif
@@ -5790,7 +5791,7 @@ abp?type=js&session$domain=prosieben.de|sat1.de|kabeleins.de|sixx.de|prosiebenma
 ||ioam.de/aid.io?
 ||ioam.de/tx.io?
 ||inq.com/tagserver/logging/
-||inq.com/tagserver/postToServer
+||inq.com/tagserver/*/onEvent
 ||inq.com/tagserver/tracking/
 ||inq.com^*/onEvent?_
 ||infotor.net/button.php^$third-party
@@ -7045,6 +7046,7 @@ link.gmapp*.net$image
 !
 ! For apps
 ||analytics.kidoz.net^
+||track.tenjin.com^
 ||tracker.mtrtb.com^
 ||tracking.ws.eurosport.com^
 ||tracker.rqmob.com^
@@ -7475,6 +7477,16 @@ link.gmapp*.net$image
 !
 ! Exception rules that fix different issues caused by blocking trackers
 !
+!
+@@||google-analytics.com/analytics.js$domain=siberianhealth.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/51958
+@@||jssdkcdns.mparticle.com/js/v*/*/mparticle.js$domain=nbc.com
+! square-enix-games.com - fixing issue with purchasing a product
+@@||googletagmanager.com/gtm.js$domain=square-enix-games.com
+@@||google-analytics.com/analytics.js$domain=square-enix-games.com
+@@||google-analytics.com/plugins/ua/ec.js$domain=square-enix-games.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/51913
+@@||ak.sail-horizon.com/spm/spm.v*.min.js$domain=watch.wwe.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/51823
 @@||odb.outbrain.com^$domain=nypost.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/51456
@@ -7584,8 +7596,6 @@ link.gmapp*.net$image
 ! https://github.com/AdguardTeam/AdguardFilters/issues/47632
 @@||googletagmanager.com/gtm.js$domain=wibc.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/46786
-! https://github.com/AdguardTeam/AdguardFilters/issues/46679
-@@||tracfone.inq.com/tagserver/postToServer.min.htm$domain=totalwireless.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/47334
 !+ PLATFORM(ios, ext_android_cb, ext_safari, ext_edge, ext_ublock)
 @@||google-analytics.com/analytics.js$domain=rzd.ru
@@ -8690,8 +8700,6 @@ link.gmapp*.net$image
 @@||metrics.consumerreports.org/b/ss/cuglobal/
 ! https://forum.adguard.com/index.php?threads/16053/
 @@||analytics.edgesuite.net/html5/akamaihtml*-min.js$domain=ehftv.com
-! https://forum.adguard.com/index.php?threads/resolved-star-com-tr.15763/
-@@||gdetr.hit.gemius.pl/gemius.js^$~third-party
 ! https://forum.adguard.com/index.php?threads/spieletipps-de.14934/
 @@||spieletipps.de/js/smb-tracking.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/3342
