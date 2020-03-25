@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
-! Checksum: 6lA3L3Jv0qg7+8815UnpwQ
-! Version: 202003180720
+! Checksum: nxTSbufjM5H5yW+2FiVhLg
+! Version: 202003250940
 ! Title: Liste AR
 ! Expires: 2 days
 ! Description: القائمة العربية لمانع الشرائط الإعلانية آدبلوك بلس، مكمِّلة للقائمة الفرنسية و الإنجليزية
@@ -51,6 +51,7 @@
 /adedinfo/*
 /adfuel-
 /adfuel/*
+/AdHead1.
 /ads.*&autoplay=
 /ads.*?vid=
 /ads/*/banners_
@@ -112,8 +113,11 @@
 /images/bnr_
 /images/mrad.
 /ir/ads/*
+/iskanAds/*
 /mpu_dfp.
 /nugg-ad-
+/opensooqads.
+/OuterAds.
 /png%2Bad.
 /productbox.*?zone=$third-party
 /projectagora.min.js
@@ -167,6 +171,8 @@ _New_Ads.
 ###ClicksAds
 ###ad4game728x90
 ###adLeftHolder
+###adOTPDesktop
+###adOTPMobile
 ###adRightHolder
 ###adSlot-inPage-300x250-left
 ###adSlot-inPage-728x90-top
@@ -183,6 +189,7 @@ _New_Ads.
 ###mpuAfter
 ###readmoreads
 ###region-pub-top-wrapper
+###rightBannerGoogleAd
 ###zwaar_ad_id
 ###zwaar_float_ad_area
 ##.AD_Dynamic
@@ -226,12 +233,18 @@ _New_Ads.
 ##.ad250250
 ##.ad720
 ##.ad970
+##.adNavDesktop
+##.adNavMob
+##.adOTPDesktop
+##.adOTPMobile
 ##.adTtl
 ##.ad_banner728
 ##.adblock:not(html):not(body):not(h1)
+##.adbottomfixed
 ##.add_banner
 ##.add_banner2
 ##.ade160
+##.ads-h-100
 ##.ads-posting
 ##.ads1post
 ##.ads2post
@@ -256,7 +269,9 @@ _New_Ads.
 ##.angular_advertisement
 ##.b_ad
 ##.b_ad480
+##.bestaAds_desktop
 ##.bloxad
+##.borderMobAds
 ##.box-s-ad
 ##.boxLeftAd
 ##.boxRightAd
@@ -277,6 +292,8 @@ _New_Ads.
 ##.fbAdsCont
 ##.fixedAd
 ##.fixedMpu
+##.float_ads
+##.getSponsored
 ##.header_add
 ##.hidden_pub
 ##.homepage_ad_half
@@ -320,6 +337,7 @@ _New_Ads.
 ##.safeAreaRightAds
 ##.sideColAds
 ##.sidea-ad
+##.sponsorDuplicate
 ##.srapad
 ##.srapad_bg
 ##.to-ad-text
@@ -370,8 +388,10 @@ _New_Ads.
 ##aside[id^="custom-ads-"]
 ##div[class^="ad-id_ad_"]
 ##div[class^="ad-id_shortcode"]
+##div[class^="ads-area-"]
 ##div[id^="POSTQUARE_WIDGET"]
 ##div[id^="adSlot-inPage"]
+##div[id^="admixer_"]
 ##div[id^="ads-postbr"]
 ##img[alt="إعلان"][height="60"]
 ##img[alt="إعلان"][width="150"]
@@ -412,15 +432,19 @@ _New_Ads.
 ||fortvision.com^$third-party
 ||ftd.agency^$third-party
 ||hoood.info^$third-party
+||idelv.net^$third-party
 ||idsly.com^$third-party
 ||ilovemobi.com^$third-party
+||jubnaadserve.com^$third-party
 ||kaprila.com^$third-party
+||ketshwa.com^$third-party
 ||kimia.es^$third-party
 ||marvelmanager.com^$third-party
 ||mediaad.org^$third-party
 ||mpi.ps^$third-party
 ||notification-list.com^$third-party
 ||ornaki.com^$third-party
+||paht.tech^$third-party
 ||popupplus.ir^$third-party
 ||postquare.com^$third-party
 ||premaads.net^$third-party
@@ -431,6 +455,7 @@ _New_Ads.
 ||teeet.net^$third-party
 ||trinylium.com^$third-party
 ||unamoney.site^$third-party
+||user-api.com^$third-party
 ||valshara.com^$third-party
 ||windailyprizes.info^$third-party
 ||yakiyo.club^$third-party
@@ -491,7 +516,7 @@ $websocket,domain=arabseed.co|arabseed.com|arabseed.tv|arawatch.tv|cera.online|c
 !
 |blob:$domain=arawatch.tv|cera.online|cera.video
 !
-$script,third-party,domain=aflam2you.com|alm5leb.com|almstba.tv|almstbatv.com|animestarz.com|arabe-media.com|arabincest.com|aradramatv.co|cima4u.tv|e5tsar.com|elmoslsal.com|emotionvideo-tv.com|filmey.tv|hawak.tv|honadrama.me|jaewinter.co|kooralive.tv|kora-online.tv|lodynet.tv|okanime.com|rotana.video|s4w.tv|series4watch.online|shahid4u.com|shahid4u.net
+$script,third-party,domain=aflam2you.com|alm5leb.com|almstba.tv|almstbatv.com|animestarz.com|arabe-media.com|arabincest.com|aradramatv.co|cima4u.tv|e5tsar.com|elmoslsal.com|emotionvideo-tv.com|fel3arda.com|fel3arda.net|filmey.tv|hawak.tv|honadrama.me|jaewinter.co|kooralive.tv|kora-online.tv|lodynet.tv|okanime.com|rotana.video|s4w.tv|series4watch.online|shahid4u.com|shahid4u.net
 !
 $third-party,xmlhttprequest,domain=almstba.tv|almstbatv.com|cima4u.tv|emotionvideo-tv.com|hawak.tv|lodynet.tv|rotana.video|shahid4u.com|shahid4u.net
 !
@@ -582,6 +607,7 @@ $popup,domain=aflamsexnek.com|aflamyz.com|anime2001.com|arabincest.com|cima4up.c
 ||arjwana.com/468*.gif
 ||assistirseries.net/al/pag*.html
 ||awtad.com/www/
+||b-cdn.net/uploads/banners_model/
 ||b8cdn.com^*/affiliate-
 ||babal.net/tools/home.php?$third-party
 ||banathi.com/banathi*.
@@ -1171,6 +1197,8 @@ $popup,domain=aflamsexnek.com|aflamyz.com|anime2001.com|arabincest.com|cima4up.c
 ||agadir24.info/khir.swf
 ||agadir24.info/minipain02.swf
 ||agadir24.info/pub.gif
+||aghanilyrics.com/adimage
+||aghanilyrics.com/adphone
 ||ahdath.info/wp-content/*/Pub%20banniere%20.jpg
 ||ahram.org.eg/Media/Banners/
 ||akhbarelyom.com/UP/farid/
@@ -1400,6 +1428,7 @@ $popup,domain=aflamsexnek.com|aflamyz.com|anime2001.com|arabincest.com|cima4up.c
 ||egyup.com^*/banner
 ||egyup.tv/images/left_dubizzle.png
 ||egyup.tv/images/right_dubizzle.png
+||el-ahly.com/bboxrm.htm
 ||el-massa.com^*/banners/
 ||eladjwaaonline.com^*/pub/
 ||elahdath.net/images/pub/
@@ -1793,6 +1822,7 @@ $popup,domain=aflamsexnek.com|aflamyz.com|anime2001.com|arabincest.com|cima4up.c
 ||yaislam.com/menux160.html
 ||yalladrama.tv/js.php
 ||yalladrama.tv/player/Download-icon.gif
+||yallakora.com/images/geminisc.jpg
 ||ylla.net/bun.php?
 ||youm7.com/cairodar/index2.html
 ||youtube.com/watch?v=88eJwlVi898$popup,domain=alrealclub.com
@@ -1906,6 +1936,7 @@ g5y.com,sedty.com##.Ads
 onothty.net,q8yatnews.com##.Ads2
 alwatannews.net##.Adv
 oleeh.com##.Advinner
+alwakeelnews.com##.C_AD
 elwatannews.com##.HLB
 yallakora.com##.Leaderboard
 alsumaria.tv##.LeftBannerSkin
@@ -1923,9 +1954,12 @@ alhayat.com##.TopHeaderBanner
 elkhabar.com.tn##.ad-image
 souq.com##.ad1
 souq.com##.ad2
+el-ahly.com##.adAB
+el-ahly.com##.adBC
+el-ahly.com##.adCD
 egy4up.net,gornalak.com##.ad_left
 egy4up.net,gornalak.com##.ad_right
-alnafiza.ps,arabictorrent.net,bein-koora.net,cima4u.tv,informatique-phone.com,mrabuali.com,nilemotors.net,proteachin.com##.ads
+alnafiza.ps,arabictorrent.net,bein-koora.net,cima4u.tv,informatique-phone.com,khaberni.com,mrabuali.com,nilemotors.net,proteachin.com##.ads
 arab-eng.org##.adsensarab2
 4read.net##.adsense
 linkat-online.com##.adss_left
@@ -1972,6 +2006,7 @@ alweeam.com.sa##.content-banner
 tadawlacademy.com##.cpro-form-container
 tadawlacademy.com##.cpro-onload
 masrawy.com,yallakora.com##.dealsoffer
+khaberni.com##.desktop-banners
 mye.gy##.disclaimer
 3a2ilati.com##.eshop-list
 arabs-up.com,arabsharing.com##.extras_footer
@@ -1985,6 +2020,7 @@ sawasport.com##.full-width-banner
 youm7.com##.fullBanner
 filfan.com##.gads_MR
 almasryalyoum.com##.gam-holder
+yallakora.com##.geminiSC2Ad
 moheet.com##.gplus
 graaam.com##.haw
 makkahnews.net##.header_banner
@@ -2013,6 +2049,7 @@ assayyarat.com##.md-overlay
 mediamasr.tv##.mediumbanner
 3rbup.com##.metaRedirectWrapperTop
 hawaaweb.com##.middle-banner
+khaberni.com##.mobile-banners
 ech-chaab.net##.module.mod-line.color-black.deepest
 elcinema.com##.movie-reserve-cinema
 skynewsarabia.com##.mpu
@@ -2092,7 +2129,7 @@ bernama.com##a[class^="banner_photo_"]
 m-4u.net##a[class^="hcne_ads"]
 ibda3gate.com##a[href*="/Direct Link.html"]
 ckfu.org##a[href*="/ads.php?"]
-arabseed.co,arabseed.com,arabseed.tv,arbcinema.com,ce4arab.com,edlibre.com,wattan.tv##a[href*="://bit.ly/"]
+arabseed.co,arabseed.com,arabseed.tv,arbcinema.com,ce4arab.com,edlibre.com,el-ahly.com,khaberni.com,wattan.tv##a[href*="://bit.ly/"]
 202020.net,algareda.com,arabseed.co,arabseed.com,arabseed.tv,cima4u.tv,sawasport.com##a[href*="://goo.gl/"]
 lakii.com##a[href*="ads-redirect.php?i="]
 egyfitness.com##a[href*="leadpages.co"]
@@ -2161,8 +2198,10 @@ shof.co.il##div[class*="banner"]
 shof.co.il##div[class*="bnr"]
 shof.co.il##div[class*="cube"]
 sunnewsnow.com##div[class][data-index][style]
+sarayanews.com##div[class^="ads"]
 mexat.com##div[class^="banner"]
 arbcinema.com##div[id*="fish_div"]
+sarayanews.com##div[id^="ads"]
 alqabas.com.kw##div[id^="azk"]
 masrytube.com##div[id^="bannerfloat"]
 eldjoumhouria.dz##div[id^="floating_"]
@@ -2170,7 +2209,8 @@ fatakat.com##div[onclick*="window.open('http://xads.zedo.com/')"]
 yalladrama.tv##div[style$="height: 250px; width: 300px;"]
 cartoon3rbi.net##div[style*="width: 336px; height: 280px;"]
 cartoon3rbi.net##div[style*="width: 728px; height: 90px;"]
-aflamhq.com##div[style*="width:300px;height:250px;"]
+aghanilyrics.com##div[style*="width:160px;height:600px;"]
+aflamhq.com,aghanilyrics.com##div[style*="width:300px;height:250px;"]
 aflamhq.com##div[style*="width:600px;height:300px;"]
 aflamhq.com##div[style*="width:728px;height:90px;"]
 g5y.com##div[style="height:150px;"]
@@ -2284,20 +2324,23 @@ ce4arab.com#?#.vbmenu_popup + br + [id^="post"]:-abp-has(.thead:-abp-contains(ا
 @@||sogarab.com/ads/js/$script,stylesheet,domain=sogarab.com
 @@||xaddad.com/advertisers/$~third-party
 ! Liste blanche pour corriger le blocage strict
-@@||ajax.googleapis.com/ajax/libs/$script,domain=3sk.co|3sk.io|aflamfree.site|almotamayeztech.com|almstbatv.com|arabe-media.com|arabictorrent.net|arablionz.tv|chahid4u.tk|cima4up.co|cima4up.tv|cimaclub.com|cimaclub.org|elmoslsal.com|emotionvideo-tv.com|freecccamnew.com|hawak.tv|lodynet.tv|micano4u.org|movizland.com|movizland.net|movizland.online|movizland.org|okanime.com|rotana.video|toofy.co|toofy.tv
+@@||ajax.googleapis.com/ajax/libs/$script,domain=3sk.co|3sk.io|aflamfree.site|almotamayeztech.com|almstbatv.com|arabe-media.com|arabictorrent.net|arablionz.tv|chahid4u.tk|cima4up.co|cima4up.tv|cimaclub.com|cimaclub.org|elmoslsal.com|emotionvideo-tv.com|fel3arda.com|fel3arda.net|freecccamnew.com|hawak.tv|lodynet.tv|micano4u.org|movizland.com|movizland.net|movizland.online|movizland.org|okanime.com|rotana.video|toofy.co|toofy.tv
 @@||api.peer5.com^$script,domain=arabe-media.com
-@@||bootstrapcdn.com/bootstrap/$script,stylesheet,third-party,domain=almstbatv.com|emotionvideo-tv.com|hawak.tv|rotana.video|toofy.co|toofy.tv
-@@||cdn.jsdelivr.net^$script,domain=almotamayeztech.com|arabe-media.com|faselhd.co|faselhd.com
+@@||bootstrapcdn.com/bootstrap/$script,stylesheet,third-party,domain=almstbatv.com|emotionvideo-tv.com|fel3arda.com|fel3arda.net|hawak.tv|rotana.video|toofy.co|toofy.tv
+@@||cdn.dashjs.org/latest/dash.all.min.js$script,domain=fel3arda.com
+@@||cdn.jsdelivr.net^$script,stylesheet,domain=almotamayeztech.com|arabe-media.com|faselhd.co|faselhd.com|fel3arda.com
 @@||cloudflare.com/ajax/libs/$script,domain=aflamyz.com|almotamayeztech.com|arabe-media.com|arabseed.com|cima4up.co|cima4up.tv|cimaclub.com|cimaclub.org|edu-dz.com|egybest2.com|egybest4.com|faselhd.co|faselhd.com|movizland.net|movizland.org|t7meel.xyz
 @@||code.jquery.com^$script,domain=aflam2you.com|almstbatv.com|egybest2.com|egybest4.com|emotionvideo-tv.com|hawak.tv|rotana.video
 @@||disqus.com/embed.js$script,domain=alm5leb.com|animelek.net
 @@||disquscdn.com^$script,domain=alm5leb.com|animelek.net
+@@||fel3arda.net/searchjs.js$script,domain=fel3arda.com
 @@||fontawesome.com^$stylesheet,domain=cimaclub.com
 @@||fonts.googleapis.com^$stylesheet,domain=3sk.co|almstbatv.com|cimaclub.com|hawak.tv|movs4u.tv|rotana.video
 @@||jwpsrv.com/library/$script,domain=kora-online.tv
+@@||vjs.zencdn.net^$script,domain=fel3arda.com
 @@||vjs.zencdn.net^$script,stylesheet,domain=kora-online.tv
 @@||www.blogger.com/feeds/$script,domain=chahid4u.tk|edu-dz.com
-@@||www.blogger.com/static/$script,domain=chahid4u.tk|edu-dz.com
+@@||www.blogger.com/static/$script,domain=chahid4u.tk|edu-dz.com|fel3arda.com
 @@||www.elmstba.tv/templates/almstba/$script,stylesheet,domain=almstbatv.com
 !
 !----------------------- Exceptions d'éléments -----------------------!
