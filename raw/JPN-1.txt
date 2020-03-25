@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: /wTnIUvcqlws6gUKgYfIQA
+! Checksum: RHoI4M4C4dRMxTo2PkwcUw
 ! Title: AdGuard Japanese filter
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.2.76
-! TimeUpdated: 2020-03-13T20:32:16+03:00
+! Version: 2.0.2.80
+! TimeUpdated: 2020-03-19T14:32:02+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#japanese
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -371,8 +371,10 @@
 !
 ! These rules are against all kinds of ad blocking reinjection/circumvention scripts
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/51663
+@@||popjav.tv^$generichide
 ! https://github.com/AdguardTeam/AdguardFilters/issues/51076
-fe-siken.com,sc-siken.com##+js(no-setTimeout-if, ad, 3000)
+fe-siken.com,sc-siken.com##+js(no-setTimeout-if, /(ad|_0x1ca67c)/)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/50977
 server-setting.info#@#.adsbygoogle
 ! https://github.com/AdguardTeam/AdguardFilters/issues/49015
@@ -503,6 +505,8 @@ anipo.jp#@#.adbanner
 !
 ! Extended CSS rules
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/51663
+popjav.tv#$?#.releated_video_list > li.releated_video:has(> div.releatedadsholder) { visibility: hidden !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/47356
 himasoku.com#?#.article-body > center:has(> a[href^="https://wu."] > img)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/45195
@@ -538,6 +542,9 @@ mindhack2ch.com#?#.article-body > .ad:has(> .adsbygoogle)
 mindhack2ch.com#?#.article-body > .rss:has(> script)
 mindhack2ch.com#?#.article-post-bottom > .rss-article:has(> .rss-article-item)
 !
+limo.media#?#.right-column > div[class^="right-column-block"]:has(> h3:contains(PR))
+limo.media#?#.right-column > div.right-column-block:has(> div[id^="outbrain_widget_"])
+limo.media#?#.article-body > h4:contains(参考記事)
 followcheck.itby.net#?#.uk-grid > div[class^="uk-width-medium-"]:has(> div > ins.adsbygoogle)
 geeksokuhou.net#?#.main-image-in > .blogroll-wrapper:has(> .blogroll-column > b > script:contains(blogroll_channel_id))
 ascii2d.net#?#.col-lg-4 > .p-t-1:has(> h5:contains(広告))
@@ -735,11 +742,11 @@ _ds_adtag_
 !
 ! /banner/banner_ - if it is necessary, make this rule domain specific
 !
+popjav.tv##.poplayer
 eromanga-time.com###spwrapper
 sc-siken.com##.ad2
-||tr.twipple.jp/common/images/*300_100_
-||tr.twipple.jp/common/images/*_300_100.
-||tr.twipple.jp/common/images/*300x100.
+limo.media##div[class^="affi-"]
+/\/common\/images\/.*[_-x]?300?[_-x]100?[_-x.]*/$domain=tr.twipple.jp
 tr.twipple.jp##a[href^="https://join.biglobe.ne.jp/"]
 /img/banner/*$domain=fe-siken.com|gekiura.com
 eromanga-yoru.com###spwrapper
