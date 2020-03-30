@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 202003251827
-! Title: ABPVN List [phimdi.com]
-! Last modified: 25 Mar 2020 18:27 UTC+7
+! Version: 202003300823
+! Title: ABPVN List [tvhay.org]
+! Last modified: 30 Mar 2020 08:23 UTC+7
 ! Expires: 1 days (update frequency)
 !
 ! ABPVN List filter
@@ -57,17 +57,17 @@ $webrtc,domain=phim14.net|phimotv.net|appvn.com
 ||7mimg.7m.$domain=vn2.7msport.com|vn.7msport.com
 ||8bongda.com/wp-content/uploads/2016/06/demo120x400new.jpg
 ||8bongda.com^*.gif
+||a.vdo.ai^$domain=truyencv.com
 ||ad-*.24hstatic.com^*/upload/
 ||admin.phim4k.net^*/banner
 ||ads*.autodaily.vn
 ||ads.8live.com^$popup
-||affiliate.k4.tinhte.vn^
 ||ahaclip.com^*.gif$domain=mmo4me.com
 ||anh.24h.com.vn/upload/^*.gif
 ||anime47.com^*.gif
 ||animevsub.tv^*.gif$image
 ||api.xemtvhd.com$subdocument
-||bam.nr-data.net
+||apitvh.net^*.xml$xmlhttprequest
 ||banhtv.net^*.gif$image
 ||banthangtv.b-cdn.net^*.gif
 ||baobongda.net/files/*.gif
@@ -152,7 +152,7 @@ $webrtc,domain=phim14.net|phimotv.net|appvn.com
 ||hphim.tv^*.xml$xmlhttprequest
 ||i.blogtruyen.vn/407/407018/34-4xjwsrsyjwvb5a7.jpg$image
 ||i.imgur.com^$domain=chophanthiet.us|nhacdj.vn|phimmedia.tv|phim.media|phim13.net|truyenfull.net
-||i.imgur.com^*.gif$domain=8bongda.com|bongdatv.net|mybongda.com|tructiepbongda.xyz|tv.101vn.com|xemtivingon.com|tvhay.org|banhtv.net|vuviphim.com|90m.tv|phimgi.tv|binhluan.tv|vuviphimmoi.com|phimnhe.net|11met.live|hoitruyentranh.com|90p.tv|mythethao.net
+||i.imgur.com^*.gif$domain=8bongda.com|bongdatv.net|mybongda.com|tructiepbongda.xyz|tv.101vn.com|xemtivingon.com|tvhay.org|banhtv.net|vuviphim.com|90m.tv|phimgi.tv|binhluan.tv|vuviphimmoi.com|phimnhe.net|11met.live|hoitruyentranh.com|90p.tv|mythethao.net|baprang.tv
 ||i.k8info.com/images/promo/$third-party
 ||igo.5giay.vn/mobile/
 ||igo.5giay.vn^*.gif
@@ -243,6 +243,7 @@ $webrtc,domain=phim14.net|phimotv.net|appvn.com
 ||salaphim.com/images/$image
 ||sapo.vn/blog/wp-content/uploads/2018/07/Banner-Gift.gif$image
 ||senpay.vn/widget/
+||sg-test-11.slatic.net/other/lzd-ad/
 ||shoppanda.co/partners/
 ||sohagame.vcmedia.vn/swf/
 ||ss-statics.catscdn.vn/data/themes/saostarv5/assets/js/adsdefine/
@@ -368,6 +369,7 @@ $webrtc,domain=phim14.net|phimotv.net|appvn.com
 ||adv.vcmedia.vn^
 ||aenan.pw^
 ||aff.opus-static.com^$third-party
+||affiliate.k4.tinhte.vn^
 ||aj1010.online^
 ||amcdn.vn^
 ||an.dongphim.net^
@@ -382,6 +384,7 @@ $webrtc,domain=phim14.net|phimotv.net|appvn.com
 ||aspampbrr.online^
 ||aspanyarc.club^
 ||at.hdsieunhanh.com^
+||bam.nr-data.net
 ||banner.5giay.vn^
 ||bbtrf.info^
 ||binomo.com^$popup,third-party
@@ -401,6 +404,7 @@ $webrtc,domain=phim14.net|phimotv.net|appvn.com
 ||debet.com^$popup,third-party
 ||delivery.vungtv.com^
 ||dorehernowi.pro^
+||ds88pc0kw6cvc.cloudfront.net^
 ||endpoint.terratraf.com^$third-party
 ||escortyasami.site^
 ||fabet.com^$popup,third-party
@@ -456,6 +460,7 @@ $webrtc,domain=phim14.net|phimotv.net|appvn.com
 ||vempozah.net^
 ||vietnamnetad.vn^$third-party
 ||waust.at^$script
+||yepsobtax.com^
 ||yoads.net^
 ||yoads.network^
 ||yomedia.vn^$third-party
@@ -528,10 +533,10 @@ appvn.com,aphim.org##.linhnguyen-modal-bg
 autodaily.vn,xehay.vn###banner3double
 baiviet.com###text-16
 baiviet.com###text-9
-banhtv.net##.preload
 banhtv.net##a[href^="https://hapicasino.com/"]
 banhtv.net##div.web > center
 banhtv.net##div[class^="ab"]
+banhtv.net,baprang.tv##.preload
 banthang.tv##.adsInPlayer
 banthang.tv##.adsPlayerBanner
 banthang.tv##.ballon-bottom
@@ -548,6 +553,7 @@ baobinhthuan.com.vn###ads_2_col_bot
 baomoi.com###BaoMoi_Top
 baomoi.com##.fyi--group:nth-of-type(2)
 baomoi.com##.is-pr
+baprang.tv##.adpia_banner
 bilutv.org###ads_popup_pc
 bilutv.org###fanback
 bilutv.org###valueoption_300_250
@@ -792,7 +798,7 @@ phim4400.cf###DADrightclick
 phimgi.tv###lixi88-ads-left
 phimgi.tv###mobile-catfix
 phimgi.tv###sobet-ads-right
-phimgi.tv,vtv16.info###pc-catfix
+phimgi.tv,vtv16.info,baprang.tv###pc-catfix
 phimhayplus.com###close_banner
 phimhoathinh.biz###footer-ads-manga
 phimmedia.tv###mobile_content_bottom
@@ -1042,7 +1048,7 @@ yeuphimmoi.com,vuighe.tv##.balloon-block
 @@||vurle.top$generichide
 @@||web1.blvideo.net$generichide
 @@||win10.vn$generichide
-bilumoi.com,bilutv.org,anime47.com#@#.afs_ads
+bilumoi.com,bilutv.org,anime47.com,baprang.tv#@#.afs_ads
 derow.win#@#.ad-center
 echip.pro,razorphim.com,sachmoi.net,tailieupro.com,kenhtao.net,kientruc360.info#@##adsense
 howkteam.vn,fptplay.vn#@#.adsbox
