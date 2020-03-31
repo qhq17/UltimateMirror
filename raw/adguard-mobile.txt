@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: 6eJVv14E99UkZ+p5VEgzmw
+! Checksum: u9fBspsTtRfXT3kJ0muGzQ
 ! Title: AdGuard Mobile Ads filter
 ! Description: Filter for all known mobile ad networks. Useful for mobile devices.
-! Version: 2.0.11.53
-! TimeUpdated: 2020-03-23T18:30:18+03:00
+! Version: 2.0.11.69
+! TimeUpdated: 2020-03-31T19:30:13+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#mobile
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -1616,6 +1616,8 @@ deviantart.com#$#div[class*="dp-ad-"] {height: 0!important; width: 0!important; 
 !
 ! ##### TEMPORARY END #####
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/52091
+businessinsider.co.za#@#.ad-loaded
 ! https://github.com/AdguardTeam/AdguardFilters/issues/52046
 @@||yastatic.net/pcode/adfox/header-bidding.js$domain=kp.ru
 @@||yastatic.net/pcode/adfox/loader.js$domain=kp.ru
@@ -1873,9 +1875,6 @@ deviantart.com#@#.mobile-ad
 @@||olx.ua/i2/ajax/ad/
 ! Viber[App] - the problem with the stickers store
 @@||market.viber.com^$elemhide
-! Fixing pornhub.com
-@@||pornhub.com^$subdocument
-@@||pornhubthbh7ap3u.onion^$subdocument
 ! http://www.reddit.com/r/Android/comments/3422vw/a_quick_fix_for_everyone_having_mms_issues_with/
 @@||mms.vtext.com^$document
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/310
@@ -1923,12 +1922,23 @@ m.news.de##.unisterAdsStart
 !
 ! Common names
 ! ##amp-embed[type="outbrain"]
-futurezone.de,amp.infranken.de,abendblatt.de,mobil.stern.de,bunte.de,morgenpost.de,amp.n-tv.de,amp.mopo.de,rtl.de,amp.tagesspiegel.de,transfermarkt.de,filmstarts.de,sportbuzzer.de,m.gala.de,amp.vip.de,derwesten.de,waz.de,amp.express.de,www-ilmessaggero-it.cdn.ampproject.org,www-express-co-uk.cdn.ampproject.org,dailystar.co.uk,www-dailystar-co-uk.cdn.ampproject.org,express.co.uk,chip.de,asahi.com,mainichi.jp,jp.ign.com##amp-embed[type="outbrain"]
+androidpolice.com,futurezone.de,amp.infranken.de,abendblatt.de,mobil.stern.de,bunte.de,morgenpost.de,amp.n-tv.de,amp.mopo.de,rtl.de,amp.tagesspiegel.de,transfermarkt.de,filmstarts.de,sportbuzzer.de,m.gala.de,amp.vip.de,derwesten.de,waz.de,amp.express.de,www-ilmessaggero-it.cdn.ampproject.org,www-express-co-uk.cdn.ampproject.org,dailystar.co.uk,www-dailystar-co-uk.cdn.ampproject.org,express.co.uk,chip.de,asahi.com,mainichi.jp,jp.ign.com##amp-embed[type="outbrain"]
 ! ##amp-embed[type="taboola"]
 tomshardware.com,techbook.de,sueddeutsche.de,hurriyet.com.tr,elmundo.es,timesnownews.com,biz-journal.jp,sankei.com,m.mynet.com,amp.ibtimes.co.uk,lifehacker.com,jalopnik.com,ndtv.com,gizmodo.com,cnbc.com##amp-embed[type="taboola"]
 ! ##amp-ad
-dobreprogramy.pl,amp.pcwelt.de,tomshardware.com,techbook.de,forbes.com,auto-swiat.pl,dialog.ua,mobile.reuters.com,spiegel.de,amp.welt.de,forum.xda-developers.com,sueddeutsche.de,amp.usatoday.com,m.gadgets.ndtv.com##amp-ad
+komputerswiat.pl,dobreprogramy.pl,amp.pcwelt.de,tomshardware.com,techbook.de,forbes.com,auto-swiat.pl,dialog.ua,mobile.reuters.com,spiegel.de,amp.welt.de,forum.xda-developers.com,sueddeutsche.de,amp.usatoday.com,m.gadgets.ndtv.com##amp-ad
 !
+enewspaper.latimes.com##div[id^="ext-readerbannerad"]
+perezhilton.com##.anchor-spot
+bangumi.org###mobile_ad_area
+komputerswiat.pl###page > article > div[style^="margin:"] > p[style="font-size:9px;color:#696969;font-family:Verdana;text-align:left;margin:0;padding:0;line-height:normal;width:100%"]
+m.haberler.com##.hbMain > input[type][value="manset"] + div[style]
+kotaku.com##.js_post-content > p[class] + div[class]:not(.has-video):not(.instream-permalink) > aside[class]
+1reg.by##.article-content-inner > div:not([class]) > p ~ div[class][style]
+scmp.com##div[class^="wrapper__mobile-wide-ad-container-"]
+ufukgazetesi.net##.footer_fix_reklam
+m.thepaper.cn##iframe[src^="https://adproject.thepaper.cn/"]
+mynet.com##.adv-item-box
 google.de,sueddeutsche.de##amp-ad + div[class^="css-"]
 cheb.ru##.topbanpda
 cheb.ru###content > div[id="text"] > div[class] > a[target="_blank"] > img
