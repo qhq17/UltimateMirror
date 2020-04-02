@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: RHoI4M4C4dRMxTo2PkwcUw
+! Checksum: sETD28yZCJzw6Bhj3odu/A
 ! Title: AdGuard Japanese filter
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.2.80
-! TimeUpdated: 2020-03-19T14:32:02+03:00
+! Version: 2.0.2.84
+! TimeUpdated: 2020-04-01T20:04:23+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#japanese
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -371,6 +371,12 @@
 !
 ! These rules are against all kinds of ad blocking reinjection/circumvention scripts
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/52566
+ad-contents.jp##+js(addEventListener-defuser, load, ad blocker)
+!+ NOT_PLATFORM(ext_safari)
+ad-contents.jp#$#.ui-wrapper { display: block !important; }
+!+ NOT_PLATFORM(ext_safari)
+ad-contents.jp#$#.mid-rectangle { display: none !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/51663
 @@||popjav.tv^$generichide
 ! https://github.com/AdguardTeam/AdguardFilters/issues/51076
@@ -742,6 +748,8 @@ _ds_adtag_
 !
 ! /banner/banner_ - if it is necessary, make this rule domain specific
 !
+5ch.net##.ADVERTISE_AREA
+5ch.net##body > div[style*="margin-top:10px;margin-bottom:10px;width:100%;text-align:center;"] > div[style*="background-color:#ccffcc"]
 popjav.tv##.poplayer
 eromanga-time.com###spwrapper
 sc-siken.com##.ad2
