@@ -254,8 +254,6 @@ pinterest.*##.GrowthUnauthPinImage > a > div[class^="Jea"]:has(button[class^="no
 pinterest.*##.Hsu.iyn.zI7:nth-of-type(2) > div > .FullPageModal__scroller
 ! https://github.com/uBlockOrigin/uAssets/issues/5030#issuecomment-546342839
 pinterest.*##body:style(overflow-y: scroll !important;)
-! https://github.com/uBlockOrigin/uAssets/issues/7104
-pinterest.*##[style^="background-color: rgba(0, 0, 0"]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2093
 fxporn69.*##+js(abort-on-property-write.js, document.oncontextmenu)
@@ -1651,7 +1649,8 @@ cyberciti.biz##+js(set-constant.js, canRunAds, true)
 diynetwork.com##.o-AdhesionNotifier
 
 ! https://github.com/uBlockOrigin/uAssets/issues/4953
-tapatalk.com##+js(abort-on-property-read.js, IS_VIP_PLUS)
+! disabled for #7183
+!tapatalk.com##+js(abort-on-property-read.js, IS_VIP_PLUS)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/4960
 bloombergquint.com##+js(abort-on-property-write.js, addLinkToCopy)
@@ -2906,9 +2905,6 @@ samehadaku.tv##+js(acis, document.onkeydown)
 samehadaku.tv##+js(acis, window.addEventListener, ctrlKey)
 samehadaku.tv##+js(aopr, disableSelection)
 
-! https://github.com/easylist/EasyListHebrew/issues/324#issuecomment-565395081
-themarker.com##[href*="4.90"]:nth-ancestor(4)
-
 ! https://github.com/uBlockOrigin/uAssets/issues/6683
 ||maskmagazine.com/assets/substrate.png$image,1p
 
@@ -3661,3 +3657,55 @@ photoshop-online.biz##div.aslot
 
 ! https://github.com/NanoMeow/QuickReports/issues/3419
 @@||auslogics.com/*/js/ads.js$script,1p
+
+! https://github.com/NanoMeow/QuickReports/issues/3447
+loudersound.com##+js(aopr, _sp_._networkListenerData)
+
+! https://github.com/NanoMeow/QuickReports/issues/3438
+kiminime.com##+js(aeld, keydown, ctrlKey)
+
+! okaeriworld .com right click, select, ctrl-U
+okaeriworld.com##+js(acis, document.oncontextmenu)
+okaeriworld.com##+js(acis, disableSelection, reEnable)
+
+! https://github.com/uBlockOrigin/uAssets/issues/7176
+livedays.jp##p,ul,ol:style(-webkit-touch-callout: default !important; -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important;)
+
+! https://www.reddit.com/r/uBlockOrigin/comments/fsgpzp/adblock_detected_on_this_website/
+boomlive.in###ad_blocker_detect_dialog
+boomlive.in##.advert-panel
+
+! lewdzone.com adblock notice
+lewdzone.com##div.loading-links
+
+! https://www.reddit.com/r/uBlockOrigin/comments/fsupgm/best_way_to_enable_scrolling_after_hiding_a_popup/
+greatist.com###modal-host
+greatist.com##body:style(overflow: auto !important;)
+
+! https://github.com/NanoMeow/QuickReports/issues/3458
+hearthstone-decks.net##+js(aopw, KillAdBlock)
+
+! https://github.com/AdguardTeam/AdguardFilters/issues/52709
+bejson.com##+js(set, killads, true)
+
+! interviewgig .com select - copy
+interviewgig.com##+js(acis, document.onselectstart)
+
+! https://github.com/uBlockOrigin/uAssets/issues/7184
+tv-asahi.co.jp##+js(aeld, contextmenu)
+
+! https://github.com/NanoMeow/QuickReports/issues/3465
+nascar.com##+js(aopr, HTMLIFrameElement)
+
+! https://github.com/NanoMeow/QuickReports/issues/3469
+photorecon.net##+js(acis, document.oncontextmenu)
+photorecon.net##+js(acis, disableSelection, reEnable)
+photorecon.net##body:style(-webkit-touch-callout: default !important; -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important;)
+
+! https://github.com/NanoMeow/QuickReports/issues/3472
+full-anime.fr##+js(acis, document.getElementById, adblock)
+
+! https://github.com/NanoMeow/QuickReports/issues/3480
+daytonflash.com##+js(acis, disableSelection, reEnable)
+daytonflash.com##+js(aopw, document.oncontextmenu)
+daytonflash.com##.unselectable:style(-webkit-touch-callout: default !important; -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important;)
