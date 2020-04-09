@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: 6J+DgNCb5jf5db8fCiTMkA
+! Checksum: zmwT/cByErQ/DJ2ym58kcQ
 ! Title: AdGuard Tracking Protection filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.13.19
-! TimeUpdated: 2020-04-06T16:03:54+03:00
+! Version: 2.0.13.24
+! TimeUpdated: 2020-04-08T23:31:43+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#privacy
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -3588,6 +3588,7 @@ nethunt.com/api/v1/track/email/$image
 !+ NOT_PLATFORM(ios, ext_safari, ext_android_cb)
 ||tags.news.com.au^$~script
 !
+||analytics.htmedia.in^
 ||spxl.socy.es^
 ||telemetry.tradingview.com^
 ||tagger.ope.scmp.com^
@@ -5117,7 +5118,6 @@ charlestownwyllie.oaklawnnonantum.com^
 /autotrack.js
 /playertracking/*
 /analyticsmediator.js
-.cloudfront.net/atrk.js$third-party
 /pixel.*/track/*
 /mendelstats.
 /clarity-*.js
@@ -5774,23 +5774,6 @@ abp?type=js&session$domain=prosieben.de|sat1.de|kabeleins.de|sixx.de|prosiebenma
 ||goto.kz/img.php^$third-party
 ||googlesyndication.com/safeframe/$third-party
 ||googletagmanager.com/gtm.js?$third-party
-||google-analytics.com/__utm.gif
-||google-analytics.com/analytics.js
-||google-analytics.com/analytics.js$third-party
-||google-analytics.com/collect
-||google-analytics.com/collect$third-party
-||google-analytics.com/cx/api.js
-||google-analytics.com/cx/api.js$third-party
-||google-analytics.com/ga.js
-||google-analytics.com/ga_exp.js
-||google-analytics.com/ga_exp.js$third-party
-||google-analytics.com/plugins/
-||google-analytics.com/plugins/$third-party
-||google-analytics.com/r/collect^
-||google-analytics.com/r/collect^$third-party
-||google-analytics.com/siteopt.js?
-||google-analytics.com/siteopt.js?$third-party
-||google-analytics.com/urchin.js$third-party
 ||goodbookbook.com/_.gif?_
 ||front.sspicy.ru/collect?$third-party
 ||findme.ru/Counter$third-party
@@ -6051,7 +6034,6 @@ msn.com##.trc_related_container
 ||shazoo.ru/pixel/
 ||wix.com/_api/blog-social-counters/
 ||sitebooster.com/sb/wix/p?$third-party
-||unacademy.com/googleAnalytics.js
 ||data.reactandshare.com/track.gif
 ||merlininkazani.com/sayac
 ||ip-whois.net/img_ip*.php$third-party
@@ -6265,7 +6247,6 @@ mp3.run.az###lsidebar > .mpblok:last-child
 ||fupa.net/fupa/api.php?p=besucher_klick
 ||kickass.unlockproj.party/analyze*.js
 ||7days.ru/ajax/route/browser
-||turizm.fins.az/themes/turizm/js/googleanalytics.js
 ||abendblatt.de/stats
 ||online.hentai-share.me/templates/anime-share2/js/metrika.js
 ||online.hentai-share.me/templates/anime-share2/js/liveinternet.js
@@ -7138,7 +7119,6 @@ link.gmapp*.net$image
 ||geoinfo.i2w.io^
 ||cmplay.did.ijinshan.com^
 ||tracking.i2w.io^
-||google-analytics.com^$domain=avgle.com
 ||detect.rayjump.com^
 ||26f396e0b71780f057be4d4af8ebe55b.com^
 ||a.appbaqend.com^
@@ -7494,9 +7474,15 @@ link.gmapp*.net$image
 !
 ! Exception rules that fix different issues caused by blocking trackers
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/53129
+! https://github.com/AdguardTeam/AdguardFilters/issues/52986
+@@||experience.tinypass.com/xbuilder/experience/execute?aid=$domain=waz.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/52918
 @@||google-analytics.com/analytics.js$domain=waipu.tv
 @@||google-analytics.com/gtm/js^$domain=waipu.tv
+! https://github.com/AdguardTeam/AdguardFilters/issues/53007
+@@||googletagmanager.com/gtag/js$domain=riamo.ru
+@@||mc.yandex.ru/metrika/tag.js$domain=riamo.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/52930
 @@||google-analytics.com/analytics.js$domain=home24.de
 @@||google-analytics.com/gtm/js?id=$domain=home24.de
