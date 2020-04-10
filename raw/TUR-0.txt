@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: A5IOGsjJbvpN4dl11bFPNQ
+! Checksum: D+NpjPgsMC+OPJYIXU3UtQ
 ! Title: AdGuard Turkish filter
 ! Description: Filter list that specifically removes ads on websites in Turkish language.
-! Version: 2.0.15.32
-! TimeUpdated: 2020-04-09T00:02:27+03:00
+! Version: 2.0.15.36
+! TimeUpdated: 2020-04-09T17:30:23+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#turkish
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -303,7 +303,6 @@
 ||savoy.storage.cubecdn.net^
 ||segmentify.com^$third-party
 ||sohbetpaneli.xyz^$third-party
-||sunucu7.com^$third-party
 ||sw1block.com^$third-party
 ||tagon.co^$third-party
 ||tempobanners.com^$third-party
@@ -795,6 +794,7 @@ vizyonfilmizle.tv#$?#.fancybox-overlay-fixed[-ext-has="> div"] { display: none!i
 vizyonfilmizle.tv#$?#.fancybox-lock body[-ext-has="> div"] { overflow: visible!important; }
 vizyonfilmizle.tv#$?#html[-ext-has="> body"] { overflow: visible!important; }
 !
+sivilalan.com#?#.herald-sidebar > div.widget:has(a[target="_blank"][rel^="noopener"] > img)
 yesiligdir.com#?#.content-block > div.block:has(> div.block-content > a[target="_blank"] > img)
 hdfilmcehennemi.io#?##sidebar > .widget > .textwidget2:has(> a[href][target="_blank"] > img)
 dizirun.com#$?#.rek-0 { remove: true; }
@@ -2082,7 +2082,8 @@ filmzal.com,film-dizi.com,720pizleme.com,filmmodu.co,dizifilmix.org,sineturk.pw,
 t54.com.tr,haber266.com,safihaber.com,nazilliadalet.com,bizimyaka.com,spor46.com,akdeniztelgraf.com,ispartamhaber.com,haberhurriyeti.com,mercekhabergazetesi.com,gaziantepinhabercisi.com,gurbettekierzurum.com.tr,haberaydin.com,turkiyemtv.com.tr,lidergazetesi.com,haberso.com,aydingazetesi.com,aydinyenihaber.com,ajanscaldiran.com,haber28.com,netgaste.com,sakaryadanhaber.com,erzurumhaber.com.tr,yenidevir.com.tr,golcukgundem.com,elbistanolay.com,cthaber.com,mihraphaber.com,pamukovahalk.com,medyabar.com,bgazete.com.tr,kartepegazetesi.com.tr,istekocaeli.com,mansetaydin.com,sesgazetesi.com.tr,bugunkocaeli.com.tr,kocaeligazetesi.com.tr,milligazete.com.tr,hbrma.com,tanisgazetesi.com.tr,elbistankaynarca.com,guncelkocaeli.com,enkocaeli.com##.rkm
 !
 !
-gebzeyenigun.com##.frontendAd
+r10.net##.threadList > div.head + form[action] > div.announcements ~ div[class][data-type]
+gazeteyenigun.com.tr###header-advertise
 yabancidizi.vip##div[data-type="pgskin"]
 yesiligdir.com##.asd
 ||kent51.net/images/userfileman/pchospital.gif
@@ -3368,7 +3369,7 @@ shallwe.com.tr,paragezegeni.com,akillitelefon.com##.adace-slot-wrapper
 ||gittigidiyor.com/affiliate_*.js
 cimri.com###main_container a[id^="product_detail_ad_"]
 cimri.com###main_container > a[href][style][data-type="page_skins"][rel="nofollow noopener"]
-edirneolay.com,ajanskarabuk.com,canakkaletv.com.tr,larende.com##.frontendAd
+denizliekspres.com.tr,afyonhaber.com,duzcepusula.com,gebzeyenigun.com,edirneolay.com,ajanskarabuk.com,canakkaletv.com.tr,larende.com##.frontendAd
 filmmodu.com##a[href^="https://bit.ly/"][target="_blank"][rel="nofollow"]
 ||goo.gl/DX9nUd$popup,domain=technopat.net
 ||technopat.net/wp-content/uploads/*/msi-TECHNOPAT-GE75-siteskin-*.jpg
@@ -5732,43 +5733,18 @@ guncelgazete.com##td[width="215"][valign="top"] > table[width="200"][border="0"]
 ||serdardulger.com/dosya/$domain=yesilcin.com
 ||serv.tooplay.com/*roll?session_id=
 ||simdiarabul.net/reklam
-||sinemapub.net/wp-content/plugins/background-manager/resources/js/pub.js
-||sonhaber.tv/banner/
-||spor01.com/wp-content/uploads/*reklam*.jpg
-||sporx.com/_img/banner/
-||sporx.com/tv/_iframe/embed_videojs_anasayfa_samsung.php
-||static.birgun.net/resim/ads/
-||sunucu7.com/js/plus90window.js
-||superhaber.tv/EmlakKonut_970x200_guven.gif
-||superhaber.tv/assets/premium/superhaber/ad/
 ||superhaber.tv/mahall.jpg
 ||superyenihaber.net/js/banner.js
 ||tarsushaber.com/*/banner/
 ||tarsushaber.com/banner/
-||tasit.com^$domain=ortadogugazetesi.net
-||tencere.tv/banner_
-||tenceretv.com/api/gununmenusu.aspx
-||tiparus.com/banner.js
-||tmgrup.com.tr/*/advmanager.js
-||torrent-oyun.com/popup.js
-||tosunkaya.com/pmajor.min.js
-||tr.motorsport.com/wp-content/uploads/*-banner-
+||cdn.dopa.com/js/jump.js
 ||turizmhaberleri.com/img/banner/$image
 ||turizmhaberleri.com/img/reklamburada.png
-||turkmmo.com/theme/portal/pageskin/
 ||turktime.com/banner
-||turktime.com/showad.asp
 ||ulasimonline.com/*/banner/
-||uplifers.com/wp/wp-content/banners/
 ||vatandanhaber.com//files/uploads/walkertone.png
-||vdaffiliates.com/banner/
 ||vidout.net/vidoutMedia/ads/
 ||www.bolununsesi.com/ilangorsel/
-||youtube.com/embed/NRvvmPLtwRM^$domain=karabuknethaber.com
-||youtube.com/embed/cDr4cjz0pZI$domain=hdfilmdeposu.com.tr
-||zapkolik.vod.cubecdn.net/*.mp4^$domain=hdfilmakinasi.com
-||zaytung.com/banner
-||zaytung.com/images/alternatif_okullar.gif
 !
 !
 ! START: Yandex
