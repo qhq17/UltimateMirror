@@ -173,7 +173,10 @@ sportingnews.com##.grid-aside
 glassdoor.*##[id*="-AdSlot-"]
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/80#issuecomment-578533009
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/102#issuecomment-605393551
 tass.com##div[class^="adsSlot"]
+tass.com##.section-grid__col:has([class^="adsSlot"])
+tass.com##.news-list-content__aside
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/82#issuecomment-579542164
 arabiaweather.com##.mpu-card
@@ -206,6 +209,16 @@ gpfans.com##.advertise-panel
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/98#issuecomment-596267883
 sat24.com###headercontent-onder
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/101#issuecomment-604470628
+vice.com##.short-form-right-rail__content
+
+# https://github.com/NanoMeow/QuickReports/issues/3448
+downdetector.*,allestoringen.*,xn--allestrungen-9ib.*##.ad + .card.my-3:style(margin-top: 0.5rem !important;)
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/105#issuecomment-609855620
+shoutwiki.com###content.mw-body:style(margin-right: 8px !important;)
+shoutwiki.com##.monobook-ad
 
 # End Multilingual
 
@@ -841,7 +854,9 @@ globalnews.ca##.l-main__flyers
 techjunkie.com##.qualcont
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/45#issuecomment-520242512
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/104#issuecomment-609051804
 mediabiasfactcheck.com##center:has(script[src*="/adsbygoogle."])
+mediabiasfactcheck.com##tr:has(.adsbygoogle)
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/45#issuecomment-520242717
 rugbyworld.com##.apester-element
@@ -1347,8 +1362,11 @@ douglascountysentinel.com,hpenews.com##.dfpAd
 forum.xda-developers.com##.leaderboard
 
 # https://github.com/NanoMeow/QuickReports/issues/3136
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/102#issuecomment-605393557
 worldometers.info##.container > div:has(:scope > .adsbygoogle)
+worldometers.info##.container > .row:first-of-type
 worldometers.info##.sharewrap
+worldometers.info##.col-md-4
 
 # https://github.com/NanoMeow/QuickReports/issues/3137
 m4uhd.net##.center:has(:scope > [id*="ScriptRoot"])
@@ -1474,6 +1492,57 @@ cheatsheet.com##body:style(padding-top: 0px !important;)
 
 # https://github.com/NanoMeow/QuickReports/issues/3389
 unix.com##[id^="zone-"]
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/101#issuecomment-604470687
+condoblues.com##script[src*="nmedianet"]:nth-ancestor(1)
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/102#issuecomment-605393582
+indy100.com##amp-list:nth-ancestor(1)
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/102#issuecomment-605393587
+worldatlas.com##.dynamicInsert-block
+
+# https://github.com/NanoMeow/QuickReports/issues/3447
+loudersound.com##.newsletter-signup
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/103#issuecomment-606680593
+namepros.com##.npDisclaimer + div
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/103#issuecomment-606680651
+blackhat.directory##div[id^="ad"][align="center"]
+blackhat.directory##.row:has(:scope > div[id^="ad"][align="center"])
+blackhat.directory##.row:has(:scope > .row > div[id^="ad"][align="center"])
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/103#issuecomment-606680705
+ip-tracker.org###rekl
+
+# https://github.com/NanoMeow/QuickReports/issues/3465
+nascar.com##.nascar-advertisement
+
+# https://github.com/NanoMeow/QuickReports/issues/3479
+tenforums.com##.chill
+
+# https://github.com/NanoMeow/QuickReports/issues/3479
+sevenforums.com##.media400:has(.adsbygoogle):not(:has(.myh3))
+sevenforums.com###posts > .media400
+sevenforums.com##.chillad
+
+# https://github.com/NanoMeow/QuickReports/issues/3481
+techrepublic.com##.content > div:has(:scope > .sharethrough-article)
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/104#issuecomment-609051813
+newrepublic.com##.inserted-dfp
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/105#issuecomment-609855684
+getfootballnewsfrance.com##div[id^="rcjsload"]
+getfootballnewsfrance.com##.widget_text
+
+# https://github.com/NanoMeow/QuickReports/issues/3534
+signup.com##.right-column:has(#right_ad_content)
+signup.com##.right-content:has(#right_ad_content)
+
+# https://github.com/NanoMeow/QuickReports/issues/3548
+gamepress.gg##.news-ads-top
 
 # End English
 
@@ -1613,7 +1682,7 @@ gazzetta.it###l-main:style(padding-top: 0px !important;)
 # Japanese
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/14#issuecomment-469960209
-atwiki.jp##.at_h_clearfix
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/106
 atwiki.jp##.adsbygoogle
 atwiki.jp###ads
 
@@ -1735,6 +1804,12 @@ plejada.pl###stickyWrapperAlone
 
 # https://github.com/NanoMeow/QuickReports/issues/2981
 queer.pl##.box-adv-super
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/104#issuecomment-609051824
+!#if !env_mobile
+photoblog.pl##.frontpage-teaser-photo-container:style(height: 170px !important)
+photoblog.pl##.frontpage-teaser-photo-container > h1:style(margin-top: 30px !important)
+!#endif
 
 # End Polish
 
