@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: u9fBspsTtRfXT3kJ0muGzQ
+! Checksum: C/Hyk4E/yssYixMeRLW76Q
 ! Title: AdGuard Mobile Ads filter
 ! Description: Filter for all known mobile ad networks. Useful for mobile devices.
-! Version: 2.0.11.69
-! TimeUpdated: 2020-03-31T19:30:13+03:00
+! Version: 2.0.11.91
+! TimeUpdated: 2020-04-12T21:30:16+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#mobile
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -183,6 +183,9 @@
 ||plugin.mobopay.baidu.com^
 ||mo.freeindoapp.com^
 !
+||restartad.com^
+||appgiftwall.oss-us-west-1.aliyuncs.com^
+||appgift.sinaapp.com^
 ||ad.mail.ru^|
 ||video.intl.xiaomi.com^
 ||servedby.o2.co.uk^
@@ -1204,9 +1207,15 @@ westseattleblog.com#@#.header-ad
 !
 ! Extended CSS rules
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/52906
+lifehacker-com.cdn.ampproject.org#?#article > div[class]:has(> aside > div > div > div > a[data-amazontag])
+lifehacker-com.cdn.ampproject.org#?#article > div[class]:has(> div[class] > p[class]:contains(Advertisement))
 ! https://github.com/AdguardTeam/AdguardFilters/issues/51864
 dcard.tw#?#main > div[role="main"] > div[class*="-"] > div[class]:has(> div[class][style] a[target="_blank"] img)
 dcard.tw#?#div[class][style]:has(> div[id^="div-gpt-ad-"])
+! https://github.com/AdguardTeam/AdguardFilters/issues/52973
+investing.com#?##siteWrapper > div.wrapper > section.boxItem:has(> div.OUTBRAIN)
+investing.com#?##siteWrapper > div.wrapper > section.boxItem:has(> ins.adsbygoogle)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/51614
 m.tokopedia.com#?#div[data-testid="masonryContainer"] > div[class^="css-"] > div[data-testid="masonryProduct"]:has(> div[data-testid="master-product-card"] > .unf-card > .product-cardv2__container > div[class^="css-"] > a[data-cy="prodNameLink"] > div[class^="css-"] > div[data-testid="linkProductTopads"])
 ! https://github.com/AdguardTeam/AdguardFilters/issues/50710
@@ -1826,8 +1835,6 @@ arseblog.com#@#.header-ad
 @@||auto-api.yelp.com
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/1942
 @@||olx.ua/*/observed/getads/?json=
-! https://github.com/AdguardTeam/ExperimentalFilter/issues/1958
-@@||ana.112.2o7.net/b/ss/
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/1858
 @@||pdk.theplatform.com/*/pdk/js/plugins/doubleclick.js$domain=cbc.ca
 @@||imasdk.googleapis.com/js/core/*$domain=cbc.ca
@@ -1928,6 +1935,24 @@ tomshardware.com,techbook.de,sueddeutsche.de,hurriyet.com.tr,elmundo.es,timesnow
 ! ##amp-ad
 komputerswiat.pl,dobreprogramy.pl,amp.pcwelt.de,tomshardware.com,techbook.de,forbes.com,auto-swiat.pl,dialog.ua,mobile.reuters.com,spiegel.de,amp.welt.de,forum.xda-developers.com,sueddeutsche.de,amp.usatoday.com,m.gadgets.ndtv.com##amp-ad
 !
+yasehub.com###app > div.top-banner + fieldset
+yasehub.com##.aasd-text
+ficbook.net##.rkl-stick-to-bottom
+m.republicworld.com##div[style^="perspective: 1000px; position: relative; height: 250px; width: 300px;"]
+www-digitalcameraworld-com.cdn.ampproject.org,digitalcameraworld.com##.hawk-widget[data-model-name]
+vxjbdagjdec-eviewporn-com.cdn.ampproject.org###popups
+azstxs-lejyoner-info.cdn.ampproject.org##body > a[target="_blank"]
+pravda.com.ua##amp-iframe[style="height: 285px;"]
+investing.com##.boxItemAdd
+investing.com###relatedBox
+azstxs-lejyoner-info.cdn.ampproject.org,goster-immat-org.cdn.ampproject.org,vxjbdagjdec-eviewporn-com.cdn.ampproject.org,upslut.com,gonzales-upslut-com.cdn.ampproject.org##a[href^="tel://"]
+upslut.com,gonzales-upslut-com.cdn.ampproject.org##center > p[class^="e_"]
+gonzales-upslut-com.cdn.ampproject.org###vrsAlert
+ubr.ua##body > div[style^="max-height: 300px; z-index: 65000;"]
+moneycontrol.com##div[class="show-moblie fixedfortopwrap"]
+mumsnet.com##.google-container
+analteen.pro##.pop-wrap
+thepostmillennial.com##.ads-floating-mobile
 enewspaper.latimes.com##div[id^="ext-readerbannerad"]
 perezhilton.com##.anchor-spot
 bangumi.org###mobile_ad_area
@@ -1935,6 +1960,7 @@ komputerswiat.pl###page > article > div[style^="margin:"] > p[style="font-size:9
 m.haberler.com##.hbMain > input[type][value="manset"] + div[style]
 kotaku.com##.js_post-content > p[class] + div[class]:not(.has-video):not(.instream-permalink) > aside[class]
 1reg.by##.article-content-inner > div:not([class]) > p ~ div[class][style]
+scmp.com##.inline-ad-container
 scmp.com##div[class^="wrapper__mobile-wide-ad-container-"]
 ufukgazetesi.net##.footer_fix_reklam
 m.thepaper.cn##iframe[src^="https://adproject.thepaper.cn/"]
@@ -2481,7 +2507,6 @@ dict.cc##dl > div[style="margin-left:10px"] > div[id^="snhb-detail_rectangle-"][
 forum.lowyat.net###ipbwrapper > div[style="padding:10px 0;min-height:100px;"][align="center"]:not([class]):not([id])
 apkpure.com##.fast-download-box+ .slide-wrap > .bd > .tempWrap > ul[style^="width:"] > li[style*="display: table-cell;"] > a[href^="https://yaksgames.com/?utm_source"]
 pixiv.net##div[class="overlay geta"]
-m.investing.com##.adDrawer
 m.tudotv.tv##div[style="text-align:center"] > a[rel="nofollow"] > img
 m.halihali.tv##a[href^="https://s.click.taobao.com/"] > img
 indianexpress.com##.adbox-border
@@ -2774,7 +2799,6 @@ dlbooks.to##.overAfi
 nashpol.com##.popup-ad-block
 gesundheitsfrage.net,gutefrage.net,finanzfrage.net###anchor-ad
 apkmirror.com##.appRow.showOnMobileAndTablet
-m.tr.investing.com##.adDrawer
 yahoo.com##div.controller[class*="smartphone_Px"][data-reactid]
 ||deutsche-mittelstands-nachrichten.de/wp-content/wptouch-data/include/js/dmn_interstitial_mobile.js
 gomovies.cd,123moviestube.io###mv-info > div.mobile-btn
@@ -2823,8 +2847,6 @@ m.rambler.ru##.image-banner-place
 wallstreet-online.de##.breakingNewsOfferteBox
 m.sabah.com.tr##a[href^="/haber/advertorial/"]
 m.sabah.com.tr###contextual > .textLink > div[data-mbzone-loaded] > div[style^="height:520px"]
-incisozluk.com.tr##.static_reklam_kutusu
-incisozluk.com.tr###reklam_bg
 ozgurbolu.com##.rklm-sayfaustu
 ozgurbolu.com###rklm-logoyani
 mobile.donanimhaber.com##iframe[src^="/ads/"]
@@ -3012,8 +3034,8 @@ mobile.1haza.com##.wrapper > a:not([href*="1haza.com"]) > img[width="100%"]
 download.cnet.com###mobile_incontent_ad_plus
 udn.com##.only_mobile.mm-slideout
 zdnet.de###pageads_menu
-m.investing.com##.boxItem > [class="mediaItem addUnit"]
-m.investing.com##.boxItem > [class="mediaItem"]:not([data-href])
+investing.com##.boxItem > [class="mediaItem addUnit"]
+investing.com##.boxItem > [class="mediaItem"]:not([data-href])
 online-lernen.levrai.de###advertmitlinks
 netdoktor.de##.ad-container-mobile
 dictionary.cambridge.org##div[id^="ad_topslot"]
@@ -3185,7 +3207,6 @@ sciencedaily.com##.mobile-bottom-rectangle
 fishki.net##.mobile-float-nav.visible-xs.visible
 sciencedaily.com##.mobile-middle-rectangle
 metabomb.net,eurogamer.net##.mobile-mpu-wrapper
-sciencedaily.com##.mobile-top-rectangle
 deviantart.com##.mobile_adhesion
 m.economictimes.com##.moreFrom
 m.windowscentral.com##.netshelter-ad
@@ -3276,6 +3297,10 @@ pornhd.com##ul.thumbs.inside-row > li:not([data-thumbindexes])
 ||ymcdn.ymtrack6.co/ads_file/
 ||ymcdn.ymtrack6.co/offer_single_files/
 ||youtube.com/_get_ads?
+!
+sciencedaily.com##div[class="container white"] > div[class="unit1"]
+sciencedaily.com##.impact-unit-wrapper
+sciencedaily.com##.mobile-top-rectangle
 ! rp5.ru
 ! gismeteo
 gismeteo.by,gismeteo.ru##.media_height_m
@@ -3352,6 +3377,9 @@ livejournal.com##.mdspost-aside__item--banner
 ! Blocking Facebook mobile ads
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/52955
+! https://github.com/AdguardTeam/AdguardFilters/issues/52988
+! Ads in some Chinese browsers(clones)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/51115
 ! https://github.com/AdguardTeam/AdguardFilters/issues/50947
 ! https://github.com/AdguardTeam/AdguardFilters/issues/48948
