@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: cMhU/L8EPYR6RYsxMgWdlA
+! Checksum: 4D1bNQTFLUHsiJ7+4WmwZg
 ! Title: AdGuard Japanese filter
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.2.90
-! TimeUpdated: 2020-04-08T00:20:43+03:00
+! Version: 2.0.2.92
+! TimeUpdated: 2020-04-14T13:31:54+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#japanese
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -649,6 +649,8 @@ momon-ga.com#?#.repo-title:has(> strong)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/21092
 ! https://github.com/AdguardTeam/AdguardFilters/issues/11687
 ! https://forum.adguard.com/index.php?threads/34852/
+! https://github.com/AdguardTeam/AdguardFilters/issues/53253
+t-mall.cmnw.jp##+js(set-constant, sec, 0)
 !
 !-------------------
 !-------CSS---------
@@ -748,6 +750,7 @@ _ds_adtag_
 !
 ! /banner/banner_ - if it is necessary, make this rule domain specific
 !
+ufret.jp###float-bnr
 loveheaven.net##.chapter-content > img.chapter-img ~ center
 /^(?!.*(google\.com|gstatic\.com|googleapis\.com|recaptcha.net|disqus\.com|disquscdn\.com|connect\.facebook\.net|static\.xx\.fbcdn\.net|dmca\.com)).*$/$third-party,script,domain=loveheaven.net
 5ch.net##.ADVERTISE_AREA
