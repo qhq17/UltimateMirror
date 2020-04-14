@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: izAhnSuWUztN+scJvVUbtw
+! Checksum: 6JJ4NFMgp+NKyOZbu5XDGQ
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish and Portuguese languages.
-! Version: 2.0.5.95
-! TimeUpdated: 2020-04-02T15:31:57+03:00
+! Version: 2.0.6.3
+! TimeUpdated: 2020-04-10T13:32:01+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#spanish
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -249,6 +249,13 @@
 !
 ! AdRegain
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/52992
+radioset.es,bemad.es,cuatro.com,divinity.es,eltiempohoy.es,energytv.es,factoriadeficcion.com,mtmad.es,telecinco.es##div[class^="adsInfo__container"]
+! https://github.com/AdguardTeam/AdguardFilters/issues/52976
+journaldemontreal.com#$?#.popup-adblocker { display: none !important; }
+journaldemontreal.com#$?#body { overflow: visible !important; }
+! https://github.com/AdguardTeam/AdguardFilters/issues/53114
+globalnoticias.online#$##framed { display: block!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/51161
 @@||botinnifit.com/*/adsbygoogle.js
 botinnifit.com##+js(set-constant, canRunAds, true)
@@ -941,9 +948,6 @@ vizer.tv#@#.banner_ads
 expansion.com#@#div[id^="div-gpt-ad"]
 @@||expansion.com$generichide
 @@||securepubads.g.doubleclick.net/gpt/pubads_impl_$domain=expansion.com
-! https://github.com/AdguardTeam/AdguardFilters/issues/24440
-! https://github.com/AdguardTeam/AdguardFilters/issues/6118
-radioset.es,bemad.es,cuatro.com,divinity.es,eltiempohoy.es,energytv.es,factoriadeficcion.com,mtmad.es,telecinco.es#$##adsFooter { height: 20px!important; width: 20px!important; }
 ! antiblock.org
 ! https://github.com/AdguardTeam/AdguardFilters/issues/35168
 ! https://github.com/AdguardTeam/AdguardFilters/issues/15231
@@ -1055,7 +1059,15 @@ jokerfansub.com#@##adsense
 ! https://github.com/AdguardTeam/AdguardFilters/issues/24801
 yahoo.com#?#ul[class^="Mb(0)"] > li.js-stream-content:has(> div > a[rel="nofollow noopener noreferrer"]+div:contains(Patrocinado))
 !
+bcnoticias.com.br#?#.theiaStickySidebar > div.widget:has(> div.textwidget > div[align="center"] a[href])
+mundodonghua.com#?#.container > .col-md-3 > .row.mt-10:has(> .adsbygoogle)
+mundodonghua.com#?#.content-player > .mb-10:has(> .adsbygoogle)
+mundodonghua.com#?#.container > .col-md-9 > .mt-10:has(> .adsbygoogle)
+mundodonghua.com#?#.container > .col-md-9 > .mb-10:has(> .adsbygoogle)
+mundodonghua.com#?#.container > .row > .col-md-8 > .mb-10:has(> .adsbygoogle)
+mundodonghua.com#?#.container > .row > .col-md-4 > .row.mt-10:has(> center > .adsbygoogle)
 cokitos.com#?#.theiaStickySidebar > div.widget_text:has(> div.textwidget ins.adsbygoogle)
+foro.elhacker.net#?#body > table:has(> tbody > tr > td > div.publi_sponsor)
 muchohentai.com#$?##content > div.type-post > div[id^="_"] { remove: true; }
 animesonline.cz#?#.well.z-body:has(> .ad-title)
 libertaddigital.com,libremercado.com#?#.interior > section.conpubli:has(> div > .OUTBRAIN)
@@ -1192,6 +1204,8 @@ maisgasolina.com#?##main [id$="Block"][-ext-has='.adsbygoogle']
 !--------------------------------------!
 !------- JS rules ---------------------!
 !--------------------------------------!
+! https://github.com/AdguardTeam/AdguardFilters/issues/53005
+hentai-id.tv##+js(abort-current-inline-script, $, .one("click")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/52616
 ! https://github.com/AdguardTeam/AdguardFilters/issues/51462
 ! https://github.com/AdguardTeam/AdguardFilters/issues/51052
@@ -1427,6 +1441,8 @@ http://adw.
 !-------------------- Specific rules --------------------!
 !--------------------------------------------------------!
 !
+colegialasreales.com##.happy-inside-player
+download3k.es###dl_google_1
 followmanga.com##.jumbotron
 niusdiario.es##div[class^="cards__card_ad-"]
 buscape.com.br##li.tp-sponsored
