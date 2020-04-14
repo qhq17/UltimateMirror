@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: tMutycuOVfmTrlvMSDPP4Q
+! Checksum: 0VDu/w2Fz6Az0pGF7nTdCw
 ! Title: AdGuard Social Media filter
 ! Description: Filter for social media widgets such as 'Like' and 'Share' buttons and more.
-! Version: 2.0.24.9
-! TimeUpdated: 2020-04-11T04:03:37+03:00
+! Version: 2.0.24.20
+! TimeUpdated: 2020-04-14T17:31:33+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#social
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -323,6 +323,7 @@ lj_bookmarklet
 !
 ! Extended CSS rules
 !
+natemat.pl#?##article-body > div:not(.art):has(> div > iframe.instagram-media)
 okeygeek.ru#?#.sidebar > div.side-blok:has(> div.textwidget > div#vk_groups)
 blog.themarfa.name#?#.article > div.sidebar > div.sidebar__block:has(> div.addthis_inline_share_toolbox)
 eluban.pl#?#.article_summary > .text-left > p.text-muted:contains(/^Podziel się:$/)
@@ -684,6 +685,8 @@ bookdl.org#?#div[style*="width: 320px; height: 235px;"][-ext-has='div.fb-like-bo
 golem.de#?#li[class="text1"][-ext-has='div[class$="social-bar social-sidebar"]']
 turkanime.tv#?#td[valign="top"][style="padding-left:10px; padding-top:10px; padding-right:5px;"] div[-ext-has='span.ui-blok-title:contains(FACEBOOK)']
 !
+fontanka.ru#?##app div[class] > aside[class] + div[class] > section[class] article[data-io-article-url] + div > div[class] > div[class]:has(> h4[class]:contains(ПОДЕЛИТЬСЯ))
+!
 gog.com#?#div[gog-hide-by-window-name="galaxy_order_popup"] > div[gog-dropdown]:contains(share)
 gog.com#?#div[gog-hide-by-window-name="galaxy_order_popup"] > div[gog-dropdown]:contains(share) + span.order-message__separator
 !
@@ -883,8 +886,18 @@ hdfilmkamyonu.com,fullfilmvakti.com,indirmedenizleyin.com,hdfilmsizle1.com,hdfil
 ! ##.dp-share
 pornopank.com,3w-video.com,coqporn.com,paraticlube.com,pornopix.net,isexpro.net,javhdonline.com,pornoworlds.org##.dp-share
 !
+expressen.se##.article .social-panel
+coronavirus.mash.ru##.share_a
+embetronicx.com##.ArevicoModal
+embetronicx.com##.ArevicoModal-bg
+showdream.org##.rcol > div.bc.review + center
+savunmasanayisi.com##.penci-social-buttons
+||getsocial.io/*/gs_async.js$third-party
+datagor.ru###dle-content > div.fullstory + div[align="center"]
+takiedela.ru##.b-soc_news
 uniqueman.ru##.ya-share-label
 uniqueman.ru###topSocial2
+sueddeutsche.de##aside[data-testid="sharing-bottom"]
 translate.google.*##.share-translation-button
 merriam-webster.com###social-sidebar-container
 pg11.ru,pg12.ru,pg13.ru,pg21.ru,prochepetsk.ru,progorod33.ru,progorod43.ru,progorod58.ru,progorod59.ru,progorod62.ru,progorod76.ru,progorodnn.ru,progorodnsk.ru,progorodsamara.ru,progoroduhta.ru##.article__likes
@@ -6264,7 +6277,7 @@ designboom.com,livescience.com,pbtech.co.nz,peoplesworld.org,space.com##.fa-face
 ##.pocket-btn
 ##.popup-social
 ##.post-item__social
-~freecoursesite.com,~uip.me##.post-share
+~savunmasanayisi.com,~freecoursesite.com,~uip.me##.post-share
 ##.post-share-box
 ##.post-share-buttons
 ##.post-share-links
@@ -6531,7 +6544,7 @@ designboom.com,livescience.com,pbtech.co.nz,peoplesworld.org,space.com##.fa-face
 ##.surfinbird__like_button
 ##.td-post-sharing
 ##.the_champ_sharing_container
-~freecoursesite.com##.top-share
+~savunmasanayisi.com,~freecoursesite.com##.top-share
 ##.topic_share
 ##.track-soccontrols
 ##.tw-like-button
@@ -7208,6 +7221,11 @@ neokur.com#$#.jquery-modal.blocker { display: none!important; }
 ! #Social locker#
 ! #End Social locker
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/53436
+@@||facebook.com/*/plugins/$domain=theidealist.ru
+theidealist.ru#@#.fb-page
+! https://github.com/AdguardTeam/AdguardFilters/issues/53321
+scribd.com#@#.social_wrapper
 ! https://github.com/AdguardTeam/AdguardFilters/issues/52669
 ixl.com#@#.social-sharing
 ! https://github.com/AdguardTeam/AdguardFilters/issues/51619
