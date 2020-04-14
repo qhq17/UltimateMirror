@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2020-03-30 13:03:14 CEST
+! Last modified: 2020-04-13 16:08:40 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -15,15 +15,21 @@
 ! --- Browser/extension specific filters
 !#include include/SWE-1-inc0.txt
 !#if env_firefox
+!#include include/SWE-1-inc1.txt
 !#endif
 !#if !env_firefox
+!#include include/SWE-1-inc2.txt
 !#endif
 !#if env_chromium
+!#include include/SWE-1-inc3.txt
 !#endif
 !#if env_mobile
+!#include include/SWE-1-inc4.txt
 !#endif
 !#if !env_mobile
+!#include include/SWE-1-inc5.txt
 !#endif
+!#include include/SWE-1-inc6.txt
 ! --- End browser/extension specific filters
 ###accept-cookies-div
 ###catapult-cookie-bar
@@ -81,6 +87,7 @@
 ##.c-ad__floating
 ##.c-cookie-bar:not(body):not(html)
 ##.c-cookie-disclaimer:not(body):not(html)
+##.c-cookie-popup:not(body):not(html)
 ##.c-cookies.is-active:not(body):not(html)
 ##.c-dfp_ads
 ##.c-post--native-ad
@@ -213,6 +220,7 @@
 .se/upload/annons/
 .se/wdg/tracking
 .se/wp-content/banners/
+/*Adform.$script,domain=eniro.se
 /*Fokus_360x300px_animate*.gif$image,domain=fokus.se
 /250x360/$image,domain=marsta.nu
 /280x240/$image,domain=rumhemma.se
@@ -576,6 +584,7 @@
 /plugins/ml-adverts/*$script
 /plugins/modal-for-elementor/*$script,domain=miljomagasinet.se
 /plugins/newsner-lead-tracking/*
+/plugins/notificationx$script,domain=nyadagbladet.se
 /plugins/ns-facebook-pixel-for-wp/*
 /plugins/onesignal-free-web-push-notifications/*
 /plugins/optin-cat-elite-wp/*$script
@@ -667,6 +676,7 @@
 /service-worker.js$script,domain=folkbladet.nu|vk.se
 /sf_tracking.js$script,domain=stayfriends.se
 /sh404sefsocial/*$script
+/share-link$script,domain=nyadagbladet.se
 /sharedaddy/sharing.$domain=amusetidningen.se|damhockey.se|mobilanyheter.net|nyheteridag.se|ulrica.askmorling.se
 /sharethis.js$domain=allsvenskan.se|superettan.se
 /sifo_analytics.$script
@@ -777,14 +787,14 @@
 @@/ad-block-detection-script$~third-party,domain=blocket.se
 @@/ad.php$script,~third-party,domain=99mac.se|skogstok.se|temperatur.nu
 @@/adframe.js$script,~third-party,domain=diskant.se|diskantforum.se|falkopingstidning.se|jnytt.se|jp.se|skaraborgslanstidning.se|skovdenyheter.se|smalandsdagblad.se|smalanningen.se|smt.se|tranastidning.se|vastgotabladet.se|vetlandaposten.se|vn.se
-@@/ads.js$script,~third-party,domain=betting.se|bioenergitidningen.se|hd.se|koket.se|sydsvenskan.se|visitskargarden.se|weekend.di.se
+@@/ads.js$script,~third-party,domain=betting.se|bioenergitidningen.se|hd.se|koket.se|megafonen.nu|sydsvenskan.se|visitskargarden.se|weekend.di.se
 @@/ads.min.js$~third-party,domain=notebookcheck.se
 @@/ads/ads-*.js$script,~third-party,domain=gettyimages.se
-@@/adsbygoogle.js$script,~third-party,domain=scanaktier.se
+@@/adsbygoogle.js$script,~third-party,domain=megafonen.nu|scanaktier.se
 @@/adsense.js$script,~third-party,domain=dayviews.com|fragbite.se|kwiss.me|modette.se|nyheter24.se|synonymer.cc|tyda.se
 @@/adserver.$script,~third-party,domain=fotosidan.se|grannar.se|utsidan.se
 @@/advertisement*.js$script,domain=dn.se
-@@/advertisement.js$script,~third-party,domain=blocket.se|emocore.se|kaninsajten.se|kit.se|orebroidag.se|saljplatsen.se|spela.se
+@@/advertisement.js$script,~third-party,domain=blocket.se|emocore.se|kaninsajten.se|kit.se|megafonen.nu|orebroidag.se|saljplatsen.se|spela.se
 @@/advertisement2.js$domain=gpro.net
 @@/advertisment.js$script,~third-party,domain=wappare.se
 @@/aff/images/*$image,domain=alltforforaldrar.se
@@ -828,6 +838,7 @@
 @@||cykla.se/wp-admin/admin-ajax.php?action*&advert_search$xmlhttprequest
 @@||cykla.se/wp-content/themes/cykla/assets/images/advert-filter-top.jpg$image
 @@||d11j2g8hmtmh4u.cloudfront.net/orion/jquery.$script
+@@||dagensanalys.se/wp-content/*/pubmatic_$image
 @@||elinskoglund.com^$generichide
 @@||fannystaaf.se^$generichide
 @@||feed.meltwater.com^$subdocument
@@ -900,9 +911,11 @@ aftonbladet.se##.social-shares
 aftonbladet.se##[id*="abAdArea"]
 aftonbladet.se##a[href*="/se/app/aftonbladet/"]
 aftonbladet.se##a[href*="/store/apps/details?id=se.aftonbladet"]
+aftonbladet.se##a[href*="partner_id"][target="_blank"]
 aftonbladet.se##a[href*="utm_"][target="_blank"]
 aftonbladet.se##a[href^="/brandstudio"]
 aftonbladet.se##a[href^="/kampanj/casino"]
+aftonbladet.se##a[href^="https://ad."][target="_blank"]
 aftonbladet.se##body.abTheme-entertainment *> .abAside > div[style^="text"]:last-child
 aftonbladet.se##div[style*="border-color: rgb(0, 103, 181); border-width: 4px 0px 0px;"]
 aftonbladet.se##div[style*="border-color: rgb(0, 103, 181); border-width: 4px 0px 0px;"] + a
@@ -1021,12 +1034,12 @@ autolife.se###Banners
 automation.se,transportnytt.se,verkstadstidningen.se##.bannergroup
 automobil.se,bike.se,byggnyheter.se,caroftheyear.se,cgi.se,dagensfastigheter.se,dagensnaringsliv.se,energinyheter.se,fof.se,hsr.se,husbilhusvagn.se,industrinyheter.se,infrastrukturnyheter.se,inredningsnyheter.se,jarnvagsnyheter.se,kantarsifo.se,klassiker.nu,kyrkanstidning.se,metallerochgruvor.se,mopedgaraget.se,papperochmassa.se,plastikoperationsforum.se,publikt.se,realtid.se,riksettan.net,sandaren.se,so-rummet.se,solenerginyheter.se,sportochfritidsnyheter.se,spraktidningen.se,stockholmsbyggnyheter.se,testfakta.se,transportochlogistik.se,ungforetagsamhet.se,vibilagare.se,viktvaktarna.se,vindkraftsnyheter.se###sliding-popup
 autonytt.se##.feed_ad
-autonytt.se##.leaderboard
 autonytt.se##.social_and_search
 autonytt.se##.sponsrad-artikel
 autonytt.se##.start-leaderboard
 autonytt.se##a[href^="https://t.seenthis.se"]
 autonytt.se,bilresaieuropa.se,bjornsennbrink.se,konstlistan.se##a[href*="/click.adrecord."]
+autonytt.se,sv.picmix.com##.leaderboard
 avanza.se##.cookieMessage
 avanza.se##.noMarginAd
 avanza.se##.topAd
@@ -1160,7 +1173,7 @@ cleannet.se,dagenshandel.se,entreprenad.com,food-supply.se,foodnet.se,fri-kopens
 cleannet.se,dagenshandel.se,entreprenad.com,food-supply.se,foodnet.se,fri-kopenskap.se,habit.se,kemivarldenbiotech.se,lifesciencesweden.se,medtechmagazine.se,motormagasinet.se,packnet.se,plastnet.se,processnet.se,recyclingnet.se,rt-forum.se,skyddosakerhet.se,transportnet.se,uochd.se,verkstaderna.se,woodnet.se##.rotating-junglebogen
 clipmyhorse.tv##.archive-player-ads
 clipmyhorse.tv##.cmh-blocking
-coop.se##.js-personalInformationNotice.Notice--sticky-bottom.Notice--info.Notice
+coop.se##.Notice.Notice--info
 cyclingplus.se,firstfoto.se,fitnessformen.se,halsafitness.se,macguiden.net##.this-is-an-ad
 cyclingplus.se,halsafitness.se,yogaworld.se###gdpr-container
 cyclingplus.se,halsafitness.se,yogaworld.se##.headerbar-container
@@ -1333,6 +1346,7 @@ expressen.se##.site-header__widgets > .html-widget > a[target="_blank"]
 expressen.se##.teaser > a[href*="happygreen.se"]
 expressen.se##.teaser--native-ad
 expressen.se##.teaser--sponsored
+expressen.se##.teaser__third-party
 expressen.se##.terms-dialog
 expressen.se##.widget-ad-marker
 expressen.se##.widget-area--collaboration
@@ -1478,6 +1492,7 @@ gardets.nu##[class^="sqs-cookie-banner"]
 gbgfotboll.se,svenskfotboll.se###cookie_bar
 gentlemannaguiden.com##.advertising
 globalportalen.org##.follow-us-section
+godare.se##.privacy-information
 golfbladet.se###top_banner
 golfbladet.se##.startpage_banner
 goteborgdirekt.se,stockholmdirekt.se,vasterastidning.se##.gdpr-warning
@@ -1692,6 +1707,7 @@ market.se##article[about^="/annons"]
 marsta.nu###secondary-content > .panel--naringsliv
 marsta.nu##.outsider
 matklubben.se##.notification.cookies
+megafonen.nu##[data-article-sponsored="true"]
 megaspel.se###app-root > footer ~ aside:first-of-type:last-of-type
 megaspel.se##[class*="advertisement"]
 megaspel.se##button[class][title="Show CMP"]
@@ -2099,6 +2115,7 @@ yougov.se##.cookie-confirm
 ||adaptlogic.com^$third-party
 ||adcell.io^$third-party
 ||adclick.se^$third-party
+||addevent.com^$third-party,domain=godare.se
 ||addtoany.com^$third-party
 ||adeprimo.se^$third-party
 ||adhype.se^*/native$domain=lajvo.se
@@ -2425,6 +2442,7 @@ yougov.se##.cookie-confirm
 ||klart.se/assets/blockadblock$script
 ||konzilo.com/mtc.js$script
 ||kortio.se^$third-party
+||kritiker.se/js/gdpr.js
 ||ksfmedia.simulator.palmu.fi/*/*.js$script,domain=hangotidningen.fi|hbl.fi|ostnyland.fi|vastranyland.fi
 ||kundklubb-se.com^
 ||kuriren.eu/app/$subdocument
@@ -2639,6 +2657,8 @@ yougov.se##.cookie-confirm
 ||suntana.se^$third-party
 ||susnet.nu/susnetstat.js$script
 ||susnet.se/susnetstat.js$script
+||sv.picmix.com/sw.js
+||sv.picmix.com^$csp=worker-src 'none'
 ||svd.se^*/native-article$~third-party,xmlhttprequest
 ||svenskafans.com/se.js$script
 ||swedroid.se/pjembed.$subdocument
@@ -2711,8 +2731,6 @@ yougov.se##.cookie-confirm
 ||wishpond.net^$third-party
 ||wonderpush.com^$third-party
 ||woomio.com/assets/js/analytics$third-party
-||yandex.st/share/share.$third-party
-||yastatic.net/share/$third-party
 ||yelp.se/eu_cookie_notice$subdocument
 ||yelp.se/sit_rep
 ||yieldbird.com^$third-party
