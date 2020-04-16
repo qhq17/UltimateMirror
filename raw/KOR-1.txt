@@ -3,7 +3,7 @@
 ! License: https://github.com/yous/YousList#license
 ! Title: YousList
 ! Expires: 4 days
-! Version: 20200331
+! Version: 20200413
 
 ! General element hiding rules
 ##amp-ad
@@ -46,6 +46,8 @@
 ##div.trc_popover_aug_container
 ##div.trc_rbox_container div.trc-content-sponsored.trc_rbox
 ##div.trc_rbox_container div.trc_rbox_outer div.syndicatedItem
+##div.trc_spotlight_widget[class*=" trc_elastic_thumbnails-"]
+##div.trc_spotlight_widget[class*=" trc_elastic_thumbs-"]
 ##div.wpcnt
 ##div[data-widget_id="1oVxnLlP"]
 ##div[data-widget_id="37JAOboN"]
@@ -911,6 +913,7 @@
 ||contextual.media.net/bidexchange.js^
 ||contextual.media.net/nmedianet.js^
 ||coolsoft.altervista.org/sites/all/themes/coolsoft/js/coolsoft.js^
+||cperformmedia-a.akamaihd.net/dpfm.js^
 ||cpv.ad.naver.com/adshow^
 ||creative.adoffice.11st.co.kr/v1/creatives/
 ||creative.speednetwork*.com/speednetwork*/tags/xbanner/xbanner.js^
@@ -1113,6 +1116,8 @@
 ||gfp.veta.naver.com/adcall^
 ||ggilbo.com/banner/banner_roll_msidebtm.html^$domain=ggilbo.com
 ||gigglehd.com/banner/*.jpg^
+||gizmodo.com/x-kinja-static/assets/new-client/adManager~ads.*.js^$domain=gizmodo.com
+||gizmodo.com/x-kinja-static/assets/new-client/ads.*.js^$domain=gizmodo.com
 ||go.ezoic.net/ezoic/epbfull5.js^
 ||go.ezoic.net/porpoiseant/dall2.js^
 ||go.oclasrv.com/apu.php^
@@ -1195,7 +1200,6 @@
 ||image.donga.com/dac/SPORTS/PC/*.js^$domain=sports.donga.com
 ||image.lottorich.co.kr/lottorich/partnership/
 ||image.melon.com/svc/images/main/floatingBanner/floatingBanner_*.swf^
-||image.news1.kr/system/ads_t/$domain=m.news1.kr|news1.kr
 ||image.ruliweb.com/view/view.js^$domain=bbs.ruliweb.com|m.ruliweb.com
 ||image.sportsseoul.com/ad/$domain=sportsseoul.com
 ||image.tvdaily.co.kr/banner/$domain=tvdaily.asiae.co.kr
@@ -2356,6 +2360,7 @@ buzzfeed.com##li.js-ad
 cafe.daum.net##div#daum-ad-root
 cafe.naver.com##div#ad-banner
 cafe.naver.com##div#plugFloatingBannerDiv
+cafe.naver.com##div#plugTopBannerDiv
 cafe.naver.com##table.searchad
 car.chosun.com##iframe[src^="http://car.chosun.com/common/right/banner/index.html"]
 carisyou.com##div.main_right_banner
@@ -3052,6 +3057,7 @@ gizmodo.com##div.ad-starter-pageview
 gizmodo.com##div.ad-top
 gizmodo.com##div.ad-unit
 gizmodo.com##div.ad-wide
+gizmodo.com##div.js_ad-below-comments
 gizmodo.com##div.js_ad-dynamic
 gizmodo.com##div.splashy-ad-container
 gogoanimes.co##body>div>div[style="width:100%;height:768px;position:fixed;left:0;top:0px;overflow:hidden;visibility:hidden;z-index:0"]
@@ -3303,6 +3309,7 @@ imnews.busan.com,implay.busan.com##table.view_list+table.ad
 imnews.busan.com,implay.busan.com##table.view_list+table.ad+table.ad
 imnews.busan.com,implay.busan.com##table.view_list+table.ad+table.ad+table.ad
 imnews.busan.com,implay.busan.com##table.view_list~table[style="padding:10px 0px 20px 0px;text-align:center;"][width="100%"]
+imnews.imbc.com##div.ad_banner
 imore.com##div.adunit-wrap
 imore.com##div.netshelter-ad
 independent.co.uk##div.onscroll-injected-ad
@@ -4161,6 +4168,7 @@ m.news.nate.com##iframe[name="adtive"]
 m.news.nate.com##iframe[src^="http://networkad.nate.com/nate/mobile_news.html"]
 m.news.naver.com##div.ad_area
 m.news.naver.com##div.ad_box
+m.news1.kr##div.ad_wrap_sw
 m.news1.kr##div.ads_bizlife
 m.news1.kr##div.ads_bottom_fixed
 m.news1.kr##div.ads_clickinfo
@@ -4172,6 +4180,7 @@ m.news1.kr##div.ads_text_banner
 m.news1.kr##div.ads_text_list1
 m.news1.kr##div.article_content>div[style="float:right;margin-top:5px;margin-left:10px;width:200px;height:200px;background:#fff;"]
 m.news1.kr##div.banner01
+m.news1.kr##div.das_article15_wrap
 m.news1.kr##div.text_ad
 m.news1.kr##div[class^="ads_article"]
 m.news1.kr##div[data-widget_id="G7ZWPjlW"]
@@ -4473,6 +4482,7 @@ mainichi.jp##aside.ad.pr
 mainichi.jp##aside.ad.yads
 mainichi.jp##div.ad.img-left
 maketecheasier.com##div.in-content-ad
+makeuseof.com##div#axdsense1
 mangafox.me##div.ad
 mangarock.com##iframe[src^="/iframe/adtrue_300x250.html"]
 mangarock.com##iframe[src^="/iframe/adtrue_728x90.html"]
@@ -4536,8 +4546,8 @@ media.daum.net##div.aside_shopping
 media.daum.net##div.box_ad
 media.naver.com##div._da_banner
 media.naver.com##div.ad_box
-mediacategory.com##div#mobon_type01>div.main_box>ul.news_img>li.mark
-mediacategory.com##div#mobon_type01>div.main_txt_box>ul.news_img>li.mark
+mediacategory.com##div#mobon_type01>div.main_box ul.news_img>li.mark
+mediacategory.com##div#mobon_type01>div.main_txt_box ul.news_img>li.mark
 mediafire.com##iframe#ads
 mediafire.com##iframe[src^="/templates/linkto/ads.php"]
 mediapen.com##div#adshow
@@ -4872,6 +4882,7 @@ news.mt.co.kr##div.leftbn_wrap
 news.mt.co.kr##div.related_ad
 news.mt.co.kr##div.rightbn_wrap
 news.mtn.co.kr##div#newsContent>div[style="width:320px; height:50px; margin:0 auto;"]
+news.mtn.co.kr##div.adListArea
 news.mtn.co.kr##ul.adline
 news.nate.com##div#ad_sponsorBar
 news.nate.com##div#articleViewArea>div[style="margin: 40px 0 30px 0;font-size: 0"]
@@ -5221,6 +5232,7 @@ pixiv.net##iframe[name="header"]
 pixiv.net##iframe[src^="https://pixon.ads-pixiv.net/show"]
 pixiv.net##span.multi-ads-area
 platum.kr##div.ad-five
+platum.kr##div.platum_ad
 platum.kr##div.ppb_ads
 platum.kr##li.Grand_News_Custom_Ads
 play.afreecatv.com##a.adcon-area
@@ -5660,12 +5672,14 @@ tfnews.co.kr##div.com_ban
 tfnews.co.kr##div.top_banner
 tgd.kr##body>div[style="background: #efefef;padding:0;"]
 tgd.kr##div#article-list>div[style="background: #efefef;padding:10px 8px;"]
+tgd.kr##div#article-list>div[style="background:#efefef;padding:10px 8px;"]
 tgd.kr##div#plz-dont-block-me
 tgd.kr##div#weare-out-of-food
 tgd.kr##div.frame>a[href^="/trk/click/"][target="_blank"]
 tgd.kr##div.frame>div:not([class]):not([id])>div[style="padding:0 20px 15px;"]
 tgd.kr##div.frame>div[align="center"][style="background:#fff;"]
 tgd.kr##div.frame>div[style="background:#fff;    background: #fff;\a     padding: 20px 0;\a     margin-top: -14px;\a     text-align: center;"]
+tgd.kr##div.frame>div[style="padding:0em 1em;"]
 theappl.com##div#pop_layer_banner
 theappl.com##div#rt_banner1
 theappl.com##div#rt_banner2
