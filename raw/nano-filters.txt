@@ -130,7 +130,7 @@ mizonatv.com##.aviso-publicidad-sup
 solarmovie.fun##.hhotnews:has-text(AdBlocker)
 mdlinx.com##+js(nostif, show)
 mdlinx.com##.dfp-ad-outer
-outlook.live.com##a[href="https://windows.microsoft.com/outlook/ad-free-outlook"]:nth-ancestor(4)
+outlook.live.com##a[href="https://windows.microsoft.com/outlook/ad-free-outlook"]:upward(4)
 @@||html-online.com^$generichide
 raiplay.it##.tagManagerError
 sportsnet.ca##+js(abort-on-property-read.js, uxGuid)
@@ -294,8 +294,6 @@ dzone.com##+js(aopr, adtoniq)
 magyarhang.org##+js(aopw, ai_adb)
 mobilarena.hu##+js(nosiif, 0x)
 mobilarena.hu##+js(nostif, 0x)
-@@||index.hr^$ghide
-index.hr##.ad-container
 @@||globalnews.ca^$generichide
 globalnews.ca##.ad-container
 @@||cnnturk.com^$ghide
@@ -322,6 +320,9 @@ dxmaps.com##+js(set, canRunAds2, true)
 @@||auslogics.com/*/js/ads.js$script,1p
 loudersound.com##+js(aopr, _sp_._networkListenerData)
 full-anime.fr##+js(acis, document.getElementById, adblock)
+creativebloq.com##+js(aopr, _sp_.mms.startMsg)
+simpleflying.com##+js(aopr, adblockDetector)
+web-capture.net##+js(acis, document.getElementById, test-block)
 altadefinizione.*##.sm_header.sm_nomobile:has(:scope > a[href*="/HD/play"])
 ||mail-ads.google.com^
 bing.com##+js(nano-remove-elements-onready, #b_results > .b_ad)
@@ -345,6 +346,8 @@ bitblokes.de###ga_sub_single_wrap
 bitblokes.de###sidebar-ads-single
 bitblokes.de###adscale_down
 bitblokes.de##a[href^="https://go.nordvpn.net/aff_c?"]
+hostadvice.com##.banner_wrap
+web-capture.net###stw_ad
 @@||hulu.com^$generichide
 hulu.com###banner-ad-container
 hulu.com##.ad-choices
