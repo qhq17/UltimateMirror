@@ -1,7 +1,7 @@
 [Nano Adblocker]
 ! Title: Nano Defender Integration
 ! Expires: 3 days
-! Cached: Wed, 04 Mar 2020 03:41:37 GMT
+! Cached: Thu, 16 Apr 2020 16:23:38 GMT
 ! License: See source for license and credits
 ! Source: https://github.com/jspenguin2017/uBlockProtector/tree/master/list
 ! This file is a compiled binary, do not modify
@@ -112,16 +112,6 @@ playbb.me#@#div[style^="width:"]
 easyvideo.me#@#div[style^="width:"]
 videowing.me#@#div[style^="width:"]
 videozoo.me#@#div[style^="width:"]
-||gelbooru.com^$inline-script,badfilter
-@@||ajax.googleapis.com/ajax/libs/jquery/$script,domain=gelbooru.com
-gelbooru.com#@#[style*="height:"][width]
-gelbooru.com#@#[style*="width:"][height]
-gelbooru.com#@##paginator
-gelbooru.com#@#center > a[href]
-||assets.gelbooru.com/r19/
-||assets.gelbooru.com/r18/
-||gelbooru.com/script/application.js.php$important
-||thedoujin.com/bload.php
 ||games.softgames.de/assets/showads.js$script,redirect=noopjs
 ||softgames.de/sg-mc.js*$script,redirect=noopjs
 ||bidvertiser.com$important,domain=exrapidleech.info
@@ -405,8 +395,6 @@ theguardian.com##.contributions__epic
 krassotaa.com###haider
 onvasortir.com##+js(abort-on-property-read.js, adBlockDetected)
 kryminalnapolska.pl##+js(abort-on-property-read.js, ai_adb_detected)
-nakednepaligirl.com##.rmedia
-nakednepaligirl.com##+js(window.open-defuser.js)
 doublemesh.com##+js(setTimeout-defuser.js, ads)
 crockolinks.com##+js(addEventListener-defuser.js, mousedown)
 fakeporn.tv##+js(setTimeout-defuser.js, innerText)
