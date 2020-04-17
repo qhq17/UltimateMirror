@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: C/Hyk4E/yssYixMeRLW76Q
+! Checksum: 10wCMmTmEd7VNdMLLobWVQ
 ! Title: AdGuard Mobile Ads filter
 ! Description: Filter for all known mobile ad networks. Useful for mobile devices.
-! Version: 2.0.11.91
-! TimeUpdated: 2020-04-12T21:30:16+03:00
+! Version: 2.0.12.11
+! TimeUpdated: 2020-04-17T16:02:40+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#mobile
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -288,7 +288,6 @@
 ||h5.wannaplay.cn^
 ||adsapi.manhuaren.com^
 ||euadsapi.manhuaren.com^
-||cdn1.ettoday.net^
 ||msg.ettoday.net^
 ||d1zkodo2u3p4pe.cloudfront.net^
 ||ad-ettoday.cdn.hinet.net^
@@ -1207,6 +1206,8 @@ westseattleblog.com#@#.header-ad
 !
 ! Extended CSS rules
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/53617
+healthline.com#?##__next > aside > div:has(> button.icon-hl-close-thick)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/52906
 lifehacker-com.cdn.ampproject.org#?#article > div[class]:has(> aside > div > div > div > a[data-amazontag])
 lifehacker-com.cdn.ampproject.org#?#article > div[class]:has(> div[class] > p[class]:contains(Advertisement))
@@ -1625,6 +1626,10 @@ deviantart.com#$#div[class*="dp-ad-"] {height: 0!important; width: 0!important; 
 !
 ! ##### TEMPORARY END #####
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/53741
+@@||t1.daumcdn.net/adfit/static/kp.js$domain=m.card-gorilla.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/52979
+@@||epst.hindustantimes.com/Js/_show_Ads.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/52091
 businessinsider.co.za#@#.ad-loaded
 ! https://github.com/AdguardTeam/AdguardFilters/issues/52046
@@ -1929,12 +1934,31 @@ m.news.de##.unisterAdsStart
 !
 ! Common names
 ! ##amp-embed[type="outbrain"]
-androidpolice.com,futurezone.de,amp.infranken.de,abendblatt.de,mobil.stern.de,bunte.de,morgenpost.de,amp.n-tv.de,amp.mopo.de,rtl.de,amp.tagesspiegel.de,transfermarkt.de,filmstarts.de,sportbuzzer.de,m.gala.de,amp.vip.de,derwesten.de,waz.de,amp.express.de,www-ilmessaggero-it.cdn.ampproject.org,www-express-co-uk.cdn.ampproject.org,dailystar.co.uk,www-dailystar-co-uk.cdn.ampproject.org,express.co.uk,chip.de,asahi.com,mainichi.jp,jp.ign.com##amp-embed[type="outbrain"]
+news18.com,androidpolice.com,futurezone.de,amp.infranken.de,abendblatt.de,mobil.stern.de,bunte.de,morgenpost.de,amp.n-tv.de,amp.mopo.de,rtl.de,amp.tagesspiegel.de,transfermarkt.de,filmstarts.de,sportbuzzer.de,m.gala.de,amp.vip.de,derwesten.de,waz.de,amp.express.de,www-ilmessaggero-it.cdn.ampproject.org,www-express-co-uk.cdn.ampproject.org,dailystar.co.uk,www-dailystar-co-uk.cdn.ampproject.org,express.co.uk,chip.de,asahi.com,mainichi.jp,jp.ign.com##amp-embed[type="outbrain"]
 ! ##amp-embed[type="taboola"]
 tomshardware.com,techbook.de,sueddeutsche.de,hurriyet.com.tr,elmundo.es,timesnownews.com,biz-journal.jp,sankei.com,m.mynet.com,amp.ibtimes.co.uk,lifehacker.com,jalopnik.com,ndtv.com,gizmodo.com,cnbc.com##amp-embed[type="taboola"]
 ! ##amp-ad
 komputerswiat.pl,dobreprogramy.pl,amp.pcwelt.de,tomshardware.com,techbook.de,forbes.com,auto-swiat.pl,dialog.ua,mobile.reuters.com,spiegel.de,amp.welt.de,forum.xda-developers.com,sueddeutsche.de,amp.usatoday.com,m.gadgets.ndtv.com##amp-ad
 !
+m.haber7.com##amp-embed[type="engageya"]
+sozcu.com.tr##.AMP-ads
+milliyet.com.tr##.amp-dfpslot
+m.humoruniv.com###read_ok_desc_div + style + div[id$="_wrap"]
+weather.com##div[class*="adWrapper"]
+mobil.krone.at##div[data-krn-click-id="startseite-mobil-jackpot"]
+sciencealert.com##.ad_div
+filmyani.com##.mobilreklam
+news18.com##.adv_wrp
+greatergood.berkeley.edu##.article-mobile-ad
+gizmodo-com.cdn.ampproject.org##div[class="pycp4o-0 ehquwE"]
+gizmodo-com.cdn.ampproject.org##div[class="bxm4mm-11 ciBKcm"]
+||sinefy.com/mofy/img/375x125v2.jpg
+limitsizamca.org##.content > a[target="_blank"]
+healthline.com##.css-umsscj
+pixiv.net##.ad-frame-container
+www-nytimes-com.cdn.ampproject.org##figure.margins-v.ad
+m.sweclockers.com###topBanner
+expressen.se##body div.bam-ad-slot[data-slot-name]
 yasehub.com###app > div.top-banner + fieldset
 yasehub.com##.aasd-text
 ficbook.net##.rkl-stick-to-bottom
@@ -1958,7 +1982,7 @@ perezhilton.com##.anchor-spot
 bangumi.org###mobile_ad_area
 komputerswiat.pl###page > article > div[style^="margin:"] > p[style="font-size:9px;color:#696969;font-family:Verdana;text-align:left;margin:0;padding:0;line-height:normal;width:100%"]
 m.haberler.com##.hbMain > input[type][value="manset"] + div[style]
-kotaku.com##.js_post-content > p[class] + div[class]:not(.has-video):not(.instream-permalink) > aside[class]
+lifehacker.com,kotaku.com##.js_post-content > p[class] + div[class]:not(.has-video):not(.instream-permalink) > aside[class]
 1reg.by##.article-content-inner > div:not([class]) > p ~ div[class][style]
 scmp.com##.inline-ad-container
 scmp.com##div[class^="wrapper__mobile-wide-ad-container-"]
@@ -2224,7 +2248,7 @@ kompasiana.com###sticky-mobile-r
 m.timesofindia.com##.asprime1
 m.timesofindia.com##.aroundthewebconatiner
 m.tarsushaber.com##.mobile-banner-in
-www-howtogeek-com.cdn.ampproject.org##.adfullwrap
+howtogeek.com,www-howtogeek-com.cdn.ampproject.org##.adfullwrap
 thenewsminute.com,thehindu.com,www-thehindu-com.cdn.ampproject.org,m-jatimnow-com.cdn.ampproject.org,bisnis-tempo-co.cdn.ampproject.org##amp-fx-flying-carpet[height="300px"]
 thenewsminute.com,thehindu.com,www-thehindu-com.cdn.ampproject.org,m-jatimnow-com.cdn.ampproject.org,bisnis-tempo-co.cdn.ampproject.org##.amp-flying-carpet-text-border
 ||flmallplayer.online/melbetyeni.mp4
@@ -3382,6 +3406,7 @@ livejournal.com##.mdspost-aside__item--banner
 ! Ads in some Chinese browsers(clones)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/51115
 ! https://github.com/AdguardTeam/AdguardFilters/issues/50947
+! https://github.com/AdguardTeam/AdguardFilters/issues/53161
 ! https://github.com/AdguardTeam/AdguardFilters/issues/48948
 ! https://github.com/AdguardTeam/AdguardFilters/issues/48570
 ! https://github.com/AdguardTeam/AdguardFilters/issues/46634
