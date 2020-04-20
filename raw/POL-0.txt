@@ -9,9 +9,9 @@
 ! Wsparcie:
 !   Patronite ==> https://patronite.pl/polskiefiltry
 !   PayPal ==> https://www.paypal.com/pools/c/87zNJ8OJ3I
-! Last modified: 30 March 2020
+! Last modified: 18 April 2020
 ! Expires: 1 day
-! Version: 2020033002
+! Version: 2020041801
 ! Support:
 !   Email >> errorsfilters@certyficate.it
 !   Github >> https://github.com/MajkiIT/polish-ads-filter/issues
@@ -19,7 +19,7 @@
 ! License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ! Copyright © 2020 Certyficate IT
 ! Najnowsza wersja zawsze na: https://www.certyficate.it/adblock
-! v.2020033002 aktualizacja: pon, 30 marca 2020, 13:10:00
+! v.2020041801 aktualizacja: sob, 18 kwietnia 2020, 12:40:00
 !
 !
 !1#-----------------------General advert blocking filters-----------------------!
@@ -237,7 +237,7 @@ popkiller.pl,tygodnikpodhalanski.pl,cnc.info.pl##[class*="reklamy"]
 ~astrosalus.pl,~przegladsportowy.pl,~medonet.pl,~fakt.pl,~forbes.pl,~auto-swiat.pl,~noizz.pl,~plejada.pl,~businessinsider.com.pl,~komputerswiat.pl,~onet.pl,~vod.pl,~uwaga.tvn.pl,anglia.today,dbnao.net,pl##.ad
 ~avclub.gr,~csbydgoszcz.pl##[id^="ad_global"]
 ~esanok.pl,~brzozow24.pl,~bukowsko24.pl,~esanok.pl,~jaslo24.pl,~rzeszow24.pl,~strzyzow24.pl,~tvpodkarpacie.pl,~ustrzyki24.pl,~zagorz24.pl,~zarszyn24.pl,pl###top-reklama
-~facebook.com,~pi.hole##[id^="ads_"]
+~facebook.com,~pi.hole,~finn.no##[id^="ads_"]
 ~fakt.pl,pl##.trizer-bnr
 ~filmweb.pl,pl##.adv_container
 ~istotne.pl,pl###ads
@@ -378,7 +378,6 @@ apynews.pl##.featured-advert
 archiwum.wiesci.com.pl##table:nth-of-type(1) > tbody > tr > td:nth-of-type(3), table:nth-of-type(2) > tbody > tr > td:nth-of-type(3)
 arenadesign.pl##div.owl-item
 arka.tv###m > A > IMG
-airly.eu##.widget-block
 asta24.pl###hero2
 astar.czest.pl###astar
 astratex.pl##[class^="bFix"]
@@ -518,7 +517,7 @@ boardtime.pl###top-banner-ks, #widget_metaslider_widget
 bobasmiesiaca.pl##.A1sub, .advert-A1, aside > div > .text-left > .text-left > .text-left.img-responsive, div.widget.row > .text-center.col-md-12 > div > .text-left
 bobrzanie.pl##.size-full.aligncenter
 bochnianin.pl##.xo, .td_block_wrap.wpb_wrapper > .td-fix-index > p > a
-bochniazbliska.pl##[id^="rotate"], .top_banners, [class^="bochn-top"], #custom_html-18, #custom_html-17, .bochn-post-banner > .lazy-loaded
+bochniazbliska.pl##[id^="rotate"], .top_banners, [class^="bochn-top"], #custom_html-18, #custom_html-17, .bochn-post-banner > .lazy-loaded, #content-main > [id^="bochn-"] > A
 bokser.org##[id*="Advertisement"]
 bonavita.pl###undermenu, .header-slogan, #share-nav
 bonavita.pl##.main-article > .textwidget > .text-center
@@ -851,6 +850,7 @@ elektroda.pl##.the-content > div[class] > div:has(:scope >a[href^="http://www.bi
 elektroda.pl##.the-content > div[class] > div:has(:scope >a[href][target="_blank"][onclick*="'Patron', 'Click Button'"])
 elektroda.pl##.bbd
 elektroda.pl##.col-md-12.sec-b
+elektroda.pl#$#abort-on-property-read popupStatus
 elektroinstalacje.info###side-border-left > div.panelbody:nth-of-type(1)
 elektroinstalacje.info###side-border-left > h3.panelcap:nth-of-type(1)
 elektryka.org##[href^="http://www.elektryka.org/redirect.php"]
@@ -863,7 +863,7 @@ elubaczow.com###execphp-26, .td-fix-index.td_mod_wrap
 elubaczow.com###sidebar_r > .widgettitle:nth-of-type(1)
 elubaczow.com###sidebar_r > .widgettitle:nth-of-type(2)
 elubaczow.com##.widgettitle:nth-of-type(4)
-elubaczow.com,kurierwilenski.lt###custom_html-3
+elubaczow.com,kurierwilenski.lt,poprostupycha.com.pl###custom_html-3
 eluban.pl,naszrynek.pl##.toplayer
 em.kielce.pl##A[target="_new"] > IMG
 emka-info.pl##.main-bg > table:nth-of-type(1) > tbody
@@ -877,10 +877,14 @@ eostroleka.pl##DIV[style$="width: 100%; margin: 8px auto; overflow: hidden;"]
 eostroleka.pl##DIV[style="margin-bottom:10px; margin-left:25px; float:left; width:300px; height:300px;"]
 epainfo.pl###custom_html-19, #custom_html-18
 epainfo.pl##.td_block_text_with_title
-epainfo.pl##.wpb_text_column
+epainfo.pl##.wpb_text_column, #epain-752f77f26d6724dc4341c712ac18b0dc
 epainfo.pl##DIV.g-single > IMG
-epainfo.pl#?#.widget_custom_html:-abp-contains(Reklama)
+!epainfo.pl#?#.widget_custom_html:-abp-contains(Reklama)
 epainfo.pl,vipmultimedia.pl##A.gofollow > IMG
+!epainfo.pl##.cad_widget-box > ul > .epain-widget.widget.td_block_template_1
+epainfo.pl##[id^="epain-"] > A[target="_blank"] > IMG
+epainfo.pl##.block-title > span:has-text(REKLAMA)
+epainfo.pl##.block-title > span:has-text(Reklama)
 eparczew.pl###block-block-5
 epd24.net##.boksy-wyroznione.box
 epiotrkow.pl##a[href^="rd.php"]
@@ -1318,6 +1322,7 @@ imokotow.pl##.row:nth-of-type(2) > .fl.w1000
 imokotow.pl##.row:nth-of-type(3) > .fl.w250
 imperiumromanum.edu.pl,portal.dlugoleka.pl###custom_html-9
 indeed.com###related
+info112.pl###main > div > A > IMG
 info.elblag.pl##.ADinfo, #banner-33, .linkwrap, #banner-glowny, #banner-popup
 info.elblag.pl##IMG[alt*="reklamowe"]
 infobeskidy.eu##[href^="http://infobeskidy.eu/sad"], #last_comment > div > IMG, .before
@@ -1691,7 +1696,7 @@ lwowecki.info##.banner_box_frame, #c9071_89_20
 lwypolnocy.pl##.DnnModule-922.DnnModule-DNN_HTML.DnnModule
 m.autocentrum.pl##div.hidden-print > div.at-title
 m.interia.pl###ad-banner_app
-m.poczta.gazeta.pl##.readmailGazetaAdvert
+m.poczta.gazeta.pl##.readmailGazetaAdvert, #slot_001_TOPBOARD.top-box-container
 mapabts.pl##.bane
 mackozer.myapple.pl##.container > .row > .col-xs-12 > .row > .col-md-4 > .well
 magazif.com##.is-stationary.widget.coffee-break
@@ -1769,7 +1774,7 @@ memy.pl##.content-stream.view-meme > div[style="height:200px; width:750px;"]
 memy.pl##.side-stream > div[style="height:600px; width:300px;"]
 menshealth.pl###mh-halfpage-advert-2
 menshealth.pl##.side-right > p
-mensis.pl,lubanski.eu,aju.pl,gracz.org#,lubaczow.tv##custom_html-4
+mensis.pl,lubanski.eu,aju.pl,gracz.org,lubaczow.tv,poprostupycha.com.pl###custom_html-4
 meritum.gda.pl##a[href="http://serwis-laptopy.pl"]
 metalnews.pl###sidebar_right_place-10, #text-23
 meteo.pl##.project-title.control-wrapper
@@ -2083,7 +2088,7 @@ oleole.pl##[id^="ddd_left"]
 oleole.pl##[id^="ddd_right"]
 olesnica24.com##.right
 olesnicainfo.pl##div.tocenter.hadw
-olsztyn.com.pl##.partners, #boxE
+olsztyn.com.pl##.partners, #boxE, #boxA
 olsztyn24.com###body2 > div:nth-of-type(3), [class^="reklama_"]
 olx.pl###ytplayer, #Layer_1
 olx.pl##.otokredytbox
@@ -2150,6 +2155,7 @@ pcworld.pl##.deal-row.row
 pcworld.pl##.side-module.how-to
 pcworld.pl##article > .row:nth-of-type(3)
 pcworld.pl##div#toaster
+pdasite.pl###footer-img
 pdaclub.pl###banner_news
 pdaclub.pl##.approvebg
 pecetowicz.pl##.ipsContent_Tony.ZaczarowanySwiat.ipsContent_Soprano
@@ -2235,6 +2241,7 @@ polnocna.tv##A[href^="/ad/"] > IMG
 poloniairlandia.pl##.td-header-style-5.td-header-wrap, #td_uid_7_5abf827b54b35
 polsatnews.pl##.LM__popup
 polscygracze.pl##.gridlove-sidebar > .LfUW8dL1Hl-widget.gridlove-box.widget
+polska-zbrojna.pl##.kornelia
 polskaizbabranzypogrzebowej.pl##.\31 958.has-shadow.article
 polskaligaesportowa.pl##.home-partners
 polskaniepodlegla.pl###section-id-1503913327338, #section-id-1530612923433
@@ -2265,14 +2272,15 @@ pomorska.pl##P[style="font:normal 12px/16px Arial,Tahoma,sans-serif;margin:0;pad
 pomorskiprzewodnikwedkarski.pl##.art-hmenu-extra2, #div.clearfix.art-block:nth-of-type(2), #div.clearfix.art-block:nth-of-type(4), .jmoddiv.clearfix.art-block
 pomu.pl##.Games-addLateral, .Banners-lateral
 ponapisach.pl##[class^="slide-"]
-popkulturysci.pl##[class^="adace_ad_"]
+popkulturysci.pl##[class^="adace_ad_"], .g1-collection-item.g1-injected-unit
 popradio.pl##.slider-23, .slider-10736
+poprostupycha.com.pl###reklama-wlasna
 popularne.pl,popularne.net##[class^="devel-"]
 popularnie.pl###gold-header
 poradnikbudowlany.eu##div.banner-big, #cpl-3, div.banner-content, [id^="pb_revive-"]
 poradnikhandlowca.com.pl##.even.field-item > A[target]
 poradnikprzedsiebiorcy.pl##.open.hidden-sm.hidden-xs.header-collapsible
-poradnikzdrowie.pl##.shopping
+poradnikzdrowie.pl##.shopping, .stm-shopping-container, #placement_zpr_shopping
 poradnikzdrowie.pl,vipmultimedia.pl###slidebox
 poranny.pl###dfp-prawa1
 poranny.pl##.gry
@@ -2382,6 +2390,8 @@ punkt.media##.advertpattern, .flexbannergrouppattern
 purepc.pl##A[datab][href]
 purepc.pl##DIV > A[href^="http"][style^="display:block;"]
 purepc.pl##[href^="/r3d1r.php"]
+purepc.pl##[href^="/redir.php"]
+purepc.pl##[href^="/redix.php"]
 purepc.pl##BODY > [href^="/red1r.php"], BODY > DIV > DIV > [href^="/red1r.php"]
 pykownia.pl##.ipsWidget:nth-of-type(8)
 pyszne.pl##.yd-banner
@@ -3156,6 +3166,7 @@ www.ceneo.pl##.lnd_contrast.lnd_parallax.sklepy_1.lnd_container
 www.ceneo.pl##.lnd_contrast.lnd_parallax.sklepy_2.lnd_container
 www.ceneo.pl##.lnd_contrast.praktyczne
 www.ceneo.pl##[class^="home-ad"]
+www.ceneo.pl##.top-banner.js_top-banner.js_analytics-topBanner
 www.cenynaswiecie.pl##.hidden-xs.text-center
 www.cenynaswiecie.pl##.menu-block
 www.cenynaswiecie.pl##.system_banner
@@ -3380,6 +3391,7 @@ zywiecinfo.pl##.promoted
 !
 !10#----------------------Specific advert blocking filters-----------------------!
 /*300x300$image,domain=portalgwiazd.pl
+/ads.js$script,domain=speedwaynews.pl
 /aserver/$script,subdocument
 /fotosy/inne/$image,domain=mierzyn24.pl
 /grafika/banerki_reklamowe/$image,domain=wbijam.pl
@@ -3430,7 +3442,6 @@ zywiecinfo.pl##.promoted
 ||api.ergokantor.pl/widgets/$subdocument
 ||api.systempartnerski.pl^$domain=niepoddawajsie.pl
 ||aptekacentrum.lublin.pl/images/*1920x1080.jpg$image
-||airly.eu/map/static/media/banner-pl.*.png$image
 ||arpass.nazwa.pl/pliki/swf/$image
 ||atrexpress.com.pl/fileadmin/user_upload/grafika/baner$image
 ||autotrader.pl/Resources/Images/credit-agricole/$image
@@ -3519,7 +3530,6 @@ zywiecinfo.pl##.promoted
 ||forum.haszysz.com/baner_$image
 ||freedisc.pl/static/player/*/vast.js$script
 ||freeware.info.pl/wiejskie.js
-||freshmail.mx^
 ||fwcdn.pl/adv/$subdocument
 ||g.cda.pl/*.php?ax$xmlhttprequest
 ||g.gazetaprawna.pl/gp/sgp/img/gp/kyocera-logo.png$image
@@ -3959,8 +3969,8 @@ zywiecinfo.pl##.promoted
 @@||exs.pl^$domain=wpolityce.pl|wio.waw.pl
 @@||gazetabilgoraj.pl/wp-content/plugins/better-adsmanager/js/advertising.min.js$script
 @@||go.eu.bbelements.com/please/code|$domain=filmweb.pl
-@@||google-analytics.com^$domain=certyficate.it|liptonicetea.com|filmweb.pl
-@@||googletagmanager.com/gtag/$script,domain=certyficate.it
+@@||google-analytics.com^$domain=certyficate.it|liptonicetea.com|filmweb.pl|benefitcard.pl
+@@||googletagmanager.com/gtag/$script,domain=certyficate.it|benefitcard.pl
 @@||googletagmanager.com/gtm.js$script,domain=www.emag.pl|benchmark.pl|komputerswiat.pl|www.jabra.pl|plus.pl|expressilustrowany.pl|motofakty.pl|kurierlubelski.pl|stronakobiet.pl|ads.allegro.pl
 @@||googletagservices.com/tag/js/gpt.js$script,domain=wprost.pl
 @@||guce.advertising.com/collectIdentifiers?sessionId=
@@ -4206,6 +4216,7 @@ horrortube.fun##A[href*="viliaff.com"], .col-md-8 > A
 ||cloudfront.net/atrk.js$script,domain=www.flashx.net
 ||www.google.com$popup,domain=www.flashx.net
 ||playtube.ws/js/pop.js$script
+||drda5yf9kgz5p.cloudfront.net^
 !
 !28#--------------------------Rules for pages with random adv scripts regex------------!
 /apu.php?zoneid
@@ -4223,7 +4234,7 @@ horrortube.fun##A[href*="viliaff.com"], .col-md-8 > A
 /^https?:\/\/[a-z0-9-]{8,30}\.[a-z]{2,11}\/[a-z]{1,3}\/[0-9]{5,10}/$script,domain=cda-tv.pl
 /^https?:\/\/[a-z0-9]{10,20}\.com\/[0-9]{5,10}\.html/$subdocument,domain=ekino-tv.pl
 /^https?:\/\/[a-z0-9]{5,}\.(com|top|pro)\/[a-z0-9]{1,}\/[a-z0-9]{1,}\/[a-z0-9]{1,}\/[a-z0-9/]{4,}\.js/$script,domain=vidto.me|fileone.tv|alltube.tv|srkcast.com|vidfile.net|alltube.pl|whostreams.net|szukajka.tv|cda-hd.co|filman.cc|cda-hd.cc|horrortube.fun|onlystream.tv|onlystream.tv|jetload.net|ekino.pw|waaw.tv
-/^https?:\/\/[a-zA-Z.0-9]{7,}\.(com|bid|info)\/[a-zA-Z.-]{1,}\.js/$script,domain=devil-torrents.pl|electro-torrent.pl|vidlox.tv|segos.es|fileone.tv|raptu.com|vidfile.net|sharevideo.pl|sharing-box.cloud|vidstream.xyz|cloudupload.co|veecast.net|openkatalog.com|shinden.pl|tele-wizja.is|ekinomaniak.tv|hqq.watch|whostreams.net|seriale-po-polsku.pl|virpe.com|filman.cc|horrortube.fun|onlystream.tv|clipwatching.com|upstream.to|videopenny.net|flashx.net|vidspace.io|cdahd.co
+/^https?:\/\/[a-zA-Z.0-9]{7,}\.(com|bid|info)\/[a-zA-Z.-]{1,}\.js/$script,domain=devil-torrents.pl|electro-torrent.pl|vidlox.tv|segos.es|fileone.tv|raptu.com|vidfile.net|sharevideo.pl|sharing-box.cloud|vidstream.xyz|cloudupload.co|veecast.net|openkatalog.com|shinden.pl|tele-wizja.is|ekinomaniak.tv|hqq.watch|whostreams.net|seriale-po-polsku.pl|virpe.com|filman.cc|horrortube.fun|onlystream.tv|clipwatching.com|upstream.to|videopenny.net|flashx.net|vidspace.io|cdahd.co|upzone.cc
 /^https?:\/\/[a-zA-Z0-9]{10,}\.cloudfront\.net\/[a-zA-Z0-9%?=]{10,}/$script,domain=seriale-po-polsku.pl|animezone.pl
 /^https?:\/\/[a-zA-Z0-9]{7,}\.com\//$script,domain=horrortube.fun|ekino.pw
 /^https?:\/\/[a-zA-Z0-9]{5,10}\.[a-z]{2,10}\/[a-zA-Z0-9?_=&-.%]{50,70}/$subdocument,script,popup,domain=tele-wizja.is|widestream.io|cdahd.co|onlystream.tv
@@ -4423,6 +4434,7 @@ money.pl,moneyv.wp.pl#?#div[class^="sc-"]:-abp-has(> img[src="https://i.wpimg.pl
 @@||www.buliba.pl/css/overlayad.css$stylesheet,domain=www.buliba.pl
 @@||vitalia.pl/gfx/*/reklama/danie.png$image,third-party,domain=diety.wp.pl
 @@||biznes2biznes.com/reklama/*$image,domain=biznes2biznes.com
+@@/reklama.$~stylesheet,domain=reklama.ringieraxelspringer.pl
 @@.pl/ads/*/static/$stylesheet,script,domain=google.pl
 digest.com.pl#@#.display-ad-block
 e-stargard.pl,mojeinfo24.pl#@#.bg_ad
