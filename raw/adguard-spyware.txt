@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: zmwT/cByErQ/DJ2ym58kcQ
+! Checksum: dATwTKyorA0aXsoFHQYNqw
 ! Title: AdGuard Tracking Protection filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.13.24
-! TimeUpdated: 2020-04-08T23:31:43+03:00
+! Version: 2.0.13.46
+! TimeUpdated: 2020-04-17T13:31:26+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#privacy
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -153,6 +153,15 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ! ||e.crashlytics.com^
 ! ||settings.crashlytics.com^
 !
+! ||ensighten.com^$third-party - not a tracker
+!
+||apn.c.appier.net^$third-party
+||doorbrazil.com^$third-party
+||dmzls.safe-installation.com^$third-party
+||pixel.safe-installation.com^$third-party
+||troubledtail.com^$third-party
+||spellsalsa.com^$third-party
+||hits-i.iubenda.com^
 ||lk.vectoranalytics.ru^$third-party
 ||track.ilonofficial.com^
 ||track.saygames.io^
@@ -282,7 +291,6 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ||admon.pro^$third-party
 ||stats.mos.ru^$third-party
 ||px.staticfiles.at^$third-party
-||vast.videocdn.tv^$third-party
 ||wapempire.com^$third-party
 ||chali.info^$third-party
 ||ulogin-stats.ru^$third-party
@@ -1280,7 +1288,6 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ||engine64.com^$third-party
 ||enhance.com^$third-party
 ||enquisite.com^$third-party
-||ensighten.com^$third-party
 ||enticelabs.com^$third-party
 ||eperfectdata.com^$third-party
 ||epilot.com^$third-party
@@ -3588,6 +3595,11 @@ nethunt.com/api/v1/track/email/$image
 !+ NOT_PLATFORM(ios, ext_safari, ext_android_cb)
 ||tags.news.com.au^$~script
 !
+||tracker.unbxdapi.com^
+||d21gpk1vhmjuf5.cloudfront.net^
+||spkrth.scw.systems^
+||api-analytics.rozetka.com.ua^
+||rrss.abc.es^
 ||analytics.htmedia.in^
 ||spxl.socy.es^
 ||telemetry.tradingview.com^
@@ -5085,6 +5097,9 @@ charlestownwyllie.oaklawnnonantum.com^
 ! YouTube
 /log_event?
 !
+/collector.php?
+/matomo.php?action_name=
+/matomo.js$domain=~github.com
 /newrelic-gpt.
 /omniture/visitorapi.
 /wp-content/plugins/wp-google-analytics-events/*
@@ -5357,6 +5372,12 @@ _tracking.php?b=
 ||nd.demdex.net/event?d_mid=$empty,important,domain=9now.com.au
 ||adc.nine.com.au/?token=$empty,important,domain=9now.com.au
 !
+||pv.ltn.com.tw/impression?
+||pv.ltn.com.tw/RI_Server?a=
+||chesterstandard.co.uk/resources/static/standard/texts/js/VisitorAPI.js
+||cdn.abcotvs.net/abcotv/assets/news/global/js/analytics/VideoHeartbeat.min.js
+||g2insights-cdn.azureedge.net/*/mng/g2insights.min.js
+animespirit.online###CollapsiblePanel_Statistics
 ||weather.com/weather/assets/omniture-visitorapi.*.js
 ||weather.com/api/v*/script/dprSdkScript.js
 ||weather.com/weather/assets/omniture-app-measurement.*.js
@@ -7000,6 +7021,8 @@ link.gmapp*.net$image
 ||hh.ru/analytics^
 ! End: cnet.com trackers
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/53722
+||google-analytics.com/analytics.js$important,domain=unique-tutorials.info|getintopc.com|solvetube.site|tech-platform.info
 ! https://github.com/AdguardTeam/AdguardFilters/issues/43140
 ||rum-static.pingdom.net/*-*.js$empty,important,domain=leboncoin.fr
 !
@@ -7474,6 +7497,14 @@ link.gmapp*.net$image
 !
 ! Exception rules that fix different issues caused by blocking trackers
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/53756
+@@||google-analytics.com/analytics.js$domain=tlctv.com.tr
+@@||googletagmanager.com/gtm.js$domain=tlctv.com.tr
+! https://github.com/AdguardTeam/AdguardFilters/issues/53758
+@@||ipcheck.tmgrup.com.tr/ipcheck/getcountry?json=$xmlhttprequest,domain=ahaber.com.tr
+! https://github.com/AdguardTeam/AdguardFilters/issues/53442
+@@||mc.yandex.ru/metrika/tag.js$domain=coddyschool.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/53404
 ! https://github.com/AdguardTeam/AdguardFilters/issues/53129
 ! https://github.com/AdguardTeam/AdguardFilters/issues/52986
 @@||experience.tinypass.com/xbuilder/experience/execute?aid=$domain=waz.de
@@ -7835,17 +7866,9 @@ link.gmapp*.net$image
 ! https://github.com/AdguardTeam/AdguardFilters/issues/37553
 @@||google-analytics.com/analytics.js$domain=linsoo.co.kr
 ! anime-planet.com - fix player
-! https://github.com/AdguardTeam/AdguardFilters/issues/30957
-@@||nexus.ensighten.com/hearst/tv-mos/Bootstrap.js$domain=kmbc.com
-@@||nexus.ensighten.com/hearst/tv-mos/serverComponent.php$domain=kmbc.com
-@@||nexus.ensighten.com/hearst/tv-mos/code/*.js$domain=kmbc.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/37430
 ! https://github.com/AdguardTeam/AdguardFilters/issues/37432
 @@||naver.net/wcslog.js$domain=land.naver.com
-! https://github.com/AdguardTeam/AdguardFilters/issues/37406
-@@||nexus.ensighten.com/mapfre/co_autoservicio/Bootstrap.js$domain=clientes.mapfre.com.co
-@@||nexus.ensighten.com/mapfre/co_autoservicio/serverComponent.php$domain=clientes.mapfre.com.co
-@@||nexus.ensighten.com/mapfre/co_autoservicio/code/*.js?condition$domain=clientes.mapfre.com.co
 ! https://github.com/AdguardTeam/AdguardFilters/issues/35744
 @@||track.svz.de/cre-*/tracking/tracking.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/37356 - fix video
@@ -7904,7 +7927,6 @@ link.gmapp*.net$image
 @@||google-analytics.com/analytics.js$domain=polygon.com
 ! sbs.com.au - broken video player
 @@||scdn.cxense.com/cx.js$domain=sbs.com.au
-@@||nexus.ensighten.com/sbs/sbsprod/$domain=sbs.com.au
 ! https://github.com/AdguardTeam/AdguardFilters/issues/34387
 @@||scdn.cxense.com/cx.js$domain=digi24.ro
 ! https://github.com/AdguardTeam/AdguardFilters/issues/34315
@@ -7953,14 +7975,15 @@ link.gmapp*.net$image
 @@||tags.tiqcdn.com/utag/tegna^$domain=kvue.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/30497
 @@||wilko.com/_ui/shared/js/analyticsmediator.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/53780
 ! https://github.com/AdguardTeam/AdguardFilters/issues/52736
 ! https://github.com/AdguardTeam/AdguardFilters/issues/44062
 ! https://github.com/AdguardTeam/AdguardFilters/issues/43717
 ! https://github.com/AdguardTeam/AdguardFilters/issues/33135
 ! https://github.com/AdguardTeam/AdguardFilters/issues/31097
 ! https://github.com/AdguardTeam/AdguardFilters/issues/42985
-@@||marketo.com/js/forms$domain=cloudflare.com|rocketsoftware.com|sherweb.com|kaspersky.com|workspace.circuitmaker.com|collab.net
-@@||marketo.com/index.php/form/$domain=cloudflare.com|rocketsoftware.com|sherweb.com|kaspersky.com|workspace.circuitmaker.com|collab.net
+@@||marketo.com/js/forms$domain=coursera.org|cloudflare.com|rocketsoftware.com|sherweb.com|kaspersky.com|workspace.circuitmaker.com|collab.net
+@@||marketo.com/index.php/form/$domain=coursera.org|cloudflare.com|rocketsoftware.com|sherweb.com|kaspersky.com|workspace.circuitmaker.com|collab.net
 ! https://forum.adguard.com/index.php?threads/31245/
 @@||ssl.google-analytics.com/ga.js$domain=gmail.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/30981
@@ -8361,8 +8384,6 @@ link.gmapp*.net$image
 @@||google-analytics.com/analytics.js$domain=vatanbilgisayar.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/12269
 @@||api.curalate.com^$domain=potterybarn.com
-! https://github.com/AdguardTeam/AdguardFilters/issues/12188
-@@||nexus.ensighten.com/johnstonpress/production/Bootstrap.js$domain=lep.co.uk
 ! https://github.com/AdguardTeam/AdguardFilters/issues/12142
 @@||b.scorecardresearch.com/beacon.js$domain=premiumsporthd.it
 ! https://github.com/AdguardTeam/AdguardFilters/issues/11933
@@ -8433,15 +8454,11 @@ link.gmapp*.net$image
 @@||googletagmanager.com/gtm.js$domain=argeweb.nl
 ! https://github.com/AdguardTeam/AdguardFilters/issues/8563
 @@||netto-online.de/jquery/webanalytics/xtcore.js
-! https://github.com/AdguardTeam/AdguardFilters/issues/9033
-@@||nexus.ensighten.com/prudential/production/$domain=prudential.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/9020
 @@||cdn.scarabresearch.com/js/*/scarab-v*.js$domain=avansas.com
 @@||recommender.scarabresearch.com/merchants/$domain=avansas.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/8975
 @@||geolocation.stroeerdp.de^$domain=t-online.de
-! https://github.com/AdguardTeam/AdguardFilters/issues/8883
-@@||nexus.ensighten.com/hearst/tv-mos/$domain=wcvb.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/8872
 @@||rtoaster.jp^$domain=attenir.co.jp
 ! https://forum.adguard.com/index.php?threads/blokker-nl.16886/
@@ -8610,8 +8627,6 @@ link.gmapp*.net$image
 @@||bat.bing.com/bat.js$domain=airbnb.ru
 ! https://forum.adguard.com/index.php?threads/22199/
 @@||webstat.channel4.com/b/ss/channel4dotcom/$domain=channel4.com
-! https://forum.adguard.com/index.php?threads/schwarzwaelder-bote-de.22156/
-@@||schwarzwaelder-bote.de/*/adbl/adframe.js^
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5150
 @@||ticketmaster.sc.omtrdc.net/b/ss/
 ! Fixing links on Yandex Search and News
@@ -8925,8 +8940,6 @@ epicwow.com#@#img[width="88"][height="31"]
 @@||google-analytics.com/plugins/ua/linkid.js$domain=mgts.ru
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/1118
 @@||googletagmanager.com/gtm.js$domain=besplatnyeprogrammy.ru|softobase.com|freeversion.ru|softmen.ru|freeversions.ru|moiprogrammy.net
-! https://github.com/AdguardTeam/ExperimentalFilter/issues/1073
-@@||nexus.ensighten.com/alma/iltalehti/$domain=iltalehti.fi
 ! http://forum.adguard.com/showthread.php?7960
 @@||js-agent.newrelic.com/nr-*.min.js$domain=copy.com
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/1023
@@ -9154,13 +9167,6 @@ mozilla-russia.org#@#img[width="88"][height="31"]
 @@||eircomphonebook.ie/js/wt_capi.js?
 @@||eloqua.com/include/livevalidation_standalone.compressed.js$domain=pbs.org
 @@||eloqua.com/visitor/v200/svrgp.aspx?$domain=itworld.com|juniper.net
-@@||ensighten.com/amex/Bootstrap.js?$domain=americanexpress.com
-@@||ensighten.com/amex/prod/code/*.js?ruleId=$script,domain=americanexpress.com
-@@||ensighten.com/amex/serverComponent.php?$script,domain=americanexpress.com
-@@||ensighten.com/crossdomain.xml
-@@||ensighten.com/libs/flowplayer/ensightenplugin.swf
-@@||ensighten.com/symantec/scode/$script,domain=norton.com
-@@||ensighten.com/target/$script,domain=target.com
 @@||espncdn.com/combiner/*/chartbeat/$script,domain=espn.go.com
 @@||espncdn.com/combiner/*/foresee/$script,domain=espn.go.com
 @@||everestjs.net/static/st.js$domain=ford.com
