@@ -18,8 +18,8 @@ reddit.com##div.fePAzF:has(div[id^="sidebar-"])
 reddit.com###overlay-comment-atf
 reddit.com###comment-atf
 reddit.com##div[data-redditstyle="false"]:has(div[data-before-content="advertisement"])
-reddit.com##div[id^="overlay-sidebar-"][data-before-content="advertisement"]:nth-ancestor(4)
-reddit.com##div[id^="sidebar-"][data-before-content="advertisement"]:nth-ancestor(4)
+reddit.com##div[id^="overlay-sidebar-"][data-before-content="advertisement"]:upward(4)
+reddit.com##div[id^="sidebar-"][data-before-content="advertisement"]:upward(4)
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/10#issuecomment-459593858
 quizlet.com##.ModeLayout-ad
@@ -83,7 +83,9 @@ reuters.com##.RightRail_sticky:has(.DPSlot_slot)
 fonts2u.com###banner_bottom
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/25#issuecomment-495819437
+# https://github.com/NanoMeow/QuickReports/issues/2652
 grammaire.reverso.net,grammar.reverso.net###ads
+reverso.net##.locdrcas
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/27#issuecomment-497180207
 onthesnow.*,skiinfo.*###adpos_Skyscraper_wrap
@@ -117,7 +119,7 @@ rpmseek.com###lbanner_top
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/41#issuecomment-515740473
 edition.cnn.com###story-bottom
 www.cnn.com##[class*="outbrain__Container-"]
-www.cnn.com##iframe[src^="https://widgets.tree.com/"]:nth-ancestor(3)
+www.cnn.com##iframe[src^="https://widgets.tree.com/"]:upward(3)
 www.cnn.com##section:not(:has-text(/\w/))
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/44#issuecomment-519327973
@@ -150,7 +152,7 @@ konbini.com##.konbini-ad
 theartnewspaper.com##.ap-sidearea
 
 # https://github.com/NanoMeow/QuickReports/issues/2546
-amazon.*###thirdPartySponsorLinkTitle:nth-ancestor(4)
+amazon.*###thirdPartySponsorLinkTitle:upward(4)
 amazon.*##[data-ad-details]
 
 # https://github.com/NanoMeow/QuickReports/issues/2560
@@ -235,17 +237,24 @@ shoutwiki.com##.monobook-ad
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/77#issuecomment-574410073
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/87#issuecomment-582155483
 !#if !env_mobile
-pixiv.net##.ads-top-info
-pixiv.net##.area_new:not(:has(.area_title))
-pixiv.net###root > header + div + div:not(:has(a)):not(:has(img))
-pixiv.net##.sc-AykKF:style(padding-bottom: 0px !important;)
-pixiv.net###js-mount-point-header.with-ad:style(min-height: 0px !important;)
+pixiv.net##div:has(:scope > div > iframe:not([src])):matches-css(padding-bottom: 56px)
 pixiv.net##li:has(:scope > iframe[name="infeed"])
+pixiv.net###js-mount-point-header.with-ad:style(min-height: 0px !important;)
+pixiv.net###root > header + div + div:not(:has(a)):not(:has(img))
+pixiv.net##.area_new:not(:has(.area_title))
+pixiv.net##.sc-AykKF:style(padding-bottom: 0px !important;)
+pixiv.net##.ads-top-info
 !#endif
 !#if env_mobile
-pixiv.net##.ad-frame-container
 pixiv.net##body[style^="margin-bottom"]:style(margin-bottom: 0px !important;)
+pixiv.net##.ad-frame-container
 !#endif
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/107#issuecomment-615925187
+||deviantart.com/_adslot/$subdocument
+
+# https://github.com/NanoMeow/QuickReports/issues/1489
+hentai-image.com###display_image_detail > span
 
 # End Multilingual NSFW
 
@@ -292,6 +301,11 @@ rjno1.com###user2 > div:has(:scope > div > ins.adsbygoogle)
 rjno1.com##[class$="-ad"]
 rjno1.com##[id^="aswift_"]
 rjno1.com##.allmode_box:has(:scope > center > script[src="//cpro.baidustatic.com/cpro/ui/c.js"])
+
+# https://github.com/NanoMeow/QuickReports/issues/3252
+news.mydrivers.com##.adsbygoogle:upward(1)
+news.mydrivers.com##.baidu_right:style(float: left !important)
+news.mydrivers.com##.baidu_left
 
 # End Chinese (Simplified)
 
@@ -630,7 +644,9 @@ howto-connect.com##.widget_text_smart:has(ins.adsbygoogle)
 mangarock.com##div:has(:scope > [id^="taboola"])
 
 # https://github.com/NanoMeow/QuickReports/issues/372
+# https://github.com/NanoMeow/QuickReports/issues/1023
 usgamer.net##.leaderboard-container
+usgamer.net##.recommendations
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/20#issuecomment-485269960
 manualslib.com##.manualban-bot
@@ -669,6 +685,8 @@ blogfonts.com##.column_right:has(.adsbygoogle)
 webfonts0.com##div:has(:scope > .adsbygoogle)
 
 # https://github.com/NanoMeow/QuickReports/issues/1043
+# https://github.com/NanoMeow/QuickReports/issues/3309
+bleepingcomputer.com###ips_Posts > .post_block:has(div.apb)
 bleepingcomputer.com##.cz-related-article-wrapp:has(:scope > .adsbygoogle)
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/25#issuecomment-495819425
@@ -824,7 +842,7 @@ yeggi.com##div[style*="f2f2f2"]:not(:has(a))
 yeggi.com##div[style^="margin-right:320px;"]:style(margin-right: 12px !important;)
 
 # https://github.com/NanoMeow/QuickReports/issues/1596
-rankedboost.com##[class^="InsertTitle-Updated"]:nth-ancestor(1)
+rankedboost.com##[class^="InsertTitle-Updated"]:upward(1)
 
 # https://github.com/NanoMeow/QuickReports/issues/1612
 acronymfinder.com##[class$="-container"]:has(:scope > script)
@@ -1139,8 +1157,10 @@ bustle.com##.ka.gr.gq
 
 # https://github.com/NanoAdblocker/NanoFilters/issues/433
 # https://github.com/NanoMeow/QuickReports/issues/1499
-washingtonpost.com###leaderboard-wrapper
+# https://github.com/NanoMeow/QuickReports/issues/2626
 washingtonpost.com##div:has(:scope > wp-ad):not(#topper-headline-wrapper)
+washingtonpost.com##aside > div:has(wp-ad)
+washingtonpost.com###leaderboard-wrapper
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/68#issuecomment-564256999
 worldarchitecture.org##div[class^="adv"]
@@ -1183,6 +1203,9 @@ bigthink.com##.rebellt-item:not(:has(a))
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/71#issuecomment-567791964
 realclearpolicy.com##div[style*="float: left; width: 300px;"]
+
+# https://github.com/NanoMeow/QuickReports/issues/3514
+realclearpolitics.com##.init.widget_slot:not(.loaded)
 
 # https://github.com/NanoMeow/QuickReports/issues/2535
 files.minecraftforge.net##.promo-container
@@ -1231,7 +1254,7 @@ venea.net##.ag_banner
 venea.net##.ag_content
 
 # https://github.com/NanoMeow/QuickReports/issues/2648
-thumpertalk.com##[id*=".adloc."]:nth-ancestor(1)
+thumpertalk.com##[id*=".adloc."]:upward(1)
 thumpertalk.com##[data-role="sidebarAd"]
 
 # https://github.com/NanoMeow/QuickReports/issues/2665
@@ -1359,6 +1382,10 @@ tellerreport.com##.ads
 douglascountysentinel.com,hpenews.com##.dfpAd
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/92#issuecomment-589440711
+# https://github.com/NanoMeow/QuickReports/issues/1672
+forum.xda-developers.com##.postbit-userinfo-cell:not(:has-text(/\w/))
+forum.xda-developers.com##.purchad:upward(1)
+forum.xda-developers.com##div[class^="rsb-"]
 forum.xda-developers.com##.leaderboard
 
 # https://github.com/NanoMeow/QuickReports/issues/3136
@@ -1494,16 +1521,16 @@ cheatsheet.com##body:style(padding-top: 0px !important;)
 unix.com##[id^="zone-"]
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/101#issuecomment-604470687
-condoblues.com##script[src*="nmedianet"]:nth-ancestor(1)
+condoblues.com##script[src*="nmedianet"]:upward(1)
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/102#issuecomment-605393582
-indy100.com##amp-list:nth-ancestor(1)
+indy100.com##amp-list:upward(1)
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/102#issuecomment-605393587
 worldatlas.com##.dynamicInsert-block
 
-# https://github.com/NanoMeow/QuickReports/issues/3447
-loudersound.com##.newsletter-signup
+# https://github.com/NanoMeow/QuickReports/issues/3559
+creativebloq.com##.slot-beforePopularBox
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/103#issuecomment-606680593
 namepros.com##.npDisclaimer + div
@@ -1543,6 +1570,110 @@ signup.com##.right-content:has(#right_ad_content)
 
 # https://github.com/NanoMeow/QuickReports/issues/3548
 gamepress.gg##.news-ads-top
+
+# https://github.com/NanoMeow/QuickReports/issues/3557
+download.pixelexperience.org##body > div:has(.adsbygoogle)
+
+# https://github.com/NanoMeow/QuickReports/issues/2482
+slate.com##.ad--inArticleBanner
+
+# https://github.com/NanoMeow/QuickReports/issues/2867
+researchgate.net##.is-sticky:style(top: 0px !important;)
+
+# https://github.com/NanoMeow/QuickReports/issues/2932
+# https://github.com/NanoMeow/QuickReports/issues/406
+mysanantonio.com,sfgate.com###subHead:style(transform: none !important;)
+mysanantonio.com,sfgate.com###siteNav:style(transform: none !important;)
+mysanantonio.com,sfgate.com###ctpl-fullbanner-spacer
+mysanantonio.com,sfgate.com###site-nav-spacer
+mysanantonio.com,sfgate.com##.ctpl-fullbanner
+mysanantonio.com##.zoneInlineD
+
+# https://github.com/NanoMeow/QuickReports/issues/3315
+calgaryherald.com##.row.widget:has([data-list-type="related_articles"])
+calgaryherald.com##.row.widget:has(.widget-flyercity)
+calgaryherald.com##.ad__section-border
+
+# https://github.com/NanoMeow/QuickReports/issues/3385
+nypost.com##.widget_text.module:has(a[href*="?utm_source=nypost"])
+nypost.com##.widget_nypost_dfp_ad_widget
+nypost.com##.nyp-article-footer-outbrain-wrapper
+nypost.com##.outbrain-enabled
+
+# https://github.com/NanoMeow/QuickReports/issues/3210
+shmoop.com##iframe[src^="https://dn5bj2dqerm21.cloudfront.net/"]
+
+# https://github.com/NanoMeow/QuickReports/issues/3349
+latestnumber.com##.h90
+latestnumber.com##.hidden-xs
+
+# https://github.com/NanoMeow/QuickReports/issues/3297
+checkwhocalled.com##.adsbygoogle + script + article:style(padding-top: 0px !important;)
+checkwhocalled.com###top_right:style(max-width: none !important; padding-bottom: 5px !important;)
+checkwhocalled.com###top_left
+
+# https://github.com/NanoMeow/QuickReports/issues/2584
+dictionary.com##aside[id^="dcom-serp-"]
+dictionary.com##.wide-ad-leaderboard
+dictionary.com##.wide-ad-new-layout
+
+# https://github.com/NanoMeow/QuickReports/issues/682
+theglobeandmail.com##.pb-f-commercial-dfp-ads
+
+# https://github.com/NanoMeow/QuickReports/issues/1226
+i-dont-care-about-cookies.eu##.mt-5:has(.adsbygoogle)
+
+# https://github.com/NanoMeow/QuickReports/issues/3547
+web-capture.net###bookmarklet:style(margin-left: 0px !important;)
+web-capture.net###result_ad_box
+
+# https://github.com/NanoMeow/QuickReports/issues/2319
+cartoonbrew.com##.cb-ad
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/107#issuecomment-615925133
+nfl.com##.video-channel-rr
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/107#issuecomment-615925156
+tasteofhome.com##.taboola-container
+
+# https://github.com/NanoMeow/QuickReports/issues/1102
+viralnewsdigger.blogspot.com##.HTML:has(span:has-text(/^(:?Sponsor|Related Posts)$/))
+viralnewsdigger.blogspot.com##div[name="Header Ads"]
+
+# https://github.com/NanoMeow/QuickReports/issues/1943
+bestforandroid.com##.adv-ads-selfstyle:remove()
+
+# https://github.com/NanoMeow/QuickReports/issues/2266
+legacy.com##.wrapperAdSpace:style(margin-top: 0px !important;)
+legacy.com##.AffiliateHeader
+legacy.com##.FixedStickyAside
+legacy.com##.FixedStickyOverlay
+legacy.com##.FixedNoOverlay
+
+# https://github.com/NanoMeow/QuickReports/issues/2271
+bitsfree.net##.mx-auto
+
+# https://github.com/NanoMeow/QuickReports/issues/2122
+findmysoft.com###col_h1_:has(+ #as_right)
+findmysoft.com###as_right
+findmysoft.com###col_h3
+
+# https://github.com/NanoMeow/QuickReports/issues/3329
+cyberciti.biz##center:has(.adsbygoogle)
+cyberciti.biz##.widget:has(.adsbygoogle)
+
+# https://github.com/NanoMeow/QuickReports/issues/1454
+essexlive.news##body:style(margin-top: 0px !important;)
+essexlive.news###taboolaRightRailsResponsive
+essexlive.news##.sovrn-onetag-ad
+
+# https://github.com/NanoMeow/QuickReports/issues/2408
+thesimsresource.com##.crtv-bottom-wrapper
+thesimsresource.com##.sticky_bottom
+
+# https://github.com/NanoMeow/QuickReports/issues/2117
+indy100.com##header + div > div:has(:scope > h1 + div > amp-list)
+indy100.com###mpu0ArticleBody
 
 # End English
 
@@ -1587,6 +1718,23 @@ rule34hentai.net###Recommended_for_youleft
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/100#issuecomment-600108738
 hard55.com,analbooru.com,zombooru.com##.banner_hor
+
+# https://github.com/NanoMeow/QuickReports/issues/3270
+pornhub.*##body > div:has(:scope > .removeAdLink)
+pornhub.*###hd-rightColVideoPage > div.clearfix
+
+# https://github.com/NanoMeow/QuickReports/issues/1231
+redtube.*##div:has(:scope > iframe + script + a.remove_ads)
+
+# https://github.com/NanoMeow/QuickReports/issues/3578
+simpleflying.com##.widget:has(.simpl-adlabel)
+simpleflying.com##.simpl-adlabel
+simpleflying.com###featured-video
+
+# https://github.com/NanoMeow/QuickReports/issues/2246
+spankwire.com###js-react-search-list div:has-text(/^Advertisement$/):upward(1)
+spankwire.com###js-react-video-player div:has-text(/^Advertisement$/):upward(2)
+spankwire.com##.adsbox
 
 # End English NSFW
 
@@ -1644,6 +1792,11 @@ spox.com##.fullrow
 
 # https://github.com/NanoMeow/QuickReports/issues/1420
 13news.co.il,13tv.co.il##div[class^="grid-block"]:has(:scope > iframe[src*="/third-party/dfp/dfp.html"])
+
+# https://github.com/NanoMeow/QuickReports/issues/3524
+themarker.com##header ~ div:has(.js-dfp-ad)
+themarker.com##section:has(:scope > .OUTBRAIN)
+themarker.com##section:has(:scope > a[href*="ClickTracker"])
 
 # End Hebrew
 
@@ -1746,6 +1899,10 @@ weblio.jp##.rectangle-ads-frame-www
 # https://github.com/NanoMeow/QuickReports/issues/3350
 shindanmaker.com##.taboola_block1
 
+# https://github.com/NanoMeow/QuickReports/issues/3486
+uwagakisimasuka.blog.fc2.com##.side_plugin:has(.adsbygoogle)
+uwagakisimasuka.blog.fc2.com##.adsbygoogle + script + br
+
 # End Japanese
 
 # -------------------------------------------------------------------------------------------------------------------- #
@@ -1761,6 +1918,15 @@ seiga.nicovideo.jp##.ads_prtext
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/48#issuecomment-525092904
 toranoana.jp##.tora-ads-list-item
+
+# https://github.com/NanoMeow/QuickReports/issues/1681
+dousyoko.net###text-3
+dousyoko.net##.floatbox2
+
+# https://github.com/NanoMeow/QuickReports/issues/3539
+buhidoh.net##iframe[style]:style(height: 82px !important;)
+buhidoh.net##iframe[src="http://file.buhidoh.net/uploads/setting/im_buhidoh_pc_page_2_ssp.html"]
+buhidoh.net##.banbox
 
 # End Japanese NSFW
 
@@ -1834,6 +2000,18 @@ bolha.com##.BannerBillboard
 
 # -------------------------------------------------------------------------------------------------------------------- #
 
+# Russian
+
+# https://github.com/NanoMeow/QuickReports/issues/1159
+armadaboard.com##td[style*="theme_orig"] > table:has(div[mousedown="window.open('http://www.stimulcash.com')"])
+armadaboard.com##td[style*="theme_orig"] > table:has(div[mousedown="window.open('http://www.stimulcash.com')"]) + br
+armadaboard.com##td[style*="theme_orig"] > table:has(div[mousedown="window.open('http://www.stimulcash.com')"]) + br + br
+armadaboard.com##td[style*="theme_orig"] > table:has(div[mousedown="window.open('http://www.stimulcash.com')"]) + br + br + br
+
+# End Russian
+
+# -------------------------------------------------------------------------------------------------------------------- #
+
 # Serbo-Croatian
 
 # https://github.com/NanoMeow/QuickReports/issues/1916
@@ -1847,6 +2025,10 @@ forum.benchmark.rs##div:has(:scope > [id^="div-gpt-ad-"])
 
 # https://github.com/NanoMeow/QuickReports/issues/852
 yoututosjeff.es##.widget-content:has(:scope > .adsbygoogle)
+
+# https://github.com/NanoMeow/QuickReports/issues/2688
+botanical-online.com##.row:nth-of-type(2):has(.anes)
+botanical-online.com##.anes
 
 # End Spanish
 
