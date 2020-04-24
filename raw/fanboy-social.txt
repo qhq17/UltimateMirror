@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: 3WIXia1bVHwzbyAZurt1Vg
-! Version: 202004151341
+! Checksum: /JdfR/wZ0pwbFbwJ8Rg50A
+! Version: 202004242301
 ! Title: Fanboy's Social Blocking List
-! Last modified: 15 Apr 2020 13:41 UTC
+! Last modified: 24 Apr 2020 23:01 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.to/
 ! License: http://creativecommons.org/licenses/by/3.0/
@@ -621,7 +621,7 @@
 /facebookFooterIcon-
 /facebookHeader.
 /facebookicn.
-/facebookicon.$~object-subrequest
+/facebookicon.
 /facebookIcon32.
 /facebookicon_
 /FacebookiconSMALL_
@@ -1225,14 +1225,8 @@
 /icons/delicious-
 /icons/delicious_
 /icons/digg-
-/icons/facebook
-/icons/google
-/icons/gplus
-/icons/instagram
 /icons/linkedin_
 /icons/myspace_
-/icons/pinterest
-/icons/qq_
 /icons/reddit-
 /icons/share-
 /icons/share.
@@ -1244,12 +1238,6 @@
 /icons/social/*
 /icons/social_
 /icons/socials.
-/icons/tumblr
-/icons/twitter
-/icons/wechat
-/icons/weibo
-/icons/youku
-/icons/youtube
 /icons_social.
 /icons_social_
 /icons_socialmedia2.
@@ -1272,16 +1260,13 @@
 /image/share_
 /image/social_
 /images/*/social_
-/images/facebook
 /images/fb-
 /images/fb.
 /images/fb1.
 /images/fb_
-/images/googleplus
 /images/gplus-
 /images/instagram-
 /images/instagram_
-/Images/linkedin
 /images/pinterest-$domain=~pinterest.com
 /images/Pinterest_$domain=~pinterest.com
 /images/reddit-
@@ -1300,8 +1285,6 @@
 /images/tmblur.
 /images/tumblr-
 /images/tw_
-/images/twiter
-/images/twitter
 /images/vimeo-
 /images/vk-
 /images/whtapp-
@@ -1419,7 +1402,7 @@
 /linkedin_logo4.
 /linkedin_small.
 /Linkedin_social.
-/linkedInIcon.$~object-subrequest
+/linkedInIcon.
 /linkedinlogo.
 /LinkedInShare.
 /linkin_icon.
@@ -2591,7 +2574,7 @@
 /twitterfollow.
 /twitterfollowbadge/*
 /twittericn.
-/twittericon.$~object-subrequest
+/twittericon.
 /twitterIcon32.
 /Twittericon_
 /twitterlib.
@@ -4585,6 +4568,7 @@ _youtube_social_
 ###shareFriend
 ###shareGallery
 ###shareHorizontal
+###shareIcoDiv_
 ###shareIcons
 ###shareIconsH
 ###shareId
@@ -6072,6 +6056,12 @@ _youtube_social_
 ##.abicon-google-plus
 ##.abicon-twitter
 ##.abicon-youtube2
+##.about-icon-item.email
+##.about-icon-item.facebook
+##.about-icon-item.instagram
+##.about-icon-item.pinterest
+##.about-icon-item.twitter
+##.about-icon-item.youtube
 ##.aboutShareLinks
 ##.aboutSocialLinks
 ##.above-nav-social
@@ -10757,6 +10747,7 @@ _youtube_social_
 ##.oo-share
 ##.open-share
 ##.open-share-list
+##.open-share-toolbar
 ##.open-social-layer
 ##.open_share_box
 ##.openshare
@@ -11005,6 +10996,7 @@ _youtube_social_
 ##.post-fb
 ##.post-fb-like
 ##.post-flikebox
+##.post-footer__share
 ##.post-header-section-social
 ##.post-header_sharing-counter
 ##.post-header_social-row
@@ -11090,12 +11082,17 @@ _youtube_social_
 ##.post_sociable
 ##.post_toolbar_share
 ##.postbit-social
+##.postcontent__socials
 ##.postfblike
 ##.postshare
 ##.postsw-share
 ##.powa-share
 ##.powerkit_social_links_widget
+##.pp-share-grid-item
 ##.pp-social-block
+##.pp-social-icon
+##.pp-social-icons
+##.pp-social-share-content
 ##.ppr_priv_share
 ##.praxis-social-links
 ##.pre-footer-social
@@ -13246,6 +13243,7 @@ _youtube_social_
 ##.social-room
 ##.social-root
 ##.social-row
+##.social-scroll
 ##.social-search-icons
 ##.social-sec
 ##.social-section
@@ -14922,6 +14920,7 @@ _youtube_social_
 ##.user-share
 ##.user-share-button-wrapper
 ##.user-share-settings
+##.user__socials-list
 ##.user_activity_like_block
 ##.usr-social
 ##.util-bar-btn-facebook
@@ -15134,6 +15133,7 @@ _youtube_social_
 ##.widget_be_widget_social_follow
 ##.widget_better-social-counter
 ##.widget_bimber_widget_facebook_page
+##.widget_bs-likebox
 ##.widget_cbs_follow_us_widget
 ##.widget_cbs_social_share_widget
 ##.widget_cf_social_media_widget
@@ -15466,8 +15466,15 @@ _youtube_social_
 ##[js-target="share-flyout"]
 ##[name="Click to follow us on twitter"]
 ##[name="fb_share"]
+##[onclick^="window.open ('http://twitter.com/intent/tweet?status="]
+##[onclick^="window.open ('http://www.facebook.com/share.php?"]
+##[onclick^="window.open ('https://plus.google.com/share?url="]
+##[onclick^="window.open('http://twitter.com/home?status="]
 ##[onclick^="window.open('http://twitter.com/share?"]
+##[onclick^="window.open('http://www.blogger.com/blog-this.g?"]
+##[onclick^="window.open('http://www.facebook.com/sharer.php?"]
 ##[onclick^="window.open('http://www.pinterest.com/pin/create/"]
+##[onclick^="window.open('http://www.tumblr.com/share/"]
 ##[onclick^="window.open('https://facebook.com/sharer/sharer.php?"]
 ##[onclick^="window.open('https://plus.google.com/share?"]
 ##[onclick^="window.open('https://twitter.com/intent/tweet?"]
@@ -15699,10 +15706,6 @@ _youtube_social_
 ##a[onclick^="popUp=window.open('https://www.facebook.com/sharer/sharer.php?"]
 ##a[onclick^="shareVideo"]
 ##a[onclick^="teleShare"]
-##a[onclick^="window.open('http://twitter.com/home?status="]
-##a[onclick^="window.open('http://www.blogger.com/blog-this.g?"]
-##a[onclick^="window.open('http://www.facebook.com/sharer.php?"]
-##a[onclick^="window.open('http://www.tumblr.com/share/"]
 ##a[rel="share-on-facebook"]
 ##a[rel="share-on-twitter"]
 ##a[title="Become our Friend on MySpace!"]
@@ -16953,6 +16956,7 @@ care2.com##.care2_side_float
 inquirer.net##.cct-socmed
 cambridge.org##.cdo-hdr__soc
 wsws.org##.censorship
+climate.nasa.gov##.chertools_floater
 progressive.org##.chicklets
 cheezburger.com##.chz-social
 omny.fm##.clip-share
@@ -17127,6 +17131,7 @@ avaaz.org##.global-footer-connect
 linkis.com##.global-modal-popup
 gloucesterrugby.co.uk##.gloucester_container_home_middle_social
 click2houston.com,clickondetroit.com,clickorlando.com,ksat.com,news4jax.com,wsls.com##.gmg-vf
+usatoday.com##.gnt_ss
 gamepressure.com##.go-face
 gamepressure.com##.go-plus
 good.is##.good-popup
@@ -18495,6 +18500,7 @@ europe1.fr,lemonde.fr##.partage
 jeuxvideo.fr,jeuxvideopc.com##.pictos
 leparisien.fr##.plusRecommande
 madagascar-tribune.com##.rezo_sociaux
+bledina.com##.rs-icon
 autoline-eu.fr,autoline.be,autoline.lu,buzzmoica.fr,diningcity.be,ecoaustral.com,epochtimes.fr,franceinter.fr,francetvinfo.fr,gamekult.com,gettyimages.be,gettyimages.fr,la-croix.com,landrover.be,landrover.ch,landrover.fr,valeursactuelles.com##.share
 rtl.fr##.shared-logo
 fracademic.com##.smm
@@ -19057,7 +19063,7 @@ flattr.com#@#.icon-youtube
 ndtv.com#@#.icon_gplus
 community.imgur.com#@#.icons
 upworthy.com#@#.image-share
-24h.com.vn,dailymail.co.uk,eva.vn,mogaznews.com,thisismoney.co.uk#@#.img-share
+24h.com.vn,dailymail.co.uk,eva.vn,mogaznews.com,stationgossip.com,thisismoney.co.uk#@#.img-share
 instagram.com#@#.instagram-follow
 fandom.com#@#.is-social
 thenewamerican.com#@#.itemSocialSharing
@@ -19099,7 +19105,7 @@ pinterest.com#@#.pinterest-wrapper
 needlenthread.com#@#.pinterest1
 pinterest.com#@#.pinterestComponentShare
 marieclaire.ru#@#.pinterestShare
-google.at,google.be,google.ca,google.ch,google.co.id,google.co.il,google.co.in,google.co.jp,google.co.ke,google.co.th,google.co.za,google.com,google.com.ar,google.com.au,google.com.br,google.com.hk,google.com.mx,google.com.tr,google.com.ua,google.cz,google.dk,google.es,google.fi,google.fr,google.hu,google.it,google.nl,google.pl,google.ro,google.ru,google.se,google.sk#@#.plusone
+devrant.com,google.at,google.be,google.ca,google.ch,google.co.id,google.co.il,google.co.in,google.co.jp,google.co.ke,google.co.th,google.co.za,google.com,google.com.ar,google.com.au,google.com.br,google.com.hk,google.com.mx,google.com.tr,google.com.ua,google.cz,google.dk,google.es,google.fi,google.fr,google.hu,google.it,google.nl,google.pl,google.ro,google.ru,google.se,google.sk#@#.plusone
 privatecore.com#@#.post-fb
 facebook.com#@#.post-fb-like
 23-59.com.ua,dietetycy.org.pl,kliknijwzdrowie.pl,maze.fr,pokoleniesmart.pl,tidssonen.no,truepundit.com,velodaily.ru#@#.post-share-container
@@ -19130,7 +19136,7 @@ greatbritishchefs.com#@#.share-header
 howtogeek.com#@#.share-heading
 ida2at.com#@#.share-holder
 app.sococo.com,iherb.com,vimeo.com#@#.share-icon
-golem.de,tumblr.com#@#.share-item
+1ab.ru,golem.de,tumblr.com#@#.share-item
 vimeo.com#@#.share-label
 recite.com#@#.share-left
 askubuntu.com,baidu.com,broadcast.app.net,imgur.com,kuechenstud.io,logbuch-netzpolitik.de,mammothhq.com,mathoverflow.net,minkorrekt.de,openstreetmap.org,pinksluts.com,pomponik.pl,sale.aliexpress.com,serverfault.com,stackapps.com,stackexchange.com,stackoverflow.com,superuser.com,yadi.sk,yandex.com,yandex.com.tr,yandex.ru,yandex.ua#@#.share-link
@@ -19210,6 +19216,7 @@ ally.com#@#.social-footer
 deadspin.com,gizmodo.com,jezebel.com,kinja.com,kotaku.com,lifehacker.com#@#.social-google
 4players.de#@#.social-gplus
 attn.com,wonderhowto.com#@#.social-header
+counterpunch.org#@#.social-hide
 deathandtaxesmag.com,hostinger.ae,hostinger.com.br,hostinger.com.ua,hostinger.fr,hostinger.in.th,hostinger.it,hostinger.kr,hostinger.lt,hostinger.my,hostinger.ph,hostinger.pl,hostinger.pt,hostinger.ro,hostinger.ru,hostinger.vn,hostinger.web.tr,spin.com,stereogum.com,vibe.com#@#.social-holder
 ok.ru,speedtest.net,udemy.com,washingtonexaminer.com#@#.social-icon
 deathandtaxesmag.com,ourweigh.in,spin.com,stereogum.com,vibe.com,viewbug.com#@#.social-icons
