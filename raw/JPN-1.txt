@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: 4D1bNQTFLUHsiJ7+4WmwZg
+! Checksum: ZpCsJgC/7bm/xzZwf3PoZQ
 ! Title: AdGuard Japanese filter
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.2.92
-! TimeUpdated: 2020-04-14T13:31:54+03:00
+! Version: 2.0.2.97
+! TimeUpdated: 2020-04-22T21:31:41+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#japanese
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -646,11 +646,15 @@ momon-ga.com#?#.repo-title:has(> strong)
 !-------JS----------
 !-------------------
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/54025
+gotouchi.jp##+js(set-constant, sec, 0)
+! https://github.com/AdguardTeam/AdguardFilters/issues/53575
+vnjpclub.com##+js(window.open-defuser, 1, vnjpclub.com)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/21092
 ! https://github.com/AdguardTeam/AdguardFilters/issues/11687
 ! https://forum.adguard.com/index.php?threads/34852/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/53253
-t-mall.cmnw.jp##+js(set-constant, sec, 0)
+cmnw.jp##+js(set-constant, sec, 0)
 !
 !-------------------
 !-------CSS---------
@@ -750,6 +754,10 @@ _ds_adtag_
 !
 ! /banner/banner_ - if it is necessary, make this rule domain specific
 !
+||solution.fielding.co.jp^*/bnr_col_follow_
+kuron-zero.com###nextrayad
+||kuron-zero.com/images/Banner*.jpg
+kuron-zero.com###kuron_ad_td
 ufret.jp###float-bnr
 loveheaven.net##.chapter-content > img.chapter-img ~ center
 /^(?!.*(google\.com|gstatic\.com|googleapis\.com|recaptcha.net|disqus\.com|disquscdn\.com|connect\.facebook\.net|static\.xx\.fbcdn\.net|dmca\.com)).*$/$third-party,script,domain=loveheaven.net
