@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Checksum: x0TO/tlSut4JS8tEjf6jsA
+! Checksum: zZJhvxwXeVpbtBA0XTsC2w
 ! Title: Fanboy's Enhanced Tracking List
-! Updated: 11 Apr 2020
+! Updated: 22 Apr 2020
 ! Expires: 5 days
 ! License: http://creativecommons.org/licenses/by/3.0/
 ! Homepage: http://www.fanboy.co.nz/
@@ -755,6 +755,7 @@ youporn.com###adblock_1
 ||images.scanalert.com^$third-party
 ||instantssl.com^$image,third-party
 ||joinbot.com^$third-party
+||js.stripe.com/v2/m/outer.html*referrer=$subdocument
 ||jsrdn.com/s/cs.js
 ||kalooga.com^$third-party
 ||leadpages.net/leadbox-*.js$third-party
@@ -777,6 +778,7 @@ youporn.com###adblock_1
 ||resellerratings.com^$third-party
 ||richrelevance.com^$third-party
 ||salecycle.com^$third-party
+||scroll.com/embed/check
 ||seal.alphassl.com^$third-party
 ||seal.digicert.com^$third-party
 ||seal.godaddy.com^$third-party
@@ -1084,6 +1086,7 @@ youporn.com###adblock_1
 @@||povwideo.net/js/ads-banner.js$script
 @@||powvideo.net/js/ads-banner.js$script
 @@||pressdemocrat.com/js/ads.js
+@@||proper.io/salon.min.js$script,domain=salon.com
 @@||ptztv.com/dns_ad/$script
 @@||pubmatic.com/AdServer/*showad.js$script
 @@||quamiller.com^*/ad_
@@ -1210,6 +1213,10 @@ alphahistory.com##.the_champ_sharing_container
 getfreshcloud.xyz##.banner-336x280
 getfreshcloud.xyz##.banner-468x60
 getfreshcloud.xyz##.banner-captcha
+! theregister.co.uk
+###adtoniq-msgr-bar
+@@||amazonaws.com/ads/$image,domain=theregister.co.uk
+@@||theregister.co.uk^*/ads.js
 ! vox anti-adblockstuff
 @@||concert.io^*/concert_ads.js$script,third-party
 @@||vox-cdn.com/packs/concert_ads-$script,third-party
