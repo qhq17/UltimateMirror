@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: w7cU0VPXwlKIuEj1Sr9anA
+! Checksum: D2AClQ2AxBuIwBOGBK6H1w
 ! Title: AdGuard Tracking Protection filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.13.63
-! TimeUpdated: 2020-04-24T19:31:24+03:00
+! Version: 2.0.13.73
+! TimeUpdated: 2020-04-30T17:31:41+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#privacy
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -155,6 +155,10 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 !
 ! ||ensighten.com^$third-party - not a tracker
 !
+||blok.link^
+||cicero-mit.com^
+||taxel.jp^$third-party
+||awseukpi.whisbi.com^$third-party
 ||contentsquare.net^$third-party
 ||sys.refocus.ru^$third-party
 ||center.io^$third-party
@@ -3122,7 +3126,6 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ||wemfbox.ch^$third-party
 ||whackedmedia.com^$third-party
 ||whatismyip.win^$third-party
-||whisbi.com^$third-party
 ||whitepixel.com^$third-party
 ||whoaremyfriends.com^$third-party
 ||whoaremyfriends.net^$third-party
@@ -3229,6 +3232,7 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ! Admiral domains
 ! These domains are used for tracking purposes according to the data that is being sent there.
 ! More info: https://getadmiral.com/products/measure
+||hypnoticwound.com^$third-party
 ||samestretch.com^$third-party
 ||acidpigs.com^$third-party
 ||farshake.com^$third-party
@@ -3596,6 +3600,10 @@ nethunt.com/api/v1/track/email/$image
 !+ NOT_PLATFORM(ios, ext_safari, ext_android_cb)
 ||tags.news.com.au^$~script
 !
+||spt.performgroup.com^$third-party
+||cs*.mp3bars.com^
+||track.analitycs.net^
+||stats.popupmaker.com^
 ||hstats.hepsiburada.com^
 ||tracker.unbxdapi.com^
 ||d21gpk1vhmjuf5.cloudfront.net^
@@ -4607,7 +4615,7 @@ nethunt.com/api/v1/track/email/$image
 ||tracking-rce.veeseo.com^$third-party
 ||tracker.cartprotector.com^$third-party
 ||tracker.neon-images.com^
-||tracker.prom.ua^$third-party
+||tracker.prom.ua^
 ||tracker.stats.in.th^$third-party
 ||track.atom-data.io^
 ||track.audtd.com^
@@ -5834,7 +5842,6 @@ abp?type=js&session$domain=prosieben.de|sat1.de|kabeleins.de|sixx.de|prosiebenma
 ||netquattro.com/stats/
 ||my1.ru/stat/
 ||movad.de/c.ount?
-||moonwalk.cc/stats/
 ||misto.zp.ua/img/reiting_$third-party
 ||metrika.yandex.ru/stat/?id=$third-party
 ||metka.ru/counter/^$third-party
@@ -7502,6 +7509,13 @@ link.gmapp*.net$image
 !
 ! Exception rules that fix different issues caused by blocking trackers
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/54350
+@@||googletagmanager.com/gtm.js$domain=skoda-auto.pl
+! pcmag.com - fixing long page rendering
+@@||googletagmanager.com/gtm.js$domain=pcmag.com
+||googletagmanager.com/gtm.js$script,redirect=googletagmanager_gtm.js,domain=pcmag.com,important
+! https://github.com/AdguardTeam/AdguardFilters/issues/54384
+@@||cdn-magiclinks.trackonomics.net/client/static/v2/*_gamespot.js$domain=gamespot.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/54195
 @@||astatic.ccmbg.com/fc/js/prebid?v=$domain=sante.journaldesfemmes.fr
 @@||dpm.zebestof.com/*/tag.js$domain=sante.journaldesfemmes.fr
@@ -7998,6 +8012,7 @@ link.gmapp*.net$image
 @@||tags.tiqcdn.com/utag/tegna^$domain=kvue.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/30497
 @@||wilko.com/_ui/shared/js/analyticsmediator.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/54638
 ! https://github.com/AdguardTeam/AdguardFilters/issues/53780
 ! https://github.com/AdguardTeam/AdguardFilters/issues/52736
 ! https://github.com/AdguardTeam/AdguardFilters/issues/44062
@@ -8005,8 +8020,8 @@ link.gmapp*.net$image
 ! https://github.com/AdguardTeam/AdguardFilters/issues/33135
 ! https://github.com/AdguardTeam/AdguardFilters/issues/31097
 ! https://github.com/AdguardTeam/AdguardFilters/issues/42985
-@@||marketo.com/js/forms$domain=coursera.org|cloudflare.com|rocketsoftware.com|sherweb.com|kaspersky.com|workspace.circuitmaker.com|collab.net
-@@||marketo.com/index.php/form/$domain=coursera.org|cloudflare.com|rocketsoftware.com|sherweb.com|kaspersky.com|workspace.circuitmaker.com|collab.net
+@@||marketo.com/js/forms$domain=inthecloud.withgoogle.com|coursera.org|cloudflare.com|rocketsoftware.com|sherweb.com|kaspersky.com|workspace.circuitmaker.com|collab.net
+@@||marketo.com/index.php/form/$domain=inthecloud.withgoogle.com|coursera.org|cloudflare.com|rocketsoftware.com|sherweb.com|kaspersky.com|workspace.circuitmaker.com|collab.net
 ! https://forum.adguard.com/index.php?threads/31245/
 @@||ssl.google-analytics.com/ga.js$domain=gmail.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/30981
@@ -8433,9 +8448,6 @@ link.gmapp*.net$image
 ! https://github.com/AdguardTeam/AdguardFilters/issues/11050
 @@||trc.taboola.com/msn-msn/*$domain=msn.com
 @@||cdn.taboola.com/libtrc^$domain=msn.com
-! https://github.com/AdguardTeam/AdguardFilters/issues/10975
-@@||ng.virgul.com/pageview^$domain=izlesene.com
-@@||ng.virgul.com/js^$domain=izlesene.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/10897
 @@||omtrdc.net^*/mbox/ajax?$script,other,domain=canadiantire.ca
 ! https://github.com/AdguardTeam/AdguardFilters/issues/10847
