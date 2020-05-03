@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: 60DkOkTDexBZOtp6TzjNEg
+! Checksum: Su0Ggkarh1GW/JtxsG8qyg
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish and Portuguese languages.
-! Version: 2.0.6.11
-! TimeUpdated: 2020-04-16T18:32:02+03:00
+! Version: 2.0.6.19
+! TimeUpdated: 2020-04-30T14:32:13+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#spanish
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -249,6 +249,14 @@
 !
 ! AdRegain
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/54454
+anicchan.net#@#afs_ads
+@@||anicchan.net/popad/popads.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/54366
+@@||tunovelaligera.com/wp-content/plugins/holaNodeJS/js/ads1.min.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/54450
+mangahost.site##+js(set-constant, kkwoiNI, noopFunc)
+mangahost.site##+js(set-constant, yUIlOsT, noopFunc)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/53660
 animesonehd.xyz##.rteam_antiadb
 ||animesonehd.xyz/wp-content/themes/animesonehd/js/rteam_detect.js
@@ -1050,6 +1058,7 @@ jokerfansub.com#@##adsense
 ! https://github.com/AdguardTeam/AdguardFilters/issues/24801
 yahoo.com#?#ul[class^="Mb(0)"] > li.js-stream-content:has(> div > a[rel="nofollow noopener noreferrer"]+div:contains(Patrocinado))
 !
+atresplayer.com#?##root main[class] > div[class] > section[class] + aside[class]:has(> div[class] > p[class]:contains(PUBLICIDAD))
 bcnoticias.com.br#?#.theiaStickySidebar > div.widget:has(> div.textwidget > div[align="center"] a[href])
 mundodonghua.com#?#.container > .col-md-3 > .row.mt-10:has(> .adsbygoogle)
 mundodonghua.com#?#.content-player > .mb-10:has(> .adsbygoogle)
@@ -1268,6 +1277,8 @@ tuhentaionline.com##+js(abort-on-property-read, Pub2)
 !--------------------------------------!
 !------- CSS fixes --------------------!
 !--------------------------------------!
+! https://github.com/AdguardTeam/AdguardFilters/issues/54191
+lavoz.com.ar#$#div[class^="block-ads-"] { visibility: hidden !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/51734
 clavejuegos.com#$#.banner { visibility: hidden !important; }
 ! mastercuriosidadesbr.com - skip timer
@@ -1432,6 +1443,16 @@ http://adw.
 !-------------------- Specific rules --------------------!
 !--------------------------------------------------------!
 !
+/images/banner/*$domain=laverdad.com|visaonoticias.com
+visaonoticias.com##a[href^="link.php?id="]
+||anitube.uk/random.js
+anicchan.net##.paineld > a.pp
+||anicchan.net/player/plugins/vast/v/*/vast.js
+tunovelaligera.com##.sidebar-col #text-72
+tunovelaligera.com##.sidebar-col #text-74
+tunovelaligera.com##.sidebar-col #text-76
+forowarez.net##.p-body-pageContent > center > a[target="_blank"] > img
+||i.imgur.com/W3ihSRi.png
 naoconto.com##a[href^="https://loboclick.com/"]
 naoconto.com##a[rel="nofollow noopener"] > img
 dvdgayonline.com###clickfakeplayer
@@ -1555,7 +1576,6 @@ ticotimes.net##a[href^="https://ticotimes.net/linkout/"]
 otakuteca.com##.pbl
 lavoz.com.ar##.bloque-ads
 lavoz.com.ar##.block-banner
-lavoz.com.ar##div[class*="block-ad"]
 pivigames.blog##a[href="https://pivigames.blog/descargar.php"]
 pelis24tv.co###custom_html-26
 mercadolivre.com.br##.menu-myml-ads
@@ -3023,7 +3043,6 @@ infonegocios.tv##td[width="961"][height="60"]
 ||lapcra.org/banners/
 ||laregion.es/imagenes/banners/
 ||lavanguardia.es/flash/
-||laverdad.com/images/banner/
 ||lojademulher.com.br/images/
 ||lusa.pt/banners/$object
 ||madridpress.com/anuncios/
