@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: ZpCsJgC/7bm/xzZwf3PoZQ
+! Checksum: VgefheAm2+R9KWCr63hkdg
 ! Title: AdGuard Japanese filter
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.2.97
-! TimeUpdated: 2020-04-22T21:31:41+03:00
+! Version: 2.0.3.3
+! TimeUpdated: 2020-04-29T19:31:55+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#japanese
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -99,10 +99,12 @@
 !
 ! Rakuten.co.jp
 ||affiliate.rakuten.co.jp^$third-party
-||afl.rakuten.co.jp^
 ||ias.rakuten.co.jp^
 ||rd.rakuten.co.jp^$third-party
 ||ranking.rakuten.co.jp^
+||afl.rakuten.co.jp^$domain=~kakaku.com,third-party
+||hbb.afl.rakuten.co.jp^$third-party
+||hb.afl.rakuten.co.jp^$third-party
 !
 ! Nikkeibp.co.jp
 ||bizad.nikkeibp.co.jp^
@@ -372,6 +374,11 @@
 !
 ! These rules are against all kinds of ad blocking reinjection/circumvention scripts
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/54027
+@@||pointservice.com/res/media/common/ad/adframe.js$script,domain=goldencocco.jp|mottonoutore.jp
+goldencocco.jp##+js(set-constant, adblock, false)
+! https://github.com/AdguardTeam/AdguardFilters/issues/54025
+mottonoutore.jp##+js(set-constant, adblock, false)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/53079
 @@||ad.jp.ap.valuecommerce.com/servlet/jsbanner$domain=coron.tech
 ! https://github.com/AdguardTeam/AdguardFilters/issues/52566
@@ -514,6 +521,8 @@ anipo.jp#@#.adbanner
 !
 ! Extended CSS rules
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/54361
+fod.fujitv.co.jp#?##video_container > div[style*="position: absolute; overflow: hidden;"]:has(> img[src="/plus7/web/imgs/animation_spinner.gif"])
 ! https://github.com/AdguardTeam/AdguardFilters/issues/51663
 popjav.tv#$?#.releated_video_list > li.releated_video:has(> div.releatedadsholder) { visibility: hidden !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/47356
@@ -646,15 +655,19 @@ momon-ga.com#?#.repo-title:has(> strong)
 !-------JS----------
 !-------------------
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/54027
+dotti2.jp,goldencocco.jp,pochitto2.jp##+js(set-constant, sec, 0)
+! https://github.com/AdguardTeam/AdguardFilters/issues/54025
+mottonoutore.jp##+js(set-constant, sec, 0)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/54025
 gotouchi.jp##+js(set-constant, sec, 0)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/53575
 vnjpclub.com##+js(window.open-defuser, 1, vnjpclub.com)
+! https://github.com/AdguardTeam/AdguardFilters/issues/53253
+cmnw.jp##+js(set-constant, sec, 0)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/21092
 ! https://github.com/AdguardTeam/AdguardFilters/issues/11687
 ! https://forum.adguard.com/index.php?threads/34852/
-! https://github.com/AdguardTeam/AdguardFilters/issues/53253
-cmnw.jp##+js(set-constant, sec, 0)
 !
 !-------------------
 !-------CSS---------
@@ -754,6 +767,8 @@ _ds_adtag_
 !
 ! /banner/banner_ - if it is necessary, make this rule domain specific
 !
+as-selection.net##.sponsor_link
+nurumayu.net###js-popup
 ||solution.fielding.co.jp^*/bnr_col_follow_
 kuron-zero.com###nextrayad
 ||kuron-zero.com/images/Banner*.jpg
@@ -1470,6 +1485,7 @@ gtoys.blog48.fc2.com###adright
 !
 ! White list. Fixing filtration errors(false-positive)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/53900
 ! https://github.com/AdguardTeam/AdguardFilters/issues/51175
 @@||l.logly.co.jp/lift_widget.js?adspot_id=$domain=qiita.com
 @@||l.logly.co.jp/lift.json$domain=qiita.com
