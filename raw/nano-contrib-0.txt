@@ -222,6 +222,9 @@ downdetector.*,allestoringen.*,xn--allestrungen-9ib.*##.ad + .card.my-3:style(ma
 shoutwiki.com###content.mw-body:style(margin-right: 8px !important;)
 shoutwiki.com##.monobook-ad
 
+# https://github.com/NanoMeow/QuickReports/issues/3730
+forum.wordreference.com##[id$="_mid"]
+
 # End Multilingual
 
 # -------------------------------------------------------------------------------------------------------------------- #
@@ -284,6 +287,18 @@ alrai.com##.col-xs-12:has(:scope > .visible-md.visible-lg)
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/82#issuecomment-579542253
 akhbarelyom.com##.module:has(script[src$="/adsbygoogle.js"])
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/110#issuecomment-619393707
+adwhit.com##.topMobAd
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/110#issuecomment-619393727
+ifm.tn##.ad-1000
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/110#issuecomment-619393754
+alwafd.news##section:has(.banner)
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/110#issuecomment-619393769
+watania.net##.adsbygoogle:upward(1)
 
 # End Arabic
 
@@ -1003,6 +1018,9 @@ twingalaxies.com##.bg-dust:has(#btfLeaderboard)
 
 # https://github.com/NanoMeow/QuickReports/issues/1975
 # https://github.com/NanoMeow/QuickReports/issues/2109
+# https://github.com/NanoMeow/QuickReports/issues/3414
+forbes.com##fbs-ad + p:has(br)
+forbes.com##p:has(+ fbs-ad)
 forbes.com##fbs-ad
 forbes.com##medianet
 
@@ -1136,7 +1154,7 @@ hungertv.com###fixed-slice-2:style(top: 0px !important;)
 hungertv.com##div[class*="offset-sm-"]
 hungertv.com##.preview.row
 hungertv.com###stick-section.sm-pad
-hungertv.com##div:has(:scope > div[id^="div-gpt-ad"])
+hungertv.com##div:has(:scope > div[id^="div-gpt-ad-"])
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/67#issuecomment-562770676
 apollo-magazine.com##.card--advert.card
@@ -1679,6 +1697,20 @@ thesimsresource.com##.sticky_bottom
 indy100.com##header + div > div:has(:scope > h1 + div > amp-list)
 indy100.com###mpu0ArticleBody
 
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/109#issuecomment-618437574
+peazip.org##td:has(:scope > .adsbygoogle)
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/109#issuecomment-618437617
+howtoforge.com##div[style="height:100px;"]
+howtoforge.com###htfContentList li:has(:scope > div[style="padding-left:35%;"])
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/111#issuecomment-621272864
+indiatoday.in##.inline-story-add
+indiatoday.in##.story-header-ad
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/111#issuecomment-621272925
+dailystar.co.uk##body:style(margin-top: 0px !important;)
+
 # End English
 
 # -------------------------------------------------------------------------------------------------------------------- #
@@ -1741,6 +1773,11 @@ simpleflying.com###featured-video
 spankwire.com###js-react-search-list div:has-text(/^Advertisement$/):upward(1)
 spankwire.com###js-react-video-player div:has-text(/^Advertisement$/):upward(2)
 spankwire.com##.adsbox
+
+# https://github.com/NanoAdblocker/NanoFilters/issues/489
+# https://github.com/NanoAdblocker/NanoFilters/issues/490
+# https://github.com/NanoAdblocker/NanoFilters/issues/491
+kvador.com,kropic.com,picbaron.com##br
 
 # End English NSFW
 
@@ -1886,7 +1923,7 @@ lifehacker.jp##.lh-banner
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/84#issuecomment-580508700
 sankei.com##div[style="width:300px;height:600px;"]:not(:has-text(/\S/))
-sankei.com##.row:has(div[id^="div-gpt-ad"])
+sankei.com##.row:has(div[id^="div-gpt-ad-"])
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/84#issuecomment-580508735
 nicoco.net###search_form + div
@@ -2014,6 +2051,9 @@ armadaboard.com##td[style*="theme_orig"] > table:has(div[mousedown="window.open(
 armadaboard.com##td[style*="theme_orig"] > table:has(div[mousedown="window.open('http://www.stimulcash.com')"]) + br + br
 armadaboard.com##td[style*="theme_orig"] > table:has(div[mousedown="window.open('http://www.stimulcash.com')"]) + br + br + br
 
+# https://github.com/NanoAdblocker/NanoFilters/issues/486
+lrepacks.ru##.widget.partner-block
+
 # End Russian
 
 # -------------------------------------------------------------------------------------------------------------------- #
@@ -2048,6 +2088,18 @@ bloomberght.com##.col-lg-12:has(:scope > .ads-zone)
 # https://github.com/NanoMeow/QuickReports/issues/2528
 kimkazandi.com##div:has(:scope > .item [id^="div-gpt-ad-"])
 kimkazandi.com##.row[style="margin:30px 50px"]
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/110#issuecomment-619393774
+haberturk.com##.ads-zone
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/110#issuecomment-619393786
+takvim.com.tr##.billBoardFrame
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/110#issuecomment-619393799
+kadin.com##.col-lg-12:has(div[id^="div-gpt-ad-"])
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/110#issuecomment-619393816
+acunn.com##.type-1
 
 # End Turkish
 
