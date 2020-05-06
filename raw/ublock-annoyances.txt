@@ -3038,6 +3038,7 @@ tipssehatcantik.com##+js(acis, disableSelection, reEnable)
 pelismart.com##+js(aopr, document.oncontextmenu)
 pelismart.com##+js(aopr, disableSelection)
 pelismart.com##*:style(-webkit-touch-callout: default !important; -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important;)
+pelismart.com##+js(aopr, onload)
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/en6ybb/getting_an_adblock_warning_on_this_website/
 keybr.com##+js(nostif, t())
@@ -3925,3 +3926,81 @@ as-selection.net##+js(ra, oncontextmenu|onselectstart)
 
 ! https://github.com/AdguardTeam/AdguardFilters/issues/54629
 servedez.com###realpop_optincontent
+
+! https://github.com/NanoMeow/QuickReports/issues/3710
+iamzlnk.me##+js(acis, document.oncontextmenu)
+
+! https://github.com/NanoMeow/QuickReports/issues/3715
+avdelphi.com##+js(aeld, , _0x)
+avdelphi.com##+js(set, f12lock, false)
+avdelphi.com##+js(nosiif, debugger)
+
+! https://github.com/AdguardTeam/AdguardFilters/issues/54694
+portel.pl##+js(aopr, blokowanko)
+
+! thepiratecity .net right click, select, copy, ctrl-u
+thepiratecity.net##+js(aeld, keydown)
+thepiratecity.net##+js(aeld, contextmenu)
+thepiratecity.net##+js(aopr, document.oncopy)
+||thepiratecity.net^$csp=style-src *
+
+! https://github.com/AdguardTeam/AdguardFilters/issues/54705
+nicolascoolman.eu##+js(aopr, anOptions)
+
+! https://github.com/AdguardTeam/AdguardFilters/issues/54729
+ap-pro.ru##+js(nosiif, visibility, 1000)
+
+! https://github.com/NanoMeow/QuickReports/issues/3567#issuecomment-622575179
+suzylu.co.uk##+js(aeld, contextmenu)
+
+! https://github.com/AdguardTeam/AdguardFilters/issues/54745
+ggwptech.com##+js(aopr, anOptions)
+
+! https://affiliate.fc2.com/ anti-adblock
+affiliate.fc2.com##+js(nostif, checkFeed, 1000)
+
+! https://www.latestnewssouthafrica.com/2020/05/01/pictures-capetown-residents-jogging-during-level-4-lockdown/
+latestnewssouthafrica.com##+js(acis, event, event.keyCode)
+latestnewssouthafrica.com##+js(aopw, document.ondragstart)
+latestnewssouthafrica.com##+js(aopw, document.onselectstart)
+latestnewssouthafrica.com##.unselectable,html:style(-webkit-touch-callout: default !important; -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important)
+
+! https://github.com/NanoMeow/QuickReports/issues/3740
+psikologicinta.com##+js(acis, document.oncontextmenu)
+psikologicinta.com##.unselectable:style(-webkit-touch-callout: default !important; -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important;)
+psikologicinta.com##+js(acis, disableSelection, reEnable)
+
+! https://github.com/NanoMeow/QuickReports/issues/3744
+music.apple.com##+js(aeld, contextmenu)
+music.apple.com##*:style(-webkit-touch-callout: default !important; -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important;)
+music.apple.com##body:style(cursor:auto!important)
+
+! https://github.com/AdguardTeam/AdguardFilters/issues/54820
+iphonecake.com##+js(nosiif, visibility, 1000)
+
+! https://github.com/NanoMeow/QuickReports/issues/3750
+anime2you.de##+js(acis, document.getElementById, undefined)
+
+! mitly.us cookie-notice
+mitly.us###cookie-pop
+
+! https://github.com/AdguardTeam/AdguardFilters/issues/54874
+*$script,redirect-rule=noopjs,domain=xn--e1agahhhaf4g.xn--j1amh
+
+! https://github.com/AdguardTeam/AdguardFilters/issues/54907
+emargo.pl##+js(set, canRunAds, true)
+
+! https://github.com/uBlockOrigin/uAssets/issues/7316
+courseware.cemc.uwaterloo.ca##+js(ra, oncontextmenu)
+
+! https://github.com/AdguardTeam/AdguardFilters/issues/54916
+animeuniverse.it##+js(aopw, document.oncontextmenu)
+
+! wstream. video disabled keys
+wstream.*##+js(aopr, onload)
+
+! https://forums.lanik.us/viewtopic.php?p=154496#p154496
+||assets.allocine.fr/skin/css/allocine/secondary-styles.*.css$css,1p
+
+! osxinfo.net floating-notice
+osxinfo.net##.notices
