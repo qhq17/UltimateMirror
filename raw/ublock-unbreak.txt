@@ -35,7 +35,6 @@
 @@||akamaihd.net/player/*/akamai/amp/prebid/*$script,domain=static.foxnews.com
 @@||global.fncstatic.com^*/ads.js$script,domain=foxnews.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=insider.foxnews.com
-@@||amazon-adsystem.com/aax2/apstag.js$script,domain=foxnews.com
 
 ! https://forums.lanik.us/viewtopic.php?f=64&t=17842&start=30#p59663
 ! To counter `statcounter.com` in Peter Lowe's, MVPS, Dan Pollock's and hpHosts
@@ -457,7 +456,7 @@ pythonjobshq.com##+js(aopr, Keen)
 ! https://github.com/uBlockOrigin/uAssets/issues/3998
 ! https://github.com/uBlockOrigin/uAssets/issues/4831
 ! https://github.com/uBlockOrigin/uAssets/issues/5133
-@@||cdn.ampproject.org/*/amp-geo-$script,domain=bozemandailychronicle.com|engadget.com|koat.com|pilotonline.com|richmond.com|stltoday.com|amp.tmz.com|tucson.com|amp.usatoday.com|watchdog.org
+@@||cdn.ampproject.org/*/amp-geo-$script,domain=bozemandailychronicle.com|engadget.com|kmbc.com|koat.com|pilotonline.com|richmond.com|stltoday.com|amp.tmz.com|tucson.com|amp.usatoday.com|watchdog.org
 
 ! https://github.com/uBlockOrigin/uAssets/issues/648
 @@/blockadblock.$script,domain=blockadblock.com
@@ -2685,7 +2684,6 @@ wallpaperset.com#@#.ads1
 @@||epimg.net^$image,domain=los40.com
 @@||epimg.net/js/pbs/slot_cs.min.js$script,domain=los40.com
 @@||epimg.net/js/pbs/prebid.js$script,domain=los40.com
-@@||c.amazon-adsystem.com/aax2/apstag.js$script,domain=los40.com
 @@||doubleclick.net/tag/js/gpt.js$script,domain=los40.com
 @@||doubleclick.net/gpt/pubads_impl_$script,domain=los40.com
 @@||doubleclick.net/gampad/ads?$xhr,domain=los40.com
@@ -2846,7 +2844,6 @@ pcgamer.com#@#.hawk-widget
 @@||promo.com/shopify-backend/*/user-videos/public/video-urls$xhr
 
 ! https://github.com/DandelionSprout/adfilt/issues/7#issuecomment-560023272
-@@||amazon-adsystem.com/aax2/apstag.js$script,domain=gala.fr
 @@||tra.scds.pmdstatic.net/advertising-core-config/*/statics/gal-config.json$xhr,domain=gala.fr
 @@||tra.scds.pmdstatic.net/advertising-core-libs/*/prebid.js$script,domain=gala.fr
 @@||tra.scds.pmdstatic.net/bundle.php$xhr,domain=gala.fr
@@ -2904,9 +2901,6 @@ pcgamer.com#@#.hawk-widget
 
 ! https://github.com/NanoMeow/QuickReports/issues/2489
 @@||costco.com.mx/*/js/trackermediator.js$script,1p
-
-! https://github.com/NanoMeow/QuickReports/issues/2494
-@@||amazon-adsystem.com/aax2/apstag.js$script,domain=gamestar.de
 
 ! fix player volume button
 yugioh.com##.cookie-policy-container-invisible.cookie-policy-container
@@ -3066,6 +3060,7 @@ nowgoal.com##[href^="/ad/"]
 @@||bloomberg.com/*/captcha/captcha.js$script,1p
 @@||hotelscombined.com/*/captcha/captcha.js$script,1p
 @@||seekingalpha.com/*/captcha/$script,1p
+@@||pxchk.net/api/*/collector/ocaptcha$xhr
 
 ! https://github.com/uBlockOrigin/uAssets/issues/6853
 @@||coreldraw.com/static/common/scripts/omni-tracking/omni-tracking.min.js$script,1p
@@ -3132,9 +3127,6 @@ bearteach.com###externalinject-gpt-passback-iframe
 
 ! https://github.com/NanoMeow/QuickReports/issues/2923
 dziennikbaltycki.pl,dzienniklodzki.pl,dziennikpolski24.pl,dziennikzachodni.pl,echodnia.eu,expressbydgoski.pl,expressilustrowany.pl,gazetakrakowska.pl,gazetalubuska.pl,gazetawroclawska.pl,gk24.pl,gloswielkopolski.pl,gol24.pl,gp24.pl,gra.pl,gs24.pl,kurierlubelski.pl,motofakty.pl,naszemiasto.pl,nowiny24.pl,nowosci.com.pl,nto.pl,polskatimes.pl,pomorska.pl,poranny.pl,sportowy24.pl,strefaagro.pl,strefabiznesu.pl,stronakobiet.pl,telemagazyn.pl,to.com.pl,wspolczesna.pl#@#+js(set-constant, pp_adblock_is_off, trueFunc)
-
-! https://github.com/uBlockOrigin/uAssets/issues/6912
-@@||c.amazon-adsystem.com/aax2/apstag.js$script,domain=texomashomepage.com
 
 ! https://github.com/NanoMeow/QuickReports/issues/1442#issuecomment-581173424
 ! https://github.com/NanoMeow/QuickReports/issues/3042
@@ -3259,9 +3251,6 @@ amnews.com###div-gpt-ad-instory-bottom
 ||spade.sci.twitch.tv^$badfilter
 ||spade.sci.twitch.tv^$3p
 
-! https://github.com/uBlockOrigin/uAssets/issues/7026
-@@||ensighten.com^*/Bootstrap.js$domain=fidelity.com
-
 ! https://github.com/uBlockOrigin/uAssets/issues/7030
 ||ntv.io^$badfilter
 ||ntv.io^$3p,badfilter
@@ -3277,7 +3266,6 @@ amnews.com###div-gpt-ad-instory-bottom
 ||anyporn.com^$script,badfilter
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/fcbb6u/watch_cnn_on_chrome_not_working/
-@@||c.amazon-adsystem.com/aax2/apstag.js$script,domain=go.cnn.com
 @@||adnxs.com^$xhr,domain=go.cnn.com
 
 ! https://forums.lanik.us/viewtopic.php?p=153236#p153236
@@ -3301,7 +3289,7 @@ realitatea.net#@#a[href^="https://ad.doubleclick.net/"]
 
 ! https://github.com/NanoMeow/QuickReports/issues/2455#issuecomment-595446845
 ||torrentz2.eu^$csp=script-src 'self' 'unsafe-inline',badfilter
-||torrentz2.eu^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval'
+||torrentz2.eu^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' *.gstatic.com *.google.com *.solvemedia.com *.recaptcha.net https://hcaptcha.com  *.hcaptcha.com *.googleapis.com *.jquery.com *.googletagmanager.com *.cloudflare.com 
 torrentz2.eu##.NonToleratds
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/fextvk/ublock_blocking_moosend_web_form/
@@ -3322,7 +3310,6 @@ torrentz2.eu##.NonToleratds
 @@||bamgrid.com^$domain=disneyplus.com
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/fftyuf/annoying_message_in_portuguese_sites/
-@@||c.amazon-adsystem.com/aax2/apstag.js$script,domain=abola.pt
 @@||googletagservices.com/tag/js/gpt.js$script,domain=abola.pt
 @@||securepubads.g.doubleclick.net/gpt/pubads_impl$script,domain=abola.pt
 @@||tpc.googlesyndication.com/safeframe/*/container.html$other,domain=abola.pt
@@ -3392,9 +3379,6 @@ mariogames.be#@##adsContainer
 pornhub.com#@#a[href^="https://www.moscarossa.biz/"]
 torino2006.it#@#a[href^="https://www.moscarossa.biz/"]
 recensionihot.com#@#a[href^="https://www.moscarossa.biz/"]
-
-! https://github.com/NanoMeow/QuickReports/issues/3415
-@@||c.amazon-adsystem.com/aax2/apstag.js$script,domain=wkrn.com
 
 ! https://github.com/uBlockOrigin/uAssets/issues/7165
 @@||tags.tiqcdn.com/utag/*/utag.js$script,domain=bergdorfgoodman.com|horchow.com|lastcall.com|neimanmarcus.com
@@ -3539,3 +3523,61 @@ metro.co.uk###taboola-below-article-thumbnails
 ! trafic .ro blocked Peter Lowe's
 ||trafic.ro^$badfilter
 ||trafic.ro^$3p
+
+! unbreak mac-torrent-download.net thumbnails/images
+|https://$script,3p,domain=mac-torrent-download.net,badfilter
+
+! https://www.reddit.com/r/uBlockOrigin/comments/ga0veq/ubo_is_blocking_ads_and_popups_but_the_site_is/
+|https://$image,other,script,stylesheet,third-party,xmlhttprequest,domain=01fmovies.com|ffmovies.ru|fmovies.mx|fmovies.taxi|fmovies.world|fmovies123.cc|fmovieson.com|thefmovies.me,badfilter
+
+! https://forums.lanik.us/viewtopic.php?p=154386#p154386
+/myads.$badfilter
+
+! https://github.com/NanoMeow/QuickReports/issues/3632#issuecomment-621503457
+|https://$script,3p,domain=thepiratebay.org,badfilter
+
+! https://github.com/AdguardTeam/AdguardFilters/issues/54684
+*$script,3p,domain=animepahe.com,badfilter
+
+! https://www.reddit.com/r/uBlockOrigin/comments/gbends/search_result_blocked_by_easylist_filter/
+@@||google.*/search$popup
+
+! https://github.com/NanoMeow/QuickReports/issues/3720
+*$script,3p,domain=putlockertv.to,badfilter
+
+! https://github.com/NanoMeow/QuickReports/issues/2590#issuecomment-622422589
+@@||js.duhnet.tv/*/player/html5/$script,domain=cnnturk.com
+
+! https://github.com/NanoMeow/QuickReports/issues/3717
+@@||c.amazon-adsystem.com/aax2/apstag.js$script
+
+! https://github.com/NanoMeow/QuickReports/issues/3737
+@@||udottraffic.utah.gov/javascripts/Piwik.js$script,1p
+
+! https://github.com/NanoMeow/QuickReports/issues/2130#issuecomment-622965678
+@@||scdn.co/cdn/js/gtag.$script,domain=spotify.com
+@@||spclient.wg.spotify.com/$xhr,domain=spotify.com
+
+! https://github.com/uBlockOrigin/uAssets/issues/7306
+||d26b395fwzu5fz.cloudfront.net/keen-tracking-$script,redirect=noopjs,domain=campaign.stickr.co
+
+! https://github.com/NanoMeow/QuickReports/issues/3749
+||valuecommerce.com^$badfilter
+||valuecommerce.com^$3p
+
+! unbreak asianclub player
+@@||asianclub.*/asset/default/player/plugins/vast$script,1p
+
+! https://github.com/NanoMeow/QuickReports/issues/3763
+wallpaperaccess.com#@#.ads1
+wallpaperaccess.com##+js(nano-sib)
+
+! https://forums.lanik.us/viewtopic.php?p=154477#p154477
+@@||svc.dynamics.com^*t/$frame
+||svc.dynamics.com/f/m/
+
+! https://forums.lanik.us/viewtopic.php?f=64&t=44648
+@@||api.time.com/wp-content/themes/*/js/dist/time-tracking.js$script,1p
+
+! https://github.com/NanoMeow/QuickReports/issues/3613#issuecomment-624193788
+washingtonpost.com#@#.pb-md.pt-md
