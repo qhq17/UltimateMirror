@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: Su0Ggkarh1GW/JtxsG8qyg
+! Checksum: mJgNyl7fQ3vwH/ATysVagw
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish and Portuguese languages.
-! Version: 2.0.6.19
-! TimeUpdated: 2020-04-30T14:32:13+03:00
+! Version: 2.0.6.23
+! TimeUpdated: 2020-05-07T17:32:41+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#spanish
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -154,7 +154,6 @@
 ||bn.imguol.com^$third-party
 ||box.zap.com.br^$third-party
 ||bpiexpressoimobiliario.pt^$subdocument,third-party
-||buscape.com.br^$third-party
 ||buxim.com^$third-party
 ||catho.com.br/parceiros/ad/$third-party
 ||cliquemidia.com^$third-party
@@ -249,6 +248,10 @@
 !
 ! AdRegain
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/54733
+lacapital.com.ar###prestitial_layer
+! https://github.com/AdguardTeam/AdguardFilters/issues/55042
+/loskatchorros\.com\.br\/forum\/uploads\/set_resources_\d+\/[a-z0-9]+_[a-zA-Z0-9]+\.js/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/54454
 anicchan.net#@#afs_ads
 @@||anicchan.net/popad/popads.js
@@ -1443,6 +1446,8 @@ http://adw.
 !-------------------- Specific rules --------------------!
 !--------------------------------------------------------!
 !
+||bludv.uk/random.js
+||bludv.uk/sandbox.js
 /images/banner/*$domain=laverdad.com|visaonoticias.com
 visaonoticias.com##a[href^="link.php?id="]
 ||anitube.uk/random.js
