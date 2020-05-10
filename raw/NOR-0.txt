@@ -1,4 +1,4 @@
-! Version: 03May2020v1
+! Version: 09May2020v4
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites
 ! Expires: 12 hours
@@ -105,9 +105,8 @@ sedenne.no#?#div[class*=articleItem]:-abp-contains(ANNONSE)
 sedenne.no#?#div[class*=articleListItem]:-abp-contains(ANNONSE)
 side2.no##[href*="clk.tradedoubler.com/click"]
 side2.no##[href*="track.adtraction.com/t/t"]
-side2.no,side3.no#?#.channel-item:-abp-has(.content > [href*="/annonsebilag/"])
-side2.no,side3.no#?#a:not([href*="side3.no"]):not([href*="side2.no"]):not([href*=".blogg.no"]):-abp-has(figure[class*="img-container"])
-side3.no#?#.strossle:-abp-has(div[data-third-party-link])
+side2.no#?#.channel-item:-abp-has(.content > [href*="/annonsebilag/"])
+side2.no#?#a:not([href*="side2.no"]):not([href*=".blogg.no"]):-abp-has(figure[class*="img-container"])
 skessuhorn.is##.kostad-efni
 smis.no#?#.widget:-abp-contains(Annonse)
 sorlandsavisen.no#?#div:-abp-has(> span:-abp-contains(Annonse))
@@ -150,6 +149,12 @@ dagens.dk##a[href*=".bedrageri.com/"]:upward(2)
 itavisen.no#?#.spklw-post:-abp-has(a[href*=smartadserver])
 730.no##.gofollow:upward(3)
 itavisen.no##.sponsored
+brudleyp.fo,hvat.fo##.vev
+torg.fo##.add
+hvat.fo##.vev-wrap
+travservice.dk##.widget_widgetkit
+travservice.dk##.tm-main-top
+melkoghonning.no##.g
 |blob:https://www.veier24.no/$image
 ||1819.is/infosmall/$image
 ||3.248.18.175^
@@ -166,7 +171,7 @@ itavisen.no##.sponsored
 ||ads.*.no^
 ||ads.no^
 ||adserver.*.dk^
-||adservice.dk^
+||adservice.com^
 ||adservicemedia.dk
 ||akamai.net^$script,domain=eniro.se|eniro.no|eniro.dk
 ||akamaihd.net^$media,domain=dplay.no|dplay.dk
@@ -178,14 +183,12 @@ itavisen.no##.sponsored
 ||austurfrett.is/images/banners$image
 ||banner.*.no^
 ||banner.landbrugsavisen.dk/reklame.aspx$subdocument
-||bannere.oslonett.no^
 ||boligkanalen-maestro-new.azurewebsites.net$image
 ||bornholm.nu/nonsec/banner$image
 ||brandstudio.inventory.schibsted.io$subdocument,3p
 ||cdn.rikstoto.no/expert/GameShop^$subdocument,3p,domain=~tipster.no
 ||cdnboligkanalen.azureedge.net^$3p
 ||cluster.chart.dk$3p
-||cmt.no^
 ||damoh.vgtv.no/hic_qos$script,redirect=noopjs,domain=vg.no
 ||deiligejenter.no$image,domain=nakenprat.com
 ||delivered-by-madington.com^$3p
@@ -194,8 +197,6 @@ itavisen.no##.sponsored
 ||dust2.dk/img/banners/*$image
 ||easy-ad.no^
 ||easy-ads.dk^
-||emerio.no^
-||euroads.no^
 ||eyjar.net/skrar/ads
 ||feltet.dk/*/topbanner_*.jpg^
 ||feltet.dk/*/wallpaper_1.jpg^
@@ -206,23 +207,18 @@ itavisen.no##.sponsored
 ||gratisxxx.no$image,domain=nakenprat.com
 ||heartbeat.airserve.net^$3p
 ||helios.*.no^
-||i1media.no^
 ||isweb.no^$subdocument
 ||karfan.is/*-470x130*.jpg^
 ||karfan.is/*300x250.jpg^
-||klikk.no/common/js/klikk.desktop-thirdparty.min.js
 ||langrenn.com/getbanner.php/*/getfile.php/$image
 ||matriell.dm-storage.no$image,3p
 ||media.sonymusic.no/marketing/*.html$subdocument,3p
-||mediasense.dk^$3p
 ||myad.no^
 ||nettklikk.no^
 ||norskenettsider.no/images/ageras-banner.jpg
 ||norskenettsider.no/images/remember-banner-2016.jpg
 ||nvnytt.no/images/*annonse-$image
-||openadex.dk^
-||piwik.onlinemagasinet.no^
-||primetime.ad.primetime.net^
+||ad.primetime.net^
 ||rett24.no/*/_/attachment/inline/$image
 ||samfilm.codelab.is^$3p
 ||samler.no/images/banners/$image
@@ -240,15 +236,15 @@ itavisen.no##.sponsored
 ||tunnelsyn1.files.wordpress.com/*/sotra-trelast-isolasjon$image
 ||tvkampen.com/media/*/banner*$image
 ||tvkampen.com/media/partners/unibet-lo$image
-||tvshop.com/tradedoubler_files/
 ||utrop.no/wp-content/uploads/*.gif$image
 ||utrop.no/wp-content/uploads/*/Banner_utrop$image
 ||vevlysingar.fo$subdocument,3p
 ||viasport-assets.mtg-api.com/*/prod/comScore-*.js$script
 ||vikari.is/skjol/frjalsi-lif*.png$image
 ||webclick.no^
-||webhotell.enivest.no^
 ||youtube.com/embed/*&origin=https%3A%2F%2Fwww.feltet.dk&widgetid=1$subdocument
+||vevlysingar.*.com^$3p
+||melkoghonning.no/wp-content/uploads/*_Banner_$image
 -bazaar-$script,domain=nettavisen.no
 .dk/ad/
 .dk/ads/
@@ -290,6 +286,8 @@ itavisen.no##.sponsored
 ||trolli.is/wp-content/uploads/2018/05/Untitled-1-1.jpg$image
 ||trolli.is/wp-content/*/vefsmarinn$image
 ||trolli.is/wp-content/*/benecta.png
+||oyggjatidindi.com/vev_banners/*L%C3%BDsing$image
+||travservice.dk/wp-content^$image
 !+ NOT_OPTIMIZED
 ||tv2a.dk^
 !+ NOT_OPTIMIZED
@@ -307,9 +305,8 @@ itavisen.no##.sponsored
 @@||vgtv.no$generichide
 ||adnxs.com^$domain=vgtv.no
 !#endif
-! framtia.no, sovesten.no, arendalstidende.no, bil24.no, 730.no, frettatiminn.is, opp.no
-! (Exception: opp.no)
-##.gofollow:not([href*="radioe6"])
+! framtia.no, sovesten.no, arendalstidende.no, bil24.no, 730.no, frettatiminn.is, opp.no, melkoghonning.no
+##.gofollow
 ! https://www.totensblad.no/2019/nyheter/forsynte-seg-gradig-av-medaljene-i-nm/
 ##a[href*="/?utm_source=strossle"]
 ! www.op.no
@@ -347,6 +344,16 @@ tv2.no##.spklw-post-attr[data-pc]
 ! bilasolur.is (03/05/2020)
 /lykill_banner$image
 ||bilasolur.is/banners^
+! portal.fo (09/05/2020)
+##.multiple-vevlysingar
+##.full-width-vevlysingar
+portal.fo###top_vev
+portal.fo##.full-width-vev.all
+! https://portal.fo/dagur-28901/tad-figurativa-og-abstrakta-landslagid.grein (09/05/2020)
+portal.fo,fiskur.fo###footer-adds
+portal.fo##.ablock
+! Bet365 widget triggered for Norwegian audiences only
+goal.com##.js-betting-widget.is-country-no:upward(2)
 
 ! 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
 ! 🇩🇰: ——— Tomme restebokser, som EasyList har efterladt ———
@@ -716,12 +723,16 @@ m.feltet.dk##.banner_mobile
 klikk.no##.floatRight.columns
 veitingastadir.is##.footer_top > .footer-wrap > .columns
 bilasolur.is##div[class*=advertisement-spot]:upward(1)
+beta.tv2.no##body:style(padding-top: 70px !important)
+tv2.no##div[data-third-party-link^="\[\""]
+advokatbladet.no##.adnuntius-ad
 ||yrkesbil.no/gifs/*emty.gif^
 ||yrkesbil.no/gifs/1pix.gif^
 ||730.no/banner/*/sonymusic/$subdocument
 ||bilnorge.no/gifs/*emty.gif^
 ||gaysir.no/rek/bb_inline$subdocument
 ||static.vg.no/css/admark_top.gif
+-l%C3%BDsing-$image,domain=news.fo
 !+ NOT_OPTIMIZED
 kulturplot.no,dagensperspektiv.no,velferd.no###main > .small-12:nth-of-type(1)
 !+ NOT_OPTIMIZED
@@ -787,7 +798,7 @@ vafo.dk##.adform-flexblock
 ! qxl.no
 ###GoogleAdsensePanorama
 ###GoogleAdsenseFooter
-! nickelodeon.no, tv2.dk, side3.no, klikk.no, zooom.no, adressa.no, blogg.no, kjarkinn.is
+! nickelodeon.no, tv2.dk, klikk.no, zooom.no, adressa.no, blogg.no, kjarkinn.is
 ##.ad-container
 ! gamer.no, veier24.no, at.no, porten.no, insidetelecom.no, elektronikkbransjen.no, tu.no, digi.no
 ##.poster-placeholder
@@ -826,6 +837,8 @@ vafo.dk##.adform-flexblock
 ###innocode-ad
 ! https://www.austurfrett.is/frettir/lagt-smithlutfall-a-austurlandi (15/04/2020)
 ##.undirsidaad
+! https://fiskur.fo/gitte-henning-1-landar-i-maloy (09/05/2020)
+||*.fo/css/img/banner2x1.png$image
 
 ! 🇳🇴: ——— Tomme skillebokser ———
 ! 🇩🇰: ——— Tomme adskillerbokser ———
@@ -844,6 +857,8 @@ avvir.no###block-block-1 > p:nth-of-type(4)
 dyrevennene.no##.td-footer-wrapper
 yrkesbil.no#?#tr:-abp-contains(/^\xA0$/):not(:-abp-contains(/\S/)):not(:-abp-has(img))
 yrkesbil.no#?#td:-abp-contains(/^\xA0$/):not(:-abp-contains(/\S/)):not(:-abp-has(img))
+kvf.fo##.panels-flexible-row-grein-rnd-13
+oyggjatidindi.com##.bottom_space
 
 ! 🇳🇴: ——— Distraherende bakgrunnsbilder ———
 ! 🇩🇰: ——— Distraherende baggrundsbilleder ———
@@ -903,6 +918,7 @@ tv2.no##+js(acis, adblockDetector)
 vg.no##+js(aeld, load, concat)
 tipsbladet.dk##.js-isblured:style(-webkit-filter: none !important; filter: none !important)
 tipsbladet.dk###js-promo-welcome
+abcnyheter.no##div[style^="bottom: 0px;"]
 ||aftenposten.no/seksjon/dist/ads-$script
 ||dni-adops-proxy-prod-adopsmediaconverter.mercury.dnitv.com/$media,redirect=noopmp3-0.1s,domain=dplay.no|dplay.dk
 ||elderlyscissors.com^
