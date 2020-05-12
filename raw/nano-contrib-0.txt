@@ -225,6 +225,10 @@ shoutwiki.com##.monobook-ad
 # https://github.com/NanoMeow/QuickReports/issues/3730
 forum.wordreference.com##[id$="_mid"]
 
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/112#issuecomment-626087034
+webmd.com##.container > .pane:first-of-type
+webmd.com##.responsive-sharethrough-wrapper
+
 # End Multilingual
 
 # -------------------------------------------------------------------------------------------------------------------- #
@@ -239,9 +243,11 @@ forum.wordreference.com##[id$="_mid"]
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/73#issuecomment-569457506
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/77#issuecomment-574410073
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/87#issuecomment-582155483
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/112#issuecomment-626087012
 !#if !env_mobile
 pixiv.net##div:has(:scope > div > iframe:not([src])):matches-css(padding-bottom: 56px)
 pixiv.net##li:has(:scope > iframe[name="infeed"])
+pixiv.net##li[size="2"][offset="1"]
 pixiv.net###js-mount-point-header.with-ad:style(min-height: 0px !important;)
 pixiv.net###root > header + div + div:not(:has(a)):not(:has(img))
 pixiv.net##.area_new:not(:has(.area_title))
@@ -1600,6 +1606,8 @@ download.pixelexperience.org##body > div:has(.adsbygoogle)
 slate.com##.ad--inArticleBanner
 
 # https://github.com/NanoMeow/QuickReports/issues/2867
+# https://github.com/NanoMeow/QuickReports/issues/3825
+researchgate.net##.lite-page__above:has(:scope > .lite-page-ad)
 researchgate.net##.is-sticky:style(top: 0px !important;)
 
 # https://github.com/NanoMeow/QuickReports/issues/2932
@@ -1710,6 +1718,30 @@ indiatoday.in##.story-header-ad
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/111#issuecomment-621272925
 dailystar.co.uk##body:style(margin-top: 0px !important;)
+
+# https://github.com/NanoMeow/QuickReports/issues/1677
+goal.com##article:has(:scope > [data-role="ad"])
+goal.com##.article-sponsorship-footer:remove()
+goal.com##.commercial
+
+# https://github.com/NanoAdblocker/NanoFilters/issues/497
+citethisforme.com##.ads_top_middle:upward(1)
+
+# https://github.com/NanoMeow/QuickReports/issues/3806
+prnt.sc##.top-grundik
+prnt.sc##.left-grundik-report
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/113#issuecomment-626338645
+website.informer.com##div[align="center"]
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/113#issuecomment-626338662
+inputmag.com##div[id^="ad-"]:upward(1)
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/113#issuecomment-626338679
+gamersdecide.com##.block-block:has(.vm-placement)
+
+# https://github.com/NanoMeow/QuickReports/issues/2651
+bloomberg.com##.css--ad
 
 # End English
 
