@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
-! Checksum: D2Qbdy+8btkwte1BwlTnAA
-! Version: 202005090040
+! Checksum: jUdM/oJkArmHd6Rkxr0Yng
+! Version: 202005130520
 ! Title: EasyList Cookie List
-! Last modified: 09 May 2020 00:40 UTC
+! Last modified: 13 May 2020 05:20 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.to/
 ! License: http://creativecommons.org/licenses/by/3.0/
@@ -19,6 +19,7 @@
 -consent-banner-
 -consent-banner.
 -cookie-banner-
+-cookie-banner.
 -cookie-cnil.
 -cookie-consent-$~script
 -cookie-consent.$~script
@@ -1384,6 +1385,7 @@ _site_cookie_
 ###acceptCookie
 ###acceptCookieBanner
 ###acceptCookieContainer
+###acceptCookieDiv
 ###acceptCookieMeg
 ###acceptCookiePG
 ###acceptCookiePolicy
@@ -2020,6 +2022,7 @@ _site_cookie_
 ###cm-cookies
 ###cm4all-cookie-policy-page
 ###cmFluxMessageCookies
+###cm_cookie_notification
 ###cmanager-container
 ###cmc-cookie-policy-banner
 ###cmc-tracking-consent-form-step1
@@ -3134,6 +3137,7 @@ _site_cookie_
 ###cookieToaster
 ###cookieToolbar
 ###cookieTooltip
+###cookieTopCOntainer
 ###cookieUBar
 ###cookieUIContainer
 ###cookieUsage
@@ -12418,7 +12422,7 @@ hmc.org.uk###modal-mask
 shellsmart.com###modal_container
 eurocirc.org###msgBox_error
 betsson.com###msgwrapper
-mtn.co.za###my-welcome-message
+mtn.co.za,mtnbusiness.co.za###my-welcome-message
 rockstarcoders.com###myAlert
 exemproject.eu,kon-boot.com###myModal
 spandidos-publications.com###navbar
@@ -12629,6 +12633,7 @@ viralnova.com##.cc-banner
 wallpapershome.com##.cc-dialog
 drakecircus.com##.ccc-widget
 orcadian.co.uk##.cd-container
+kbs.co.kr##.chrome_pick
 stayinwales.co.uk##.ckinfo-panel
 singular.com.cy##.cm-notification-container
 cnn.com##.cnn-toast--tos
@@ -14519,7 +14524,7 @@ ad.win.nl#@##cookieConsentBox
 techopital.com#@##cookieConsentContainer
 indebuurt.nl,tweakers.net#@##cookieContainer
 tiger.nl#@##cookieMessage
-brieftip.pl,britishairways.com,fotofairsicherung.de,kaliber.pl,naszwybir.pl,onsbrabantnet.nl,tropicana.fr,woolworth.de#@##cookieModal
+arbeiterkammer.at,brieftip.pl,britishairways.com,fotofairsicherung.de,kaliber.pl,naszwybir.pl,onsbrabantnet.nl,tropicana.fr,woolworth.de#@##cookieModal
 dhbbank.nl#@##cookieModalCenter
 krefting.de#@##cookieNote
 tweakers.net#@##cookieOverlay
@@ -14530,8 +14535,11 @@ hbogo.hu#@##cookiebox
 www.free.fr#@##cookieconsent
 gruenderservice.at#@##cookiehint
 porno720.pl,tvporno.pl#@##cookieinfo
+qastack.fr#@##cookies-accept
+qastack.fr#@##cookies-consent
 paradoxplaza.com#@##cookies-info
 paravol.org#@##cookies-modal
+arbeiterkammer.at#@##cookiesContainer
 shoppable.com#@##cookiesModal
 gdansk.pl#@##cookies[role="dialog"]
 vkmag.com#@##cookiesdirective
@@ -14698,6 +14706,7 @@ unicode.org#@#div[data-nconvert-cookie]
 @@/cookie*/jquery.cookie.js$script,~third-party,domain=~albeco.com.pl
 @@/cookie_law/plugin.js$script,~third-party
 @@/zig_cookiepolicybar/*/CookieBar.js$script,~third-party
+@@||microsoft.com/api/privacy/cookieconsent?$xmlhttprequest,domain=docs.microsoft.com
 ! https://github.com/ryanbr/fanboy-adblock/issues/721#issuecomment-443395851
 ! https://github.com/ryanbr/fanboy-adblock/issues/1133
 @@/wp-content/plugins/bwp-minify/min/?*,wp-content$script,stylesheet,~third-party
