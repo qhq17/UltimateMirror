@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: VgefheAm2+R9KWCr63hkdg
+! Checksum: SZxU30UilOM/rmP1tLlQ8w
 ! Title: AdGuard Japanese filter
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.3.3
-! TimeUpdated: 2020-04-29T19:31:55+03:00
+! Version: 2.0.3.8
+! TimeUpdated: 2020-05-14T12:04:21+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#japanese
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -132,6 +132,8 @@
 ! Eimg.jp
 ||adingo.jp.eimg.jp^
 !
+||dis.hogei.info^$third-party
+||tokyo-tube-ad.com^$third-party
 ||ad.netowl.jp^$third-party
 ||js.colo2.jp^$third-party
 ||preaf-ad.jp^$third-party
@@ -374,6 +376,9 @@
 !
 ! These rules are against all kinds of ad blocking reinjection/circumvention scripts
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/55273
+@@||newsweekjapan.jp/brave/ad-page/ad-pulse.js
+newsweekjapan.jp##+js(no-setTimeout-if, document.getElementById(uniqueId);)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/54027
 @@||pointservice.com/res/media/common/ad/adframe.js$script,domain=goldencocco.jp|mottonoutore.jp
 goldencocco.jp##+js(set-constant, adblock, false)
@@ -655,6 +660,8 @@ momon-ga.com#?#.repo-title:has(> strong)
 !-------JS----------
 !-------------------
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/54943
+jp-xvideos.info##+js(addEventListener-defuser, click, event.triggered)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/54027
 dotti2.jp,goldencocco.jp,pochitto2.jp##+js(set-constant, sec, 0)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/54025
@@ -767,6 +774,11 @@ _ds_adtag_
 !
 ! /banner/banner_ - if it is necessary, make this rule domain specific
 !
+jp-xvideos.info###page > div[id="main"] > a[href]
+tokyo-tube.com###ads_area
+tokyo-tube.com###right > div > div[id]:not([style])
+||blog.livedoor.jp/jyoseisama/js/top_randomlink.js
+||blog.livedoor.jp/jyoseisama/js/bottom/b1_link.js
 as-selection.net##.sponsor_link
 nurumayu.net###js-popup
 ||solution.fielding.co.jp^*/bnr_col_follow_
@@ -1435,15 +1447,14 @@ yahoo.co.jp##ul[class^="sponsor"]
 ||yomiuri.co.jp/ad/
 ||zenback.jp^*/tracking.html
 !
+avgle.com###exo-native
+avgle.com##.hide-me-please2
 ||adserver.juicyads.com/js/jads.js$domain=avgle.com
 ||ads.adxadserv.com$domain=avgle.com
-avgle.com##a[href^="http://adult.contents.fc2.com/"]
-avgle.com##a[href^="http://adult.contents.fc2.com/"] + div#ps32-container.well
 ||sub2.avgle.com^$script,domain=avgle.com
 avgle.com##.video-banner
 ||avgle.com/avideos.js
 ||avgle.com/images.php
-||sub2.avgle.com/67/1d/ba/671dbadbf37814e321f252eac8aa2500.js
 avgle.com##.col-sm-5 > a[class="btn btn-primary"][target="_blank"]
 avgle.com##div[class*="__bn-container"]
 avgle.com##.well#ps32-container
@@ -1485,6 +1496,8 @@ gtoys.blog48.fc2.com###adright
 !
 ! White list. Fixing filtration errors(false-positive)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/54943
+@@||ad.dmm.com^$domain=jp-xvideos.info
 ! https://github.com/AdguardTeam/AdguardFilters/issues/53900
 ! https://github.com/AdguardTeam/AdguardFilters/issues/51175
 @@||l.logly.co.jp/lift_widget.js?adspot_id=$domain=qiita.com
