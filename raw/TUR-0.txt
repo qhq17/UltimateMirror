@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: r7grX+QNO6CcOlQDlJLplg
+! Checksum: EpzmH+bhiMojStrwYYWshg
 ! Title: AdGuard Turkish filter
 ! Description: Filter list that specifically removes ads on websites in Turkish language.
-! Version: 2.0.16.24
-! TimeUpdated: 2020-05-13T21:30:23+03:00
+! Version: 2.0.16.29
+! TimeUpdated: 2020-05-15T16:30:24+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#turkish
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -498,8 +498,9 @@ ipbdestek.com##+js(abort-on-property-write, ipsDebug)
 @@||res-simler.blogspot.com^$generichide
 !+ PLATFORM(ext_ff, ext_opera, ios, ext_android_cb, ext_safari, ext_ublock)
 @@.png#$domain=res-simler.blogspot.com
-! https://github.com/AdguardTeam/AdguardFilters/issues/38009
-guncelkaynak.com##body > div[style^="position: fixed; top:"][style*="z-index: 9999"]:not([class]):not([id])
+! https://github.com/AdguardTeam/AdguardFilters/issues/55436
+guncelkaynak.com##+js(abort-on-property-write, ai_check_block)
+guncelkaynak.com##body > div[id^="ai-adb-"][style^="position: fixed; top:"][style*="z-index: 9999"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/37668
 @@||altyazilifilm.live/adsbygoogle.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/37609
@@ -2145,10 +2146,11 @@ sportsregg.com,altyazilifilm.live,filmzal.com,film-dizi.com,720pizleme.com,filmm
 seskocaeli.com,kocaelizirve.com,yenialanya.com,t54.com.tr,haber266.com,safihaber.com,nazilliadalet.com,bizimyaka.com,spor46.com,akdeniztelgraf.com,ispartamhaber.com,haberhurriyeti.com,mercekhabergazetesi.com,gaziantepinhabercisi.com,gurbettekierzurum.com.tr,haberaydin.com,turkiyemtv.com.tr,lidergazetesi.com,haberso.com,aydingazetesi.com,aydinyenihaber.com,ajanscaldiran.com,haber28.com,netgaste.com,sakaryadanhaber.com,erzurumhaber.com.tr,yenidevir.com.tr,golcukgundem.com,elbistanolay.com,cthaber.com,mihraphaber.com,pamukovahalk.com,medyabar.com,bgazete.com.tr,kartepegazetesi.com.tr,istekocaeli.com,mansetaydin.com,sesgazetesi.com.tr,bugunkocaeli.com.tr,kocaeligazetesi.com.tr,milligazete.com.tr,hbrma.com,tanisgazetesi.com.tr,elbistankaynarca.com,guncelkocaeli.com,enkocaeli.com##.rkm
 !
 !
+sokeekspres.com###reklamp
+osmancikgazetesi.net##div[id*="_fullpageadv"]
+gamer.com.tr##.ad-placement-header-footer
 ||dizizle.xyz/rekor1.mp4
 dizimex.net##.sag > a[rel="nofollow"]
-selinhoca.com##.tpaw0unavailableMessageOverlay
-selinhoca.com##div[style^="width: 728px; height: 90px;"]
 ||11haber.com/wp-content/uploads/2020/04/02490564-01ea-4421-afb3-48e329c276eb.jpg
 11haber.com##div[id^="custom_html-"]
 hwp.com.tr##a[href^="https://serve.for.com.tr/server/redirect.php"] > img
@@ -2997,7 +2999,7 @@ elitehayat.com###block-brandandmore
 elitehayat.com###block-hayatpaylasim
 elitehayat.com###block-ashley-joy-zen
 basedistanbul.com##img[width="300"][height="600"]
-koroglugazetesi.com,bozuyukhaberajansi.com,yenicagri.com,businesschannel.com.tr,onlarnediyo.com,medyaayvalik.com##.splash-popup
+bolupostasi.com,koroglugazetesi.com,bozuyukhaberajansi.com,yenicagri.com,businesschannel.com.tr,onlarnediyo.com,medyaayvalik.com##.splash-popup
 ||medyaayvalik.com/wp-content/uploads/2019/08/WhatsApp-
 ||medyaayvalik.com/wp-content/uploads/2019/08/hasyilmaz-
 ||medyaayvalik.com/wp-content/uploads/2017/09/sitezireklam.jpeg
@@ -3198,7 +3200,7 @@ filmakinesi.net###single_1
 filmakinesi.net###single_1_video_alt
 haberturk.com##.adv-600
 hiztesti.com.tr##.container > div > a[href^="http://bit.ly"]
-pornmsc.com###ivr-reklam-text
+ismporno.com,pornmsc.com###ivr-reklam-text
 ||keycdn.info/8ad/spi.js
 ||keycdn.info/code/CallJs.php
 filmloverss.com###rklm-0
