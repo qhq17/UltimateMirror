@@ -184,8 +184,8 @@ tass.com##.news-list-content__aside
 arabiaweather.com##.mpu-card
 arabiaweather.com##.leaderboard-container
 
-# https://github.com/NanoMeow/QuickReports/issues/1622
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/83#issuecomment-579870303
+# https://github.com/NanoMeow/QuickReports/issues/1622
 accuweather.com##.ad
 accuweather.com##.glacier-ad
 
@@ -229,6 +229,14 @@ forum.wordreference.com##[id$="_mid"]
 webmd.com##.container > .pane:first-of-type
 webmd.com##.responsive-sharethrough-wrapper
 
+# https://github.com/NanoMeow/QuickReports/issues/2541
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/115#issuecomment-629277025
+zdnet.*###main > div:has(.ad-leader-plus-top)
+zdnet.*##.sticky-wrapper
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/115#issuecomment-629277079
+gpucheck.com##div[id^="gpt-passback-"]:upward(1)
+
 # End Multilingual
 
 # -------------------------------------------------------------------------------------------------------------------- #
@@ -247,11 +255,14 @@ webmd.com##.responsive-sharethrough-wrapper
 !#if !env_mobile
 pixiv.net##div:has(:scope > div > iframe:not([src])):matches-css(padding-bottom: 56px)
 pixiv.net##li:has(:scope > iframe[name="infeed"])
-pixiv.net##li[size="2"][offset="1"]
 pixiv.net###js-mount-point-header.with-ad:style(min-height: 0px !important;)
 pixiv.net###root > header + div + div:not(:has(a)):not(:has(img))
 pixiv.net##.area_new:not(:has(.area_title))
 pixiv.net##.sc-AykKF:style(padding-bottom: 0px !important;)
+pixiv.net##iframe[height="60"]:upward(1)
+pixiv.net##iframe[height="90"]:upward(1)
+pixiv.net##iframe[height="520"]:upward(1)
+pixiv.net##li[size="2"][offset="1"]
 pixiv.net##.ads-top-info
 !#endif
 !#if env_mobile
@@ -1238,9 +1249,6 @@ realclearpolitics.com##.init.widget_slot:not(.loaded)
 # https://github.com/NanoMeow/QuickReports/issues/2535
 files.minecraftforge.net##.promo-container
 
-# https://github.com/NanoMeow/QuickReports/issues/2541
-zdnet.com###main > div:has(.ad-leader-plus-top)
-
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/73#issuecomment-569457516
 gayemagazine.com##div[style*="width:320px;height:"]
 gayemagazine.com##div[style^="width: 320px; height:"]
@@ -1410,11 +1418,14 @@ tellerreport.com##.ads
 douglascountysentinel.com,hpenews.com##.dfpAd
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/92#issuecomment-589440711
+# https://github.com/LiCybora/NanoCoreFirefox/issues/31
 # https://github.com/NanoMeow/QuickReports/issues/1672
 forum.xda-developers.com##.postbit-userinfo-cell:not(:has-text(/\w/))
-forum.xda-developers.com##.purchad:upward(1)
 forum.xda-developers.com##div[class^="rsb-"]
 forum.xda-developers.com##.leaderboard
+!#if !env_mobile
+forum.xda-developers.com##.purchad:upward(1)
+!#endif
 
 # https://github.com/NanoMeow/QuickReports/issues/3136
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/102#issuecomment-605393557
@@ -1742,6 +1753,42 @@ gamersdecide.com##.block-block:has(.vm-placement)
 
 # https://github.com/NanoMeow/QuickReports/issues/2651
 bloomberg.com##.css--ad
+
+# https://github.com/jspenguin2017/uBlockProtector/issues/1115
+onehack.us##.discourse-adplugin
+
+# https://github.com/NanoMeow/QuickReports/issues/3757
+sciencealert.com##div[class^="priad"][id]:upward(1)
+
+# https://github.com/NanoMeow/QuickReports/issues/3816
+tw-calc.net##.rectangle.container:has(.adsbygoogle)
+
+# https://github.com/easylist/easylist/issues/5262
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/114#issuecomment-628048019
+neoseeker.com##.ad-placeholder-leaderboard
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/115#issuecomment-629277179
+winhelponline.com###custom_html-2
+winhelponline.com##.ai_widget
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/115#issuecomment-629277235
+crxextractor.com##.breakthrough:has(.adsbygoogle)
+crxextractor.com##.nomargin
+
+# https://github.com/NanoMeow/QuickReports/issues/3867
+androidpit.com###snhb-halfpage_right-0:upward(1)
+androidpit.com##.adsbygoogle:upward(.articleRecArticles)
+androidpit.com##.gptSlot:upward(.article-sidebar__tile)
+androidpit.com###div-header
+androidpit.com###snhb-sticky_mobile-0
+androidpit.com##.gptSlot
+
+# https://github.com/NanoMeow/QuickReports/issues/3851
+homeworklib.com##.answer:has(:scope > .ezoic-adpicker-ad)
+homeworklib.com###stickyunit
+
+# https://github.com/NanoMeow/QuickReports/issues/3875
+addthis.com##.addthis_horizontal_follow_toolbox:upward(1)
 
 # End English
 
@@ -2094,6 +2141,20 @@ lrepacks.ru##.widget.partner-block
 
 # https://github.com/NanoMeow/QuickReports/issues/1916
 forum.benchmark.rs##div:has(:scope > [id^="div-gpt-ad-"])
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/114#issuecomment-628048100
+index.hr##.comments-holder > .right-part
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/114#issuecomment-628048176
+njuskalo.hr##.BannerBillboard
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/114#issuecomment-628048272
+dnevnik.hr##article + .sticky-parent
+dnevnik.hr##.linker-container
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/114#issuecomment-628048361
+blic.rs##.sticky-area
+blic.rs##.aklaadx
 
 # End Serbo-Croatian
 
