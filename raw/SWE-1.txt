@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2020-05-15 14:10:45 CEST
+! Last modified: 2020-05-18 16:36:31 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -284,7 +284,7 @@
 /annonslinje_
 /annonssamarbete/*$xmlhttprequest
 /antiblock.$script,stylesheet,~third-party,domain=danskaspraket.se|digitalavykort.se|viseniorer.se|vmj.se
-/apester-javascript-sdk.min.js$script,domain=allakorsord.se|allas.se|baaam.se|dromhemochtradgard.se|elle.se|elledecoration.se|ellematovin.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se
+/apester-javascript-sdk.min.js$script,domain=allakorsord.se|allas.se|baaam.se|dromhemochtradgard.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se
 /api/plugins/google-analytics$xmlhttprequest
 /app.php/adsview/*$xmlhttprequest
 /appnexus$script,domain=aftonbladet.se|blocket.se|bytbil.com|minhembio.com
@@ -391,6 +391,7 @@
 /gdpr/*$domain=capdesign.se|digikey.se|husbilskompisar.se|megaspel.se|nyckelspel.se|se.laowl.com|villalivet.se|vimedbarn.se|visitlulea.se
 /get.aspx?AdSlotID$script
 /getlivevideo$domain=di.se
+/getnative$xmlhttprequest,domain=di.se
 /gilla-mb_plugg.png$domain=markbladet.se
 /glasscandle.$script,domain=komponentkoll.se
 /glimr.$script,domain=affarsliv.com|affarslivgotland.se|aftonbladet.se|blocket.se|corren.se|di.se|dn.se|ekuriren.se|eposten.se|folkbladet.se|gotland.net|helagotland.se|kkuriren.se|klackspark.com|kuriren.nu|mvt.se|norran.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|sn.se|strengnastidning.se|unt.se|viivilla.se|vimmerbytidning.se|vt.se
@@ -761,6 +762,7 @@
 /vendorList.js$script,domain=alingsastidning.se|bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se
 /verksamt-adrum.js$script,domain=verksamt.se
 /videojs-preroll.$domain=himlentv7.se
+/videojs.ima.$script,domain=gamereactor.se
 /view.analytics.js$script,domain=kodboken.se
 /view_count/view.php$xmlhttprequest
 /villapriser$subdocument,domain=affarsliv.com|affarslivgotland.se|norrbottensaffarer.se
@@ -879,6 +881,7 @@
 @@||happyride.se/img/admarket/$~third-party
 @@||hemtrevligt.se^$generichide
 @@||hn.se^$generichide
+@@||imasdk.googleapis.com/js/sdkloader/ima3.$script,domain=gamereactor.se
 @@||kurslitteratur.se^$generichide
 @@||livetombord.se^$generichide
 @@||lovisawallin.se^$generichide
@@ -898,6 +901,7 @@
 @@||tidningenhalsa.se^$generichide
 @@||ttela.se^$generichide
 @@||typkanske.se^$generichide
+@@||vendorlist.consensu.org/vendorlist.json
 @@||www.aftonbladet.se^$generichide
 @@||www.alltforforaldrar.se/extra/js/ads.js$script
 _jquery.blockUI.$script,domain=fssweden.se
@@ -929,6 +933,7 @@ aftonbladet.se##a[href*="/se/app/aftonbladet/"]
 aftonbladet.se##a[href*="/store/apps/details?id=se.aftonbladet"]
 aftonbladet.se##a[href^="/brandstudio"]
 aftonbladet.se##a[href^="/kampanj/casino"]
+aftonbladet.se##a[href^="/rabattkod"]
 aftonbladet.se##a[style*="border-color: rgb(0, 103, 181)"]
 aftonbladet.se##a[style*="border-color:#0067b5"]
 aftonbladet.se##body.abTheme-entertainment *> .abAside > div[style^="text"]:last-child
@@ -984,15 +989,15 @@ alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidn
 alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.seekly
 alkompis.se###check-also-box
 allabolag.se##.topBnrContainer
-allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##.c-newsletter
-allakorsord.se,baaam.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##.ad-collapse
-allakorsord.se,baaam.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##.c-native-carousel--wrapper
-allakorsord.se,baaam.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##.native-sponsored-splash
-allakorsord.se,baaam.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##.widget_black_studio_tinymce
-allakorsord.se,baaam.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##div[class^="app_gdpr"]
-allakorsord.se,baaam.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##section > .native-wrapper ~ article
-allas.se,elle.se,hant.se,svenskdam.se##.product-carousel
-allas.se,hant.se,svenskdam.se##.in-text-ad
+allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##.c-newsletter
+allakorsord.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##.ad-collapse
+allakorsord.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##.c-native-carousel--wrapper
+allakorsord.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##.native-sponsored-splash
+allakorsord.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##.widget_black_studio_tinymce
+allakorsord.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##div[class^="app_gdpr"]
+allakorsord.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##section > .native-wrapper ~ article
+allas.se,elle.se,femina.se,hant.se,mabra.com,svenskdam.se##.in-text-ad
+allas.se,elle.se,femina.se,hant.se,mabra.com,svenskdam.se##.product-carousel
 allehanda.se,arbetarbladet.se,avestatidning.com,bandypuls.se,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se##.nps-client-dialogue-footer
 allehanda.se,arbetarbladet.se,avestatidning.com,bandypuls.se,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se##.true-native
 allsvenskan.se,superettan.se##.app-cookie-line
@@ -1269,10 +1274,12 @@ di.se##.di_panorama__isAdLabel
 di.se##.di_start__insider-ad
 di.se##.di_teaser-flak-container--native
 di.se##.di_teaser-flak-native-column
+di.se##.di_teaser-flak-planbokskoll
 di.se##.dip_panorama
 di.se##.discount-box
 di.se##.footer__cookie-info
 di.se##.mc__overlay--show
+di.se##.native-box
 di.se##.segment__column > .service-box:last-child
 di.se##[class^="gdpr-policy"]
 di.se##a[href*="/annons-"]
@@ -1364,6 +1371,7 @@ exponera.nu##.wof-wheels
 exponera.nu,it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,ordfrontmagasin.se##.pum-overlay
 expressen.se##.article--sponsored
 expressen.se##.article__after-widgets > .html-widget
+expressen.se##.campaign
 expressen.se##.collaboration--widget
 expressen.se##.consent
 expressen.se##.discount-ad
@@ -2398,6 +2406,12 @@ yougov.se##.cookie-confirm
 ||game-cdn.poki.com^*/poki-ads.$script
 ||gameanalytics.com^$third-party
 ||gamedistribution.com/libs/gd/analytics.$script
+||gamereactor.se/lay/ad-video-stats.$script
+||gamereactor.se/lay/dfp_config.$script
+||gamereactor.se/lay/js/adblock_desktop.$script
+||gamereactor.se/lay/js/background.$script
+||gamereactor.se/lay/js/banners_config.$script
+||gamereactor.se/lay/js/manageBanners.$script
 ||gamereactor.se/media/eventad/$image
 ||gamesglue.com/js/gameanalytics/GameAnalytics.$script
 ||getlevelten.com^$third-party
@@ -2596,7 +2610,7 @@ yougov.se##.cookie-confirm
 ||powr.io/powr.js$script
 ||precis.expressen.se/recommendations$xmlhttprequest
 ||pricespy*.kxcdn.com^$domain=sweclockers.com
-||printfriendly.com^$third-party,domain=allakorsord.se|allas.se|baaam.se|dromhemochtradgard.se|elle.se|elledecoration.se|ellematovin.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se
+||printfriendly.com^$third-party,domain=allakorsord.se|allas.se|baaam.se|dromhemochtradgard.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se
 ||prisguide.no/price.js?partner$third-party
 ||prisjakt-a.akamaihd.net^$third-party,domain=pcgamer.se
 ||prisjakt-a.akamaized.net^$third-party,domain=99mac.se|feber.se|fz.se|idg.se|kamerabild.se|minhembio.com|mobil.se|nordichardware.se|sweclockers.com|viivilla.se
