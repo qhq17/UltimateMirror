@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: mJgNyl7fQ3vwH/ATysVagw
+! Checksum: g6ljeqNiiSz9I8J+IW6Sug
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish and Portuguese languages.
-! Version: 2.0.6.23
-! TimeUpdated: 2020-05-07T17:32:41+03:00
+! Version: 2.0.6.27
+! TimeUpdated: 2020-05-13T18:32:11+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#spanish
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -248,6 +248,8 @@
 !
 ! AdRegain
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/55148
+@@||aniplay.site/assets/ads.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/54733
 lacapital.com.ar###prestitial_layer
 ! https://github.com/AdguardTeam/AdguardFilters/issues/55042
@@ -1207,6 +1209,10 @@ maisgasolina.com#?##main [id$="Block"][-ext-has='.adsbygoogle']
 !--------------------------------------!
 !------- JS rules ---------------------!
 !--------------------------------------!
+! https://github.com/AdguardTeam/AdguardFilters/issues/55155
+cinetux.to##+js(abort-on-property-read, smrtSB)
+cinetux.to##+js(abort-on-property-read, asgPopScript)
+cinetux.to##+js(remove-attr, href, a[href]#clickfakeplayer)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/53005
 hentai-id.tv##+js(abort-current-inline-script, $, .one("click")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/52616
@@ -1446,6 +1452,8 @@ http://adw.
 !-------------------- Specific rules --------------------!
 !--------------------------------------------------------!
 !
+gazetadopovo.com.br##.c-ads
+||animeshouse.biz/asset/sostress.js
 ||bludv.uk/random.js
 ||bludv.uk/sandbox.js
 /images/banner/*$domain=laverdad.com|visaonoticias.com
