@@ -1,5 +1,5 @@
 [Adblock Plus 2.0]
-! Version: 03May2020v3
+! Version: 21May2020v1
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -121,12 +121,7 @@ aamulehti.fi###promo-2
 aamulehti.fi##.parade-ad.ad
 aamulehti.fi##div.adContainer
 aamulehti.fi,satakunnankansa.fi,janakkalansanomat.fi,sydansatakunta.fi,jamsanseutu.fi,kankaanpaanseutu.fi,kmvlehti.fi,merikarvialehti.fi,nokianuutiset.fi,rannikkoseutu.fi,suurkeuruu.fi,tyrvaansanomat.fi,valkeakoskensanomat.fi###bottomBanner
-aijaa.com##[href^="http://www.apteekkituotteet.fi/"]
-aijaa.com##[href^="http://www.e-ville.com/fi/tradetracker/"]
-aijaa.com##[href^="http://www.hiusverkko.fi/"]
-aijaa.com##[href^="http://www.kumiukko.fi/"]
-aijaa.com##[href^="https://store.iittala.fi/"]
-aijaa.com##[href^="https://tc.tradetracker.net/"]
+aijaa.com##div.text-center.col-sm-6 > a[rel$="nofollow"]
 akaanseutu.fi,lvs.fi,shl.fi,ylojarvenuutiset.fi##.om-one.omamainos-products
 akaanseutu.fi,lvs.fi,shl.fi,ylojarvenuutiset.fi##.om-row.om-three.omamainos-products
 akaanseutu.fi,lvs.fi,shl.fi,ylojarvenuutiset.fi##[href="/tilaa-lehti"]
@@ -191,6 +186,7 @@ hs.fi##.aldente-wrapper
 hs.fi##.bg-hs-apple.py-16.mb-2.xl\:max-w-wider.max-w-wide.md\:py-16.py-12.px-16.block.ticker
 hs.fi##.for-no-subscription.html-is-seuraa-myynti-bf.html-is-seuraa-myynti
 hs.fi##.hs-advertorial
+hs.fi##.lg\:w-main-lane.bg-hs-frost.mb-16
 hs.fi##DIV[class*="-ad-block"]
 hs.fi##DIV[class*="ad-container"]
 hs.fi##a.block[href*="/mainos/"]
@@ -285,6 +281,7 @@ mobiili.fi###header_ad33
 mobiili.fi###text-67 > .textwidget
 mobiili.fi##.article_ad_1
 mobiili.fi##.article_ad_2
+mobiili.fi##.execphpwidget
 mobiili.fi##.singlehinta.header_ad
 mobiili.fi##div[class="blogcontent"]>p:first-of-type
 mobiili.fi##div[class="blogcontent"]>p:nth-last-of-type(1)
@@ -382,9 +379,12 @@ seiska.fi##.tilaa-banner
 seiska.fi##div.article-ad-container
 sketsi.net##footer > .container.tdt-ad-wrap
 somerolehti.fi###auto-grid-container-5c470b0150cba
-sportti.com##[href^="http://ads.leovegas.com/redirect.aspx"]
-sportti.com##[href^="http://www.primeslots.com/FI/"]
-sportti.com##div.grid_4
+sportti.com##[href^="http://ads.leovegas.com/"]
+sportti.com##[href^="http://www.primeslots.com/"]
+sportti.com##div[style="font-size:14px;line-height:21px;padding-top:6px;"]
+sportti.com##div[style="padding-bottom:10px;margin-bottom:6px;border-top:1px solid gray;margin-top:6px;"] + [type="text/javascript"] + div
+sportti.com##div[style="padding-bottom:10px;margin-bottom:6px;border-top:1px solid gray;margin-top:6px;"] + table[width="468"] + div
+sportti.com##table[width="468"]
 studio55.fi##.ad-container.banner
 suomela.fi##.banner-boksi1
 suomi24.fi##.editorial-slots
@@ -418,6 +418,7 @@ vauva.fi###aldente-native01_0
 vauva.fi##div.cts-row-wrapper
 venelehti.fi##.ads_carousel-2.widget
 verkkouutiset.fi##article.rp-lift.featured-post
+vertaa.fi##li.cg-721
 viikonloppu.com###text-10 > .textwidget
 viikonloppu.com###text-8
 viikonloppu.com###text-9
@@ -427,19 +428,16 @@ viikonloppu.com##.tag-eurojackpot.category-uutiset
 viikonloppu.com##.tag-kasino.category-uutiset
 viikonloppu.com##.tag-nettikasino.category-uutiset
 viikonloppu.com##.tag-rizk.category-uutiset
-viikonloppu.com##[href^="http://wlrizk.adsrv.eacdn.com/"]
-viikonloppu.com##[href^="https://affmore.com"]
-viikonloppu.com##[href^="https://record.twinaffiliates.com/"]
-viikonloppu.com##[href^="https://tracker-pm2.fortunelegends.com/"]
 viikonloppu.com##[href^="https://www.kasinokaverit.com/"]
 viikonloppu.com##[href^="https://www.lainaovi.fi/"]
+viikonloppu.com##[rel="noreferrer noopener"]
 viikonloppu.com##li > a[href*="-jackpot-"]
-voice.fi##div[class*="cxense-ad-container"]
+voice.fi##section[class^="sbsads"] + section[class^="sbs-articleitems full-size-list"][data-module_position_id="612"]
 www.is.fi###kumppaneiden-tarjoukset
 www.is.fi##.border-b.lg\:w-main-lane.bg-is-ad-blue.mb-16
 www.is.fi##.is-advertorial.external.full-width.teaser
 www.is.fi##.ml-16.lg\:block.w-right.hidden > .border-b.lg\:w-main-lane.bg-is-ad-blue.mb-16
-www.is.fi ##.overflow-hidden.relative.aspect-ratio-container.jsx-1666662990
+www.is.fi##.overflow-hidden.relative.aspect-ratio-container.jsx-1666662990
 www.is.fi##div.sadblob-loading
 www.tori.fi###banner_panorama_bottom
 www.tori.fi###footer_partner_links
