@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: SZxU30UilOM/rmP1tLlQ8w
+! Checksum: SYEZSvf3K+T6215an3vzrQ
 ! Title: AdGuard Japanese filter
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.3.8
-! TimeUpdated: 2020-05-14T12:04:21+03:00
+! Version: 2.0.3.16
+! TimeUpdated: 2020-05-21T19:32:02+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#japanese
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -376,6 +376,8 @@
 !
 ! These rules are against all kinds of ad blocking reinjection/circumvention scripts
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/55649
+||iza.ne.jp/common/js/others/brave/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/55273
 @@||newsweekjapan.jp/brave/ad-page/ad-pulse.js
 newsweekjapan.jp##+js(no-setTimeout-if, document.getElementById(uniqueId);)
@@ -565,6 +567,7 @@ mindhack2ch.com#?#.article-body > .ad:has(> .adsbygoogle)
 mindhack2ch.com#?#.article-body > .rss:has(> script)
 mindhack2ch.com#?#.article-post-bottom > .rss-article:has(> .rss-article-item)
 !
+punisoku.blogo.jp#?#.plugin-memo:has(a[href*="www.dlsite"])
 limo.media#?#.right-column > div[class^="right-column-block"]:has(> h3:contains(PR))
 limo.media#?#.right-column > div.right-column-block:has(> div[id^="outbrain_widget_"])
 limo.media#?#.article-body > h4:contains(参考記事)
@@ -774,6 +777,15 @@ _ds_adtag_
 !
 ! /banner/banner_ - if it is necessary, make this rule domain specific
 !
+mantan-web.jp##div[style="width:300px;height:600px;"]
+mantan-web.jp##div[style^="width:728px;height:90px;"]
+mantan-web.jp##.ad-rec
+mantan-web.jp##.ad-fb
+yahoo.co.jp##.Module > .Banner
+punisoku.blogo.jp##.main-column-inner > a[href^="https://www.dlsite"]
+jj-blues.com###text-6
+punisoku.blogo.jp##.main-column-inner > div[style] > div[align="center"] > a[target="_blank"]
+asahi.com###HometopAdOuter
 jp-xvideos.info###page > div[id="main"] > a[href]
 tokyo-tube.com###ads_area
 tokyo-tube.com###right > div > div[id]:not([style])
@@ -1496,6 +1508,9 @@ gtoys.blog48.fc2.com###adright
 !
 ! White list. Fixing filtration errors(false-positive)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/55775
+hs-exp.jp#@#.hcf-ad
+hs-exp.jp#@##search-ad
 ! https://github.com/AdguardTeam/AdguardFilters/issues/54943
 @@||ad.dmm.com^$domain=jp-xvideos.info
 ! https://github.com/AdguardTeam/AdguardFilters/issues/53900
