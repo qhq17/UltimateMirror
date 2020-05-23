@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: g6ljeqNiiSz9I8J+IW6Sug
+! Checksum: 0eWMB0LHu3n4npYR4CnpiQ
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish and Portuguese languages.
-! Version: 2.0.6.27
-! TimeUpdated: 2020-05-13T18:32:11+03:00
+! Version: 2.0.6.28
+! TimeUpdated: 2020-05-21T11:32:19+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#spanish
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -757,10 +757,10 @@ noticias.mrpiracy.xyz#@##adsense
 ! https://github.com/AdguardTeam/AdguardFilters/issues/16144
 ! https://github.com/AdguardTeam/AdguardFilters/issues/14353
 @@||cdnjs.cloudflare.com/ajax/libs/fuckadblock/3.2.1/fuckadblock.min.js$domain=mangahosted.com|mangahost1.com
+mangahosted.com,mangahost2.com##+js(abort-current-inline-script, onload, google_tag)
 mangahosted.com,mangahost2.com##+js(set-constant, Goog_Osd_UnloadAdBlock, 1)
 mangahosted.com,mangahost2.com##+js(set-constant, google_osd_loaded, 1)
 mangahosted.com,mangahost2.com##+js(set-constant, stopMan, false)
-mangahosted.com,mangahost2.com##+js(set-constant, google_tag_data, 1)
 mangahosted.com,mangahost2.com##+js(set-constant, google_unique_id, 1)
 @@||mangahosted.com^$generichide
 @@||mangahost2.com^$generichide
