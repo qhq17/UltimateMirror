@@ -14,12 +14,12 @@
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/21#issuecomment-487796545
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/33#issuecomment-506915459
 # https://github.com/NanoMeow/QuickReports/issues/1042
+# https://github.com/NanoMeow/QuickReports/issues/2712
+reddit.com##div[data-redditstyle="false"]:has(div[data-before-content="advertisement"])
+reddit.com##div[id^="overlay-sidebar-"][data-before-content="advertisement"]:upward(4)
 reddit.com##div.fePAzF:has(div[id^="sidebar-"])
 reddit.com###overlay-comment-atf
 reddit.com###comment-atf
-reddit.com##div[data-redditstyle="false"]:has(div[data-before-content="advertisement"])
-reddit.com##div[id^="overlay-sidebar-"][data-before-content="advertisement"]:upward(4)
-reddit.com##div[id^="sidebar-"][data-before-content="advertisement"]:upward(4)
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/10#issuecomment-459593858
 quizlet.com##.ModeLayout-ad
@@ -237,11 +237,10 @@ zdnet.*##.sticky-wrapper
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/115#issuecomment-629277079
 gpucheck.com##div[id^="gpt-passback-"]:upward(1)
 
-# End Multilingual
-
-# -------------------------------------------------------------------------------------------------------------------- #
-
-# Multilingual NSFW
+# https://github.com/NanoMeow/QuickReports/issues/2537
+twitter.com##div:has(:scope > div > div > h2[role="heading"]:has-text(/\u63A8\u8350|Promoted|Gesponsert|\u0420\u0435\u043A\u043B\u0430\u043C\u0430|Promocionado|Sponsoris\u00E9|Uitgelicht|\u30D7\u30ED\u30E2\u30FC\u30B7\u30E7\u30F3/))
+twitter.com##div:has(:scope > div > div > div > h2[role="heading"]:has-text(/\u63A8\u8350|Promoted|Gesponsert|\u0420\u0435\u043A\u043B\u0430\u043C\u0430|Promocionado|Sponsoris\u00E9|Uitgelicht|\u30D7\u30ED\u30E2\u30FC\u30B7\u30E7\u30F3/)) + div:has(:scope > div > div:empty)
+twitter.com##div[aria-label*=" - "] > div[style^="padding-"] > div[style^="padding-"] > div:has(article) + div:has(:scope > div > div:empty):not(+ div + div:has(h2[role="heading"]))
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/1#issuecomment-450592268
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/9#issuecomment-455806136
@@ -269,6 +268,12 @@ pixiv.net##.ads-top-info
 pixiv.net##body[style^="margin-bottom"]:style(margin-bottom: 0px !important;)
 pixiv.net##.ad-frame-container
 !#endif
+
+# End Multilingual
+
+# -------------------------------------------------------------------------------------------------------------------- #
+
+# Multilingual NSFW
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/107#issuecomment-615925187
 ||deviantart.com/_adslot/$subdocument
@@ -855,6 +860,8 @@ cycling.today##p:has(:scope > script[src$="/adsbygoogle.js"])
 mgoblog.com##div[id^="block-rawadsense"]
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/41#issuecomment-515740504
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/116#issuecomment-632735304
+popculture.com##.pcm-public:style(margin-top: 90px !important;)
 popculture.com###header:style(top: 0px !important;)
 
 # https://github.com/NanoAdblockerLab/NanoContrib/pull/41#issuecomment-515740510
@@ -1790,6 +1797,21 @@ homeworklib.com###stickyunit
 # https://github.com/NanoMeow/QuickReports/issues/3875
 addthis.com##.addthis_horizontal_follow_toolbox:upward(1)
 
+# https://github.com/NanoMeow/QuickReports/issues/3905
+socialblade.com##[id^="cdm-zone-"]:upward(div[style*="height:"][style*="background:"])
+socialblade.com##[style="clear: both;"] + div[style*="#333"]:style(margin-top: 10px !important;)
+socialblade.com##.section-rightside:style(float: initial !important; width: 100% !important;)
+socialblade.com##.section-long-vert-container
+socialblade.com##.section-leftside
+socialblade.com###footer-section-wrap + div
+socialblade.com###bottomAd
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/116#issuecomment-632735407
+cpuboss.com##.section:has(:scope > .ad-tag)
+
+# https://github.com/NanoAdblockerLab/NanoContrib/pull/116#issuecomment-632735507
+digitaltrends.com##.b-placard
+
 # End English
 
 # -------------------------------------------------------------------------------------------------------------------- #
@@ -1930,6 +1952,15 @@ themarker.com##section:has(:scope > a[href*="ClickTracker"])
 magyarhang.org##.ai_widget
 
 # End Hungarian
+
+# -------------------------------------------------------------------------------------------------------------------- #
+
+# Indonesian NSFW
+
+# https://github.com/NanoMeow/QuickReports/issues/2739
+nekopoi.care##img[hidden]:upward(.widget_text)
+
+# End Indonesian NSFW
 
 # -------------------------------------------------------------------------------------------------------------------- #
 
@@ -2098,6 +2129,13 @@ queer.pl##.box-adv-super
 photoblog.pl##.frontpage-teaser-photo-container:style(height: 170px !important)
 photoblog.pl##.frontpage-teaser-photo-container > h1:style(margin-top: 30px !important)
 !#endif
+
+# https://github.com/NanoMeow/QuickReports/issues/3907
+onet.pl###onet-ad-right:upward(aside)
+onet.pl###extraAdsBlock
+onet.pl###googleAdsCont
+onet.pl###onet-ad-flat-branding
+onet.pl##.asideAds
 
 # End Polish
 
