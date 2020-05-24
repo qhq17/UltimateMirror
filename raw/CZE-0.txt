@@ -78,7 +78,6 @@
 ||reklama.warforum.cz^
 ||romea.cz/images/servis/banner
 ||ronnie.cz/cache/bannery/
-||sda.online-systemy.cz^
 ||stat.novinky.cz^
 ||stat.sport.cz^
 ||stat.super.cz^
@@ -94,16 +93,13 @@
 !
 ||adb.azet.sk^
 ||autobazar.eu/__branding/
-||bannersector.sector.sk^
 ||bmwklub.sk/images/banners/
 ||cucaj.sk/images/bannery/
 ||cucaj.sk/Themes/cucaj3/images/bg/bg*.jpg
-||fileframe.sector.sk/banners/
 ||flirtkontakt.sk/previews/banner*.jpg
 ||fony.sk/content/banners/
 ||fundingchoicesmessages.google.com$domain=hnonline.sk
 ||hojko.com/images/banner*.gif
-||image.sector.sk^
 ||img.zoznam.sk/adimages/
 ||kamzakrasou.sk/actions/
 ||media.hnonline.sk/api/v1/hn-player/stripe
@@ -123,6 +119,7 @@
 ||recycle-static.zoznam.sk/js/zoznam_branding.min.js
 ||rtvs.sk/bs/xml/vast.xml
 ||rtvs.sk/bs/xml/vmap.xml
+||sector.sk/a/
 ||ta3.com/api/v1/livebox/video/
 !
 ! ---------- Czech 3rd party blocking rules ---------- !
@@ -178,6 +175,8 @@
 ||r.i0.cz^$third-party
 ||reklamy.s3.amazonaws.com^$third-party
 ||rival.cz^$third-party
+||sda.online-systemy.cz^$third-party
+||sda.un-42.com^$third-party
 ||storage.googleapis.com/adela-hb-platform.appspot.com/$third-party
 ||sys.starnets.io^$third-party
 ||trackad.cz^$third-party
@@ -206,6 +205,7 @@
 @@||heureka.*/crossdomain.xml
 @@||heureka.*/direct/vyvoj-cen/
 @@||iboys.cz/advert-list.php
+@@||online.mbank.cz/Adv/$domain=mbank.cz
 @@||opti.cz/wp-content/uploads/*/reklama_*.jpg$image
 @@||optika-opti.cz/wp-content/uploads/*/reklama_*.jpg$image
 @@||pise.cz^$generichide
@@ -346,7 +346,6 @@ firstclass.cz###stOverlay
 firstclass.cz##.promobox
 forum.root.cz##.body_message--ad
 fotoaparat.cz##div._banner
-grunex.com##a[href^="https://sda.online-systemy.cz"]
 grunex.com##[class*="sda"]:not(.post-content)
 hcdukla.cz##div.bottom-partners
 hcmotor.cz##div.container.partners
@@ -359,6 +358,7 @@ idnes.cz##div[id^="hyper"]
 idnes.cz##[class*="r-main"]
 idos.idnes.cz##div.advert-leader-board-container
 in-pocasi.cz##.banner
+indian-tv.cz,nerdfix.cz##div[style*="position: absolute"]
 info.cz##.gallery-advertisement
 info.cz###topSite
 itnetwork.cz##.reklama-background
@@ -442,6 +442,7 @@ tv.seznam.cz##div[class^="branding-ad"]
 tvfreak.cz##.sidebar-banner
 tvfreak.cz##.skyscrapper-right
 uschovna.cz##.branding-link
+vortex.cz##.banner-brand
 war4all.com###tblHorniLista
 warezforum.cz##.center
 warezforum.cz##object[id*="bfad"]
@@ -493,6 +494,7 @@ pcrevue.sk##.col_12_of_12.col > .row > .col_12_of_12.col > .widget
 pokec.azet.sk##.c_banner300x300
 pretaktovanie.zoznam.sk##.post.bg5
 sector.sk,kinema.sk##[id^="back"][onclick]
+sector.sk##iframe[data-src^="/default-ad"]
 sktorrent.eu##div[style*="position:absolute;"]
 topky.sk###top-offers-slider
 topky.sk##.ad
