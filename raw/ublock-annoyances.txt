@@ -619,7 +619,8 @@ mixmods.com.br##+js(aopr, abde)
 gecce.com.tr##+js(set, fakeadloaded, true)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3466
-unknowncheats.me##+js(acis, $, undefined)
+! https://github.com/NanoMeow/QuickReports/issues/2907
+||googlesyndication.com/pagead/js/adsbygoogle.js$xhr,redirect=noop.js,domain=unknowncheats.me
 ||unknowncheats.me/forum/images/*ban$image
 
 ! https://github.com/uBlockOrigin/uAssets/issues/3489
@@ -1800,6 +1801,7 @@ space.com##.amp-unresolved
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2204
 worldfreeware.com##+js(acis, $, contextmenu)
+worldfreeware.com##.penci-wrap-gprd-law
 
 ! https://github.com/uBlockOrigin/uAssets/commit/728d4cd991a886d7865f3d5373f42337c7326e2c#commitcomment-32665659
 descargasnsn.com##+js(aopr, plusonet)
@@ -2963,7 +2965,8 @@ feel-the-darkness.rocks,takuya1.com##+js(aopr, disableSelection)
 fontsfree.pro##+js(set, adBlock, false)
 
 ! https://github.com/realodix/AdBlockID/issues/158
-kawanfilm21.online##+js(aeld, contextmenu)
+kawanfilm21.*##+js(aeld, /^(?:contextmenu|selectstart)$/)
+kawanfilm21.*##+js(set, document.onselectstart, null)
 
 ! https://github.com/realodix/AdBlockID/issues/162
 terbit21.online##+js(aeld, /^(click|keydown)$/, preventDefault)
@@ -3120,10 +3123,6 @@ gembel9.xyz##+js(ra, oncontextmenu|ondragstart|onselectstart|onkeydown|onmousedo
 
 ! https://github.com/NanoMeow/QuickReports/issues/2818
 dramaqu.me##+js(acis, $, contextmenu)
-
-! https://github.com/NanoMeow/QuickReports/issues/2819
-kawanfilm21.org##+js(aeld, contextmenu)
-kawanfilm21.org##+js(set, document.onselectstart, null)
 
 ! https://github.com/NanoMeow/QuickReports/issues/2822
 fdmovie.com##+js(acis, document.oncontextmenu)
@@ -4001,7 +4000,10 @@ animeuniverse.it##+js(aopw, document.oncontextmenu)
 wstream.*##+js(aopr, onload)
 
 ! https://forums.lanik.us/viewtopic.php?p=154496#p154496
-||assets.allocine.fr/skin/css/allocine/secondary-styles.*.css$css,1p
+allocine.fr###overlay
+allocine.fr##html.open-modal .overlay:style(display: none !important)
+allocine.fr##html.open-modal body:style(overflow: auto !important)
+allocine.fr##html.open-modal body::after:style(display: none !important;)
 
 ! osxinfo.net floating-notice
 osxinfo.net##.notices
@@ -4039,8 +4041,8 @@ earth.com##+js(aopr, HTMLIFrameElement)
 xxxonlinegames.com##+js(nostif, offsetHeight)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/7343
-dood.watch##+js(aopw, check)
-dood.watch##+js(aeld, contextmenu)
+dood.*##+js(aopw, check)
+dood.*##+js(aeld, contextmenu)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/7344
 freerapidleechlist.blogspot.com##+js(acis, document.oncontextmenu)
@@ -4143,3 +4145,43 @@ manhwa-manga18.*##+js(acis, document.oncontextmenu)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/7425
 ciberduvidas.iscte-iul.pt##+js(aeld, copy)
+
+! right click images nationalgeographic .com
+nationalgeographic.com##+js(aeld, contextmenu)
+
+! https://github.com/NanoMeow/QuickReports/issues/3883
+mangatoon.*##+js(acis, document.oncontextmenu)
+mangatoon.*##*:style(-webkit-touch-callout: default !important; -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important;)
+
+! tistory.com anti-contextmenu/selection
+tistory.com##+js(aopw, document.oncontextmenu)
+
+! https://github.com/NanoMeow/QuickReports/issues/3894
+@@||receivesmsonline.net/ads.js$script,1p
+
+! https://www.reddit.com/r/uBlockOrigin/comments/gmtlci/adblocking_detected/
+||wetransfer.net/*/adblocker$3p,domain=wetransfer.com
+
+! https://github.com/AdguardTeam/AdguardFilters/issues/55781
+stevensducks.com###sidearm-adblock-modal
+
+! macdrop.net/dropgalaxy.* cookie-notice
+macdrop.net,dropgalaxy.*###gdpr-cookie-notice
+
+! https://github.com/AdguardTeam/AdguardFilters/issues/55778
+ziperto.com##+js(nosiif, visibility, 1000)
+
+! https://github.com/AdguardTeam/AdguardFilters/issues/55846
+trojmiasto.pl##+js(aopr, adBlockDetected)
+
+! https://github.com/NanoMeow/QuickReports/issues/3908
+digitaltrends.com##+js(aopr, HTMLIFrameElement)
+
+! https://github.com/NanoMeow/QuickReports/issues/3914
+diffchecker.com##+js(nostif, adStillHere)
+
+! anti adb annoyance
+sythe.org##:xpath(//*[contains(text(),"Adblock")])
+
+! https://github.com/NanoMeow/QuickReports/issues/3898
+start.me##.widget-page__banner
