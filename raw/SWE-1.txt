@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2020-05-25 12:04:03 CEST
+! Last modified: 2020-05-27 14:28:50 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -63,8 +63,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -487,6 +487,7 @@
 /media/partners$image,domain=hockeynews.se|tvmatchen.nu
 /mitti-ad-block-blocker$script
 /mitti-adform$script
+/mitti-news-letter-popup$script
 /mod.js$xmlhttprequest,domain=internetmedicin.se
 /mod_responsivebannerslider$domain=bjuvsnytt.se
 /modal.js$script,domain=alltforforaldrar.se|mammasidan.se|minbebis.com
@@ -584,7 +585,7 @@
 /plugins/igomoon-cookie-banner-master/*$script
 /plugins/ilmenite-cookie-consent/*
 /plugins/interscroller-ads-enko/*
-/plugins/interstitial-ads/*
+/plugins/interstitial-ads
 /plugins/its-cookies/*$script
 /plugins/jetpack/_inc/build/widgets/eu-cookie-law/*$script
 /plugins/jnews-social-share/*$script,domain=svegot.se
@@ -997,6 +998,7 @@ allakorsord.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.co
 allakorsord.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##.widget_black_studio_tinymce
 allakorsord.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##div[class^="app_gdpr"]
 allakorsord.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##section > .native-wrapper ~ article
+allas.se,elle.se,femina.se,hant.se,mabra.com,svenskdam.se###product-wrapper
 allas.se,elle.se,femina.se,hant.se,mabra.com,svenskdam.se##.in-text-ad
 allas.se,elle.se,femina.se,hant.se,mabra.com,svenskdam.se##.product-carousel
 allehanda.se,arbetarbladet.se,avestatidning.com,bandypuls.se,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se##.nps-client-dialogue-footer
@@ -1026,7 +1028,6 @@ alltommac.se,isabellalowengrip.se,itrace.se,vitalisfoto.se###preloader
 alltomstockholm.se,fotbollskanalen.se,mitti.se##.article-share
 alltomstockholm.se,mitti.se###cmp-container-id
 alltomstockholm.se,mitti.se##.article_desktop_ad_container
-alltomstockholm.se,mitti.se##.news-letter-notice.news-letter-notice-active
 alltomstockholm.se,mitti.se##.outsider-container
 alltomstockholm.se,mitti.se##.panorama_top
 alltomstockholm.se,mitti.se##.puff-container-native
@@ -2335,6 +2336,7 @@ yougov.se##.cookie-confirm
 ||destination.se^$third-party
 ||digital.di.se/api/sponsor/$xmlhttprequest
 ||digital.ntm.eu/adn$script
+||distansarbete.com^
 ||diu127fbe6pn6.cloudfront.net^*/ga-universal.html$subdocument
 ||dnitv.com^$media,domain=dplay.se
 ||doktor-se.onelink.me^$image
@@ -2385,6 +2387,7 @@ yougov.se##.cookie-confirm
 ||feeds.feedburner.com^$image
 ||files.cdn.spilcloud.com/pb/$script
 ||finn.no/injector.js$domain=resor.blocket.se
+||flirtmatch.se^
 ||folkbladet.nu^$csp=worker-src 'none'
 ||food-supply.se/bnrscr$subdocument
 ||foretagande.se/a/$xmlhttprequest
@@ -2460,7 +2463,6 @@ yougov.se##.cookie-confirm
 ||instaforex.com^$third-party
 ||instawidget.net^$domain=themoviefreak.se
 ||interactiveads.ai^$third-party
-||intercom.io^$third-party
 ||investerarbrevet.se^$third-party
 ||inxy.run^
 ||iubenda.com/cookie$script,subdocument
@@ -2474,6 +2476,7 @@ yougov.se##.cookie-confirm
 ||jobb.blocket.se/blocket_puff.html$subdocument
 ||jobb.blocket.se^*/tracker.js
 ||jobb.blocket.se^*/xtcore.min.js
+||jobba-hemifran.com^
 ||js.hs-banner.com^$script
 ||js.hs-scripts.com/*.js?integration$script,domain=borsvarlden.com
 ||js.hs-scripts.com/3322485.js$script
@@ -2548,6 +2551,7 @@ yougov.se##.cookie-confirm
 ||minfil.com^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' *.minfil.com;worker-src 'none'
 ||minute.ly^$domain=fotbollskanalen.se
 ||missaffiliate.com^$third-party
+||mogenromantik.com^
 ||molnvaxlar.se/banner/$third-party
 ||momondo.se/gtm/$subdocument
 ||momondo.se/ugtm/$subdocument
