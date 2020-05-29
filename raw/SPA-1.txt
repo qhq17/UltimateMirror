@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: 0eWMB0LHu3n4npYR4CnpiQ
+! Checksum: pybtp0Ovej9DILkvfaeUZA
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish and Portuguese languages.
-! Version: 2.0.6.28
-! TimeUpdated: 2020-05-21T11:32:19+03:00
+! Version: 2.0.6.32
+! TimeUpdated: 2020-05-27T14:32:06+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#spanish
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -1063,6 +1063,8 @@ jokerfansub.com#@##adsense
 ! https://github.com/AdguardTeam/AdguardFilters/issues/24801
 yahoo.com#?#ul[class^="Mb(0)"] > li.js-stream-content:has(> div > a[rel="nofollow noopener noreferrer"]+div:contains(Patrocinado))
 !
+correiobraziliense.com.br#?#div[data-tb-region-item]:has(> div.news-box > a > span > strong > em:contains(conteúdo patrocinado))
+correiobraziliense.com.br#?#div[class="row mb-25"] > div.col-md-12:has(> header.pb-15 > h3 > a[href="https://www.correiobraziliense.com.br/especiais/"])
 atresplayer.com#?##root main[class] > div[class] > section[class] + aside[class]:has(> div[class] > p[class]:contains(PUBLICIDAD))
 bcnoticias.com.br#?#.theiaStickySidebar > div.widget:has(> div.textwidget > div[align="center"] a[href])
 mundodonghua.com#?#.container > .col-md-3 > .row.mt-10:has(> .adsbygoogle)
@@ -1209,6 +1211,9 @@ maisgasolina.com#?##main [id$="Block"][-ext-has='.adsbygoogle']
 !--------------------------------------!
 !------- JS rules ---------------------!
 !--------------------------------------!
+! https://github.com/AdguardTeam/AdguardFilters/issues/55952
+seireshd.com##+js(abort-on-property-read, scriptwz_url)
+seireshd.com##+js(abort-current-inline-script, host, window.btoa)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/55155
 cinetux.to##+js(abort-on-property-read, smrtSB)
 cinetux.to##+js(abort-on-property-read, asgPopScript)
@@ -1452,6 +1457,11 @@ http://adw.
 !-------------------- Specific rules --------------------!
 !--------------------------------------------------------!
 !
+20minutos.es##.OUTBRAIN
+20minutos.es##.axds-lane
+minutouno.com##.banner[data-banner-size]
+correiobraziliense.com.br##small[class="hidden-print txt-no-serif"]
+correiobraziliense.com.br##.ads__with-bg
 gazetadopovo.com.br##.c-ads
 ||animeshouse.biz/asset/sostress.js
 ||bludv.uk/random.js
