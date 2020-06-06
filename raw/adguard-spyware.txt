@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: 2+2PZ0qfC56B6MF4Hq/F4w
+! Checksum: e02hbeVMfRHJO0QeqY3x7Q
 ! Title: AdGuard Tracking Protection filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.14.34
-! TimeUpdated: 2020-05-29T19:31:30+03:00
+! Version: 2.0.14.53
+! TimeUpdated: 2020-06-06T20:03:34+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#privacy
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -127,6 +127,7 @@ donnerwetter.de#?#.col-xs-12 > div.block.prepend-top[-ext-has='> div.blocktitle-
 hdreactor.club,hdreactor.su,hdreactor.tv,hdreactor.net#?#.sidebar > div.menu-wrap > div.menu-head:contains(Счетчики)
 hdreactor.club,hdreactor.su,hdreactor.tv,hdreactor.net#?#.sidebar > div.menu-wrap > div.menu-head:contains(Счетчики) + div.menu-head1
 !
+pryamoj-efir.ru#?#.layout-post-right > h1.playmaker-list:contains(Статистика)
 elmundo.es#?#body > main[role="main"] > div.ue-l-article:has(> div.ue-l-article__inner > div.ue-l-article__main-column > aside > div[id^="taboola"])
 uniongang.org#?#td[align="center"][height="27"]:contains(Счётчики)
 novate.ru#?##right > div.bordered:has(> script:contains(relap))
@@ -155,6 +156,11 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 !
 ! ||ensighten.com^$third-party - not a tracker
 !
+||stat.sm-it.space^
+||appcast.io^$third-party
+||propeller-tracking.com^$third-party
+||bigmining.com^$third-party
+||im-apps.net^$third-party
 ||pixel.s3xified.com^
 ||collect.feefo.com^$third-party
 ||js.ptengine.jp^$third-party
@@ -733,7 +739,6 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ||agkn.com^$third-party
 ||aidata.io^$third-party
 ||aimediagroup.com^$third-party
-||airbrake.io^$third-party
 ||airpr.com^$third-party
 ||akanoo.com^$third-party
 ||akavita.com^$third-party
@@ -1422,7 +1427,8 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ||flashadengine.com^$third-party
 ||flashgamestats.com^$third-party
 ||flcounter.com^$third-party
-||flix360.com^$third-party
+||t.flix360.com^
+||rt.flix360.com^
 ||flixcar.com^$third-party
 ||flixfacts.co.uk^$third-party
 ||flixfacts.com^$third-party
@@ -2462,7 +2468,6 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ||reson8.com^$third-party
 ||responsetap.com^$third-party
 ||retags.us^$third-party
-||retailrocket.ru^$third-party
 ||retargetly.com^$third-party
 ||reussissonsensemble.fr^$third-party
 ||revdn.net^$third-party
@@ -3256,6 +3261,7 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ! Admiral domains
 ! These domains are used for tracking purposes according to the data that is being sent there.
 ! More info: https://getadmiral.com/products/measure
+||hocgeese.com^$third-party
 ||dapperdiscussion.com^$third-party
 ||superficialsquare.com^$third-party
 ||energeticladybug.com^$third-party
@@ -3479,6 +3485,14 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ||x3-policy-maker.goguardian.com^
 ||x3-predictor.goguardian.com^
 !
+! Baidu
+||als.baidu.com^
+||afd.baidu.com^
+||wkctj.baidu.com^
+||jpaasne.e.shifen.com^
+||caclick.baidu.com^
+||wkclick.baidu.com^
+!
 ! popin.cc tracking
 ||rlog.popin.cc^
 ||log.popin.cc^
@@ -3613,7 +3627,7 @@ nethunt.com/api/v1/track/email/$image
 /mpss/o/*$image
 ! end: Mail Tracking
 !
-!+ NOT_PLATFORM (windows, mac, android)
+!+ NOT_PLATFORM(windows, mac, android)
 ||artfut.com^$empty,important
 !
 ! Section contains the list of tracking servers, which are hosted on useful sites as subdomains
@@ -4497,7 +4511,6 @@ nethunt.com/api/v1/track/email/$image
 ||fairfaxmedia.sharedcount.com^$third-party
 ||farmer.wego.com^$third-party
 ||fc.webmasterpro.de^$third-party
-||frog.wix.com^$third-party
 ||geoservice.curse.com^
 ||geoip.herewetest.com^
 ||geolocation.performgroup.com^$third-party
@@ -5152,8 +5165,16 @@ charlestownwyllie.oaklawnnonantum.com^
 /eulerian.js
 /simpleEulerian.
 !
+/alog.min.js
+/alog.mobile.min.js
+.cn/b.gif?
+.com/b.gif?
+.jp/b.gif?
+/v.gif?t=
+.com/v.gif?
 /__Analytics-Start?url=
 /akam/*/pixel_
+/?mailoptin-ajax=track_optin_impression
 /collector.php?
 /matomo.php?action_name=
 /matomo.js$domain=~github.com
@@ -5429,6 +5450,11 @@ _tracking.php?b=
 ||nd.demdex.net/event?d_mid=$empty,important,domain=9now.com.au
 ||adc.nine.com.au/?token=$empty,important,domain=9now.com.au
 !
+||static.cloudflareinsights.com/beacon.min.js
+||frog.wix.com/hls2?
+||frog.wix.com/p?
+||forum.turkmmo.com/*/track-view
+||eiga.k-img.com/javascripts/td.js?1578981009
 ||gnavi.co.jp/analysis/
 ||api.smg.com/Etrack/
 ||klarnaservices.com/?a=$image
@@ -7175,6 +7201,8 @@ link.gmapp*.net$image
 !+ NOT_PLATFORM(ios, ext_safari, ext_android_cb)
 ||adj.st^
 !
+||batchlogging*-eu.truecaller.com^
+||batchlogging*-noneu.truecaller.com^
 ||logsink.zedge.net^
 ||consent-manager-events.ogury.io^
 ||api.share.mob.com^
@@ -7581,6 +7609,13 @@ link.gmapp*.net$image
 !-------------- Whitelist ------------------------------------------------------!
 !-------------------------------------------------------------------------------!
 !
+!
+! https://github.com/AdguardTeam/AdguardFilters/issues/56863
+@@||googletagmanager.com/gtm.js$domain=cdek.ru
+! https://github.com/AdguardTeam/AdguardFilters/issues/56685
+@@||heatmap.it^$domain=heatmap.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/56471
+@@||googletagmanager.com/gtm.js$domain=radiorur.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/56261
 ||googletagmanager.com/gtm.js$script,redirect=googletagmanager_gtm.js,domain=chip.com.tr
 ! https://github.com/AdguardTeam/AdguardFilters/issues/56240
@@ -7958,8 +7993,6 @@ link.gmapp*.net$image
 ! https://github.com/AdguardTeam/AdguardFilters/issues/41821
 @@||googletagmanager.com/gtm.js$domain=domains.google
 ! https://github.com/AdguardTeam/AdguardFilters/issues/41517
-! fix carousel on the main page
-@@||cdn.retailrocket.ru/content/javascript/tracking.js$domain=mirkorma.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/41099
 @@||google-analytics.com/analytics.js$domain=1000.menu
 ! https://github.com/AdguardTeam/AdguardFilters/issues/41039
@@ -8024,8 +8057,6 @@ link.gmapp*.net$image
 ! https://github.com/AdguardTeam/AdguardFilters/issues/37299
 @@||googletagmanager.com/gtm.js$domain=techgenix.com
 @@||cdn.petametrics.com^$domain=techgenix.com
-! basketshop.ru -- fix related products
-@@||cdn.retailrocket.ru/content/javascript/tracking.js$domain=basketshop.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/36488
 @@||google-analytics.com/analytics.js$domain=dermokozmetik.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/36923
@@ -8284,9 +8315,6 @@ link.gmapp*.net$image
 @@||googletagmanager.com/gtm.js$domain=tgifridays.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/22874
 @@||metric.gstatic.com^$domain=ipv6test.google.com
-! https://github.com/AdguardTeam/AdguardBrowserExtension/issues/1415
-! https://github.com/AdguardTeam/AdguardFilters/issues/22484
-@@||frog.wix.com/da-client?*&requestid=$image,domain=deviantart.com|api-da.wixmp.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/22782
 @@||d1z2jf7jlzjs58.cloudfront.net/p.js$domain=nfl.com
 @@||static.parsely.com/p.js$domain=nfl.com
@@ -8979,8 +9007,6 @@ epicwow.com#@#img[width="88"][height="31"]
 @@||google-analytics.com/plugins/ua/ec.js$domain=mediamarkt.nl
 ! https://github.com/AdguardTeam/AdguardFilters/issues/2484
 @@||partner.googleadservices.com/gpt/pubads_impl_$domain=ukr.net
-! https://forum.adguard.com/index.php?threads/11632/
-@@||cdn.retailrocket.ru^$domain=azerty.nl
 ! Fixing endless loding, caused by blocking of optimizely.com
 @@||cdn.optimizely.com/js/*.js$domain=ns.nl|compassion.com|creditsesame.com|forbes.com|freeshipping.com|heroku.com|hotukdeals.com|imageshack.com|lifelock.com|malwarebytes.org|policymic.com|ricardo.ch|spotify.com|techrepublic.com|zdnet.com|olx.ua|casper.com|dubizzle.com|pullandbear.com
 ! http://forum.adguard.com/showthread.php?5974
