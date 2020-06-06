@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: +WP1IhW3UXMUlv87SD2I0w
+! Checksum: poIWdbzmLqagQm9EvJjqqg
 ! Title: AdGuard Japanese filter
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.3.41
-! TimeUpdated: 2020-05-29T21:31:55+03:00
+! Version: 2.0.3.52
+! TimeUpdated: 2020-06-05T21:32:13+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#japanese
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -132,6 +132,9 @@
 ! Eimg.jp
 ||adingo.jp.eimg.jp^
 !
+||feed.mikle.com^$third-party
+||js.blozoo.info^$third-party
+||xxxxxxxx.jp^$third-party
 ||act1-1.info^$third-party
 ||ads-connect.com^$third-party
 ||blogroll.livedoor.net^
@@ -381,6 +384,9 @@
 !
 ! These rules are against all kinds of ad blocking reinjection/circumvention scripts
 !
+! '.fc-ab-root'
+gendai.ismedia.jp,hamakei.com#$#.fc-ab-root { display: none !important; }
+gendai.ismedia.jp,hamakei.com#$#body { overflow: visible !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/55649
 ||iza.ne.jp/common/js/others/brave/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/55273
@@ -405,9 +411,6 @@ ad-contents.jp#$#.mid-rectangle { display: none !important; }
 fe-siken.com,sc-siken.com##+js(no-setTimeout-if, /(ad|_0x1ca67c)/)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/50977
 server-setting.info#@#.adsbygoogle
-! https://github.com/AdguardTeam/AdguardFilters/issues/49015
-gendai.ismedia.jp#$#.fc-ab-root { display: none !important; }
-gendai.ismedia.jp#$#body { overflow: visible !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/49430
 applion.jp#@#.ads-ad
 applion.jp#$##adcheck.ads-ad { display: block!important; }
@@ -584,6 +587,7 @@ mindhack2ch.com#?#.article-body > .ad:has(> .adsbygoogle)
 mindhack2ch.com#?#.article-body > .rss:has(> script)
 mindhack2ch.com#?#.article-post-bottom > .rss-article:has(> .rss-article-item)
 !
+hosyusokuhou.jp#?##wrap .entrybox:contains(/(?:【スポンサー】|【PR】)/)
 2ch.vet#?#.table > tbody > tr.active:has(> td > center > script[src^="//j.microad.net/"])
 ghdnewzealandshopc.com#?##news-bottom > div.widget:has(> h3 > div:contains(/初の出会い系はここでした|出会い系サイトのリアルな部分|某県知事もここで女性と知り合いました/))
 matomame.jp#?##col_content > div.footer_content:has(> div.ads)
@@ -593,6 +597,7 @@ mhometheater.com#?##secondary > aside.widget_execphp:has(> h3:contains(/^PR$/))
 nishinippon.co.jp#?#.l-section > div.l-section-item:has(> div.c-heading-h2 > div > h2 > a[href="/content/editorialad/"])
 famitsu.com#?#div[class="col-12 col-lg-9 col-xl-9"] > div.row  > div[class^="col-"]:has(> div.banner-ad-mark)
 punisoku.blogo.jp#?#.plugin-memo:has(a[href*="www.dlsite"])
+sankeibiz.jp#?##wrapper > main > section.module_recommend:has(> div.module_content > div.OUTBRAIN)
 limo.media#?#.right-column > div[class^="right-column-block"]:has(> h3:contains(PR))
 limo.media#?#.right-column > div.right-column-block:has(> div[id^="outbrain_widget_"])
 limo.media#?#.article-body > h4:contains(参考記事)
@@ -807,6 +812,46 @@ _ds_adtag_
 !
 ! /banner/banner_ - if it is necessary, make this rule domain specific
 !
+srad.jp###gpt-sd_index_rec
+srad.jp##.srad-contentad-banner
+hamakei.com###topBnr
+hamakei.com###recBanner
+hamakei.com##.box.pr
+hamakei.com##.partner
+||matometanews.com/rss.html
+matometanews.com##iframe[src="http://matometanews.com/rss.html"]
+matometanews.com##.related-articles
+matometanews.com##a[href^="http://www.amazon.co.jp/"][target="_blank"]
+||images-fe.ssl-images-amazon.com^$domain=matometanews.com
+gadgetlife2ch.blomaga.jp###tag_box
+||cnobi.jp/*/recommend/
+gadgetlife2ch.blomaga.jp###over_ray_id
+gadgetlife2ch.blomaga.jp##.kotei-headline
+gadgetlife2ch.blomaga.jp##.kotei-link
+akb48matomemory.com##.rss
+akb48matomemory.com##.rss2
+akb48matomemory.com##.acr-popular
+hosyusokuhou.jp###ovrss
+||hosyusokuhou.jp/rss/
+hosyusokuhou.jp###top
+hayamimi-hobby.com##.banner-id
+||blogmaterial.nicoblomaga.jp/material/279/js/rss/alfa_article_bottom2.js
+||blogmaterial.nicoblomaga.jp/material/279/js/rss/alfa_article_bottom4.js
+||blogmaterial.nicoblomaga.jp/material/279/js/warota.js
+||blogmaterial.nicoblomaga.jp/material/279/js/rss/sp0*.js
+||blog-imgs-140.fc2.com/y/a/r/yarakan/games1_202006010701086f3.jpg
+yaraon-blog.com##a[href^="https://ad.dmm.com/ad/"]
+yaraon-blog.com##div[style="width:160px; height:600px;"]
+yaraon-blog.com###mytextwidget-3
+yaraon-blog.com###mytextwidget-5
+tocana.jp###getRss
+||kt.wowkorea.jp/abematv/abematv.js
+sp-mobile-blog.com###text-149
+sp-mobile-blog.com###text-136
+sp-mobile-blog.com###text-147
+sp-mobile-blog.com###text-156
+||gamer.ne.jp/img/banner/bannerS_figgy.jpg
+gamer.ne.jp##.adBillboard_pc
 ||blog.seesaa.jp/js/insert-ad.min.js
 gossip1.net##.rss_wrapper
 newsoku.blog##div[style^="width:50%;height:500px;"]
@@ -854,6 +899,7 @@ mainichi.jp##.ad-infeed
 mainichi.jp##.title-ad-sp
 mainichi.jp##.ad-bnr-w300h250
 gyao.yahoo.co.jp##.ad-yads
+sankeibiz.jp##.module_bizplus
 mantan-web.jp##div[data-goout][data-dummyad]
 mantan-web.jp##div[style="width:300px;height:600px;"]
 mantan-web.jp##div[style^="width:728px;height:90px;"]
