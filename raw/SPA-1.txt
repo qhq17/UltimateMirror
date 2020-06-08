@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: pybtp0Ovej9DILkvfaeUZA
+! Checksum: gYAiPomNGjADRqwfixN5kQ
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish and Portuguese languages.
-! Version: 2.0.6.32
-! TimeUpdated: 2020-05-27T14:32:06+03:00
+! Version: 2.0.6.40
+! TimeUpdated: 2020-06-05T13:32:07+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#spanish
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -72,6 +72,7 @@
 !
 ! https://forum.adguard.com/index.php?threads/ivoox-com-podcasts-issues.29530/
 ! ||addevweb.com^$third-party
+||v2b.nucleo.online^
 ||loboclick.com^$third-party
 ||zendplace.pro^$third-party
 ||bserver.gp-guia.net^
@@ -248,6 +249,12 @@
 !
 ! AdRegain
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/56791
+@@||tags.premiumads.com.br/ads/advertisement.js$domain=bandab.com.br
+bandab.com.br##+js(set-constant, pp_show_popupmessage, noopFunc)
+! https://github.com/AdguardTeam/AdguardFilters/issues/56392
+@@||comandotorrents.org/wp-content/uploads/*/adblock.js
+comandotorrents.org##+js(set-constant, adblock, true)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/55148
 @@||aniplay.site/assets/ads.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/54733
@@ -1211,6 +1218,8 @@ maisgasolina.com#?##main [id$="Block"][-ext-has='.adsbygoogle']
 !--------------------------------------!
 !------- JS rules ---------------------!
 !--------------------------------------!
+! https://github.com/AdguardTeam/AdguardFilters/issues/56441
+movieknowing.com##+js(window.open-defuser, 1, /^https?:\/\/movieknowing\.com\/$/, trueFunc)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/55952
 seireshd.com##+js(abort-on-property-read, scriptwz_url)
 seireshd.com##+js(abort-current-inline-script, host, window.btoa)
@@ -1457,6 +1466,15 @@ http://adw.
 !-------------------- Specific rules --------------------!
 !--------------------------------------------------------!
 !
+saberprogramas.com##.widget_et_ads
+||catve.com/portal/img/parceiros/
+||catve.akamaized.net/portal/img/parceiros/
+||catve.com/*/assets/img/parceiros/
+catve.com##.label_publicidade
+||thepiratefilmes.ml/random.js
+||thepiratefilmes.ml/sandbox.js
+paisdelosjuegos.es##div[class*="advertisement-"]
+tribunapr.com.br##.ads
 20minutos.es##.OUTBRAIN
 20minutos.es##.axds-lane
 minutouno.com##.banner[data-banner-size]
@@ -3296,6 +3314,8 @@ urlcloud.us##.banner
 !
 ! White list. Fixing filtration errors (false-positive)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/56398
+@@||poki.com/assets/client.*-exp-prebid.*.js$domain=paisdelosjuegos.es
 ! https://github.com/AdguardTeam/AdguardFilters/issues/51457
 @@||movilzona.es/app/themes/mykonos-child/assets/js/stickyAds.min.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/50188
