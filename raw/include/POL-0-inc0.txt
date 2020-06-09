@@ -6,16 +6,16 @@
 ! Wsparcie:
 !   Patronite ==> https://patronite.pl/polskiefiltry
 !   PayPal ==> https://www.paypal.com/pools/c/87zNJ8OJ3I
-! Last modified: 27 April 2020
+! Last modified: 7 June 2020
 ! Expires: 1 day
-! Version: 2020042701
+! Version: 2020060701
 ! Support:
 !   Email >> errorsfilters@certyficate.it
 !   Github >> https://github.com/MajkiIT/polish-ads-filter/issues
 ! License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ! Copyright © 2020 Certyficate IT
 ! Najnowsza wersja zawsze na: https://www.certyficate.it/adblock
-! v.2020042701 aktualizacja: pon, 27 kwietnia 2020, 17:50:00
+! v.2020060701 aktualizacja: nie, 7 czerwca 2020, 18:50:00
 !
 !
 !--------------------------Rules only to uBlock-------------!
@@ -172,7 +172,7 @@ abczdrowie.pl,allani.pl,autokrata.pl,autokult.pl,biztok.pl,dzieci.pl,easygo.pl,e
 !#if cap_user_stylesheet
 abczdrowie.pl,allani.pl,autokrata.pl,autokult.pl,biztok.pl,dzieci.pl,easygo.pl,echirurgia.pl,fotoblogia.pl,gadzetomania.pl,hotmoney.pl,interaktywnie.com,inwestycje.pl,jejswiat.pl,kafeteria.pl,kafeteria.tv,kantory.pl,kazimierzdolny.pl,komediowo.pl,komorkomania.pl,mazury.com,mojeauto.pl,mojeosiedle.pl,money.pl,nasygnale.pl,niewiarygodne.pl,nocowanie.pl,odkrywcy.pl,parenting.pl,pudelek.pl,pudelek.tv,pytamy.pl,sfora.pl,snobka.pl,tlen.pl,totalmoney.pl,wakacje.pl,wawalove.pl,wp.pl,~www.wp.pl,wp.tv##html, html > body:style(overflow: auto !important;)
 abczdrowie.pl,allani.pl,autokrata.pl,autokult.pl,biztok.pl,dzieci.pl,easygo.pl,echirurgia.pl,fotoblogia.pl,gadzetomania.pl,hotmoney.pl,interaktywnie.com,inwestycje.pl,jejswiat.pl,kafeteria.pl,kafeteria.tv,kantory.pl,kazimierzdolny.pl,komediowo.pl,komorkomania.pl,mazury.com,mojeauto.pl,mojeosiedle.pl,money.pl,nasygnale.pl,niewiarygodne.pl,nocowanie.pl,o2.pl,odkrywcy.pl,open.fm,parenting.pl,pudelek.pl,pudelek.tv,pytamy.pl,sfora.pl,snobka.pl,tlen.pl,totalmoney.pl,wakacje.pl,wawalove.pl,wp.pl,wp.tv##body [class]:style(filter: none !important;)
-wp.pl,poczta.o2.pl,poczta.wp.pl,abczdrowie.pl,autokult.pl,dobreprogramy.pl,echirurgia.pl,fotoblogia.pl,gadzetomania.pl,kafeteria.pl,komorkomania.pl,money.pl,open.fm,parenting.pl,snobka.pl##+js(set, Object.prototype.advViewability, undefined)
+!wp.pl,poczta.o2.pl,poczta.wp.pl,abczdrowie.pl,autokult.pl,dobreprogramy.pl,echirurgia.pl,fotoblogia.pl,gadzetomania.pl,kafeteria.pl,komorkomania.pl,money.pl,open.fm,parenting.pl,snobka.pl##+js(set, Object.prototype.advViewability, undefined)
 !#endif
 www.wp.pl##html, html > body:style(overflow: visible!important;)
 www.wp.pl##+js(set-constant.js, WP.gaf.loadBunch, noopFunc)
@@ -208,6 +208,7 @@ bezuzyteczna.pl##section:has(script + div[id^="crt"][style])
 naekranie.pl##+js(abort-current-inline-script.js, $, /loadData|halfpage|welcome|screening|placement/)
 naekranie.pl##+js(setInterval-defuser.js, function neTick(){neTickCounter++;if(neTickCounter<=neTickCountLimit){neTickAjax=$.ajax({type:"POST",url:adminAjaxUrl+"?action=ne_tick",dataType:"json",success:function(data){neTickResponseAction(data)}})}}, 10000)
 naekranie.pl##+js(setTimeout-defuser.js, function check(){console.log("checked");if($(".adform").children().length>3){console.log("its more");$(".adform").children(".adform-banner").show();clearTimeout(check)}}, 1000)
+naekranie.pl##+js(abort-current-inline-script, $, /loadData|halfpage|welcome|screening|placement|adtitle/)
 !
 ! bankier.pl
 bankier.pl##+js(abort-on-property-write.js, detectAB)
@@ -339,7 +340,7 @@ lowcygier.pl##body:style(background-image: none !important;)
 www.interia.pl##+js(remove-attr.js, scrolling, iframe#sg-iframe[scrolling="no"])
 !
 ! elektroda.pl
-www.elektroda.pl##+js(set, loadPopup, noopFunc)
+www.elektroda.pl##+js(set, loadElement, noopFunc)
 !
 ! style()
 2conv.com,flvto.biz,flv2mp3.by##.banner, div[class$="-ads"]:style(visibility: hidden !important; display: block !important; height: 0 !important;)
@@ -481,3 +482,4 @@ wylecz.to##iframe[src^="/zzz_click/"]:xpath(../..[div][@style])
 !
 ! otube.pl
 otube.pl##+js(abort-current-inline-script.js, Math.random)
+
