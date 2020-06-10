@@ -3,7 +3,7 @@
 ! License: https://github.com/yous/YousList#license
 ! Title: YousList
 ! Expires: 4 days
-! Version: 20200528
+! Version: 20200610
 
 ! General element hiding rules
 ##amp-ad
@@ -156,6 +156,7 @@
 ##iframe[src*="//adstract.adk2x.com/imp"]
 ##iframe[src*="//adsvc2.wisenut.co.kr/"]
 ##iframe[src*="//adtg.widerplanet.com/"]
+##iframe[src*="//adv.dailyissue.co.kr/show/media/"][src$=".html"]
 ##iframe[src*="//adv.imadrep.co.kr/"]
 ##iframe[src*="//adv.khan.co.kr/"]
 ##iframe[src*="//adw.heraldm.com/"]
@@ -266,6 +267,7 @@
 ##iframe[src*="//redir.adap.tv/redir/mobile/mobile-ad-source.html"]
 ##iframe[src*="//res.heraldm.com/iframe/"]
 ##iframe[src*="//rsense-ad.realclick.co.kr/rsense/view_ad_adcrm.html"]
+##iframe[src*="//s.dolphincdn.xyz/adx/"][src*=".html"]
 ##iframe[src*="//s.yimg.jp/images/listing/tool/yads/yads-iframe.html"]
 ##iframe[src*="//sc2.appldp.com/publisher-show-ads.php"]
 ##iframe[src*="//search.supplyframe.com/partner/"]
@@ -512,6 +514,7 @@
 ||ad1.sportschosun.com^
 ||ad1.sportsseoul.com^
 ||ad2.thisisgame.com^
+||ad4989.dailian.co.kr/cgi-bin/PelicanC.dll^$domain=dailian.co.kr
 ||ad4989.kr/winnerpower/
 ||ad79.z00.kr/catchback/*.js^
 ||ad8.adfarm1.adition.com/s^
@@ -656,6 +659,8 @@
 ||adtag.cc/_tags/jstags.js^
 ||adtg.widerplanet.com^
 ||adtradradservices.com/adassets/*/adtradr-ad-tag-*.js^
+||adv.dailyissue.co.kr/libs/ADcommon_ssl.js^
+||adv.dailyissue.co.kr/show/media/*/*.html^
 ||adv.imadrep.co.kr^
 ||adv.khan.co.kr^
 ||adv.mediaharbor.co.kr/nad/
@@ -953,11 +958,13 @@
 ||d1jikhx1ssl81z.cloudfront.net^
 ||d1swklt9res5jr.cloudfront.net/static/packed/mezzoADv*.js^
 ||d1swklt9res5jr.cloudfront.net/static/packed/tvple.ad.js^
+||d22sfab2t5o9bq.cloudfront.net^
 ||d269y12mnftu9c.cloudfront.net^
 ||d2v02itv0y9u9t.cloudfront.net/dist/*/v6s.js
 ||d3oep4gb91kpuv.cloudfront.net^
 ||d3pkae9owd2lcf.cloudfront.net/pb92c.gz.js^
 ||d3u5zn5k9864p0.cloudfront.net/br^
+||d3v3bqdndm4erx.cloudfront.net^
 ||da-ads.com/da_safeframe.html^
 ||da-ads.com/google.html^
 ||dailian.co.kr/ad_article_center.php^$domain=dailian.co.kr
@@ -1687,6 +1694,8 @@
 ||rtb.adgrx.com/impressions/
 ||s*.algovid.com/player/gpv^
 ||s.atemda.com/Admeta.js^
+||s.dolphincdn.xyz/adx/*/*.html^
+||s.dolphincdn.xyz/script.php^
 ||s.mixadvert.com/show_json/
 ||s.ntv.io/serve/load.js^
 ||s.pubmine.com/adj/
@@ -2101,6 +2110,7 @@ animeid.tv##iframe[src^="//static.animeid.tv/ads/"]
 animoe.me##div#hd_pop
 answers.com##div.ad_unit
 answers.com##div.adhesion_dom
+api.dable.io##div.item-promotion
 api.dable.io##div.item-sp
 api.dable.io##td.item-sp
 appleblog.co.kr##ins.adsbygoogle
@@ -2475,6 +2485,7 @@ class.orbi.kr##div.oxad:not(.global_top)
 class.orbi.kr##li.listAd
 clien.net##div#hongboInfoList
 clien.net##div#naverAd
+clien.net##div.ad_fix
 clien.net##div.footer_ad
 clien.net##div.list_bottom_ad
 clien.net##div.list_center_ad
@@ -2485,6 +2496,7 @@ clien.net##div.naver_ad
 clien.net##div.side_ad
 clien.net##div.view_bottom_ad
 clien.net##div.view_center_ad
+clien.net##div.view_top_ad
 cm.asiae.co.kr##div.adsv_banner
 cm.asiae.co.kr##div.con_ad_module
 cm.asiae.co.kr##div.floating_ban3
@@ -2536,9 +2548,13 @@ cultofmac.com##div.ad-region
 cultofmac.com##div.ezo_ad
 cultofmac.com##section.ad-region
 cyberciti.biz##aside#secondary>section#custom_html-4
+cyberciti.biz##aside#secondary>section#custom_html-5
+cyberciti.biz##aside#secondary>section#custom_html-6
 cyberciti.biz##aside#secondary>section#text-384338394
 cyberciti.biz##aside#secondary>section#text-384338398
+cyberciti.biz##div.entry-content>center>div[style="border: 1px solid #e9ecef; border-radius: 3px; padding: 3px; color: #999999;"]
 cyberciti.biz##div.entry-content>center>div[style="width: 100%; background-color: #FAFAFA; border: 1px solid #f3f3f3; color: #CCC; font-size: 10px; clear: both; display: inline-block; text-align: center; "]
+cyberciti.biz##div.entry-content>div[style="border: 1px solid #e9ecef; border-radius: 3px; padding: 3px; color: #999999;"]
 cyberciti.biz##div.entry-content>p[style="background-color: #FAFAFA; border: 1px solid #f3f3f3; color: #CCC; font-size: 10px; clear: both; width: 100%; display: inline-block; text-align: center;"]
 daboja19.com##div.basic-banner
 daejonilbo.com##div#banner_main_right180
@@ -2558,9 +2574,9 @@ dailian.co.kr##div.ban_com_top_lt
 dailian.co.kr##div.ban_com_top_rt
 dailian.co.kr##div.ban_mtre
 dailian.co.kr##div.ban_newsstand
-dailian.co.kr##div.logo
 dailian.co.kr##div[class^="banner"]
 dailian.co.kr##iframe[name="adv"]
+dailian.co.kr##iframe[src*="//ad4989.dailian.co.kr/cgi-bin/PelicanC.dll"]
 dailian.co.kr##iframe[src^="/ad_article_center.php"]
 daily.hankooki.com##div#MobileLink
 daily.hankooki.com##div#adIssueTrend
@@ -3857,7 +3873,9 @@ m.daum.net##div.float_acm_banner
 m.dcinside.com##div#adbay_floatingid
 m.dcinside.com##div.adv-group
 m.dcinside.com##div.adv-groupin
+m.dcinside.com##div.adv-groupno
 m.dcinside.com##div.adv-grouptop
+m.dcinside.com##div.detail-top-lnk>a[href^="http://addc.dcinside.com/NetInsight/click/dcinside/adver/adver@text"]
 m.dcinside.com##h3.power-tit
 m.dcinside.com##ul.all-comment-lst>li.comment:not([id])
 m.dcinside.com##ul.power-lst
@@ -4099,6 +4117,8 @@ m.kormedi.com##div.article_Wrapper>div[style="margin-top:5px;border-top:2px soli
 m.kormedi.com##div.article_Wrapper>div[style="padding-left:10px;margin-top:10px;"]
 m.kormedi.com##div.article_Wrapper>div[style="width:100%;height:115px;position:relative;top:0px;margin-top:10px;"]
 m.kormedi.com##iframe[src^="http://img.kormedi.com/healthgift/ad/ad"][src$=".html"]
+m.kr.ajunews.com##body>div[style="position:fixed; bottom:0; width:100%; z-index:10000; background-color:#333; border-top:1px solid #ddd; height:100px;"]
+m.kr.ajunews.com##div#wrap>div[style="text-align:center;padding:10px 0 7px 0;"]
 m.kr.ajunews.com##div.main_banner2
 m.kr.ajunews.com##div.view_section>div[style="margin:0 auto;text-align:center;margin:20px 0 15px 0"]
 m.kr.ajunews.com##div.vs_ad
@@ -4503,6 +4523,9 @@ m.ytn.co.kr##div.banner_ad
 m.ytn.co.kr##div.newsview_ad
 m.ytn.co.kr##div.newsview_ad_bnr
 m.ytn.co.kr##div.photo_bottom_ad
+m.ytn.co.kr##div.text_ad_type_1
+m.ytn.co.kr##div.text_ad_type_2
+m.ytn.co.kr##li.ad_area
 m.zbn.donga.com##iframe[src^="/banner/ad_cauly_hotnews.asp"]
 m.zdnet.co.kr##body>div[style="padding:50px 0px 0px 0px;"]
 m.zdnet.co.kr##div#ad_div_bottom
@@ -5520,6 +5543,7 @@ smallbusiness.chron.com##div.leaderboard
 snopes.com##div.snopes-partner-unit
 socialcompare.com##div#scAComBox
 socialcompare.com##div#scAComT
+soranews24.com##div.ad
 sourceforge.net##div.sterling
 sourceforge.net##section.sterling
 speconomy.com##div#article-control>table>tbody>tr:nth-of-type(2)>td:first-of-type>center[style="padding:30px 0; clear:both;"]
@@ -5912,6 +5936,7 @@ tr.investing.com##div.midHeader
 travel.chosun.com##iframe[src^="http://travel.chosun.com/common/r_banner/index.html"]
 trustedreviews.com##div.advert
 trustedreviews.com##div.header-advert-wrapper
+trustpost.kr##div#container>div[style="margin:0 auto;padding:0 auto;max-width:800px;"]
 ttocorps.com##a[href^="../page/ad.php"]
 ttocorps.com##a[href^="./page/ad.php"]
 ttocorps.com##a[href^="/page/ad.php"]
@@ -5988,6 +6013,15 @@ unnya.com##div#bottom_floating_100x100
 unnya.com##div#bottom_floating_320x50
 unnya.com##div.ad
 updownnews.co.kr##div[id^="layerPopup_"]
+upinews.kr##div#HLeft
+upinews.kr##div#HRight
+upinews.kr##div#main div.adlink
+upinews.kr##div#subCtsRight div.adlink
+upinews.kr##div.conts1Right div.adlink
+upinews.kr##div.scroll_layer_left:not(.covid_box)
+upinews.kr##div.scroll_layer_r
+upinews.kr##div[data-widget_id="RoOwejom"]
+upinews.kr##div[id^="banner"]:not(#banner1)
 urayum.tistory.com##div#tingad
 urayum.tistory.com##div[data-widget_id="goP1kW7Q"]
 urbandictionary.com##div.ad-panel
@@ -6174,9 +6208,11 @@ wordpress.com##p.inline-ad-slot
 wowhead.com##div.banner-ad
 wowtv.co.kr##div#divTopBanner
 wowtv.co.kr##div.adv-area
+www-clien-net.cdn.ampproject.org##div.ad_fix
 www-clien-net.cdn.ampproject.org##div.list_bottom_ad
 www-clien-net.cdn.ampproject.org##div.list_center_ad
 www-clien-net.cdn.ampproject.org##div.list_top_ad
+www-clien-net.cdn.ampproject.org##div.view_top_ad
 www-hankyung-com.cdn.ampproject.org##amp-embed[data-widget-id="QXeK4Z7e"]
 www-hankyung-com.cdn.ampproject.org##aside.ad
 www-hankyung-com.cdn.ampproject.org##aside.amp-bottom-ad
