@@ -1,4 +1,4 @@
-! Version: 05June2020v1
+! Version: 12June2020v1
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites
 ! Expires: 12 hours
@@ -372,7 +372,6 @@ goal.com##.js-betting-widget.is-country-no:upward(2)
 ##div[data-placeholder*=placeholder_ad]
 1001spill.no###footer
 1001spill.no##.layout-two-columns-aside
-1001spill.no##.layout-two-columns-aside
 1001spill.no##.omega.grid_6
 180.*##.ad-min-height
 180.*##.ai-top-ad-outer
@@ -511,7 +510,7 @@ historienet.no##.col-md-12
 historienet.no##.responsive-images
 hockeymagasinet.dk##.ss-left-sky-reclam
 hockeymagasinet.dk##.ss-right-sky-reclam
-hsfo.dk##.adblock
+hsfo.dk,jv.dk##.adblock
 hwt.dk#?#.box.text-center:-abp-has(script[src^="//ads."])
 information.dk##.masthead
 installator.dk##.addon--ad
@@ -522,7 +521,6 @@ itavisen.no##.itavi-article-page-video-player-outstream
 itavisen.no,tvguide.dk##div[id^=ad-]
 jn.fo##.lysingarspot
 jubii.dk##.mobiletakeover-background
-jv.dk##.adblock
 jyllands-posten.dk###MegaBoard_Top
 jyllands-posten.dk##div[id^=MediumRectangle]
 jyllands-posten.dk#?#.gridCol:-abp-has(div[class=annonceHolder])
@@ -731,10 +729,9 @@ fl-arena.de##.content_right_medium_rect_ad_box
 fl-arena.de##.do_not_print.article_teaser_no_border
 www.tv2.no##body:not(.broom):not(.lab):style(padding-top: 70px !important)
 tv2.no#?#div[id^=module-]:-abp-has(div[data-adslot^=fullscreen-])
-||yrkesbil.no/gifs/*emty.gif^
+*/gifs/*emty.gif^$domain=yrkesbil.no|bilnorge.no
 ||yrkesbil.no/gifs/1pix.gif^
 ||730.no/banner/*/sonymusic/$subdocument
-||bilnorge.no/gifs/*emty.gif^
 ||gaysir.no/rek/bb_inline$subdocument
 ||static.vg.no/css/admark_top.gif
 -l%C3%BDsing-$image,domain=news.fo
@@ -827,6 +824,11 @@ vafo.dk##.adform-flexblock
 ##.ad[id^=netboard_]
 ##.ad[id^=skyscraper]
 ##.ad.topBanner
+! https://www.aftenposten.no/sport/sjakk/i/0nyKLG/sjakkstjernen-mistet-kona
+###sponsorstripe
+! https://www.aftenposten.no/ (Mobile useragent)
+###adBlinkContainer
+###innocode-ad
 ! http://www.brannmannen.no/brann/store-utfordringer-ved-togulykken-pa-asta/
 ||85.17.76.181^$image
 ! https://krs247.no/
@@ -837,9 +839,6 @@ vafo.dk##.adform-flexblock
 ##div[data-placeholder=lokalnative]
 ! e24.no, aftenbladet.no, sysla.no
 ##div[id^=adPlacement_]
-! https://www.aftenposten.no/ (Mobile useragent)
-###adBlinkContainer
-###innocode-ad
 ! https://www.austurfrett.is/frettir/lagt-smithlutfall-a-austurlandi (15/04/2020)
 ##.undirsidaad
 ! https://fiskur.fo/gitte-henning-1-landar-i-maloy (09/05/2020)
@@ -908,10 +907,15 @@ krom.is#@#.share-container
 ! https://github.com/DandelionSprout/adfilt/issues/67
 @@||fe.adstate.net/assets/common/img/web_ad^$domain=ba.no|nidaros.no
 @@||fe.adstate.net/stream_file.php?type=ad_preview_image$domain=ba.no|nidaros.no
-
-
-!#if ext_ublock
+! https://old.reddit.com/r/uBlockOrigin/comments/gye2f2/cant_watch_videos_on_a_specific_website_with/ft9zlse/
+@@||cmp.ekstrabladet.dk/get_site_data$xhr,1p
+@@||dialogue.sp-prod.net/messagingWithoutDetection.js$script,domain=ekstrabladet.dk
+@@||notice.sp-prod.net^$frame,domain=ekstrabladet.dk
+!#if env_firefox
+@@||sp-prod.net^$xhr,domain=ekstrabladet.dk
 !#endif
+
+
 
 
 ! 🇳🇴: ——— Forsøker å få nettleseren til å laste inn filer i HTTPS, dersom nettstedet ikke automatisk omdirigerer HTTP til dens HTTPS-versjon ———
@@ -1001,13 +1005,10 @@ gamereactor.*###sky2_1
 gamereactor.*##+js(acis, phpads_deliver)
 gamereactor.*##+js(aopw, banner_video)
 gamereactor.*##+js(nano-stb)
-gamereactor.*##+js(set, adblockEnabled, noopFunc)
-gamereactor.*##+js(set, trackAdblock, noopFunc)
 gamereactor.*##.ad_smartphbig
 gamereactor.*##.ad_video
 gamereactor.*##.cocacola
 gamereactor.*##.sponsor
-gamereactor.*##^script[onError="adblockEnabled()"]
 gamereactor.*##a[href*="/adclick.php"]
 gamereactor.*##div[class^="ad300"]
 gamereactor.*##div[style*="width:300px;height:600px;"]
@@ -1066,8 +1067,7 @@ elkjop.no,elgiganten.dk###C-value:style(fill: #ed8631 !important)
 
 ! Hotfixes for Internet Explorer 11
 ! https://github.com/AdguardTeam/AdguardForWindows/issues/3209
-!#if !ext_ublock
-!+ PLATFORM(windows)
+!#if adguard_app_windows
 vg.no#?#span:style(font-feature-settings: normal)
 !#endif
 
