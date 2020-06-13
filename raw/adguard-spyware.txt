@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: e02hbeVMfRHJO0QeqY3x7Q
+! Checksum: C2pGNbOIeTUVtMTzzyimjw
 ! Title: AdGuard Tracking Protection filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.14.53
-! TimeUpdated: 2020-06-06T20:03:34+03:00
+! Version: 2.0.14.71
+! TimeUpdated: 2020-06-13T20:25:11+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#privacy
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -156,6 +156,9 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 !
 ! ||ensighten.com^$third-party - not a tracker
 !
+||amunx.de^$third-party
+||5baf1288cf.dl8.me^$third-party
+||mopinion.com^$third-party
 ||stat.sm-it.space^
 ||appcast.io^$third-party
 ||propeller-tracking.com^$third-party
@@ -2214,7 +2217,6 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ||org-dot-com.com^$third-party
 ||os-data.com^$third-party
 ||ositracker.com^$third-party
-||ospserver.net^$third-party
 ||osxau.de^$third-party
 ||otoshiana.com^$third-party
 ||otracking.com^$third-party
@@ -3651,6 +3653,9 @@ nethunt.com/api/v1/track/email/$image
 !+ NOT_PLATFORM(ios, ext_safari, ext_android_cb)
 ||tags.news.com.au^$~script
 !
+||tracker.thinkindot.com^
+||ttauri.laptopmag.com^
+||d1rszqblq924lq.cloudfront.net^
 ||d2o5idwacg3gyw.cloudfront.net^
 ||d2e0sxz09bo7k2.cloudfront.net^
 ||bournemouthecho-gb.bournemouthecho.co.uk^
@@ -5450,6 +5455,14 @@ _tracking.php?b=
 ||nd.demdex.net/event?d_mid=$empty,important,domain=9now.com.au
 ||adc.nine.com.au/?token=$empty,important,domain=9now.com.au
 !
+||gazeta-unp.ru/viewCounter/increment
+||parsely.com/keys/$script,third-party
+||computerbase.de/api/nlytcs
+||dl8.me/*.gif?
+||eec.crunchyroll.com^$domain=crunchyroll.com
+||cr-eec.etp-prod.com^$domain=crunchyroll.com
+||eec.crunchyroll.com/v1/track
+||zone-telechargement.ninja/bypassmajs
 ||static.cloudflareinsights.com/beacon.min.js
 ||frog.wix.com/hls2?
 ||frog.wix.com/p?
@@ -7188,6 +7201,12 @@ link.gmapp*.net$image
 ||telemetry.swiftkey.com^
 ||touchtype-fluency.com^
 !
+! QuQa.ch for Android
+||analytics.qoqa.ninja^
+||analytics-sprint.qoqa.com^
+||analytics.qoqa.ch^
+||analytics.qoqa.com^
+!
 ! Appsflyer
 !
 ||api.appsflyer.com^
@@ -7610,6 +7629,25 @@ link.gmapp*.net$image
 !-------------------------------------------------------------------------------!
 !
 !
+! TEMPORARY
+! https://github.com/AdguardTeam/CoreLibs/issues/1306
+||rover.ebay.$image,object,script,badfilter
+!
+!
+! https://github.com/AdguardTeam/AdguardFilters/issues/57250
+@@||dev.visualwebsiteoptimizer.com/*/va-*.js$domain=yubico.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/56997
+@@||analytics.edgekey.net/config/$xmlhttprequest,domain=nhk.or.jp
+! https://github.com/AdguardTeam/AdguardFilters/issues/57098
+@@||cdn.segment.com/analytics.js/v1/*/analytics.min.js$domain=shop.fender.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/56992
+! https://github.com/AdguardTeam/AdguardFilters/issues/56928
+! https://github.com/AdguardTeam/AdguardFilters/issues/56955
+||google-analytics.com/analytics.js$script,redirect=google-analytics_analytics.js,domain=4kdownload.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/56963
+@@||mc.yandex.ru/metrika/tag.js$domain=salonveronika.ru
+! https://github.com/AdguardTeam/AdguardFilters/issues/56840
+@@||googletagmanager.com/gtm.js$domain=vw-sklep.pl
 ! https://github.com/AdguardTeam/AdguardFilters/issues/56863
 @@||googletagmanager.com/gtm.js$domain=cdek.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/56685
