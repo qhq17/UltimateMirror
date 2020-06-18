@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 202006120850
-! Title: ABPVN List [accept github issue #92]
-! Last modified: 12 Jun 2020 08:50 UTC+7
+! Version: 202006171703
+! Title: ABPVN List [dongphim.tv]
+! Last modified: 17 Jun 2020 17:03 UTC+7
 ! Expires: 1 days (update frequency)
 !
 ! ABPVN List filter
@@ -32,6 +32,7 @@ $webrtc,domain=phim14.net|appvn.com
 /banner-ads.
 /blueserving.
 /cvast.$script,xmlhttprequest,third-party
+/dc.motphim.net/*.gif
 /images.accesstrade.vn/
 /images/qc/*
 /ketqua.net/vid/qc/
@@ -94,6 +95,7 @@ $webrtc,domain=phim14.net|appvn.com
 ||blogspot.com^*-banner$image,domain=blogtruyen.vn
 ||blogtruyen.vn/scripts/banner-preload.js
 ||blogtruyen.vn/scripts/iframe-rand.js
+||blueadss.com^
 ||bongdalive.tv^*.gif$image
 ||bongngo.tv/assets/games/*.gif
 ||bp.blogspot.com$image,domain=tivi4k.com
@@ -132,6 +134,7 @@ $webrtc,domain=phim14.net|appvn.com
 ||daidoanket.vn/*Banner$image
 ||dailymotion.com/embed$subdocument,domain=blogtruyen.vn|truyentranhtuan.com|truyensieuhay.com|webtruyen.com
 ||data.chiasenhac.com/banner/
+||delivery.yeah1media.vn^
 ||demkhuya.tv^*.gif$image
 ||depmoingay.net.vn/banner
 ||diendanlequydon.com/banner/
@@ -155,6 +158,9 @@ $webrtc,domain=phim14.net|appvn.com
 ||fun120.com^$popup,third-party
 ||fun88asia.com^*aff=$popup,third-party
 ||geniee.$third-party
+||giaoduc.net.vn/*banner$script
+||giaoduc.net.vn/ads^
+||giaoducthoidai.vn/*banner$image
 ||gmodules.com/gadgets/proxy?container=ig&url=*.gif
 ||gmodules.com/gadgets/proxy?container=ig&url=https://1.bp.blogspot.com/$image,domain=tivi4k.com
 ||go3xsex.com^$subdocument,third-party
@@ -245,6 +251,9 @@ $webrtc,domain=phim14.net|appvn.com
 ||ngonphongcomics.com^*.gif$image
 ||nhaccuatui.com/ajax/ads
 ||nhandan.com.vn/cdn/vn/images/banners/$image
+||nhipcaudautu.vn/*gafin$script
+||nhipcaudautu.vn/Content/*QC-$image
+||nhipcaudautu.vn/Media/*.gif
 ||ntruyen.info/Ad$subdocument
 ||nv-ad-*.24hstatic.com/imageupload/upload/
 ||onthitoeic.vn//wp-content/themes/Demet/banner-
@@ -287,6 +296,7 @@ $webrtc,domain=phim14.net|appvn.com
 ||static.24h.com.vn^*-background-
 ||static.8cache.com/spon/
 ||static.bongda24h.vn/medias/*.gif
+||static.dongphim.tv^*.gif
 ||static.download.com.vn/cache.aspx?_path=*ad$script
 ||static.hayhaytv.com^*.mp4
 ||static.hdo.tv/template/frontend/images/FloatbannerHDO.png
@@ -368,6 +378,7 @@ $webrtc,domain=phim14.net|appvn.com
 ||w88clubw88win.com$image,third-party
 ||webtruyen.com/public/frontend/desk/js/load_video.js
 ||xehay.vn/public/html5/ads/
+||xemphimplus.net/banner$image
 ||xemphimso.com/img/
 ||xemphimvtv.net/pop.js
 ||xemphimvtv.net/upload/img/download-xem.png
@@ -664,7 +675,11 @@ dabong.net##div[class^="float-"]
 dabong.net,bongda365.tv,banthang.tv##.adsInMatch
 dantri.com.vn##.admicro
 designs.vn##.qc-right2
-dongphim.net##.vast-checkpoint-wrapper
+dongphim.tv##.vast-checkpoint-wrapper
+dongphim.tv##div[class^="aballon-"]
+dongphim.tv##div[class^="abanner-"]
+dongphim.tv##div[class^="afixed-"]
+dongphim.tv##div[class^="apreload-"]
 download.com.vn###adlefttop2
 download.com.vn###adrightsecond2
 download.com.vn###BG_leftBanner
@@ -810,6 +825,7 @@ mmo4me.com###widget-12
 moon.vn###ContentPlaceHolder1_lbAdvCenter
 moon.vn###lbAdvRightPC
 moon.vn##div[style="position:fixed;top:130px; z-index:3000;right:0;bottom:0; width:35%; background-color:#666666;border-left:solid 1px #666666;border-top:solid 1px #666666;"]
+motphim.co###catfish
 mshares.co,mshare.xyz##.ads_336
 mshares.co,mshare.xyz#?#center>div:-abp-has(.adsbygoogle)
 mshares.co,mshare.xyz#?#div[style*="float"]:-abp-has(ins.adsbygoogle)
