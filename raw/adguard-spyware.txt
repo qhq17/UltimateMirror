@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: C2pGNbOIeTUVtMTzzyimjw
+! Checksum: vyt8ia1MxUE9tNLQhaGLWA
 ! Title: AdGuard Tracking Protection filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.14.71
-! TimeUpdated: 2020-06-13T20:25:11+03:00
+! Version: 2.0.14.82
+! TimeUpdated: 2020-06-17T18:31:35+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#privacy
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -156,6 +156,10 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 !
 ! ||ensighten.com^$third-party - not a tracker
 !
+||wtag.estlier.net^$third-party
+||ulclick.ru^$third-party
+||phoenix-widget.com^$third-party
+||collector.getyourguide.com^$third-party
 ||amunx.de^$third-party
 ||5baf1288cf.dl8.me^$third-party
 ||mopinion.com^$third-party
@@ -683,7 +687,7 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ||activemeter.com^$third-party
 ||activeprospects.com^$third-party
 ||actnx.com^$third-party
-||actonsoftware.com^$third-party
+||actonsoftware.com^$domain=~actonsoftware.com
 ||acxiom-online.com^$third-party
 ||ad-score.com^$third-party
 ||adblade.com^$third-party
@@ -1749,7 +1753,6 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ||iol.io^$third-party
 ||ip-adress.com^$third-party
 ||ip-label.net^$third-party
-||ip2location.com^$third-party
 ||ip2map.com^$third-party
 ||ip2phrase.com^$third-party
 ||ipaddresslabs.com^$third-party
@@ -2994,7 +2997,6 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ||userdmp.com^$third-party
 ||userlook.com^$third-party
 ||userneeds.dk^$third-party
-||userreport.com^$third-party
 ||users.51.la^$third-party
 ||usuarios-online.com^$third-party
 ||uzrating.com^$third-party
@@ -3263,6 +3265,7 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ! Admiral domains
 ! These domains are used for tracking purposes according to the data that is being sent there.
 ! More info: https://getadmiral.com/products/measure
+||habitualhumor.com^$third-party
 ||hocgeese.com^$third-party
 ||dapperdiscussion.com^$third-party
 ||superficialsquare.com^$third-party
@@ -3653,6 +3656,8 @@ nethunt.com/api/v1/track/email/$image
 !+ NOT_PLATFORM(ios, ext_safari, ext_android_cb)
 ||tags.news.com.au^$~script
 !
+||api.mediarithmics.com^
+||d5etv3akk3gsa.cloudfront.net^
 ||tracker.thinkindot.com^
 ||ttauri.laptopmag.com^
 ||d1rszqblq924lq.cloudfront.net^
@@ -5455,6 +5460,7 @@ _tracking.php?b=
 ||nd.demdex.net/event?d_mid=$empty,important,domain=9now.com.au
 ||adc.nine.com.au/?token=$empty,important,domain=9now.com.au
 !
+||api.phoenix-widget.com/c?wid=
 ||gazeta-unp.ru/viewCounter/increment
 ||parsely.com/keys/$script,third-party
 ||computerbase.de/api/nlytcs
@@ -7634,6 +7640,10 @@ link.gmapp*.net$image
 ||rover.ebay.$image,object,script,badfilter
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/57397
+@@||events-collector.spot.im/api/$xmlhttprequest,other,domain=rt.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/57332
+! https://github.com/AdguardTeam/AdguardFilters/issues/57396
 ! https://github.com/AdguardTeam/AdguardFilters/issues/57250
 @@||dev.visualwebsiteoptimizer.com/*/va-*.js$domain=yubico.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/56997
