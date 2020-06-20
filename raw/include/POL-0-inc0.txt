@@ -6,16 +6,16 @@
 ! Wsparcie:
 !   Patronite ==> https://patronite.pl/polskiefiltry
 !   PayPal ==> https://www.paypal.com/pools/c/87zNJ8OJ3I
-! Last modified: 7 June 2020
+! Last modified: 15 June 2020
 ! Expires: 1 day
-! Version: 2020060701
+! Version: 2020061501
 ! Support:
 !   Email >> errorsfilters@certyficate.it
 !   Github >> https://github.com/MajkiIT/polish-ads-filter/issues
 ! License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ! Copyright © 2020 Certyficate IT
 ! Najnowsza wersja zawsze na: https://www.certyficate.it/adblock
-! v.2020060701 aktualizacja: nie, 7 czerwca 2020, 18:50:00
+! v.2020061501 aktualizacja: pon, 15 czerwca 2020, 14:50:00
 !
 !
 !--------------------------Rules only to uBlock-------------!
@@ -178,6 +178,16 @@ www.wp.pl##html, html > body:style(overflow: visible!important;)
 www.wp.pl##+js(set-constant.js, WP.gaf.loadBunch, noopFunc)
 !wp.pl,~pilot.wp.pl,~sportowefakty.wp.pl##+js(set-constant.js, WP.gaf.loadBunch, noopFunc)
 !o2.pl,pudelek.pl,wp.pl##+js(set-constant, Object.prototype.isGoogleBot, true)
+www.wp.pl##div[class^="sc-"]:has(:scope > img[src^="https://v.wpimg.pl/"][role="presentation"][class^="sc-"]:matches-css(position: absolute))
+www.wp.pl##+js(set-constant, Object.prototype.gafSlot, undefined)
+www.wp.pl##+js(set-constant, Object.prototype.advViewability, undefined)
+www.wp.pl##+js(set-constant, Object.prototype.rekids, undefined)
+so-magazyn.pl,o2.pl,pudelek.pl,film.wp.pl,finanse.wp.pl,gwiazdy.wp.pl,kobieta.wp.pl,ksiazki.wp.pl,magazyn.wp.pl,moto.wp.pl,opinie.wp.pl,sportowefakty.wp.pl,tech.wp.pl,teleshow.wp.pl,wiadomosci.wp.pl#@#.pub_300x250
+so-magazyn.pl,o2.pl,pudelek.pl,film.wp.pl,finanse.wp.pl,gwiazdy.wp.pl,kobieta.wp.pl,ksiazki.wp.pl,magazyn.wp.pl,moto.wp.pl,opinie.wp.pl,sportowefakty.wp.pl,tech.wp.pl,teleshow.wp.pl,wiadomosci.wp.pl#@#.text_ads
+so-magazyn.pl,o2.pl,pudelek.pl,film.wp.pl,finanse.wp.pl,gwiazdy.wp.pl,kobieta.wp.pl,ksiazki.wp.pl,magazyn.wp.pl,moto.wp.pl,opinie.wp.pl,sportowefakty.wp.pl,tech.wp.pl,teleshow.wp.pl,wiadomosci.wp.pl#$#.pub_300x250 { display: block!important; }
+so-magazyn.pl,o2.pl,pudelek.pl,film.wp.pl,finanse.wp.pl,gwiazdy.wp.pl,kobieta.wp.pl,ksiazki.wp.pl,magazyn.wp.pl,moto.wp.pl,opinie.wp.pl,sportowefakty.wp.pl,tech.wp.pl,teleshow.wp.pl,wiadomosci.wp.pl#$?#html { overflow: visible!important; position: unset!important; }
+so-magazyn.pl,o2.pl,pudelek.pl,film.wp.pl,finanse.wp.pl,gwiazdy.wp.pl,kobieta.wp.pl,ksiazki.wp.pl,magazyn.wp.pl,moto.wp.pl,opinie.wp.pl,sportowefakty.wp.pl,tech.wp.pl,teleshow.wp.pl,wiadomosci.wp.pl#$?#body { overflow: visible!important; position: unset!important; }
+so-magazyn.pl,o2.pl,pudelek.pl,film.wp.pl,finanse.wp.pl,gwiazdy.wp.pl,kobieta.wp.pl,ksiazki.wp.pl,magazyn.wp.pl,moto.wp.pl,opinie.wp.pl,sportowefakty.wp.pl,tech.wp.pl,teleshow.wp.pl,wiadomosci.wp.pl#$?#body > [class]:not(.settings--user) { filter: none!important; }
 !
 ! o2.pl
 poczta.o2.pl,poczta.wp.pl##body > #page:style(display: block !important;)
@@ -205,17 +215,13 @@ bezuzyteczna.pl##section:has(script + div[id^="crt"][style])
 !
 ! naekranie.pl
 ! Timery ladujace reklamy
-naekranie.pl##+js(abort-current-inline-script.js, $, /loadData|halfpage|welcome|screening|placement/)
 naekranie.pl##+js(setInterval-defuser.js, function neTick(){neTickCounter++;if(neTickCounter<=neTickCountLimit){neTickAjax=$.ajax({type:"POST",url:adminAjaxUrl+"?action=ne_tick",dataType:"json",success:function(data){neTickResponseAction(data)}})}}, 10000)
 naekranie.pl##+js(setTimeout-defuser.js, function check(){console.log("checked");if($(".adform").children().length>3){console.log("its more");$(".adform").children(".adform-banner").show();clearTimeout(check)}}, 1000)
-naekranie.pl##+js(abort-current-inline-script, $, /loadData|halfpage|welcome|screening|placement|adtitle/)
+naekranie.pl##+js(abort-current-inline-script.js, $, /loadData|halfpage|welcome|screening|placement|adtitle/)
 !
 ! bankier.pl
 bankier.pl##+js(abort-on-property-write.js, detectAB)
 bankier.pl##.boxContent > ul > li[class^="item-"]:has(.premium-link)
-!
-! efilmy.online
-efilmy.online##+js(impspcabe-defuser.js)
 !
 ! raptu.com
 raptu.com##+js(noeval.js)
@@ -249,9 +255,8 @@ www.grymel.pl###layout:style(margin-top: 5px !important;)
 benchmark.pl###bannerDBB:style(height: 10px !important;)
 !
 ! dvbtmap.eu
-dvbtmap.eu###content-container:style(margin-top: 0 !important;)
-dvbtmap.eu###leftCol:style(top: 51px !important;)
-||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$important,redirect=noop.js,script,domain=dvbtmap.eu
+dvbtmap.eu###content-container2:style(margin-top: 0 !important;)
+dvbtmap.eu###leftCol2:style(top: 51px !important;)
 !
 !
 !
