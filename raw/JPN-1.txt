@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: omAxYn4FSB24Y/Xt2ugXdQ
+! Checksum: 2xn+a14IhxW5Y/mHZv3AEA
 ! Title: AdGuard Japanese filter
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.3.55
-! TimeUpdated: 2020-06-11T15:32:22+03:00
+! Version: 2.0.3.60
+! TimeUpdated: 2020-06-18T17:34:48+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#japanese
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -713,6 +713,13 @@ cmnw.jp##+js(set-constant, sec, 0)
 !-------CSS---------
 !-------------------
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/57490
+ponta.abstractpainting.work#$##game-start-btn > img { visibility: visible !important; opacity: 1 !important; }
+ponta.abstractpainting.work#$#a.link-button { visibility: visible !important; }
+!
+hiroba.dpoint.jp#$##gtm-promotionModal-overlay { display: none !important; }
+hiroba.dpoint.jp#$#.js-modal-promotion-banner { display: none !important; }
+hiroba.dpoint.jp#$#body[data-modal-overlay="open"] > div#wrapper { position: static !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/34774
 blog.esuteru.com#$#.siteContent { margin-top: 0!important; }
 blog.esuteru.com#$#.siteRanking-main { margin-left: 0!important; }
@@ -809,6 +816,11 @@ _ds_adtag_
 !
 ! /banner/banner_ - if it is necessary, make this rule domain specific
 !
+hiroba.dpoint.jp###js-floating
+hosyusokuhou.jp###headline
+hosyusokuhou.jp###more_rss
+hosyusokuhou.jp##.abox
+hosyusokuhou.jp###bottom_rss
 /img/bnr/*$domain=paraft.jp
 paraft.jp##.rp_bnrarea
 srad.jp###gpt-sd_index_rec
@@ -1120,7 +1132,6 @@ android-smart.com##.post-body > .pstft
 android-smart.com###sidebar > #abox
 toyokeizai.net##ul > li.block-pr
 appllio.com##body > #page-upper .region-header > .region-inner > #block-block-82.even
-zakzak.co.jp##amp-embed[type="outbrain"]
 tokyomotion.net##.nva-center
 4gamer.net##.large_banner
 ||pc-koubou.jp^$domain=ascii.jp,image
@@ -1633,6 +1644,9 @@ gtoys.blog48.fc2.com###adright
 !
 ! White list. Fixing filtration errors(false-positive)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/57117
+!+ PLATFORM(ext_ublock)
+@@||durasite.net^$image,domain=zozo.jp|wear.jp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/56138
 news.2chblog.jp#@#.ad-center
 ! https://github.com/AdguardTeam/AdguardFilters/issues/55775
