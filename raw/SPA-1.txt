@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: rRVehwTeLOuQUxeZg9/u0w
+! Checksum: 9+yvKfmrqJwCPhZ5O8HlJg
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish and Portuguese languages.
-! Version: 2.0.6.50
-! TimeUpdated: 2020-06-17T11:32:11+03:00
+! Version: 2.0.6.52
+! TimeUpdated: 2020-06-18T16:32:17+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#spanish
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -249,6 +249,10 @@
 !
 ! AdRegain
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/57562
+mundocracking.net#@#.adsbygoogle
+mundocracking.net#$#.adsbygoogle { position: absolute!important; left: -3000px!important; }
+mundocracking.net##+js(no-setTimeout-if, test.offsetHeight)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/57292
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=geeksweb.net
 ! https://github.com/AdguardTeam/AdguardFilters/issues/57124
@@ -1483,6 +1487,7 @@ http://adw.
 !-------------------- Specific rules --------------------!
 !--------------------------------------------------------!
 !
+vogue.globo.com###box-globomais
 expatsportugal.com##.wpforo-ad
 ||repelisgt.net/propelloders.js
 ||repelisgt.net/srv-pv/tag-
