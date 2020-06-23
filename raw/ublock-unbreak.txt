@@ -3744,3 +3744,18 @@ getcoloringpages.com#@#.adsBlock
 
 ! universityherald broken search
 |https://$script,3p,domain=universityherald.com,badfilter
+
+! vix .com broken page
+@@||cdn.taboola.com/libtrc/$script,domain=vix.com
+
+! https://github.com/NanoMeow/QuickReports/issues/4172
+.net/ads/$badfilter
+
+! bloomberg.com CNAME
+!#if env_firefox
+@@||cdx.cedexis.net^$domain=bloomberg.com
+!#endif
+
+! https://github.com/NanoMeow/QuickReports/issues/2057
+nfmovies.com#@#+js(aopr, $myui)
+@@||nfmovies.com/static/side.jpg$xhr,1p
