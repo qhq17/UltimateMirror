@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Version: 202006171703
-! Title: ABPVN List [dongphim.tv]
-! Last modified: 17 Jun 2020 17:03 UTC+7
+! Version: 202006240840
+! Title: ABPVN List [optimize filter]
+! Last modified: 24 Jun 2020 08:40 UTC+7
 ! Expires: 1 days (update frequency)
 !
 ! ABPVN List filter
@@ -27,6 +27,7 @@ $webrtc,domain=phim14.net|appvn.com
 /24h-ad.
 /ads/*.gif
 /ads/*.xml$xmlhttprequest
+/allposition-zone-*.ads
 /assets/popup.js
 /banner/*.gif
 /banner-ads.
@@ -69,10 +70,12 @@ $webrtc,domain=phim14.net|appvn.com
 ||admin.phim4k.net^*/banner
 ||ads*.autodaily.vn
 ||ads.8live.com^$popup
+||ads.nghenhinvietnam.vn^
 ||ahaclip.com^*.gif$domain=mmo4me.com
 ||ahaphim.com/images/sva/
 ||allmobtip.com^
 ||anh.24h.com.vn/upload/^*.gif
+||anhem.tv/ads$image
 ||anime47.com^*.gif
 ||animevsub.tv^*.gif$image
 ||api.xemtvhd.com$subdocument
@@ -90,6 +93,9 @@ $webrtc,domain=phim14.net|appvn.com
 ||biphim.tv^*.gif
 ||bit.ly^$domain=biphim.tv|kingphim.net|vphim.net|phimmedia.tv|vkool.tv|huphim.com
 ||bit.ly^$popup,domain=ngonphongcomics.com|hatde.tv|kingphim.net
+||bizlive.vn/*.ads
+||bizlive.vn/*banner$script
+||bizlive.vn/*banner.css
 ||blogfonts.com^$domain=hosocongty.vn,image
 ||blogspot.com^*.gif$domain=phim33.com|hamtruyen.com|truyensieuhay.com|hamtruyen.vn|hocvientruyentranh.net|mythethao.net|vuviphimmoi.com
 ||blogspot.com^*-banner$image,domain=blogtruyen.vn
@@ -121,6 +127,7 @@ $webrtc,domain=phim14.net|appvn.com
 ||chophanthiet.us/images/phanthiet.jpg
 ||chothuexenanggiare.com^$popup,third-party,domain=font.vn
 ||chovinh.com/data/Siropu/*.gif$image
+||chungket.net/*.gif
 ||coccoc.com/skin/
 ||coccoc.com/vastPlayer/
 ||code.gunnymienphi.net^*.gif
@@ -158,6 +165,7 @@ $webrtc,domain=phim14.net|appvn.com
 ||fun120.com^$popup,third-party
 ||fun88asia.com^*aff=$popup,third-party
 ||geniee.$third-party
+||giadinhvietnam.com/api/adv^
 ||giaoduc.net.vn/*banner$script
 ||giaoduc.net.vn/ads^
 ||giaoducthoidai.vn/*banner$image
@@ -180,6 +188,7 @@ $webrtc,domain=phim14.net|appvn.com
 ||hdvip.tv^*.xml$xmlhttprequest
 ||hinhso.com^$domain=diendanmaychu.vn,image
 ||hoanluu.com^*.gif$image
+||hoc24.vn/images/zuize.jpg
 ||hoitruyentranh.com^*.gif
 ||hosocongty.vn/uploads/linksite/
 ||hosocongty.vn/uploads/products/$~third-party,image
@@ -239,6 +248,7 @@ $webrtc,domain=phim14.net|appvn.com
 ||mangaqq.net/qc-new/
 ||media.coccoc.com$image,object,popup
 ||media.dabong247.com/ads/
+||media.ex-cdn.com/*/qc$image
 ||media.giphy.com/media/$image,domain=animevsub.tv|phimgi.tv|thevang.tv|ngoac.tv|thevangtv.com|vaoroi.tv|dabong.net|banthang.tv|ibongda.live|tructiepbongda.vip|bongda365.tv
 ||media.jxf88.com^$third-party
 ||media.store123doc.com/images/web_2/tuyen-dung-min.png
@@ -248,6 +258,8 @@ $webrtc,domain=phim14.net|appvn.com
 ||mkocdn.com/bundles/mkoxem/jwplayer/plugins/v0.0.24/gooima.js
 ||moon.vn/images/marketing/
 ||movcpm.com/watch.xml
+||nghenhinvietnam.vn/*banner$script
+||nghenhinvietnam.vn/data/*.ads
 ||ngonphongcomics.com^*.gif$image
 ||nhaccuatui.com/ajax/ads
 ||nhandan.com.vn/cdn/vn/images/banners/$image
@@ -261,6 +273,9 @@ $webrtc,domain=phim14.net|appvn.com
 ||phimmoi.net/js/ambient/
 ||phimmoi.net/js/partner/$script
 ||phimmoi.net/js/vtlai/movie/public/pad.js
+||phimmoiz.net/js/ambient/
+||phimmoiz.net/js/partner/$script
+||phimmoiz.net/js/vtlai/movie/public/pad.js
 ||phimnhanh.net/banner/
 ||phimnhanh.net^*.gif
 ||phobolsatv.com^*/ad-$image
@@ -279,6 +294,7 @@ $webrtc,domain=phim14.net|appvn.com
 ||purgrobi.com/ub.pi$third-party
 ||qc-static.coccoc.com
 ||qtcshop.com/images/$third-party
+||quaivatdienanh.com/*banner$image
 ||razorphim.com^*.gif$image
 ||razorphim.com^*.mp4$~third-party
 ||s3.amazonaws.com^$domain=phimnhanh.com|phimmedia.tv|hamtruyen.com|phimmoi.net
@@ -378,6 +394,7 @@ $webrtc,domain=phim14.net|appvn.com
 ||w88clubw88win.com$image,third-party
 ||webtruyen.com/public/frontend/desk/js/load_video.js
 ||xehay.vn/public/html5/ads/
+||xemchua.tv/*ads$image,subdocument
 ||xemphimplus.net/banner$image
 ||xemphimso.com/img/
 ||xemphimvtv.net/pop.js
@@ -557,9 +574,10 @@ $webrtc,domain=phim14.net|appvn.com
 7msport.com##[href^="http://bf2.zzc.cn"]
 8bongda.com##a[href^="https://bit.ly/"]
 90p.tv###quangcaopc
-90p.tv##div.modal-backdrop.fade.in
 90phut.tv##.close[onclick]
 ahaphim.com##.topplayer.quangcao_mobile
+anhem.tv###hmMainSlider
+anhem.tv##.button-bet.btn-danger.btn
 anime47.com###ads_location
 anime47.com###sidebar > a:first-child
 anime47.com##A[href^="//"][rel]
@@ -588,7 +606,6 @@ banhtv.net##div.web > center
 banhtv.net##div[class^="ab"]
 banhtv.net,baprang.tv##.preload
 banthang.tv##.adsInPlayer
-banthang.tv##.adsPlayerBanner
 banthang.tv##.ballon-bottom
 banthang.tv##.ballon-left-pc
 banthang.tv##.buttonDatCuoc
@@ -598,6 +615,7 @@ banthang.tv##.hot-menu
 banthang.tv##.m_disreponsive
 banthang.tv##.show-ads
 banthang.tv##.under-h1 > .inner_header
+banthang.tv,tructiep.xemchua.tv##.adsPlayerBanner
 baobinhthuan.com.vn###ads_2_col_bot
 baomoi.com###BaoMoi_Top
 baomoi.com##.fyi--group:nth-of-type(2)
@@ -633,7 +651,21 @@ bongdaso.com##.sky_banner1
 bongdaso.com##.sky_banner2
 bongdaso.com##blink
 bongdaso.com,xemtiviso.com##.med_rec_banner1
+bongdatructuyen.live###banner_FixLeft
+bongdatructuyen.live###banner_FixRight
+bongdatructuyen.live###banner_Supper
+bongdatructuyen.live###fancybox-overlay
+bongdatructuyen.live###fancybox-wrap
+bongdatructuyen.live###left_sticky_ads
 bongngo.tv##.ads_sticky_bottom
+bongtron.tv##.show.fade.modal-backdrop
+bongtron.tv,ghiban.tv###adsModal
+bongtron.tv,ghiban.tv##.BannerFixedLeft.BannerFixed
+bongtron.tv,ghiban.tv##.BannerFixedRight.BannerFixed
+bongtron.tv,ghiban.tv##.BannerStickyLeft
+bongtron.tv,ghiban.tv##.BannerStickyRight
+bongtron.tv,ghiban.tv##.btn_cuoc
+bongtron.tv,ghiban.tv##.mb-60.group-banner
 cbox.ws##a[href^="https://one88.vn/vi/"]
 chap.vn##.my_responsive_add
 chap.vn##.titleBar + *
@@ -665,7 +697,7 @@ coccoc.com##[data-show-urls^="http://context.qc.coccoc.com"]
 coccoc.com##a[href^="https://context.qc.coccoc.com"]
 coccoc.com##video
 coccoc.com#?#li:-abp-has(h3:-abp-contains(Sản phẩm))
-coccoc.com,phimgi.tv,huphim.com##.ads
+coccoc.com,phimgi.tv,huphim.com,anhem.tv,bongdatructuyen.live,tructiep.xemchua.tv##.ads
 congly.vn###show_adv_1
 congly.vn###show_adv_2
 cuoi.tuoitre.vn##.banner-bottom
@@ -675,6 +707,10 @@ dabong.net##div[class^="float-"]
 dabong.net,bongda365.tv,banthang.tv##.adsInMatch
 dantri.com.vn##.admicro
 designs.vn##.qc-right2
+dethihocki.com##.detail_new + p
+dethihocki.com##.detail_new + p + table
+diendanxaydung.vn###header_adcode
+diendanxaydung.vn###rightcolumn_adcode
 dongphim.tv##.vast-checkpoint-wrapper
 dongphim.tv##div[class^="aballon-"]
 dongphim.tv##div[class^="abanner-"]
@@ -713,6 +749,9 @@ gamevui.vn##.adx-zone
 gamevui.vn##.underlay
 genk.vn###ads_zone59_slot2
 ghostviet.com###navbar_notice_7
+giadinhvietnam.com##.exp_qc_share
+giadinhvietnam.com##.id_26.adv
+giadinhvietnam.com##.mar_top20.fl.w100.ads_pc
 giaitriviet.net.vn###idads1
 giaitriviet.net.vn##.nd
 hamtruyen.com###ad_float_right
@@ -863,11 +902,12 @@ phimmedia.tv###mobile_content_bottom
 phimmedia.tv##.adv-300-right
 phimmedia.tv,linkneverdie.com##.SC_TBlock
 phimmedia.tv,phim.media##[href^="https://affiliate"]
-phimmoi.net##.ad-center-980
-phimmoi.net##.balloon-ad-wrap
-phimmoi.net##.uniad-zonetype-preload-overlay
-phimmoi.net##[id^="uniad-zone"]
-phimmoi.net,zone.tv##.uniad-zonetype-preload-container
+phimmoi.net,phimmoiz.net##.ad-center-980
+phimmoi.net,phimmoiz.net##.balloon-ad-wrap
+phimmoi.net,phimmoiz.net##.uniad-zonetype-preload-overlay
+phimmoi.net,phimmoiz.net##[id^="uniad-zone"]
+phimmoi.net,phimmoiz.net,zone.tv##.uniad-zonetype-preload-container
+phimmoiz.net###footer-banner
 phimnhanh.com##.preroll-blocker
 phimnhe.net##.mobile-catfix
 pl.tclup.com##.modal
@@ -913,6 +953,12 @@ topphimmoi.com##div[style="position:fixed;left:0;bottom:0;z-index:11"]
 topphimmoi.com##div[style="position:fixed;right:0;bottom:0;z-index:11"]
 topthuthuat.com##.widget.ai_widget
 topthuthuat.com,anonyviet.com##.widget.widget_text
+tructiep.xemchua.tv###hmMainSlider > .league-name > div > p > .list-bet
+tructiep.xemchua.tv##.BannerFixedLeft_content
+tructiep.xemchua.tv##.BannerFixedRight_content
+tructiep.xemchua.tv##.BannerStickyLeft_content
+tructiep.xemchua.tv##.BannerStickyRight_content
+tructiep.xemchua.tv,90p.tv##.in.fade.modal-backdrop
 tructiepbongda.vip##.top-banner
 tructiepbongda.vip##.under-player
 tructiepbongda.vip##ul > li > a[href*="?utm_source=tructiepbongda.vip"]
@@ -940,6 +986,8 @@ truyentranhtam.com,truyentranh869.com##.tt8quangcao
 truyentranhtuan.com###banner_preload
 truyentranhtuan.com##.doc-truyen-ads-d1
 truyentranhtuan.com##.doc-truyen-ads-d2
+tuyengiao.vn##.clearfix.adregion
+tuyengiao.vn##.visible-md.header-banners
 tv.101vn.com,bongdaso.com,keonhacai.net###right_float
 tv.101vn.com,keonhacai.net###fl813691
 tvhay.org,xem7.com,xemphimvtv.net##.ad_location
