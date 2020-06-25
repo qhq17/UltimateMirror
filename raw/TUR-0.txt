@@ -1,9 +1,9 @@
 ![Adblock Plus 2.0]
-! Checksum: rZgdt8MsZk7NHEADwAb5/A
+! Checksum: MHa52+EzLCKs4cQXC1Botg
 ! Title: AdGuard Turkish filter
 ! Description: Filter list that specifically removes ads on websites in Turkish language.
-! Version: 2.0.17.12
-! TimeUpdated: 2020-06-16T16:02:27+03:00
+! Version: 2.0.17.24
+! TimeUpdated: 2020-06-23T19:30:23+03:00
 ! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#turkish
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -69,7 +69,6 @@
 !
 ||basvformu*.xyz^$third-party
 ||ref.gitadres.com^$popup
-||basvformu5.xyz^$third-party
 ||yfzbn.com^$third-party
 ||adhouse.cubecdn.net^$third-party
 ||frknseo.info^$third-party
@@ -77,7 +76,6 @@
 ||jeoldkhy.com^$third-party
 ||asdqweq.com^$third-party
 ||adtarget.com.tr^$third-party
-||ftd.agency^$third-party
 ||admoxi.com^$third-party
 ||adbetnetwork.com^$third-party
 ||areabet.net^$third-party
@@ -377,6 +375,8 @@
 !
 ! These rules are against all kinds of ad blocking reinjection/circumvention scripts
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/57642
+urfakalesi.com#@##adcontent
 ! https://github.com/AdguardTeam/AdguardFilters/issues/56429
 @@||turkrock.com/js/*/crossdomainads.js
 turkrock.com##+js(abort-current-inline-script, $, !document.getElementById(btoa)
@@ -2065,6 +2065,7 @@ zargan.com#$#section#results #header {background-image: none!important; }
 !---------------------------------------------------------------------------!
 !-------------- General URL blocking rules ---------------------------------!
 !---------------------------------------------------------------------------!
+/wp-content/uploads/*/hareketli.gif
 /thumb.php?src=*/images/banner/*
 /melbet728.gif
 /melbetvideo.mp4
@@ -2184,17 +2185,30 @@ izlefutbol.com##body > #page > p[align="center"]
 !
 ! common names
 ! ##.advert
-lojiport.com,ngazete.com,marastanhaber.com.tr,sosyalmanset.com,nutuk.com.tr,yenikapihaber.com,ilgazetesi.com.tr,hakkariobjektifhaber.com,tasova.net,hakkarihabertv.com,karamanhabercisi.com,marasgundem.com.tr,sivasbulteni.com,detaykibris.com,wanhaber.com,elazighaber.com,virahaber.com,61trabzonhaber.com,karsmanset.com,mepanews.com,golbasisongaste.com,yuksekovahaber.com.tr,memleket.com.tr,gazeteguncel.com,dokuzsutun.com.tr,enerjigunlugu.net,buyukkocaeli.com.tr,magazinkolik.com,sakaryahaber.com,ekrangazetesi.com,kamuhabermerkezi.com,isilanlarikariyer.com,haberine.com,konyaninsesi.com.tr,siyasetcafe.com,denizhaber.net,optimushaber.com,gunboyugazetesi.com.tr,agazete.com.tr,aktuelpsikoloji.com,banazguncelhaber.com,kibris724.com,takvim.com.tr,aydin24haber.com,agrisoz.com,diyarinsesi.org,turkiyeegitim.com,liderhaber.org,nazillihavadis.com,koylerim.com,yeniasir.com.tr,medyatrabzon.com,ahaber.com.tr,risalehaber.com,bilecikhaber.com.tr,sanalkurs.net,pusulahaber.com.tr,bolgegundem.com,mymemur.com.tr,olay.com.tr,saglikaktuel.com,afyonanahaber.com.tr,merhabahaber.com,sariyermanset.com,haberartiturk.com,yeniduzen.com,analizmerkezi.com,bafra55.net,atv.com.tr,ajans32.com,aspor.com.tr,dengegazetesi.com.tr,haberay.com.tr,istanbulhaber.com.tr,kargohaber.com,malatyaguncel.com,medyaege.com.tr,memurpostasi.com,ozgurkocaeli.com.tr,pazar53.com,sabah.com.tr,siirtliler.net,teknolojic.com,ulkucumedya.com,ulusalpost.com,yenicaggazetesi.com.tr,ajansbesiktas.com##.advert
+aydinhedef.com.tr,lojiport.com,ngazete.com,marastanhaber.com.tr,sosyalmanset.com,nutuk.com.tr,yenikapihaber.com,ilgazetesi.com.tr,hakkariobjektifhaber.com,tasova.net,hakkarihabertv.com,karamanhabercisi.com,marasgundem.com.tr,sivasbulteni.com,detaykibris.com,wanhaber.com,elazighaber.com,virahaber.com,61trabzonhaber.com,karsmanset.com,mepanews.com,golbasisongaste.com,yuksekovahaber.com.tr,memleket.com.tr,gazeteguncel.com,dokuzsutun.com.tr,enerjigunlugu.net,buyukkocaeli.com.tr,magazinkolik.com,sakaryahaber.com,ekrangazetesi.com,kamuhabermerkezi.com,isilanlarikariyer.com,haberine.com,konyaninsesi.com.tr,siyasetcafe.com,denizhaber.net,optimushaber.com,gunboyugazetesi.com.tr,agazete.com.tr,aktuelpsikoloji.com,banazguncelhaber.com,kibris724.com,takvim.com.tr,aydin24haber.com,agrisoz.com,diyarinsesi.org,turkiyeegitim.com,liderhaber.org,nazillihavadis.com,koylerim.com,yeniasir.com.tr,medyatrabzon.com,ahaber.com.tr,risalehaber.com,bilecikhaber.com.tr,sanalkurs.net,pusulahaber.com.tr,bolgegundem.com,mymemur.com.tr,olay.com.tr,saglikaktuel.com,afyonanahaber.com.tr,merhabahaber.com,sariyermanset.com,haberartiturk.com,yeniduzen.com,analizmerkezi.com,bafra55.net,atv.com.tr,ajans32.com,aspor.com.tr,dengegazetesi.com.tr,haberay.com.tr,istanbulhaber.com.tr,kargohaber.com,malatyaguncel.com,medyaege.com.tr,memurpostasi.com,ozgurkocaeli.com.tr,pazar53.com,sabah.com.tr,siirtliler.net,teknolojic.com,ulkucumedya.com,ulusalpost.com,yenicaggazetesi.com.tr,ajansbesiktas.com##.advert
 ! ##.banner
 lojiport.com,ertehaber.com,vandahaber.com,beyazgazete.com,sacintarzin.com,yesiligdir.com,perakende.org,hdfilmizle3.com,hakkariobjektifhaber.com,hakkarihabertv.com,karamanhabercisi.com,yarimadagazetesi.com,marasgundem.com.tr,sinematuru.com,enerjigunlugu.net,ulastirmadunyasi.com,fotospor.com,wanhaber.com,virahaber.com,61trabzonhaber.com,buyukkocaeli.com.tr,fullhdfilmdeposu.com,filmifullizle.tv,dizilab.pw,gecce.com.tr,fanatik.com.tr,erasmusu.com,bolugundem.com,coin-turk.com,expsex.com,ozgurkocaeli.com.tr,polatbuyukarslan.com,aofsoru.com,kocaeligazetesi.com.tr,antalyaburada.com,bafra55.net,airporthaber.com,magazinkolik.com,netgazete.com,oyungemisi.com,pudra.com,sabah.com.tr,sadecehaber.com,televole.com,tgrthaber.com.tr,yeniakit.com.tr,neoldu.com##.banner
 ! ##.ads
-turkulus.com,forumotomobil.com,bodrumolay.com,akvaryum.com,zobakit.com,uyumhaber.com,kmarashaber.com,yenimeram.com.tr,vivaldimagazin.com,tafdi.org,gzt.com,topraklagelen.com.tr,thebrandage.com,gamer.com.tr,direkizleyin.com,medyafaresi.com,indir.com,memuruz.net,1cubukadam.com,bjk.com.tr,bursadabugun.com,emlakeki.com,gercekgundem.com,haber7.com,internethaber.com,memurhaber.com,webtekno.com##.ads
+yozgatses.com,turkulus.com,forumotomobil.com,bodrumolay.com,akvaryum.com,zobakit.com,uyumhaber.com,kmarashaber.com,yenimeram.com.tr,vivaldimagazin.com,tafdi.org,gzt.com,topraklagelen.com.tr,thebrandage.com,gamer.com.tr,direkizleyin.com,medyafaresi.com,indir.com,memuruz.net,1cubukadam.com,bjk.com.tr,bursadabugun.com,emlakeki.com,gercekgundem.com,haber7.com,internethaber.com,memurhaber.com,webtekno.com##.ads
 ! ##.footer-sticky
 sportsregg.com,altyazilifilm.live,filmzal.com,film-dizi.com,720pizleme.com,filmmodu.co,dizifilmix.org,sineturk.pw,altyazilifilmizle.tv,1080pfilmizle.net,dolufilmizle.com,filmizleve.com,indirmedenfilmizle.pw,filmizle.us,filmihdizlet.com,moodfilmizle.com,fullhdiziizle.com,rexfilmizle.com,filmizlevip.org,filmizlefilmsitesi.com,sineturk1.com,hdfilmizle.fun,fullizlefilmizle.com,fanfilmizle.com,indirmedenfilmizle1.com,fullhizlifilmizlesen.com,hdhergundizi.com,sinemapol.org,hdciyiz.com,sinefilm.net,hdfilmizle.life,hdcehennem.com,sendeizlesene.net,cilekfilm.com,hizlifullfilmizle.com,diziizlevv.com##.footer-sticky
 ! ##.rkm
 vanhavadis.com,kpsscafe.com.tr,forapost.com,okuhaber.com,akyazi.net,cagdaskocaeli.com.tr,haberlerankara.com,seskocaeli.com,kocaelizirve.com,yenialanya.com,t54.com.tr,haber266.com,safihaber.com,nazilliadalet.com,bizimyaka.com,spor46.com,akdeniztelgraf.com,ispartamhaber.com,haberhurriyeti.com,mercekhabergazetesi.com,gaziantepinhabercisi.com,gurbettekierzurum.com.tr,haberaydin.com,turkiyemtv.com.tr,lidergazetesi.com,haberso.com,aydingazetesi.com,aydinyenihaber.com,ajanscaldiran.com,haber28.com,netgaste.com,sakaryadanhaber.com,erzurumhaber.com.tr,yenidevir.com.tr,golcukgundem.com,elbistanolay.com,cthaber.com,mihraphaber.com,pamukovahalk.com,medyabar.com,bgazete.com.tr,kartepegazetesi.com.tr,istekocaeli.com,mansetaydin.com,sesgazetesi.com.tr,bugunkocaeli.com.tr,kocaeligazetesi.com.tr,milligazete.com.tr,hbrma.com,tanisgazetesi.com.tr,elbistankaynarca.com,guncelkocaeli.com,enkocaeli.com##.rkm
 !
 !
+hatayyasam.com##div[class^="k_reklam"]
+hatayyasam.com###text-21
+kanalfinans.com##a[href^="https://bit.ly/"]
+myinstants.com##div[style^="text-align:center;"] > div[style^="margin:"][class^="hide-on-"]
+myinstants.com##div[style="margin:0 auto 20px; height:280px;"]
+urfakalesi.com##img[width="1024"][height="128"]
+yozgatgazetesi.com##.container > div[class="row mb-2"] > img
+yozgatgazetesi.com##.mainsliderads
+yozgatgazetesi.com##div[class^="ads-"]
+yozgatgazetesi.com##div[class*="_ads_"]
+yozgatgazetesi.com##.main_cats_bottom_1 > img
+yerkoyhabergazetesi.com##.sagrek
+||yozgathavadis.com/uploads/ad/
 forum.turkmmo.com##.special-days
 tunceliemek.com.tr##.icReklamOrta
 tunceliemek.com.tr##.reklam-body-left1
@@ -2235,7 +2249,7 @@ duzcedamla.com###IcerikReklam
 playerbros.com###mvp-side-wrap > section.mvp-side-widget > .textwidget > a[href="javascript:window.open(window.clickTag)"]
 ||playerbros.com/thy/400x400.js
 ||playerbros.com/thy/images/b400d.jpg
-/\/(usko[0-9]|vales)\.gif/$domain=frmtr.com
+/\/u[0-9]?\.gif/$domain=frmtr.com
 mangawt.com##.adsbygoogle
 /\/(ikiler-gif|karpol-poliuretan)\.gif/$domain=egeyonhaber.com
 ||aksarayhaber68.com/resimler/*/95302851355703.jpg
@@ -4154,7 +4168,7 @@ sahibinden.com##.popular-products
 ozengen.com###text-html-widget-2
 habervakti.com##.td-header-sp-recs
 ||habervakti.com/wp-content/uploads/*banner
-bodrumolay.com,bodrumdabirgun.com,hdfulldiziler.com,dizifragmanlar.com##.singleAd2
+yozgatolay.com,bodrumolay.com,bodrumdabirgun.com,hdfulldiziler.com,dizifragmanlar.com##.singleAd2
 ||uzakrota.com/wp-content/uploads/*-Banner.png
 uzakrota.com##a[href^="http://bit.ly"] > img
 stadyum.tv###zzadfooter
@@ -4439,7 +4453,7 @@ t24.com.tr##div[itemprop="articleBody"] > div[style*="width:300px;"][style*="hei
 uzmanim.net###main-ads
 ozgurbolu.com###yan > div[style*="auto;box-sizing:border-box;border:#ddd"][style*="width:200px"]:not([class]):not([id])
 bisikletforum.com###rklmpst
-technopat.net,gezenbilir.com,bisikletforum.com##.samBannerUnit
+forum.warezm.com,technopat.net,gezenbilir.com,bisikletforum.com##.samBannerUnit
 ||bisikletforum.com/styles/sponsor/
 ||bisikletforum.com/data/Siropu/images/
 coin-turk.com##div[id^="banner"]
@@ -4856,7 +4870,6 @@ edirneaktuel.com##td[height="250"][width="980"]
 edirneaktuel.com##td[height="330"][width="300"]
 edirnehaber.org##div[style="width:300px; height:250px; margin:;"]
 ||tiparus.com/img/720.gif
-/wp-content/uploads/*/hareketli.gif
 t24.com.tr##.tise-banner
 ||forum.donanimhaber.com/ads/
 ||intercdn.xyz/cdn/*/675x90.html
@@ -5335,7 +5348,6 @@ gezginler.net###iceriksol > div#indralt > div#prioyun
 haberler.com###iframe_partner
 oyungemisi.com###info > .baguette
 filmizlesene.pw###kapatx
-korayspor.com###kulakcikemre_buyuk
 afyonhaber.com,gunceldepo.com###kutu
 odatv.com###leftbans
 fotomac.com.tr###lightBox
@@ -5485,7 +5497,6 @@ teknolojioku.com##.cdxhd_interstitial
 fulladam.com##.center > p[style="text-align:center;"] > img
 sahibinden.com##.center-banner
 denizlihaber.com##.cnt > div.passbnd
-korayspor.com##.collapseBanner
 gazetemsi.com##.commercialSideBar
 webtekno.com##.desktop-wrap > div.show-desktop > a
 konhaber.com##.detayReklam
@@ -6040,6 +6051,10 @@ mail.yandex.com.tr##.mail-DirectLine
 !------ White list. Fixing filtration errors (false-positive)---------------!
 !---------------------------------------------------------------------------!
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/57746
+@@||cdn.segmentify.com/*/segmentify.js$domain=koctas.com.tr
+@@||cdn.segmentify.com/*/segmentify.css$domain=koctas.com.tr
+@@||gandalf.segmentify.com/*/add/events/v1.json$domain=koctas.com.tr
 ! https://github.com/AdguardTeam/AdguardFilters/issues/54018
 ! https://github.com/AdguardTeam/AdguardFilters/issues/53445
 ! https://github.com/AdguardTeam/AdguardFilters/issues/53479
